@@ -21,12 +21,12 @@ gate — Section C) and the general video-brief block layout (Section D).
 
 **`brand-pack/05-process/notion-schema-verified.md` is the authoritative
 source for the actual live Notion database** — exact property names/option
-strings, the real page structure (verified 2026-09-01 directly against the
-database), and the next Creative ID to use. Where it disagrees with
-`creative-brief-process.md` (which has a documented history of drifting from
-the live database), **notion-schema-verified.md wins** — but always re-fetch
-a couple of the most recent real pages in Notion before starting a new batch,
-since conventions keep moving.
+strings, standing property defaults, the AD INSPO block format, and the real
+page structure (verified 2026-09-01 directly against the database). Where it
+disagrees with `creative-brief-process.md` (which has a documented history of
+drifting from the live database), **notion-schema-verified.md wins** — but
+always re-fetch a couple of the most recent real pages in Notion before
+starting a new batch, since conventions keep moving.
 
 ## The 3 focus products for this routine
 
@@ -56,8 +56,8 @@ Full detail: `brand-pack/01-brand/product-catalog.md`. Persona docs:
 - **The offer resolves the subject, never replaces it.** Whatever the hook
   raises, the body must pay off *before* any offer appears. Offer lands
   ~60–80% through, never first/last, followed by 2–4 more beats. Only real
-  offers exist: B2G2, B1G1, the % tiers — never invent one. Current live
-  storewide offer is **B2G2**.
+  offers exist: B2G2, B1G1, the % tiers — never invent one. **B2G2 is the
+  default offer on every script.**
 - **Never reuse the identical offer paragraph across product versions** in
   the same batch.
 - **Never name a real public figure/celebrity in ad copy** — flagged as a
@@ -89,23 +89,46 @@ Use `type: "ads"`, `scope: "personal"` on every `list_favorites` /
 `move_favorite_item` call for this routine — the default `scope: "workspace"`
 will not see these folders.
 
+### ⚠️ English-only rule for source ads
+
+**Standing instruction as of 2026-09-01: every ad pulled from TrendTrack must
+be in English.** Before selecting an ad, read its `content.body` (and
+`ctaDescription`) — if the ad copy is in any other language, skip it and take
+the next ad in the folder instead.
+
+- `audience.targetedCountries` / `mainCountry` is a useful hint (FR, ES, DE,
+  etc.), but the ad's actual body text is the real test — a US-targeted ad
+  can still be written in Spanish, and a GB-targeted one is nearly always
+  English.
+- **Do not move skipped non-English ads to "Swiped ->"** — that folder means
+  "already rewritten," and marking an unused ad as swiped would quietly hide
+  it. Leave them in "Inspo <-" and **name them in the run summary** so they
+  can be cleared out by hand.
+- If skipping non-English ads leaves fewer than 5 usable ads in the folder,
+  use what's available and say so in the summary rather than padding the
+  batch with a non-English source.
+
 ## The daily routine
 
 A scheduled Routine fires daily and:
 1. Lists items in the personal **"Inspo <-"** folder
    (`list_favorites`, `type: "ads"`, `scope: "personal"`,
    `folder: "3df81f20-b754-425e-a487-5cad19d4dbab"`).
-2. Picks 5 ads from that listing (whatever's there — the folder itself is
-   the queue, nothing to cross-check beyond what's currently sitting in it).
-3. For each of the 5 inspo ads, deep-scans it (`scan_ad`) and rewrites it
+2. Picks 5 **English-language** ads from that listing (see the English-only
+   rule above — the folder is the queue, and anything still in it is fair
+   game as long as its copy is English).
+3. For each of the 5 inspo ads, deep-scans it (`scan_ad`), generates its
+   TrendTrack shareable link (`create_ad_share_link`), and rewrites it
    for **all 3 focus products**, following the copy rules above and the
    exact video-brief format in `brand-pack/05-process/creative-brief-process.md`
    Section D.
 4. Creates **one separate Notion page per product per inspo ad** (3 pages ×
    5 ads = **15 pages per run**) directly in the "Evergreen Video" data
-   source under Video Brief Database, using the exact property values in
-   `brand-pack/05-process/notion-schema-verified.md` — including the next
-   sequential Creative ID (query the database for the current max first).
+   source under Video Brief Database, using the exact property values and
+   standing defaults in `brand-pack/05-process/notion-schema-verified.md`
+   (blank Editor, blank Date, `Net New`, `B2G2`, share link embedded in the
+   AD INSPO video block) — including the next sequential Creative ID (query
+   the database for the current max first).
 5. Moves each of the 5 used ads from "Inspo <-" to "Swiped ->"
    (`move_favorite_item`, `type: "ads"`, `scope: "personal"`,
    `folder_id: "3ef55bf5-3e9d-47d7-9332-8cf868637b48"`) — this is what
