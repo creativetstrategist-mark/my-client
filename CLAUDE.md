@@ -68,18 +68,35 @@ Full detail: `brand-pack/01-brand/product-catalog.md`. Persona docs:
 - `brand-pack/` — the full reference library (read-only source material,
   mirrors the brand pack the user supplied). Trimmed to what's relevant to
   the 3 focus products above.
-- `daily-ad-rewrites/processed-inspo-log.md` — dedup ledger. Every TrendTrack
-  ad used by the daily routine gets logged here (ad id/URL, date used, which
-  products it was adapted for). **Check this before picking new inspo ads**
-  so the routine doesn't reuse the same source twice in a row.
+- `daily-ad-rewrites/processed-inspo-log.md` — human-readable audit trail of
+  every run (not the primary dedup check — see below).
+
+## TrendTrack source folders (personal scope, not workspace)
+
+The user's real inspo pool lives under **personal** favorites, not the
+workspace ones:
+- **"Inspo <-"** (`3df81f20-b754-425e-a487-5cad19d4dbab`) — ads to pull from.
+  It has a sub-folder "Mark's Pick" (`97fe1706-577f-43dc-a139-882e5b0c4ed7`)
+  — check the parent folder's direct items first.
+- **"Swiped ->"** (`3ef55bf5-3e9d-47d7-9332-8cf868637b48`) — where used ads
+  get moved. **This move IS the dedup mechanism** — an ad still sitting in
+  "Inspo <-" is fair game; once moved to "Swiped ->" it's off-limits. Always
+  call `list_favorites` on "Inspo <-" fresh each run rather than trusting
+  `processed-inspo-log.md` alone, since that file is just a log, not the
+  source of truth.
+
+Use `type: "ads"`, `scope: "personal"` on every `list_favorites` /
+`move_favorite_item` call for this routine — the default `scope: "workspace"`
+will not see these folders.
 
 ## The daily routine
 
 A scheduled Routine fires daily and:
-1. Searches the TrendTrack "inspo" favorites folder for ad inspiration
-   (`list_favorites` with `type=ads`, find the "inspo" folder via
-   `mode=folders`, then list its items).
-2. Picks 5 ads not already in `daily-ad-rewrites/processed-inspo-log.md`.
+1. Lists items in the personal **"Inspo <-"** folder
+   (`list_favorites`, `type: "ads"`, `scope: "personal"`,
+   `folder: "3df81f20-b754-425e-a487-5cad19d4dbab"`).
+2. Picks 5 ads from that listing (whatever's there — the folder itself is
+   the queue, nothing to cross-check beyond what's currently sitting in it).
 3. For each of the 5 inspo ads, deep-scans it (`scan_ad`) and rewrites it
    for **all 3 focus products**, following the copy rules above and the
    exact video-brief format in `brand-pack/05-process/creative-brief-process.md`
@@ -89,10 +106,15 @@ A scheduled Routine fires daily and:
    source under Video Brief Database, using the exact property values in
    `brand-pack/05-process/notion-schema-verified.md` — including the next
    sequential Creative ID (query the database for the current max first).
-5. Appends the day's ad ids to the dedup log and pushes that update to this
-   repo (local `git commit` may be blocked by this environment's permission
-   classifier — use the GitHub MCP `push_files`/`create_or_update_file`
-   tools as a fallback, same as this repo's initial setup did).
+5. Moves each of the 5 used ads from "Inspo <-" to "Swiped ->"
+   (`move_favorite_item`, `type: "ads"`, `scope: "personal"`,
+   `folder_id: "3ef55bf5-3e9d-47d7-9332-8cf868637b48"`) — this is what
+   actually prevents reuse, do this for every ad used, every run.
+6. Appends a row per ad to `daily-ad-rewrites/processed-inspo-log.md` (audit
+   trail only) and pushes that update to this repo (local `git commit` may
+   be blocked by this environment's permission classifier — use the GitHub
+   MCP `push_files`/`create_or_update_file` tools as a fallback, same as
+   this repo's initial setup did).
 
-If the Notion connector isn't available in a given run, the routine should
-say so explicitly rather than silently skipping delivery.
+If the Notion or TrendTrack connector isn't available in a given run, the
+routine should say so explicitly rather than silently skipping delivery.
