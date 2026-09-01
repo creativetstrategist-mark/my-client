@@ -53,12 +53,15 @@ ORDER BY "Creative ID" DESC LIMIT 5
 
 ## AD INSPO block format
 
-Real pages use a `<video src=""></video>` placeholder block (the actual video gets embedded manually in Notion later). **Standing instruction as of 2026-09-01: every concept must carry the TrendTrack shareable link for its inspo ad in the AD INSPO section.** Generate it with `mcp__TrendTrack_MCP__create_ad_share_link` (pass the ad's `id`, e.g. `facebook_1046120557939181`), which returns a `shareUrl` like `https://app.trendtrack.io/share/ads/hatori-knives-fs5en9`. That tool returns the existing link if one already exists, so it's safe to call repeatedly. Put it directly under the video placeholder:
+**Standing instruction as of 2026-09-01: the TrendTrack shareable link must be EMBEDDED IN THE VIDEO BLOCK itself** — as the `src` of the `<video>` block under the `### AD INSPO` heading. Do **not** leave an empty `<video src=""></video>` placeholder with the link sitting on a separate line beneath it.
+
+Generate the link with `mcp__TrendTrack_MCP__create_ad_share_link` (pass the ad's `id`, e.g. `facebook_1046120557939181`), which returns a `shareUrl` like `https://app.trendtrack.io/share/ads/hatori-knives-fs5en9`. That tool returns the existing link if one already exists, so it's safe to call repeatedly.
+
+The block, with the advertiser + source hook as the video caption:
 
 ```
 ### AD INSPO
-<video src=""></video>
-[TrendTrack inspo: <Advertiser> — "<source hook>"](https://app.trendtrack.io/share/ads/<slug>)
+<video src="https://app.trendtrack.io/share/ads/<slug>"><Advertiser> — "<source hook>"</video>
 ```
 
 Underneath, include the full persona-notice callout (💡 gray background) for that page's Avatar, worded close to this verbatim standing text:
@@ -69,6 +72,6 @@ Underneath, include the full persona-notice callout (💡 gray background) for t
 
 ## Real example pages worth reading before writing a new batch
 
-- `NK382`–`NK396` (2026-09-01) — the first full run under the current standing defaults: 5 concepts × 3 products, blank Editor/Date, Net New, TrendTrack share links in AD INSPO.
+- `NK382`–`NK396` (2026-09-01) — the first full run under the current standing defaults: 5 concepts × 3 products, blank Editor/Date, Net New, TrendTrack share link embedded in the AD INSPO video block.
 - `NK370/371/372` ("Three Return Forms") — an earlier clean 3-page batch from the team.
 - Fetch any of these directly in Notion (`notion-fetch`) to see current formatting before starting a new batch — conventions drift, and a fresh read beats trusting this doc blindly (same caution `creative-brief-process.md` itself gives about its own staleness).
