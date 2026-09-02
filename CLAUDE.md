@@ -131,15 +131,52 @@ the next ad in the folder instead.
   use what's available and say so in the summary rather than padding the
   batch with a non-English source.
 
+### ⚠️ Already-rewritten ads can reappear in "Inspo <-"
+
+**The folder is not a trustworthy queue on its own.** A separate routine
+("TrendTrack winning ads → Inspo folder", fires 08:00 UTC) refills "Inspo <-"
+each morning, and it dedupes only against "Inspo <-" and "Mark's Pick" — it
+does **not** check "Swiped ->". So ads this routine already rewrote and swiped
+come straight back into the pool.
+
+Observed on 2026-09-02: of 8 ads it added, **4 were already-rewritten
+creatives** — Dalstrong `facebook_3042867619439863` and Kimbo
+`facebook_2485487308591716` re-added under the *identical* ad IDs swiped an
+hour earlier, plus The Beard Struggle and Hatori as *rotated* ad IDs of
+already-swiped creatives (Meta reissues ad IDs under the same creative
+constantly).
+
+**So before selecting any ad, build an exclusion set from "Swiped ->"**
+(`list_favorites`, `type: "ads"`, `scope: "personal"`,
+`folder: "3ef55bf5-3e9d-47d7-9332-8cf868637b48"`, every page) and skip any
+candidate that matches it:
+
+- **Match on advertiser + ad copy, not on ad ID.** An ID-only check misses the
+  rotated-ID case entirely, which was half the duplicates above. Compare the
+  advertiser name plus roughly the first 100 characters of `content.body`,
+  normalised — lowercased, whitespace collapsed, emoji and tracking params
+  stripped. Skip if either the ID *or* the advertiser+copy pair matches.
+- **Do not move a skipped duplicate anywhere.** It is already in "Swiped ->"
+  under its old favorite row; the new row is just noise. Leave it and **name it
+  in the run summary** so it can be cleared by hand.
+- Combined with the English-only rule above, the folder accumulates two kinds
+  of unusable item — non-English and already-rewritten. Both need periodic
+  manual clearing, so the run summary is the only place they surface. Always
+  list them.
+- If duplicates and non-English ads leave fewer than 5 usable, **use what is
+  there and say so.** Never pad the batch with a duplicate to reach 5 — a
+  duplicate concept is worse than a short run.
+
 ## The daily routine
 
 A scheduled Routine fires daily and:
 1. Lists items in the personal **"Inspo <-"** folder
    (`list_favorites`, `type: "ads"`, `scope: "personal"`,
    `folder: "3df81f20-b754-425e-a487-5cad19d4dbab"`).
-2. Picks 5 **English-language** ads from that listing (see the English-only
-   rule above — the folder is the queue, and anything still in it is fair
-   game as long as its copy is English).
+2. Lists the personal **"Swiped ->"** folder too, and picks 5 ads from
+   "Inspo <-" that are both **English-language** and **not already rewritten**
+   (see the two rules above — the folder is a refilled queue, not a clean one,
+   so an ad sitting in it is only fair game once it clears both checks).
 3. For each of the 5 inspo ads, deep-scans it (`scan_ad`), generates its
    TrendTrack shareable link (`create_ad_share_link`), and rewrites it
    for **all 3 focus products**, following the copy rules above and the
