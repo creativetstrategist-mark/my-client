@@ -63,6 +63,29 @@ Full detail: `brand-pack/01-brand/product-catalog.md`. Persona docs:
 - **Never name a real public figure/celebrity in ad copy** — flagged as a
   legal/right-of-publicity concern in the real corpus, treat as a hard stop.
 
+## Editor assignment (standing instruction as of 2026-09-02)
+
+**This replaces the earlier "leave the Editor property blank" rule** — the
+routine now assigns the editor itself. Full ruleset, length heuristic and
+conflict precedence: `brand-pack/05-process/notion-schema-verified.md`.
+
+Active roster (7): **Umar, Hammad, Onyeka, Hasnain, Anas, Naveed, Renniel**.
+`Huzaifa` is still a Notion option but is **not active — never assign it**.
+The Notion option is spelled `Anas`.
+
+- Length is estimated from spoken VO word count at ~150 wpm —
+  **80 seconds ≈ 200 words** (longest hook variant + all body copy).
+- **Over 80s** → only Umar, Hasnain, Anas or Naveed. **Hammad and Onyeka never
+  get a script over 80 seconds.**
+- **Under 80s** → any of the 7.
+- **AI-generation-clip-heavy** → prefer Anas or Renniel.
+- **The 3 product scripts from one concept always go to 3 different editors**,
+  even though the products differ.
+- Collisions: duration is a hard constraint and beats the AI-heavy preference
+  (a long AI-heavy script goes to Anas, else Umar/Hasnain/Naveed — never
+  Renniel). Three-different-editors beats the AI-heavy preference too; note any
+  such substitution in the run summary.
+
 ## Where things live
 
 - `brand-pack/` — the full reference library (read-only source material,
@@ -126,9 +149,10 @@ A scheduled Routine fires daily and:
    5 ads = **15 pages per run**) directly in the "Evergreen Video" data
    source under Video Brief Database, using the exact property values and
    standing defaults in `brand-pack/05-process/notion-schema-verified.md`
-   (blank Editor, blank Date, `Net New`, `B2G2`, share link embedded in the
-   AD INSPO video block) — including the next sequential Creative ID (query
-   the database for the current max first).
+   (blank Date, `Net New`, `B2G2`, share link embedded in the AD INSPO video
+   block, Editor assigned per the editor-assignment rules above) — including
+   the next sequential Creative ID (query the database for the current max
+   first; other people add rows too, so never continue from the last log row).
 5. Moves each of the 5 used ads from "Inspo <-" to "Swiped ->"
    (`move_favorite_item`, `type: "ads"`, `scope: "personal"`,
    `folder_id: "3ef55bf5-3e9d-47d7-9332-8cf868637b48"`) — this is what
