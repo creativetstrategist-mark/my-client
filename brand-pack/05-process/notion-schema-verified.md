@@ -19,7 +19,7 @@ Every real batch in the live database (e.g. "Why We Are Taking Over" = NK379/380
 | Property | Type | Value this routine always sets |
 |---|---|---|
 | **Concept Name** | title | The batch/concept name (short, punchy — matches the page title) |
-| **Creative ID** | text | Next sequential `NK###` — query the current max (see below) before each run and continue from there. As of 2026-09-01 the highest is **NK396**. |
+| **Creative ID** | text | Next sequential `NK###` — query the current max (see below) before each run and continue from there. As of 2026-09-02 the highest is **NK399** (NK397–399 were added by the team, not by this routine — which is exactly why the max gets re-queried every run instead of continuing from the last log row). |
 | **Product** | select | Exactly one of: `Feather` · `SANTOKU` · `LOKI Blackout` — these are the literal option strings, not "Feather Knife" / "BJORN Series Santoku" / "LOKI Blackout Edition." |
 | **Avatar** | select | `JOHN - KNIFE COLLECTOR` for Feather or SANTOKU pages · `MIKE- BBQ KING` for LOKI Blackout pages (note the real option string has no space before the dash: `MIKE- BBQ KING`, not `MIKE - BBQ KING`). Standing instruction — do not vary. |
 | **Status** | status | `Ready for visuals` (the real option is plural "visuals" — not "Ready for visual"). |
@@ -30,7 +30,7 @@ Every real batch in the live database (e.g. "Why We Are Taking Over" = NK379/380
 | **Offer** | select | `B2G2` — the default offer on every script. |
 | **Landing Page** | select | `6 Reasons - Santoku` for SANTOKU pages · `6 Reasons - General` for Feather and LOKI Blackout pages. |
 | **Specialty** | text | `Generalist` |
-| **Editor** | select | **LEAVE BLANK.** Standing instruction as of 2026-09-01 — Andy assigns the editor himself. Never auto-pick one. |
+| **Editor** | select | **Assign per the editor-assignment rules below** (standing instruction as of 2026-09-02, superseding the earlier "leave blank" rule). Valid option strings: `Umar` · `Hammad` · `Onyeka` · `Hasnain` · `Anas` · `Renniel` · `Naveed` · `Huzaifa` — but **`Huzaifa` is not on the active roster, never assign it**. |
 | **Date** | date | **LEAVE BLANK.** Standing instruction as of 2026-09-01 — do not fill it. |
 | **Delivery Link, Claude WR, Test Results, German 🇩🇪, German Version 🇩🇪** | — | Leave blank/unset — filled in later in production, not by this routine. |
 
@@ -38,9 +38,9 @@ Every real batch in the live database (e.g. "Why We Are Taking Over" = NK379/380
 
 The Batch name and File naming tables follow `…_Offer_Category_Strategist_Editor_LandingPage`, so with the standing defaults they read:
 
-`NK###_<Concept Name>_Generalist_<Product>_AI VO_<AVATAR>_B2G2_New_Mark_EDITOR_PDP`
+`NK###_<Concept Name>_Generalist_<Product>_AI VO_<AVATAR>_B2G2_New_Mark_<Editor>_PDP`
 
-Note `New` (matching the Net New category) and the literal `EDITOR` placeholder in the editor slot — it keeps the slot's position visible for whoever fills it in. In the filename strings the avatar is written with spaces around the dash (`MIKE - BBQ KING`), which differs from the `Avatar` property's own option string (`MIKE- BBQ KING`) — that inconsistency is in the real corpus, not a typo.
+Note `New` (matching the Net New category). The editor slot now carries the **actual assigned editor name** (e.g. `…_Mark_Hasnain_PDP`) — the old literal `EDITOR` placeholder was only there while the Editor property was being left blank. In the filename strings the avatar is written with spaces around the dash (`MIKE - BBQ KING`), which differs from the `Avatar` property's own option string (`MIKE- BBQ KING`) — that inconsistency is in the real corpus, not a typo.
 
 ## Getting the next Creative ID before each run
 
@@ -69,6 +69,65 @@ Underneath, include the full persona-notice callout (💡 gray background) for t
 > **JOHN - KNIFE COLLECTOR** — Rarity + craftsmanship are his trigger. Hard production limits and "no restock, no waitlist" activate him; discount-first hooks and countdown timers repel him. No deal or discount language at all in his copy — scarcity is framed as manufacturing complexity, never a deadline.
 
 > **MIKE - BBQ KING** — View it as Sarah's husband. He's the man who cooks, grills, view him like Amir — big beard, big muscle, looks like a Viking. Harder marketing is fair game, deeper/darker ElevenLabs voice, rock or hard rock music. No gift framing — outdoor, grill, Viking-heritage angle.
+
+## Editor assignment rules (standing instruction as of 2026-09-02)
+
+**This supersedes the earlier "leave the Editor blank" instruction.** The
+routine now picks the editor itself, using the rules below. NK382–NK396 (the
+2026-09-01 batch) were created under the old rule and still have a blank
+Editor — they are not retro-assigned unless the user asks.
+
+### Active roster — 7 editors
+
+`Umar` · `Hammad` · `Onyeka` · `Hasnain` · `Anas` · `Naveed` · `Renniel`
+
+`Huzaifa` is still a live option string in the Notion `Editor` property but is
+**not on the active roster — never assign it.** (The user wrote "Ana"; the real
+Notion option is **`Anas`**, which is what to select.)
+
+### Estimating script length (there is no runtime field in a brief)
+
+Briefs deliberately carry no timestamps, runtime, or word counts, so length is
+inferred from the **spoken VO word count** — the HOOK (count the single longest
+hook variant, not all of them) plus every BODY beat's copy. At a ~150 wpm AI VO
+read:
+
+**80 seconds ≈ 200 spoken words.** Over ~200 words ⇒ treat the script as
+**long**; at or under ⇒ **short**.
+
+### What counts as "AI-generation-clip heavy"
+
+A script whose visuals lean mostly on generated footage rather than existing
+product/UGC assets — imagined environments, forge/foundry cinematics,
+character or actor scenes, historical or Viking-heritage imagery, anything not
+shootable from the existing asset library. A script that is mostly product
+b-roll, hands-on demo, or repurposed UGC is **not** AI-heavy.
+
+### The rules
+
+| # | Rule |
+|---|---|
+| 1 | **Long script (> ~200 words / over 80s)** → assign randomly among **Umar, Hasnain, Anas, Naveed** only. |
+| 2 | **Short script (≤ ~200 words / under 80s)** → assign randomly among any of the 7 active editors. |
+| 3 | **Never assign Hammad or Onyeka** to anything over 80 seconds. (This is the same constraint as rule 1, stated from the other side — it is a hard block, not a preference.) |
+| 4 | **AI-generation-clip-heavy script** → prefer **Anas** or **Renniel**. |
+| 5 | **One concept, three editors.** The 3 product scripts generated from a single inspo concept must go to 3 *different* editors, even though the products differ. Across a 5-concept run an editor may of course appear in several concepts — the constraint is within a concept, not across the run. |
+
+### Conflict precedence (these rules can collide — resolve in this order)
+
+1. **Duration beats specialization.** Rule 1/3 is a hard capacity constraint;
+   rule 4 is a preference. A long AI-heavy script goes to **Anas** (the only
+   editor in both sets); if Anas is already taken by another product in the
+   same concept, fall back to Umar / Hasnain / Naveed and drop the AI-heavy
+   preference. **Renniel never gets a script over 80 seconds** on the strength
+   of rule 4 alone.
+2. **Rule 5 beats rule 4.** If all 3 products of one concept come out AI-heavy,
+   only Anas and Renniel qualify under rule 4 but three distinct editors are
+   required: give Anas and Renniel the two most AI-dependent scripts, send the
+   third to any editor its own duration allows, and **note the substitution in
+   the run summary**.
+3. Within whatever set survives, pick **randomly** — do not always land on the
+   same name. Spread the load across a run.
 
 ## Real example pages worth reading before writing a new batch
 
