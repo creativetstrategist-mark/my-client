@@ -98,8 +98,9 @@ and AU stores (separately — never blended, the currencies differ), find **vide
 creatives with **>= 1,000 local-currency spend** and **First-Click ROAS >= 2.0**,
 parse the `NK###` code out of the ad name, and append the matching
 `US Winner` / `UK Winner` / `AU Winner` tag to that brief page's `Test Results`.
+Only creatives whose strategist is **Mark, Andy or Claude** are tracked.
 
-Three things that are easy to get wrong:
+Four things that are easy to get wrong:
 
 - **First Click, not Triple Attribution.** The shop default is Triple
   Attribution; this routine must set `model = 'First Click'` explicitly.
@@ -107,6 +108,10 @@ Three things that are easy to get wrong:
   the `NK###` prefix parsed from `ad_name`, not on the platform creative id.
 - **Append, never overwrite** `Test Results`, and never write `High Potential`
   or `Loser` — those two options stay manual for the team.
+- **Read the strategist from Notion's `Strategist` property, not the ad name.**
+  The strategist is nominally the 11th segment of the ad name, but Meta
+  truncates long names (NK284 arrives cut off at 96 chars with no strategist
+  in it) and segment positions shift between naming series.
 
 If the Triple Whale or Notion connector isn't available in a given run, say so
 explicitly rather than reporting zero winners.

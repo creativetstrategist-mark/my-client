@@ -15,11 +15,41 @@ A creative is a winner in a market when **all** of these hold:
 | First-Click ROAS | **>= 2.0** |
 | Ad type | **video only** (`ad_type = 'video'`) |
 | Window | Last complete Sunday–Saturday week |
+| Strategist | **Mark, Andy or Claude only** — see below |
 
 The spend bar is deliberately local-currency. Note the asymmetry this creates:
 A$1,000 is roughly US$650 and £1,000 is roughly US$1,270, so the AU bar is the
 easiest to clear and the UK bar the hardest. This is intended — do not
 "correct" it without Mark saying so.
+
+## Strategist filter (Mark / Andy / Claude only)
+
+Only track creatives whose strategist is **Mark**, **Andy** or **Claude**.
+Skip anything by Mauro, Callum, or the static-series owners (Nazmul, Zyrille).
+
+**Read the strategist from the Notion `Strategist` property, not from the ad
+name.** The strategist IS in the ad name — it is the 11th underscore-delimited
+segment — but parsing it there is unreliable for two proven reasons:
+
+1. **Meta truncates long ad names.** NK284, the strongest cross-market winner
+   in the 2026-08-23 week, arrives as a 96-character name with only 8
+   segments, ending mid-avatar at `JOHN - KNIFE COLLECTO`. The strategist
+   field is simply not in the string. Filtering on the name would have
+   silently dropped a UK + AU winner.
+2. **Segment positions shift between naming series.** The `Z###` static series
+   carries an extra date segment near the front, so its 11th segment is the
+   category (`New`), not the strategist. Any fixed-index parse is wrong for
+   at least one series.
+
+So: match the `NK###` code to its Notion page first, then filter on that
+page's `Strategist` select — a controlled field whose only values are Mark,
+Andy, Mauro, Claude, Callum.
+
+**Fallback.** For a winning code with no Notion page, fall back to a token
+match against the ad name: treat it as in-scope if `Mark`, `Andy` or `Claude`
+appears as a complete underscore-delimited segment. Match whole segments only,
+never a substring. If the name is truncated and carries no strategist segment,
+report it as "strategist unknown" rather than assuming it is out of scope.
 
 ## Markets in scope
 
@@ -100,6 +130,8 @@ Match the parsed code against the `Creative ID` text property, then set
 
 Rules, as decided by Mark:
 
+0. **Strategist gate first.** Only tag pages whose `Strategist` is Mark, Andy
+   or Claude. Skip everything else before writing anything.
 1. **Winners only.** Apply only `US Winner`, `UK Winner`, `AU Winner`.
    Never write `High Potential` or `Loser` — those stay manual for the team.
 2. **Append, never remove.** Read the page's existing `Test Results` first and
@@ -119,15 +151,19 @@ so explicitly rather than silently reporting zero winners.
 
 ### 2026-09-02 — week of Sun 2026-08-23 to Sat 2026-08-29
 
-| Market | Code | Concept | Spend | FC ROAS | Action |
-|---|---|---|---|---|---|
-| US | NK184 | What if \| CTA \| Feather | $26,035 | 2.65 | tagged US Winner |
-| US | NK222 | Return Feather Lunatic | $23,108 | 2.10 | tagged US Winner |
-| UK | NK284 | Big Brain Return His Knife – Santoku | £3,323 | 2.05 | tagged UK Winner |
-| AU | NK284 | Big Brain Return His Knife – Santoku | A$6,732 | 2.83 | tagged AU Winner |
-| AU | NKEOFY005 | EOFY / Worth it | A$3,353 | 3.74 | **no Notion page** |
-| AU | NK184 | What if \| CTA \| Feather | A$1,568 | 2.73 | tagged AU Winner |
-| AU | NK272 | NK168 – Green Screen | A$1,102 | 2.48 | tagged AU Winner |
+| Market | Code | Concept | Strategist | Spend | FC ROAS | Action |
+|---|---|---|---|---|---|---|
+| US | NK184 | What if \| CTA \| Feather | Andy | $26,035 | 2.65 | tagged US Winner |
+| US | NK222 | Return Feather Lunatic | Andy | $23,108 | 2.10 | tagged US Winner |
+| UK | NK284 | Big Brain Return His Knife – Santoku | Andy | £3,323 | 2.05 | tagged UK Winner |
+| AU | NK284 | Big Brain Return His Knife – Santoku | Andy | A$6,732 | 2.83 | tagged AU Winner |
+| AU | NKEOFY005 | EOFY / Worth it | Mark (from ad name) | A$3,353 | 3.74 | **no Notion page** |
+| AU | NK184 | What if \| CTA \| Feather | Andy | A$1,568 | 2.73 | tagged AU Winner |
+| AU | NK272 | NK168 – Green Screen | Andy | A$1,102 | 2.48 | tagged AU Winner |
 
 NK284 (Santoku) cleared the bar in two markets; NK184 (Feather) in two.
 NKEOFY005 was the strongest AU performer by ROAS but has no brief page.
+
+The Mark/Andy/Claude strategist filter was added after this run and changes
+nothing for it — all four tagged winners are Andy's, and NKEOFY005 is Mark's.
+No tags were removed.
