@@ -84,3 +84,29 @@ A scheduled Routine fires daily (see the trigger created for this repo) and:
 
 If the Notion connector isn't available in a given run, the routine should
 say so explicitly rather than silently skipping delivery.
+
+## The weekly winner check
+
+A separate scheduled Routine fires every Monday and tags winning creatives in
+the same Notion "Evergreen Video" database that the daily routine writes to.
+
+Full spec: `weekly-winner-check/winner-detection-process.md` — read it before
+running or changing this routine.
+
+In short: pull the last complete Sun–Sat week from Triple Whale for the US, UK
+and AU stores (separately — never blended, the currencies differ), find **video**
+creatives with **>= 1,000 local-currency spend** and **First-Click ROAS >= 2.0**,
+parse the `NK###` code out of the ad name, and append the matching
+`US Winner` / `UK Winner` / `AU Winner` tag to that brief page's `Test Results`.
+
+Three things that are easy to get wrong:
+
+- **First Click, not Triple Attribution.** The shop default is Triple
+  Attribution; this routine must set `model = 'First Click'` explicitly.
+- **The Notion `Creative ID` is not the Triple Whale `creative_id`.** Join on
+  the `NK###` prefix parsed from `ad_name`, not on the platform creative id.
+- **Append, never overwrite** `Test Results`, and never write `High Potential`
+  or `Loser` — those two options stay manual for the team.
+
+If the Triple Whale or Notion connector isn't available in a given run, say so
+explicitly rather than reporting zero winners.
