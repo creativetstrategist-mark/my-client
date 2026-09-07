@@ -3,13 +3,16 @@
 ## How this brand defines winning
 
 - **Primary campaign objective:** Sales. `inferred` from the account itself, 2026-09-07 —
-  every campaign in the connected account optimizes to purchase (2,531 lifetime purchases,
-  $440,583.28 purchase value). Not separately confirmed by the brand in the intake.
+  every campaign in the connected account optimizes to purchase (7,066 lifetime purchases,
+  $1,011,464.66 purchase value). Not separately confirmed by the brand in the intake.
 - **North-star metric:** **ROAS.** `stated` by the account owner, 2026-09-07. Current
-  reference points: 2.18 over the last 30 days, 2.26 lifetime.
+  reference points: **2.18 over the last 30 days, 2.03 lifetime** (`verified`, account-wide
+  lifetime pull 2026-09-07). Lifetime spend $497,553.67 on 38,847,631 impressions.
 - **Secondary metrics they still weigh:** not stated — see `missing-context.md`.
-  Parker will read CPA ($79.57 last 30 days), AOV ($173.60) and hook rate alongside ROAS
-  until told otherwise, and will label that choice as its own.
+  Parker will read CPA ($79.57 last 30 days, $70.42 lifetime), AOV ($173.60 last 30 days,
+  $143.15 lifetime) and hook rate alongside ROAS until told otherwise, and will label that
+  choice as its own. Note the AOV gap between the recent window and lifetime — the last 30
+  days run about 21% above the lifetime average, which is worth a look on its own.
 - **When two ads in one ad set diverge on spend:** rule not stated — see `missing-context.md`.
 - **Where performance gets read:** **Triple Whale.** `stated` 2026-09-07 (Northbeam was
   checked and is not connected). Note the consequence: the numbers in this brain's audits
@@ -52,7 +55,15 @@
 
 ## Unit economics (optional — sharpens every performance read)
 
-- **AOV:** $173.60 last 30 days, $174.07 lifetime. `verified` from the connected account.
+- **AOV:** $173.60 last 30 days, **$143.15 lifetime**. `verified` from the connected
+  account (account-wide lifetime pull, 2026-09-07).
+
+  > **Correction, 2026-09-07.** An earlier version of this file cited $174.07 lifetime AOV,
+  > $194,644.63 lifetime spend and 2.26 lifetime ROAS. Those were wrong: they came from the
+  > `lifetime_summary` block of a 30-day query, where that block covers only the rows
+  > returned, not the whole account. Any doc in this brain generated before this correction
+  > and citing those figures is citing a three-ad sample as if it were the account. The
+  > correct account-wide lifetime figures are the ones above.
 - **Gross margin, LTV / payback window, max tolerable CPA:** not provided —
   see `missing-context.md`. Without margin, every "is this profitable" read in this brain
   is a revenue read, not a profit read, and is labelled as such.

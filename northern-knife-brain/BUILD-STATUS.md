@@ -50,7 +50,7 @@ becomes worth running.
 | Phase / branch | Done | Total |
 |---|---|---|
 | Phase 0 — repo, scaffold, method mount | 7 | 7 |
-| Phase 1E — audit baseline | 0 | 17 |
+| Phase 1E — audit baseline | 1 | 17 |
 | Phase 1A — brand foundation | 0 | 14 |
 | Phase 1B — competitors (trimmed) | 0 | 4 |
 | Phase 1C — personas | 0 | 12 |
@@ -68,7 +68,7 @@ Run before the build, so the ledger below is honest about what each prompt can r
 
 | Surface | State | What it means |
 |---|---|---|
-| Meta ad account | **live** | 1,005 ads, $194,644.63 lifetime spend, 2.26 lifetime ROAS, one account (`NorthernKnife_UK_3`, USD, Europe/London) |
+| Meta ad account | **live** | 2,431 ad-name groups, $497,553.67 lifetime spend, 2.03 lifetime ROAS, $143.15 lifetime AOV, 7,066 purchases, one account (`NorthernKnife_UK_3`, USD, Europe/London). Placement position and frequency are not exposed. |
 | Customer reviews | **live** | 4,028 reviews, 4.93 average |
 | Facebook ad comments | **live** | current through 2026-09-06 |
 | TikTok / organic inspiration | **live** | 50 videos in the library |
@@ -88,9 +88,9 @@ Run before the build, so the ledger below is honest about what each prompt can r
 | Prompt | Status |
 |---|---|
 | audits-quarterly/90-day-creative-strategy-audit | running |
-| audits-quarterly/90-day-performance-audit | running |
+| audits-quarterly/90-day-performance-audit | done |
 | audits-quarterly/90-day-diversity-audit | running |
-| audits-quarterly/customer-review-audit | pending |
+| audits-quarterly/customer-review-audit | running |
 | audits-quarterly/quarterly-whitespace-analysis | pending |
 | audits-monthly/monthly-hook-audit | pending |
 | audits-monthly/monthly-performance-report | pending |

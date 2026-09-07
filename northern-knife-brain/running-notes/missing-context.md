@@ -10,6 +10,8 @@ limit on a read somewhere in this brain. Nothing here is a blocker.
 | **Post-purchase surveys** | zero responses | The single best source for *why* someone bought and what they nearly bought instead. Without it, purchase motivation is inferred from reviews and ad comments, which are both post-hoc and skewed positive (4.93 average). `personas/post-purchase-surveys` is blocked. | Upload a CSV or connect a survey platform in Parker, then re-run that prompt. |
 | **Northbeam** | not connected | Nothing on its own — the brand reads performance in Triple Whale. | No action needed unless the brand switches. |
 | **Parker chat history** | none | No prior conversations to read the team's thinking out of. Everything in this brain came from data or the set-up intake. | Fills naturally as the team uses Parker. |
+| **Placement position** | not exposed | Parker surfaces platform and device but not `platform_position`, and the connected Meta login does not reach ad account `act_1897335644135093`. Feed-versus-Reels-versus-Stories reads are unavailable; platform-level is the substitute. |
+| **Reach / frequency** | not exposed | No frequency or CPMR read is possible, so creative fatigue is inferred from hook-rate and spend decay rather than measured by frequency. |
 | **Competitor set** | 2 tracked | Coolina USA and Dalstrong only. The whitespace and creative-landscape reads are as narrow as the set they read. | Add the real rival set in the Parker app. |
 | **Organic social (IG/FB/TT owned accounts)** | not tracked | `organic-channels-inventory` is a synthesis of the TikTok *inspiration* library, not of Northern Knife's own organic output. | Enable organic tracking for the brand's own handles. |
 
