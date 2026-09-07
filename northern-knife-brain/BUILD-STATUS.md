@@ -4,7 +4,7 @@
 **Build started:** 2026-09-07
 **Method version:** parker-system pinned to `v15`
 **Current phase:** Phase 1 — audit and foundation
-**Right now:** Phase 1 is running. Twelve prompts are in flight across four branches at once — the audit baseline, the first persona source pulls, the voice-of-customer corpus profile, and the first brand-foundation slices.
+**Right now:** Phase 1 is running, at a deliberately slower pace. The first attempt launched twelve prompts at once and every one of them died on a session usage limit before writing anything — no output was lost, because none had been produced yet. The build is now running four prompts at a time instead of twelve, with instructions to gather data economically.
 
 **Waiting on you:** nothing. You chose to review the strategic roadmap at the end rather than pausing mid-build, so this runs straight through. The roadmap will be the first thing handed to you at the finish.
 
@@ -55,7 +55,7 @@ Every prompt this build runs. `pending` → `running` → `done`, or `blocked` w
 | audits-quarterly/90-day-creative-strategy-audit | running |
 | audits-quarterly/90-day-performance-audit | running |
 | audits-quarterly/90-day-diversity-audit | running |
-| audits-quarterly/customer-review-audit | running |
+| audits-quarterly/customer-review-audit | pending |
 | audits-quarterly/quarterly-whitespace-analysis | pending |
 | audits-monthly/monthly-hook-audit | pending |
 | audits-monthly/monthly-performance-report | pending |
@@ -74,8 +74,8 @@ Every prompt this build runs. `pending` → `running` → `done`, or `blocked` w
 
 | Prompt | Status |
 |---|---|
-| brand-profile/brand-identity-analysis | running |
-| brand-profile/website-and-product-audit | running |
+| brand-profile/brand-identity-analysis | pending |
+| brand-profile/website-and-product-audit | pending |
 | brand-profile/category-and-market-research | pending |
 | brand-profile/competitive-landscape | pending |
 | brand-profile/customer-journey-and-persona-discovery | pending |
@@ -110,12 +110,12 @@ brand's Meta library, so its deep slices have no source to read.
 | Prompt | Status |
 |---|---|
 | personas/ad-account | running |
-| personas/ad-comments | running |
-| personas/customer-reviews | running |
+| personas/ad-comments | pending |
+| personas/customer-reviews | pending |
 | personas/other-reviews | pending |
 | personas/post-purchase-surveys | blocked — no survey responses exist for this brand |
-| personas/reddit | running |
-| personas/brand-reputation | running |
+| personas/reddit | pending |
+| personas/brand-reputation | pending |
 | personas/brand-self-echo-detection | pending |
 | personas/personas-profile (← all sources) | pending |
 | personas/persona-voice-library | pending |
@@ -126,7 +126,7 @@ brand's Meta library, so its deep slices have no source to read.
 
 | Prompt | Status |
 |---|---|
-| voice-of-customer/voc-corpus-profile | running |
+| voice-of-customer/voc-corpus-profile | pending |
 | voice-of-customer/voc-pain-phrase | pending |
 | voice-of-customer/voc-outcome-phrase | pending |
 | voice-of-customer/voc-trigger-moment | pending |
@@ -167,6 +167,12 @@ brand's Meta library, so its deep slices have no source to read.
 ---
 
 ## Needs attention
+
+- **The build is usage-limited, and that is the pacing constraint.** A first wave of twelve
+  parallel prompts hit the session cap and all twelve failed at once. Nothing was corrupted
+  and nothing was lost — they failed before writing. The build now runs four at a time. If
+  the cap is hit again, the fix is the same: wait for the window to reset, then resume from
+  this ledger. Every `pending` item below is still to do; every `done` item is safe on disk.
 
 - **Post-purchase surveys are empty.** The `personas/post-purchase-surveys` pull is blocked
   and everything downstream of it will be one source thinner. Fix by uploading a CSV or
