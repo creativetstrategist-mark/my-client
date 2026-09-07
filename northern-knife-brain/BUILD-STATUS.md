@@ -3,10 +3,45 @@
 **Brand:** Northern Knife (`2ec32316-1da9-4563-a86f-d4e811e89469`)
 **Build started:** 2026-09-07
 **Method version:** parker-system pinned to `v15`
+**Scope:** foundation only — Phase 0 and Phase 1, then stamp and hand off
 **Current phase:** Phase 1 — audit and foundation
-**Right now:** Phase 1 is running, at a deliberately slower pace. The first attempt launched twelve prompts at once and every one of them died on a session usage limit before writing anything — no output was lost, because none had been produced yet. The build is now running four prompts at a time instead of twelve, with instructions to gather data economically.
+**Right now:** Four prompts are running: the 90-day creative-strategy audit (the anchor the account one-pagers synthesize from), the 90-day performance audit, the 90-day diversity audit, and the ad-account persona pull.
 
-**Waiting on you:** nothing. You chose to review the strategic roadmap at the end rather than pausing mid-build, so this runs straight through. The roadmap will be the first thing handed to you at the finish.
+**Waiting on you:** nothing.
+
+---
+
+## The scope decision — read this before wondering where strategy went
+
+This build stops after Phase 1, by the owner's decision on 2026-09-07, and the competitor
+branch is trimmed. Two reasons, both practical:
+
+1. **Usage.** A first wave of twelve parallel prompts hit the session cap and all twelve
+   failed at once, before writing anything. The build now runs four at a time. The full
+   97-run build would have spanned several usage windows.
+2. **Value density.** Phase 1 is what makes every later skill smarter — it is the brand
+   knowledge the craft skills read from. Strategy and briefs can be produced on demand
+   afterwards, by a person, using skills that are already installed and working.
+
+**What is deliberately NOT built here**, and how to get it later:
+
+| Not built | How to get it |
+|---|---|
+| `strategy/` — persona / product / messaging / creator inputs, and the strategic roadmap | Re-run `parker-system/prompts/strategic-roadmap/*` when you want a committed direction. Everything they read from will exist. |
+| `idea-bank/` — the captured, graded idea pile | Run `/harvest-ideas`, then `/evaluate-ideas`. Both are installed and armed on a weekly schedule. |
+| `sprints/`, `briefs/` — the sprint plan and the briefs | Run the `scriptwriting`, `hooks`, `headlines` and `iterations` skills directly, or re-run `parker-system/prompts/ideas-and-briefs/*`. |
+
+None of this is a dead end. The folders exist, the prompts that fill them are mounted at
+`parker-system/prompts/`, and the routines that would call them are armed. The one real
+consequence is that no strategic roadmap has been written, so anything that claims to
+follow "the approved direction" has no direction to follow yet.
+
+**Competitor branch, trimmed:** Coolina USA and Dalstrong get a full `competitor-snapshot`
+rather than nine deep slices each; Odin's Treasures gets one as inspo; the cross-rival
+`working-thesis-synthesis` still runs. Twenty-one runs become four. The reason is honest —
+only two rivals are tracked in this brand's Meta library, so nine slices each would be deep
+analysis of a thin set. Widen the tracked set in the Parker app and the full slice set
+becomes worth running.
 
 ---
 
@@ -17,19 +52,19 @@
 | Phase 0 — repo, scaffold, method mount | 7 | 7 |
 | Phase 1E — audit baseline | 0 | 17 |
 | Phase 1A — brand foundation | 0 | 14 |
-| Phase 1B — competitors | 0 | 21 |
+| Phase 1B — competitors (trimmed) | 0 | 4 |
 | Phase 1C — personas | 0 | 12 |
 | Phase 1D — voice of customer | 0 | 12 |
 | Phase 1 — synthesis (gaps, open loops) | 0 | 2 |
-| Phase 2 — strategy | 0 | 5 |
-| Phase 3 — ideas and briefs | 0 | 4 |
-| Stamp, verify, hand off | 0 | 6 |
+| Stamp, verify, arm routines, hand off | 0 | 6 |
+
+**61 prompt runs in scope**, down from 97.
 
 ---
 
 ## What the data check found
 
-Run before the build, so the ledger below is honest about what each prompt can actually reach.
+Run before the build, so the ledger below is honest about what each prompt can reach.
 
 | Surface | State | What it means |
 |---|---|---|
@@ -38,7 +73,7 @@ Run before the build, so the ledger below is honest about what each prompt can a
 | Facebook ad comments | **live** | current through 2026-09-06 |
 | TikTok / organic inspiration | **live** | 50 videos in the library |
 | Competitor ad library | **live, thin** | 2 tracked brands only: Coolina USA (297 ads), Dalstrong (496 ads) |
-| Post-purchase surveys | **dark** | zero responses for this brand — logged in `running-notes/missing-context.md` |
+| Post-purchase surveys | **dark** | zero responses — logged in `running-notes/missing-context.md` |
 | Parker chat history | **none** | no prior web or Slack threads to read in |
 | Northbeam | **not connected** | performance is read in Triple Whale instead |
 
@@ -46,7 +81,7 @@ Run before the build, so the ledger below is honest about what each prompt can a
 
 ## Prompt ledger
 
-Every prompt this build runs. `pending` → `running` → `done`, or `blocked` with a reason.
+`pending` → `running` → `done`, or `blocked` with a reason.
 
 ### Phase 1E — audit baseline (the t0 read of the account)
 
@@ -89,21 +124,14 @@ Every prompt this build runs. `pending` → `running` → `done`, or `blocked` w
 | brand-profile/organic-channels-inventory (← audits) | pending |
 | brand-profile/brand-profile-narrative (← all of 1A) | pending |
 
-### Phase 1B — competitors
-
-Coolina USA and Dalstrong get the full slice set (both are tracked with real ad data).
-Odin's Treasures is carried as **inspo**, snapshot only — it is not tracked in this
-brand's Meta library, so its deep slices have no source to read.
+### Phase 1B — competitors (trimmed to 4)
 
 | Prompt | Status |
 |---|---|
-| competitor-profile × 9 slices — Coolina USA | pending |
 | competitor-profile/competitor-snapshot — Coolina USA | pending |
-| competitor-profile × 9 slices — Dalstrong | pending |
 | competitor-profile/competitor-snapshot — Dalstrong | pending |
 | competitor-profile/competitor-snapshot — Odin's Treasures (inspo) | pending |
-| competitor-profile/working-thesis-synthesis | pending |
-| competitors/_competitive-set.md | pending |
+| competitor-profile/working-thesis-synthesis + `_competitive-set.md` | pending |
 
 ### Phase 1C — personas
 
@@ -145,47 +173,35 @@ brand's Meta library, so its deep slices have no source to read.
 | market-synthesis/gaps-opportunities-inspo | pending |
 | open-loops/open-loops-roll-up | pending |
 
-### Phase 2 — strategy
-
-| Prompt | Status |
-|---|---|
-| strategic-roadmap/persona-strategy-input | pending |
-| strategic-roadmap/product-priority | pending |
-| strategic-roadmap/messaging-strategy-input | pending |
-| strategic-roadmap/creator-talent-strategy-input | pending |
-| strategic-roadmap/strategic-roadmap | pending |
-
-### Phase 3 — ideas and briefs
-
-| Prompt | Status |
-|---|---|
-| ideas-and-briefs/brand-idea-bank | pending |
-| ideas-and-briefs/idea-evaluation | pending |
-| ideas-and-briefs/sprint-plan | pending |
-| ideas-and-briefs/brief-creation | pending |
-
 ---
 
 ## Needs attention
 
-- **The build is usage-limited, and that is the pacing constraint.** A first wave of twelve
-  parallel prompts hit the session cap and all twelve failed at once. Nothing was corrupted
-  and nothing was lost — they failed before writing. The build now runs four at a time. If
-  the cap is hit again, the fix is the same: wait for the window to reset, then resume from
-  this ledger. Every `pending` item below is still to do; every `done` item is safe on disk.
-
-- **Post-purchase surveys are empty.** The `personas/post-purchase-surveys` pull is blocked
-  and everything downstream of it will be one source thinner. Fix by uploading a CSV or
-  connecting a survey platform in Parker, then re-running that prompt.
-- **Only two competitors are tracked.** Coolina USA and Dalstrong. Adding your real rival
-  set in the Parker app would materially sharpen the competitive and whitespace reads.
+- **The build is usage-limited, and that is the pacing constraint.** The first wave of
+  twelve parallel prompts hit the session cap and all twelve failed at once. Nothing was
+  corrupted and nothing was lost — they failed before writing. Four at a time now. If the
+  cap is hit again the fix is the same: wait for the window, resume from this ledger.
+  Every `pending` item is still to do; every `done` item is safe on disk.
+- **Post-purchase surveys are empty.** `personas/post-purchase-surveys` is blocked and
+  everything downstream is one source thinner. Upload a CSV or connect a survey platform
+  in Parker, then re-run that prompt.
+- **Only two competitors are tracked.** Which is why the competitor branch is trimmed.
+  Add your real rival set in the Parker app to make the full slice set worth running.
+- **A live contradiction on the Feather, for a human to settle.** The brand's own rules say
+  the blade pattern is laser-applied and must never be called hand-etched. The account's
+  top-spending ad (`NK222`, $15,050.74 in 30 days) says *"hand-forged with an insane feather
+  etching down the spine, no two blades identical. Each one takes hours to create by hand."*
+  Either the rule moved or the ad is off-brief. Carried in
+  `running-notes/brand-notes-from-org.md`, due to land in `brand-lens.md` at the stamp step.
 - **This brain is not in its own repo.** Parker provisioned
-  `parker-brain/nebula-studio-northern-knife`, but this cloud session cannot reach it —
-  its GitHub access is locked to the `creativetstrategist-mark` tier. The brain is being
-  built inside the `my-client` repo instead. See `running-notes/standard-sync.md`.
+  `parker-brain/nebula-studio-northern-knife`, but this cloud session cannot reach it — its
+  GitHub access is locked to the `creativetstrategist-mark` tier and cross-tier attachment
+  is refused outright. The brain lives in the `my-client` repo instead. See
+  `running-notes/standard-sync.md` for the three ways to move it later.
 
 ## What happens next
 
-Phase 1 runs the audit baseline first, because the account one-pagers are defined as
-syntheses of those audits. The four other branches run alongside it. Then the synthesis
-nodes, then strategy, then the idea bank and briefs.
+The audit baseline finishes first, because the account one-pagers are defined as syntheses
+of it. Personas, voice-of-customer and the foundation slices run alongside. Then the two
+synthesis nodes, then the contract gets stamped, the routines armed, and the brain handed
+over with a walkthrough.
