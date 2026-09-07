@@ -89,3 +89,19 @@ audience by about 15 points; the persona label barely moves it at all.
 
 The ledger in `BUILD-STATUS.md` is the resume point. Re-running a `pending` prompt costs
 nothing extra — none of them had produced output when they died.
+
+## Stamp and close-out — 2026-09-07
+
+| Artifact | State |
+|---|---|
+| `CLAUDE.md` | stamped from the v15 template, all slots filled, no placeholders. Carries the brand hard rules first, both live product-rule contradictions, the honest phase status (no roadmap exists), and a build-status section listing exactly which docs exist and which were never generated. |
+| `README.md` | stamped. Separates the complete working system from the thin knowledge base, so a reader is not misled by a full-looking folder tree. |
+| `brand-lens.md` | seeded with the brand's stated voice rules, both unsettled product conflicts, and the four findings the two built documents produced. |
+| `running-notes/refresh-schedule.md` | stamped with a `not built` section — a doc that was never generated is distinguished from one that is fresh, which the standard template does not do because it assumes a complete build. |
+| `running-notes/routine-log.md` | stamped empty, ready for the first routine run. |
+| `competitors/INDEX.md`, `audits/INDEX.md` | not generated — `competitors/` is empty and `audits/` holds one doc. |
+| Routines | stamped, **not armed**. See `running-notes/standard-sync.md`. |
+| `BUILD-STATUS.md` | archived here as `2026-09-07-BUILD-STATUS-final.md`; repo root left clean. |
+
+**Final state: 2 of 61 in-scope prompt runs completed.** The system layer is complete and verified;
+the knowledge layer is two documents deep. The resume point is the archived ledger.

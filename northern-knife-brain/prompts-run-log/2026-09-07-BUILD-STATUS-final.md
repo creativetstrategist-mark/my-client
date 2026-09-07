@@ -5,7 +5,7 @@
 **Method version:** parker-system pinned to `v15`
 **Scope:** foundation only — Phase 0 and Phase 1, then stamp and hand off
 **Current phase:** Phase 1 — audit and foundation
-**Right now:** Paused. The session usage window is exhausted and resets at 17:10 UTC on 2026-09-07. Two documents are done and saved: the 90-day performance audit and the ad-account persona pull. Three prompts were mid-flight when the window closed (the creative-strategy audit, the diversity audit, the customer-review audit) and wrote nothing; they are back to `pending` and lose no work when re-run.
+**Right now:** Stopped and stamped. The build ran out of usage after two documents; rather than leave a half-built folder, the operating contract, README, brand lens and freshness ledger were written so the brain is coherent and openable. `CLAUDE.md` and `README.md` both state plainly which docs exist and which were never generated.
 
 **Waiting on you:** nothing.
 
@@ -56,7 +56,7 @@ becomes worth running.
 | Phase 1C — personas | 1 | 12 |
 | Phase 1D — voice of customer | 0 | 12 |
 | Phase 1 — synthesis (gaps, open loops) | 0 | 2 |
-| Stamp, verify, arm routines, hand off | 0 | 6 |
+| Stamp, verify, arm routines, hand off | 5 | 6 |
 
 **61 prompt runs in scope**, down from 97.
 

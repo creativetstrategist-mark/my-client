@@ -42,3 +42,30 @@ path in this brain will resolve to nothing.
 ## Offer history
 
 No offers yet — the first `/update-brain` run fills this in.
+
+## Routine arming status — stamped, NOT armed
+
+**Read this before assuming the brain runs itself.** The six schedule recipes are stamped into
+`schedules/` and their skills are installed in `.claude/skills/`, so every routine is ready to run.
+**None of them is actually registered to fire on a clock.**
+
+Schedules are per-account and cannot be committed to a repo, so they have to be armed on whatever
+instance the brain lives on. The session that built this brain could only offer in-memory,
+session-lifetime scheduling that expires after seven days and vanishes when the session ends —
+which would have looked armed without being armed. That was declined deliberately.
+
+| Routine | Intended cadence | State |
+|---|---|---|
+| `/refresh-context` | weekly | not armed |
+| `/dream` | daily | not armed |
+| `/harvest-ideas` + `/evaluate-ideas` | weekly | not armed |
+| `/research-loops` | weekly, mid-week | not armed |
+| `/self-improve` | weekly | not armed |
+| `/update-brain` | weekly, early Monday | not armed |
+
+**To arm them:** open this brain in a persistent Claude Code cloud instance and run
+`/setup-routines`. It registers all six at their default cadences and reconciles rather than
+duplicating. Run it again any time to change a cadence or turn one off.
+
+Every routine also works on demand right now — just invoke it by name. Arming only decides whether
+it happens without being asked.
