@@ -4,7 +4,7 @@
 **Build started:** 2026-09-07
 **Method version:** parker-system pinned to `v15`
 **Current phase:** Phase 1 — audit and foundation
-**Right now:** Phase 0 is done — the folder is scaffolded, the method is mounted, and all 26 skills are shipped. Phase 1 is starting: reading the ad account, the reviews, the comments and the competitors.
+**Right now:** Phase 1 is running. Twelve prompts are in flight across four branches at once — the audit baseline, the first persona source pulls, the voice-of-customer corpus profile, and the first brand-foundation slices.
 
 **Waiting on you:** nothing. You chose to review the strategic roadmap at the end rather than pausing mid-build, so this runs straight through. The roadmap will be the first thing handed to you at the finish.
 
@@ -52,10 +52,10 @@ Every prompt this build runs. `pending` → `running` → `done`, or `blocked` w
 
 | Prompt | Status |
 |---|---|
-| audits-quarterly/90-day-creative-strategy-audit | pending |
-| audits-quarterly/90-day-performance-audit | pending |
-| audits-quarterly/90-day-diversity-audit | pending |
-| audits-quarterly/customer-review-audit | pending |
+| audits-quarterly/90-day-creative-strategy-audit | running |
+| audits-quarterly/90-day-performance-audit | running |
+| audits-quarterly/90-day-diversity-audit | running |
+| audits-quarterly/customer-review-audit | running |
 | audits-quarterly/quarterly-whitespace-analysis | pending |
 | audits-monthly/monthly-hook-audit | pending |
 | audits-monthly/monthly-performance-report | pending |
@@ -74,8 +74,8 @@ Every prompt this build runs. `pending` → `running` → `done`, or `blocked` w
 
 | Prompt | Status |
 |---|---|
-| brand-profile/brand-identity-analysis | pending |
-| brand-profile/website-and-product-audit | pending |
+| brand-profile/brand-identity-analysis | running |
+| brand-profile/website-and-product-audit | running |
 | brand-profile/category-and-market-research | pending |
 | brand-profile/competitive-landscape | pending |
 | brand-profile/customer-journey-and-persona-discovery | pending |
@@ -109,13 +109,13 @@ brand's Meta library, so its deep slices have no source to read.
 
 | Prompt | Status |
 |---|---|
-| personas/ad-account | pending |
-| personas/ad-comments | pending |
-| personas/customer-reviews | pending |
+| personas/ad-account | running |
+| personas/ad-comments | running |
+| personas/customer-reviews | running |
 | personas/other-reviews | pending |
 | personas/post-purchase-surveys | blocked — no survey responses exist for this brand |
-| personas/reddit | pending |
-| personas/brand-reputation | pending |
+| personas/reddit | running |
+| personas/brand-reputation | running |
 | personas/brand-self-echo-detection | pending |
 | personas/personas-profile (← all sources) | pending |
 | personas/persona-voice-library | pending |
@@ -126,7 +126,7 @@ brand's Meta library, so its deep slices have no source to read.
 
 | Prompt | Status |
 |---|---|
-| voice-of-customer/voc-corpus-profile | pending |
+| voice-of-customer/voc-corpus-profile | running |
 | voice-of-customer/voc-pain-phrase | pending |
 | voice-of-customer/voc-outcome-phrase | pending |
 | voice-of-customer/voc-trigger-moment | pending |
