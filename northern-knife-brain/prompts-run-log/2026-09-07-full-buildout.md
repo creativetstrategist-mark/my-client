@@ -56,3 +56,36 @@ Resolving that discrepancy is an open item for the next audit refresh.
   are copy-level only.
 - The account reports 4,897 "leads" against 4,887 purchases, which looks mis-mapped; the
   audit declined to use the lead metric.
+
+| personas/ad-account | Meta ad account via Parker MCP; three windows — last 90d, last 30d, and account lifetime | 2026-09-07 | written, ~41KB, frontmatter + sign-off blocks present |
+
+**Note on this doc's figures:** `source-pulls/ad-account.md` was generated from a brief issued
+*before* the lifetime-figure correction above, so it cites the old reference points (2.18 /
+2.26 ROAS). Its own three-window pulls are its own live evidence and stand; only the quoted
+lifetime reference is stale. Re-stamp it on the next refresh.
+
+### Second product-rule conflict, found independently
+
+The ad-account pull surfaced a conflict the build had not yet seen: the account's copy places
+the **LOKI Blackout's bottle opener in the blade**, while the brand's hard rules place it in
+the **handle**. Together with the Feather laser-applied-versus-hand-etched conflict, that is
+two of the three focus products whose live ad copy contradicts the brand's own product law.
+Both are for a human to settle. Both carry into `brand-lens.md` at the stamp step.
+
+### The finding worth acting on
+
+The pull's central claim: the account runs a four-persona creative operation, but the
+*delivery* does not reflect four personas — a persona label attached to the same headline,
+the same body-copy opener, the same offer and the same voice treatment does not differentiate
+anything, and differentiation is what buys incremental reach. Product moves the reached
+audience by about 15 points; the persona label barely moves it at all.
+
+## Usage-limit stalls
+
+| When | What happened |
+|---|---|
+| First wave | 12 parallel prompts, all failed on the session cap before writing. Nothing lost. |
+| Second wave | 4 parallel prompts. 2 completed and are saved; 3 were killed mid-flight by a second cap (resets 17:10 UTC). The 3 wrote nothing and are back to `pending`. |
+
+The ledger in `BUILD-STATUS.md` is the resume point. Re-running a `pending` prompt costs
+nothing extra — none of them had produced output when they died.

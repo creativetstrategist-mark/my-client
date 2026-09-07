@@ -5,7 +5,7 @@
 **Method version:** parker-system pinned to `v15`
 **Scope:** foundation only — Phase 0 and Phase 1, then stamp and hand off
 **Current phase:** Phase 1 — audit and foundation
-**Right now:** Four prompts are running: the 90-day creative-strategy audit (the anchor the account one-pagers synthesize from), the 90-day performance audit, the 90-day diversity audit, and the ad-account persona pull.
+**Right now:** Paused. The session usage window is exhausted and resets at 17:10 UTC on 2026-09-07. Two documents are done and saved: the 90-day performance audit and the ad-account persona pull. Three prompts were mid-flight when the window closed (the creative-strategy audit, the diversity audit, the customer-review audit) and wrote nothing; they are back to `pending` and lose no work when re-run.
 
 **Waiting on you:** nothing.
 
@@ -53,7 +53,7 @@ becomes worth running.
 | Phase 1E — audit baseline | 1 | 17 |
 | Phase 1A — brand foundation | 0 | 14 |
 | Phase 1B — competitors (trimmed) | 0 | 4 |
-| Phase 1C — personas | 0 | 12 |
+| Phase 1C — personas | 1 | 12 |
 | Phase 1D — voice of customer | 0 | 12 |
 | Phase 1 — synthesis (gaps, open loops) | 0 | 2 |
 | Stamp, verify, arm routines, hand off | 0 | 6 |
@@ -87,10 +87,10 @@ Run before the build, so the ledger below is honest about what each prompt can r
 
 | Prompt | Status |
 |---|---|
-| audits-quarterly/90-day-creative-strategy-audit | running |
+| audits-quarterly/90-day-creative-strategy-audit | pending |
 | audits-quarterly/90-day-performance-audit | done |
-| audits-quarterly/90-day-diversity-audit | running |
-| audits-quarterly/customer-review-audit | running |
+| audits-quarterly/90-day-diversity-audit | pending |
+| audits-quarterly/customer-review-audit | pending |
 | audits-quarterly/quarterly-whitespace-analysis | pending |
 | audits-monthly/monthly-hook-audit | pending |
 | audits-monthly/monthly-performance-report | pending |
@@ -137,7 +137,7 @@ Run before the build, so the ledger below is honest about what each prompt can r
 
 | Prompt | Status |
 |---|---|
-| personas/ad-account | running |
+| personas/ad-account | done |
 | personas/ad-comments | pending |
 | personas/customer-reviews | pending |
 | personas/other-reviews | pending |
