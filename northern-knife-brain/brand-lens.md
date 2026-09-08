@@ -15,8 +15,17 @@ Parker writes to the rule and flags the conflict; it does not pick a side.
 
 | Conflict | The rule says | The live copy says | Evidence |
 |---|---|---|---|
-| **Feather blade pattern** | laser-applied; never hand-etched, hand-finished or engraved | *"hand-forged with an insane feather etching down the spine, no two blades identical. Each one takes hours to create by hand"* | `NK222`, $15,056.46 lifetime spend — the account's single largest line. `verified` from ad copy, 2026-09-07 |
+| **Feather blade pattern** | laser-applied; never hand-etched, hand-finished or engraved | *"hand-forged with an insane feather etching down the spine, no two blades identical. Each one takes hours to create by hand"* | `NK222`, $15,056.46 in the current 90-day window (the ad launched 2026-08-07, so window and lifetime coincide) — the account's single largest line. `verified` from ad copy, 2026-09-07 |
 | **LOKI Blackout bottle opener** | built into the **handle** | placed in the blade | `verified` from ad copy, 2026-09-07 |
+
+> **Escalated 2026-09-08 by the creative-strategy audit: the Feather conflict has five
+> witnesses, not one.** `NK222`, `NK184`, `NK300`, `NK127` and `NK194` all describe the
+> Feather pattern as etched or as not machine-finished. Together they carry **$38,475.26 —
+> 44.5% of top-ten spend.** `NK184`'s own on-screen card reads "A full feather etched from
+> tip to handle." This is not one ad off-brief; it is how the account describes the product.
+>
+> The LOKI opener conflict splits the account against itself: `NK168` and `NK219` place the
+> opener in the handle (matching the rule); `NK222` and `NK284` place it in the blade.
 
 Whoever settles these should update `running-notes/brand-notes-from-org.md` and this file together.
 
@@ -73,6 +82,30 @@ Whoever settles these should update `running-notes/brand-notes-from-org.md` and 
   a heavily positive corpus; the negative tail is small and has to be sought deliberately.
 - **Post-purchase surveys are empty**, so purchase *motivation* is always inferred here, never
   measured. Say so when it matters.
+
+## What the creative-strategy audit added
+
+`verified` 2026-09-08, from `audits/2026-Q3/90-day-creative-strategy-audit.md`.
+
+- **Four independent taxonomies moved the same direction in one quarter**, which is what a
+  drift toward offer-led, bottom-of-funnel creative looks like when it is measured rather
+  than felt: Offer Based format 17.4% → 41.5% of tagged spend; Urgency 21.7% → 37.5%; the
+  "None" desire bucket 13.7% → 34.9%; Most Aware 29.3% → 53.0%. Warm emotions collapsed in
+  parallel — Love 9.9% → 2.0%, Satisfaction 6.5% → 1.4%, and Joy, Relief, Tenderness and
+  Guilt all went to zero. Read against a stated objective to *scale acquisition*, an account
+  that talks almost entirely to the already-convinced is the finding.
+- **Zero Unaware spend in both windows.** Nothing is being spent on people who do not yet
+  know the category. That is the acquisition ceiling, stated plainly.
+- **`NK184` is the account's one original ad, and it is blocked.** Only non-return-story ad
+  in the top ten, only one placing its offer inside the brand's own 60–80% window, only one
+  reaching for inheritance as an emotional register — and DISAPPROVED, at a $24.65 CPM.
+- **The NK168 family is a controlled experiment nobody read.** `NK313` keeps NK168's script
+  word for word from 0:05 and swaps only the opener: $107.70 vs $81.55 CPA. `NK219` keeps
+  the verbal hook, cuts 1:53 to 1:18, earns a *better* hook rate than its parent (49.45% vs
+  42.76%) and lands at $107.17. Two strategists, two editors, two different levers, 53 cents
+  apart — and both pulled the quietest levers available.
+- **One person speaks on camera across all ten top ads**, for about five seconds at the end
+  of `NK194`. Nine of the ten cast people; every one of them is b-roll under a machine voice.
 
 ## How this file grows
 

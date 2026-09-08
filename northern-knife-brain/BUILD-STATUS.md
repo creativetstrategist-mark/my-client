@@ -5,7 +5,7 @@
 **Method version:** parker-system pinned to `v15`
 **Scope:** foundation only — Phase 0 and Phase 1, then stamp and hand off
 **Current phase:** Phase 1 — audit and foundation
-**Right now:** Wave 4, running two prompts instead of four: the 90-day creative-strategy audit (the anchor) and the 90-day diversity audit. Both were lost mid-write to the last cap. Both briefs now carry an explicit instruction to write a draft to disk early and enrich it in place, so a cap costs an unfinished document rather than everything.
+**Right now:** Paused at the owner's request, 2026-09-08. Five documents are done. The creative-strategy audit — the anchor — landed at 16,600 words. The diversity audit was killed by a fourth cap (resets 18:10 UTC) and is back to `pending`; it is now the only outstanding item in the quarterly audit set.
 
 **Waiting on you:** nothing.
 
@@ -50,7 +50,7 @@ becomes worth running.
 | Phase / branch | Done | Total |
 |---|---|---|
 | Phase 0 — repo, scaffold, method mount | 7 | 7 |
-| Phase 1E — audit baseline | 2 | 17 |
+| Phase 1E — audit baseline | 3 | 17 |
 | Phase 1A — brand foundation | 0 | 14 |
 | Phase 1B — competitors (trimmed) | 0 | 4 |
 | Phase 1C — personas | 2 | 12 |
@@ -87,9 +87,9 @@ Run before the build, so the ledger below is honest about what each prompt can r
 
 | Prompt | Status |
 |---|---|
-| audits-quarterly/90-day-creative-strategy-audit | running |
+| audits-quarterly/90-day-creative-strategy-audit | done |
 | audits-quarterly/90-day-performance-audit | done |
-| audits-quarterly/90-day-diversity-audit | running |
+| audits-quarterly/90-day-diversity-audit | pending |
 | audits-quarterly/customer-review-audit | done |
 | audits-quarterly/quarterly-whitespace-analysis | pending |
 | audits-monthly/monthly-hook-audit | pending |
@@ -181,6 +181,7 @@ Run before the build, so the ledger below is honest about what each prompt can r
 |---|---|---|
 | 1 | 12 | all 12 killed by the session cap before writing. Nothing lost. |
 | 2 | 4 | 2 completed and saved; 3 killed by a second cap (reset 17:10 UTC). |
+| 4 | 2 | 1 completed (the anchor, 16,600 words — and the write-early instruction is why); 1 killed by a fourth cap. Half concurrency roughly halved the loss rate. |
 | 3 | 4 | 2 completed and saved; 2 killed by a third cap (reset 22:30 UTC) *while writing* — they finished their research and lost it. |
 
 **The pattern is now clear and worth acting on next time.** Four agents in parallel exhaust the

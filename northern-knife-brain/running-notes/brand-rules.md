@@ -47,11 +47,21 @@
   | `PDP` / `6 Reasons - Santoku` | landing page |
   | `080326` | date |
 
-  This is a genuinely well-structured account. It means the diversity, iteration and
-  persona audits can read strategy directly off the names rather than guessing — the
-  personas (`MIKE - BBQ KING`, `JOHN - KNIFE COLLECTOR`) and the offer (`B2G2`) are
-  already encoded. Worth confirming with the brand that Parker has read the fields
-  correctly; logged as a pending confirmation in `missing-context.md`.
+  This is a well-structured account, and the convention is a real asset — but it is **not
+  a reliable substitute for reading the creative.** Two limits, both found in the data:
+
+  > ⚠️ **The offer field is unreliable.** `verified` 2026-09-08, from the creative-strategy
+  > audit. `NK300`'s name carries `NA` in the offer position while its third on-screen card
+  > reads "Buy 2 Get 2 FREE." Any offer-level read taken from ad names alone will be wrong,
+  > and wrong in a predictable direction — it will under-count offer-led creative. Read the
+  > creative, or treat name-derived offer figures as a floor.
+  >
+  > ⚠️ **The persona field records intent, not outcome.** The names say which persona a
+  > creative was written for. They say nothing about who it actually reached — and the
+  > ad-account pull found the two diverge badly (product moves the reached audience about
+  > 15 points; the persona label barely moves it). Never read the persona field as delivery.
+
+  Worth confirming the whole reading with the brand; logged in `missing-context.md`.
 
 ## Unit economics (optional — sharpens every performance read)
 
