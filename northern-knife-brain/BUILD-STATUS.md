@@ -5,7 +5,7 @@
 **Method version:** parker-system pinned to `v15`
 **Scope:** foundation only — Phase 0 and Phase 1, then stamp and hand off
 **Current phase:** Phase 1 — audit and foundation
-**Right now:** Paused at the owner's request, 2026-09-08. Four documents are done and saved. The third usage cap (reset 22:30 UTC) killed the creative-strategy and diversity audits while they were writing; both wrote nothing and are back to `pending`. Resume by saying so — this ledger is the resume point.
+**Right now:** Wave 4, running two prompts instead of four: the 90-day creative-strategy audit (the anchor) and the 90-day diversity audit. Both were lost mid-write to the last cap. Both briefs now carry an explicit instruction to write a draft to disk early and enrich it in place, so a cap costs an unfinished document rather than everything.
 
 **Waiting on you:** nothing.
 
@@ -87,9 +87,9 @@ Run before the build, so the ledger below is honest about what each prompt can r
 
 | Prompt | Status |
 |---|---|
-| audits-quarterly/90-day-creative-strategy-audit | pending |
+| audits-quarterly/90-day-creative-strategy-audit | running |
 | audits-quarterly/90-day-performance-audit | done |
-| audits-quarterly/90-day-diversity-audit | pending |
+| audits-quarterly/90-day-diversity-audit | running |
 | audits-quarterly/customer-review-audit | done |
 | audits-quarterly/quarterly-whitespace-analysis | pending |
 | audits-monthly/monthly-hook-audit | pending |
