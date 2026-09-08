@@ -5,7 +5,7 @@
 **Method version:** parker-system pinned to `v15`
 **Scope:** foundation only — Phase 0 and Phase 1, then stamp and hand off
 **Current phase:** Phase 1 — audit and foundation
-**Right now:** Paused at the owner's request, 2026-09-08. Five documents are done. The creative-strategy audit — the anchor — landed at 16,600 words. The diversity audit was killed by a fourth cap (resets 18:10 UTC) and is back to `pending`; it is now the only outstanding item in the quarterly audit set.
+**Right now:** Wave 5, two prompts: the 90-day diversity audit (the last outstanding quarterly, and the one three caps have now killed mid-write) and the voice-of-customer corpus profile. The VoC profile is deliberately paired here because it gates the ten voc-* extraction slices — if it mis-maps the corpora, every slice downstream inherits the error.
 
 **Waiting on you:** nothing.
 
@@ -89,7 +89,7 @@ Run before the build, so the ledger below is honest about what each prompt can r
 |---|---|
 | audits-quarterly/90-day-creative-strategy-audit | done |
 | audits-quarterly/90-day-performance-audit | done |
-| audits-quarterly/90-day-diversity-audit | pending |
+| audits-quarterly/90-day-diversity-audit | running |
 | audits-quarterly/customer-review-audit | done |
 | audits-quarterly/quarterly-whitespace-analysis | pending |
 | audits-monthly/monthly-hook-audit | pending |
@@ -154,7 +154,7 @@ Run before the build, so the ledger below is honest about what each prompt can r
 
 | Prompt | Status |
 |---|---|
-| voice-of-customer/voc-corpus-profile | pending |
+| voice-of-customer/voc-corpus-profile | running |
 | voice-of-customer/voc-pain-phrase | pending |
 | voice-of-customer/voc-outcome-phrase | pending |
 | voice-of-customer/voc-trigger-moment | pending |
