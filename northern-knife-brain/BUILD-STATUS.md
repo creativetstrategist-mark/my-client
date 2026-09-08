@@ -5,7 +5,7 @@
 **Method version:** parker-system pinned to `v15`
 **Scope:** foundation only — Phase 0 and Phase 1, then stamp and hand off
 **Current phase:** Phase 1 — audit and foundation
-**Right now:** Reopened and building again after the 17:10 UTC usage reset. Four prompts are running: the 90-day creative-strategy audit (the anchor), the 90-day diversity audit, the customer-review audit, and the customer-reviews persona pull. Each carries the corrected account figures and is told to reject the old ones on sight.
+**Right now:** Paused at the owner's request, 2026-09-08. Four documents are done and saved. The third usage cap (reset 22:30 UTC) killed the creative-strategy and diversity audits while they were writing; both wrote nothing and are back to `pending`. Resume by saying so — this ledger is the resume point.
 
 **Waiting on you:** nothing.
 
@@ -50,10 +50,10 @@ becomes worth running.
 | Phase / branch | Done | Total |
 |---|---|---|
 | Phase 0 — repo, scaffold, method mount | 7 | 7 |
-| Phase 1E — audit baseline | 1 | 17 |
+| Phase 1E — audit baseline | 2 | 17 |
 | Phase 1A — brand foundation | 0 | 14 |
 | Phase 1B — competitors (trimmed) | 0 | 4 |
-| Phase 1C — personas | 1 | 12 |
+| Phase 1C — personas | 2 | 12 |
 | Phase 1D — voice of customer | 0 | 12 |
 | Phase 1 — synthesis (gaps, open loops) | 0 | 2 |
 | Stamp, verify, arm routines, hand off | 5 | 6 |
@@ -87,10 +87,10 @@ Run before the build, so the ledger below is honest about what each prompt can r
 
 | Prompt | Status |
 |---|---|
-| audits-quarterly/90-day-creative-strategy-audit | running |
+| audits-quarterly/90-day-creative-strategy-audit | pending |
 | audits-quarterly/90-day-performance-audit | done |
-| audits-quarterly/90-day-diversity-audit | running |
-| audits-quarterly/customer-review-audit | running |
+| audits-quarterly/90-day-diversity-audit | pending |
+| audits-quarterly/customer-review-audit | done |
 | audits-quarterly/quarterly-whitespace-analysis | pending |
 | audits-monthly/monthly-hook-audit | pending |
 | audits-monthly/monthly-performance-report | pending |
@@ -139,7 +139,7 @@ Run before the build, so the ledger below is honest about what each prompt can r
 |---|---|
 | personas/ad-account | done |
 | personas/ad-comments | pending |
-| personas/customer-reviews | running |
+| personas/customer-reviews | done |
 | personas/other-reviews | pending |
 | personas/post-purchase-surveys | blocked — no survey responses exist for this brand |
 | personas/reddit | pending |
@@ -181,7 +181,12 @@ Run before the build, so the ledger below is honest about what each prompt can r
 |---|---|---|
 | 1 | 12 | all 12 killed by the session cap before writing. Nothing lost. |
 | 2 | 4 | 2 completed and saved; 3 killed by a second cap (reset 17:10 UTC). |
-| 3 | 4 | running now, after the reset. |
+| 3 | 4 | 2 completed and saved; 2 killed by a third cap (reset 22:30 UTC) *while writing* — they finished their research and lost it. |
+
+**The pattern is now clear and worth acting on next time.** Four agents in parallel exhaust the
+window before any of them can finish writing. Waves 2 and 3 each produced exactly two documents and
+threw away the research of the others. **Next resume should run one or two prompts at a time, not
+four** — fewer completed documents per window beats four abandoned ones.
 
 Between waves 2 and 3 the brain was stamped — contract, README, lens, freshness ledger — so it was
 coherent and openable rather than a half-built folder. That stamping stands; this wave adds

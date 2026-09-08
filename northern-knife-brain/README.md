@@ -21,12 +21,14 @@ thin *knowledge base*. Both halves matter, so be clear which is which:
 - The two **creative review gates** (`.claude/agents/`) and their checkers (`scripts/`), both verified runnable.
 - The **six routine schedules** in `schedules/`, and the Parker voice layer.
 
-**Thin — only two documents were produced before the build hit its usage limit:**
+**Thin — four documents were produced before the build hit its usage limits three times:**
 
 | Doc | What it is |
 |---|---|
 | `audits/2026-Q3/90-day-performance-audit.md` | ~5,300 words. The account's present tense: spend, efficiency, delivery, format, fatigue, 2026-06-09→2026-09-07 against the prior 90 days. |
+| `audits/2026-Q3/customer-review-audit.md` | ~117KB. The full read of all 4,028 reviews. |
 | `source-pulls/ad-account.md` | ~41KB. Who the account actually reaches versus who the creative is written for. |
+| `source-pulls/customer-reviews.md` | ~61KB. The persona read from the review side. |
 
 Everything else — the brand profile one-pager, the sub-context slices, competitors, personas,
 voice-of-customer, open loops, strategy, ideas, briefs — is **scaffolded and empty.**

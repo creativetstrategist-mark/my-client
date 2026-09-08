@@ -204,18 +204,22 @@ and is the closest thing to a direction this brain currently holds.
 | Doc | What it is |
 |---|---|
 | `audits/2026-Q3/90-day-performance-audit.md` | ~5,300 words, live-pulled. Spend, efficiency, delivery, format and fatigue across 2026-06-09→2026-09-07 vs the prior 90 days. The account's present tense. |
+| `audits/2026-Q3/customer-review-audit.md` | ~117KB. The full read of 4,028 reviews — themes, the negative tail, product-level signal. |
 | `source-pulls/ad-account.md` | ~41KB. Who the account actually reaches versus who the creative is written for — the persona read, straight off the delivery data. |
+| `source-pulls/customer-reviews.md` | ~61KB. The persona read from the review side, the counterpart to the ad-account pull. |
 | `running-notes/*` | The intake: brand rules, success definition, the parsed ad naming convention, brand notes, missing context, sync ledger. |
 
 **What does NOT exist yet** — do not cite these, and do not pretend to:
 `brand-profile.md` (the always-loaded one-pager the map tells you to read first), every
-`sub-context-docs/` slice, the rest of `audits/`, all of `competitors/`, all of `personas/` and
-`personas/voice-of-customer/`, `open-loops/`, `strategy/`, `idea-bank/`, `sprints/`, `briefs/`.
+`sub-context-docs/` slice, the other 15 audits, all of `competitors/`, the `personas/` synthesis
+docs and `personas/voice-of-customer/`, `open-loops/`, `strategy/`, `idea-bank/`, `sprints/`,
+`briefs/`. Note `personas/` holds only **source pulls** so far, in `source-pulls/` — the
+`personas-profile.md` that synthesizes them does not exist yet.
 The folders are scaffolded and empty.
 
 So: **the map above is the target shape, not the current contents.** When a doc it names is not on
 disk, say so plainly rather than improvising its contents or implying the vault is thinner than it
-looks by accident. The build was stopped by usage limits after two documents; the ledger of what is
+looks by accident. The build was stopped by usage limits after four documents; the ledger of what is
 done and what is outstanding is `prompts-run-log/`, and the live gap list is
 `running-notes/missing-context.md`.
 

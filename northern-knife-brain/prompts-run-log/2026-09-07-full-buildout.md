@@ -105,3 +105,20 @@ nothing extra — none of them had produced output when they died.
 
 **Final state: 2 of 61 in-scope prompt runs completed.** The system layer is complete and verified;
 the knowledge layer is two documents deep. The resume point is the archived ledger.
+
+## Wave 3 — 2026-09-07 evening, after the 17:10 UTC reset
+
+| Prompt | Source pulled | Verdict |
+|---|---|---|
+| audits-quarterly/customer-review-audit | 4,028 customer reviews via Parker MCP, sql + semantic | written, ~117KB |
+| personas/customer-reviews | same corpus, sampled deliberately incl. the negative tail | written, ~61KB |
+| audits-quarterly/90-day-creative-strategy-audit | — | killed by the cap mid-write, no output |
+| audits-quarterly/90-day-diversity-audit | — | killed by the cap mid-write, no output |
+
+**Concurrency lesson, recorded so the next resume does not repeat it.** Three waves in, the pattern
+holds: four agents in parallel exhaust the usage window before all of them can finish. Waves 2 and 3
+each yielded exactly two documents and discarded the completed research of the other two — in wave 3
+both losers reported "I have what I need, now writing" immediately before dying. **Run one or two
+prompts per wave on the next resume.**
+
+Paused at the owner's request on 2026-09-08 with 4 of 61 in-scope runs complete.
