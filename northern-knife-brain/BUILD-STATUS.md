@@ -5,7 +5,7 @@
 **Method version:** parker-system pinned to `v15`
 **Scope:** foundation only — Phase 0 and Phase 1, then stamp and hand off
 **Current phase:** Phase 1 — audit and foundation
-**Right now:** Wave 7, chosen around a constraint rather than by dependency order. **Parker MCP is disconnected**, so no prompt needing a live ad or review pull can run honestly. Running the two that never needed it: the website-and-product audit (its source is the live storefront) and the Reddit pull (its source is public forums). Both matter more than their position in the queue suggests — see below.
+**Right now:** Paused after wave 7, which lost both prompts to a sixth usage cap before either wrote anything. Nine documents are done. Parker MCP is still disconnected. See the throughput note below — the rate is now well enough established to plan around rather than discover again.
 
 **Waiting on you:** nothing.
 
@@ -110,7 +110,7 @@ Run before the build, so the ledger below is honest about what each prompt can r
 | Prompt | Status |
 |---|---|
 | brand-profile/brand-identity-analysis | pending |
-| brand-profile/website-and-product-audit | running |
+| brand-profile/website-and-product-audit | pending |
 | brand-profile/category-and-market-research | pending |
 | brand-profile/competitive-landscape | pending |
 | brand-profile/customer-journey-and-persona-discovery | pending |
@@ -142,7 +142,7 @@ Run before the build, so the ledger below is honest about what each prompt can r
 | personas/customer-reviews | done |
 | personas/other-reviews | pending |
 | personas/post-purchase-surveys | blocked — no survey responses exist for this brand |
-| personas/reddit | running |
+| personas/reddit | pending |
 | personas/brand-reputation | pending |
 | personas/brand-self-echo-detection | pending |
 | personas/personas-profile (← all sources) | pending |
@@ -211,6 +211,28 @@ Both wave-7 prompts also happen to bear directly on the brain's two open questio
   pulled. Forums are unmoderated by the brand, which is exactly why they are worth reading. The
   ad-comments pull found hand-forged *challengers* who look like the collector persona the brand
   spends $74,104.24 to reach, arriving hostile; forums are where that argument happens in full.
+
+## Throughput, measured rather than guessed
+
+Seven waves, roughly two dozen agent launches, **nine documents**. The usage window allows
+**about one to two completed documents per resume**, and the resumes are hours apart. At that
+rate the remaining 52 runs are days of elapsed time, not hours.
+
+Two things follow, and they point the same way:
+
+1. **The marginal value of what remains is much lower than what is built.** The nine include all
+   five quarterly audits, three of four persona source pulls, and the VoC corpus profile — the
+   documents the craft skills actually read. What is left is mostly the monthly/weekly audit
+   cadence (which the standing routines re-run on their own schedule anyway), the remaining
+   foundation slices, and the ten voc-* extraction slices.
+2. **Three of the remaining prompts are worth far more than the other 49, and none of them needs
+   Parker.** They synthesize what already exists:
+   -  — **the always-loaded one-pager.**  tells
+     Parker to read it first on every question, and it does not exist. This is the single highest-
+     value remaining document by a distance.
+   - 
+   -  — consolidates the open loops every built document ends with,
+     into one graded agenda. Nine documents have been filing loops with nowhere to land.
 
 ## Needs attention
 
