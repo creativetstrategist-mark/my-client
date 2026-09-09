@@ -92,3 +92,19 @@ Three cheap sweeps also never ran and would each close a real gap:
 - **"laser"** on the comment side — the Feather rule conflict has only been tested on reviews.
 - **"opener" / "bottle"** — the LOKI conflict has no comment-side read at all.
 - **grill language** — MIKE is 36.7% of 90-day spend and this surface has no read on him.
+
+### 3. Parker MCP disconnected 2026-09-09 — blocks all further live pulls
+
+As of the whitespace run, `Parker MCP` is not connected in this session at all — not just the
+comments tool. The Meta connector remains no substitute: `act_8557554027677317` and
+`act_1771028750359089` only, both DISABLED with zero spend, neither being
+`act_1897335644135093`.
+
+**Consequence:** every figure in `quarterly-whitespace-analysis.md` for spend, format, emotion and
+persona is *carried* from the 2026-09-07 and 2026-09-08 pulls, and no creative media was inspected
+live. That is stated in its frontmatter. Any prompt still pending that needs a live ad or review
+pull cannot run honestly until Parker returns.
+
+**Triple Whale is connected and was used**, which is how the whitespace analysis reached order-level
+data none of the earlier documents could see. Worth remembering: it is a live route to revenue,
+order and repeat-purchase truth that the Parker-shaped prompts do not reach for by default.

@@ -5,7 +5,7 @@
 **Method version:** parker-system pinned to `v15`
 **Scope:** foundation only — Phase 0 and Phase 1, then stamp and hand off
 **Current phase:** Phase 1 — audit and foundation
-**Right now:** Wave 6. Seven documents are done — the write-early instruction worked, turning what would have been a fifth total loss into two saved documents. Running now: the quarterly whitespace analysis (which completes the quarterly audit set) and the ad-comments persona pull (the only adversarial corpus this brand has).
+**Right now:** Nine documents done, and **all five quarterly audits are complete**. The whitespace analysis pulled Triple Whale order data — a surface no other doc had touched — and found the gifting window is both the biggest trading period and the biggest acquisition event of the year. See Needs attention. Parker MCP is currently disconnected, which blocks any further live ad or review pull.
 
 **Waiting on you:** nothing.
 
@@ -50,10 +50,10 @@ becomes worth running.
 | Phase / branch | Done | Total |
 |---|---|---|
 | Phase 0 — repo, scaffold, method mount | 7 | 7 |
-| Phase 1E — audit baseline | 4 | 17 |
+| Phase 1E — audit baseline | 5 | 17 |
 | Phase 1A — brand foundation | 0 | 14 |
 | Phase 1B — competitors (trimmed) | 0 | 4 |
-| Phase 1C — personas | 2 | 12 |
+| Phase 1C — personas | 3 | 12 |
 | Phase 1D — voice of customer | 1 | 12 |
 | Phase 1 — synthesis (gaps, open loops) | 0 | 2 |
 | Stamp, verify, arm routines, hand off | 5 | 6 |
@@ -91,7 +91,7 @@ Run before the build, so the ledger below is honest about what each prompt can r
 | audits-quarterly/90-day-performance-audit | done |
 | audits-quarterly/90-day-diversity-audit | done |
 | audits-quarterly/customer-review-audit | done |
-| audits-quarterly/quarterly-whitespace-analysis | running |
+| audits-quarterly/quarterly-whitespace-analysis | done |
 | audits-monthly/monthly-hook-audit | pending |
 | audits-monthly/monthly-performance-report | pending |
 | audits-monthly/monthly-organic-tiktok-audit | pending |
@@ -138,7 +138,7 @@ Run before the build, so the ledger below is honest about what each prompt can r
 | Prompt | Status |
 |---|---|
 | personas/ad-account | done |
-| personas/ad-comments | running |
+| personas/ad-comments | done |
 | personas/customer-reviews | done |
 | personas/other-reviews | pending |
 | personas/post-purchase-surveys | blocked — no survey responses exist for this brand |
