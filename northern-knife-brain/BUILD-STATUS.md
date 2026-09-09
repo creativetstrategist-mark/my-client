@@ -5,7 +5,7 @@
 **Method version:** parker-system pinned to `v15`
 **Scope:** foundation only — Phase 0 and Phase 1, then stamp and hand off
 **Current phase:** Phase 1 — audit and foundation
-**Right now:** Nine documents done, and **all five quarterly audits are complete**. The whitespace analysis pulled Triple Whale order data — a surface no other doc had touched — and found the gifting window is both the biggest trading period and the biggest acquisition event of the year. See Needs attention. Parker MCP is currently disconnected, which blocks any further live ad or review pull.
+**Right now:** Wave 7, chosen around a constraint rather than by dependency order. **Parker MCP is disconnected**, so no prompt needing a live ad or review pull can run honestly. Running the two that never needed it: the website-and-product audit (its source is the live storefront) and the Reddit pull (its source is public forums). Both matter more than their position in the queue suggests — see below.
 
 **Waiting on you:** nothing.
 
@@ -110,7 +110,7 @@ Run before the build, so the ledger below is honest about what each prompt can r
 | Prompt | Status |
 |---|---|
 | brand-profile/brand-identity-analysis | pending |
-| brand-profile/website-and-product-audit | pending |
+| brand-profile/website-and-product-audit | running |
 | brand-profile/category-and-market-research | pending |
 | brand-profile/competitive-landscape | pending |
 | brand-profile/customer-journey-and-persona-discovery | pending |
@@ -142,7 +142,7 @@ Run before the build, so the ledger below is honest about what each prompt can r
 | personas/customer-reviews | done |
 | personas/other-reviews | pending |
 | personas/post-purchase-surveys | blocked — no survey responses exist for this brand |
-| personas/reddit | pending |
+| personas/reddit | running |
 | personas/brand-reputation | pending |
 | personas/brand-self-echo-detection | pending |
 | personas/personas-profile (← all sources) | pending |
@@ -194,6 +194,23 @@ Between waves 2 and 3 the brain was stamped — contract, README, lens, freshnes
 coherent and openable rather than a half-built folder. That stamping stands; this wave adds
 knowledge to an already-working system. `CLAUDE.md` and `README.md` describe which docs exist, so
 **they need re-checking each time a wave lands** — they currently name only two documents.
+
+## Sequencing note — why wave 7 skipped ahead
+
+The dependency graph is not the only thing that decides what runs next; **what the tools can
+actually reach** decides it too. With Parker down, the honest choice is to run prompts whose
+sources are still live rather than run Parker-shaped prompts on carried data and call it a pull.
+
+Both wave-7 prompts also happen to bear directly on the brain's two open questions:
+
+- **The website audit is a third data point on both product-rule conflicts.** The brand's rules
+  say the Feather pattern is laser-applied and the LOKI opener sits in the handle; five ads
+  carrying 8,475.26 say otherwise. What the live storefront says is evidence neither side has.
+- **The Reddit pull is the only independent customer voice this brand can get.** Reviews run
+  4.93/5, surveys are empty, and the one adversarial surface — ad comments — could not be freshly
+  pulled. Forums are unmoderated by the brand, which is exactly why they are worth reading. The
+  ad-comments pull found hand-forged *challengers* who look like the collector persona the brand
+  spends $74,104.24 to reach, arriving hostile; forums are where that argument happens in full.
 
 ## Needs attention
 
