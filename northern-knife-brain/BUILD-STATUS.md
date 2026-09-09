@@ -227,11 +227,11 @@ Two things follow, and they point the same way:
    foundation slices, and the ten voc-* extraction slices.
 2. **Three of the remaining prompts are worth far more than the other 49, and none of them needs
    Parker.** They synthesize what already exists:
-   -  — **the always-loaded one-pager.**  tells
+   - `brand-profile/brand-profile-narrative` — **the always-loaded one-pager.** `CLAUDE.md` tells
      Parker to read it first on every question, and it does not exist. This is the single highest-
      value remaining document by a distance.
-   - 
-   -  — consolidates the open loops every built document ends with,
+   - `market-synthesis/gaps-opportunities-inspo` — the whitespace read turned into where to play.
+   - `open-loops/open-loops-roll-up` — consolidates the open loops every built document ends with,
      into one graded agenda. Nine documents have been filing loops with nowhere to land.
 
 ## Needs attention
