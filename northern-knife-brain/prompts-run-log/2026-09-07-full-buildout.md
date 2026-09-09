@@ -122,3 +122,22 @@ both losers reported "I have what I need, now writing" immediately before dying.
 prompts per wave on the next resume.**
 
 Paused at the owner's request on 2026-09-08 with 4 of 61 in-scope runs complete.
+
+## Waves 4-5 — the write-early fix
+
+| Prompt | Verdict |
+|---|---|
+| audits-quarterly/90-day-creative-strategy-audit | written, 16,600 words, all ten top spenders given a watched media read |
+| audits-quarterly/90-day-diversity-audit | written, ~96KB — saved before the fifth cap killed the agent |
+| voice-of-customer/voc-corpus-profile | written, ~70KB — same |
+
+**The concurrency lesson has a second half, and it matters more than the first.** Four waves
+established that fewer parallel agents lose less. Wave 5 established the real fix: an agent
+told to **write a draft to disk before it finishes researching** survives a cap with a
+document, while an agent that saves last loses everything. In wave 5 the cap killed both
+agents mid-run and both documents survived. Every future brief carries this instruction.
+
+**To reconcile:** `voc-corpus-profile.md` states that its denominators contradict some of
+those in `source-pulls/customer-reviews.md` and `audits/2026-Q3/customer-review-audit.md`.
+The corpus profile is the later and more deliberate count, but the discrepancy has not been
+run down. Worth settling before the ten voc-* slices are run against it.

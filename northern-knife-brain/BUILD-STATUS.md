@@ -5,7 +5,7 @@
 **Method version:** parker-system pinned to `v15`
 **Scope:** foundation only — Phase 0 and Phase 1, then stamp and hand off
 **Current phase:** Phase 1 — audit and foundation
-**Right now:** Wave 5, two prompts: the 90-day diversity audit (the last outstanding quarterly, and the one three caps have now killed mid-write) and the voice-of-customer corpus profile. The VoC profile is deliberately paired here because it gates the ten voc-* extraction slices — if it mis-maps the corpora, every slice downstream inherits the error.
+**Right now:** Wave 6. Seven documents are done — the write-early instruction worked, turning what would have been a fifth total loss into two saved documents. Running now: the quarterly whitespace analysis (which completes the quarterly audit set) and the ad-comments persona pull (the only adversarial corpus this brand has).
 
 **Waiting on you:** nothing.
 
@@ -50,11 +50,11 @@ becomes worth running.
 | Phase / branch | Done | Total |
 |---|---|---|
 | Phase 0 — repo, scaffold, method mount | 7 | 7 |
-| Phase 1E — audit baseline | 3 | 17 |
+| Phase 1E — audit baseline | 4 | 17 |
 | Phase 1A — brand foundation | 0 | 14 |
 | Phase 1B — competitors (trimmed) | 0 | 4 |
 | Phase 1C — personas | 2 | 12 |
-| Phase 1D — voice of customer | 0 | 12 |
+| Phase 1D — voice of customer | 1 | 12 |
 | Phase 1 — synthesis (gaps, open loops) | 0 | 2 |
 | Stamp, verify, arm routines, hand off | 5 | 6 |
 
@@ -89,9 +89,9 @@ Run before the build, so the ledger below is honest about what each prompt can r
 |---|---|
 | audits-quarterly/90-day-creative-strategy-audit | done |
 | audits-quarterly/90-day-performance-audit | done |
-| audits-quarterly/90-day-diversity-audit | running |
+| audits-quarterly/90-day-diversity-audit | done |
 | audits-quarterly/customer-review-audit | done |
-| audits-quarterly/quarterly-whitespace-analysis | pending |
+| audits-quarterly/quarterly-whitespace-analysis | running |
 | audits-monthly/monthly-hook-audit | pending |
 | audits-monthly/monthly-performance-report | pending |
 | audits-monthly/monthly-organic-tiktok-audit | pending |
@@ -138,7 +138,7 @@ Run before the build, so the ledger below is honest about what each prompt can r
 | Prompt | Status |
 |---|---|
 | personas/ad-account | done |
-| personas/ad-comments | pending |
+| personas/ad-comments | running |
 | personas/customer-reviews | done |
 | personas/other-reviews | pending |
 | personas/post-purchase-surveys | blocked — no survey responses exist for this brand |
@@ -154,7 +154,7 @@ Run before the build, so the ledger below is honest about what each prompt can r
 
 | Prompt | Status |
 |---|---|
-| voice-of-customer/voc-corpus-profile | running |
+| voice-of-customer/voc-corpus-profile | done |
 | voice-of-customer/voc-pain-phrase | pending |
 | voice-of-customer/voc-outcome-phrase | pending |
 | voice-of-customer/voc-trigger-moment | pending |
@@ -181,6 +181,7 @@ Run before the build, so the ledger below is honest about what each prompt can r
 |---|---|---|
 | 1 | 12 | all 12 killed by the session cap before writing. Nothing lost. |
 | 2 | 4 | 2 completed and saved; 3 killed by a second cap (reset 17:10 UTC). |
+| 5 | 2 | **both completed**, despite the cap killing both agents mid-run — the write-early instruction meant both had already saved. This is the fix; keep it in every brief. |
 | 4 | 2 | 1 completed (the anchor, 16,600 words — and the write-early instruction is why); 1 killed by a fourth cap. Half concurrency roughly halved the loss rate. |
 | 3 | 4 | 2 completed and saved; 2 killed by a third cap (reset 22:30 UTC) *while writing* — they finished their research and lost it. |
 
