@@ -122,7 +122,7 @@ Run before the build, so the ledger below is honest about what each prompt can r
 | brand-profile/ad-account-evaluation (← audits) | pending |
 | brand-profile/performance-targets-and-metrics (← audits) | pending |
 | brand-profile/organic-channels-inventory (← audits) | pending |
-| brand-profile/brand-profile-narrative (← all of 1A) | pending |
+| brand-profile/brand-profile-narrative (← all of 1A) | running (wave 8) |
 
 ### Phase 1B — competitors (trimmed to 4)
 
@@ -171,7 +171,7 @@ Run before the build, so the ledger below is honest about what each prompt can r
 | Prompt | Status |
 |---|---|
 | market-synthesis/gaps-opportunities-inspo | pending |
-| open-loops/open-loops-roll-up | pending |
+| open-loops/open-loops-roll-up | running (wave 8) |
 
 ---
 
