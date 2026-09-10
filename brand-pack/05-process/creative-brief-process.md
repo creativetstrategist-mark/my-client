@@ -192,14 +192,20 @@ from some shipped briefs.
 11. Bold text: **`HOOK`**
 12. **HOOK table**, header row, **green** header background.
     Template columns: `Visual` | `Copy/ Text Overlay` | `Note`.
-    Shipped multi-variant briefs prepend a `Variant` column (`1D — Drama`,
-    `2D — Curiosity`, `3D — Benefit`). One row per hook variant.
+    Multi-variant briefs prepend a `Variant` column carrying the **bare
+    variation code** — `1B`, `2C`, `3C`. Nothing appended to it; see D.3.1.
+    One row per hook variant.
 13. Bold text: **`BODY`**
 14. **BODY table**, header row, **orange** header background.
     Template columns: `Visual` | `Copy/ Text Overlay` | `Note`.
     NK306 prepends a `Block` column. One row per beat.
 15. Bold text: **`CTA`** *(template only — shipped briefs fold the CTA into the
     final BODY row instead; follow the shipped pattern)*
+
+**The BODY table is the last block. Nothing follows it.** A few earlier briefs
+(NK455) append a `FULL SCRIPT (for VO)` section restating the copy as prose.
+**Do not add one.** The BODY table's `Copy/ Text Overlay` column is the script —
+a prose duplicate is a second copy to keep in sync and the first one to go stale.
 
 ### D.1 Page properties
 
