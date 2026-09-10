@@ -32,7 +32,7 @@ explicitly asks:
 
 | Product | Hard rules (never violate) |
 |---|---|
-| **Feather Knife** | $99.90. Rosewood handle. Blade pattern is **laser-applied** — never say hand-etched, hand-finished, or engraved. ~500-unit limited drops, ~3-month restock. Persona fit: **JOHN** (collector). |
+| **Feather Knife** | $99.90. Rosewood handle. Blade pattern is made **by hand** — "hand-etched," "hand-made" and "takes hours to create by hand" are all fine. *(Corrected 2026-09-10: this rule previously read "laser-applied — never say hand-etched." The brand owner, asked directly, said "By hand." The old rule was wrong. Not yet settled: whether the whole pattern or only part of it is hand-worked, so don't claim no machine touches the blade at any stage.)* ~500-unit limited drops, ~3-month restock. Persona fit: **JOHN** (collector). |
 | **BJORN Series Santoku** | Norse engravings on blade, dragon-sculpted **brass** bolster, hand-carved wooden handle. **Never reference Japanese origins or use the word "Japanese"** — santoku is a Japanese-origin knife shape but the brand never says so. Persona fit: **JOHN**. |
 | **LOKI Blackout Edition** | $79.90. High-carbon steel, ebony handle, bottle opener built into the **handle** (not the blade/spine). Ships in a black branded box with magnetic closure. All-black remake of the #1-selling LOKI Viking Knife. Persona fit: **MIKE** (BBQ/grill self-buyer), **SARAH** (gift framing), general/deal-led for **VANCE**. |
 
