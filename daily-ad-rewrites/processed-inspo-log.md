@@ -33,6 +33,7 @@ Column notes:
 | Date used | Ad ID / URL | Advertiser | Briefs created | Notes |
 |---|---|---|---|---|
 | 2026-08-22 | https://app.trendtrack.io/share/ads/coolina-usa-2xqDP1 | Coolina | NK306 | Backfilled from the live brief, not from a routine run. Deadpan split-screen call-and-response mechanic. LOKI Blackout only. |
+| 2026-09-10 | https://app.heyparker.ai/share/ideas/tOtgfZXPt0mH | Parker (NorthernKnife own long-form VSL) | NK458, NK460, NK459 | Not a TrendTrack source — logged anyway so the mechanic isn't re-adapted. Returned-knife story cut to under 60s. Feather and Santoku on JOHN, Blackout on MIKE. |
 
 > The single row above is backfilled from NK306 in the Notion database so the
 > Coolina ad is not picked again. The routine has not yet had a scheduled run
