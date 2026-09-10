@@ -8,6 +8,17 @@
 - **North-star metric:** **ROAS.** `stated` by the account owner, 2026-09-07. Current
   reference points: **2.18 over the last 30 days, 2.03 lifetime** (`verified`, account-wide
   lifetime pull 2026-09-07). Lifetime spend $497,553.67 on 38,847,631 impressions.
+- **Lifetime figures, refreshed 2026-09-10** (`verified`, same account, `lifetime_only` pull):
+  **$507,487.66 spend, 2.03 ROAS, $143.74 AOV, 7,169 purchases, $1,030,457.99 purchase value,
+  2,526 ad-name groups, 39,500,116 impressions, $70.79 CPA.**
+
+  > **Both sets are correct — do not treat this as a discrepancy.** The 2026-09-07 numbers
+  > ($497,553.67 / 7,066 / 2,431) are the anchor most documents in this brain were built on and
+  > they stay valid *as of that date*. The 2026-09-10 set is three days of normal accrual on top:
+  > **+$9,933.99 spend (~$3,311/day), +103 purchases, +95 ad-name groups**, with ROAS unmoved at
+  > 2.03. A sweep that flags the older set as "wrong" is a false alarm — the discredited sets are
+  > still only $194,644.63 / 2.26 / $174.07 / 2,531 / 1,005 and $404,808.64 / 2.17 / $148.20.
+  > **Cite the pull date alongside any lifetime figure**, because this account moves ~$3.3k a day.
 - **Efficiency target: 2.0 ROAS.** `stated` by the brand owner, 2026-09-10 — *"below 2 ROAS is
   not profitable."* Never present a ROAS figure in this account without saying where it sits
   against 2.0, **and say which ROAS you mean** (see the next line — it changes the answer).

@@ -45,10 +45,21 @@ sharpens a specific read:
   So every format read, every fatigue call, every "this account has never run that" claim
   describes the UK account only, and none of the docs say so, because nobody knew. `verified` on
   the spend and the ROAS from the order warehouse; **NOT yet verified: which ad account id it is.**
-  The Parker connector reaches only `act_8557554027677317` and `act_1771028750359089`, both
-  DISABLED with zero spend. **Connecting the live US ad account in Parker is the single highest-value
-  action available to this brand right now** — it outranks every loop in the roll-up, because it
-  changes the denominator under all of them.
+  **Checked directly in Parker on 2026-09-10: exactly ONE account is connected** —
+  `1897335644135093 · AURORA | A12264703 | NorthernKnife_UK_3` (primary, enabled, USD). There is
+  no second account to scope to, so this is a genuine connection gap, not an un-run query.
+  `verified`. **Connecting the live US ad account in Parker is the single highest-value action
+  available to this brand right now** — it outranks every loop in the roll-up, because it changes
+  the denominator under all of them.
+
+  **How to do it:** it cannot be done from this side. Attaching a Meta ad account is an OAuth
+  handshake against the Meta Business account and needs a human with Meta admin rights — no Parker
+  MCP tool exposes it, and `setup_parker_brain` provisions the brain repo, not data connections.
+  Do it in the Parker web app: **app.heyparker.ai → Northern Knife → data connections → add the
+  Meta ad account.** Then re-run `90-day-performance-audit` and `90-day-diversity-audit`.
+
+  **Trap:** the connected account is called `NorthernKnife_UK_3` and reports in **USD**. Do not
+  pick the US account by currency.
 - **LTV / payback window.** Decides whether a first-order loss is acceptable.
 - **Secondary metrics the team weighs** beyond ROAS.
 - **The spend-versus-efficiency rule** when two ads in one ad set diverge.

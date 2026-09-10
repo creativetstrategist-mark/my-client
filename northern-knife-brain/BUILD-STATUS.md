@@ -27,7 +27,7 @@
 
 | # | What | Why it needs you |
 |---|---|---|
-| 1 | **Connect the US Meta ad account in Parker** | Parker reaches only `act_8557554027677317` and `act_1771028750359089`, both DISABLED with zero spend. The live US account is not connected, so half the paid business is unauditable. |
+| 1 | **Connect the US Meta ad account in Parker** | **Confirmed 2026-09-10:** Parker's connected-account list returns exactly ONE account — `1897335644135093 · AURORA \| A12264703 \| NorthernKnife_UK_3` (primary, enabled, USD). There is no second account to scope to, so this is a real connection gap, not an un-run query. It cannot be done from an agent session: attaching a Meta ad account is an OAuth handshake needing Meta admin rights. **app.heyparker.ai → Northern Knife → data connections → add the Meta ad account**, then re-run `90-day-performance-audit` and `90-day-diversity-audit`. **Trap: the connected account is named `NorthernKnife_UK_3` and reports in USD — do not pick the US account by currency.** |
 | 2 | **Arm the routines** — run `/setup-routines` from a persistent instance | The routine *skills* work on demand now, but nothing fires on a cadence. This session's scheduler is session-scoped and expires in 7 days, so arming it here would have looked armed without being armed. It was deliberately not used. |
 | 3 | **Decide where this brain lives** | Parker provisioned `parker-brain/nebula-studio-northern-knife`, but this session's GitHub access is locked to the `creativetstrategist-mark` tier and cross-tier attachment was refused outright. Three migration paths: `running-notes/standard-sync.md`. |
 

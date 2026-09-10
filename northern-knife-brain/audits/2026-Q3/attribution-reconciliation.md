@@ -12,7 +12,7 @@ built_from:
 data_limitations:
   - "The two stores report in DIFFERENT CURRENCIES — the US store in USD, the UK store in GBP. Nothing in this doc sums across them, and neither should anything else. Every figure below carries its currency."
   - "Gross profit here is Triple Whale's own configured contribution figure (sales less COGS, handling, payment fees, refunds and custom spends). It is the shop's configuration, not a margin the brand stated in words, so it is marked `verified from Triple Whale` rather than `stated`."
-  - "The US Meta spend identified here has NOT been traced to a specific ad account id. That it exists and its size are verified; which account it belongs to is not."
+  - "UPDATED 2026-09-10: Parker's connected-account list was checked directly and returns exactly ONE account (1897335644135093, AURORA | A12264703 | NorthernKnife_UK_3, primary, enabled, USD), which confirms the US spend is unreachable from Parker rather than merely un-queried. The US Meta spend still has NOT been traced to a specific ad account id — nothing in Parker exposes it. That it exists, its size, and that it is a separate account are established; its id and name are not."
 ---
 
 # Attribution reconciliation — what the 2.0 floor actually means
@@ -138,8 +138,28 @@ more live, spending Meta account that Parker has never seen.
 > fatigue read, every persona-delivery finding — all of it describes the UK account only, and none
 > of the documents say so, because nobody knew.
 >
-> **Not yet verified:** which ad account id the US spend belongs to. That it exists, and its size,
-> are verified from the order warehouse. Connecting it in Parker is the next move.
+> **CONFIRMED 2026-09-10, after this doc was first written.** Parker's own connected-account list
+> was checked directly. It returns **exactly one account**:
+>
+> ```
+> 1897335644135093 · AURORA | A12264703 | NorthernKnife_UK_3
+> is_primary: true · is_enabled: true · currency: USD
+> ```
+>
+> There is no second account to scope to, so the US spend is genuinely unreachable from Parker
+> rather than merely un-queried. `verified`.
+>
+> **And the check strengthened the finding rather than weakening it.** The one connected account's
+> whole 90-day spend of $337,402.58 maps to the UK store's £255,939.42 at FX 1.3183. The *entire*
+> account reconciles to the UK store alone — so the US store's $316,988.95 cannot be a slice of
+> this same account being split across stores by attribution. It is a separate ad account,
+> connected to Triple Whale but not to Parker. `inferred`, and the inference is now tight.
+>
+> **Still not verified:** the US account's id and name. Nothing in Parker exposes them, by design.
+>
+> **A trap for whoever connects it:** the already-connected account is named `NorthernKnife_UK_3`,
+> reports in **USD**, and points at `northernknife.co.uk`. **Do not identify the US account by
+> currency** — the one that is already connected is the USD one.
 
 ---
 

@@ -211,7 +211,7 @@ needs to say what it does against both numbers, and on which store.
 
 | Doc | What it is |
 |---|---|
-| `brand-profile.md` | **The always-loaded one-pager, and it exists now.** 119 lines. Read it first on every question, exactly as the map says. Its frontmatter carries a `not_built_do_not_cite` list so it never points you at an empty folder. |
+| `brand-profile.md` | **The always-loaded one-pager, and it exists now.** 122 lines. Read it first on every question, exactly as the map says. Its frontmatter carries a `not_built_do_not_cite` list so it never points you at an empty folder. |
 | `open-loops/2026-09-09-consolidated-roll-up.md` | 1,248 lines. The graded strategic agenda: 64 loops harvested from nine documents, 8 killed, 32 consolidated, 24 shipped across the four territories with scores, tiers and the exact pull that would close each one. |
 | `audits/2026-Q3/90-day-performance-audit.md` | ~5,300 words, live-pulled. Spend, efficiency, delivery, format and fatigue across 2026-06-09→2026-09-07 vs the prior 90 days. The account's present tense. |
 | `audits/2026-Q3/90-day-creative-strategy-audit.md` | ~16,600 words. The creative read on top of the performance data. |
@@ -235,7 +235,7 @@ synthesis docs, the rest of `personas/voice-of-customer/`, `strategy/`, `idea-ba
 
 So: **the map above is the target shape, not the current contents.** When a doc it names is not on
 disk, say so plainly rather than improvising its contents or implying the vault is thinner than it
-looks by accident. The build was paced by usage limits across nine resumes and stands at **eleven documents**; the
+looks by accident. The build was paced by usage limits across ten resumes and stands at **thirteen documents**; the
 ledger of what is done and what is outstanding is `BUILD-STATUS.md` and `prompts-run-log/`, and the
 live gap list is `running-notes/missing-context.md`.
 
@@ -267,7 +267,16 @@ US **1.68** Meta vs 2.83 blended. Over the same 90 days both stores were **net p
 > of Meta spend in the same 90 days at **1.68 ROAS — below its own 1.74 breakeven** — and no
 > document in this vault has ever looked at it. So every format read, fatigue call and "this
 > account has never run that" claim describes the UK account only. **Say so when you cite them.**
-> Connecting the live US ad account in Parker outranks everything on the loop agenda.
+>
+> **Confirmed 2026-09-10 by checking Parker's connected-account list directly:** exactly ONE
+> account is attached — `1897335644135093 · AURORA | A12264703 | NorthernKnife_UK_3` (primary,
+> enabled, USD). There is no second account to scope to, so this is a real connection gap rather
+> than an un-run query, and no amount of querying from here will reach the US spend.
+>
+> **Connecting the live US ad account in Parker outranks everything on the loop agenda.** It needs
+> a human with Meta admin rights: app.heyparker.ai → Northern Knife → data connections. **Trap:
+> the connected account is named `NorthernKnife_UK_3` and reports in USD — do not identify the US
+> account by currency.**
 
 Full working: `audits/2026-Q3/attribution-reconciliation.md` and `running-notes/success-definition.md`.
 
