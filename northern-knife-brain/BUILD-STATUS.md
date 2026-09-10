@@ -171,7 +171,7 @@ Run before the build, so the ledger below is honest about what each prompt can r
 | Prompt | Status |
 |---|---|
 | market-synthesis/gaps-opportunities-inspo | pending |
-| open-loops/open-loops-roll-up | running (wave 8) |
+| open-loops/open-loops-roll-up | done |
 
 ---
 

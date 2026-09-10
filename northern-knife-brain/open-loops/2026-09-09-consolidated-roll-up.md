@@ -421,6 +421,51 @@ attributing a multi-product ad to a SKU needs an order-level join nobody in this
 *Upstream docs: `90-day-performance-audit.md` (loop 5), `source-pulls/ad-account.md` (loop 7).*
 *Tags: `team: creative-strategy`, `scope: org-wide`.*
 
+### PD-10 — How much of today's buyer does the review corpus actually show? — **15/20, brand-routed (override)**
+
+**Observation.** Two problems, one corpus. First, the size changed overnight. An unfiltered count on
+2026-09-07 returned 4,028 reviews at a 4.93 average. A pull on 2026-09-08 returned 2,135, with 2025
+and 2026 counts identical and 2022 down 78 percent, and one reviewer, Brian Chapin, going from 8 rows
+to 1 (`verified` both times, `voc-corpus-profile.md` and `running-notes/missing-context.md`). Two
+large finished documents, `customer-review-audit.md` and `source-pulls/customer-reviews.md`, ran their
+arithmetic against 4,028; `source-pulls/ad-comments.md` ran its cross-surface comparison against
+2,135. Nobody has established whether 2,135 is a legitimate subset or a loss. Second, the flow
+stopped. Monthly volume runs 95 in December 2025, 206 in January 2026, 45 in February, then 1 in
+March and nothing after, while the account spent $341,183.20 across the window ending 2026-09-07
+(`verified`, `customer-review-audit.md`).
+
+**The pull that would answer it, named.** Two things, and only the brand and the review platform can
+supply either. One, re-run an unfiltered `search_customer_reviews_sql` count and then the exact filter
+the corpus profile used, and state the relationship between the two numbers in both documents. Two,
+ask the review platform what changed in March 2026 — a collection setting, a migration, a plan change.
+Both were out of reach on 2026-09-09 while the Parker MCP was down. It came back on 2026-09-10, so
+the count half is runnable today. The March 2026 question still needs the review platform.
+
+**Pull — Gap.** Half a corpus disappeared between two pulls, six months of reviews went missing before
+that, and nothing in this brain predicted either.
+
+**The question: How much of today's buyer does the review corpus actually show?**
+
+**Why it is a loop.** This is not housekeeping. The review corpus is the main voice-of-customer
+surface in this brain, and three of the five loops in the Personas section above lean on it. If it
+stops in March, then every claim about the current buyer is really a claim about last winter's buyer,
+and the brand is steering Q4 by a photograph taken in the spring. If the corpus halved because of a
+deduplication, the reads still hold and the percentages need restating. If it halved because rows were
+lost, two large documents need re-running. Right now nobody can say which, and the difference decides
+whether this brain re-runs its two biggest customer documents or just annotates them.
+
+*Score — Stakes 4, Confidence 5, Researchability 2, Novelty 4. **Total 15/20 — routed to the brand by
+the override.*** This sits on the border between a strategic loop and an infrastructure item, and it
+is filed as a loop deliberately: the tooling half is already recorded in
+`running-notes/missing-context.md`, but the strategic half — how much of today's buyer this brain can
+actually see — is a real question with real consequences for the Q4 read.
+*Upstream docs: `voc-corpus-profile.md` (loop 1), `customer-review-audit.md` (loop 2),
+`running-notes/missing-context.md` (data-integrity item 1).*
+*Closing pull: an unfiltered `search_customer_reviews_sql` count run against the corpus profile's own
+filter. Runnable now — Parker came back 2026-09-10. The March 2026 flow question still needs the
+review platform's own status, which only the brand can ask for.*
+*Tags: `team: creative-strategy`, `scope: org-wide`.*
+
 ### PD-1 — How is the Feather blade pattern actually made? — **14/20, brand-routed (override)**
 
 **Observation.** The brand's own product law says the Feather's blade pattern is **laser-applied**,
@@ -501,51 +546,6 @@ the override.*** Researchability is a 2 because the answer is trivially availabl
 the knife and unavailable to Parker in this session.
 *Upstream docs: `90-day-creative-strategy-audit.md` (loop 7), `source-pulls/ad-account.md` (loop 8),
 `customer-review-audit.md` (loop 4), `brand-lens.md` (the Unsettled table).*
-*Tags: `team: creative-strategy`, `scope: org-wide`.*
-
-### PD-10 — How much of today's buyer does the review corpus actually show? — **15/20, brand-routed (override)**
-
-**Observation.** Two problems, one corpus. First, the size changed overnight. An unfiltered count on
-2026-09-07 returned 4,028 reviews at a 4.93 average. A pull on 2026-09-08 returned 2,135, with 2025
-and 2026 counts identical and 2022 down 78 percent, and one reviewer, Brian Chapin, going from 8 rows
-to 1 (`verified` both times, `voc-corpus-profile.md` and `running-notes/missing-context.md`). Two
-large finished documents, `customer-review-audit.md` and `source-pulls/customer-reviews.md`, ran their
-arithmetic against 4,028; `source-pulls/ad-comments.md` ran its cross-surface comparison against
-2,135. Nobody has established whether 2,135 is a legitimate subset or a loss. Second, the flow
-stopped. Monthly volume runs 95 in December 2025, 206 in January 2026, 45 in February, then 1 in
-March and nothing after, while the account spent $341,183.20 across the window ending 2026-09-07
-(`verified`, `customer-review-audit.md`).
-
-**The pull that would answer it, named.** Two things, and only the brand and the review platform can
-supply either. One, re-run an unfiltered `search_customer_reviews_sql` count and then the exact filter
-the corpus profile used, and state the relationship between the two numbers in both documents. Two,
-ask the review platform what changed in March 2026 — a collection setting, a migration, a plan change.
-Both were out of reach on 2026-09-09 while the Parker MCP was down. It came back on 2026-09-10, so
-the count half is runnable today. The March 2026 question still needs the review platform.
-
-**Pull — Gap.** Half a corpus disappeared between two pulls, six months of reviews went missing before
-that, and nothing in this brain predicted either.
-
-**The question: How much of today's buyer does the review corpus actually show?**
-
-**Why it is a loop.** This is not housekeeping. The review corpus is the main voice-of-customer
-surface in this brain, and three of the five loops in the Personas section above lean on it. If it
-stops in March, then every claim about the current buyer is really a claim about last winter's buyer,
-and the brand is steering Q4 by a photograph taken in the spring. If the corpus halved because of a
-deduplication, the reads still hold and the percentages need restating. If it halved because rows were
-lost, two large documents need re-running. Right now nobody can say which, and the difference decides
-whether this brain re-runs its two biggest customer documents or just annotates them.
-
-*Score — Stakes 4, Confidence 5, Researchability 2, Novelty 4. **Total 15/20 — routed to the brand by
-the override.*** This sits on the border between a strategic loop and an infrastructure item, and it
-is filed as a loop deliberately: the tooling half is already recorded in
-`running-notes/missing-context.md`, but the strategic half — how much of today's buyer this brain can
-actually see — is a real question with real consequences for the Q4 read.
-*Upstream docs: `voc-corpus-profile.md` (loop 1), `customer-review-audit.md` (loop 2),
-`running-notes/missing-context.md` (data-integrity item 1).*
-*Closing pull: an unfiltered `search_customer_reviews_sql` count run against the corpus profile's own
-filter. Runnable now — Parker came back 2026-09-10. The March 2026 flow question still needs the
-review platform's own status, which only the brand can ask for.*
 *Tags: `team: creative-strategy`, `scope: org-wide`.*
 
 ### PD-11 — How far can Northern Knife's return fall before scaling stops being worth it? — **14/20, brand-routed (override)**
@@ -865,3 +865,386 @@ the brand.
 *Upstream docs: `source-pulls/ad-comments.md` (loop 4).*
 *Tags: `team: creative-strategy`, `scope: org-wide`.*
 
+---
+
+## Creators and talent — who is on screen and what it says
+
+Two loops. That is honestly what the documents raised, and it is the thinnest territory in the file
+by a wide margin. It is not padded to match Product's ten. The coverage check below says what that
+thinness probably means.
+
+### CT-1 — What would a real person on camera do for this account that the machine voice cannot? — **18/20, Tier 1**
+
+**Observation.** Northern Knife has never once let a human being talk in its advertising, and nobody
+has recorded a reason. Across 515 tagged ad-name groups holding $188,174.74, every format built on a
+person on camera adds up to **2.14 percent of tagged spend**, and nine of the fourteen formats that
+never ran in either window are person-performance formats. The one format of that kind the account
+did run, Reaction, held five groups and 2.1 percent of tagged spend last quarter and went to **zero**
+this quarter (`verified`, `90-day-diversity-audit.md`). The top of the account tells the same story
+from the creative side: all ten of the highest-spending name groups carry an `AI VO` token, and nine
+of those ten cast people. NK184 casts four, NK127 three, NK300 a blacksmith and two men, NK168 three
+including the account's only woman. Every one of them is b-roll under a machine voice. Across all ten
+ads, **one person speaks on camera, for about five seconds at the end of NK194**. UGC creative holds
+0.6 percent of tagged spend, founder creative 0.2 percent and authority creative 0.1 percent
+(`verified` from full media analysis run 2026-09-08, `90-day-creative-strategy-audit.md`, with the
+same absence read independently in `90-day-performance-audit.md`). And it has started to cost
+something out loud: 14 of 882 substantive comments attack the ads for being AI-made, all of them from
+2026-07 onward, including one from a happy owner, and several commenters ask for the same thing in
+the same words — *"So show us the smith actually making one. No Ai this time."* (`verified`,
+`voc-corpus-profile.md`.) Nothing in `running-notes/brand-notes-from-org.md` or the set-up intake says
+the brand ever decided against putting people on camera.
+
+**Pull — Gap.** The account already pays to put humans in frame and has never once let one of them
+talk. The whole production model that puts a face in front of a product is missing from a library of
+1,687 ad-name groups, the rival libraries are full of it, and the cost of finding out is close to
+nothing.
+
+**The question: What would a real person on camera do for this account that the machine voice cannot?**
+
+**Why it is a loop.** It decides whether the next round of production needs a creator roster and a
+budget line for one, or whether the current model is genuinely the right one to scale. Those are two
+completely different quarters. If the answer is that nobody has tried, the account has a whole
+production model sitting unused and six of the formats the diversity audit recommends become live. If
+the answer is a real constraint — no creator budget, no roster, a founder who will not film — then the
+test slate has to be built entirely from formats that work without a person, and three of those six
+recommendations are wrong. The AI objection adds a clock to it: a brand-new complaint appeared in July
+2026 and has not stopped, and one human-voiced ad is the cheapest way to find out whether it is
+costing anything.
+
+*Score — Stakes 5, Confidence 5, Researchability 3, Novelty 5. **Total 18/20. Tier 1.***
+Confidence is a 5 because four documents found the same absence from four directions, each with a
+count and a denominator. Novelty is a 5 because the lane has never been opened and the question has
+never been asked. Researchability is held at 3, and honestly: the "what would it do" half is testable
+with one shoot and readable in the category through the two tracked competitors, but the "what is
+stopping us" half is a brand answer. **That half is worth putting to the team alongside the
+brand-routed questions below:** is there a constraint here nobody has written down?
+*Upstream docs: `90-day-diversity-audit.md` (loop 1), `90-day-creative-strategy-audit.md` (loop 3),
+`90-day-performance-audit.md` (loop 6), `voc-corpus-profile.md` (loop 5).*
+*Closing pull: the account's own Reaction history plus the competitor library through
+`search_competitor_facebook_ads`. Runnable now — Parker came back 2026-09-10. The constraint half
+needs a person.*
+*Tags: `team: creative-strategy`, `scope: org-wide`.*
+
+### CT-2 — Who are the professionals buying these knives, and what made them try an unfamiliar brand? — **16/20, Tier 2**
+
+**Observation.** Chefs, butchers and retired butchers keep showing up in the review corpus,
+unprompted, and they write a kind of proof nothing else in the corpus produces: comparative authority
+against named professional brands. Michael Wilson, 2025-08-17: *"I've been a professional chef for
+over 30 years and I would put theses on a par with my professional set of FREDERICK DICK."* Nicholas
+Scott, 2023-10-20: *"I am a retired butcher I have a passion for a good weighted knife This one is
+better than a lot I have used in my whole career."* Jonathan Lewis, 2024-11-15: *"I use it in a
+professional kitchen every day and it's keeps sharp and well worth it."* And Mitchell Dixon,
+2026-01-22, opens with the line the whitespace analysis says is a whole ad concept on its own:
+*"Bought this knife along with the loki and the feather knife for home to see what the hype is about"*
+— a professional buying three knives specifically to test the marketing (`verified`,
+`customer-review-audit.md`, which files them under "The Professional — a persona the brand's set does
+not name"). The brand's four named personas have no slot for them, and no creative in the account has
+ever cast one.
+
+**Pull — Gap.** There is real, repeated, unpaid authority sitting in the reviews while the account
+runs on a persona set that does not include it, and the one proof class the brand has never tested is
+the one its loudest objections would actually answer.
+
+**The question: Who are the professionals buying these knives, and what made them try an unfamiliar
+brand?**
+
+**Why it is a loop.** A working chef holding the thing is a different class of answer to *"As a
+blacksmith and a historian....this is 💯 🐂 💩"* than another machine-voiced monologue, and the
+comments are loudest on exactly the two things a professional settles: 39 of 882 challenge whether
+the knives are hand forged and 19 of 882 ask a materials question the ads never answer. It also
+answers a casting question CT-1 leaves open — if the brand does open the person-led lane, this is a
+named, evidenced first choice rather than a guess. Two constraints are real and the brief has to hold
+both. The casting one: this needs an actual professional willing to film, and the brand has no roster.
+And the copy one: a chef asked why a knife is good will reach straight for steel and edge angle, which
+this brand's copy law forbids, so the brief has to hand him the consequences to talk about instead.
+
+*Score — Stakes 4, Confidence 3, Researchability 4, Novelty 5. **Total 16/20. Tier 2.***
+Confidence is only a 3 and it is the weak point. Five named reviewers with very high credibility each
+is not a counted cluster — **nobody has ever run this group with a denominator**, so "professionals
+keep showing up" is a strong impression, not a measured share. Researchability is a 4 because the
+review corpus holds these people by name and text and a semantic sweep would size the group in one
+pull. Novelty is a 5: the persona set has no slot for them and no ad has ever cast one.
+*Upstream docs: `customer-review-audit.md` (loop 7 and the Professional persona section),
+`quarterly-whitespace-analysis.md` (whitespace recommendation 5).*
+*Closing pull: a semantic sweep of the review corpus for professional identity language, to size the
+group before casting anything. Runnable now — Parker came back 2026-09-10.*
+*Tags: `team: creative-strategy`, `scope: org-wide`.*
+
+---
+
+## Brand-routed — what only the brand can answer
+
+Four loops routed here by the override: stakes of 4 or higher with researchability of 2 or lower goes
+to the brand regardless of the total. These are not research tasks. They are questions for a person at
+Northern Knife, and each one is written so somebody who is not an analyst can answer it in a sentence.
+Two of them have been open in `brand-lens.md` since 2026-09-07 and have been escalated once already.
+
+**PD-1 — the Feather.** Full loop in the Product section. Five ads carrying $38,475.26, 44.5 percent
+of top-ten spend, say the Feather's pattern is etched by hand. The rule says it is laser-applied.
+
+> **The question to put to the team:** *Is the feather pattern on the Feather Knife applied by laser,
+> or is any part of it done by hand?*
+
+Whoever answers should update `running-notes/brand-notes-from-org.md` and `brand-lens.md` in the same
+pass, and it is worth attaching a photo or a few seconds of production footage. Until then Parker
+keeps writing to the rule and flagging the conflict.
+
+**PD-2 — the LOKI Blackout.** Full loop in the Product section. NK222 and NK284 put the bottle opener
+in the blade. NK168 and NK219 put it in the handle. The rule says handle, and the four customers who
+mention it lean the same way.
+
+> **The question to put to the team:** *On the LOKI Blackout Edition, is the bottle opener cut into
+> the handle or into the blade?*
+
+**PD-10 — the review corpus.** Full loop in the Product section. The corpus counted 4,028 on
+2026-09-07 and 2,135 on 2026-09-08, and the review flow stops in March 2026 with nothing after it.
+Parker can now re-run the counts itself; what it cannot do is ask the platform what happened.
+
+> **The question to put to the team:** *Did anything change with the review platform this year — a
+> clean-up, a re-import, a migration or a plan change — and do you know why reviews stopped coming in
+> after March 2026?*
+
+**PD-11 — the floor.** Full loop in the Product section. The objective is to scale acquisition with
+ROAS as the north star, and no margin, no maximum cost per purchase and no payback window were ever
+given. It is the cheapest thing on this whole list to close and it sits underneath every other
+recommendation in the file.
+
+> **The question to put to the team:** *Roughly what does Northern Knife keep on an average order
+> after the cost of the knife and shipping, and how low would you let the return on ad spend go before
+> you'd want us to stop pushing?*
+
+**One more question, not a routed loop but worth asking in the same conversation.** CT-1 is Tier 1 and
+runnable, but half of it is a brand answer and the whole test slate hangs on it:
+
+> *Has anyone at Northern Knife ever decided not to put a real person on camera in these ads — and if
+> so, what was the reason?*
+
+Nothing in the brand notes or the set-up intake records such a decision, which is why CT-1 asks what a
+person on camera would do rather than assuming nobody has tried.
+
+---
+
+## Archived this pass
+
+Seven loops died with reasoning, plus one routed out of the loops entirely. This archive is the
+brand's map of what does not clear the bar today. A future pass that re-surfaces any of these has to
+find the verdict below first, and reviving one takes new evidence, named.
+
+**MS-8 — "What is running in the untagged half of this account's spend?"**
+*Source: `90-day-diversity-audit.md`, loop 6. Verdict: killed on reason 1, the answer is obvious.*
+988 ad-name groups carry no format tag and hold 44.2 percent of the window's spend, $149,227.84 of
+$337,402.58, and coverage fell from 88.7 to 55.8 percent in one quarter. That is a real and serious
+limit on every claim in that audit, and the audit is right to say so. But it is not a strategic fork.
+Reading the top untagged groups by spend settles it, and that is a pull, not research. Routed to the
+next diversity refresh as its first job, and to that doc's data limitations. If the untagged half
+turns out to look nothing like the tagged half, the *finding* that comes back is a loop; the looking
+is not.
+
+**MS-9 — "What is the account getting from expensive production that it does not get from cheap
+production?"** *Source: `90-day-diversity-audit.md`, loop 4. Score 3/4/3/3 = 13. Archived.*
+38 High Production groups earned $7,755.96 between them, about $204 each over 91 days, against $513
+per Offer Based group. The trouble is that delivery per group is as much a spend-allocation artifact
+as a quality signal — Meta funds what converts, and a group with less delivery may simply have been
+switched off early — so the gap does not yet mean what the question assumes. The strategic half of it,
+whether polished work only earns delivery when it is doing the premium-object job, is already carried
+inside PD-3 through the Aesthetic evidence. **Revives if** a spend-matched, like-for-like read shows
+the same gap.
+
+**MS-10 — "What do customers actually think they are looking at when they see the Feather blade?"**
+*Source: `customer-review-audit.md`, loop 5. Score 3/3/3/4 = 13. Archived.*
+8 of 4,028 reviews, 0.2 percent, use any pattern word at all, and none uses "laser." That near-silence
+is a genuine finding, and it is already carried as evidence inside PD-1. As a standalone loop it is
+blocked behind PD-1 anyway: what buyers think they are looking at is a much better question once
+somebody has said what they are actually looking at. **Revives the moment PD-1 is answered.**
+
+**MS-5 — "What is the comment-reply operation earning this brand, and what is it costing?"**
+*Source: `source-pulls/ad-comments.md`, loop 3. Score 3/4/2/4 = 13. Partly consolidated, remainder
+archived.* The creative half of this — that the brand answers its four biggest objections one
+commenter at a time and has never answered them in an ad, while publishing spec language its own copy
+law forbids — is the strongest part and it now lives inside **MS-4**, with the 218 replies in 2026 and
+69 in August as evidence. What is left standing alone is the cost half: who staffs it and how long it
+takes. That is an operations question about labour, only the brand can see it, and it does not clear
+the bar as a creative-strategy loop.
+
+**PD-8 — "How many people hesitate on these knives because of a worry about what the finish or the
+pattern does to their food?"** *Source: `source-pulls/ad-comments.md`, loop 5. Score 3/2/3/5 = 13.
+Archived.* A commenter on 2026-08-12 asked of the LOKI Blackout, *"What is the Matt black finish made
+of? Is it a coating or paint that is going to flake off and contaminate the food?"* Colleen Parsons
+wrote on 2026-01-03 that *"the feathered design is a paradise for microbiol life"* about the Feather.
+Two people, two products, two surfaces, seven months apart, and it lands on exactly the feature each
+product leads with — which is genuinely interesting. It is also n equals two. That is a noticing, not
+a pattern. **Revives if** a counted comment-side and review-side sweep puts it above roughly one
+percent of either corpus. That sweep is runnable now that Parker is back and it is cheap.
+
+**PD-9 — "What share of LOKI Blackout buyers know the bottle opener is there before they open the
+box?"** *Source: `customer-review-audit.md`, loop 4. Score 2/2/2/4 = 10. Archived, and the lowest score
+in this pass.* Only 4 of 4,028 reviews, 0.1 percent, mention the opener, and all four are delighted.
+The creative idea underneath it is good and it is preserved inside PD-2: a feature that delights
+everyone who finds it and is invisible to 99.9 percent of the corpus belongs in the first three seconds
+rather than the last. But the question as written needs a post-purchase survey to answer and the
+survey has zero responses, the evidence is four reviews, and nobody can write the hook until PD-2 says
+where the opener is. **Revives if** the survey ever collects responses.
+
+**PD-A1 — "What does a gift buyer actually put in the cart?"**
+*Source: `source-pulls/ad-account.md`, loop 6. Score 3/3/3/4 = 13. Archived on a data caveat.*
+`SARAH - WIFE` shows an average order value of $94.08 against the account's $155.62 and a 1.64 return
+against 2.23, converting cheaply at $57.21. Read plainly that says gift buyers spend barely half of
+what everyone else spends, which would be a real surprise. But it cannot be read plainly. **The
+persona field records who a creative was written for, never who bought**, so those figures describe
+the ads written for SARAH, not the people who buy gifts. Until gift purchases can be identified as
+purchases, this measures a naming convention rather than a buyer. The underlying question — what the
+gifting bundle and offer should look like before Q4 — is carried by PL-1. **Revives** the moment the
+brand can flag a gift order, which is the same checkout question PL-1 asks for.
+
+**Routed out of the loops entirely — the naming-convention confirmation.** *Source:
+`running-notes/brand-rules.md` and `running-notes/missing-context.md`.* Parker parsed the fourteen-field
+ad naming scheme off the ad names themselves and the reading looks solid, but the team has never
+confirmed it. That is infrastructure, not a strategic question, so per the rubric it goes to the
+operational owner rather than the loop list. It is worth ten minutes with whoever names the ads,
+because two documented failures of the convention — the unreliable offer field and the persona field
+recording intent rather than delivery — already shape how six of the loops above are scored.
+
+---
+
+## Coverage check
+
+All four territories collected loops upstream, so none is a reading flag for a missing source. Here
+is what each one looks like after the cut.
+
+- **Personas — 5 loops, none clean.** The heaviest territory by weight rather than count. It holds the
+  single most consolidated loop in the file, PL-1, which eight of the nine documents raised
+  independently, and it is where the Q4 decision actually sits.
+- **Product — 10 loops, none clean.** The biggest section, and four of the ten are brand-routed. That
+  is what it looks like when a brand's written product law and its own advertising disagree in public:
+  the loops pile up in Product because nobody outside the company can settle them.
+- **Messaging — 7 loops, none clean.** The broadest territory upstream and the one where the most
+  surface-level loops collapsed. Nineteen came in and seven shipped, because several of them were the
+  same fork wearing different numbers.
+- **Creators and talent — 2 loops, and thin on purpose.** Four upstream loops collapsed into CT-1, and
+  CT-2 stands alone. Two loops against Product's ten is a real imbalance and it is not an accident of
+  grading. **The likeliest reason is that there is almost nothing to read.** Every format built on a
+  person on camera holds 2.14 percent of tagged spend, and one person speaks across the ten biggest
+  ads. A territory whose whole subject matter is missing from the account produces few loops, because
+  the documents had almost no creative to look at. **Reading flag for the next cycle:** this territory
+  will stay thin until either the account runs person-led creative or the brain gains a doc that
+  describes what the brand can actually cast. `sub-context-docs/operations-and-team.md` does not exist
+  yet, and that is the doc that would say whether a roster, a budget or a willing founder is available
+  — which is exactly the half of CT-1 Parker cannot answer.
+
+**Where the source media lives.** This grading layer made no pull and inspected no creative, so it has
+no media appendix of its own; the roll-up's output spec does not call for one. Every ad discussed above
+— NK222, NK168, NK284, NK313, NK219, NK194, NK184, NK300, NK127, NK117, NK080, NK214, P466 — is
+indexed with its links in the appendix of the audit that read it, chiefly
+`audits/2026-Q3/90-day-creative-strategy-audit.md` (entries M001 to M012) and
+`audits/2026-Q3/90-day-performance-audit.md` (M001 to M011). Go there to reopen one.
+
+---
+
+## Movement since the prior roll-up
+
+**There is no prior roll-up.** This is the first consolidated open-loops file Northern Knife has ever
+had, so there is nothing closed, nothing revived and nothing carried forward. `open-loops/` held only a
+README. There is no `promoted/`, no `archived/`, no hypothesis and no validation anywhere in this
+brain, which means nothing below was re-litigated and no loop was checked against a prior verdict —
+there were no prior verdicts. Every loop in this file is new to the pipeline.
+
+**What moved into the pipeline this pass**
+
+- **Promoted to Tier 1, the immediate hypothesis queue: 7 loops.** PD-6, MS-1 and CT-1 at 18/20; PL-1,
+  PD-3, PD-5 and MS-7 at 17/20. These are what Parker runs next, and the ranking is Parker's read of
+  the evidence against the stated objective to scale acquisition. **It is not a roadmap's ranking,
+  because there is no roadmap** — Phase 2 was never run and `strategy/` is empty. Anyone who wants a
+  different order should say so, and they would not be contradicting an approved plan by doing it.
+- **Routed to the brand: 4 loops.** PD-1, PD-2, PD-10 and PD-11, with their exact questions in the
+  brand-routed section. Two of them, the Feather and the LOKI opener, have been sitting in
+  `brand-lens.md` since 2026-09-07 and were escalated once on 2026-09-08 when the creative audit found
+  the Feather conflict had five witnesses rather than one. They are still open. This is their second
+  escalation, and until they are answered every Feather and LOKI brief this brain writes carries a
+  flag it should not have to carry.
+- **Held in backlog at Tier 2: 13 loops.** They get re-evaluated when a Tier 1 loop resolves. Seven of
+  them sit at 16/20, one point off promotion, and the reason each one fell short is written into its
+  score line rather than left implied.
+- **Archived with reasoning: 7 loops, plus 1 routed out as infrastructure.** Each archive says what
+  would revive it.
+
+**Reading flags for the next refresh cycle**
+
+1. **The ad-level comment join has still never been run.** `ad_names` sits on 100 percent of the 1,351
+   comment rows and the naming convention encodes the persona each ad was written for. That single
+   query feeds MS-3, PL-5 and part of PL-1, and it was blocked by the Parker outage. It is runnable
+   now and it should be the first thing the next comment refresh does.
+2. **Three cheap sweeps named in `running-notes/missing-context.md` have never run** and each closes a
+   real gap: "laser" on the comment side, which would test the Feather conflict on a second surface;
+   "opener" and "bottle," which would give the LOKI conflict its first comment-side read at all; and
+   grill language, because MIKE is 36.7 percent of 90-day spend and that surface has no read on him.
+   The last one feeds MS-7 directly.
+3. **Nobody has counted the professional cluster with a denominator.** CT-2's confidence is capped at
+   3 purely because of this, and one semantic sweep would move it.
+4. **Nobody has counted over-55 buyers, only over-55 delivery.** Same problem, same effect on PL-4.
+5. **The untagged half of the account has never been read.** 988 groups, $149,227.84. MS-8 was killed
+   because looking is a pull rather than research, but until somebody looks, every "this account has
+   never run that" claim in the diversity audit is a claim about 55.8 percent of the spend.
+6. **A discredited lifetime figure in one doc — FIXED 2026-09-10, recorded here so the trail is
+   readable.** This pass found two stale carried references in `source-pulls/ad-account.md`. Its
+   frontmatter said `BUILD-STATUS.md` recorded 1,005 ads and $194,644.63 of lifetime spend and left
+   the conflict unresolved; and its method sign-off cited "the stated north-star metric of ROAS with
+   its 2.18 and 2.26 reference points," where **2.26 is one of the rejected figures.** Both are now
+   corrected in place: the frontmatter says this doc's own pull was the right one, and the sign-off
+   cites 2.18 over the last 30 days and **2.03** lifetime. The doc's body figures always came from
+   its own correct pull and never needed changing. Worth noting how it was caught — the discredited
+   set was found by a doc that had rejected it, then quietly cited it again in its own sign-off, so
+   the sweep has to read sign-offs and frontmatter, not just body prose.
+
+---
+
+## Accounting
+
+**Collected 64 · killed 8 · consolidated 32 · shipped 24.**
+
+- **Collected: 64.** Fifty-nine loops from the nine documents' own open-loops sections — 6 from the
+  performance audit, 7 from the creative-strategy audit, 6 from the diversity audit, 6 from the
+  whitespace analysis, 7 from the customer-review audit, 8 from the ad-account pull, 7 from the
+  customer-reviews pull, 6 from the ad-comments pull and 6 from the corpus profile. Plus five genuine
+  strategic questions that had been filed outside any loop block: the two unsettled product conflicts
+  in `brand-lens.md`, the review-count discrepancy in `running-notes/missing-context.md`, the missing
+  margin and ROAS floor across `success-definition.md` and `missing-context.md`, and the unconfirmed
+  naming convention in `brand-rules.md`.
+- **Killed: 8.** Seven archived with reasoning above, one routed out as infrastructure.
+- **Consolidated: 32.** Loops that folded into another loop asking the same thing better. This is the
+  bulk of the work and the main thing this file bought. The clearest case is PL-1, where eight
+  documents each filed a version of the same question from a different seat — the gender swing, the
+  format mix, the review corpus, the comment corpus and the order data — and reading them stacked is
+  worth much more than reading any one alone.
+- **Shipped: 24.** Five in Personas, ten in Product, seven in Messaging, two in Creators and talent.
+  **21 of the 24 consolidate two or more upstream documents.** Only three stand on a single document:
+  MS-1, MS-11 and PD-12.
+
+---
+
+## Method sign-offs
+
+**What this pass did.** Collected every loop from nine documents, plus the strategic questions filed
+outside loop blocks in `brand-lens.md`, `running-notes/missing-context.md`,
+`running-notes/brand-rules.md` and `running-notes/success-definition.md`. Ran the verdict template on
+each. Consolidated at the fork level rather than the surface level, which is where most of the
+reduction came from. Re-formulated each survivor once and scored the re-formulated question, not the
+original — PD-4 is the clearest example, where "which product absorbs the next $50,000" was replaced
+by "which knife is actually closing the sale," because the second has to be answered before the first
+can be. Scored on the four weights, routed by the rules in order with the brand-routed override
+applied first.
+
+**What this pass did not do.** It wrote no research plans, no test designs and no validation methods —
+those belong to the hypothesis prompt downstream. It emitted no net-new loops; every loop above traces
+to a named upstream document. It computed no metrics. Every number here is carried from the document
+that reported it, with that document's denominator and its own stated, inferred or verified mark.
+
+**The four data disciplines held throughout.** Every count carries its denominator. Name-derived offer
+counts are treated as floors, never counts, because `NK300` reads `NA` in its own name while its card
+reads "Buy 2 Get 2 FREE." Persona labels are treated as targeting intent, never delivery — which is
+the whole reason PD-A1 was archived. And because gross margin was never provided, **no loop in this
+file is scored on profit impact.** Every return and revenue statement above is a revenue statement.
+
+**The verified account figures used here** are $497,553.67 lifetime spend, 2.03 lifetime ROAS, $143.15
+lifetime AOV, 7,066 purchases and 2,431 ad-name groups. The discredited sets — $194,644.63 / 2.26 /
+$174.07 / 2,531 / 1,005, and the later $404,808.64 / 2.17 / $148.20 — are rejected on sight and appear
+nowhere in this file.
