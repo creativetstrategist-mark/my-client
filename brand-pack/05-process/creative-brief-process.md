@@ -234,13 +234,14 @@ use a separate 3-digit series.
 
 ### D.3 Naming strings
 
-**Batch name** — underscore-joined:
+**Batch name** — underscore-joined. The concept slot takes the `Concept Name`
+property **verbatim**, including any ` - Product` suffix it carries:
 
 ```
 NK###_Concept_Specialty_Product_Content_Avatar_Offer_New_Strategist_Editor_LandingPage
 ```
 
-> `NK306_Yeah Guy_Generalist_LOKI Blackout_AI VO_MIKE - BBQ KING_B2G2_New_Claude_Umar_Listicle`
+> `NK455_A Day vs Three Months - Feather_Generalist_Feather_AI VO_JOHN - KNIFE COLLECTOR_B2G2_New_Callum_Naveed_6 Reasons - General`
 
 **Folder name** — the first four fields only:
 
@@ -248,18 +249,53 @@ NK###_Concept_Specialty_Product_Content_Avatar_Offer_New_Strategist_Editor_Landi
 NK###_Concept_Specialty_Product
 ```
 
-**File naming** — one row per variant, format and variant letter inserted after
-the ID, date `MMDDYY` appended:
+**File naming** — one row per variant. Format and the variant code go in after
+the ID. The last two fields are **date, then landing page**:
 
 ```
-NK###_VID_Concept_1D_Specialty_Product_Content_Avatar_Offer_New_Strategist_Editor_LandingPage_MMDDYY
+NK###_VID_Concept_<variant>_Specialty_Product_Content_Avatar_Offer_New_Strategist_Editor_MMDDYY_LandingPage
 ```
-
-> `NK420_VID_Already Paying_1D_Generalist_Multi_AI VO_VANCE- The Opportunist_B2G2_New_Callum_Hasnain_6 Reasons - General_090526`
 
 The field order in full: ID · format · concept · variant · specialty · product ·
-content type · avatar · offer · new/iteration · strategist · editor · landing
-page · date.
+content type · avatar · offer · new/iteration · strategist · editor · **date** ·
+**landing page**.
+
+> ⚠️ **The shipped corpus contradicts this.** NK420 and NK455 both end
+> `..._Editor_LandingPage_MMDDYY` — landing page *then* date. The order above is
+> the standard as given by the strategist on 2026-09-10. Follow it, and expect
+> the old order in anything before NK458.
+
+**Editor slot.** When no editor is assigned yet, write the literal string
+`EDITOR` into the naming strings and leave the `Editor` property blank. The
+producer fills both when the brief is assigned.
+
+### D.3.1 The variant code
+
+Each variant is a **number plus a letter**. Neither is a sequential label — both
+carry meaning.
+
+- **Number** — the hook variation ID. 1, 2, 3 for the first, second, third hook.
+- **Letter** — the **awareness level** that hook is written for.
+
+| Letter | Awareness level |
+|---|---|
+| A | Unaware |
+| B | Problem aware |
+| C | Solution aware |
+| D | Product aware |
+| E | Most aware |
+
+So `1B` is hook variation 1 written at problem aware; `3D` is hook variation 3
+at product aware.
+
+Letters that match across a concept mean three angles tested at one awareness
+level — NK420 ships 1D/2D/3D, all product aware, because the ad answers price
+objections from people who already know the brand. Letters that differ mean the
+same story tested across the funnel.
+
+In the HOOK table's `Variant` column the code is followed by the **angle**, not
+the awareness level — the letter already carries that. `1D — Drama`,
+`2C — Bold claim`, `3D — Scarcity`.
 
 ### D.4 A real brief is short
 
