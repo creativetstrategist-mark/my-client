@@ -1,4 +1,5 @@
 ---
+scope_warning: "⚠️ UK META ACCOUNT ONLY — stamped 2026-09-10, after this doc was written. Every ad-account figure below covers the UK Meta account (act_1897335644135093 / AURORA | A12264703 | NorthernKnife_UK_3) and NOTHING ELSE. The US store carries a further $316,988.95 of Meta spend in the same 90 days at 1.68 ROAS, and no document in this brain has ever seen it. So every 'the account' statement here means 'the UK account', and every claim of the form 'this account has never run X' is unproven for the paid business as a whole. Read audits/2026-Q3/attribution-reconciliation.md before acting on anything below."
 brand: northern-knife
 doc: gaps-opportunities-inspo
 generated_on: 2026-09-10

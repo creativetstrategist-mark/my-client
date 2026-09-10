@@ -5,9 +5,36 @@
 **Method version:** parker-system pinned to `v15`
 **Scope:** foundation only — Phase 0 and Phase 1, then stamp and hand off
 **Current phase:** Phase 1 — audit and foundation
-**Right now:** Paused after wave 7, which lost both prompts to a sixth usage cap before either wrote anything. Nine documents are done. Parker MCP is still disconnected. See the throughput note below — the rate is now well enough established to plan around rather than discover again.
+**Right now:** Stopped at a deliberate hand-off point on **2026-09-10**. **Thirteen documents** are done, the tree is clean and pushed, and the remaining prompts are the cadence layer rather than the foundation. Parker MCP and Triple Whale are both connected again.
 
-**Waiting on you:** nothing.
+> ## 🔴 READ THIS FIRST — the single most important thing this brain knows
+>
+> **Roughly half the paid business has never been audited.** Every ad-account document here
+> reads the **UK** Meta account. The US store carries **$316,988.95** of Meta spend in the same
+> 90 days at **1.68 ROAS — below its own 1.74 contribution breakeven** — and nothing in this
+> vault has ever seen it. Found 2026-09-10 by reconciling Meta against Triple Whale; the
+> performance audit's $337,402.58 window spend against the UK store's £255,939.42 implies FX of
+> 1.3183, a clean GBP→USD match.
+>
+> Every affected document now carries a `scope_warning` in its frontmatter. Full working:
+> `audits/2026-Q3/attribution-reconciliation.md`.
+>
+> **The one action that matters more than any remaining prompt: connect the live US ad account
+> in Parker, then re-run the performance and diversity audits.** It changes the denominator
+> under every finding in this brain. It outranks all 47 pending runs put together.
+
+**Waiting on a human — three things, none of which more build time can fix:**
+
+| # | What | Why it needs you |
+|---|---|---|
+| 1 | **Connect the US Meta ad account in Parker** | Parker reaches only `act_8557554027677317` and `act_1771028750359089`, both DISABLED with zero spend. The live US account is not connected, so half the paid business is unauditable. |
+| 2 | **Arm the routines** — run `/setup-routines` from a persistent instance | The routine *skills* work on demand now, but nothing fires on a cadence. This session's scheduler is session-scoped and expires in 7 days, so arming it here would have looked armed without being armed. It was deliberately not used. |
+| 3 | **Decide where this brain lives** | Parker provisioned `parker-brain/nebula-studio-northern-knife`, but this session's GitHub access is locked to the `creativetstrategist-mark` tier and cross-tier attachment was refused outright. Three migration paths: `running-notes/standard-sync.md`. |
+
+**Two smaller flags:** the `brand-pack/` and `daily-ad-rewrites/` folders that the daily
+ad-rewriting contract in `my-client/CLAUDE.md` points at do not exist on either branch, so that
+routine cannot be reading them. And the review corpus stops **2026-03-11** — the brand was asked
+and answered *"No idea"*, so it has to be settled from the review platform.
 
 ---
 
@@ -28,13 +55,14 @@ branch is trimmed. Two reasons, both practical:
 | Not built | How to get it |
 |---|---|
 | `strategy/` — persona / product / messaging / creator inputs, and the strategic roadmap | Re-run `parker-system/prompts/strategic-roadmap/*` when you want a committed direction. Everything they read from will exist. |
-| `idea-bank/` — the captured, graded idea pile | Run `/harvest-ideas`, then `/evaluate-ideas`. Both are installed and armed on a weekly schedule. |
+| `idea-bank/` — the captured, graded idea pile | Run `/harvest-ideas`, then `/evaluate-ideas`. Both are installed and work on demand. **They are NOT armed on a schedule** — see the waiting-on-a-human table at the top. |
 | `sprints/`, `briefs/` — the sprint plan and the briefs | Run the `scriptwriting`, `hooks`, `headlines` and `iterations` skills directly, or re-run `parker-system/prompts/ideas-and-briefs/*`. |
 
 None of this is a dead end. The folders exist, the prompts that fill them are mounted at
-`parker-system/prompts/`, and the routines that would call them are armed. The one real
-consequence is that no strategic roadmap has been written, so anything that claims to
-follow "the approved direction" has no direction to follow yet.
+`parker-system/prompts/`, and the routines that would call them are installed and work on
+demand — though **not armed on a schedule yet**, which needs `/setup-routines` from a persistent
+instance. The one real consequence of the scope decision is that no strategic roadmap has been
+written, so anything that claims to follow "the approved direction" has no direction to follow yet.
 
 **Competitor branch, trimmed:** Coolina USA and Dalstrong get a full `competitor-snapshot`
 rather than nine deep slices each; Odin's Treasures gets one as inspo; the cross-rival
@@ -260,7 +288,37 @@ Two things follow, and they point the same way:
 
 ## What happens next
 
-The audit baseline finishes first, because the account one-pagers are defined as syntheses
-of it. Personas, voice-of-customer and the foundation slices run alongside. Then the two
-synthesis nodes, then the contract gets stamped, the routines armed, and the brain handed
-over with a walkthrough.
+**The foundation is done and the hand-off is made.** What remains splits three ways, and only
+the first is urgent:
+
+1. **Connect the US ad account, then re-run `90-day-performance-audit` and `90-day-diversity-audit`.**
+   This is the whole ballgame. Until it happens every finding here has an unstated denominator.
+2. **The cadence layer** — the monthly and weekly audits among the 47 pending runs. The standing
+   routines re-run these on their own schedule once armed, so building them by hand now is
+   mostly wasted effort. Let the routines do it.
+3. **The genuinely blocked** — anything needing post-purchase surveys (zero responses) or a real
+   competitor set (only two tracked). These do not unblock with time; they need data added in
+   the Parker app.
+
+**Resume anywhere by re-running a prompt directly from `parker-system/prompts/`.** The method is
+fully mounted and every prompt this build would have run is there. Nothing is broken; the
+remaining items simply have not been run. `/refresh-context` walks the same ground automatically.
+
+## Standing lessons from this build — worth carrying into the next one
+
+1. **Write to disk early.** Seven usage caps killed agent runs. Every run that wrote a draft
+   before finishing survived and was completed later; every run that held the document in
+   context lost everything. The 1,248-line open-loops roll-up exists because of this.
+2. **Before logging something as missing brand context, check whether a connected tool already
+   has it.** Gross margin sat in `missing-context.md` for three days as "the most valuable
+   number the brand could add." Triple Whale had it configured the whole time.
+3. **An inference off a single stated number should be checked before it propagates.** A ~50%
+   contribution margin was inferred from the 2.0 ROAS floor and written into five documents
+   within an hour. The real figure is 57–60%. The correction is kept visible in
+   `running-notes/success-definition.md` rather than deleted.
+4. **A written brand rule is not automatically truer than the live creative.** Of the two
+   product-law contradictions, one was a stale rule and one was a live copy error. Nobody had
+   checked either, because the rulebook was assumed to be the authority.
+5. **Read sign-offs and frontmatter when sweeping for bad figures, not just body prose.** The
+   last discredited figure in this brain was hiding in a method sign-off inside a document that
+   correctly rejected the same figure in its body.

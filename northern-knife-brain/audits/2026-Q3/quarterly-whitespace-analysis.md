@@ -1,4 +1,5 @@
 ---
+scope_warning: "⚠️ MIXED SCOPE — stamped 2026-09-10, after this doc was written. This doc reads TWO sources at different scopes and does not distinguish them in its prose. Its Meta ad-account figures (spend, format, emotion, persona) cover the UK Meta account ONLY; a further $316,988.95 of US-store Meta spend at 1.68 ROAS exists and is unaudited anywhere in this brain. Its Triple Whale order figures DO reach both stores — but the two stores report in DIFFERENT CURRENCIES (UK in GBP, US in USD), so any figure here that appears to combine them should be re-checked before use. Read audits/2026-Q3/attribution-reconciliation.md first."
 brand: northern-knife
 doc: quarterly-whitespace-analysis
 quarter: 2026-Q3
