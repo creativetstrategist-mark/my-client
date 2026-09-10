@@ -24,7 +24,7 @@ prior_roll_up: none
 loop_history_read: "open-loops/ held only a README. No promoted/, no archived/, no hypotheses, no validations. Nothing was re-litigated because nothing had been litigated."
 accounting: "collected 64 · killed 8 · consolidated 32 · shipped 24"
 data_limitations:
-  - "Parker MCP is disconnected as of 2026-09-09. No live pull was made for this roll-up. Every number below is carried from the upstream doc that reported it, with that doc's denominator and its stated / inferred / verified mark. Nothing was recomputed."
+  - "No live pull was made for this roll-up. The Parker MCP was disconnected on 2026-09-09 while this file was being written and came back on 2026-09-10, after the grading was done. Nothing was re-pulled or re-scored on the strength of it, because a roll-up grades what the documents raised rather than gathering new evidence. Every number below is carried from the upstream doc that reported it, with that doc's denominator and its stated / inferred / verified mark. Nothing was recomputed."
   - "The ad-name offer field is unreliable — NK300 reads NA in its own name while its third on-screen card reads 'Buy 2 Get 2 FREE'. Every offer count taken from names is a floor, not a count."
   - "The ad-name persona field records who a creative was written for, never who it reached. No loop below treats a persona label as delivery."
   - "Gross margin was never provided. Every return, ROAS and revenue statement in this file is a revenue statement. No loop is scored on profit impact."
@@ -55,9 +55,11 @@ star**, stated by the account owner on 2026-09-07 with no revenue number and no 
 That objective is what the ranking below is weighed against, and it is why headroom beats efficiency
 in almost every score here.
 
-Second, **the Parker MCP is disconnected.** Several loops below need a Parker pull to close. That is
-a blocker on the closing move, not a mark against the loop, so no loop was downgraded for it. Each
-one says plainly what it is waiting on.
+Second, **the loops that need a Parker pull to close are runnable now.** The Parker MCP was down on
+2026-09-09, when this grading ran, and came back on **2026-09-10**. No loop was ever downgraded for
+the outage, and none has been rescored because of the fix — a roll-up grades what the documents
+raised, not what a fresh pull might say. What changed is the practical part: the closing pulls named
+below can be run today. Each loop still says plainly which pull it needs.
 
 Third, **thin is allowed to be thin.** Creators and talent shipped two loops against Personas' five
 and Product's ten. That is an honest reflection of what the documents actually raised, not a gap I
@@ -79,7 +81,7 @@ Seven loops scored 17 or higher. They are the immediate hypothesis queue, in ord
 | 6 | **PD-5** — Where would somebody who has never heard of Northern Knife first encounter it today? | **17/20** | Product |
 | 7 | **MS-7** — What do Northern Knife's customers actually use these knives for? | **17/20** | Messaging |
 
-Three more loops are **brand-routed** and jump the queue in a different way: they need a human at
+Four more loops are **brand-routed** and jump the queue in a different way: they need a human at
 Northern Knife to answer, not a research run. They are **PD-1** (how the Feather pattern is actually
 made), **PD-2** (where the LOKI Blackout's bottle opener is), **PD-10** (how much of today's buyer
 the review corpus actually shows) and **PD-11** (how far the return can fall before scaling stops
@@ -137,7 +139,8 @@ new is who decides, not that two people exist.
 `90-day-diversity-audit.md` (loop 3), `quarterly-whitespace-analysis.md` (loops 5 and 6),
 `customer-review-audit.md` (loop 1), `source-pulls/customer-reviews.md` (loops 1 and 5),
 `source-pulls/ad-comments.md` (loop 2), `voc-corpus-profile.md` (loop 6).*
-*Blocked on: nothing to start. The review and comment sweeps that sharpen it need Parker back.*
+*Closing pull: the review and comment language sweeps for gift and recipient language. Runnable now
+— Parker came back 2026-09-10.*
 *Tags: `team: creative-strategy`, `scope: org-wide`.*
 
 ### PL-3 — What actually separates the people who buy Northern Knife from each other? — **16/20, Tier 2**
@@ -266,7 +269,8 @@ sits on 100 percent of the 1,351 comment rows and has never been joined to the a
 comments tool has been unavailable since 2026-09-09.
 *Upstream docs: `quarterly-whitespace-analysis.md` (loop 4), `source-pulls/ad-comments.md` (loop 6),
 `voc-corpus-profile.md` (the objections and barriers profile).*
-*Blocked on: Parker MCP, specifically `search_facebook_ad_comments_sql`.*
+*Closing pull: the ad-level comment join, `search_facebook_ad_comments_sql`. Runnable now — Parker
+came back 2026-09-10, and this is one query.*
 *Tags: `team: creative-strategy`, `scope: org-wide`.*
 
 ---
@@ -309,7 +313,8 @@ the mechanism has three independent verbatims behind it. Novelty is a 5 because 
 has ever treated the second purchase as a creative surface.
 *Upstream docs: `quarterly-whitespace-analysis.md` (loop 3), `source-pulls/customer-reviews.md`
 (loop 3).*
-*Blocked on: nothing. Triple Whale is connected and holds the order-level data.*
+*Closing pull: repeat-order cohorts from Triple Whale, which is connected, plus a review sweep for
+the gift-to-buyer arc. Both runnable now.*
 *Tags: `team: creative-strategy`, `scope: org-wide`.*
 
 ### PD-3 — How much of this account's revenue would still be there if the offer creative stopped running? — **17/20, Tier 1**
@@ -515,7 +520,8 @@ March and nothing after, while the account spent $341,183.20 across the window e
 supply either. One, re-run an unfiltered `search_customer_reviews_sql` count and then the exact filter
 the corpus profile used, and state the relationship between the two numbers in both documents. Two,
 ask the review platform what changed in March 2026 — a collection setting, a migration, a plan change.
-Parker cannot reach either right now: the Parker MCP has been disconnected since 2026-09-09.
+Both were out of reach on 2026-09-09 while the Parker MCP was down. It came back on 2026-09-10, so
+the count half is runnable today. The March 2026 question still needs the review platform.
 
 **Pull — Gap.** Half a corpus disappeared between two pulls, six months of reviews went missing before
 that, and nothing in this brain predicted either.
@@ -537,7 +543,9 @@ is filed as a loop deliberately: the tooling half is already recorded in
 actually see — is a real question with real consequences for the Q4 read.
 *Upstream docs: `voc-corpus-profile.md` (loop 1), `customer-review-audit.md` (loop 2),
 `running-notes/missing-context.md` (data-integrity item 1).*
-*Blocked on: Parker MCP, plus the review platform's own status.*
+*Closing pull: an unfiltered `search_customer_reviews_sql` count run against the corpus profile's own
+filter. Runnable now — Parker came back 2026-09-10. The March 2026 flow question still needs the
+review platform's own status, which only the brand can ask for.*
 *Tags: `team: creative-strategy`, `scope: org-wide`.*
 
 ### PD-11 — How far can Northern Knife's return fall before scaling stops being worth it? — **14/20, brand-routed (override)**
@@ -766,7 +774,7 @@ Researchability is held at 3 purely because the closing move is the ad-level com
 `search_facebook_ad_comments_sql` has been unavailable since 2026-09-09. The moment it returns this is
 one query and jumps.
 *Upstream docs: `source-pulls/ad-comments.md` (loop 1), `voc-corpus-profile.md` (loop 4).*
-*Blocked on: Parker MCP.*
+*Closing pull: the ad-level comment join. Runnable now — Parker came back 2026-09-10.*
 *Tags: `team: creative-strategy`, `scope: org-wide`.*
 
 ### MS-4 — What does answering the spec question do for this brand? — **16/20, Tier 2**
@@ -826,7 +834,8 @@ product is a focus SKU. Researchability is a 3 because the landing-page and full
 Parker back for the media and the page.
 *Upstream docs: `source-pulls/ad-account.md` (loop 5), `90-day-creative-strategy-audit.md` (deep dive
 3, "the best hook in the account attached to its worst return").*
-*Blocked on: Parker MCP for the creative and landing-page read.*
+*Closing pull: the full creative and landing-page read on NK284. Runnable now — Parker came back
+2026-09-10.*
 *Tags: `team: creative-strategy`, `scope: org-wide`.*
 
 ### MS-11 — What is the four-knife offer doing for this account that a one-knife offer would not? — **14/20, Tier 2**

@@ -46,7 +46,7 @@ than read in at build time.
 
 Connected and read during the build: Notion, TrendTrack, Meta Ads, Triple Whale.
 
-## Two data-integrity issues found 2026-09-09 — unresolved, do not paper over
+## Data-integrity issues found 2026-09-09 — issues 2 and 3 RESOLVED 2026-09-10, issue 1 still open
 
 ### 1. The review corpus has two different totals in circulation
 
@@ -69,7 +69,7 @@ comment-side counts (882 substantive / 1,351 total) are unaffected.
 filter the corpus profile used, and state the relationship between the two in both docs. Until
 then, cite 4,028 for the corpus and label any 2,135-based percentage as resting on a subset.
 
-### 2. The ad-comments tool has become unavailable mid-build
+### 2. The ad-comments tool went unavailable mid-build — RESOLVED 2026-09-10
 
 `mcp__Parker__search_facebook_ad_comments_sql` **worked on 2026-09-07** — it was used in the
 session-start operability check and returned live comment rows through 2026-09-06. On 2026-09-09
@@ -93,7 +93,22 @@ Three cheap sweeps also never ran and would each close a real gap:
 - **"opener" / "bottle"** — the LOKI conflict has no comment-side read at all.
 - **grill language** — MIKE is 36.7% of 90-day spend and this surface has no read on him.
 
-### 3. Parker MCP disconnected 2026-09-09 — blocks all further live pulls
+**RESOLVED 2026-09-10.** The tool is back. A three-row verification pull returned live comments
+through **2026-09-09T19:55:53+00:00** — fresher than any customer surface in this brain — with
+`ad_names` populated on every row, including the full naming string
+(`NK313_VID_Return Box - Trial (NK168)_3D_Generalist_LOKI Blackout_AI VO_MIKE - BBQ KING_B2G2_...`).
+So **the ad-level join and all three sweeps are runnable now.** They have still never been run;
+this entry stays open as the work item, not as a blocker. It is the top item for the next refresh.
+
+**One new caveat from that pull, carry it:** the response's `total` field returned **0** while
+three rows came back, so the RPC's total_count is unreliable. Any comment count must be derived by
+paging the rows, never read off `total`. A count taken from that field would read as zero.
+
+**A second thing that pull showed:** one comment carried **two** ad ids against a single ad name,
+so the ad-to-comment relationship is many-to-many. The join has to account for a comment appearing
+under more than one ad, or per-ad counts will double-count.
+
+### 3. Parker MCP disconnected 2026-09-09 — RESOLVED 2026-09-10
 
 As of the whitespace run, `Parker MCP` is not connected in this session at all — not just the
 comments tool. The Meta connector remains no substitute: `act_8557554027677317` and
@@ -104,6 +119,11 @@ comments tool. The Meta connector remains no substitute: `act_8557554027677317` 
 persona is *carried* from the 2026-09-07 and 2026-09-08 pulls, and no creative media was inspected
 live. That is stated in its frontmatter. Any prompt still pending that needs a live ad or review
 pull cannot run honestly until Parker returns.
+
+**RESOLVED 2026-09-10.** Parker reconnected and every brand-scoped tool is available again. The
+figures already carried in `quarterly-whitespace-analysis.md` were **not** re-pulled or re-verified
+against the restored connection, so they remain carried, exactly as its frontmatter says. What
+changed is only that the prompts still pending are runnable again.
 
 **Triple Whale is connected and was used**, which is how the whitespace analysis reached order-level
 data none of the earlier documents could see. Worth remembering: it is a live route to revenue,
