@@ -8,26 +8,33 @@ Seeded 2026-09-07 during the build. It is deliberately short: most of what is he
 team's own written brand law and from two data documents. It grows every time someone corrects
 Parker or teaches it something durable.
 
-## Unsettled — needs a human answer
+## SETTLED 2026-09-10 — the two product conflicts, answered by the brand owner
 
-Two of the three focus products have live ad copy that contradicts the brand's own product law.
-Parker writes to the rule and flags the conflict; it does not pick a side.
+For three days this section read "unsettled — needs a human answer." It got one. Both conflicts
+are closed, and they closed in **opposite directions**, which is the interesting part.
 
-| Conflict | The rule says | The live copy says | Evidence |
-|---|---|---|---|
-| **Feather blade pattern** | laser-applied; never hand-etched, hand-finished or engraved | *"hand-forged with an insane feather etching down the spine, no two blades identical. Each one takes hours to create by hand"* | `NK222`, $15,056.46 in the current 90-day window (the ad launched 2026-08-07, so window and lifetime coincide) — the account's single largest line. `verified` from ad copy, 2026-09-07 |
-| **LOKI Blackout bottle opener** | built into the **handle** | placed in the blade | `verified` from ad copy, 2026-09-07 |
+| Conflict | What the rule said | What the account said | The answer | Who was right |
+|---|---|---|---|---|
+| **Feather blade pattern** | laser-applied; never hand-etched | *"hand-forged with an insane feather etching down the spine… takes hours to create by hand"* | **"By hand"** | **The account.** The rule was stale and is retired. |
+| **LOKI Blackout bottle opener** | built into the **handle** | placed in the blade | **"on the handle"** | **The rule.** Two live ads are factually wrong. |
 
-> **Escalated 2026-09-08 by the creative-strategy audit: the Feather conflict has five
-> witnesses, not one.** `NK222`, `NK184`, `NK300`, `NK127` and `NK194` all describe the
-> Feather pattern as etched or as not machine-finished. Together they carry **$38,475.26 —
-> 44.5% of top-ten spend.** `NK184`'s own on-screen card reads "A full feather etched from
-> tip to handle." This is not one ad off-brief; it is how the account describes the product.
->
-> The LOKI opener conflict splits the account against itself: `NK168` and `NK219` place the
-> opener in the handle (matching the rule); `NK222` and `NK284` place it in the blade.
+**What follows for the Feather.** The five witnesses the creative-strategy audit escalated on
+2026-09-08 — `NK222`, `NK184`, `NK300`, `NK127`, `NK194`, together carrying **$38,475.26, 44.5% of
+top-ten spend**, with `NK184`'s on-screen card reading "A full feather etched from tip to handle" —
+were **not** off-brief. They were describing the product accurately while the rulebook was wrong.
+Hand-made language is now open. The one thing still loose: the question offered "laser" or "any part
+by hand," so "by hand" settles that it is hand-made without settling whether *all* of it is. Do not
+write that no machine touches the blade at any stage without asking.
 
-Whoever settles these should update `running-notes/brand-notes-from-org.md` and this file together.
+**What follows for the LOKI.** `NK222` and `NK284` place the opener in the blade and are wrong in
+market right now. `NK168` and `NK219` have it on the handle and are right. This is a live copy error
+on real spend, not a debate — worth surfacing to the team rather than filing.
+
+> **The durable lesson, and it belongs in this lens permanently:** a written brand rule is not
+> automatically more true than the live creative. One of these two had drifted in each direction and
+> nobody had checked either, because the rulebook was assumed to be the authority. When this account
+> and this rulebook disagree, that is a question for a human — not a presumption in favor of the
+> rule, and not a presumption in favor of the ad.
 
 ## Voice and copy rules the brand states
 

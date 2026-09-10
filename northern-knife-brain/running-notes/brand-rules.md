@@ -8,6 +8,13 @@
 - **North-star metric:** **ROAS.** `stated` by the account owner, 2026-09-07. Current
   reference points: **2.18 over the last 30 days, 2.03 lifetime** (`verified`, account-wide
   lifetime pull 2026-09-07). Lifetime spend $497,553.67 on 38,847,631 impressions.
+- **Efficiency floor: 2.0 ROAS.** `stated` by the brand owner, 2026-09-10 — *"below 2 ROAS is
+  not profitable."* This is the first profitability anchor this brain has ever had, and it puts
+  lifetime performance (2.03) **1.6% above breakeven** and the last 30 days (2.18) 9% above it.
+  Never present a ROAS figure in this account without saying where it sits against 2.0 — a
+  number that sounds healthy in the abstract may be at or under the floor. Full working,
+  including the sensitivity of that conclusion to the margin we still do not have, is in
+  `running-notes/success-definition.md`.
 - **Secondary metrics they still weigh:** not stated — see `missing-context.md`.
   Parker will read CPA ($79.57 last 30 days, $70.42 lifetime), AOV ($173.60 last 30 days,
   $143.15 lifetime) and hook rate alongside ROAS until told otherwise, and will label that

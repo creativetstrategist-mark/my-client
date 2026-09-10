@@ -974,6 +974,30 @@ group before casting anything. Runnable now — Parker came back 2026-09-10.*
 
 ## Brand-routed — what only the brand can answer
 
+> ### ✅ ALL FOUR ANSWERED 2026-09-10 — the day after this roll-up was written
+>
+> The four questions below were put to the brand owner and all four came back the same day. Three
+> closed; one closed as a blank, which is still a closure. The loops are left standing below rather
+> than deleted, because the movement is the record — and because two of them changed what the brain
+> believed rather than merely confirming it.
+>
+> | Loop | The answer | What it did |
+> |---|---|---|
+> | **PD-1** Feather pattern | **"By hand"** | **CLOSED — and it reversed the rule.** The five ads carrying $38,475.26 were right; "laser-applied" was stale and is retired. Residual: the answer settles that it is hand-made, not whether *all* of it is. |
+> | **PD-2** LOKI opener | **"on the handle"** | **CLOSED — and it upheld the rule.** So `NK222` and `NK284` carry a live factual error on real spend. Not a debate any more; a copy fix. |
+> | **PD-10** Review corpus | **"No idea"** | **CLOSED AS UNANSWERABLE from the brand side.** The 4,028 vs 2,135 split and the March 2026 cutoff have to be settled from the review platform, not from the team. Re-route it: it is no longer brand-routed, it is a platform question with no owner. |
+> | **PD-11** ROAS floor | **"below 2 ROAS is not profitable"** | **CLOSED, and it is the most consequential answer of the four.** Breakeven is 2.0. Lifetime ROAS is 2.03 — **1.6% above breakeven.** The last 30 days sit at 2.18, about 9% above. Full working in `running-notes/success-definition.md`. |
+>
+> **Two things the next roll-up should carry forward.** First, PD-1 and PD-2 resolved in *opposite*
+> directions — one rulebook drift, one live copy error — so the standing lesson is that a written
+> brand rule is not automatically truer than the live creative, and neither side gets the benefit of
+> the doubt. Second, PD-11's answer does not close cleanly so much as **open a bigger loop**: every
+> ROAS figure in this brain is Meta's attributed number under 7-day-click / 1-day-view, while the
+> brand reads performance in Triple Whale and almost certainly stated the 2.0 floor in those terms.
+> **Nobody has checked whether the two tie out.** With only 1.6% of lifetime headroom, that
+> reconciliation decides whether this account is above water or below it. It is filed as a new loop
+> at the end of this section.
+
 Four loops routed here by the override: stakes of 4 or higher with researchability of 2 or lower goes
 to the brand regardless of the total. These are not research tasks. They are questions for a person at
 Northern Knife, and each one is written so somebody who is not an analyst can answer it in a sentence.
@@ -1021,6 +1045,43 @@ runnable, but half of it is a brand answer and the whole test slate hangs on it:
 
 Nothing in the brand notes or the set-up intake records such a decision, which is why CT-1 asks what a
 person on camera would do rather than assuming nobody has tried.
+
+### PD-13 — Does the 2.0 ROAS floor mean Meta's number or Triple Whale's? — **NEW, filed 2026-09-10, Tier 1**
+
+**The observation.** On 2026-09-10 the brand owner answered PD-11 with *"below 2 ROAS is not
+profitable."* Every ROAS figure in this brain — lifetime 2.03, last 30 days 2.18, and every per-ad
+number in every audit — comes from Meta's own reporting through the Parker MCP, under the account's
+7-day-click / 1-day-view attribution. But `running-notes/brand-rules.md` records that the brand reads
+performance in **Triple Whale**, `stated` 2026-09-07. So the floor was almost certainly stated in
+terms of a number this brain has never used, and it is being compared against a number the brand
+does not read. Nobody has checked whether the two tie out.
+
+**The pull that would answer it.** Triple Whale is connected and was used once already, by the
+whitespace analysis, which is how that doc reached order-level truth the Meta-side pulls never did.
+Pull blended and Meta-attributed ROAS from Triple Whale for `northernknife.myshopify.com` and
+`northernknifeuk.myshopify.com` over the same windows the audits use — lifetime, the 90-day window
+2026-06-09→2026-09-07, and the last 30 days — and set them beside the Meta figures. One run. The
+tooling is already connected and the query shape already exists in the whitespace analysis.
+
+**The question: When the brand says "below 2 ROAS is not profitable," is that Meta's attributed ROAS
+or Triple Whale's, and how far apart are the two on this account?**
+
+**Why it is a loop.** Because 1.6% is the entire margin of safety. Lifetime Meta ROAS is 2.03 against
+a stated floor of 2.0, which puts the account **$8,178.66 above breakeven across its whole life**
+(`inferred` — see `running-notes/success-definition.md` for the working and its sensitivity). Platform
+attribution routinely reads higher than a blended view. If Triple Whale reads even a few points
+lower, the account is not narrowly above water lifetime — it is under it, and "scale acquisition"
+means scaling a loss. Every ranking in this file weights headroom over efficiency; that weighting is
+only correct if the floor and the metric are the same metric. This loop is upstream of the whole
+agenda, which is why it goes straight to Tier 1 on arrival.
+
+*Score — Stakes 5, Confidence 4, Researchability 5, Novelty 4. **Total 18/20. Tier 1.***
+Researchability is a 5 and that is unusual for a Tier 1: the tool is connected, the windows are
+defined, and it is one run. This is the cheapest high-stakes loop in the file.
+*Upstream docs: `running-notes/success-definition.md` (the floor), `running-notes/brand-rules.md`
+(the Triple Whale statement), `audits/2026-Q3/quarterly-whitespace-analysis.md` (proof the pull
+works). Descends from PD-11.*
+*Tags: `team: analytics`, `scope: org-wide`.*
 
 ---
 

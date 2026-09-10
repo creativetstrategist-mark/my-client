@@ -20,12 +20,25 @@ limit on a read somewhere in this brain. Nothing here is a blocker.
 The set-up intake was deliberately short. These went unasked or unanswered and each one
 sharpens a specific read:
 
-- **Gross margin / contribution margin.** Without it every profitability statement in this
-  brain is a revenue statement. Under a scale objective this is the most valuable single
-  number the brand could add.
-- **Max tolerable CPA, and the ROAS floor.** The objective is to scale; scaling means
-  deliberately spending past the most efficient point. Nobody has said how far. Current
-  reference: $79.57 CPA, 2.18 ROAS over 30 days.
+- **Gross margin / contribution margin — STILL MISSING, and now it matters more, not less.**
+  The brand has still never given a margin, so no statement in this brain may name one or call a
+  figure "profit." What changed on 2026-09-10 is that the stated 2.0 ROAS floor lets us *infer*
+  a contribution margin near **50%** — and that inference is doing enormous work. At 50% the
+  account clears about **$8,179 above breakeven lifetime**; at 48% it is under water. A single
+  number from the brand would settle which. This is still the most valuable thing they could add.
+- **~~Max tolerable CPA, and the ROAS floor~~ — the ROAS floor is ANSWERED 2026-09-10: 2.0.**
+  *"below 2 ROAS is not profitable."* `stated`. Lifetime sits at 2.03, the last 30 days at 2.18.
+  **Max tolerable CPA is still not stated** — current reference $79.57 over 30 days, $70.42
+  lifetime — and it no longer follows automatically from the floor, because AOV moves: the last
+  30 days run $173.60 against $143.15 lifetime, so the CPA that clears 2.0 differs by window.
+- **Which ROAS the 2.0 floor refers to — NEW GAP, opened by the answer that closed the last one.**
+  Every ROAS in this brain is Meta's attributed figure (7-day click / 1-day view). The brand reads
+  performance in **Triple Whale** (`brand-rules.md`, `stated` 2026-09-07). The floor was very
+  likely stated in Triple Whale's terms and is being compared against Meta's. With only 1.6% of
+  lifetime headroom, the gap between the two decides whether this account is above water or below
+  it. Triple Whale is connected and the query shape already exists in
+  `quarterly-whitespace-analysis.md`, so this is **one run, not a data request** — filed as loop
+  **PD-13** in the roll-up at Tier 1, 18/20.
 - **LTV / payback window.** Decides whether a first-order loss is acceptable.
 - **Secondary metrics the team weighs** beyond ROAS.
 - **The spend-versus-efficiency rule** when two ads in one ad set diverge.
