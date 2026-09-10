@@ -198,10 +198,10 @@ built; no strategy inputs and no strategic roadmap exist. That bounds what you m
 approved roadmap" or "the agreed priorities" — there aren't any. A Phase-3-shaped ask (a script, a
 brief, an idea) still gets real work, built from the evidence that does exist and from the user's
 own stated direction, with the honest caveat that no roadmap has ranked it. The stated business
-objective — **scale acquisition, ROAS as the north star, with a stated floor of 2.0** — is in
-`running-notes/success-definition.md` and is the closest thing to a direction this brain currently
-holds. That floor is not a footnote on the objective; it bounds it. Lifetime ROAS is 2.03, so any
-recommendation that trades return for volume needs to say what it does to a number with 1.6% of room.
+objective — **scale acquisition, ROAS as the north star, with a stated target of 2.0 and a verified
+contribution breakeven near 1.7** — is in `running-notes/success-definition.md` and is the closest
+thing to a direction this brain currently holds. Any recommendation that trades return for volume
+needs to say what it does against both numbers, and on which store.
 ## Build status
 
 **Read this before trusting the map above.** The map describes a complete brain. This one is
@@ -217,6 +217,8 @@ recommendation that trades return for volume needs to say what it does to a numb
 | `audits/2026-Q3/90-day-creative-strategy-audit.md` | ~16,600 words. The creative read on top of the performance data. |
 | `audits/2026-Q3/90-day-diversity-audit.md` | ~96KB. What the slate does and does not cover. |
 | `audits/2026-Q3/quarterly-whitespace-analysis.md` | ~16,800 words. Reaches order-level truth via Triple Whale that the Meta-side pulls do not. |
+| `audits/2026-Q3/gaps-opportunities-inspo.md` | 13,307 words. The market read: threat-typed landscape, dead ends, and six ownable openings. |
+| `audits/2026-Q3/attribution-reconciliation.md` | **Read this before quoting any ROAS or margin.** Closes PD-13, corrects the margin, and finds that roughly half the paid business has never been audited. |
 | `audits/2026-Q3/customer-review-audit.md` | ~117KB. The full read of the review corpus — themes, the negative tail, product-level signal. |
 | `source-pulls/ad-account.md` | ~41KB. Who the account actually reaches versus who the creative is written for — the persona read, straight off the delivery data. |
 | `source-pulls/customer-reviews.md` | ~61KB. The persona read from the review side, the counterpart to the ad-account pull. |
@@ -247,16 +249,27 @@ inferred rather than measured; only two competitors are tracked; the review corp
 **2026-03-11** and its total is unreconciled (4,028 vs 2,135 — carry both denominators), and the
 brand cannot explain either, so it has to be settled from the platform side.
 
-**On profitability — this changed on 2026-09-10 and it is the most important number here.** Gross
-margin still has not been given, so you still may not state a margin or call a figure "profit."
-But the brand owner did give the **efficiency floor: *"below 2 ROAS is not profitable."*** That
-licenses one thing and only one thing — talking about performance **relative to 2.0**. And the
-reading is stark: lifetime ROAS is **2.03**, which is **1.6% above breakeven**, and the last 30 days
-sit at **2.18**, about 9% above it. Across its whole life this account has very nearly exactly broken
-even. So never present a ROAS number in this account without saying where it falls against 2.0, and
-hold the tension with the stated objective in view: **scaling costs efficiency, and there is almost
-no efficiency to spend.** Full working, and the sensitivity of that conclusion to the margin we still
-do not have, is in `running-notes/success-definition.md`.
+**On profitability — settled 2026-09-10, and the margin is no longer missing.** Two numbers, and
+you need both:
+
+- **The brand's target: 2.0 ROAS.** `stated` — *"below 2 ROAS is not profitable."*
+- **True contribution breakeven: ~1.68 (UK) / ~1.74 (US).** `verified from Triple Whale` —
+  contribution margin is **59.68% / 57.48%**, configured in Triple Whale all along. So 2.0 is a
+  target with overhead and profit inside it, not a break-even line.
+
+**Never quote a ROAS in this account without saying which ROAS and where it sits against both.**
+Meta and blended are different numbers and **blended reads higher**: UK 2.23 Meta vs 2.39 blended,
+US **1.68** Meta vs 2.83 blended. Over the same 90 days both stores were **net profitable** —
+£132,145.06 and $225,537.59, at 17.76% and 22.38% net margin.
+
+> **🔴 And the biggest thing this brain knows about itself: roughly half the paid business is
+> unaudited.** Every audit here reads the **UK** Meta account. The US store carries **$316,988.95**
+> of Meta spend in the same 90 days at **1.68 ROAS — below its own 1.74 breakeven** — and no
+> document in this vault has ever looked at it. So every format read, fatigue call and "this
+> account has never run that" claim describes the UK account only. **Say so when you cite them.**
+> Connecting the live US ad account in Parker outranks everything on the loop agenda.
+
+Full working: `audits/2026-Q3/attribution-reconciliation.md` and `running-notes/success-definition.md`.
 
 ## First session — offer the walkthrough
 

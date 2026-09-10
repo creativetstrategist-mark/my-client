@@ -20,25 +20,35 @@ limit on a read somewhere in this brain. Nothing here is a blocker.
 The set-up intake was deliberately short. These went unasked or unanswered and each one
 sharpens a specific read:
 
-- **Gross margin / contribution margin — STILL MISSING, and now it matters more, not less.**
-  The brand has still never given a margin, so no statement in this brain may name one or call a
-  figure "profit." What changed on 2026-09-10 is that the stated 2.0 ROAS floor lets us *infer*
-  a contribution margin near **50%** — and that inference is doing enormous work. At 50% the
-  account clears about **$8,179 above breakeven lifetime**; at 48% it is under water. A single
-  number from the brand would settle which. This is still the most valuable thing they could add.
+- **~~Gross margin / contribution margin~~ — CLOSED 2026-09-10, from Triple Whale, not from the
+  brand.** This entry sat here since 2026-09-07 as "the most valuable number the brand could add."
+  **It was configured in Triple Whale the whole time and nobody had looked.** Contribution margin
+  is **59.68% (UK)** and **57.48% (US)** — sales less COGS, handling, payment fees, refunds and
+  custom spends — `verified from Triple Whale`. True contribution breakeven is therefore **~1.68 /
+  ~1.74**, and the same-day inference that put the margin near 50% was 8–10 points too pessimistic
+  and has been corrected in every doc that carried it. **The standing lesson: before logging
+  something as missing brand context, check whether a connected tool already has it.**
 - **~~Max tolerable CPA, and the ROAS floor~~ — the ROAS floor is ANSWERED 2026-09-10: 2.0.**
   *"below 2 ROAS is not profitable."* `stated`. Lifetime sits at 2.03, the last 30 days at 2.18.
   **Max tolerable CPA is still not stated** — current reference $79.57 over 30 days, $70.42
   lifetime — and it no longer follows automatically from the floor, because AOV moves: the last
   30 days run $173.60 against $143.15 lifetime, so the CPA that clears 2.0 differs by window.
-- **Which ROAS the 2.0 floor refers to — NEW GAP, opened by the answer that closed the last one.**
-  Every ROAS in this brain is Meta's attributed figure (7-day click / 1-day view). The brand reads
-  performance in **Triple Whale** (`brand-rules.md`, `stated` 2026-09-07). The floor was very
-  likely stated in Triple Whale's terms and is being compared against Meta's. With only 1.6% of
-  lifetime headroom, the gap between the two decides whether this account is above water or below
-  it. Triple Whale is connected and the query shape already exists in
-  `quarterly-whitespace-analysis.md`, so this is **one run, not a data request** — filed as loop
-  **PD-13** in the roll-up at Tier 1, 18/20.
+- **~~Which ROAS the 2.0 floor refers to~~ — ANSWERED 2026-09-10, and it went the opposite way to
+  the prediction.** Blended reads **higher** than Meta, not lower: UK 2.39 vs 2.23, US 2.83 vs
+  **1.68**. Loop PD-13 closed. Full answer in `audits/2026-Q3/attribution-reconciliation.md`.
+
+- **🔴 THE LARGEST GAP IN THIS BRAIN, opened 2026-09-10: roughly half the paid business has never
+  been audited.** The US store carries **$316,988.95 of Meta spend in the 90 days to 2026-09-07 at
+  1.68 ROAS** — below its own 1.74 contribution breakeven — and **no document in this vault has
+  ever looked at it.** Every audit here reads the UK account: the performance audit's $337,402.58
+  window spend against the UK store's £255,939.42 implies FX of 1.3183, a clean GBP→USD match.
+  So every format read, every fatigue call, every "this account has never run that" claim
+  describes the UK account only, and none of the docs say so, because nobody knew. `verified` on
+  the spend and the ROAS from the order warehouse; **NOT yet verified: which ad account id it is.**
+  The Parker connector reaches only `act_8557554027677317` and `act_1771028750359089`, both
+  DISABLED with zero spend. **Connecting the live US ad account in Parker is the single highest-value
+  action available to this brand right now** — it outranks every loop in the roll-up, because it
+  changes the denominator under all of them.
 - **LTV / payback window.** Decides whether a first-order loss is acceptable.
 - **Secondary metrics the team weighs** beyond ROAS.
 - **The spend-versus-efficiency rule** when two ads in one ad set diverge.

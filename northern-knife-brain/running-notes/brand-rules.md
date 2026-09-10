@@ -8,13 +8,20 @@
 - **North-star metric:** **ROAS.** `stated` by the account owner, 2026-09-07. Current
   reference points: **2.18 over the last 30 days, 2.03 lifetime** (`verified`, account-wide
   lifetime pull 2026-09-07). Lifetime spend $497,553.67 on 38,847,631 impressions.
-- **Efficiency floor: 2.0 ROAS.** `stated` by the brand owner, 2026-09-10 — *"below 2 ROAS is
-  not profitable."* This is the first profitability anchor this brain has ever had, and it puts
-  lifetime performance (2.03) **1.6% above breakeven** and the last 30 days (2.18) 9% above it.
-  Never present a ROAS figure in this account without saying where it sits against 2.0 — a
-  number that sounds healthy in the abstract may be at or under the floor. Full working,
-  including the sensitivity of that conclusion to the margin we still do not have, is in
-  `running-notes/success-definition.md`.
+- **Efficiency target: 2.0 ROAS.** `stated` by the brand owner, 2026-09-10 — *"below 2 ROAS is
+  not profitable."* Never present a ROAS figure in this account without saying where it sits
+  against 2.0, **and say which ROAS you mean** (see the next line — it changes the answer).
+- **True contribution breakeven: ~1.68 (UK) / ~1.74 (US).** `verified from Triple Whale`,
+  2026-09-10. Contribution margin is **59.68% (UK)** and **57.48% (US)**, configured in Triple
+  Whale and pulled live. So the stated 2.0 is a **target carrying overhead and profit**, not a
+  break-even line, and an earlier inference in this brain that put the margin near 50% was
+  8–10 points too pessimistic — corrected everywhere. Quote both numbers: 2.0 is where the brand
+  wants to be, ~1.7 is where a Meta dollar stops paying for its own goods.
+- **Meta ROAS and blended ROAS are not the same number, and blended reads HIGHER.** 90 days to
+  2026-09-07: UK 2.23 on Meta against 2.39 blended; US **1.68** on Meta against 2.83 blended.
+  `verified from Triple Whale`. On the US store that gap decides the answer, so a bare "ROAS"
+  with no metric named is not a usable statement in this account. Full reconciliation:
+  `audits/2026-Q3/attribution-reconciliation.md`.
 - **Secondary metrics they still weigh:** not stated — see `missing-context.md`.
   Parker will read CPA ($79.57 last 30 days, $70.42 lifetime), AOV ($173.60 last 30 days,
   $143.15 lifetime) and hook rate alongside ROAS until told otherwise, and will label that

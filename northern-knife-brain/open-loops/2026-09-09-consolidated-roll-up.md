@@ -1046,7 +1046,32 @@ runnable, but half of it is a brand answer and the whole test slate hangs on it:
 Nothing in the brand notes or the set-up intake records such a decision, which is why CT-1 asks what a
 person on camera would do rather than assuming nobody has tried.
 
-### PD-13 — Does the 2.0 ROAS floor mean Meta's number or Triple Whale's? — **NEW, filed 2026-09-10, Tier 1**
+### PD-13 — Does the 2.0 ROAS floor mean Meta's number or Triple Whale's? — **CLOSED 2026-09-10, same day it was filed**
+
+> **Answered in full by `audits/2026-Q3/attribution-reconciliation.md`. It went the opposite way to
+> the prediction below, and it opened something bigger.**
+>
+> - **Blended reads HIGHER than Meta, not lower.** UK 2.39 blended vs 2.23 Meta; US 2.83 blended vs
+>   **1.68** Meta. The loop assumed platform attribution would flatter the account. It doesn't —
+>   blended sees Google, email and organic revenue against a much smaller spend.
+> - **The margin was never actually missing.** Triple Whale had contribution margin configured all
+>   along: **59.68% UK / 57.48% US**. True contribution breakeven is **~1.68 / ~1.74**, so the
+>   stated 2.0 is a *target with overhead inside it*. The same-day ~50% inference was 8–10 points
+>   too pessimistic and is corrected everywhere.
+> - **Both stores are net profitable** over the window: £132,145.06 and $225,537.59, at 17.76% and
+>   22.38% net margin. The "barely breakeven" framing was wrong.
+> - **🔴 And the finding that outranks this whole file: roughly half the paid business is
+>   unaudited.** The US store carries **$316,988.95** of 90-day Meta spend at **1.68 — below its own
+>   1.74 breakeven** — and nothing in this vault has ever looked at it. Every audit here reads the
+>   UK account. Connecting the live US ad account in Parker changes the denominator under every loop
+>   ranked above. **It should be item one on the next pass, ahead of PD-6 and MS-1.**
+>
+> Cost to close: two tool calls. It was filed as "the cheapest high-stakes loop in the file" and
+> that turned out to be an understatement.
+
+*The loop as originally filed, kept for the record:*
+
+### PD-13 — original filing, 2026-09-10, Tier 1
 
 **The observation.** On 2026-09-10 the brand owner answered PD-11 with *"below 2 ROAS is not
 profitable."* Every ROAS figure in this brain — lifetime 2.03, last 30 days 2.18, and every per-ad

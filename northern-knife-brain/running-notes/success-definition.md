@@ -46,34 +46,61 @@ breakeven — 0.81% of revenue** (`inferred`, arithmetic below). Over its whole 
 account has very nearly exactly broken even. It has not been funding the business; it has been
 paying for itself.
 
-**The arithmetic, so anyone can check it or replace it:** a breakeven ROAS of 2.0 implies that
-about **50% of revenue survives cost of goods and shipping** — that is `inferred` from the one
-stated number, not a margin the brand gave us. Applying it: $1,011,464.66 × 50% = $505,732.33
-of contribution, less $497,553.67 of spend, leaves **$8,178.66**. If the real contribution
-margin is 48% rather than 50%, the account is *below* water lifetime. The conclusion is
-sensitive to a number we still do not have, and that sensitivity is the point.
+> ### ⚠️ CORRECTED 2026-09-10, same day — the margin is known now, and the inference below was wrong
+>
+> The paragraph that stood here inferred a **~50% contribution margin** from the 2.0 floor and
+> concluded the account had cleared only **$8,178.66** above breakeven across its life. **Triple
+> Whale had the real margin configured all along and nobody had looked.** It is **59.68% (UK)** and
+> **57.48% (US)**, `verified from Triple Whale`, pulled 2026-09-10.
+>
+> So the true **contribution breakeven is roughly 1.68–1.74, not 2.0**, and the stated 2.0 is a
+> *target with overhead and profit inside it*, not a break-even line. Over the same 90-day window
+> the two stores cleared **£132,145.06** and **$225,537.59** in net profit, at 17.76% and 22.38%
+> net margin. The account is not scraping breakeven. The full reconciliation, including the
+> discovery that roughly half the paid business has never been audited, is
+> `audits/2026-Q3/attribution-reconciliation.md`.
+>
+> **The old arithmetic, kept visible rather than deleted, because the error is instructive:**
+> $1,011,464.66 × 50% = $505,732.33 of contribution, less $497,553.67 of spend, leaves $8,178.66.
+> Every step was right; the 50% was a guess dressed as arithmetic, and it was 8 to 10 points too
+> pessimistic. The lesson is that an inference off a single stated number should be checked against
+> a connected tool before it gets propagated into five documents — which is exactly what happened
+> here, and what the same-day correction had to undo.
+
+**Which ROAS the floor governs — answered.** Blended reads **higher** than Meta on both stores, not
+lower as the loop predicted: UK 2.39 blended against 2.23 on Meta, US 2.83 blended against **1.68**
+on Meta. So the metric named matters enormously on the US store, and any statement of the 2.0 rule
+has to say which number it governs.
 
 **What this does to "scale acquisition."** The objective and the floor are in direct tension,
 and the tension is now the most important strategic fact in this brain:
 
-- Scaling almost always costs efficiency. With only 9% of headroom in the current window and
-  1.6% lifetime, **there is very little room to buy volume with return.** A push that drops
-  ROAS from 2.18 to 2.0 does not "reduce profit" — it takes the account to zero.
+- Scaling almost always costs efficiency. Against the **owner's 2.0 target** the headroom is thin
+  (9% in the current window, 1.6% lifetime). Against **true contribution breakeven of ~1.68–1.74**
+  there is more room than that — a push from 2.18 down toward 2.0 costs profit but does not take
+  the account to zero, which is what this section said before the margin was known. Both readings
+  belong in any scale plan: the target is where the brand wants to be, the breakeven is where the
+  money actually stops working.
 - So "headroom over efficiency," the ranking rule stated above, has a hard boundary it did not
   have this morning. An angle at 2.0 ROAS on $15k is no longer straightforwardly a bigger asset
   than one at 3.5 on $800 — at exactly 2.0 it is contributing nothing, whatever the volume.
-- The honest version of the objective is now: **grow spend while holding ROAS above 2.0**, not
-  grow spend and watch ROAS. Every performance read in this brain should rank against that.
+- The honest version of the objective is: **grow spend while holding ROAS above 2.0**, with
+  ~1.7 as the hard floor below which a Meta dollar stops paying for its own goods. Every
+  performance read in this brain should rank against both.
+- **And the US store's Meta spend is already under that hard floor** — $316,988.95 over 90 days at
+  1.68 against a 1.74 breakeven, subsidised by Google and email. That spend has never been audited
+  by this brain. See `audits/2026-Q3/attribution-reconciliation.md`, Finding 4.
 
-**One caveat that matters for how this gets applied.** Every ROAS figure in this brain comes
-from Meta's own reporting under the account's 7-day-click / 1-day-view attribution, while the
-brand reads performance in Triple Whale (see `brand-rules.md`). The 2.0 floor was almost
-certainly stated in terms of the brand's own view of profitability, not Meta's attributed
-number. **Nobody has checked whether the two tie out**, and if Triple Whale reads lower than
-Meta, the true position against the floor is worse than the table above. That check is now the
-highest-value reconciliation in this brain — it is logged in `missing-context.md`.
+**That caveat is now resolved.** This section previously warned that nobody had checked Meta's
+attributed number against Triple Whale, and guessed that Triple Whale might read *lower*, making
+the position worse. It was checked on 2026-09-10 and it reads **higher** on both stores. The full
+answer is `audits/2026-Q3/attribution-reconciliation.md`.
 
 ## History
+
+`verified` 2026-09-10 — Contribution margin 59.68% (UK) / 57.48% (US) from Triple Whale, so true
+contribution breakeven is ~1.68–1.74 and the stated 2.0 is a target above it, not a break-even line.
+Both stores net profitable over the 90-day window: £132,145.06 and $225,537.59.
 
 `stated` 2026-09-10 — Efficiency floor: below 2.0 ROAS is not profitable. First profitability
 anchor of any kind. Does not supersede the objective; it bounds it.
