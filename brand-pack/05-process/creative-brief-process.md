@@ -288,6 +288,15 @@ carry meaning.
 So `1B` is hook variation 1 written at problem aware; `3D` is hook variation 3
 at product aware.
 
+**The default band is B–C.** Problem aware through solution aware is where this
+account mostly buys. Write hooks into B and C unless there is a specific reason
+to reach outside them — a retargeting cut, or a pure-scarcity collector play.
+
+Never relabel a hook to fit the band. The letter describes what the copy
+actually assumes the viewer knows, so a hook that only lands for someone who
+already knows the product is D whatever letter sits on the file. If a hook is
+outside the band, rewrite the hook.
+
 Letters that match across a concept mean three angles tested at one awareness
 level — NK420 ships 1D/2D/3D, all product aware, because the ad answers price
 objections from people who already know the brand. Letters that differ mean the
