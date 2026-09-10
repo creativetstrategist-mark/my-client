@@ -234,40 +234,56 @@ use a separate 3-digit series.
 
 ### D.3 Naming strings
 
-**Batch name** — underscore-joined. The concept slot takes the `Concept Name`
-property **verbatim**, including any ` - Product` suffix it carries:
+Authoritative spec, given by the strategist 2026-09-10. Underscore-joined, no
+spaces around the underscores.
+
+**Batch name**
 
 ```
-NK###_Concept_Specialty_Product_Content_Avatar_Offer_New_Strategist_Editor_LandingPage
+[Creative ID]_[Concept name]_[Specialty]_[Product]_[Content]_[Persona]_[Offer]_[Category]_[Strategist]_[Editor]_[Date]_[Landing page]
 ```
 
-> `NK455_A Day vs Three Months - Feather_Generalist_Feather_AI VO_JOHN - KNIFE COLLECTOR_B2G2_New_Callum_Naveed_6 Reasons - General`
+> `NK458_Ninety-Six Hours - Feather_Generalist_Feather_AI VO_JOHN - KNIFE COLLECTOR_B2G2_New_Mark_EDITOR_091026_6 Reasons - General`
 
-**Folder name** — the first four fields only:
-
-```
-NK###_Concept_Specialty_Product
-```
-
-**File naming** — one row per variant. Format and the variant code go in after
-the ID. The last two fields are **date, then landing page**:
+**Folder name** — four fields, and note it takes **Content**, not Specialty:
 
 ```
-NK###_VID_Concept_<variant>_Specialty_Product_Content_Avatar_Offer_New_Strategist_Editor_MMDDYY_LandingPage
+[Creative ID]_[Concept name]_[Content]_[Product]
 ```
 
-The field order in full: ID · format · concept · variant · specialty · product ·
-content type · avatar · offer · new/iteration · strategist · editor · **date** ·
-**landing page**.
+> `NK458_Ninety-Six Hours - Feather_AI VO_Feather`
 
-> ⚠️ **The shipped corpus contradicts this.** NK420 and NK455 both end
-> `..._Editor_LandingPage_MMDDYY` — landing page *then* date. The order above is
-> the standard as given by the strategist on 2026-09-10. Follow it, and expect
-> the old order in anything before NK458.
+**File naming** — one row per variant. Identical to the batch name except the
+variation code is inserted after the concept:
 
-**Editor slot.** When no editor is assigned yet, write the literal string
-`EDITOR` into the naming strings and leave the `Editor` property blank. The
-producer fills both when the brief is assigned.
+```
+[Creative ID]_[Concept name]_[Variation code]_[Specialty]_[Product]_[Content]_[Persona]_[Offer]_[Category]_[Strategist]_[Editor]_[Date]_[Landing page]
+```
+
+> `NK458_Ninety-Six Hours - Feather_1B_Generalist_Feather_AI VO_JOHN - KNIFE COLLECTOR_B2G2_New_Mark_EDITOR_091026_6 Reasons - General`
+
+**Field notes**
+
+- **Concept name** is the `Concept Name` property verbatim, including any
+  ` - Product` suffix it carries.
+- **Persona** is the `Avatar` option name verbatim, irregular spacing included:
+  `JOHN - KNIFE COLLECTOR`, `MIKE- BBQ KING`, `VANCE- The Opportunist`.
+- **Category** is written `New` or `Iteration` — the property value is
+  `Net New`, the string is not.
+- **Date** is `MMDDYY`.
+- **Editor** — when nobody is assigned yet, write the literal string `EDITOR`
+  and leave the `Editor` property blank. The producer fills both on assignment.
+
+> ⚠️ **Two places the shipped corpus disagrees with this spec.** Everything
+> before NK458 was built the other way:
+> 1. **Format.** The spec has no format field. Older files insert `_VID_`
+>    straight after the Creative ID — `NK455_VID_A Day vs Three Months...`.
+>    There is no slot for it above, so `VID`/`GIF`/`LFC` no longer appears in a
+>    file name.
+> 2. **Folder name.** The spec takes Content in the third slot; older folders
+>    take Specialty — `NK455_A Day vs Three Months - Feather_Generalist_Feather`.
+>
+> Follow the spec above. Expect the old shape in anything before NK458.
 
 ### D.3.1 The variant code
 
