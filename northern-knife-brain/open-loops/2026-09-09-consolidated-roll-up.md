@@ -1085,6 +1085,34 @@ works). Descends from PD-11.*
 
 ---
 
+## Filed after this roll-up — for the next pass to absorb
+
+Two things landed on 2026-09-10, after this file was written. Neither is folded into the scoring
+above; both are recorded here so the next roll-up starts from them rather than rediscovering them.
+
+**MS-10's revival trigger has fired.** It was archived with the condition *"revives the moment PD-1
+is answered."* PD-1 was answered on 2026-09-10. **Un-archive it in the next pass** — and note the
+answer landed on the side that makes it live rather than moot.
+
+**Three new loops from `audits/2026-Q3/gaps-opportunities-inspo.md`**, each written there in the
+four-part form and summarized here so they are not lost between documents:
+
+- **NEW-1 — the return story belongs to two brands, not one.** Coolina runs the same "a guy tried to
+  return his knife" story at its own impression ranks 2 and 6. Seven of Northern Knife's ten
+  top-spending ads run it, carrying $70,858.56, 81.9% of top-ten spend. The concept was never
+  exclusive, which is a different problem from the concept being tired.
+- **NEW-2 — the magnetic wall strip.** It reads as an identity object in the reviews and appears as
+  a giveaway in the rival's offer. Two very different jobs for the same item, unreconciled.
+- **NEW-3 — `NK184`'s disapproval has lost its explanation.** The working theory was that its
+  on-screen card ("A full feather etched from tip to handle") broke the laser-applied rule. That
+  rule was retired on 2026-09-10, so **the card is accurate and the theory is dead.** The account's
+  one original ad in the top ten is still blocked at a $24.65 CPM and nobody now knows why.
+
+**PD-13** was also filed on 2026-09-10 and *is* scored — it sits in the brand-routed section above at
+18/20, Tier 1.
+
+---
+
 ## Archived this pass
 
 Seven loops died with reasoning, plus one routed out of the loops entirely. This archive is the
