@@ -10,7 +10,7 @@ date_range: 2022-03-11 to 2026-09-08
 sources_read:
   - "First-party customer reviews via Parker MCP `search_customer_reviews_sql` and `search_customer_reviews_semantic`, brand_id 2ec32316-1da9-4563-a86f-d4e811e89469 — 2,135 records, 4.94 average, pulled 2026-09-08"
   - "Facebook ad comments via Parker MCP `search_facebook_ad_comments_sql` — the complete corpus, all 1,351 records read in full, pulled 2026-09-08"
-  - "Brand ad copy via Parker MCP `search_facebook_ads_sql` — 2,603 ads, $502,032.18 lifetime spend, read only as the brand-language control set, never as customer language"
+  - "Brand ad copy via Parker MCP `search_facebook_ads_sql` — 2,603 ads, $502,032.18 lifetime spend, read only as the brand-language control set, never as customer language. NOTE added 2026-09-10: these two figures differ from the brain's verified lifetime set (2,431 ad-name groups, $497,553.67) because this pull ran a day later, on 2026-09-08, and counts ads rather than ad-name groups. The $4,478.51 delta sits inside this account's daily run rate, so both are most likely honest reads of different moments and different units — but this doc is NOT the source for lifetime figures. For any lifetime number cite running-notes/brand-rules.md: $497,553.67 spend, 2.03 ROAS, $143.15 AOV, 7,066 purchases, 2,431 ad-name groups."
   - "Post-purchase surveys via Parker MCP `semantic_search_post_purchase_survey` — checked 2026-09-08, zero responses"
   - "Prior brand docs read 2026-09-08: CLAUDE.md, brand-lens.md, running-notes/brand-rules.md, running-notes/missing-context.md, source-pulls/customer-reviews.md, source-pulls/ad-account.md, audits/2026-Q3/customer-review-audit.md"
 expected_sources_missing:
