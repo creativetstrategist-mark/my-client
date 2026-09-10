@@ -293,9 +293,10 @@ level — NK420 ships 1D/2D/3D, all product aware, because the ad answers price
 objections from people who already know the brand. Letters that differ mean the
 same story tested across the funnel.
 
-In the HOOK table's `Variant` column the code is followed by the **angle**, not
-the awareness level — the letter already carries that. `1D — Drama`,
-`2C — Bold claim`, `3D — Scarcity`.
+In the HOOK table's `Variant` column, write **the code alone** — `1A`, `2C`,
+`3D`. No angle label, no awareness label. Older briefs append the angle (NK420
+ships `1D — Drama`); the bare code is the current standard. The angle belongs in
+the `Note` column with the rest of the direction.
 
 ### D.4 A real brief is short
 
