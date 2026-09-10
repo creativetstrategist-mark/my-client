@@ -107,10 +107,26 @@ The proof stack is house language, used close to verbatim:
 
 ### C.5.1 The lineup beat
 
-**Every brief ends on the multiple-knife lineup.** It sits between the offer
-resolution and the CTA, as a `Features` row in the BODY table, and it is not
-optional — it is the beat that turns "buy two get two free" from a mechanic into
-four objects the viewer can picture on his counter.
+**Every brief carries the multiple-knife lineup.** It is a `Features` row in the
+BODY table and it is not optional — it is the beat that turns "buy two get two
+free" from a mechanic into four objects the viewer can picture on his counter.
+
+**One knife, then four.** A brief promotes a single product. The hero is the
+only NorthernKnife knife on screen for the whole front half — it carries the
+hook, the mechanism, and the craft beats alone. The other three arrive **in the
+middle, immediately after the offer resolves**, because that is the moment they
+become relevant: buy two and get two, so here is what the other two could be.
+
+The order is fixed:
+
+1. Hero alone — everything up to the offer.
+2. **Offer resolution.** First frame allowed to show more than one knife.
+3. **Lineup.** Four knives, one clip each, paying the offer off immediately.
+4. **Back to the hero** for the closing beat, so the brief ends on the product
+   it is selling rather than on a catalogue.
+
+Never show a second knife before the offer beat. A lineup that arrives early
+turns a single-product ad into a range ad and the hero stops being the subject.
 
 Shape: **four knives, one clip each, named one at a time as the VO reaches
 them.** The hero product of the brief goes first and carries the detail. The
