@@ -105,6 +105,31 @@ The proof stack is house language, used close to verbatim:
 - **Delete on sight:** "here's the best part" · "let's do the math" · any
   sentence that explains our own pricing to the viewer.
 
+### C.5.1 The lineup beat
+
+**Every brief ends on the multiple-knife lineup.** It sits between the offer
+resolution and the CTA, as a `Features` row in the BODY table, and it is not
+optional — it is the beat that turns "buy two get two free" from a mechanic into
+four objects the viewer can picture on his counter.
+
+Shape: **four knives, one clip each, named one at a time as the VO reaches
+them.** The hero product of the brief goes first and carries the detail. The
+other three get one clause apiece — a job, not a spec sheet.
+
+**Rotate the roster.** The three supporting knives are not fixed. Vary them
+across briefs so the beat doesn't read as boilerplate, and vary the phrasing
+even when the roster repeats — the originality gate (§F) catches a lineup
+copied from a sibling brief just as fast as one copied from an inspo. What must
+not vary: the hero goes first, and every knife named obeys §E.
+
+Two constraints on who can appear:
+
+- **The Rolling Sharpener never appears.** Separate line — it must never
+  reference knives at all.
+- **The RAGNAR Tiger Cleaver cannot sit in a lineup that closes on "full
+  tang".** It is **not** full tang; the claim is Feather-only. Either leave the
+  Tiger Cleaver out of that brief or drop the full-tang line from the close.
+
 ### C.6 Where the persona docs are wrong
 
 `What's Worked YTD 2026` §9 states the standing rule directly: the persona
