@@ -300,8 +300,11 @@ Page icon: **📽️** — every page in the database uses it.
 ### D.1.1 Editor assignment
 
 The `Editor` select carries eight names. **Seven are active:** Hammad, Umar,
-Onyeka, Anas, Hasnain, Renniel, Naveed. **Huzaifa is still in the select but is
-not on the active list** — do not assign to them.
+Onyeka, Anas, Hasnain, Renniel, Naveed.
+
+> ⚠️ **Never assign to Huzaifa.** The name is still an option in the `Editor`
+> select but is not an active editor. It is not a fallback, not an overflow
+> option, and not valid for any runtime. Treat the select as seven names.
 
 **Runtime governs who can take a brief.**
 
