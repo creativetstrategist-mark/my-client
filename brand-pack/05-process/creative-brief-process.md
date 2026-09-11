@@ -297,6 +297,30 @@ Set on creation. `Concept Name` is the title property.
 
 Page icon: **📽️** — every page in the database uses it.
 
+### D.1.1 Editor assignment
+
+The `Editor` select carries eight names. **Seven are active:** Hammad, Umar,
+Onyeka, Anas, Hasnain, Renniel, Naveed. **Huzaifa is still in the select but is
+not on the active list** — do not assign to them.
+
+**Runtime governs who can take a brief.**
+
+| Editor | Takes |
+|---|---|
+| **Hammad** | **60 seconds or under only** |
+| **Onyeka** | **60 seconds or under only** |
+| Umar, Anas, Hasnain, Renniel, Naveed | Any duration |
+
+Estimate the runtime before assigning — word count ÷ ~175 words per minute at
+AI-VO pace. Anything over a minute goes to one of the five unrestricted editors.
+
+A script that lands *near* 60 seconds should also go to an unrestricted editor.
+A slower read turns a 58-second script into a 65-second one, and by then the
+assignment is already wrong.
+
+When nobody is assigned yet, leave the property blank and write the literal
+string `EDITOR` into the naming strings (§D.3).
+
 ### D.2 Creative ID series
 
 Video is `NK###`. Seasonal prefixes exist and are **not** for this routine:
