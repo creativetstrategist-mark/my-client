@@ -299,30 +299,36 @@ Page icon: **📽️** — every page in the database uses it.
 
 ### D.1.1 Editor assignment
 
-The `Editor` select carries eight names. **Seven are active:** Hammad, Umar,
-Onyeka, Anas, Hasnain, Renniel, Naveed.
+**Assign an editor when the brief is created, then set `Status` to
+"Ready for visuals".** A new brief does not get left unassigned.
+
+**Active roster — seven names.** Hammad · Umar · Onyeka · Anas · Hasnain ·
+Renniel · Naveed
 
 > ⚠️ **Never assign to Huzaifa.** The name is still an option in the `Editor`
 > select but is not an active editor. It is not a fallback, not an overflow
 > option, and not valid for any runtime. Treat the select as seven names.
 
-**Runtime governs who can take a brief.**
+**The criteria, in order:**
 
-| Editor | Takes |
-|---|---|
-| **Hammad** | **60 seconds or under only** |
-| **Onyeka** | **60 seconds or under only** |
-| Umar, Anas, Hasnain, Renniel, Naveed | Any duration |
+1. **Never Huzaifa.**
+2. **Runtime.** Hammad and Onyeka take **60 seconds or under only**. Umar, Anas,
+   Hasnain, Renniel and Naveed take **any duration**. Estimate before assigning
+   — word count ÷ ~175 words per minute at AI-VO pace. Anything landing *near*
+   the 60-second line goes to an unrestricted editor, because a slower read
+   turns a 58-second script into a 65-second one and the assignment is wrong
+   after the fact.
+3. **One concept, one editor.** A concept ships as a trio — Feather, Santoku,
+   Blackout. **No editor takes more than one brief from the same concept,
+   regardless of product.** Three briefs, three different editors, every time.
 
-Estimate the runtime before assigning — word count ÷ ~175 words per minute at
-AI-VO pace. Anything over a minute goes to one of the five unrestricted editors.
+**Load is not a criterion.** Do not balance by open-brief count and do not skip
+an editor because they look busy — they carry what they are given. Pick on the
+three rules above and nothing else.
 
-A script that lands *near* 60 seconds should also go to an unrestricted editor.
-A slower read turns a 58-second script into a 65-second one, and by then the
-assignment is already wrong.
-
-When nobody is assigned yet, leave the property blank and write the literal
-string `EDITOR` into the naming strings (§D.3).
+Under this rule a brief should almost never ship unassigned. If one genuinely
+must, leave the property blank and write the literal `EDITOR` into the naming
+strings (§D.3).
 
 ### D.2 Creative ID series
 
