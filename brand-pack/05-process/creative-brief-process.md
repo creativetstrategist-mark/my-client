@@ -128,9 +128,22 @@ The order is fixed:
 Never show a second knife before the offer beat. A lineup that arrives early
 turns a single-product ad into a range ad and the hero stops being the subject.
 
-Shape: **four knives, one clip each, named one at a time as the VO reaches
-them.** The hero product of the brief goes first and carries the detail. The
-other three get one clause apiece — a job, not a spec sheet.
+Shape: **four knives, one block each, named one at a time as the VO reaches
+them.** The hero product of the brief goes first.
+
+**Full product name on every knife, spoken and on screen.** The Feather Knife.
+The LOKI Viking Knife. The BJORN Series Santoku. The LOKI Blackout Edition.
+Never shorthand on first mention — not "the Viking", not "the Blackout", not
+"the Santoku". The name is half of what the beat is selling.
+
+**Every knife gets a real description, not a one-clause label.** Two or three
+concrete things the viewer can see or feel: what it is made of, what is on the
+blade, what the handle is, what it is for. The §C.1 rule still applies — plain
+material plus the consequence, no spec-sheet jargon — but a description is not
+a nickname. "The Viking for everything else" is a shortcut, not a description.
+
+Budget roughly 8–10 seconds a knife, about 35 seconds across the four. The
+lineup is a section of the script, not a list rattled off before the CTA.
 
 **Rotate the roster.** The three supporting knives are not fixed. Vary them
 across briefs so the beat doesn't read as boilerplate, and vary the phrasing
