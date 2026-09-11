@@ -107,9 +107,20 @@ The proof stack is house language, used close to verbatim:
 
 ### C.5.1 The lineup beat
 
-**Every brief carries the multiple-knife lineup.** It is a `Features` row in the
-BODY table and it is not optional — it is the beat that turns "buy two get two
-free" from a mechanic into four objects the viewer can picture on his counter.
+**The multiple-knife lineup is the default, not a law.** It is a `Features` row
+in the BODY table, and it is the beat that turns "buy two get two free" from a
+mechanic into four objects the viewer can picture on his counter. Include it
+unless the strategist cuts it — NK461 ships without one, deliberately, because
+the script's whole argument is that the viewer already owns too many knives and
+a catalogue works against that.
+
+**When it is cut, the rest of the brief has to follow.** A removed lineup leaves
+direction pointing at knives that are no longer there. Check all four:
+
+- the "one knife, then four" instruction, which no longer applies;
+- the accuracy guards for products that were only in the lineup;
+- the offer beat's visual and note, which usually cue the other knives in;
+- the word count and runtime.
 
 **One knife, then four.** A brief promotes a single product. The hero is the
 only NorthernKnife knife on screen for the whole front half — it carries the
