@@ -95,6 +95,28 @@ The proof stack is house language, used close to verbatim:
 > "100,000 customers. Lifetime warranty. 30-day money-back trial. Free returns.
 > Free shipping."
 
+**"Link's below" is always the last line of the close.** The proof stack runs
+before it, never after. A casual sign-off ("Go on.", "That's it.") may sit
+between the stack and the link, but nothing follows the link. This overrides the
+running order in older briefs — NK420 puts the link first; do not copy that.
+
+### C.4.1 Numerals, not words
+
+Numbers are written **numerically** wherever they appear — VO, on-screen copy,
+table cells:
+
+| Write | Never |
+|---|---|
+| `30 days` / `30-day money back` | "thirty days" |
+| `500 in a run` | "five hundred in a run" |
+| `100,000 customers` | "a hundred thousand customers" |
+| `$99.90` / `$79.90` | "ninety-nine ninety" |
+
+Spelled-out numbers read as soft in a direct-response close and force the VO to
+guess at the emphasis. The one tolerated exception is a number used as prose
+rather than a figure — "three knives left my block", "one blade at a time" —
+where it is describing a scene, not stating a term or a spec.
+
 ### C.5 Register
 
 - Blunter and more fragmented than feels safe.
@@ -104,6 +126,14 @@ The proof stack is house language, used close to verbatim:
 - Food cuts **"like butter"** — every time.
 - **Delete on sight:** "here's the best part" · "let's do the math" · any
   sentence that explains our own pricing to the viewer.
+
+**No bread.** Not in copy, not on screen, not in a visual direction. We have no
+bread-cutting footage, so a script that names it writes a shot the editor cannot
+cut. **Every cutting demo is meat or vegetables** — steak, onion, herbs, board
+work. This bites most often when adapting a general-kitchen inspo ad, where
+"bread knife" is the stock example of the drawer full of single-purpose knives;
+replace it with the generic ("a different knife", "the one that actually cuts")
+rather than swapping in another bread reference.
 
 ### C.5.1 The lineup beat
 
