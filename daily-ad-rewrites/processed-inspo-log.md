@@ -37,6 +37,13 @@ Column notes:
 | 2026-09-10 | https://app.trendtrack.io/share/ads/northernknife-uk-lVoSCO | NorthernKnife UK (our own ad) | NK461, NK462, NK463 | Forward-looking "What if" anaphora, inverted to a backward-looking version. Feather on JOHN, Blackout on MIKE, Santoku on JOHN. No lineup in any of the three — single-product by the strategist's call. Source contains an "etched" claim on the Feather pattern — a hard-rule violation, not carried over. |
 | 2026-09-14 | https://app.trendtrack.io/share/ads/the-ridge-CFRKoe | The Ridge | NK490, NK491, NK492 | Everyday-carry UGC. Mechanic taken: consolidation claim first, product named at beat 4, multi-buy justified by **placement rather than savings**. No lineup — single product per the strategist's call. Each cut re-angled rather than transplanted: Feather = "it replaced three" (JOHN); Santoku = "I own knives that cost more and reach for this" (JOHN), count deliberately **four**, since a "replaced three" wink references the santoku name's Japanese-origin meaning; Blackout = "I bought the cheap one expecting a gimmick" (MIKE), and its beat-8 gift pivot is rebuilt as a **peer beat** because MIKE recoils from gift framing. |
 
-> The single row above is backfilled from NK306 in the Notion database so the
-> Coolina ad is not picked again. The routine has not yet had a scheduled run
-> that wrote to this file.
+> The NK306 row is backfilled from the Notion database so the Coolina ad is not
+> picked again. The routine has not yet had a scheduled run that wrote to this
+> file.
+
+> **Known gap, left deliberately.** NK464-466, NK473-475, NK476-478 and
+> NK479-481 were written in-session from sources that are not logged here: a
+> competitor scam-accusation script, two customer reviews, and an ad comment.
+> The strategist ruled 2026-09-14 that these do not need backfilling. They were
+> not TrendTrack favourites, so the daily routine's search will not surface them
+> anyway. Do not re-raise this.
