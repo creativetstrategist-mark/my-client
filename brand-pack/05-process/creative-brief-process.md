@@ -312,11 +312,11 @@ Renniel · Naveed
 **The criteria, in order:**
 
 1. **Never Huzaifa.**
-2. **Runtime.** Hammad and Onyeka take **60 seconds or under only**. Umar, Anas,
+2. **Runtime.** Hammad and Onyeka take **72 seconds or under**. Umar, Anas,
    Hasnain, Renniel and Naveed take **any duration**. Estimate before assigning
    — word count ÷ ~175 words per minute at AI-VO pace. Anything landing *near*
-   the 60-second line goes to an unrestricted editor, because a slower read
-   turns a 58-second script into a 65-second one and the assignment is wrong
+   the 72-second line goes to an unrestricted editor, because a slower read
+   turns a 70-second script into an 80-second one and the assignment is wrong
    after the fact.
 3. **One concept, one editor.** A concept ships as a trio — Feather, Santoku,
    Blackout. **No editor takes more than one brief from the same concept,
