@@ -402,8 +402,11 @@ variation code is inserted after the concept:
   ` - Product` suffix it carries.
 - **Persona** is the `Avatar` option name verbatim, irregular spacing included:
   `JOHN - KNIFE COLLECTOR`, `MIKE- BBQ KING`, `VANCE- The Opportunist`.
-- **Category** is written `New` or `Iteration` — the property value is
-  `Net New`, the string is not.
+- **Category** mirrors the property value, with one abbreviation: `Net New`
+  is written `New`. `Iteration` and `Adaptation` are written in full.
+  `Adaptation` is the right property for a brief whose structure is lifted from
+  an outside ad — it is a real option on the database (NK490/NK491 and four
+  older briefs), not a synonym for `Net New`.
 - **Date** is `MMDDYY`.
 - **Editor** — when nobody is assigned yet, write the literal string `EDITOR`
   and leave the `Editor` property blank. The producer fills both on assignment.
