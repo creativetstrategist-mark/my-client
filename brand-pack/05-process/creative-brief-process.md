@@ -402,11 +402,19 @@ variation code is inserted after the concept:
   ` - Product` suffix it carries.
 - **Persona** is the `Avatar` option name verbatim, irregular spacing included:
   `JOHN - KNIFE COLLECTOR`, `MIKE- BBQ KING`, `VANCE- The Opportunist`.
-- **Category** mirrors the property value, with one abbreviation: `Net New`
-  is written `New`. `Iteration` and `Adaptation` are written in full.
-  `Adaptation` is the right property for a brief whose structure is lifted from
-  an outside ad — it is a real option on the database (NK490/NK491 and four
-  older briefs), not a synonym for `Net New`.
+- **Category** is `Net New` on every brief this routine produces, written `New`
+  in the string. The only exception is a brief the strategist explicitly calls
+  an **iteration** — then the property is `Iteration` and the string is
+  `Iteration`.
+
+  > ⚠️ **Never use `Adaptation`.** The option exists on the live database and
+  > looks like the obvious fit for a brief whose structure is lifted from an
+  > outside ad — that is exactly the trap. **Every brief in this routine is
+  > lifted from an inspo ad**, so "adapted" describes all of them and sorts
+  > none of them. `Category` answers whether this is a new concept or a
+  > re-cut of one of ours, and a rewrite of an outside ad is a **new** concept.
+  > Ruled by the strategist 2026-09-14 after NK490-492 shipped as `Adaptation`
+  > and were corrected.
 - **Date** is `MMDDYY`.
 - **Editor** — when nobody is assigned yet, write the literal string `EDITOR`
   and leave the `Editor` property blank. The producer fills both on assignment.
