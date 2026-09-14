@@ -332,8 +332,13 @@ Page icon: **📽️** — every page in the database uses it.
 **Assign an editor when the brief is created, then set `Status` to
 "Ready for visuals".** A new brief does not get left unassigned.
 
-**Active roster — seven names.** Hammad · Umar · Onyeka · Anas · Hasnain ·
-Renniel · Naveed
+**Active roster — six names.** Hammad · Umar · Onyeka · Anas · Hasnain · Naveed
+
+> ⏸️ **Renniel is paused as of 2026-09-14** — do not assign him anything until
+> the strategist says he is ready again. This is **temporary and reversible**,
+> unlike the Huzaifa rule below: he is a real active editor who is simply
+> unavailable right now, so when the pause lifts he goes straight back into the
+> rotation with no other change. Until then treat the roster as six.
 
 > ⚠️ **Never assign to Huzaifa.** The name is still an option in the `Editor`
 > select but is not an active editor. It is not a fallback, not an overflow
@@ -341,7 +346,7 @@ Renniel · Naveed
 
 **The criteria, in order:**
 
-1. **Never Huzaifa.**
+1. **Never Huzaifa. Not Renniel while he is paused.**
 2. **Runtime.** Hammad and Onyeka take **72 seconds or under**. Umar, Anas,
    Hasnain, Renniel and Naveed take **any duration**. Estimate before assigning
    — word count ÷ ~175 words per minute at AI-VO pace. Anything landing *near*
@@ -351,6 +356,11 @@ Renniel · Naveed
 3. **One concept, one editor.** A concept ships as a trio — Feather, Santoku,
    Blackout. **No editor takes more than one brief from the same concept,
    regardless of product.** Three briefs, three different editors, every time.
+
+With Renniel paused, rule 2 and rule 3 together leave a thin bench: a trio that
+runs long uses three of the four unrestricted editors (Umar, Anas, Hasnain,
+Naveed) and there is no slack left. If a fourth long brief appears in the same
+concept, say so rather than reaching for Hammad, Onyeka or Renniel.
 
 **Load is not a criterion.** Do not balance by open-brief count and do not skip
 an editor because they look busy — they carry what they are given. Pick on the
