@@ -339,6 +339,13 @@ Page icon: **📽️** — every page in the database uses it.
 > unlike the Huzaifa rule below: he is a real active editor who is simply
 > unavailable right now, so when the pause lifts he goes straight back into the
 > rotation with no other change. Until then treat the roster as six.
+>
+> **Other people assigning Renniel does not lift the pause.** Briefs authored
+> outside this routine will keep landing on him — NK501-504 all did, the day
+> after the pause began, and the strategist reconfirmed the pause anyway when
+> asked. The database is not the authority on this; the strategist is. Raise it
+> once if it looks like a contradiction, then keep him off the rotation until
+> the answer is an explicit yes.
 
 > ⚠️ **Never assign to Huzaifa.** The name is still an option in the `Editor`
 > select but is not an active editor. It is not a fallback, not an overflow
