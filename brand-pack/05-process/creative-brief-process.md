@@ -377,6 +377,21 @@ Page icon: **📽️** — every page in the database uses it.
 3. **One concept, one editor.** A concept ships as a trio — Feather, Santoku,
    Blackout. **No editor takes more than one brief from the same concept,
    regardless of product.** Three briefs, three different editors, every time.
+4. **Every concept gives one brief to Hammad.** His output consistently
+   performs, so he gets one cut of every concept — not the leftover, the one
+   that matters. Default him to the **lead product cut** (usually the Feather,
+   or whichever the strategist wrote first), and fill the other two around him.
+   Combined with rule 3 this means one Hammad brief per concept, never two.
+
+   > ⚠️ **This collides with rule 2 and the collision is real.** Hammad caps at
+   > 90 seconds. A concept whose three cuts all run longer — the 105-110 second
+   > offer-led ones do — has no brief he can take. **Runtime wins**, because it
+   > is a capability limit and this rule is a preference. The fix is to see it
+   > coming: when a concept is going to run long, **plan one cut to land under
+   > 90 seconds** so there is something for him. That costs nothing on a normal
+   > 75-85 second trio and only bites on the deliberately long-form ones. When
+   > it genuinely cannot be done, say so rather than assigning him a script he
+   > cannot cut.
 
 With Renniel paused, rule 2 and rule 3 together leave a thin bench: a trio that
 runs long uses three of the four unrestricted editors (Umar, Anas, Hasnain,
