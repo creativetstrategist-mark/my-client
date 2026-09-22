@@ -360,7 +360,7 @@ Page icon: **📽️** — every page in the database uses it.
    | Editor | Cap |
    |---|---|
    | **Hammad** | **90 seconds** (1:30) — raised from 72 on 2026-09-22 |
-   | **Onyeka** | **72 seconds** |
+   | **Onyeka** | **72 seconds** — confirmed 2026-09-22 |
    | Umar · Anas · Hasnain · Naveed | any duration |
    | Renniel | any duration — **but paused, see above** |
 
@@ -368,6 +368,12 @@ Page icon: **📽️** — every page in the database uses it.
    pace. **Anything landing within a few seconds of an editor's cap goes to an
    unrestricted editor instead**, because a slower read turns an 88-second
    script into a 95-second one and the assignment is wrong after the fact.
+
+   Both numbers are now confirmed by the strategist rather than inferred. The
+   earlier note that set them together (*"72 seconds video or 1 minute and 20
+   seconds"*) was self-contradictory and was resolved conservatively to 72 at
+   the time; that ambiguity is closed — Hammad 90, Onyeka 72, no rounding
+   either way.
 
    Hammad's raise matters more than it looks: most scripts in this routine land
    at 75-85 seconds, which was above the old cap and is comfortably inside the
