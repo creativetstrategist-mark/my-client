@@ -415,19 +415,22 @@ Page icon: **📽️** — every page in the database uses it.
    regardless of product.** Three briefs, three different editors, every time.
 4. **Every concept gives one brief to Hammad.** His output consistently
    performs, so he gets one cut of every concept — not the leftover, the one
-   that matters. Default him to the **lead product cut** (usually the Feather,
-   or whichever the strategist wrote first), and fill the other two around him.
-   Combined with rule 3 this means one Hammad brief per concept, never two.
+   that matters. Combined with rule 3 this means one Hammad brief per concept,
+   never two.
 
-   > ⚠️ **This collides with rule 2 and the collision is real.** Hammad caps at
-   > 90 seconds. A concept whose three cuts all run longer — the 105-110 second
-   > offer-led ones do — has no brief he can take. **Runtime wins**, because it
-   > is a capability limit and this rule is a preference. The fix is to see it
-   > coming: when a concept is going to run long, **plan one cut to land under
-   > 90 seconds** so there is something for him. That costs nothing on a normal
-   > 75-85 second trio and only bites on the deliberately long-form ones. When
-   > it genuinely cannot be done, say so rather than assigning him a script he
-   > cannot cut.
+   **Any product.** Feather, Santoku, Blackout — it makes no difference which
+   cut of the concept he takes (strategist, 2026-09-22). Pick the one that
+   matters most, or the one that fits his runtime; do not default to the Feather
+   out of habit.
+
+   > ⚠️ **Rule 2 still outranks this one.** Hammad caps at 90 seconds, and
+   > runtime is a capability limit where this rule is a preference. Being free
+   > to pick any product makes the collision **much rarer** — on a mixed-length
+   > trio, give him whichever cut lands under 90 — but it does not remove it. A
+   > concept whose three cuts *all* run long (the 105-110 second offer-led ones
+   > do) still has nothing he can take. The fix there is to see it coming and
+   > **plan one cut under 90 seconds**; when that genuinely cannot be done, say
+   > so rather than assigning him a script he cannot edit.
 
 With Renniel paused, rule 2 and rule 3 together leave a thin bench: a trio that
 runs long uses three of the four unrestricted editors (Umar, Anas, Hasnain,
