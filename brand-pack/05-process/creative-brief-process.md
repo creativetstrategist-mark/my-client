@@ -354,12 +354,26 @@ Page icon: **📽️** — every page in the database uses it.
 **The criteria, in order:**
 
 1. **Never Huzaifa. Not Renniel while he is paused.**
-2. **Runtime.** Hammad and Onyeka take **72 seconds or under**. Umar, Anas,
-   Hasnain, Renniel and Naveed take **any duration**. Estimate before assigning
-   — word count ÷ ~175 words per minute at AI-VO pace. Anything landing *near*
-   the 72-second line goes to an unrestricted editor, because a slower read
-   turns a 70-second script into an 80-second one and the assignment is wrong
-   after the fact.
+2. **Runtime.** The two capped editors no longer share a number — check the
+   right one:
+
+   | Editor | Cap |
+   |---|---|
+   | **Hammad** | **90 seconds** (1:30) — raised from 72 on 2026-09-22 |
+   | **Onyeka** | **72 seconds** |
+   | Umar · Anas · Hasnain · Naveed | any duration |
+   | Renniel | any duration — **but paused, see above** |
+
+   Estimate before assigning — word count ÷ ~175 words per minute at AI-VO
+   pace. **Anything landing within a few seconds of an editor's cap goes to an
+   unrestricted editor instead**, because a slower read turns an 88-second
+   script into a 95-second one and the assignment is wrong after the fact.
+
+   Hammad's raise matters more than it looks: most scripts in this routine land
+   at 75-85 seconds, which was above the old cap and is comfortably inside the
+   new one. He is effectively unrestricted for the house's default length now,
+   and only the deliberately long-form cuts (the 105-110 second offer-led ones)
+   are out of his range.
 3. **One concept, one editor.** A concept ships as a trio — Feather, Santoku,
    Blackout. **No editor takes more than one brief from the same concept,
    regardless of product.** Three briefs, three different editors, every time.
