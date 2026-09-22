@@ -418,10 +418,26 @@ Page icon: **📽️** — every page in the database uses it.
    that matters. Combined with rule 3 this means one Hammad brief per concept,
    never two.
 
-   **Any product.** Feather, Santoku, Blackout — it makes no difference which
-   cut of the concept he takes (strategist, 2026-09-22). Pick the one that
-   matters most, or the one that fits his runtime; do not default to the Feather
-   out of habit.
+   **Rotate the product.** Feather, Santoku, Blackout — he takes a different one
+   each concept (strategist, 2026-09-22). **Check what he had last and give him
+   something else.** This is an active rotation, not just permission: the first
+   version of this rule said "any product, don't default to the Feather" and
+   four concepts in a row went to him on Feather anyway, which is what prompted
+   the instruction.
+
+   | Concept | Product Hammad took |
+   |---|---|
+   | Earns Its Place (NK490-492) | Santoku (NK491) |
+   | Not The Cheap Ones (NK505-507) | Feather (NK505) |
+   | Won't Put It Down (NK508-510) | Feather (NK508) |
+   | One At A Time (NK511-513) | Feather (NK511) |
+   | Finish The Block (NK514-) | **reserved: Santoku or Blackout** |
+
+   Keep that table current when a concept ships — it is the only place the
+   rotation is visible, and without it the Feather wins by default every time.
+
+   Where rotation and runtime disagree, **runtime wins** (rule 2). A cut he
+   cannot edit is worse than a repeated product.
 
    > ⚠️ **Rule 2 still outranks this one.** Hammad caps at 90 seconds, and
    > runtime is a capability limit where this rule is a preference. Being free
