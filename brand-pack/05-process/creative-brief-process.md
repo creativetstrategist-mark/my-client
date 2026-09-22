@@ -86,6 +86,36 @@ See C.6.
 B2G2 beats B2G1 by ~48% on video (1.84 vs 1.24) and B2G1 is still the largest
 bucket in the account. Prefer B2G2 unless told otherwise.
 
+### C.3.1 JOHN is eligible for aggressively offer-led concepts
+
+**Ruled by the strategist 2026-09-22.** When a concept is **aggressively
+offer-led**, JOHN is a valid avatar for it **on any product** — not only his two
+named focus products (Feather, Santoku), but LOKI Blackout and the rest of the
+line as well.
+
+This is a deliberate override and it is worth knowing what it overrides:
+
+- His persona page lists **"discount-first or flash-sale hooks"** and
+  **"manufactured urgency"** on his recoil table.
+- The page's own conflict section already softened that once — *"multi-unit
+  framing is not disqualifying for him, **discount-led** framing is. Keep the
+  offer late (§C.3) and it works"* — citing NK133 and NK184, both JOHN ×
+  Feather B2G2 winners.
+- **The strategist's ruling goes further:** on a concept whose whole engine is
+  the offer, JOHN can carry it, and the offer can lead.
+
+**What does not change.** The ruling is about *eligibility*, not register. He is
+still a collector: craft detail still earns the attention, vague superlatives
+still lose him, and gifting language, countdown timers and fake urgency are
+still out. An offer-led JOHN brief opens on the offer and then **spends its
+length on craft**, which is the same trade the offer-led VANCE briefs make with
+quality proof.
+
+**Why this matters beyond one brief.** Before this ruling, offer-led concepts
+defaulted to VANCE almost automatically — four of them in a row did. Opening
+JOHN up gives the offer-led shelf a second avatar and stops the book
+concentrating on one.
+
 ### C.4 Closes
 
 Fixed shape: **CTA → proof stack → parting jab that loops back to the hook.**

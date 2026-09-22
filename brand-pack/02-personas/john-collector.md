@@ -95,7 +95,26 @@ claims with no artisan specificity.
   Multi-unit framing is not disqualifying for him — *discount-led* framing is.
   Keep the offer late (§C.3) and it works.
 
+- The page lists **"feather etching"** among his converting words and **"artisan
+  detail — etching"** on his responds table. **The Feather's pattern is
+  laser-applied and "etched" is a hard-banned word (§C.1, product catalogue).**
+  This is the most likely error on any JOHN × Feather brief, because the persona
+  page actively recommends the wrong word. Name the pattern, show it, never
+  describe the technique.
+- The page lists **"no restock"** and **"no wait list"** among his converting
+  words, and **"No restock. No wait list."** on his responds table. **Our
+  products restock — the Feather roughly every 3 months — and §C.1 bans the
+  phrase.** It is the single strongest scarcity line available for this avatar
+  and it is unusable. Use the production number (500 a run) and the sold-out PDP
+  signal instead.
+
 **Corpus wins.**
+
+> ✅ **Strategist override, 2026-09-22 — offer-led concepts.** The recoil-table
+> entries for "discount-first hooks" do **not** disqualify him from an
+> aggressively offer-led concept, and such a concept may run him on **any
+> product**, not just Feather and Santoku. See §C.3.1. Register is unchanged:
+> craft still does the convincing once the offer has landed.
 
 ## Reference ad
 
