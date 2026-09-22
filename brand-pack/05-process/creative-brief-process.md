@@ -520,6 +520,28 @@ In the HOOK table's `Variant` column, write **the code alone** — `1A`, `2C`,
 ships `1D — Drama`); the bare code is the current standard. The angle belongs in
 the `Note` column with the rest of the direction.
 
+### D.3.2 Keep the Creative Brief Instruction block short
+
+**Ruled by the strategist 2026-09-22.** The callouts under
+`## Creative Brief Instruction` are for the **editor**, not a record of the
+strategy. Three short callouts, nothing longer:
+
+| Callout | Holds |
+|---|---|
+| 🎬 blue | Format, runtime, the structure in one line, 3-5 directions |
+| ⚠️ yellow | A flat "Do not" list — bans only, no reasoning |
+| 💡 gray | Persona in 3-4 bullets |
+
+**Cut the justification.** Why a beat was chosen, what the source ad did, which
+persona rule drove a decision, how a conflict was resolved — none of that helps
+somebody cutting footage, and burying the bans inside paragraphs is how bans get
+missed. A guard reads as one line: the thing, and the correct version.
+
+**Where the reasoning goes instead:** the dedup log
+(`daily-ad-rewrites/processed-inspo-log.md`) for mechanic and adaptation
+decisions, this process doc for anything that becomes a standing rule, and chat
+for the one-off calls the strategist needs to see. **Never the brief page.**
+
 ### D.4 A real brief is short
 
 No strategy prose on the page. Rationale goes in conversation, not the work
