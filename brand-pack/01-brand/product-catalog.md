@@ -1,5 +1,11 @@
 # Product catalog — the 3 focus products
 
+> ⚠️ **The prices on this page are internal reference only — never ad copy.**
+> We market in the US, UK and AU, so a price stated in one currency is wrong in
+> the other two. **No brief states a price**, in VO, on screen, or on a PDP in
+> frame. Where a beat needs the price to *feel* low, say "for what it costs"
+> rather than a figure. See §C.3.2 of the process doc. Ruled 2026-09-22.
+
 Only these three are in scope for the daily routine. Do not substitute other
 catalog items unless the user explicitly asks.
 

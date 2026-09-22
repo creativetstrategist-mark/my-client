@@ -116,6 +116,39 @@ defaulted to VANCE almost automatically — four of them in a row did. Opening
 JOHN up gives the offer-led shelf a second avatar and stops the book
 concentrating on one.
 
+### C.3.2 Never state a price
+
+**Ruled by the strategist 2026-09-22.** We market in the **US, UK and AU**. A
+price stated in one currency is wrong in the other two, so **no price appears in
+any brief** — not in the VO, not as an on-screen super, and not visible on a PDP
+shown in frame.
+
+This is a change from how NK505-NK516 were originally written; all twelve were
+stripped retroactively.
+
+**Prices in `01-brand/product-catalog.md` are internal reference only.** They
+identify and distinguish the products for whoever is writing. They are not
+approved ad copy and never were meant as such.
+
+**Where a beat genuinely needs the price, say it without the number.** Several
+concepts lean on the price *feeling* low — the Blackout's whole standing
+objection is "it's too cheap to be the real thing." That survives intact as:
+
+> "For what it costs…" · "At that price…" · "For what these cost, half of them
+> turning up free makes no sense at all."
+
+Same scepticism cue, no figure, works in every market.
+
+**The offer is not a price and is unaffected.** "Buy two, get two free" is a
+mechanic, states no currency, and stays exactly as it is. So does the proof
+stack. **A percentage is still banned for a separate reason** (§C.3 — our offer
+is B2G2 and the % tiers are different offers), so neither route to a number is
+open.
+
+**On VANCE specifically:** his persona page calls for the real PDP on screen and
+an exact figure, because he trusts a site he can see. **Show the PDP, crop the
+price.** The page's instinct is right; the currency is the problem.
+
 ### C.4 Closes
 
 Fixed shape: **CTA → proof stack → parting jab that loops back to the hook.**
