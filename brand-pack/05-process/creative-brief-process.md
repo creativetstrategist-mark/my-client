@@ -464,7 +464,8 @@ Page icon: **📽️** — every page in the database uses it.
    | Not The Cheap Ones (NK505-507) | Feather (NK505) |
    | Won't Put It Down (NK508-510) | Feather (NK508) |
    | One At A Time (NK511-513) | Feather (NK511) |
-   | Finish The Block (NK514-516) | **Blackout (NK516)** |
+   | Finish The Block (NK514-516) | Blackout (NK516) |
+   | Day 60 (NK525-) | **reserved: Santoku** |
 
    Keep that table current when a concept ships — it is the only place the
    rotation is visible, and without it the Feather wins by default every time.
