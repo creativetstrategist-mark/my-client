@@ -73,18 +73,29 @@ See C.6.
 - Whatever the hook raises, the body pays off **before** any offer appears.
 - The offer lands **~60–80% through**. Never first. Never last.
 - **2–4 more beats must follow it.**
-- Only real offers exist: **B2G2, B2G1, B1G1, 64% off, 56% off,
-  40% + Free Gifts**. Never invent one.
-- Current storewide as of the last performance review: **Buy 2 Get 2 Free +
-  free shipping**. **Verify per campaign — never carry a previous offer over.**
+- **The offer on a knife is always Buy 2 Get 2 Free.** Standing, storewide,
+  every brief (strategist, 2026-09-25). **Assume it — do not ask, do not hedge,
+  do not write "verify before this ships" onto a page.** If a campaign ever runs
+  something else, the strategist says so; until then B2G2 is simply what the
+  offer is.
+- The other offers in the account — B2G1, B1G1, 64% off, 56% off,
+  40% + Free Gifts — are **real but not ours to reach for.** They exist so an
+  older brief citing one is legible. Do not put one in a new script, and
+  **never convert B2G2 into a percentage** (§C.3.2 — it is a mechanic, not a
+  discount, and percentages are a separate offer).
+- **Never carry an inspo ad's offer across.** Source ads state their own
+  offers constantly — the V-Boost timeline ad closes on buy-two-get-one, and a
+  Dr. Squatch bundle on 39% off. **Neither is ours.** Read the source's offer as
+  a structural beat to fill, never as copy. When a source's offer happens to
+  match ours (the Hollow Socks ad does), still write it from our own pack.
 - **No discount codes in copy.**
 - An offer *tag* on the page does not mean the offer goes in the script. NK130
   is B2G2-tagged and states no offer in copy at all — at 2.70 ROAS.
 - **Never reuse the identical offer paragraph across product versions in the
   same batch.**
 
-B2G2 beats B2G1 by ~48% on video (1.84 vs 1.24) and B2G1 is still the largest
-bucket in the account. Prefer B2G2 unless told otherwise.
+B2G2 beats B2G1 by ~48% on video (1.84 vs 1.24), which is the performance
+reason behind the standing rule above.
 
 ### C.3.1 JOHN is eligible for aggressively offer-led concepts
 
