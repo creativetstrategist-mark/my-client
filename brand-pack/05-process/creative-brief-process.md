@@ -201,6 +201,15 @@ where it is describing a scene, not stating a term or a spec.
 - **Delete on sight:** "here's the best part" · "let's do the math" · any
   sentence that explains our own pricing to the viewer.
 
+**No endorsements — we have none.** No celebrity, no chef, no named authority,
+and nothing that implies one: not "chefs use these", not "the pros swear by
+it", not an unnamed "professional kitchen". Source ads lean on this constantly
+(the HexClad Ramsay ad is built on it twice) and there is no equivalent in our
+pack to swap in. **When a mechanism needs a claim to interrogate, use the
+brand's own** — "the last knife you'll ever need" is house language and is a big
+enough claim to carry a doubt. Volume proof is the only authority we have, and
+it is **100,000 customers, never inflated.**
+
 **Never name a cut of meat — "meat" is the word.** No brisket, no roast, no
 joint, no steak, in copy or in a visual direction. Cut names are market-coded
 and we run in the US, UK and AU: brisket reads American, joint reads British,
@@ -486,7 +495,8 @@ Page icon: **📽️** — every page in the database uses it.
    | Finish The Block (NK514-516) | Blackout (NK516) |
    | Day 60 (NK525-527) | Santoku (NK526) |
    | Stamped Or Forged (NK528-530) | Feather (NK528) |
-   | The Meat Slice (NK557-559) | **Blackout (NK559)** |
+   | The Meat Slice (NK557-559) | Blackout (NK559) |
+   | Is It Worth It (NK560-) | **Feather (NK560)** |
 
    Keep that table current when a concept ships — it is the only place the
    rotation is visible, and without it the Feather wins by default every time.
