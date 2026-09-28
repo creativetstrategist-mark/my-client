@@ -201,6 +201,14 @@ where it is describing a scene, not stating a term or a spec.
 - **Delete on sight:** "here's the best part" · "let's do the math" · any
   sentence that explains our own pricing to the viewer.
 
+**Never name a cut of meat — "meat" is the word.** No brisket, no roast, no
+joint, no steak, in copy or in a visual direction. Cut names are market-coded
+and we run in the US, UK and AU: brisket reads American, joint reads British,
+and neither carries in the third market. It is the same reasoning as §C.3.2 on
+prices — anything that only makes sense in one market costs us the other two.
+Vegetables are fine to name; onion and tomato mean the same thing everywhere.
+Ruled by the strategist 2026-09-28.
+
 **No bread.** Not in copy, not on screen, not in a visual direction. We have no
 bread-cutting footage, so a script that names it writes a shot the editor cannot
 cut. **Every cutting demo is meat or vegetables** — steak, onion, herbs, board
@@ -478,7 +486,7 @@ Page icon: **📽️** — every page in the database uses it.
    | Finish The Block (NK514-516) | Blackout (NK516) |
    | Day 60 (NK525-527) | Santoku (NK526) |
    | Stamped Or Forged (NK528-530) | Feather (NK528) |
-   | The Brisket Slice (NK557-) | **reserved: Santoku or Blackout** |
+   | The Meat Slice (NK557-) | **reserved: Santoku or Blackout** |
 
    Keep that table current when a concept ships — it is the only place the
    rotation is visible, and without it the Feather wins by default every time.
