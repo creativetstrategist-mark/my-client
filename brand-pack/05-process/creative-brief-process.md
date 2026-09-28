@@ -496,7 +496,8 @@ Page icon: **📽️** — every page in the database uses it.
    | Day 60 (NK525-527) | Santoku (NK526) |
    | Stamped Or Forged (NK528-530) | Feather (NK528) |
    | The Meat Slice (NK557-559) | Blackout (NK559) |
-   | Is It Worth It (NK560-) | **Feather (NK560)** |
+   | Is It Worth It (NK560-) | Feather (NK560) |
+   | I Don't Work There (NK563-) | **reserved — Santoku or Blackout** |
 
    Keep that table current when a concept ships — it is the only place the
    rotation is visible, and without it the Feather wins by default every time.
