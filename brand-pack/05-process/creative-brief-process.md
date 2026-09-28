@@ -477,7 +477,8 @@ Page icon: **📽️** — every page in the database uses it.
    | One At A Time (NK511-513) | Feather (NK511) |
    | Finish The Block (NK514-516) | Blackout (NK516) |
    | Day 60 (NK525-527) | Santoku (NK526) |
-   | Stamped Or Forged (NK528-) | **Feather (NK528)** |
+   | Stamped Or Forged (NK528-530) | Feather (NK528) |
+   | The Tomato Test (NK557-) | **reserved: Santoku or Blackout** |
 
    Keep that table current when a concept ships — it is the only place the
    rotation is visible, and without it the Feather wins by default every time.
