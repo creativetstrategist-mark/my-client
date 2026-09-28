@@ -1,0 +1,913 @@
+{
+  "convention": "static 2.2 (2026-09-19)",
+  "delimiter": "_",
+  "order": [
+    "id",
+    "type",
+    "date",
+    "concept",
+    "version",
+    "strategist",
+    "designer",
+    "market",
+    "event",
+    "product",
+    "avatar",
+    "funnel",
+    "lp",
+    "angle",
+    "hook",
+    "tone",
+    "offer",
+    "offerRole",
+    "price",
+    "proof",
+    "copyLen",
+    "copyBy",
+    "format",
+    "media",
+    "text",
+    "compare",
+    "shot",
+    "human",
+    "palette",
+    "fidelity",
+    "category",
+    "source",
+    "ratio"
+  ],
+  "editable": "Every field can be changed by hand. Defaults are suggestions.",
+  "fields": {
+    "id": {
+      "label": "Creative ID",
+      "rule": "Designer prefix + 3 digits. Auto next number on this page. Never reuse an ID."
+    },
+    "type": {
+      "label": "Asset type",
+      "rule": "IMG = static. GIF = animated static.",
+      "values": [
+        "IMG",
+        "GIF"
+      ]
+    },
+    "date": {
+      "label": "Date",
+      "rule": "MM.DD.YY, the day the frame is finished."
+    },
+    "concept": {
+      "label": "Concept",
+      "rule": "Short human title, max 30 chars. Illegal characters are stripped automatically."
+    },
+    "version": {
+      "label": "Version",
+      "rule": "V1 = first cut of this concept. V2+ = a re-skin of the same concept.",
+      "values": [
+        "V1",
+        "V2",
+        "V3",
+        "V4",
+        "V5",
+        "V6",
+        "V7",
+        "V8",
+        "V9"
+      ]
+    },
+    "strategist": {
+      "label": "Strategist",
+      "rule": "Who briefed the idea.",
+      "values": [
+        "Andy",
+        "Mark",
+        "Claude",
+        "Mauro",
+        "Callum",
+        "Kel",
+        "Zyrille",
+        "Nazmul"
+      ]
+    },
+    "designer": {
+      "label": "Designer",
+      "rule": "Who built the file. Sets the ID prefix.",
+      "values": [
+        "Kel",
+        "Zyrille",
+        "Nazmul",
+        "Udi",
+        "Pam",
+        "Andy"
+      ]
+    },
+    "market": {
+      "label": "Market",
+      "rule": "Which store it is built for. Mkt-All when it ships to every store unchanged.",
+      "values": [
+        "Mkt-US",
+        "Mkt-UK",
+        "Mkt-AU",
+        "Mkt-CA",
+        "Mkt-DE",
+        "Mkt-NL",
+        "Mkt-All"
+      ],
+      "meanings": [
+        "Mkt-US = United States",
+        "Mkt-UK = United Kingdom",
+        "Mkt-AU = Australia",
+        "Mkt-CA = Canada",
+        "Mkt-DE = Germany",
+        "Mkt-NL = Netherlands",
+        "Mkt-All = ships to every store unchanged"
+      ]
+    },
+    "event": {
+      "label": "Event / season",
+      "rule": "What moment the ad is built for. Evergreen when none.",
+      "values": [
+        "Evergreen",
+        "Labor Day Sale",
+        "Black Friday",
+        "Cyber Monday",
+        "BFCM",
+        "Christmas",
+        "New Year",
+        "Valentines",
+        "Presidents Day",
+        "Easter",
+        "Mothers Day",
+        "Memorial Day",
+        "Fathers Day",
+        "July 4th",
+        "Prime Day",
+        "Summer Sale",
+        "Grilling Season",
+        "EOFY",
+        "Anniversary",
+        "Product Launch",
+        "Restock",
+        "Hiring Test"
+      ]
+    },
+    "product": {
+      "label": "Product",
+      "rule": "Hero product. Multi when 2+ knives share the frame.",
+      "values": [
+        "Feather",
+        "BJORN Santoku",
+        "LOKI",
+        "LOKI Blackout",
+        "LOKI Reaper",
+        "LOKI Berserker",
+        "BJORN Utility",
+        "BJORN Chef",
+        "ODIN 6 Boss",
+        "ODIN 8 Boss",
+        "ODIN Hybrid Cleaver",
+        "ODIN Set",
+        "RAGNAR Butcher",
+        "RAGNAROK Rising Butcher",
+        "VALHALLA Chef",
+        "VALHALLA Butcher",
+        "Tiger Cleaver",
+        "Dragon Cleaver",
+        "GUNNAR Cleaver",
+        "GUNNAR Butcher",
+        "GUNNAR Butcher XXL",
+        "Rolling Sharpener",
+        "Magnetic Holder",
+        "Sheath",
+        "Multi"
+      ]
+    },
+    "avatar": {
+      "label": "Avatar",
+      "rule": "Who the ad talks to. Always ONE named avatar. There is no 'everyone'.",
+      "values": [
+        "MIKE",
+        "JOHN",
+        "STEVE",
+        "SARAH",
+        "VANCE",
+        "DON",
+        "COLE",
+        "DANA",
+        "DARIEN"
+      ],
+      "meanings": [
+        "MIKE = MIKE - BBQ King",
+        "JOHN = JOHN - Knife Collector",
+        "STEVE = STEVE - Home Cook",
+        "SARAH = SARAH - The Wife (gifter)",
+        "VANCE = VANCE - The Opportunist (deal seeker)",
+        "DON = DON - The Hunter",
+        "COLE = COLE - The Camper / Bushcraft",
+        "DANA = DANA - Knife Sharpener",
+        "DARIEN = DARIEN - Proud Parents"
+      ]
+    },
+    "funnel": {
+      "label": "Funnel role",
+      "rule": "Top of funnel finds new people (First Click). Middle warms them. Bottom closes people who already know us.",
+      "values": [
+        "Fun-TOF",
+        "Fun-MOF",
+        "Fun-BOF"
+      ],
+      "meanings": [
+        "Fun-TOF = top of funnel: finds new people, judged on First Click ROAS",
+        "Fun-MOF = middle of funnel: warms people who saw us once, not yet buyers",
+        "Fun-BOF = bottom of funnel: closes people who already know us"
+      ]
+    },
+    "lp": {
+      "label": "Landing page",
+      "rule": "Where the click goes (Ridge: destination).",
+      "values": [
+        "PDP",
+        "6r-General",
+        "6r-Feather",
+        "6r-Blackout",
+        "6r-Santoku",
+        "6r-Sharpener",
+        "3r-General",
+        "7r-Blackout",
+        "Collection Page",
+        "Offer Page",
+        "BYS",
+        "VIP"
+      ],
+      "meanings": [
+        "PDP = product page",
+        "6r-General = 6 Reasons listicle, general",
+        "6r-Feather = 6 Reasons, Feather",
+        "6r-Blackout = 6 Reasons, LOKI Blackout",
+        "6r-Santoku = 6 Reasons, BJORN Santoku",
+        "6r-Sharpener = 6 Reasons, Rolling Sharpener",
+        "3r-General = 3 Reasons, general",
+        "7r-Blackout = 7 Reasons, Blackout",
+        "Collection Page = collection page",
+        "Offer Page = offer / promo page",
+        "BYS = build your set",
+        "VIP = VIP free-gift page"
+      ]
+    },
+    "angle": {
+      "label": "Messaging angle",
+      "rule": "What the ad argues. One angle per ad (Ridge: angle identifier; Motion: messaging angle).",
+      "values": [
+        "Value Offer",
+        "Craftsmanship",
+        "Scarcity",
+        "Product Proof",
+        "Social Proof",
+        "Brand Story",
+        "Identity",
+        "Collection",
+        "Upgrade",
+        "Gifting",
+        "Objection",
+        "Humor",
+        "Education",
+        "Durability"
+      ],
+      "meanings": [
+        "Value Offer = the deal is the argument (B2G2, price, gift)",
+        "Craftsmanship = hand-forged, months to make, the maker's story",
+        "Scarcity = stock, batch, deadline, last units",
+        "Product Proof = what the blade does: the cut, the weight, the grip",
+        "Social Proof = reviews, customers, sold-out counts",
+        "Brand Story = who we are, transparency, apology, behind the scenes",
+        "Identity = the kind of person who owns this (pitmaster, collector)",
+        "Collection = display, set, centerpiece, the shelf",
+        "Upgrade = your old knife vs this one",
+        "Gifting = buying it for someone else",
+        "Objection = answers a doubt: too sharp, too pretty, too expensive",
+        "Humor = the joke carries it",
+        "Education = teaches something first (hack, how-to, why)",
+        "Durability = outlasts, survives, heirloom"
+      ]
+    },
+    "hook": {
+      "label": "Hook tactic",
+      "rule": "How the headline grabs, not the words (Motion: hook tactic).",
+      "values": [
+        "Bold Claim",
+        "Question",
+        "Confession",
+        "Warning",
+        "Number",
+        "Callout",
+        "Contrarian",
+        "Story",
+        "Command"
+      ],
+      "meanings": [
+        "Bold Claim = a flat statement: 'Sharpest knife you will own'",
+        "Question = asks the reader something",
+        "Confession = we messed up / sorry / we made too many",
+        "Warning = don't buy / careful / this is not for you",
+        "Number = a stat or count leads: '3 months to forge'",
+        "Callout = names the reader: 'If you grill every weekend'",
+        "Contrarian = says the opposite of what ads say",
+        "Story = starts mid-scene: 'He hasn't touched his old set since'",
+        "Command = tells them what to do: 'Keep scrolling'"
+      ]
+    },
+    "tone": {
+      "label": "Tone",
+      "rule": "The voice of the copy.",
+      "values": [
+        "Tone-Blunt",
+        "Tone-Funny",
+        "Tone-Urgent",
+        "Tone-Warm",
+        "Tone-Serious"
+      ],
+      "meanings": [
+        "Tone-Blunt = raw, short, the real NK voice",
+        "Tone-Funny = meme, joke, wink",
+        "Tone-Urgent = deadline, last units, now",
+        "Tone-Warm = gift, family, heirloom",
+        "Tone-Serious = craft, proof, no jokes"
+      ]
+    },
+    "offer": {
+      "label": "Offer shown",
+      "rule": "The offer visible IN the ad, not the offer live on site.",
+      "values": [
+        "B2G2",
+        "B2G1",
+        "B1G1",
+        "64%OFF",
+        "56%OFF",
+        "40%+Gifts",
+        "Mystery Gift",
+        "Free Gift",
+        "NoOffer"
+      ]
+    },
+    "offerRole": {
+      "label": "Offer placement",
+      "rule": "Where the offer sits. House rule: it resolves the subject, it never IS the headline.",
+      "values": [
+        "Off-Badge",
+        "Off-Body",
+        "Off-Headline",
+        "Off-Absent"
+      ],
+      "meanings": [
+        "Off-Badge = small badge or sticker, the message is something else",
+        "Off-Body = inside the copy, after the setup",
+        "Off-Headline = the offer IS the headline (avoid; flag when you do it)",
+        "Off-Absent = no offer on the canvas"
+      ]
+    },
+    "price": {
+      "label": "Price shown",
+      "rule": "Is a price or a compared-at price visible?",
+      "values": [
+        "Prc-Shown",
+        "Prc-Hidden"
+      ],
+      "meanings": [
+        "Prc-Shown = a price or compared-at price is visible",
+        "Prc-Hidden = no number on the canvas"
+      ]
+    },
+    "proof": {
+      "label": "Proof element",
+      "rule": "Which trust device is on the canvas.",
+      "values": [
+        "Prf-None",
+        "Prf-Reviews",
+        "Prf-Stars",
+        "Prf-Count",
+        "Prf-Guarantee",
+        "Prf-Press",
+        "Prf-Maker"
+      ],
+      "meanings": [
+        "Prf-None = no trust device",
+        "Prf-Reviews = quoted review text",
+        "Prf-Stars = star rating only",
+        "Prf-Count = a number: customers, sold out X times",
+        "Prf-Guarantee = money-back / warranty (terms must be confirmed)",
+        "Prf-Press = media / as seen in",
+        "Prf-Maker = the blacksmith, the forge, the process"
+      ]
+    },
+    "copyLen": {
+      "label": "Copy length",
+      "rule": "Total words on the canvas.",
+      "values": [
+        "Len-Short",
+        "Len-Mid",
+        "Len-Long"
+      ],
+      "meanings": [
+        "Len-Short = up to 8 words",
+        "Len-Mid = 9 to 25 words",
+        "Len-Long = 26+ words (Long-Form Copy device)"
+      ]
+    },
+    "copyBy": {
+      "label": "Copy written by",
+      "rule": "Who wrote the words on the ad.",
+      "values": [
+        "Cpy-Designer",
+        "Cpy-Strategist",
+        "Cpy-Bank",
+        "Cpy-Claude"
+      ],
+      "meanings": [
+        "Cpy-Designer = designer wrote it",
+        "Cpy-Strategist = from the brief",
+        "Cpy-Bank = taken from the Notion copy bank",
+        "Cpy-Claude = AI-written, human-checked"
+      ]
+    },
+    "format": {
+      "label": "Visual format",
+      "rule": "The device the ad borrows. Pick from the Notion menu; ask before inventing a new one.",
+      "values": [
+        "Specs Table",
+        "Spinning Wheel",
+        "Media Article",
+        "Sorry Letter",
+        "Testimonials",
+        "Arcade Machine",
+        "Apple Note",
+        "Meme",
+        "Dont Buy",
+        "We Messed Up",
+        "iPhone Story",
+        "Billboard Street",
+        "Reddit",
+        "Cartoon Drawing",
+        "iPhone Popup",
+        "iMessage",
+        "INFO Style",
+        "Compared At",
+        "Email",
+        "Big Word Hero",
+        "Find Yours",
+        "Use-Case Cloud",
+        "Icon Grid",
+        "Persona Callout",
+        "Iceberg",
+        "Would You Rather",
+        "Emoji Math",
+        "Stat Stack",
+        "Money-Back Timeline",
+        "Casting Call",
+        "Search History",
+        "Story Comic",
+        "Seasonal Diorama",
+        "3D Spokesperson",
+        "Product Hero",
+        "Lifestyle Photo",
+        "Long-Form Copy",
+        "Sticky Note",
+        "Whiteboard",
+        "Annotation Overlay",
+        "Stock Bar",
+        "Us vs Them",
+        "Before After",
+        "Split Screen",
+        "Receipt",
+        "Checklist",
+        "Handwritten Note",
+        "Missing Poster",
+        "Collector Card",
+        "Membership Card",
+        "Movie Poster",
+        "Typography Poster",
+        "Retro Poster",
+        "Blueprint",
+        "Comment Reply",
+        "Google Search",
+        "ChatGPT Chat",
+        "Trustpilot",
+        "Breaking News",
+        "Native Post",
+        "Text on Skin",
+        "Venn Diagram",
+        "Myth vs Fact",
+        "Tier List",
+        "Crossed Out",
+        "X Signs",
+        "Warning Label",
+        "Zero Stars",
+        "Bundle Stack",
+        "X Reasons",
+        "Carousel Cover",
+        "Surreal Scale",
+        "Warehouse Shot",
+        "Toy Packaging"
+      ],
+      "meanings": [
+        "Specs Table = product spec sheet as the ad",
+        "Spinning Wheel = prize wheel landing on the offer",
+        "Media Article = news or magazine article mock",
+        "Sorry Letter = apology / letter from the brand (runs twice weekly)",
+        "Testimonials = review cards, stars, quotes",
+        "Arcade Machine = slot / claw / arcade cabinet",
+        "Apple Note = iPhone Notes app screenshot",
+        "Meme = borrowed meme template",
+        "Dont Buy = DON'T BUY XX pattern interrupt",
+        "We Messed Up = confession headline, overstock / mistake",
+        "iPhone Story = IG story UI with stickers",
+        "Billboard Street = ad mocked onto a street billboard",
+        "Reddit = r/ thread with upvotes and replies",
+        "Cartoon Drawing = illustrated / comic style",
+        "iPhone Popup = REMINDER / system popup on a phone",
+        "iMessage = text-message thread",
+        "INFO Style = steps + labels, minimal text",
+        "Compared At = price comparison, ours vs compared-at",
+        "Email = forwarded email / inbox screenshot",
+        "Big Word Hero = one giant word carries the frame",
+        "Find Yours = grid: which one is you",
+        "Use-Case Cloud = product in the middle, uses around it",
+        "Icon Grid = benefits as an icon grid",
+        "Persona Callout = 'for the guy who...' callout",
+        "Iceberg = what you see vs what's underneath",
+        "Would You Rather = two-choice poll",
+        "Emoji Math = emoji + emoji = product",
+        "Stat Stack = stacked numbers",
+        "Money-Back Timeline = guarantee as a timeline (blocked until terms confirmed)",
+        "Casting Call = wanted / casting poster",
+        "Search History = Google / browser search history",
+        "Story Comic = multi-panel comic strip",
+        "Seasonal Diorama = miniature scene for the season",
+        "3D Spokesperson = 3D character presents the product",
+        "Product Hero = clean product shot + headline (was 'Promotional')",
+        "Lifestyle Photo = product in a real scene, hands, grill, board",
+        "Long-Form Copy = product in a corner, real paragraph copy (NK147 device)",
+        "Sticky Note = handwritten note stuck on the product",
+        "Whiteboard = hand-drawn explanation on a board",
+        "Annotation Overlay = marker circles and arrows on a photo",
+        "Stock Bar = low-stock progress bar / inventory UI",
+        "Us vs Them = ours right, theirs left",
+        "Before After = same outcome, two moments",
+        "Split Screen = two halves, one message",
+        "Receipt = receipt / invoice mock",
+        "Checklist = ticked list next to the product",
+        "Handwritten Note = paper note, pen, not a Post-it",
+        "Missing Poster = lost / wanted poster parody",
+        "Collector Card = trading-card layout",
+        "Membership Card = club / VIP card",
+        "Movie Poster = film poster layout",
+        "Typography Poster = type-only poster",
+        "Retro Poster = vintage ad style",
+        "Blueprint = technical drawing of the knife",
+        "Comment Reply = reply to a comment / AMA",
+        "Google Search = search bar with autocomplete",
+        "ChatGPT Chat = AI chat conversation",
+        "Trustpilot = review-platform UI",
+        "Breaking News = news chyron / ticker",
+        "Native Post = looks like an organic post",
+        "Text on Skin = copy written on a hand or arm",
+        "Venn Diagram = two circles, product in the overlap",
+        "Myth vs Fact = two columns, myths struck through",
+        "Tier List = S/A/B/C ranking",
+        "Crossed Out = pains struck through in red",
+        "X Signs = '5 signs your knives are done'",
+        "Warning Label = hazard / side-effects label",
+        "Zero Stars = a bad review reframed",
+        "Bundle Stack = what's in the box, what it's worth",
+        "X Reasons = numbered reasons list",
+        "Carousel Cover = first slide of a carousel",
+        "Surreal Scale = giant knife in a real scene",
+        "Warehouse Shot = overstock / crates / shelves",
+        "Toy Packaging = knife as an action figure / toy box"
+      ]
+    },
+    "media": {
+      "label": "Image origin",
+      "rule": "How the main visual was made.",
+      "values": [
+        "Gen-AI",
+        "Gen-AIMix",
+        "Gen-Photo",
+        "Gen-3D",
+        "Gen-UI",
+        "Gen-Drawn"
+      ],
+      "meanings": [
+        "Gen-AI = main visual is AI generated",
+        "Gen-AIMix = AI visual + real product photo composited",
+        "Gen-Photo = real photograph / photoshoot",
+        "Gen-3D = 3D render",
+        "Gen-UI = device or app mock (Notes, iMessage, Reddit, search)",
+        "Gen-Drawn = illustration, cartoon, whiteboard, handwriting"
+      ]
+    },
+    "text": {
+      "label": "Text weight",
+      "rule": "How much of the ad is words.",
+      "values": [
+        "Txt-Only",
+        "Txt-Led",
+        "Txt-Light"
+      ],
+      "meanings": [
+        "Txt-Only = words are the ad, no product visual",
+        "Txt-Led = headline dominates, product supports",
+        "Txt-Light = visual leads, a line or two of copy"
+      ]
+    },
+    "compare": {
+      "label": "Comparison",
+      "rule": "Does the ad put two things side by side, and which kind?",
+      "values": [
+        "Cmp-None",
+        "Cmp-Product",
+        "Cmp-Situation",
+        "Cmp-Emotion"
+      ],
+      "meanings": [
+        "Cmp-None = no side-by-side",
+        "Cmp-Product = our knife vs theirs / vs the old one / vs our other knife",
+        "Cmp-Situation = before vs after, with vs without, then vs now",
+        "Cmp-Emotion = frustration vs relief, embarrassment vs pride"
+      ]
+    },
+    "shot": {
+      "label": "Product shot",
+      "rule": "How the knife appears (Nectar tracked product orientation the same way).",
+      "values": [
+        "Shot-Hero",
+        "Shot-InHand",
+        "Shot-InUse",
+        "Shot-Flatlay",
+        "Shot-Set",
+        "Shot-Detail",
+        "Shot-None"
+      ],
+      "meanings": [
+        "Shot-Hero = knife alone, clean, front or angled",
+        "Shot-InHand = held, not cutting",
+        "Shot-InUse = cutting, on the board, on the grill",
+        "Shot-Flatlay = top-down arrangement",
+        "Shot-Set = several knives as a set / display",
+        "Shot-Detail = macro: edge, handle, engraving",
+        "Shot-None = no product visual"
+      ]
+    },
+    "human": {
+      "label": "Person on image",
+      "rule": "Is there a person, and are they happy or reacting?",
+      "values": [
+        "Hum-Happy",
+        "Hum-Reaction",
+        "Hum-Neutral",
+        "Hum-None"
+      ],
+      "meanings": [
+        "Hum-Happy = a person visibly happy with the knife (smile, pride)",
+        "Hum-Reaction = a person reacting: shock, surprise, disbelief, laughing",
+        "Hum-Neutral = a person or hands, no expression",
+        "Hum-None = no person"
+      ]
+    },
+    "palette": {
+      "label": "Palette",
+      "rule": "Overall ground of the frame (Ridge: colorway).",
+      "values": [
+        "Pal-Dark",
+        "Pal-Light",
+        "Pal-Color",
+        "Pal-Photo"
+      ],
+      "meanings": [
+        "Pal-Dark = dark ground (black, charcoal, forge)",
+        "Pal-Light = light ground (white, paper, cream)",
+        "Pal-Color = saturated colour ground (orange, blue, red)",
+        "Pal-Photo = the photo is the ground"
+      ]
+    },
+    "fidelity": {
+      "label": "Fidelity",
+      "rule": "Polished brand look vs deliberately rough / native (HexClad: hi-fi vs lo-fi).",
+      "values": [
+        "Fid-Hi",
+        "Fid-Lo"
+      ],
+      "meanings": [
+        "Fid-Hi = polished, brand-grade",
+        "Fid-Lo = rough on purpose: native, screenshot, handwritten, meme"
+      ]
+    },
+    "category": {
+      "label": "Category",
+      "rule": "New = net-new idea. Ite = iteration of our own ad. Adapt = adapted from another brand's ad.",
+      "values": [
+        "New",
+        "Ite",
+        "Adapt"
+      ],
+      "meanings": [
+        "New = net-new idea",
+        "Ite = iteration of our own ad",
+        "Adapt = adapted from another brand (put the brand in Adapted from)"
+      ]
+    },
+    "source": {
+      "label": "Adapted from",
+      "rule": "Only when Category is Adapt. Src-Other followed by the brand name with no spaces. Src-None for New and Ite.",
+      "values": [
+        "Src-None",
+        "Src-Coolina",
+        "Src-DrSquatch",
+        "Src-Ridge",
+        "Src-VionB",
+        "Src-Emmafy",
+        "Src-HexClad",
+        "Src-Smooche",
+        "Src-Hike",
+        "Src-Hears",
+        "Src-Holo",
+        "Src-Gruns",
+        "Src-JonesRoad",
+        "Src-TrueClassic",
+        "Src-Dalstrong",
+        "Src-Huusk",
+        "Src-SimpleModern",
+        "Src-Other"
+      ]
+    },
+    "ratio": {
+      "label": "Ratio",
+      "rule": "Read from the frame size in Figma. 1x1, 4x5 or 9x16.",
+      "values": [
+        "1x1",
+        "4x5",
+        "9x16"
+      ]
+    }
+  },
+  "designerPrefixes": {
+    "Kel": "K",
+    "Zyrille": "Z",
+    "Nazmul": "N",
+    "Udi": "U",
+    "Pam": "P",
+    "Andy": "A"
+  },
+  "alias": {
+    "avatar": {
+      "MIKE - BBQ KING": "MIKE",
+      "BBQ Guy": "MIKE",
+      "Real Men": "MIKE",
+      "Husband": "MIKE",
+      "JOHN - KNIFE COLLECTOR": "JOHN",
+      "JOHN - THE KNIFE COLLECTOR": "JOHN",
+      "Collector Guy": "JOHN",
+      "STEVE - HOMECOOK": "STEVE",
+      "STEVE - CHEF / HOMECOOK": "STEVE",
+      "Homecooks": "STEVE",
+      "Chef Guy": "STEVE",
+      "Wife": "SARAH",
+      "SARAH - THE WIFE": "SARAH",
+      "Mother": "SARAH",
+      "DON - HUNTER-BUSCRAFTER": "DON",
+      "DON - HUNTER - BUSCRAFTER": "DON",
+      "DON - THE HUNTER/BUSHCRAFT": "DON",
+      "COLE - THE CAMPER-BUSHCRAFT": "COLE",
+      "COLE - THE CAMPER - BUSHCRAFT": "COLE",
+      "COLE - THE CAMPER/BUSHCRAFT": "COLE",
+      "DANA - KNIFE SHARPENER": "DANA",
+      "VANCE- The Opportunist": "VANCE",
+      "DARIEN - PROUD PARENTS": "DARIEN",
+      "General": "",
+      "Multi": "",
+      "GENERAL": "",
+      "Knife": "",
+      "Hand": ""
+    },
+    "format": {
+      "Promotional": "Product Hero",
+      "Generalist": "Product Hero",
+      "Knife Photoshoot": "Product Hero",
+      "3D Render": "Product Hero",
+      "Sorry Message": "Sorry Letter",
+      "Apology Letter + Offer": "Sorry Letter",
+      "Apology-Transparency": "Sorry Letter",
+      "Scarcity Letter": "Sorry Letter",
+      "Meme Style": "Meme",
+      "Drawing Style": "Cartoon Drawing",
+      "Cartoon Comic": "Story Comic",
+      "Reminder iPhone": "iPhone Popup",
+      "REMINDER iPhone Popup": "iPhone Popup",
+      "Fake System Popup": "iPhone Popup",
+      "Sorry / Letter": "Sorry Letter",
+      "Cartoon / Drawing": "Cartoon Drawing",
+      "DON'T BUY XX": "Dont Buy",
+      "Don't Buy": "Dont Buy",
+      "Progress-Bar Stock Indicator": "Stock Bar",
+      "Whiteboard Comparison": "Whiteboard",
+      "Hand-Drawn Annotation Overlay": "Annotation Overlay",
+      "Newspaper": "Media Article",
+      "Lifestyle Photoshoot": "Lifestyle Photo",
+      "Lifestyle": "Lifestyle Photo",
+      "Sticky Notes": "Sticky Note",
+      "Sticky-Note-on-Product Lifestyle Photo": "Sticky Note",
+      "IOS Note": "Apple Note",
+      "Notebook": "Handwritten Note",
+      "Over Stocked Warehouse": "Warehouse Shot",
+      "Warehouse Shot + Badge": "Warehouse Shot",
+      "Billboard": "Billboard Street",
+      "Billboard Mockup": "Billboard Street",
+      "Checklist + Knife + Offer": "Checklist",
+      "Product Comparison": "Us vs Them",
+      "Comparison": "Us vs Them",
+      "A.I. Conversation": "ChatGPT Chat",
+      "Review": "Testimonials",
+      "Product Blueprint": "Blueprint",
+      "Surreal Scale Visual": "Surreal Scale",
+      "Missing-Poster Parody": "Missing Poster",
+      "Comment-Reply Q&A": "Comment Reply",
+      "Native AMA Comment Q&A": "Comment Reply",
+      "Carousel Cover Slide": "Carousel Cover",
+      "Info Style": "INFO Style",
+      "Cartoon/Drawing": "Cartoon Drawing",
+      "Toy Set": "Toy Packaging",
+      "Editorial / Article Promo": "Media Article",
+      "Before & After Concept": "Before After",
+      "News Headline on Kitchen": "Breaking News",
+      "News Headline on Jungle Findings": "Breaking News",
+      "News Headline on BBQ day": "Breaking News",
+      "Kitchen Lifestyle": "Lifestyle Photo",
+      "Evergreen": "",
+      "Humor": "",
+      "Static": ""
+    },
+    "offer": {
+      "None": "NoOffer",
+      "NA": "NoOffer",
+      "40% + Free Gifts": "40%+Gifts"
+    },
+    "lp": {
+      "Listicle": "6r-General",
+      "Collection": "Collection Page",
+      "Lifestyle": "PDP",
+      "Editorial": "6r-General",
+      "Educational": "6r-General"
+    },
+    "product": {
+      "Bjorn Santoku": "BJORN Santoku",
+      "SANTOKU": "BJORN Santoku",
+      "Santoku": "BJORN Santoku",
+      "Born Santoku": "BJORN Santoku",
+      "Blackout": "LOKI Blackout",
+      "Feather Knife": "Feather",
+      "LOKI Reaper ": "LOKI Reaper",
+      "ODIN 6 Chef": "ODIN 6 Boss",
+      "ODIN 8 Chef": "ODIN 8 Boss",
+      "Odin Hybrid Cleaver": "ODIN Hybrid Cleaver",
+      "Rolling Knife Sharpener": "Rolling Sharpener",
+      "LOKI Viking": "LOKI",
+      "Loki": "LOKI",
+      "Gunnar Cleaver": "GUNNAR Cleaver",
+      "Gunnar Butcher": "GUNNAR Butcher",
+      "Gunnar Butcher XXL": "GUNNAR Butcher XXL",
+      "Multi-JOHN": "Multi",
+      "ODIN SET": "ODIN Set"
+    },
+    "angle": {
+      "VALUE OFFER": "Value Offer",
+      "Offer Value": "Value Offer",
+      "Bundle Offer": "Value Offer",
+      "Craftmanship": "Craftsmanship",
+      "Craftsmanship Listicle": "Craftsmanship",
+      "Premium Quality": "Craftsmanship",
+      "SCARCITY": "Scarcity",
+      "Late Notice": "Scarcity",
+      "Exclusivity": "Scarcity",
+      "Brand Awareness": "Brand Story",
+      "Brand Authenticity": "Brand Story",
+      "Brand Identity": "Identity",
+      "Lifestyle": "Identity",
+      "Lifestyle Promotion": "Identity",
+      "Product Focus": "Product Proof",
+      "Product Feature": "Product Proof",
+      "Product Benefit": "Product Proof",
+      "Product Launch": "Product Proof",
+      "Testimonial": "Social Proof",
+      "Objection Handling": "Objection",
+      "Collectibility": "Collection",
+      "Collection Showcase": "Collection",
+      "Ownership": "Collection",
+      "Educational": "Education",
+      "Problem / Solution": "Upgrade"
+    },
+    "category": {
+      "Iteration": "Ite",
+      "Net New": "New",
+      "Adaptation": "Adapt"
+    }
+  },
+  "banned_characters": "/ \\ : ? * \" < > | and _ inside any value",
+  "max_length": 400
+}

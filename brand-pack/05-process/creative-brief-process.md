@@ -535,6 +535,39 @@ use a separate 3-digit series.
 
 ### D.3 Naming strings
 
+> ⚠️ **Superseded from NK557 onward (2026-09-28).** The strategist supplied a new
+> convention, `nk-ad-naming`, which now lives in this repo at
+> `.claude/skills/nk-ad-naming/` — `SKILL.md` plus `vocab-video.json` and
+> `vocab-static.json` (every allowed value), and `GUIDE.md` for installing it
+> elsewhere. **Build every new name from those files**, not from the spec below,
+> which is kept only so older pages (NK556 and earlier) can still be read.
+> The names already in Notion for **NK557-NK565** were rebuilt under the new
+> convention; see `daily-ad-rewrites/naming-NK557-565.md`.
+>
+> **What changed that matters:**
+> - The name now starts `ID_VID_` and carries 29 fields, including the judgement
+>   fields the old string had nowhere to put: angle, hook tactic, structure,
+>   tone, proof, offer timing, product reveal, voice, face.
+> - **Product, avatar and landing page use the short vocabulary spellings**
+>   (`BJORN Santoku`, `MIKE`, `6r-General`) — never the long Notion property
+>   values. `Specialty` is gone from the name entirely.
+> - Hooks are `H1/H2/H3`, not `1C/2C/3C`. **The new convention has no field for
+>   the awareness letter** (§D.3.1), so that information now lives only in the
+>   brief's Variant column. Raise it with the strategist if it needs a field.
+> - Date is `MM.DD.YY` and is the **delivery** date; `Len-TBD` until the cut
+>   exists, then `Len-<seconds>`.
+>
+> **Open question for the strategist — `Category`.** The convention's own rule is
+> that `Adapt` means adapted from another brand and requires a `Src-` brand, and
+> `Src-None` is only for `New` and `Ite`. Every brief in this routine is lifted
+> from a named inspo ad, so NK557-565 were named `Adapt` with `Src-HexClad` /
+> `Src-Ridge`, which is the only way the Source field carries anything. **That is
+> deliberately different from the Notion `Category` property**, which the
+> strategist ruled stays `Net New` (see below). The two fields can legitimately
+> differ — one sorts our pipeline, the other records provenance — but if he wants
+> them to match, every name becomes `New_…_Src-None` and the Source field goes
+> dead. One word from him flips all of them.
+
 Authoritative spec, given by the strategist 2026-09-10. Underscore-joined, no
 spaces around the underscores.
 

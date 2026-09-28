@@ -1,0 +1,455 @@
+{
+  "convention": "video 2.2 (2026-09-21)",
+  "delimiter": "_",
+  "order": [
+    "id",
+    "type",
+    "concept",
+    "hook",
+    "body",
+    "product",
+    "avatar",
+    "offer",
+    "category",
+    "strategist",
+    "editor",
+    "lp",
+    "date",
+    "market",
+    "event",
+    "funnel",
+    "source",
+    "iteration",
+    "creator",
+    "angle",
+    "hookTactic",
+    "structure",
+    "tone",
+    "proof",
+    "offerTiming",
+    "productReveal",
+    "voice",
+    "face",
+    "length"
+  ],
+  "fields": {
+    "id": {
+      "label": "Creative ID",
+      "rule": "NK + 3 digits, next free number in the Evergreen Video database. Never reuse."
+    },
+    "type": {
+      "label": "Type",
+      "values": [
+        "AI-VO",
+        "UGC",
+        "Talking-Head",
+        "Mashup",
+        "AI-Cartoon",
+        "AI-Animation",
+        "ASMR",
+        "Text-Over",
+        "Static-to-Video",
+        "Green-Screen",
+        "LFC",
+        "GIF"
+      ]
+    },
+    "concept": {
+      "label": "Concept",
+      "rule": "The brief title, max 30 characters, no / \\ : ? * \" < > | or _ inside."
+    },
+    "hook": {
+      "label": "Hook",
+      "values": [
+        "H1",
+        "H2",
+        "H3",
+        "H4",
+        "H5",
+        "H6",
+        "H7",
+        "H8",
+        "H9"
+      ],
+      "rule": "One file name per row of the HOOK table in the brief. H1 = first hook row."
+    },
+    "body": {
+      "label": "Body",
+      "values": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
+      ],
+      "rule": "Which cut of the body. A = first cut. The letter moves only when the body is re-edited; hooks keep their number."
+    },
+    "product": {
+      "label": "Product",
+      "values": [
+        "Feather",
+        "BJORN Santoku",
+        "LOKI",
+        "LOKI Blackout",
+        "LOKI Reaper",
+        "LOKI Berserker",
+        "BJORN Utility",
+        "BJORN Chef",
+        "ODIN 6 Boss",
+        "ODIN 8 Boss",
+        "ODIN Hybrid Cleaver",
+        "ODIN Set",
+        "RAGNAR Butcher",
+        "RAGNAROK Rising Butcher",
+        "VALHALLA Chef",
+        "VALHALLA Butcher",
+        "Tiger Cleaver",
+        "Dragon Cleaver",
+        "GUNNAR Cleaver",
+        "GUNNAR Butcher",
+        "GUNNAR Butcher XXL",
+        "Rolling Sharpener",
+        "Magnetic Holder",
+        "Sheath",
+        "Multi"
+      ]
+    },
+    "avatar": {
+      "label": "Avatar",
+      "values": [
+        "MIKE",
+        "JOHN",
+        "STEVE",
+        "SARAH",
+        "VANCE",
+        "DON",
+        "COLE",
+        "DANA",
+        "DARIEN"
+      ],
+      "rule": "Always exactly one. Never General or Multi. Map old labels: 'MIKE- BBQ KING' -> MIKE, 'JOHN - KNIFE COLLECTOR' -> JOHN, 'VANCE- The Opportunist' -> VANCE, 'STEVE - HOMECOOK' -> STEVE, 'SARAH - THE WIFE' -> SARAH, 'DON - THE HUNTER/BUSHCRAFT' -> DON, 'COLE - THE CAMPER/BUSHCRAFT' -> COLE, 'DANA - KNIFE SHARPENER' -> DANA, 'DARIEN - PROUD PARENTS' -> DARIEN."
+    },
+    "offer": {
+      "label": "Offer shown",
+      "values": [
+        "B2G2",
+        "B2G1",
+        "B1G1",
+        "64%OFF",
+        "56%OFF",
+        "40%+Gifts",
+        "Mystery Gift",
+        "Free Gift",
+        "NoOffer"
+      ],
+      "rule": "The offer said or shown in the video, not the offer live on site."
+    },
+    "category": {
+      "label": "Category",
+      "values": [
+        "New",
+        "Ite",
+        "Adapt"
+      ],
+      "rule": "New = net-new idea. Ite = iteration of our own ad (say which kind in Iteration type). Adapt = adapted from another brand (say which in Source)."
+    },
+    "strategist": {
+      "label": "Strategist",
+      "values": [
+        "Andy",
+        "Mark",
+        "Callum",
+        "Claude",
+        "Mauro"
+      ]
+    },
+    "editor": {
+      "label": "Editor",
+      "values": [
+        "Umar",
+        "Hammad",
+        "Onyeka",
+        "Anas",
+        "Hasnain",
+        "Renniel",
+        "Naveed",
+        "Huzaifa"
+      ],
+      "rule": "The person who cuts the video. If unknown at brief time write EDITOR and let the editor replace it."
+    },
+    "lp": {
+      "label": "Landing page",
+      "values": [
+        "PDP",
+        "6r-General",
+        "6r-Feather",
+        "6r-Blackout",
+        "6r-Santoku",
+        "6r-Sharpener",
+        "3r-General",
+        "7r-Blackout",
+        "Collection Page",
+        "Offer Page",
+        "BYS",
+        "VIP"
+      ],
+      "rule": "Map old labels: '6 Reasons - General' -> 6r-General, '6 Reasons - Santoku' -> 6r-Santoku, 'Listicle' -> 6r-General."
+    },
+    "date": {
+      "label": "Date",
+      "rule": "MM.DD.YY, the delivery date. Never an Excel serial number."
+    },
+    "market": {
+      "label": "Market",
+      "values": [
+        "Mkt-US",
+        "Mkt-UK",
+        "Mkt-AU",
+        "Mkt-CA",
+        "Mkt-DE",
+        "Mkt-NL",
+        "Mkt-All"
+      ]
+    },
+    "event": {
+      "label": "Event",
+      "values": [
+        "Evergreen",
+        "Labor Day Sale",
+        "Black Friday",
+        "Cyber Monday",
+        "BFCM",
+        "Christmas",
+        "New Year",
+        "Valentines",
+        "Presidents Day",
+        "Easter",
+        "Mothers Day",
+        "Memorial Day",
+        "Fathers Day",
+        "July 4th",
+        "Prime Day",
+        "Summer Sale",
+        "Grilling Season",
+        "EOFY",
+        "Anniversary",
+        "Product Launch",
+        "Restock"
+      ]
+    },
+    "funnel": {
+      "label": "Funnel",
+      "values": [
+        "Fun-TOF",
+        "Fun-MOF",
+        "Fun-BOF"
+      ],
+      "rule": "TOF finds new people and is judged on First Click ROAS. MOF warms people who saw us once. BOF closes people who already know us."
+    },
+    "source": {
+      "label": "Source",
+      "values": [
+        "Src-None",
+        "Src-Coolina",
+        "Src-DrSquatch",
+        "Src-Ridge",
+        "Src-VionB",
+        "Src-Emmafy",
+        "Src-HexClad",
+        "Src-Smooche",
+        "Src-Hike",
+        "Src-Hears",
+        "Src-Holo",
+        "Src-Gruns",
+        "Src-JonesRoad",
+        "Src-TrueClassic",
+        "Src-Dalstrong",
+        "Src-Huusk",
+        "Src-SimpleModern",
+        "Src-Other"
+      ],
+      "rule": "Only when Category is Adapt: the brand the mechanic was adapted from. Src-Other followed by the brand name with no spaces (Src-Other-Ollie). Src-None for New and for Ite (iterations do not carry the source ID; the Category and Iteration type say it is an iteration)."
+    },
+    "iteration": {
+      "label": "Iteration type",
+      "values": [
+        "Ite-None",
+        "Ite-Hook",
+        "Ite-Body",
+        "Ite-Product",
+        "Ite-Persona",
+        "Ite-Editor",
+        "Ite-Voice",
+        "Ite-Music",
+        "Ite-Offer",
+        "Ite-Market",
+        "Ite-CTA",
+        "Ite-Length",
+        "Ite-Reskin"
+      ],
+      "rule": "Hook = new openings on a locked body. Body = same hook, new body. Product = same script, other knife. Persona = same script, other avatar. Editor = same brief cut by another editor. Voice = same cut, different voice (male to female, AI to creator). Music = same cut, different track. Offer = same cut, different offer line. Market = localised copy. CTA = only the ending changes. Length = shorter or longer cut. Reskin = same everything, new visuals. Ite-None when Category is New or Adapt."
+    },
+    "creator": {
+      "label": "Creator",
+      "values": [
+        "Cre-None",
+        "Cre-Dustin",
+        "Cre-Ryan",
+        "Cre-Kelly",
+        "Cre-Carina",
+        "Cre-Matt",
+        "Cre-Cameron",
+        "Cre-Samantha",
+        "Cre-SeanL",
+        "Cre-Amir",
+        "Cre-ZackD",
+        "Cre-Other"
+      ],
+      "rule": "The person on camera or reading the lines. Not the editor. Cre-None for AI voice with no creator."
+    },
+    "angle": {
+      "label": "Angle",
+      "values": [
+        "Value Offer",
+        "Cost Logic",
+        "Regret",
+        "Craftsmanship",
+        "Scarcity",
+        "Product Proof",
+        "Social Proof",
+        "Brand Story",
+        "Industry Truth",
+        "Identity",
+        "Relationship",
+        "Collection",
+        "Upgrade",
+        "Versatility",
+        "Gifting",
+        "Objection",
+        "Humor",
+        "Education",
+        "Durability",
+        "Pain Point",
+        "Return",
+        "Legacy"
+      ],
+      "rule": "What the ad argues, the reason to buy. One per ad. Value Offer = the deal itself. Cost Logic = the maths per use or versus what you already spend (Price Breakdown, Paying the Butcher, The Math Checks Out). Regret = a customer who paid full price warns you (Pissed Off, Not Paying Full Price, This Deal Annoyed Me). Industry Truth = the knife industry is lying to you, built to dull (Real Knife, Enemy Knife Industry, Nobody Tells You This). Relationship = the knife changes the couple or family dynamic (Save the marriage, Wife Will Make You Cook, you need a new wife). Versatility = one knife does every job and replaces the drawer (One Blade Does It All, Drawer Audit, Replace all your knives). Return = the owner cannot stop using it; the return request and the complaint is the proof (Return his knife Too big / Too good, Obsessed Husband, Kept Them All). Pain Point = the daily damage a dull knife does (What if, Wrist pain, Hunts ruined). Legacy = it outlives you and gets passed down (The Heirloom, The Will, Somebody Is Going To Inherit This); Durability is \"for life\", Legacy is \"for the next one\"."
+    },
+    "hookTactic": {
+      "label": "Hook tactic",
+      "values": [
+        "Bold Claim",
+        "Question",
+        "Confession",
+        "Warning",
+        "Number",
+        "Callout",
+        "Contrarian",
+        "Story",
+        "Command",
+        "Joke",
+        "Shock",
+        "Roast",
+        "Secret",
+        "Doubt"
+      ],
+      "rule": "How the first line grabs. One per hook row. Joke = the opening is a gag. Shock = an outrageous line. Roast = insults the viewer or the old knife. Secret = 'let me tell you something nobody says'. Doubt = opens on the doubt itself ('you think this is a scam')."
+    },
+    "structure": {
+      "label": "Structure",
+      "values": [
+        "Str-Story",
+        "Str-Listicle",
+        "Str-Apology",
+        "Str-Symptom",
+        "Str-Offer-First",
+        "Str-Testimonial",
+        "Str-Skit",
+        "Str-Dialogue",
+        "Str-Comparison",
+        "Str-Explainer",
+        "Str-Warning",
+        "Str-Reaction",
+        "Str-News",
+        "Str-Founder",
+        "Str-Tutorial",
+        "Str-ASMR",
+        "Str-Unboxing",
+        "Str-Song"
+      ],
+      "rule": "How the script is built, the shape of the story. Not the argument. Str-Song = the script is sung or set to a music video."
+    },
+    "tone": {
+      "label": "Tone",
+      "values": [
+        "Tone-Blunt",
+        "Tone-Funny",
+        "Tone-Urgent",
+        "Tone-Warm",
+        "Tone-Serious"
+      ]
+    },
+    "proof": {
+      "label": "Proof element",
+      "values": [
+        "Prf-None",
+        "Prf-Reviews",
+        "Prf-Count",
+        "Prf-Guarantee",
+        "Prf-Press",
+        "Prf-Maker",
+        "Prf-Demo"
+      ],
+      "rule": "Reviews = customer words or star rating. Count = a number (100,000 customers, sold out 15 times). Guarantee = warranty, returns. Press = media. Maker = the forge, the blacksmith, the making shown as proof of craft. Demo = the cut itself is the proof (cut test, paper slice)."
+    },
+    "offerTiming": {
+      "label": "Offer timing",
+      "values": [
+        "Off-First",
+        "Off-Mid",
+        "Off-Late",
+        "Off-Absent"
+      ],
+      "rule": "First = offer in the first 10 seconds. Mid = 40 to 70% through. Late = after 70%. House rule is Mid or Late."
+    },
+    "productReveal": {
+      "label": "Product reveal",
+      "values": [
+        "Rev-Early",
+        "Rev-Mid",
+        "Rev-Late"
+      ],
+      "rule": "Early = the knife is named in the hook. Mid = named before the halfway point. Late = named after it."
+    },
+    "voice": {
+      "label": "Voice",
+      "values": [
+        "Voice-AI-M",
+        "Voice-AI-F",
+        "Voice-Creator-M",
+        "Voice-Creator-F",
+        "Voice-None"
+      ]
+    },
+    "face": {
+      "label": "Face on camera",
+      "values": [
+        "Face-Talking",
+        "Face-Broll",
+        "Face-Hands",
+        "Face-AI",
+        "Face-None"
+      ],
+      "rule": "Talking = a person speaks to camera. Broll = a person appears in footage but nobody speaks to camera. Hands = hands only. AI = an AI person. None = product and footage only."
+    },
+    "length": {
+      "label": "Length",
+      "rule": "Len- followed by the real duration in seconds of the delivered file (Len-105). Write Len-TBD until the file exists."
+    }
+  },
+  "banned_characters": "/ \\ : ? * \" < > | and _ inside any value",
+  "max_length": 400,
+  "id_rule": "The name starts ID_VID_ : VID is written automatically after the ID, it is not a field anyone picks. It is how reporting tells video from image.",
+  "editable": "Every field can be changed by hand, including the ID, the date, the hook count, the body letter and the length. The defaults are suggestions."
+}

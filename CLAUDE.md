@@ -64,6 +64,12 @@ Full detail: `brand-pack/01-brand/product-catalog.md`. Persona docs:
   the 3 focus products above — the source pack the user uploaded also
   covers the rolling sharpener line and 4 other knife personas/products
   which are out of scope for this routine.
+- `.claude/skills/nk-ad-naming/` — **the ad naming convention** (`SKILL.md` +
+  `vocab-video.json` + `vocab-static.json`, and `GUIDE.md` for installing it
+  elsewhere). Every batch name, file name and folder name is built from these,
+  and every value comes from the vocabulary — never invent one. This supersedes
+  the naming spec in §D.3 of the process doc, which is kept only for reading
+  pages older than NK557.
 - `daily-ad-rewrites/processed-inspo-log.md` — dedup ledger. Every TrendTrack
   ad used by the daily routine gets logged here (ad id/URL, date used, which
   products it was adapted for). **Check this before picking new inspo ads**
