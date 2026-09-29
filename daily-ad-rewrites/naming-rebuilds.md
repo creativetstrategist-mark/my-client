@@ -1,6 +1,8 @@
-# NK557-565 under the nk-ad-naming convention (video 2.2)
+# Names rebuilt under the nk-ad-naming convention (video 2.2)
 
-Generated from the live briefs with `.claude/skills/nk-ad-naming/`.
+One section per brief that has been re-named. Generated from the live briefs
+with `.claude/skills/nk-ad-naming/`.
+
 `Len-TBD` until each file is delivered; then `Len-<seconds>`.
 
 ## NK557 — The Meat Slice (Feather)
@@ -204,7 +206,7 @@ NK565_VID_UGC_I Don't Work There_H3_A_LOKI Blackout_VANCE_B2G2_Adapt_Mark_Onyeka
 
 ---
 
-# Tag sheet
+# Tag sheet — NK557-565
 
 One line per judgement field, with the line from the brief that justifies it.
 Facts (product, avatar, offer, strategist, editor, landing page) come straight
@@ -297,7 +299,7 @@ from the Notion properties and are not repeated here.
 
 ---
 
-# Two things changed while naming
+# Two things changed while naming NK557-565
 
 1. **NK564's Landing Page was wrong.** It read `6 Reasons - General`, copied from
    the Feather cut. Both earlier Santoku briefs (NK558, NK561) use
@@ -305,3 +307,95 @@ from the Notion properties and are not repeated here.
 2. **The awareness letter has nowhere to go.** Our Variant codes (`1C`, `3D`)
    encode hook number *and* awareness band; the new convention's hook field is
    `H1/H2/H3` only. The letter now survives only in the brief's Variant column.
+
+
+---
+
+# NK533 — Is This A Scam (Rolling Sharpener)
+
+Not part of the daily routine — a sharpener brief by another strategist,
+re-named on request 2026-09-29. Status was already *Assigned to Editor*, so
+**only the naming was touched; no copy was changed.**
+
+**Folder name**
+
+```
+NK533_Is This A Scam_UGC_Rolling Sharpener
+```
+
+**Batch name**
+
+```
+NK533_VID_UGC_Is This A Scam_H1_A_Rolling Sharpener_DANA_40%+Gifts_New_Mark_Hammad_PDP_09.25.26_Mkt-All_Evergreen_Fun-MOF_Src-None_Ite-None_Cre-Ryan_Objection_Confession_Str-Testimonial_Tone-Blunt_Prf-Demo_Off-Late_Rev-Early_Voice-Creator-M_Face-Talking_Len-TBD
+```
+
+**File names**
+
+```
+NK533_VID_UGC_Is This A Scam_H1_A_Rolling Sharpener_DANA_40%+Gifts_New_Mark_Hammad_PDP_09.25.26_Mkt-All_Evergreen_Fun-MOF_Src-None_Ite-None_Cre-Ryan_Objection_Confession_Str-Testimonial_Tone-Blunt_Prf-Demo_Off-Late_Rev-Early_Voice-Creator-M_Face-Talking_Len-TBD
+NK533_VID_UGC_Is This A Scam_H2_A_Rolling Sharpener_DANA_40%+Gifts_New_Mark_Hammad_PDP_09.25.26_Mkt-All_Evergreen_Fun-MOF_Src-None_Ite-None_Cre-Ryan_Objection_Doubt_Str-Testimonial_Tone-Blunt_Prf-Demo_Off-Late_Rev-Early_Voice-Creator-M_Face-Talking_Len-TBD
+NK533_VID_UGC_Is This A Scam_H3_A_Rolling Sharpener_DANA_40%+Gifts_New_Mark_Hammad_PDP_09.25.26_Mkt-All_Evergreen_Fun-MOF_Src-None_Ite-None_Cre-Ryan_Objection_Story_Str-Testimonial_Tone-Blunt_Prf-Demo_Off-Late_Rev-Early_Voice-Creator-M_Face-Talking_Len-TBD
+```
+
+## What was broken in the old name
+
+The old name was malformed against the *old* spec as well as the new one:
+
+1. **A banned character.** `Is This A Scam?` carried a `?` — on the banned list
+   in both vocabularies. Stripped.
+2. **The offer was not a vocabulary value.** `40% + FREE GIFT` is not an option;
+   the value is `40%+Gifts`, and the Notion property already read
+   `40% + Free Gifts`.
+3. **The product was not a vocabulary value.** `Knife Sharpener` is neither the
+   Notion value (`Rolling Knife Sharpener`) nor the vocabulary one
+   (`Rolling Sharpener`).
+4. **The strategist disagreed with the database.** The name said `Andy`; the
+   Notion `Strategist` property says `Mark`. The property wins — **flagged, not
+   assumed.**
+5. **The folder name used the wrong field.** It ended `_Generalist_Knife
+   Sharpener` — Specialty, where even the old spec calls for Content.
+6. **Batch and file names disagreed.** The batch name carried no date; the file
+   names carried `092526` and an out-of-position `VID`.
+7. **The Concept Name property was wrapped in asterisks** —
+   `*Is This A Scam? Sharpener -Ryan*` — markdown that had leaked into the
+   property and would contaminate anything generated from it. Stripped; the
+   title itself is unchanged.
+8. **Two empty rows** sit at the bottom of the file-naming table. Left alone —
+   cosmetic, and not worth risking the table structure over.
+
+## Tag sheet
+
+- **Concept `Is This A Scam`**: the product and the creator now have their own
+  fields (`Rolling Sharpener`, `Cre-Ryan`), so both drop out of the concept —
+  that is what the extra fields are for. Nothing is lost.
+- **Type `UGC`, Creator `Cre-Ryan`**: the Content property reads `UGC - Ryan`;
+  the convention splits those into two fields.
+- **Category `New` + `Src-None`**: the AD INSPO block is an empty video embed and
+  no source brand is named anywhere. **A genuine `New`**, unlike NK557-565.
+- **Funnel `Fun-MOF`**: "I've been seeing this rolling sharpener in my feed for
+  months" and "Everyone in the comments keeps asking" — this is written for
+  someone who has already seen the product repeatedly, not for a cold viewer.
+- **Angle `Objection`**: the whole ad answers one doubt — "It's not a scam."
+- **Structure `Str-Testimonial`**: a sceptic's own verdict, bought to be
+  disproved. (`Str-Unboxing` is the near miss — the middle third is the box and
+  the disc rundown — but the verdict frame is the spine.)
+- **Proof `Prf-Demo`**: "Same knife. Same tomato it just crushed. Now it's a
+  razor." The cut is the evidence.
+- **Offer timing `Off-Late`**: "40% off right now + two free discs" is the last
+  beat of 11.
+- **Product reveal `Rev-Early`**: named in hook H2, "this rolling sharpener".
+- **Tone `Tone-Blunt`**: "Don't trust me. Don't trust the ad."
+- **Face `Face-Talking`**: "All VO from talking head."
+- **Hook tactics**: H1 `Confession` — "I thought this was... Turned out I was
+  wrong"; H2 `Doubt` — the vocabulary's own example is "you think this is a
+  scam"; H3 `Story` — "I almost didn't buy this... Then I opened the box."
+
+## Open on this one
+
+- **Landing page.** The Notion `Landing Page` property is **empty**; the old name
+  asserted `PDP`. Carried `PDP` forward rather than inventing one — **the Notion
+  property should be set to match.**
+- **Market `Mkt-All`.** Nothing in the script is localised and no currency is
+  stated, so `Mkt-All` is the honest read, but it was never specified.
+- **Voice `Voice-Creator-M`.** Ryan is a real creator; the gender of the read is
+  not something the brief states. Confirm, or switch to `Voice-Creator-F`.

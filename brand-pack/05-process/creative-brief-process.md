@@ -542,7 +542,7 @@ use a separate 3-digit series.
 > elsewhere. **Build every new name from those files**, not from the spec below,
 > which is kept only so older pages (NK556 and earlier) can still be read.
 > The names already in Notion for **NK557-NK565** were rebuilt under the new
-> convention; see `daily-ad-rewrites/naming-NK557-565.md`.
+> convention; see `daily-ad-rewrites/naming-rebuilds.md`.
 >
 > **What changed that matters:**
 > - The name now starts `ID_VID_` and carries 29 fields, including the judgement
