@@ -399,3 +399,87 @@ The old name was malformed against the *old* spec as well as the new one:
   stated, so `Mkt-All` is the honest read, but it was never specified.
 - **Voice `Voice-Creator-M`.** Ryan is a real creator; the gender of the read is
   not something the brief states. Confirm, or switch to `Voice-Creator-F`.
+
+---
+
+# NK534 — I Ignored This For A Year (Rolling Sharpener)
+
+Sibling of NK533 — same product, avatar, creator and batch, different editor
+(Umar). Already *Assigned to Editor*, so **only the naming was touched.**
+
+**Folder name**
+
+```
+NK534_I Ignored This For A Year_UGC_Rolling Sharpener
+```
+
+**Batch name**
+
+```
+NK534_VID_UGC_I Ignored This For A Year_H1_A_Rolling Sharpener_DANA_NoOffer_New_Mark_Umar_PDP_09.25.26_Mkt-All_Evergreen_Fun-MOF_Src-None_Ite-None_Cre-Ryan_Product Proof_Shock_Str-Apology_Tone-Blunt_Prf-Guarantee_Off-Absent_Rev-Early_Voice-Creator-M_Face-Talking_Len-TBD
+```
+
+**File names**
+
+```
+NK534_VID_UGC_I Ignored This For A Year_H1_A_Rolling Sharpener_DANA_NoOffer_New_Mark_Umar_PDP_09.25.26_Mkt-All_Evergreen_Fun-MOF_Src-None_Ite-None_Cre-Ryan_Product Proof_Shock_Str-Apology_Tone-Blunt_Prf-Guarantee_Off-Absent_Rev-Early_Voice-Creator-M_Face-Talking_Len-TBD
+NK534_VID_UGC_I Ignored This For A Year_H2_A_Rolling Sharpener_DANA_NoOffer_New_Mark_Umar_PDP_09.25.26_Mkt-All_Evergreen_Fun-MOF_Src-None_Ite-None_Cre-Ryan_Product Proof_Bold Claim_Str-Apology_Tone-Blunt_Prf-Guarantee_Off-Absent_Rev-Early_Voice-Creator-M_Face-Talking_Len-TBD
+NK534_VID_UGC_I Ignored This For A Year_H3_A_Rolling Sharpener_DANA_NoOffer_New_Mark_Umar_PDP_09.25.26_Mkt-All_Evergreen_Fun-MOF_Src-None_Ite-None_Cre-Ryan_Product Proof_Shock_Str-Apology_Tone-Blunt_Prf-Guarantee_Off-Absent_Rev-Early_Voice-Creator-M_Face-Talking_Len-TBD
+```
+
+## What was broken in the old name
+
+**Every defect NK533 had, identically** — `40% + FREE GIFT` instead of a
+vocabulary offer, `Knife Sharpener` instead of `Rolling Sharpener`, `Andy`
+where the Notion `Strategist` property says `Mark`, a folder name built from
+Specialty instead of Content, a batch name with no date against file names
+carrying `092526`, `VID` in the wrong position, two empty rows in the table,
+and the `Concept Name` property wrapped in stray asterisks. Same fixes.
+
+It had no banned character — NK533's was the `?`. The concept here lost
+`Sharpener - Ryan` instead, which the `product` and `creator` fields now carry.
+
+## Tag sheet
+
+- **Angle `Product Proof`**: the body is entirely feature-then-outcome —
+  "smooth rolling action that sharpens evenly without chipping", "Sharpening a
+  knife used to be a chore. Now it's five minutes at the counter."
+- **Structure `Str-Apology`**: the device is named in the hook itself —
+  "NorthernKnife owes me an apology" — and the body is the grievance list
+  flipping into praise ("All of that — totally true").
+- **Proof `Prf-Guarantee`**: "a 30-day money-back guarantee, a lifetime
+  warranty". **There is no demo and no count anywhere** — which is the real
+  difference from NK533, where the tomato test carries it.
+- **Product reveal `Rev-Early`**: named in the hook, every variant.
+- **Funnel `Fun-MOF`**: "They said it was going to be safe for all my knives"
+  presupposes someone who has already seen the claims.
+- **Tone `Tone-Blunt`**: flat and declarative throughout. The hook *device* is a
+  gag, so `Tone-Funny` is the defensible alternative — but the field is the
+  voice of the copy, and this copy is deadpan.
+- **Face `Face-Talking`**: "Talking head" on most rows.
+- **Hook tactics**: H1 `Shock` — "NorthernKnife lied about their rolling
+  sharpener"; H2 `Bold Claim` — "owes me an apology"; H3 `Shock` — "scammed me".
+
+## Two things that are not naming problems
+
+1. **The script states no offer.** The Notion `Offer` property reads
+   `40% + Free Gifts`, but the CTA is only "fast shipping, a 30-day money-back
+   guarantee, a lifetime warranty — get yours now." The convention's rule is
+   explicit — the offer field is *what is said or shown in the video* — so the
+   name carries **`NoOffer` and `Off-Absent`**. Its sibling NK533 does state
+   "40% off right now + two free discs", so **this one looks like it is missing
+   its offer beat.** One line in the CTA fixes it, and the name then becomes
+   `40%+Gifts` / `Off-Late`.
+2. **The concept name does not match the script.** Nothing in the copy says, or
+   implies, that anyone ignored anything for a year — the hooks are all
+   accusations. Left as the strategist wrote it.
+
+Also worth noting: the three hooks are one sentence with the verb swapped
+(lied / owes me an apology / scammed me), which is why two of the three tag as
+the same tactic. That is a creative observation, not a naming fault.
+
+## Open on this one
+
+Same three as NK533, for the same reasons: the **Landing Page** property is
+empty while the name asserts `PDP`; the **market** was never specified; and the
+gender of **Ryan's read** is not something the brief states.
