@@ -483,3 +483,92 @@ the same tactic. That is a creative observation, not a naming fault.
 Same three as NK533, for the same reasons: the **Landing Page** property is
 empty while the name asserts `PDP`; the **market** was never specified; and the
 gender of **Ryan's read** is not something the brief states.
+
+---
+
+# NK531 — Paid Full Price (Rolling Sharpener)
+
+Third of the sharpener batch — same product and avatar as NK533/534, but
+creator **Dustin**, editor Hammad, and *Ready for visuals*. **Only the naming
+was touched.**
+
+**Folder name**
+
+```
+NK531_Paid Full Price_UGC_Rolling Sharpener
+```
+
+**Batch name**
+
+```
+NK531_VID_UGC_Paid Full Price_H1_A_Rolling Sharpener_DANA_40%+Gifts_New_Mark_Hammad_PDP_10.03.26_Mkt-All_Evergreen_Fun-TOF_Src-None_Ite-None_Cre-Dustin_Regret_Shock_Str-Tutorial_Tone-Blunt_Prf-Demo_Off-Mid_Rev-Mid_Voice-Creator-M_Face-Talking_Len-TBD
+```
+
+**File names**
+
+```
+NK531_VID_UGC_Paid Full Price_H1_A_Rolling Sharpener_DANA_40%+Gifts_New_Mark_Hammad_PDP_10.03.26_Mkt-All_Evergreen_Fun-TOF_Src-None_Ite-None_Cre-Dustin_Regret_Shock_Str-Tutorial_Tone-Blunt_Prf-Demo_Off-Mid_Rev-Mid_Voice-Creator-M_Face-Talking_Len-TBD
+NK531_VID_UGC_Paid Full Price_H2_A_Rolling Sharpener_DANA_40%+Gifts_New_Mark_Hammad_PDP_10.03.26_Mkt-All_Evergreen_Fun-TOF_Src-None_Ite-None_Cre-Dustin_Regret_Contrarian_Str-Tutorial_Tone-Blunt_Prf-Demo_Off-Mid_Rev-Mid_Voice-Creator-M_Face-Talking_Len-TBD
+NK531_VID_UGC_Paid Full Price_H3_A_Rolling Sharpener_DANA_40%+Gifts_New_Mark_Hammad_PDP_10.03.26_Mkt-All_Evergreen_Fun-TOF_Src-None_Ite-None_Cre-Dustin_Regret_Bold Claim_Str-Tutorial_Tone-Blunt_Prf-Demo_Off-Mid_Rev-Mid_Voice-Creator-M_Face-Talking_Len-TBD
+```
+
+## What was broken in the old name
+
+Most of the batch's defects, with two exceptions:
+
+- `40% + FREE GIFT` and `Knife Sharpener` — neither a vocabulary value.
+- `Andy` where the Notion `Strategist` property says `Mark`. **Same conflict on
+  all three sharpener briefs**, so it looks like a template default rather than
+  a one-off slip.
+- Folder name built from **Specialty** where the spec calls for Content.
+- Batch name carried **no date**; the file names carried `100326`.
+- `VID` in the wrong position, and the variant codes were `1D/2D/3D`.
+- Two empty rows at the bottom of the file-naming table (left alone).
+
+**Not broken here:** the `Concept Name` property has no stray asterisks, unlike
+NK533 and NK534. And **this script does state its offer**, so unlike NK534 the
+offer fields are real.
+
+## Tag sheet
+
+- **Angle `Regret`**: the vocabulary defines this value as "a customer who paid
+  full price warns you (Pissed Off, Not Paying Full Price, This Deal Annoyed
+  Me)" — which is this ad exactly. "I paid full price for mine, and now you're
+  running 40% off… Learn from me."
+- **Structure `Str-Tutorial`**: the middle is second-person instruction —
+  "You clip the blade onto the magnetic support… Roll it a few times… Flip the
+  knife… then you swap the discs" — bracketed by the paper test before and
+  after. **`Str-Apology` is the near miss** (the grievance frames and closes
+  it), but `angle: Regret` already carries the grievance; using it here too
+  would double up and lose the demo, which is most of the runtime.
+- **Proof `Prf-Demo`**: "The same knife I couldn't cut paper with is now
+  slicing it like a razor." A before/after the viewer judges.
+- **Offer timing `Off-Mid`**: the 40% reveal is body beat 10 of 16, ~62% —
+  which lands inside the house rule on its own.
+- **Product reveal `Rev-Mid`**: "I bought the Rolling Knife Sharpener last
+  week" is body beat 1; the hooks name the brand, not the product.
+- **Funnel `Fun-TOF`** — **and this is a real difference from its two
+  siblings.** NK533 and NK534 presuppose exposure ("seeing this in my feed for
+  months", "they said"); this one builds from scratch, demos, and closes on
+  volume proof and the guarantee. That is cold-traffic shape.
+- **Tone `Tone-Blunt`**: profanity and insult throughout, including
+  "don't be a dummy like I was".
+- **Hook tactics** — unlike NK534's, these three genuinely differ:
+  H1 `Shock` — the opening line; H2 `Contrarian` — "it's not even about the
+  product" subverts the complaint it just set up; H3 `Bold Claim` — "You
+  genuinely screwed me over."
+
+## Open on this one
+
+- **Landing Page** property is empty while the name asserts `PDP`; **market**
+  was never specified; **voice gender** for Dustin's read is not stated. Same
+  three as NK533/534.
+- **Worth the strategist's eye, not a naming matter:** H1's super is explicit
+  ("NorthernKnife you can suck my balls"). The brand voice notes sanction
+  *mild* profanity where the delivery carries it, and on the opportunist
+  persona specifically — this runs on DANA and is supered on screen, so it is
+  the hook most exposed to platform review.
+- All three sharpener briefs carry disc grits and sharpening angles (`#400`,
+  `#1000`, `#6000`, `#10000`, `15°`, `20°`) in copy. On the knife line that
+  register is banned by §C.1; whether the sharpener is exempt is the
+  strategist's call, and nothing was changed.
