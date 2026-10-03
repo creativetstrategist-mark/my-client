@@ -572,3 +572,81 @@ offer fields are real.
   `#1000`, `#6000`, `#10000`, `15°`, `20°`) in copy. On the knife line that
   register is banned by §C.1; whether the sharpener is exempt is the
   strategist's call, and nothing was changed.
+
+---
+
+# NK532 — I Hate This Thing (Rolling Sharpener)
+
+Fourth and last of the sharpener batch — same product, avatar, creator (Dustin)
+and editor (Hammad) as NK531. **Only the naming was touched.**
+
+**Folder name**
+
+```
+NK532_I Hate This Thing_UGC_Rolling Sharpener
+```
+
+**Batch name**
+
+```
+NK532_VID_UGC_I Hate This Thing_H1_A_Rolling Sharpener_DANA_40%+Gifts_New_Mark_Hammad_PDP_10.03.26_Mkt-All_Evergreen_Fun-TOF_Src-None_Ite-None_Cre-Dustin_Return_Contrarian_Str-Story_Tone-Funny_Prf-Demo_Off-Late_Rev-Early_Voice-Creator-M_Face-Talking_Len-TBD
+```
+
+**File names**
+
+```
+NK532_VID_UGC_I Hate This Thing_H1_A_Rolling Sharpener_DANA_40%+Gifts_New_Mark_Hammad_PDP_10.03.26_Mkt-All_Evergreen_Fun-TOF_Src-None_Ite-None_Cre-Dustin_Return_Contrarian_Str-Story_Tone-Funny_Prf-Demo_Off-Late_Rev-Early_Voice-Creator-M_Face-Talking_Len-TBD
+NK532_VID_UGC_I Hate This Thing_H2_A_Rolling Sharpener_DANA_40%+Gifts_New_Mark_Hammad_PDP_10.03.26_Mkt-All_Evergreen_Fun-TOF_Src-None_Ite-None_Cre-Dustin_Return_Joke_Str-Story_Tone-Funny_Prf-Demo_Off-Late_Rev-Early_Voice-Creator-M_Face-Talking_Len-TBD
+NK532_VID_UGC_I Hate This Thing_H3_A_Rolling Sharpener_DANA_40%+Gifts_New_Mark_Hammad_PDP_10.03.26_Mkt-All_Evergreen_Fun-TOF_Src-None_Ite-None_Cre-Dustin_Return_Warning_Str-Story_Tone-Funny_Prf-Demo_Off-Late_Rev-Early_Voice-Creator-M_Face-Talking_Len-TBD
+```
+
+## What was broken in the old name
+
+The full batch set: `40% + FREE GIFT` and `Knife Sharpener` (neither a
+vocabulary value), `Andy` where the Notion `Strategist` property says `Mark`,
+a folder name built from Specialty where the spec calls for Content, a batch
+name with no date against file names carrying `100326`, `VID` in the wrong
+position, `1D/2D/3D` variant codes, two empty rows (left alone), and the
+`Concept Name` property wrapped in stray asterisks (stripped; title unchanged).
+
+**`Andy` now confirmed on all four sharpener briefs** — NK531, NK532, NK533 and
+NK534. That is a template default, not four separate slips, and it is worth
+fixing wherever the template lives.
+
+## Tag sheet
+
+- **Angle `Return`**: the vocabulary defines this as "the owner cannot stop
+  using it; the return request and the complaint is the proof (Return his knife
+  Too big / Too good, Obsessed Husband, Kept Them All)". This script is that
+  verbatim — "I bought it fully expecting to return it", then every knife in the
+  house twice, his wife's paring knife, his mum's whole block, and a thrift-store
+  knife bought purely to have something left to sharpen.
+- **Structure `Str-Story`**: an escalating personal narrative. "Here's where my
+  life ended" is the hinge, and three anecdotes climb from there. **This is what
+  separates it from NK531**, whose middle is second-person instruction
+  (`Str-Tutorial`); here the disc rundown is first-person narration inside a
+  story.
+- **Tone `Tone-Funny`**: unambiguous, unlike the rest of the batch — "Before you
+  guys try to peel them off and resell them to make rent… You cannot
+  Wolf-of-Wall-Street this thing. I checked."
+- **Proof `Prf-Demo`**: the paper test, split-screen before and after.
+- **Offer timing `Off-Late`**: the 40% line is body beat 11 of 12.
+- **Product reveal `Rev-Early`**: hooks 2 and 3 both name the rolling sharpener.
+- **Funnel `Fun-TOF`**: "This thing claims it can take any blunt knife to razor
+  sharp in five minutes with zero skill" explains the product from nothing.
+  Same as NK531, unlike NK533/534.
+- **Hook tactics** — three genuinely distinct: H1 `Contrarian`, "one of the worst
+  things that's ever happened to me" is the opposite of what an ad says; H2
+  `Joke`, "owes me my life back"; H3 `Warning`, "Don't buy this rolling
+  sharpener. Seriously. I'm begging you" — which is the vocabulary's own
+  definition of that tactic.
+
+## Open on this one
+
+- Same three as the rest of the batch: empty **Landing Page** property against a
+  `PDP` in the name, unspecified **market**, and the gender of **Dustin's read**.
+- **One claim worth verifying, not a naming matter:** "Real diamonds. But
+  lab-grown diamonds… they're bonded to the surface. I checked." That is a
+  factual materials claim about the product, stated twice, and the script
+  asserts it has been checked. If it is not confirmed, it is the line on this
+  page most exposed.
