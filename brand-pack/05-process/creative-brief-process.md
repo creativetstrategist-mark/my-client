@@ -498,6 +498,16 @@ Page icon: **📽️** — every page in the database uses it.
    | The Meat Slice (NK557-559) | Blackout (NK559) |
    | Is It Worth It (NK560-) | Feather (NK560) |
    | I Don't Work There (NK563-565) | **Santoku (NK564)** |
+   | Wish You Had Two (NK579-) | **— see the load exception below** |
+
+   ⚠️ **Load exception, 2026-10-07.** The strategist: *"Hammad and Umar had
+   more task this week so you can assign to other editor."* **Rule 4 is suspended
+   while that holds** — a concept may ship with no brief to Hammad, and Umar is
+   off rotation too. This is a capacity call, not a change to the rule: when the
+   week clears, Hammad resumes taking one brief per concept and the product
+   rotation above picks up where it left off (his last was the Santoku on NK564).
+   **Do not read this as Hammad being paused the way Renniel is** — nobody said
+   that, and third-party assignments to him are unaffected.
 
    Keep that table current when a concept ships — it is the only place the
    rotation is visible, and without it the Feather wins by default every time.
