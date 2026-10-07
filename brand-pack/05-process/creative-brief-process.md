@@ -68,6 +68,27 @@ See C.6.
 > "We had a customer send back his LOKI Viking yesterday. Not because it was
 > bad — because our timing was."
 
+**Two ways to build the set of three.** Both are valid; the strategist decides,
+and on NK579 (2026-10-07) he asked for the second.
+
+1. **Three different tactics** — each hook attacks from a different direction
+   (a claim, a question, a confession). The default on most concepts in this
+   routine. Each row gets its own `hookTactic` in the file name.
+2. **One claim, three phrasings** — 2C and 3C are rewordings of 1C. **The test
+   then isolates wording rather than mechanism**, which is the point of doing it
+   this way. All three rows carry the **same** `hookTactic`.
+
+When building a variation set, **vary the angle of attack, not just the words**:
+on NK579 the three are product-forward ("the knife that replaces everything else
+in that drawer"), finality ("the last knife that drawer needs") and consequence
+("everything else in that drawer just became optional"). **Give each its own
+visual execution too**, or the edit opens three times on the same shot.
+
+This does not license three near-identical lines with one word swapped — see
+NK534, whose hooks are one sentence with the verb changed (lied / owes me an
+apology / scammed me), which is why two of its three tag as the same tactic by
+accident rather than by design.
+
 ### C.3 The offer resolves the subject, it never replaces it
 
 - Whatever the hook raises, the body pays off **before** any offer appears.
