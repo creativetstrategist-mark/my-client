@@ -97,6 +97,31 @@ See C.6.
 B2G2 beats B2G1 by ~48% on video (1.84 vs 1.24), which is the performance
 reason behind the standing rule above.
 
+### C.3.0 Say the offer by its name, in numerals
+
+Ruled by the strategist 2026-10-07, on NK579. The offer beat had read
+*"Buy two and four turn up. Any four in the store…"* and was corrected to
+**"Buy 2, get 2 free. 4 knives for the price of 2."**
+
+- **Name the mechanic, do not paraphrase it.** The line is **Buy 2, get 2 free** —
+  not "buy two and four turn up", not "two paid for, four at the door", not any
+  other restatement. Those readings describe the offer without ever saying it.
+- **Numerals, always** — `2`, `4`, `3`. Per §C.4.1, and the offer name is
+  canonically numeric anyway (the Notion property is `B2G2`).
+- **"4 knives for the price of 2" is permitted and is the preferred second
+  clause.** It is a **unit** comparison, not a currency one, so it does not
+  breach §C.3.2 — no figure, no symbol, no percentage. **Never convert it:** not
+  to money, not to a saving, not to a percentage off.
+- Keep whatever clause carries the *choice* — "any 4 in the store", "the other 3
+  don't have to be this one". On several adaptations that clause is doing real
+  work, standing in for a range or sizing beat the source had and we do not.
+
+⚠️ **Known inconsistency, not yet swept.** The paraphrased, spelled-out form was
+written into **NK563, NK564 and NK565** ("you buy two and four arrive", "Two go
+in, four turn up", "Buy two and four turn up"). Those pages predate this ruling
+and are wrong on both counts — paraphrase and spelled-out numbers. They have not
+been corrected; raise it with the strategist rather than assuming.
+
 ### C.3.1 JOHN is eligible for aggressively offer-led concepts
 
 **Ruled by the strategist 2026-09-22.** When a concept is **aggressively
