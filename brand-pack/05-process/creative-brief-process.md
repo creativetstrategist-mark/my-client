@@ -291,6 +291,27 @@ Two constraints on who can appear:
   tang".** It is **not** full tang; the claim is Feather-only. Either leave the
   Tiger Cleaver out of that brief or drop the full-tang line from the close.
 
+### C.5.2 Name the product before the feature stack
+
+Ruled by the strategist 2026-10-07, on NK579: a body that opens on the problem
+and then goes straight into **"hand-forged high-carbon steel, one blade at a
+time"** is missing a beat. **Put a short Product Intro in front of the first
+feature block.**
+
+- **One line is the whole beat.** `This is the Feather Knife, from Northern
+  Knife.` — as on NK557-559. It names the thing and hands off. Two lines slows
+  a listicle and starts competing with the features that follow.
+- **It goes before the first Features block, not necessarily first in the body.**
+  A dismissal triad, a problem statement or a hook payoff can still open; the
+  rule is only that nothing describes the steel, the tang or the handle before
+  the viewer has been told what they are looking at.
+- **The inspo ad often has no such beat** — product listicles frequently cut
+  straight from the claim to the specs. That is not a licence to drop it; it is
+  a house addition, and the adaptation adds it.
+- Watch the knock-on: adding a beat moves `productReveal` in the file name, and
+  pushes the runtime. Re-check both — a concept at \~66 seconds can cross
+  Onyeka's 72-second cap once a beat is added.
+
 ### C.6 Where the persona docs are wrong
 
 `What's Worked YTD 2026` §9 states the standing rule directly: the persona
