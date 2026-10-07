@@ -137,11 +137,27 @@ Ruled by the strategist 2026-10-07, on NK579. The offer beat had read
   don't have to be this one". On several adaptations that clause is doing real
   work, standing in for a range or sizing beat the source had and we do not.
 
-⚠️ **Known inconsistency, not yet swept.** The paraphrased, spelled-out form was
-written into **NK563, NK564 and NK565** ("you buy two and four arrive", "Two go
-in, four turn up", "Buy two and four turn up"). Those pages predate this ruling
-and are wrong on both counts — paraphrase and spelled-out numbers. They have not
-been corrected; raise it with the strategist rather than assuming.
+✅ **NK563-565 are deliberately left alone. Ruled 2026-10-07 — do not re-raise.**
+Those three carry the old paraphrased, spelled-out form ("you buy two and four
+arrive", "Two go in, four turn up", "Buy two and four turn up"), which is wrong
+on both counts. They are **not** being corrected, because by the time the rule
+was made all three were **`Uploaded on Drive` with Frame.io delivery links** —
+cut and delivered. Editing the copy would have left each brief disagreeing with
+the asset that actually shipped. **The brief is the record of what was produced**,
+so it stands. §C.3.0 governs from NK579 onward, which was written correctly.
+
+**The general rule this establishes.** Before sweeping a copy correction across
+older briefs, **check `Status` first**:
+
+- `Ready for visuals` / `Assigned to Editor` → safe to edit; nothing has been cut.
+- `Uploaded on Drive`, or any status with a **Delivery Link** → **do not edit the
+  copy.** The page is a production record, not a brief. Editors also strip the
+  Note columns and replace the visual cells with Frame.io links at that point,
+  which is a second signal you are looking at a shipped asset.
+- Want the line fixed in the ads that actually run? That is an **iteration, not an
+  edit** — Category `Ite` with `Ite-Offer` ("same cut, different offer line"),
+  which the vocabulary has a value for precisely because this happens. It costs a
+  VO re-record, so it is the strategist's call, never an assumption.
 
 ### C.3.1 JOHN is eligible for aggressively offer-led concepts
 
