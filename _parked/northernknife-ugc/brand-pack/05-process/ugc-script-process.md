@@ -1,329 +1,333 @@
 # UGC Script Process — authoritative spec
 
-> ⚠️ **Superseded in part.** This doc was written from the `chopper` skill
-> and the `my-client` copy rulebook, before the live Notion pages were read.
-> `observed-notion-structure.md` (2026-10-08) records what Notion actually
-> does and lists where this doc is wrong — including the Feather pattern rule,
-> where this doc scripts a line the live brief forbids. **Read that first and
-> let it win on any conflict.**
+This repo **feeds the Gen 2 system**: the `UGC Creator Library` in Notion and
+its `🎬 Creator Script Library`. The output of this process is a **script row
+in that database**, not a standalone document.
 
-This is the authoritative document for how a NorthernKnife UGC script is
-written, formatted, and checked. If `CLAUDE.md` and this doc disagree on a
-*brand fact*, CLAUDE.md wins. On *format and process*, this doc wins.
+Read `observed-notion-structure.md` alongside this. That file is the field
+record of how the live pages look; this file is how we write into them.
 
-Sections: **A** inputs · **B** intake · **C** copy & voice rulebook ·
-**D** the deliverable, block by block · **E** creative direction & b-roll ·
-**F** pre-flight gate · **G** delivery · **H** drift log.
+Sections: **A** the unit of work · **B** script identity · **C** the page body
+· **D** database properties · **E** b-roll packages · **F** copy rulebook ·
+**G** pre-flight · **H** delivery · **I** known breakage.
 
 ---
 
-## Section A — Inputs
+## Section A — The unit of work
 
-A script batch needs five things. Four come from the brief, one from this repo.
+**One script = one row.** Not a batch, not a pair of scripts.
 
-1. **Persona** — one of JOHN, MIKE, SARAH, VANCE (`brand-pack/02-personas/`).
-2. **Product** — one of the 3 focus products (`brand-pack/01-brand/product-catalog.md`).
-3. **Moment** — the occasion the ad runs against (Father's Day, BFCM, a drop,
-   grilling season, evergreen).
-4. **Offer** — one real offer only: **B2G2**, **B1G1**, or a **% tier**.
-   Never invent one. If the brief has no offer, write the batch with no offer
-   section rather than inventing a placeholder.
-5. **Dedup check** — read `ugc-scripts/processed-concept-log.md` and confirm
-   this persona × product × moment × angle hasn't just shipped.
+A script row carries a **long form** and a **short form** of the *same*
+script, plus **three hooks** for the edit to choose between. The short form is
+a compressed cut of the long one — same argument, same order, fewer words. It
+is not a second creative idea.
 
-If a reference ad / inspo script is supplied, **only its mechanic transfers**
-(hook type, beat order, pacing). Every line is written fresh. See Section F.2.
+Two scripts is the **per-creator-per-shoot-day limit**, not the unit of
+production: *"Never send one creator more than two scripts for a single shoot
+day. Two long forms plus their short cuts plus the b-roll package is already a
+full day."*
 
----
-
-## Section B — Intake
-
-Ask these six before writing. If the user has already answered some in the
-request, don't re-ask — confirm them back in the brief (Section B.2).
-
-1. **Persona** — who is this talking to, and are they buying for themselves
-   or someone else?
-2. **Product** — which of the three, and is there a specific variant/drop?
-3. **Moment** — what occasion or deadline is this running against?
-4. **Offer** — which real offer, and does it have an end date?
-5. **Angle** — what's the one argument? (gifting, comparison, functional
-   benefit, identity, transformation, social proof, problem-solution,
-   curiosity, authority, scarcity/urgency)
-6. **Shoot context** — who's the creator, where can they shoot, do they
-   actually own the product, and can they film a kitchen/grill/outdoor
-   location?
-
-### B.1 — Verify before writing
-
-Before a single line, re-read the product's hard rules in
-`01-brand/product-catalog.md`. The three that get violated most:
-
-- Feather Knife pattern is **laser-applied** — not hand-etched, not
-  hand-finished, not engraved.
-- BJORN Santoku — the word **"Japanese" never appears**, and neither does any
-  nod to Japanese origin, tradition, or technique.
-- LOKI bottle opener is in the **handle** — not the blade, not the spine.
-
-### B.2 — Confirm the brief
-
-Play back a 5-line brief (persona / product / moment / offer / angle) and get
-a yes before writing. Cheaper than rewriting two scripts.
+The holiday matrix is **6 formats × 4 products = 24 rows**. Scaling happens by
+filling cells in that matrix, not by writing variants inside one page.
 
 ---
 
-## Section C — Copy & voice rulebook
+## Section B — Script identity
 
-### C.1 — Banned spec-sheet jargon, and what to say instead
+### Script ID
 
-Never: alloy codes, HRC/Rockwell numbers, "edge retention", "blade geometry",
-"full tang construction" as a phrase, "ergonomic", mm or gram specs, "premium
-craftsmanship", "precision-engineered".
+Stable, and **never renumbered** — creators put it in filenames.
 
-Say the **plain material + the consequence**:
+- Campaign scripts: `<CAMPAIGN>-<FORMAT>-<PRODUCT>` → `XM-GT-FTH`,
+  `XM-MAD-BLK`, `XM-OB-BJO`
+- Verbatim iterations: `ITER-<SOURCE AD>-<PRODUCT>` → `ITER-R2B8-BLK`,
+  `ITER-R7B8-FTH`
 
-| Don't say | Say |
+Observed codes — format: `GT` Gift Testimonial · `OB` Obsessed Listicle ·
+`WG` Worst Christmas Gift · `GR` Gift Reveal POV · `LM` Last-Minute Gift ·
+`MAD` I am Mad. Product: `LOKI` · `BLK` Blackout · `FTH` Feather ·
+`BJO` BJORN Santoku.
+
+### Page title
+
+`<Format name without its number> · <Product>` → `Gift Testimonial · Feather`.
+The `Script` title property carries the same string.
+
+### Source winner
+
+Free text naming the proven ad and its real numbers, e.g. *"NORTH_R2B8 V4.
+$118,539, ROAS 1.99, 2,121 purchases. Highest-spend ad in the 365-day
+dataset."* **Never invent a figure here.** If the number isn't known, name the
+ad and say the spend is unknown.
+
+---
+
+## Section C — The page body
+
+Five H2 sections, in this exact order, and nothing else.
+
+```markdown
+## Hooks
+Shoot all three. We pick in the edit.
+**H1** <line>
+**H2** <line>
+**H3** <line>
+
+## Long form
+<prose paragraphs>
+
+## Short form
+<prose, roughly a third the length>
+
+## B-roll package
+- KNF-XM63 Talking head, tree behind
+- KNF-PS05 Blade macro pass (evergreen library)
+
+## Filming notes
+- <rules for this script>
+```
+
+Hard format rules, all taken from the live pages:
+
+- Hooks are **bold `**H1**` labels in prose**. Not a table. The literal line
+  *"Shoot all three. We pick in the edit."* sits under the heading.
+- Long form and short form are **plain prose with no visual column**. Visuals
+  live in the b-roll package. Do not build a beat table.
+- Long form runs ~9 short paragraphs; short form ~4 lines.
+- B-roll package is a **bullet list of `<SHOT ID> <shot title>`**, pulled from
+  the library. Add a parenthetical only to flag provenance, e.g.
+  `(evergreen library)`.
+- Filming notes are **bullets**, and carry the hard "never" guards for this
+  product.
+
+### What the long form does
+
+Observed on `XM-GT-FTH`, which adapts the highest-spend ad in the dataset:
+
+1. Open on the hook line, extended by one beat.
+2. Name the product and the circumstance.
+3. Concede the doubt, then answer it with a demonstration.
+4. Plain materials, one sentence. *"High-carbon steel, hand-forged, rosewood
+   handle."*
+5. **The offer.** ~55–60% in.
+6. Proof stack: customers, warranty, money back, shipping.
+7. CTA.
+8. Close on the cost of waiting.
+
+---
+
+## Section D — Database properties
+
+Set every one of these. Values are the live enumerations — do not invent new
+options, and do not use an option the schema does not list.
+
+| Property | Values |
 |---|---|
-| "1095 high-carbon, 58 HRC" | "hand-forged high-carbon steel" |
-| "excellent edge retention" | "holds that edge" / "still bites after a season of briskets" |
-| "optimised blade geometry" | describe what it *does* — "falls through an onion" |
-| "180mm blade, 240g" | "full-size" / "you feel the weight of it" |
-| "ergonomic handle" | "it fits your hand" |
-| "premium craftsmanship" | name the actual material — rosewood, ebony, brass |
-| "precision-applied pattern" | "the pattern's laser-applied, dead clean every time" |
+| `Script ID` | per Section B. Never renumber |
+| `Script` | title, per Section B |
+| `Status` | Ready to assign → Assigned → Filming → Delivered → Live → Retired |
+| `Status 1` | Idea · Rejected · In progress · Assigned to creator · Needs revisions · Script Approved · Uploaded to Drive |
+| `Format` | 1 Gift Testimonial · 2 Obsessed Listicle · 3 Worst Christmas Gift · 4 Gift Reveal POV · 5 Last-Minute Gift · 6 I am Mad · 7 Straight Announcement · Scamming you · Comparison · Trying the viral knife · Do NOT buy this · Story telling |
+| `Product` | LOKI Viking · LOKI Blackout · Feather · BJORN Santoku · RAGNAR Tiger Cleaver · ODIN · Multi / Lineup |
+| `Avatar` | SARAH · MIKE · VANCE · JOHN · STEVE · DARIEN |
+| `Cast` | Solo man · Solo woman · Couple · Hands only |
+| `Lengths` | Long + Short · Long only · Short only |
+| `Offer` | B2G2 · None in script |
+| `Mode` | Verbatim iteration · Adapted · From your UGC Script Library |
+| `Campaign` | Holiday Sale 2026 · Evergreen (multi) |
+| `Wave` | W1 Early Access - live Nov 6 · W2 - live Nov 20 · W3 Christmas Delivery - live Dec 2 |
+| `Markets` | US · UK · AU · CA · DE (multi) |
+| `Landing page` | 6 Reasons - General · Gift Guide |
+| `Source winner` | free text, per Section B |
+| `B-roll IDs` | flat text list — see Section E |
+| `B-roll shots` | relation into `Knives — B-Roll Library` |
+| `Creator`, `Delivery link`, `Sort` | filled at assignment and delivery |
 
-**Any claim not already in `01-brand/product-catalog.md` has to be verified
-before it goes in a script.** The substitution table shows *phrasing*, not
-licence to assert a new product fact.
+### Format → Avatar → Cast
 
-### C.2 — Voice, spoken
+**The avatar follows the format, not the product.** This is the single thing
+most likely to be got wrong, because it is the opposite of how the
+ad-rewriting routine in `my-client` works.
 
-- Contractions always. "It's", "you're", "I've".
-- One idea per sentence. If there are two, it's two sentences.
-- Second person for the benefit, first person for the proof. "You feel it the
-  first time you use it" / "I've been using mine since spring."
-- No ad-voice openers: "introducing", "look no further", "say goodbye to",
-  "game-changer", "obsessed".
-- Read it out loud. A line that needs a second breath gets cut in half.
-
-### C.3 — Hook patterns (starting points, never templates)
-
-Three hooks per script, same message, different door in. Pick patterns that
-suit the persona:
-
-- **Cold open on the object** — the knife is in frame before a word is said.
-- **Problem callout** — name the annoyance the persona already has.
-- **Contrarian** — argue against the obvious take.
-- **Gift panic** — the deadline is the hook (SARAH).
-- **Collector's tell** — speak to the person who already owns four (JOHN).
-- **Price reveal held back** — set up the value, land the number late.
-- **Demonstration first** — the cut happens, then the words.
-
-The three hooks must be **genuinely different doors**, not three rewordings.
-If swapping hook 1 for hook 2 wouldn't change who stops scrolling, rewrite.
-
-### C.4 — Offer rules
-
-- The offer **resolves** the subject the hook raised. It never replaces it.
-- It lands **~60–80% through**, never first, never last.
-- **2–4 more beats follow it** — payoff, proof, or CTA. The offer is not the
-  last thing said.
-- Only **B2G2**, **B1G1**, or the **% tiers** exist. Never invent an offer,
-  a discount code, a free-shipping threshold, or a deadline.
-- **Never reuse the identical offer paragraph** across the two scripts in a
-  batch, or across product versions of one concept. Same offer, different
-  words, every time.
-
-### C.5 — Per-product voice notes
-
-- **Feather Knife** — collector register. Limited drop and ~3-month restock
-  are the scarcity, and they're *true*, so say them plainly. Rosewood is the
-  sensory detail. The pattern is laser-applied and that's a *feature* —
-  consistency, not a compromise. Never imply hand work on the pattern.
-- **BJORN Series Santoku** — Norse register. Norse engravings, dragon-sculpted
-  brass bolster, hand-carved wooden handle. Talk about the shape by what it
-  does on a board, never by where the shape comes from. Zero Japanese
-  references, direct or oblique.
-- **LOKI Blackout Edition** — grill and gift register. All-black remake of the
-  #1-selling LOKI. High-carbon steel, ebony handle, bottle opener in the
-  **handle**, black box with a magnetic closure. $79.90. The box is the gift
-  beat; the opener is the party beat.
-
----
-
-## Section D — The deliverable, block by block
-
-One batch = **two scripts** sharing one message, one angle, and one b-roll
-list, with **three hooks each**. Delivered as markdown, in this order.
-
-### D0 — Batch header
-
-```
-# <Product> × <PERSONA> — <Moment>
-**Angle:** <one of the angle names>
-**Offer:** <B2G2 | B1G1 | X% tier | none>
-**Message (shared):** <one sentence both scripts prove>
-**Creator:** <name or archetype>  ·  **Runtime target:** 30–45s
-```
-
-### D1 — Script block (×2)
-
-Each script is a table so it pastes into Notion and a shot list cleanly.
-
-```
-## Script 1 — <short label>
-
-### Hooks (pick one at shoot)
-| # | Hook line | Pattern | On-screen caption |
-|---|---|---|---|
-| A | | | |
-| B | | | |
-| C | | | |
-
-### Body
-| Beat | Spoken line | What's on screen |
+| Format | Avatar | Cast |
 |---|---|---|
-| 1 | | |
-| 2 | | |
-| … | | |
+| 1 Gift Testimonial | MIKE | Solo man |
+| 2 Obsessed Listicle | SARAH | Solo woman |
+| 3 Worst Christmas Gift | SARAH | Solo woman |
+| 4 Gift Reveal POV | MIKE | Solo man |
+| 5 Last-Minute Gift | SARAH | Solo woman |
+| 6 I am Mad | VANCE | Solo man |
 
-### CTA
-| Spoken line | On-screen caption |
-|---|---|
-| | |
-```
+Every one of the four products runs through every one of those formats. The
+holiday wave puts **Feather in front of MIKE, SARAH and VANCE**, and uses
+**JOHN for none of it**. Do not re-derive an avatar from the product.
 
-Rules for the table:
-- **Spoken line** is what the creator says, verbatim, as they'd say it.
-- **What's on screen** is one concrete shot, not a mood. "Blade through a
-  tomato, close" not "beauty shots".
-- Body runs **6–10 beats**. The offer sits in the 60–80% band with 2–4 beats
-  after it.
-- Captions are optional per row and never add a claim the line doesn't make.
-
-### D2 — Building-blocks tagging
-
-Tag each script against the Ad Building Blocks framework (the `brook` skill)
-so the batch is comparable to the ad briefs in `my-client`:
-
-```
-**Structure:** Hook → Body → CTA
-**Product blocks:** <Intro / Demo / Features / Buying Experience / Unboxing>
-**Person blocks:** <Problem Statement / Failed Alternative / Desired Result /
-Before & After / Social Proof / Storytelling>
-```
-
-### D3 — Shared creative direction
-
-One block for the whole batch. See Section E.1 for the fields.
-
-### D4 — Shared b-roll
-
-Exactly **8 clips**, shared by both scripts. See Section E.2.
-
-### D5 — Pre-flight
-
-The completed Section F checklist, ticked, at the bottom of the file. A batch
-without it isn't delivered.
+Casting at assignment: a solo man takes Formats 1, 4 and 6; a solo woman takes
+2, 3 and 5; a couple can take any of them plus the Couple-cast b-roll.
 
 ---
 
-## Section E — Creative direction & b-roll
+## Section E — B-roll packages
 
-### E.1 — Creative direction block (iPhone only)
+The b-roll library is the source of truth for shots. This process **selects
+from it and never writes into it**.
 
-Fill every field. One person, one iPhone, no kit.
+- **Never mint a shot ID.** Query `Knives — B-Roll Library`
+  (`collection://ca66767d-35ce-4318-9c3d-84398122de68`) and use IDs that come
+  back. See Section I — the existing rows cite IDs that no longer resolve.
+- **Check the row is live.** A fetched page flagged `deleted` is archived; an
+  archived shot is not a shot. SQL over the collection returns only live rows,
+  so prefer a query over trusting an ID you read somewhere.
+- **ID grammar is `KNF-<CODE><NN>`** and the code is *historical, not derived
+  from the category*. Live codes: `ACT` · `BF` · `CT` · `CUT` · `DM` · `GF` ·
+  `OF` · `PROD` · `PS` · `RX` · `SK` · `XM`. Both `CUT` and `DM` sit under
+  Cutting Demos; both `PROD` and `PS` under Product & Packaging; `XM` spans
+  four categories. Sharpener shots use `SHP-`.
+- **Package size** runs 12–25 shots, mixing campaign and evergreen.
+- **Fill both fields.** `B-roll IDs` is free text for reading; `B-roll shots`
+  is the relation that makes the Pipeline board honest. They must agree.
+- **Shot properties to respect when selecting:** Priority (P1 must-have / P2 /
+  P3), Cast (Hands only / Solo / Couple / No cast), Funnel (Hook / Problem /
+  Proof / Payoff / CTA), Category (8), Block (A Set dressing → B Wrapping →
+  C Reveal → D Cooking → E Offer → F Skits → G A-Roll), Campaign, `Knives`
+  (23 options, `All knives` means no re-shoot needed), `Andy Approved`.
+- **Skip Couple shots for a solo creator.** Cast on the shot has to be
+  compatible with the creator.
 
-```
-**Locations:**        <2–3, named and realistic for this creator>
-**Time of day:**      <for the light>
-**Lighting:**         <window / open shade / overhead off — name it>
-**Framing:**          <handheld chest-height, vertical 9:16, eye-line to lens>
-**Wardrobe:**         <plain, nothing branded, nothing busy>
-**Audio:**            <quiet room, phone mic at arm's length, no music under VO>
-**Props:**            <what's on the board — real food, real board>
-**Performance note:** <pace, energy, where to slow down>
-**Do not:**           <gimbal, second operator, ring light, zooms, filters>
-```
+### Shoot-order constraint
 
-### E.2 — The 8 shared b-roll clips
+Holiday blocks run **A → B → C, then D–G in any order**. Block B wraps **TWO
+boxes**, one to open on camera and one sealed for pickups. Same sweater, same
+light, same tree through B and C or the reveal will not cut together.
 
-Numbered, 2–4 seconds each, every one shootable on the same phone in the same
-session. A usable spread:
-
-1. Product reveal — out of the box / out of the block.
-2. Material close-up — the named material (rosewood / ebony / brass).
-3. The signature detail — pattern, engraving, or bolster, tight.
-4. The cut — the knife doing its actual job, close.
-5. Hand on handle — scale and grip.
-6. The second use — grill, board, or the bottle opener in the handle.
-7. Context wide — the knife in the room it lives in.
-8. Pack-out / gift beat — the box, the magnetic closure, the hand-off.
-
-Swap items to suit the product, but keep **8**, and keep at least one cut
-clip and one material clip. For LOKI, clip 6 is the **handle** opener — frame
-it so the handle is unmistakably the opener.
+> **The wrapped box is a one-way door.**
 
 ---
 
-## Section F — Pre-flight gate
+## Section F — Copy rulebook
 
-Run every line before delivery. A failed check is a rewrite, not a note.
+### F.1 — Product guards (these go in Filming notes)
 
-**F.1 — Hard rules**
-- [ ] Feather Knife: pattern described as laser-applied; no hand-etched /
-      hand-finished / engraved anywhere, spoken or captioned.
-- [ ] BJORN: the word "Japanese" appears nowhere; no oblique nod to Japanese
-      origin or tradition.
-- [ ] LOKI: bottle opener attributed to the **handle**; price $79.90 if priced.
-- [ ] Feather Knife price $99.90 if priced.
+- **Feather — never describe how the pattern got onto the blade.** Not etched,
+  not hand-finished, not engraved, **and not laser-applied**. *"It is simply
+  there."* This supersedes the `my-client` rule, which says to call it
+  laser-applied; saying that on camera is a violation. The pattern is still
+  the hero of the visuals — it just never gets a process word.
+- **BJORN Santoku — the word "Japanese" never appears**, nor any nod to
+  Japanese origin, tradition or technique. Describe the shape by what it does
+  on a board. This extends to styling: no kanji packaging, no sushi plating.
+- **LOKI Blackout — the bottle opener is in the handle.** $79.90.
+- **Feather — $99.90**, ~500 a drop, ~3 months to restock. Hedge both numbers
+  for speech: "around five hundred at a time", "about three months".
+- **Never name a specific delivery cutoff date on camera.** "Before
+  Christmas" only.
+- **Only the offer in the `Offer` property exists** — B2G2, or none. Never
+  invent an offer, a code, a shipping threshold or a deadline.
+
+### F.2 — Voice
+
+The live register is **much blunter than a brand doc would suggest**. Shipped
+hooks include "SON OF A B\*TCH" and "WTF is wrong with you?". Write to the
+creator's mouth, not to a brand guideline.
+
+- Contractions always. One idea per sentence. Read every line out loud.
+- Plain material + the consequence. Never a spec sheet: no alloy codes, no
+  HRC/Rockwell, no "edge retention", no "blade geometry", no mm or grams.
+  The Gen 2 scripts get this right — *"High-carbon steel, hand-forged,
+  rosewood handle"* — and the Gen 1 briefs got it badly wrong.
+- No ad-voice: no "introducing", "look no further", "game-changer".
+- Never script a claim the creator can't personally stand behind.
+
+### F.3 — Offer placement
+
+The offer **resolves** what the hook raised. In Gift Testimonial it lands
+~55–60% through with proof and CTA after it.
+
+**But offer-first is a sanctioned format.** `6 I am Mad` puts the offer in the
+hook — *"Buy 2, get 2 free. This deal PISSES me off."* Follow the format, not
+a global rule.
+
+Never reuse the identical offer paragraph across the products of one format.
+
+### F.4 — Social proof
+
+The approved figure has drifted and the archive contradicts itself: "over a
+thousand five-star reviews", "over a 100,000 thousands reviews" (garbled), and
+currently "a hundred thousand customers" alongside lifetime warranty, 30-day
+money back and free shipping. **Confirm the current figure before using it.**
+
+### F.5 — Originality
+
+Mechanic transfers, words never do. `Mode` says how far that goes:
+`Verbatim iteration` keeps the source ad's structure line-for-line in shape;
+`Adapted` rebuilds it for a new product or avatar. Either way no sentence is
+copied from the source ad, from an approved script, or between the products of
+one format.
+
+---
+
+## Section G — Pre-flight
+
+- [ ] Five sections, in order, nothing else.
+- [ ] Hooks as `**H1**`/`**H2**`/`**H3**` prose with the "shoot all three" line.
+- [ ] Three hooks are three different doors in.
+- [ ] Short form is a cut of the long form, not a second idea.
+- [ ] Offer matches the `Offer` property, and is placed as the format requires.
+- [ ] Feather: no process word for the pattern, laser-applied included.
+- [ ] BJORN: no "Japanese", spoken, captioned or styled.
+- [ ] LOKI: opener in the handle.
+- [ ] No specific delivery date on camera.
+- [ ] No spec-sheet jargon; no invented claim, offer or figure.
 - [ ] Every product claim traces to `01-brand/product-catalog.md`.
-
-**F.2 — Originality**
-- [ ] No verbatim line from any reference ad, approved script, or earlier
-      batch — including beats that do the same job.
-- [ ] The two scripts in this batch are not rewordings of each other.
-- [ ] The three hooks per script are three different doors in.
-- [ ] The offer paragraph differs between script 1 and script 2.
-
-**F.3 — Copy rules**
-- [ ] No banned jargon (Section C.1). No numbers that are specs.
-- [ ] Offer lands 60–80% through, with 2–4 beats after it.
-- [ ] The offer resolves what the hook raised.
-- [ ] The offer is real (B2G2 / B1G1 / % tier) and nothing was invented.
-
-**F.4 — UGC-specific**
-- [ ] Every line read out loud and sayable in one breath.
-- [ ] No claim the creator can't personally stand behind.
-- [ ] No caption asserting something the spoken line doesn't.
-- [ ] Shootable on one iPhone, one person, in the named locations.
-- [ ] 8 b-roll clips, all shootable in the same session.
-
-**F.5 — Housekeeping**
-- [ ] Concept logged in `ugc-scripts/processed-concept-log.md`.
-- [ ] File named `YYYY-MM-DD-<product>-<persona>-<moment>.md`.
+- [ ] **Every b-roll ID resolves to a live, non-archived library row.**
+- [ ] `B-roll IDs` text and `B-roll shots` relation agree.
+- [ ] Shot Cast is compatible with the creator's cast.
+- [ ] Avatar and Cast follow the **format**, per Section D.
+- [ ] Every property in Section D is set.
+- [ ] `Source winner` cites a real ad; no invented spend.
 
 ---
 
-## Section G — Delivery
+## Section H — Delivery
 
-1. Write the batch to `ugc-scripts/` from `_template.md`.
-2. Append the row to `ugc-scripts/processed-concept-log.md`.
-3. Commit and push both.
-4. If the user wants Notion delivery too: one page per script in the agreed
-   database, matching the existing page structure and properties exactly.
-   **If the Notion connector isn't available in a run, say so explicitly**
-   rather than silently skipping delivery.
+1. Write the script into the `🎬 Creator Script Library` as a new row, with
+   the Section C body and every Section D property. `Status` starts at
+   **Ready to assign**.
+2. Link the b-roll package in both fields.
+3. Mirror the markdown into `ugc-scripts/<SCRIPT-ID>.md` in this repo and
+   commit, so the script is reviewable in git and survives a Notion edit.
+4. Assignment (done by a person, not this routine): filter the Wave → match
+   cast → set `Creator`, flip `Status` to Assigned, and flip the b-roll rows
+   too → send three links: the script page, the campaign b-roll view, and the
+   filming rules in `briefs/ugc-broll-library/README.md`.
+5. On delivery, flip `Status` to Delivered and name files with the
+   `nk-ad-naming` skill.
+
+**If the Notion connector isn't available in a run, say so explicitly** rather
+than silently skipping delivery. A script that exists only in this repo has
+not been delivered.
 
 ---
 
-## Section H — Drift log
+## Section I — Known breakage, as of 2026-10-08
 
-The `my-client` process doc has a documented history of drifting from the live
-Notion template (its Section C.7). Same risk here: Andy edits live faster than
-docs get updated. **Before a batch, check the most recent file in
-`ugc-scripts/` and any live Notion example** — if the real format has moved,
-follow the real format and note the drift here.
+Two things are wrong in the live system. Work around them; don't copy them.
 
-| Date | What changed | Where |
-|---|---|---|
-| 2026-10-03 | Doc created. Format derived from the `chopper` skill (2 scripts / 3 hooks / shared direction / 8 b-roll) + the `my-client` copy rulebook. Not yet validated against a live Andy-approved UGC batch. | — |
+1. **Most b-roll references on existing script rows are dead.** The library
+   page advertises 66 Christmas shots `KNF-XM01`–`KNF-XM66`, added 2026-10-05.
+   Only **9 `KNF-XM*` rows are live**; the rest are archived. Of the 15 IDs
+   cited by `XM-GT-FTH`, **only `KNF-XM12` resolves** — `KNF-PS05`,
+   `KNF-XM63`, `KNF-XM64` and 11 others are archived. The relation still
+   points at them, so it resolves to archived pages and looks healthy.
+   `B-roll IDs` is free text and nothing validated it.
+   → **Re-resolve any package before a creator is sent it.**
+2. **The library is mid-migration to "Trybe packs."** 102 live rows; 29 are
+   assigned to `Include in:` packs (Trybe Holiday Pack of 15/10/5, Trybe Pack
+   of 15/10/5) and 73 are unassigned. A sibling page is titled *"(merged into
+   Trybe B-Roll Packs, safe to delete)"*. The XM numbering appears to have
+   been superseded by curated packs drawn from the main library.
+   → **Don't build new packages on `KNF-XM*` numbering.** Select from live
+   rows and prefer the Trybe pack membership where a pack fits.
+
+Neither is this repo's to fix unilaterally — both are Andy's call. Flag them
+rather than silently re-pointing 24 script rows.

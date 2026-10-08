@@ -1,115 +1,116 @@
 # NorthernKnife — UGC Scripting
 
-This repo powers UGC script production: take a persona + product + moment +
-offer, and produce creator-ready **talking-head scripts** with iPhone-only
-shoot direction and a shared b-roll list.
+This repo **feeds the Gen 2 system**: the `UGC Creator Library` in Notion and
+its `🎬 Creator Script Library`. Scripts written here land as **rows in that
+database**. This repo is the drafting and review surface; Notion is where
+creators are assigned and work is tracked.
 
 Brand: NorthernKnife (https://northernknife.com/) — hand-forged,
 Viking-inspired knives.
 
 Sibling repo: `my-client` (daily TrendTrack → Notion video-brief routine).
-Same brand, same copy rulebook, **different deliverable** — that repo writes
-ad briefs for an editor, this one writes words a real person says to a phone
-camera. Don't cross-paste output between the two.
+Same brand, **different deliverable and a different rulebook**. Do not carry
+`my-client`'s format or persona logic over here — see "Where my-client is
+wrong for UGC" below.
 
-## Read this first
+## Read this first, in order
 
-`brand-pack/START-HERE.md` is the entry point to the creative reference
-library (brand voice, personas, creator direction, approved scripts, and the
-exact UGC deliverable spec). Read it before writing any script.
+1. `brand-pack/05-process/ugc-script-process.md` — **authoritative.** The
+   unit of work, Script IDs, the five-section page body, every database
+   property, b-roll selection, the copy rulebook, pre-flight, delivery, and
+   the live breakage to work around.
+2. `brand-pack/05-process/observed-notion-structure.md` — field record of how
+   the live Notion pages actually look, both generations.
+3. `brand-pack/05-process/notion-integration.md` — the collection URLs and
+   page IDs to read and write.
+4. `brand-pack/01-brand/product-catalog.md` — the only claims you may make.
 
-**The single most important file is
-`brand-pack/05-process/ugc-script-process.md`.** Section D defines the *exact*
-script deliverable block by block. Section C is the copy-voice rulebook
-(banned spec-sheet jargon, hook patterns, offer rules). Section E is the
-creative-direction + b-roll spec. Section F is the pre-flight gate — run it
-on every script before delivery.
+## The unit of work
 
-The house UGC format in this workspace is the `chopper` skill (creative
-director / UGC scriptwriter: 2 scripts sharing one message and angle, 3 hooks
-each, shared creative direction, 8 shared b-roll clips). Section D is written
-to match it. When `chopper` and this doc disagree on *format*, follow
-`chopper`; when they disagree on *brand facts or copy rules*, this repo wins.
+**One script = one row** in the Creator Script Library, carrying a long form
+and a short form of the *same* script plus three hooks for the edit.
 
-## The 3 focus products
+Not a batch. Not two different scripts. Two scripts is the
+**per-creator-per-shoot-day limit**. Scaling happens by filling cells in the
+format × product matrix (the holiday wave is 6 × 4 = 24 rows), never by
+stacking variants inside one page.
 
-Only these three — do not substitute other catalog items unless the user
-explicitly asks:
+## The three guards that get violated
 
-| Product | Hard rules (never violate) |
+- **Feather — never describe how the pattern got onto the blade.** Not
+  etched, not hand-finished, not engraved, **and not laser-applied**. The live
+  rule is that it is simply there. The pattern stays the hero of the visuals;
+  it just never gets a process word.
+- **BJORN Santoku — the word "Japanese" never appears**, nor any nod to
+  Japanese origin, tradition or technique, spoken, captioned or styled (no
+  kanji packaging, no sushi plating).
+- **LOKI Blackout — the bottle opener is in the handle**, not the blade or
+  spine.
+
+A creator saying one of these out loud is worse than a brief containing it:
+it ships in their voice and can't be fixed in post.
+
+## Where `my-client` is wrong for UGC
+
+`my-client/CLAUDE.md` is the ad-rewriting rulebook. Four of its rules do not
+hold here, and following them produces output the live system rejects:
+
+| `my-client` says | UGC reality |
 |---|---|
-| **Feather Knife** | $99.90. Rosewood handle. Blade pattern is **laser-applied** — never say hand-etched, hand-finished, or engraved. ~500-unit limited drops, ~3-month restock. Persona fit: **JOHN** (collector). |
-| **BJORN Series Santoku** | Norse engravings on blade, dragon-sculpted **brass** bolster, hand-carved wooden handle. **Never reference Japanese origins or use the word "Japanese"** — santoku is a Japanese-origin knife shape but the brand never says so. Persona fit: **JOHN**. |
-| **LOKI Blackout Edition** | $79.90. High-carbon steel, ebony handle, bottle opener built into the **handle** (not the blade/spine). Ships in a black branded box with magnetic closure. All-black remake of the #1-selling LOKI Viking Knife. Persona fit: **MIKE** (BBQ/grill self-buyer), **SARAH** (gift framing), general/deal-led for **VANCE**. |
+| Feather pattern is **laser-applied**; say so | **Say nothing** about how the pattern got there |
+| Persona maps to product (JOHN → Feather/BJORN) | **Avatar follows the format.** Feather runs past MIKE, SARAH and VANCE; JOHN appears in none of the holiday wave |
+| Offer lands 60–80% through, never first | True of Gift Testimonial; **`6 I am Mad` puts the offer in the hook** |
+| 3 focus products, 4 personas | **7 products and 6 avatars** in the live script schema; 23 knives in the b-roll library |
 
-Full detail: `brand-pack/01-brand/product-catalog.md`. Persona docs:
-`brand-pack/02-personas/`.
+What *does* carry over: no spec-sheet jargon, plain material plus the
+consequence, only real offers, and the mechanic-transfers-but-never-the-words
+rule.
 
-**A creator saying a hard rule out loud is still a violation.** "Hand-etched"
-in a talking-head line is worse than in a brief, because it ships in the
-creator's own voice and can't be edited out in post.
+## Live scope
 
-## Universal copy rules (apply to every script, every product)
+- **Script `Product`** (7): LOKI Viking · LOKI Blackout · Feather ·
+  BJORN Santoku · RAGNAR Tiger Cleaver · ODIN · Multi / Lineup
+- **`Avatar`** (6): SARAH · MIKE · VANCE · JOHN · STEVE · DARIEN
+- **`Format`** (12), **`Wave`** (3), **`Markets`** (5) — enumerated in the
+  process doc, Section D. Never invent an option the schema doesn't list.
+- The b-roll library's `Knives` property carries **23 options** mirroring
+  every live knife on the site as of 2026-10-06.
 
-Same rulebook as `my-client` — these do not relax for UGC.
+## B-roll
 
-- **No spec-sheet jargon, ever**: no alloy codes, HRC/Rockwell numbers,
-  "edge retention," "blade geometry," mm/gram specs. Say the plain material
-  + the consequence ("hand-forged high-carbon steel… holds that edge").
-  Full banned list and substitution table: process doc Section C.1.
-- **The mechanic transfers, the words never do.** If a reference ad or an
-  earlier script is the starting point, take its structure (hook type,
-  pacing, beat order) — every sentence gets rewritten fresh. No verbatim
-  source language, not even for an identical beat.
-- **The offer resolves the subject, never replaces it.** Whatever the hook
-  raises, the body must pay off *before* any offer appears. Offer lands
-  ~60–80% through, never first/last, followed by 2–4 more beats. Only real
-  offers exist: B2G2, B1G1, the % tiers — never invent one.
-- **Never reuse the identical offer paragraph** across the scripts in one
-  batch, or across product versions of the same concept.
+Select from the library; **never mint a shot ID**. Query
+`Knives — B-Roll Library` and use what comes back — and check the row is
+live, because a fetched page flagged `deleted` is archived and an archived
+shot is not a shot.
 
-## UGC-specific rules (on top of the above)
-
-- **It has to be sayable.** Read every line out loud. If it needs a second
-  breath, a comma the speaker won't hear, or a word nobody says at a grill,
-  rewrite it. Contractions always.
-- **The creator is a person, not a voiceover.** No "introducing," no
-  "look no further," no stacked adjectives. One idea per sentence.
-- **Never script a claim the creator can't personally stand behind.** No
-  invented ownership duration, no fake gift recipient, no "I've had this for
-  three years" unless the brief says the creator actually has.
-- **Never script an on-screen caption that makes a claim the spoken line
-  doesn't.** Captions reinforce; they don't add claims.
-- **Every script must be shootable on an iPhone alone**, by one person, in
-  the locations named in the brief. No gimbals, no second operator, no
-  lighting kit. If a beat needs gear, cut the beat.
+**As of 2026-10-08 most b-roll references on existing script rows are dead.**
+Of the 15 IDs cited by `XM-GT-FTH`, only `KNF-XM12` resolves. Re-resolve any
+package before a creator is sent it. Process doc Section I has the detail.
 
 ## Where things live
 
-- `brand-pack/` — reference library (read-only source material).
-  - `01-brand/` — product catalog + brand voice.
-  - `02-personas/` — JOHN, MIKE, SARAH, VANCE.
-  - `03-creator-direction/` — iPhone shoot direction + the b-roll library.
-  - `04-approved-scripts/` — scripts that shipped and performed. Swipe the
-    *mechanic*, never the lines.
-  - `05-process/ugc-script-process.md` — **authoritative deliverable spec.**
-- `ugc-scripts/` — output. One file per batch, named
-  `YYYY-MM-DD-<product>-<persona>-<moment>.md`, from `_template.md`.
-- `ugc-scripts/processed-concept-log.md` — dedup ledger. Every concept
-  (persona × product × moment × angle) that ships gets logged. **Check this
-  before writing** so the same angle isn't produced twice in a row.
+- `brand-pack/05-process/` — the spec, the field notes, the integration map.
+- `brand-pack/01-brand/` — product catalog (claim surface) and brand voice.
+- `brand-pack/02-personas/` — avatar notes. **Stubs.**
+- `brand-pack/03-creator-direction/` — filming rules and b-roll notes.
+  The live filming rules live in `briefs/ugc-broll-library/README.md`, which
+  is **not in this repo** — see the integration doc.
+- `ugc-scripts/<SCRIPT-ID>.md` — markdown mirror of each delivered row, so
+  scripts are reviewable in git and survive a Notion edit. Start from
+  `_template.md`.
 
 ## Delivery
 
-Scripts are committed to `ugc-scripts/` in this repo. If the user also wants
-them in Notion, mirror the `my-client` convention: one page per script in the
-agreed database, matching the existing page structure/properties exactly —
-and if the Notion connector isn't available in a given run, say so explicitly
-rather than silently skipping delivery.
+A script is delivered when it exists as a row in the Creator Script Library
+with every property set and a resolving b-roll package — then mirrored to
+`ugc-scripts/` and committed. **A script that exists only in this repo has not
+been delivered.** If the Notion connector isn't available in a run, say so
+explicitly rather than silently skipping delivery.
 
 ## Scaffold status
 
-The product hard rules and copy rules above are authoritative. The brand-voice,
-persona, and creator-direction docs are structured stubs — every field needing
-content from the source brand pack is marked `TODO(brand-pack)`. **Do not
-invent brand facts to fill them.** Fill from the source pack, or ask.
+The process spec, the integration map and the product guards are current as of
+2026-10-08 and were read from the live workspace. The **persona/avatar docs and
+brand-voice doc are still stubs** marked `TODO(brand-pack)` — including STEVE
+and DARIEN, for whom nothing is known beyond the name. Do not invent brand
+facts to fill them.

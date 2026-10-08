@@ -1,7 +1,8 @@
 # JOHN — the collector
 
-**Authoritative:** Collector. Persona fit for Feather Knife and BJORN Series Santoku.
-**Products:** Feather Knife, BJORN Series Santoku
+**Authoritative:** Collector.
+**Products:** no fixed mapping — the avatar follows the **format**. JOHN is
+used in **none** of the holiday wave; see `README.md`.
 
 ## For the script — what UGC needs from a persona
 
@@ -25,4 +26,5 @@ Fill each from the source pack. Until then, treat as unknown.
 
 ## Angle notes
 
-Consistency and detail are the pitch. For the Feather Knife, laser-applied means every piece in the drop matches — that is the selling point, not a caveat. The ~500-unit drop and ~3-month restock are real scarcity. For BJORN, the brass bolster and hand-carved handle are the hand-work beats; the blade shape is described by what it does on a board and never by where the shape comes from.
+Consistency and detail are the pitch — but **never by naming how the Feather
+pattern got onto the blade**, which the live rule forbids outright. The ~500-unit drop and ~3-month restock are real scarcity. For BJORN, the brass bolster and hand-carved handle are the hand-work beats; the blade shape is described by what it does on a board and never by where the shape comes from.

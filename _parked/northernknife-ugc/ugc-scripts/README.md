@@ -1,18 +1,26 @@
 # ugc-scripts
 
-Output folder. One file per batch.
+Markdown mirror of the Notion `🎬 Creator Script Library`. One file per
+script row, so scripts are reviewable in git and survive a Notion edit.
 
-- **Naming:** `YYYY-MM-DD-<product>-<persona>-<moment>.md`
-  e.g. `2026-10-07-loki-sarah-holiday-gifting.md`
+- **Filename:** `<SCRIPT-ID>.md` — `XM-GT-FTH.md`, `ITER-R2B8-BLK.md`.
+  Script IDs are stable and never renumbered: creators use them in filenames.
 - **Start from** `_template.md`. The format is defined in
-  `../brand-pack/05-process/ugc-script-process.md` Section D — the template
-  just mirrors it.
-- **Before writing:** read `processed-concept-log.md` and confirm this
-  persona × product × moment × angle hasn't just shipped.
-- **Before delivering:** complete the Section F pre-flight checklist at the
-  bottom of the file. A batch without a ticked checklist isn't delivered.
-- **After delivering:** append a row to `processed-concept-log.md`, then commit
-  and push both files.
+  `../brand-pack/05-process/ugc-script-process.md` — Section C for the body,
+  Section D for the properties.
+- **Notion is the source of truth** for status, creator and delivery. This
+  folder is the drafting and review copy; don't treat a stale file here as
+  current state.
+- **Before delivering:** complete the pre-flight block. The b-roll check is
+  the one that actually fails — see Section I of the process doc.
 
-One batch = 2 scripts, same message and angle, 3 hooks each, one shared
-creative-direction block, 8 shared b-roll clips.
+## No dedup log here
+
+There used to be a `processed-concept-log.md`. It's gone: the Creator Script
+Library **is** the ledger. Coverage is the format × product matrix (the
+holiday wave is 6 × 4 = 24 rows), and `Status` tracks each row from
+`Ready to assign` through to `Live` or `Retired`. A second hand-maintained
+list would just drift from it.
+
+To check what exists before writing, query the library rather than reading a
+file here.

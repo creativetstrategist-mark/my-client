@@ -1,148 +1,80 @@
-# <Product> × <PERSONA> — <Moment>
+<!--
+Mirror of one row in the Notion 🎬 Creator Script Library.
+Filename: <SCRIPT-ID>.md  e.g. XM-GT-FTH.md
+Format is defined in ../brand-pack/05-process/ugc-script-process.md — the
+body below is Section C, the properties block is Section D.
+-->
 
-**Angle:** <gifting | comparison | functional benefit | identity | transformation | social proof | problem-solution | curiosity | authority | scarcity/urgency>
-**Offer:** <B2G2 | B1G1 | X% tier | none>
-**Message (shared):** <one sentence both scripts prove>
-**Creator:** <name or archetype>
-**Runtime target:** 30–45s
+# <Format name without its number> · <Product>
 
----
-
-## Script 1 — <short label>
-
-### Hooks (pick one at shoot)
-
-| # | Hook line | Pattern | On-screen caption |
-|---|---|---|---|
-| A |  |  |  |
-| B |  |  |  |
-| C |  |  |  |
-
-### Body
-
-| Beat | Spoken line | What's on screen |
-|---|---|---|
-| 1 |  |  |
-| 2 |  |  |
-| 3 |  |  |
-| 4 |  |  |
-| 5 |  |  |
-| 6 |  |  |
-| 7 |  |  |
-| 8 |  |  |
-
-<!-- 6–10 beats. Offer sits in the 60–80% band with 2–4 beats after it. -->
-
-### CTA
-
-| Spoken line | On-screen caption |
+| Property | Value |
 |---|---|
-|  |  |
-
-### Building blocks
-
-**Structure:** Hook → Body → CTA
-**Product blocks:**
-**Person blocks:**
-
----
-
-## Script 2 — <short label>
-
-### Hooks (pick one at shoot)
-
-| # | Hook line | Pattern | On-screen caption |
-|---|---|---|---|
-| A |  |  |  |
-| B |  |  |  |
-| C |  |  |  |
-
-### Body
-
-| Beat | Spoken line | What's on screen |
-|---|---|---|
-| 1 |  |  |
-| 2 |  |  |
-| 3 |  |  |
-| 4 |  |  |
-| 5 |  |  |
-| 6 |  |  |
-| 7 |  |  |
-| 8 |  |  |
-
-### CTA
-
-| Spoken line | On-screen caption |
-|---|---|
-|  |  |
-
-### Building blocks
-
-**Structure:** Hook → Body → CTA
-**Product blocks:**
-**Person blocks:**
+| Script ID | |
+| Status | Ready to assign |
+| Status 1 | |
+| Format | |
+| Product | |
+| Avatar | |
+| Cast | |
+| Lengths | Long + Short |
+| Offer | |
+| Mode | |
+| Campaign | |
+| Wave | |
+| Markets | |
+| Landing page | |
+| Source winner | |
+| Creator | |
+| Delivery link | |
 
 ---
 
-## Creative direction (shared) — iPhone only
+## Hooks
+Shoot all three. We pick in the edit.
+**H1** 
+**H2** 
+**H3** 
 
-| Field | Direction |
-|---|---|
-| **Locations** |  |
-| **Time of day** |  |
-| **Lighting** |  |
-| **Framing** |  |
-| **Wardrobe** |  |
-| **Audio** |  |
-| **Props** |  |
-| **Performance note** |  |
-| **Do not** | gimbal, second operator, ring light, zooms, filters, music under dialogue |
+## Long form
+
+
+
+## Short form
+
+
+
+## B-roll package
+<!-- 12-25 shots. Every ID must resolve to a LIVE library row - a page
+     flagged `deleted` is archived and does not count. Never mint an ID. -->
+- 
+
+## Filming notes
+- Vertical 9:16, 4K. Raw files. No edits, no music, no filters, no on-screen text.
+- Every clip 10 to 20 seconds minimum, even when the action takes 3. Hold before and after.
+- Never name a specific delivery cutoff date on camera. "Before Christmas" only.
+<!-- Product guard - keep the one that applies:
+     Feather  - Never describe how the pattern got onto the blade. Not etched,
+                not hand-finished, not engraved, not laser-applied. It is
+                simply there.
+     BJORN    - Never say "Japanese" or reference Japanese origin, tradition or
+                technique. No kanji packaging, no sushi plating.
+     Blackout - The bottle opener is in the handle. Frame it so the handle is
+                unmistakably the opener.
+-->
 
 ---
 
-## B-roll (shared) — 8 clips, 2–4s each
-
-| # | Clip | Note |
-|---|---|---|
-| 1 |  |  |
-| 2 |  |  |
-| 3 |  |  |
-| 4 |  |  |
-| 5 |  |  |
-| 6 |  |  |
-| 7 |  |  |
-| 8 |  |  |
-
----
-
-## Pre-flight (process doc Section F)
-
-**F.1 — Hard rules**
-- [ ] Feather Knife: pattern is laser-applied; no hand-etched / hand-finished / engraved anywhere
-- [ ] BJORN: no "Japanese", no oblique nod to Japanese origin
-- [ ] LOKI: bottle opener in the **handle**; $79.90 if priced
-- [ ] Feather Knife $99.90 if priced
-- [ ] Every product claim traces to `01-brand/product-catalog.md`
-
-**F.2 — Originality**
-- [ ] No verbatim line from any reference ad, approved script, or earlier batch
-- [ ] Script 1 and Script 2 are not rewordings of each other
-- [ ] The three hooks per script are three different doors in
-- [ ] The offer paragraph differs between Script 1 and Script 2
-
-**F.3 — Copy rules**
-- [ ] No banned jargon; no numbers that are specs
-- [ ] Offer lands 60–80% through, 2–4 beats after it
-- [ ] The offer resolves what the hook raised
-- [ ] Offer is real (B2G2 / B1G1 / % tier); nothing invented
-
-**F.4 — UGC-specific**
-- [ ] Every line read out loud and sayable in one breath
-- [ ] No claim the creator can't personally stand behind
-- [ ] No caption asserting what the spoken line doesn't
-- [ ] Shootable on one iPhone, one person, in the named locations
-- [ ] 8 b-roll clips, all shootable in one session
-
-**F.5 — Housekeeping**
-- [ ] Logged in `processed-concept-log.md`
-- [ ] Filename `YYYY-MM-DD-<product>-<persona>-<moment>.md`
+## Pre-flight
+<!-- Full list: process doc Section G -->
+- [ ] Five body sections, in order, nothing else
+- [ ] Hooks as **H1**/**H2**/**H3** prose with the "shoot all three" line
+- [ ] Three hooks are three different doors in
+- [ ] Short form is a cut of the long form, not a second idea
+- [ ] Offer matches the Offer property and is placed as the format requires
+- [ ] Product guard applied (Feather / BJORN / Blackout)
+- [ ] No delivery date on camera; no spec jargon; no invented claim or figure
+- [ ] Every b-roll ID resolves to a live, non-archived row
+- [ ] B-roll IDs text and B-roll shots relation agree
+- [ ] Shot Cast compatible with the creator's cast
+- [ ] Avatar and Cast follow the format, not the product
+- [ ] Every property above is set; Source winner cites a real ad

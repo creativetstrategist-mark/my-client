@@ -211,15 +211,21 @@ violating the rule in the opposite direction.
 
 ---
 
-## Before rewriting the process doc
+## Decision taken
 
-Two things to resolve with Andy first, because they're decisions and not
-observations:
+**This repo feeds the Gen 2 system** (decided 2026-10-08). The process doc has
+been rewritten accordingly: the unit of work is one row in the Creator Script
+Library, the body is the five-section page, and b-roll is selected from the
+shared library rather than invented per batch. See
+`ugc-script-process.md` and `notion-integration.md`.
 
-1. **Does this repo target Gen 2 or Gen 1?** Gen 2 already has a source-of-
-   truth repo (`briefs/ugc-broll-library/`). A second repo writing UGC
-   scripts needs to either feed that system or replace it — writing to a
-   third shape would just add drift.
-2. **Scope.** Gen 2's schema carries 7 products and 6 avatars. This repo is
-   trimmed to 3 products and 4 personas, inherited from the ad-rewriting
-   routine. One of the two is out of date.
+Two consequences worth keeping in view:
+
+1. **Scope follows the live schema, not `my-client`.** 7 products and 6
+   avatars on the script side, 23 knives in the b-roll library — against 3
+   products and 4 personas inherited from the ad-rewriting routine. STEVE and
+   DARIEN are names with nothing behind them.
+2. **The b-roll source of truth is out of reach.** `briefs/ugc-broll-library/`
+   is in neither reachable repo and isn't a Parker Brain, so this repo reaches
+   Gen 2 **through Notion only**, and the general filming rules here are
+   reconstructed rather than copied. Reconcile if it is ever attached.

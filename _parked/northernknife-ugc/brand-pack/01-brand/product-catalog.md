@@ -13,25 +13,40 @@ user explicitly asks.
 
 **Price:** $99.90
 **Handle:** rosewood
-**Blade pattern:** **laser-applied**
+**Blade pattern:** a feather pattern down the blade. **How it got there is
+never described** — see Never, below
 **Availability:** limited drops of ~500 units, restocks roughly every 3 months
 **Persona fit:** JOHN (collector)
 
 ### Never
-- Never say the pattern is **hand-etched**, **hand-finished**, or **engraved**.
-  It is laser-applied. This holds for spoken lines, captions, and any
-  paraphrase that implies hand work on the pattern.
+- **Never describe how the pattern got onto the blade.** Not etched, not
+  hand-finished, not engraved, **and not laser-applied**. In the live rule's
+  own words: *"It is simply there."* This holds for spoken lines, captions and
+  any paraphrase that implies — or denies — a process.
+
+> This reverses what `my-client/CLAUDE.md` says. That doc instructs you to
+> call the pattern laser-applied; the live script library (2026-10-06)
+> forbids naming the process at all. The May 2026 brief went the other way
+> again and called it hand-finished. **The current rule is silence**, and it
+> is the one that ships.
 
 ### Say
-- "The pattern's laser-applied — dead clean, every single one."
 - Rosewood by name. It's the sensory detail.
-- The drop size and the ~3-month restock are true scarcity. Say them plainly;
-  don't dress them up and don't invent a date.
+- *"That pattern down the blade is the reason people pick it up. The edge is
+  the reason they don't put it down."* — talk about what the pattern **does**
+  to a viewer, never where it came from.
+- The drop size and restock are true scarcity, and get hedged for speech:
+  "around five hundred at a time", "about three months". Never invent a date.
+- Materials plainly: *"High-carbon steel, hand-forged, rosewood handle."*
 
-### How JOHN hears it
-Consistency is the pitch. A collector wants the pattern identical across the
-drop — laser-applied is the *reason* it is, so it's a feature, never an
-apology.
+### On camera
+The pattern is still the hero shot — clean blade, no fingerprints, slow travel
+along the steel. Visuals carry it; words never explain it. Avoid any styling
+that implies hand work on the pattern: no engraving tools, no workbench.
+
+### Avatar
+Do **not** assume JOHN. The avatar follows the **format**, and the holiday
+wave runs Feather past MIKE, SARAH and VANCE while using JOHN for none of it.
 
 ---
 

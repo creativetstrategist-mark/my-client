@@ -1,24 +1,26 @@
 # START HERE — NorthernKnife UGC reference library
 
-Read in this order. Don't write a line of script before step 3.
+This repo feeds the **Gen 2 system**: the `UGC Creator Library` in Notion and
+its `🎬 Creator Script Library`. A script here becomes a **row there**.
 
-1. **`/CLAUDE.md`** (repo root) — the hard rules. Products, universal copy
-   rules, UGC-specific rules.
-2. **`01-brand/product-catalog.md`** — the 3 focus products and every claim
-   you're allowed to make about them.
-3. **`05-process/observed-notion-structure.md`** — field notes from the live
-   Notion workspace (2026-10-08). **Wins over the process doc on any
-   conflict**, and lists where the process doc is wrong.
-4. **`05-process/ugc-script-process.md`** — Intake,
-   copy rulebook, the deliverable block by block, creative direction, b-roll,
-   and the pre-flight gate.
-5. **`02-personas/`** — the persona for this batch. One of JOHN, MIKE,
-   SARAH, VANCE.
-6. **`01-brand/brand-voice.md`** — tone, register, and the words the brand
-   doesn't use.
-7. **`03-creator-direction/`** — iPhone shoot direction and the b-roll library.
-8. **`04-approved-scripts/`** — what shipped and worked. Swipe the
-   **mechanic**; never the lines.
+Read in this order. Don't write a line before step 2.
+
+1. **`/CLAUDE.md`** (repo root) — the unit of work, the three product guards,
+   and the four `my-client` rules that do not hold here.
+2. **`05-process/ugc-script-process.md`** — **authoritative.** Script IDs,
+   the five-section page body, every database property, b-roll selection, the
+   copy rulebook, pre-flight, delivery, and the live breakage.
+3. **`05-process/notion-integration.md`** — which collections to read, which
+   to write, and how to check a shot ID is live.
+4. **`01-brand/product-catalog.md`** — the only claims you may make.
+5. **`05-process/observed-notion-structure.md`** — field record of both
+   generations, and where the older spec was wrong.
+6. **`02-personas/`** — avatar notes. Stubs.
+7. **`01-brand/brand-voice.md`** — stub. The live register is far blunter
+   than a brand doc suggests.
+8. **`03-creator-direction/`** — filming and b-roll notes. The authoritative
+   filming rules live in `briefs/ugc-broll-library/README.md`, which is not in
+   this repo; see the integration doc.
 
 ## The two rules that survive everything else
 
