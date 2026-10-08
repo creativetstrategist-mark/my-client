@@ -295,6 +295,11 @@ one format.
 - **Icon: 🔪 on every page.** Always, for every new brief or script page,
   matching the rest of the `UGC Creator Brief` hub. Do not pick a
   topical icon (🎁, 🔁 or anything else) — the hub reads as one set.
+- **Props needed: only what breaks the shoot if it is missing.** Four or five
+  lines, not an inventory. A prop earns its place by being something the
+  creator would not otherwise have, or would get wrong — the worst old knife,
+  wrap for two boxes, a light board for dark handles. Ordinary kitchen stock
+  is left to the shotlist; close with one line saying so.
 - **Title:** `<Concept> - <Creator> | <Event>`, the hub's existing pattern.
   Escape the pipe as `\|` when writing it through the API.
 
