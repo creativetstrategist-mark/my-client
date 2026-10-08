@@ -17,6 +17,7 @@
 | Event | Any occasion. Evergreen — the occasion lives only in the hooks. |
 | Inspo link | *(none given)* |
 | Offer | Buy 2 Get 2 Free |
+| Props needed | **Gift wrap and ribbon, enough for two boxes** — one wrapped on camera (KNF-GF06), one pre-wrapped with a cut seam at the back to pull open (KNF-GF07). **Once a box is unwrapped you cannot re-shoot the wrapping — buy spare wrap.** **The bad gifts:** socks, a mug, a gift card, a tie — plus **a bin**. **A shipping package or mailer** for the doorstep pickup. **Your old dull knife** for the comparison. **Every Northern Knife you own, in its box**; **four knives** and **2 "FREE" stickers** for the offer shot; **a sticky note and a marker.** **Food:** a roast or rib-eye, a tomato, assorted fruit and veg, herbs, something to grill. **A light-coloured wooden board** — dark handles vanish on a dark surface. **A grill or BBQ**, **a phone**, **a microfibre cloth** (no fingerprints on the blade close-up), **a quiet room** for the magnetic-lid ASMR shot. |
 
 Script IDs: **UGC-F9-GIFTGIVEN** (Script 1, Gift Testimonial, MIKE) ·
 **UGC-F10-LASTMINUTE** (Script 2, Last-Minute Gift, SARAH)
