@@ -290,6 +290,15 @@ one format.
 
 ## Section H — Delivery
 
+### Page conventions
+
+- **Icon: 🔪 on every page.** Always, for every new brief or script page,
+  matching the rest of the `UGC Creator Brief` hub. Do not pick a
+  topical icon (🎁, 🔁 or anything else) — the hub reads as one set.
+- **Title:** `<Concept> - <Creator> | <Event>`, the hub's existing pattern.
+  Escape the pipe as `\|` when writing it through the API.
+
+
 1. Write the script into the `🎬 Creator Script Library` as a new row, with
    the Section C body and every Section D property. `Status` starts at
    **Ready to assign**.

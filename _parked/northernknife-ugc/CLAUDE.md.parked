@@ -101,6 +101,11 @@ package before a creator is sent it. Process doc Section I has the detail.
 
 ## Delivery
 
+**Every page gets the 🔪 icon.** No exceptions, no topical icons — the
+`UGC Creator Brief` hub reads as one set. Title pattern:
+`<Concept> - <Creator> | <Event>`.
+
+
 A script is delivered when it exists as a row in the Creator Script Library
 with every property set and a resolving b-roll package — then mirrored to
 `ugc-scripts/` and committed. **A script that exists only in this repo has not
