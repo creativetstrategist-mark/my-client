@@ -146,31 +146,33 @@ Shared by both scripts. All verified live in `Knives — B-Roll Library` on
 **Shoot the struggle shots with the old knife before opening the new one** —
 once the new knife has been used, the struggle shots stop being believable.
 
-| Shot ID | Shot | Beat |
-|---|---|---|
-| KNF-CT01 | Talking-head hook | Hook |
-| KNF-BF04 | Flimsy old knife vs our knife | Problem |
-| KNF-BF05 | Old-to-new knife swipe transition | Problem |
-| KNF-CUT01 | Struggling to cut a tomato — **the key shot** | Agitate |
-| KNF-CUT03 | Struggling to cut a steak | Agitate |
-| KNF-CUT10 | Struggling to cut paper | Agitate |
-| KNF-CUT09 | Throwing old knives to the bin | Agitate |
-| KNF-ACT08 | Good knife vs bad knife | Agitate |
-| KNF-CUT02 | Tomato: clean slice — **match CUT01's framing exactly** | Solution |
-| KNF-CUT11 | Paper: clean slice | Solution |
-| KNF-CUT12 | Cucumber: translucent slice | Solution |
-| KNF-DM01 | Big piece of meat, clean cut | Solution |
-| KNF-DM04 | Rapid veggie cuts — weight does it, not the arm | Solution |
-| KNF-DM05 | Fruit and vegetable clean slice | Solution |
-| KNF-DM09 | Balance-on-finger shot — the "real weight" half | Solution |
-| KNF-PS11 | Taken out of the drawer | Hook |
-| KNF-PS12 | Knife drop onto the board | Hook |
-| KNF-PS09 | Knife details close-up | Proof |
-| KNF-PS13 | Blade sharpness touch and reaction | Proof |
-| KNF-PS01 | Display of knives with boxes | Offer |
-| KNF-ACT06 | Showcasing / flexing knife | Solution |
-| KNF-OF01 | B2G2 sticker display | Offer |
-| KNF-OF06 | Product page scroll | CTA |
+| Shot ID | Shot | Beat | Inspo |
+|---|---|---|---|
+| KNF-CT01 | Talking-head hook | Hook | [Frame.io](https://f.io/_8-DuCv9) |
+| KNF-BF04 | Flimsy old knife vs our knife | Problem | [Frame.io](https://f.io/EUfnvtpw) |
+| KNF-BF05 | Old-to-new knife swipe transition | Problem | [Frame.io](https://f.io/vLKBwnf5) |
+| KNF-CUT01 | Struggling to cut a tomato — **the key shot** | Agitate | [Frame.io](https://f.io/DbBYl1C3) |
+| KNF-CUT03 | Struggling to cut a steak | Agitate | [Frame.io](https://f.io/QBF3wp_z) |
+| KNF-CUT10 | Struggling to cut paper | Agitate | [Frame.io](https://f.io/V00EFaOq) |
+| KNF-CUT09 | Throwing old knives to the bin | Agitate | [Frame.io](https://f.io/txmq-BQr) |
+| KNF-ACT08 | Good knife vs bad knife | Agitate | [Frame.io](https://f.io/oeK7WVkm) |
+| KNF-CUT02 | Tomato: clean slice — **match CUT01's framing exactly** | Solution |  |
+| KNF-CUT11 | Paper: clean slice | Solution | [Frame.io](https://f.io/QqC6m274) |
+| KNF-CUT12 | Cucumber: translucent slice | Solution | [Frame.io](https://f.io/MreDPelk) |
+| KNF-DM01 | Big piece of meat, clean cut | Solution | [Frame.io](https://f.io/Om68HX9o) |
+| KNF-DM04 | Rapid veggie cuts — weight does it, not the arm | Solution | [Frame.io](https://f.io/zWxVHXwW) |
+| KNF-DM05 | Fruit and vegetable clean slice | Solution | [Frame.io](https://f.io/UCm0JJ3B) |
+| KNF-DM09 | Balance-on-finger shot — the "real weight" half | Solution | [Frame.io](https://f.io/QhLuMx8l) |
+| KNF-PS11 | Taken out of the drawer | Hook | [Frame.io](https://f.io/LYGi4Xcr) |
+| KNF-PS12 | Knife drop onto the board | Hook |  |
+| KNF-PS09 | Knife details close-up | Proof | [Frame.io](https://f.io/X7qb_8qG) |
+| KNF-PS13 | Blade sharpness touch and reaction | Proof |  |
+| KNF-PS01 | Display of knives with boxes | Offer | [Frame.io](https://f.io/LLjhIRM0) |
+| KNF-ACT06 | Showcasing / flexing knife | Solution | [Frame.io](https://f.io/319XR0lY) |
+| KNF-OF01 | B2G2 sticker display | Offer | [Frame.io](https://f.io/L-0QKPT7) |
+| KNF-OF06 | Product page scroll | CTA |  |
+
+Inspo links are the `Example` field from `Knives — B-Roll Library`, read 2026-10-08. Blank means the library has no reference for that shot.
 
 The CUT01 / CUT02 pair is the whole argument — same tomato, same board, same
 angle, one with the old knife and one with the new.

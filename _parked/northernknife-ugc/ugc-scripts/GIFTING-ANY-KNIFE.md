@@ -129,33 +129,35 @@ All verified live in `Knives — B-Roll Library` on 2026-10-08. All work with
 any knife, carry no seasonal dressing, and are Solo / Hands only / No cast so
 a solo creator can shoot every one.
 
-| Shot ID | Shot | Needed by |
-|---|---|---|
-| KNF-CT01 | Talking-head hook | S1, S2 |
-| KNF-BF02 | Generic-gift montage | S2 |
-| KNF-BF03 | Throwing bad gifts in the bin | S2 |
-| KNF-BF04 | Flimsy old knife vs our knife | S1 |
-| KNF-GF06 | Gift wrapping | S2 |
-| KNF-GF07 | Unwrapping / pull-reveal | S1, S2 |
-| KNF-GF09 | Gift unboxing reaction | S1 |
-| KNF-PROD04 | Full unboxing | S1, S2 |
-| KNF-PROD05 | Over-the-shoulder unboxing | S1 |
-| KNF-PROD06 | Doorstep pickup | S2 |
-| KNF-PS01 | Display of knives with boxes | S1, S2 |
-| KNF-PS04 | Magnetic box open/close ASMR | S1, S2 |
-| KNF-PS09 | Knife details close-up | S1, S2 |
-| KNF-PS12 | Knife drop onto the board | S1 |
-| KNF-PS13 | Blade sharpness touch and reaction | S1, S2 |
-| KNF-DM01 | Big piece of meat, clean cut | S1, S2 |
-| KNF-DM05 | Fruit and vegetable clean slice | S2 |
-| KNF-DM06 | Grilling and prepping | S1 |
-| KNF-DM16 | Scraping the pile off the board | S2 |
-| KNF-CUT02 | Tomato, clean slice | S2 |
-| KNF-RX02 | Surprise / wow reaction | S1 |
-| KNF-ACT06 | Showcasing / flexing knife | S1 |
-| KNF-OF01 | B2G2 sticker display | S1, S2 |
-| KNF-OF02 | Sticky note on the gift box | S1, S2 |
-| KNF-OF06 | Product page scroll | S1, S2 |
+| Shot ID | Shot | Needed by | Inspo |
+|---|---|---|---|
+| KNF-CT01 | Talking-head hook | S1, S2 | [Frame.io](https://f.io/_8-DuCv9) |
+| KNF-BF02 | Generic-gift montage | S2 | [Frame.io](https://f.io/_ZtSRe-5) |
+| KNF-BF03 | Throwing bad gifts in the bin | S2 | [Frame.io](https://f.io/-Z86Lqch) |
+| KNF-BF04 | Flimsy old knife vs our knife | S1 | [Frame.io](https://f.io/EUfnvtpw) |
+| KNF-GF06 | Gift wrapping | S2 | [Frame.io](https://f.io/FvXbi5uK) |
+| KNF-GF07 | Unwrapping / pull-reveal | S1, S2 | [Frame.io](https://f.io/561C4YXh) |
+| KNF-GF09 | Gift unboxing reaction | S1 | [Frame.io](https://f.io/zrjLTeyj) |
+| KNF-PROD04 | Full unboxing | S1, S2 | [Frame.io](https://f.io/eZemJsL3) |
+| KNF-PROD05 | Over-the-shoulder unboxing | S1 | [Frame.io](https://f.io/uNF-BBRJ) |
+| KNF-PROD06 | Doorstep pickup | S2 | [Frame.io](https://f.io/4XbN5P9Q) |
+| KNF-PS01 | Display of knives with boxes | S1, S2 | [Frame.io](https://f.io/LLjhIRM0) |
+| KNF-PS04 | Magnetic box open/close ASMR | S1, S2 |  |
+| KNF-PS09 | Knife details close-up | S1, S2 | [Frame.io](https://f.io/X7qb_8qG) |
+| KNF-PS12 | Knife drop onto the board | S1 |  |
+| KNF-PS13 | Blade sharpness touch and reaction | S1, S2 |  |
+| KNF-DM01 | Big piece of meat, clean cut | S1, S2 | [Frame.io](https://f.io/Om68HX9o) |
+| KNF-DM05 | Fruit and vegetable clean slice | S2 | [Frame.io](https://f.io/UCm0JJ3B) |
+| KNF-DM06 | Grilling and prepping | S1 | [Frame.io](https://f.io/dv7RPl2d) |
+| KNF-DM16 | Scraping the pile off the board | S2 | [Frame.io](https://f.io/AgZrEev3) |
+| KNF-CUT02 | Tomato, clean slice | S2 |  |
+| KNF-RX02 | Surprise / wow reaction | S1 | [Frame.io](https://f.io/DukLaivb) |
+| KNF-ACT06 | Showcasing / flexing knife | S1 | [Frame.io](https://f.io/319XR0lY) |
+| KNF-OF01 | B2G2 sticker display | S1, S2 | [Frame.io](https://f.io/L-0QKPT7) |
+| KNF-OF02 | Sticky note on the gift box | S1, S2 |  |
+| KNF-OF06 | Product page scroll | S1, S2 |  |
+
+Inspo links are the `Example` field from `Knives — B-Roll Library`, read 2026-10-08. Blank means the library has no reference for that shot.
 
 Excluded as product-locked: `KNF-DM03` (bottle-opener, Blackout only) and
 `KNF-ACT07` (finger-hole, LOKI only).
