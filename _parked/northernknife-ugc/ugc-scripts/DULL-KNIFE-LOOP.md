@@ -7,13 +7,13 @@
 
 | | |
 |---|---|
-| Content Creator | TBA — one creator, solo. Most of the shotlist is hands-only. |
+| Content Creator | TBA — one creator, solo. Most of the shotlist is hands-only. Both scripts can go to the same creator in one shoot day. |
 | Product | Any knife in the lineup. No knife named; `[KNIFE]` mark. |
 | Event | Any occasion. Evergreen — nothing seasonal. |
 | Inspo link | https://app.trendtrack.io/en/share/ad/qLt2k9KONPTvbnlbSK8y3dtLSO93Exf3o9e0B-Z8Egk |
 | Offer | Buy 2 Get 2 Free |
-| Structure | Problem → Agitate → Solution |
-| Runtime | Script ≈ 45 sec. Short cut ≈ 30 sec. |
+| Structure | Problem → Agitate → Solution. Two variations, two different loops. |
+| Runtime | Both scripts ≈ 45–50 sec. No short cut. |
 
 ## The mechanic transferred
 
@@ -21,9 +21,16 @@ The source ad names a hidden villain (an enzyme), traps it in a loop that
 feeds itself, absolves the viewer, dismisses the obvious fixes, then says the
 fix needs **two** things at once.
 
-Knife version keeps that engine and swaps the villain to **soft steel** —
-which happens to be plain language, so it clears the spec-jargon ban that
-"edge retention" or a Rockwell number would trip.
+Both scripts keep that engine. They differ in which loop they name:
+
+- **Script 1 — the pressure loop.** Villain is soft steel. Dull edge → press
+  harder → pressing bends the edge over further → duller edge → more pressure.
+- **Script 2 — the sharpening loop.** Villain is sharpening soft steel. Every
+  sharpen removes metal → soft steel needs it constantly → the blade thins →
+  a thin edge bends easier → dulls faster → you sharpen again.
+
+"Soft steel" happens to be plain language, so it clears the spec-jargon ban
+that "edge retention" or a Rockwell number would trip.
 
 | Source beat | Knife version |
 |---|---|
@@ -45,7 +52,9 @@ lines ("loop feeds itself", "you're in a loop") that were too close to the
 source and got rewritten; and the source's offer and guarantee, replaced with
 the real ones.
 
-## Hooks
+## Script 1 — the pressure loop
+
+### Hooks
 
 | | |
 |---|---|
@@ -53,7 +62,7 @@ the real ones.
 | Hook 2 | Your knife isn't blunt because you're bad at this. |
 | Hook 3 | Stop sharpening. You're sharpening the wrong thing. |
 
-## Main Body (≈45 sec)
+### Main Body (≈45 sec)
 
 `PROBLEM`
 
@@ -83,24 +92,56 @@ Lifetime warranty. Thirty-day money back.
 
 Tap the link.
 
-## Short cut (≈30 sec)
+## Script 2 — the sharpening loop
 
-Dull knife? Doesn't mean you're a bad cook. It's the steel.
+### Hooks
 
-Soft steel loses its edge in a week. So you press harder. Press harder, you crush instead of cut — and bend the edge over further. Duller edge, more pressure. That's the loop.
+| | |
+|---|---|
+| Hook 1 | You're not neglecting your knife. You're sanding it away. |
+| Hook 2 | I sharpened my knife every week for a year. That was the problem. |
+| Hook 3 | Why does your knife go dull three days after you sharpen it? |
 
-Sharpening won't fix it. Soft steel won't hold an edge.
+### Main Body (≈50 sec)
 
-Hard steel and real weight will. The `[KNIFE]` from Northern Knife is both.
+`PROBLEM`
 
-Buy two, get two free right now. Thirty-day money back.
+Sharpening more isn't fixing it. Mine went dull three days after every sharpen.
 
-Breaks the loop. Not the tomato.
+It's not the sharpener. It's what you're sharpening.
+
+`AGITATE`
+
+Every time you sharpen, you take metal off. That's what sharpening is.
+
+Soft steel needs it constantly. So you take more off, more often. The blade thins. A thin edge bends easier. Bends easier, dulls faster. You sharpen again.
+
+A year of that and you've sanded your knife into a butter knife.
+
+You're not neglecting it. You're sanding it away.
+
+Better whetstone? Same soft steel. Electric sharpener? Same problem, faster. Paying someone? They can't change the steel.
+
+`SOLUTION`
+
+Two things stop it — steel hard enough to hold an edge for months, and enough weight that you're not forcing the cut.
+
+`Hold it up.` The `[KNIFE]` from Northern Knife is both. Hand-forged, high-carbon.
+
+And right now it's buy two, get two free.
+
+`Only say this if it is actually true for you — otherwise cut the line.` Mine's been sharpened twice this year. Twice.
+
+Lifetime warranty. Thirty-day money back.
+
+Stop sanding. Start cutting.
+
+Link's below.
 
 ## B-roll shotlist — 23 shots
 
-All verified live in `Knives — B-Roll Library` on 2026-10-08. Any knife, no
-seasonal dressing, all Solo / Hands only / No cast.
+Shared by both scripts. All verified live in `Knives — B-Roll Library` on
+2026-10-08. Any knife, no seasonal dressing, all Solo / Hands only / No cast.
 
 **Shoot the struggle shots with the old knife before opening the new one** —
 once the new knife has been used, the struggle shots stop being believable.
@@ -134,6 +175,20 @@ once the new knife has been used, the struggle shots stop being believable.
 The CUT01 / CUT02 pair is the whole argument — same tomato, same board, same
 angle, one with the old knife and one with the new.
 
+### Gap: Script 2 needs a shot the library doesn't have
+
+Script 2's agitate section is entirely about sharpening removing metal, and
+**there is no sharpening shot in the Knives — B-Roll Library.** The only
+sharpening footage in the workspace belongs to the Sharpener line's own
+library, which is a different product and would undercut a script arguing
+that sharpening is the trap.
+
+No shot ID was invented for it. Either add one to the library first (a
+whetstone pass on the old knife, plus a close-up of how thin that old blade
+has worn), or shoot Script 2 covering those lines with **KNF-BF04** and
+**KNF-ACT08** and accept that the sharpening beat is carried by the voice
+alone.
+
 ## Never say, whichever knife is shot
 
 - **Feather** — never describe how the pattern got onto the blade. Not etched,
@@ -147,16 +202,19 @@ angle, one with the old knife and one with the new.
 
 ## File naming
 
-A-Roll: `Talkinghead_hook1..3`, `Talkinghead_body`, `Talkinghead_shortcut`.
+A-Roll: `Script1_hook1..3`, `Script1_body`, `Script2_hook1..3`, `Script2_body`.
 B-Roll: `BRoll_<Shot ID>`.
 
 ## ⚠️ Confirm before shoot
 
-**Claims.** Lifetime warranty and thirty-day money back are both in the
-script. No customer or review count is used — deliberately, because the
-archive contradicts itself on that figure.
+**Claims.** Lifetime warranty and thirty-day money back are in both scripts.
+No customer or review count is used — deliberately, because the archive
+contradicts itself on that figure.
 
-**Offer placement.** The offer lands at ~81% rather than the house 60–80%,
-because problem → agitate → solution is inherently back-loaded. Three beats
-follow it, so it resolves rather than ends the script — a deliberate
-deviation, not an oversight.
+**Script 2's "sharpened twice this year" line.** A personal claim, so it only
+goes in if it is true for the creator. The script works without it.
+
+**Offer placement.** In both scripts the offer lands at ~80–82% rather than
+the house 60–80%, because problem → agitate → solution is inherently
+back-loaded. Three beats follow it either way, so it resolves rather than ends
+the script — a deliberate deviation, not an oversight.
