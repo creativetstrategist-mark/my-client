@@ -13,7 +13,7 @@
 | Inspo link | https://app.trendtrack.io/en/share/ad/qLt2k9KONPTvbnlbSK8y3dtLSO93Exf3o9e0B-Z8Egk |
 | Offer | Buy 2 Get 2 Free |
 | Structure | Problem → Agitate → Solution. Two variations, two different loops. |
-| Runtime | Both scripts ≈ 45–50 sec. No short cut. |
+| Props needed | **Your old knife** — the dullest, most worn-down one you own; it appears in six shots and carries the "butter knife" line. **2–3 more old knives** to bin. **Food:** 2 tomatoes (one to struggle with, one to slice clean), a steak, a roast or rib-eye, a cucumber, assorted veg. **2 plain sheets of paper.** **A light-coloured wooden board** — dark handles vanish on a dark surface. **Every Northern Knife you own, in its box.** **2 "FREE" stickers** and **four knives** for the offer shot. **A phone**, **a bin**, **a kitchen drawer.** *Optional:* a whetstone, only if the sharpening shot gets added to the library first. |
 
 ## The mechanic transferred
 
