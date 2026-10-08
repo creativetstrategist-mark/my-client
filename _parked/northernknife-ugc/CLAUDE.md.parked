@@ -1,0 +1,115 @@
+# NorthernKnife — UGC Scripting
+
+This repo powers UGC script production: take a persona + product + moment +
+offer, and produce creator-ready **talking-head scripts** with iPhone-only
+shoot direction and a shared b-roll list.
+
+Brand: NorthernKnife (https://northernknife.com/) — hand-forged,
+Viking-inspired knives.
+
+Sibling repo: `my-client` (daily TrendTrack → Notion video-brief routine).
+Same brand, same copy rulebook, **different deliverable** — that repo writes
+ad briefs for an editor, this one writes words a real person says to a phone
+camera. Don't cross-paste output between the two.
+
+## Read this first
+
+`brand-pack/START-HERE.md` is the entry point to the creative reference
+library (brand voice, personas, creator direction, approved scripts, and the
+exact UGC deliverable spec). Read it before writing any script.
+
+**The single most important file is
+`brand-pack/05-process/ugc-script-process.md`.** Section D defines the *exact*
+script deliverable block by block. Section C is the copy-voice rulebook
+(banned spec-sheet jargon, hook patterns, offer rules). Section E is the
+creative-direction + b-roll spec. Section F is the pre-flight gate — run it
+on every script before delivery.
+
+The house UGC format in this workspace is the `chopper` skill (creative
+director / UGC scriptwriter: 2 scripts sharing one message and angle, 3 hooks
+each, shared creative direction, 8 shared b-roll clips). Section D is written
+to match it. When `chopper` and this doc disagree on *format*, follow
+`chopper`; when they disagree on *brand facts or copy rules*, this repo wins.
+
+## The 3 focus products
+
+Only these three — do not substitute other catalog items unless the user
+explicitly asks:
+
+| Product | Hard rules (never violate) |
+|---|---|
+| **Feather Knife** | $99.90. Rosewood handle. Blade pattern is **laser-applied** — never say hand-etched, hand-finished, or engraved. ~500-unit limited drops, ~3-month restock. Persona fit: **JOHN** (collector). |
+| **BJORN Series Santoku** | Norse engravings on blade, dragon-sculpted **brass** bolster, hand-carved wooden handle. **Never reference Japanese origins or use the word "Japanese"** — santoku is a Japanese-origin knife shape but the brand never says so. Persona fit: **JOHN**. |
+| **LOKI Blackout Edition** | $79.90. High-carbon steel, ebony handle, bottle opener built into the **handle** (not the blade/spine). Ships in a black branded box with magnetic closure. All-black remake of the #1-selling LOKI Viking Knife. Persona fit: **MIKE** (BBQ/grill self-buyer), **SARAH** (gift framing), general/deal-led for **VANCE**. |
+
+Full detail: `brand-pack/01-brand/product-catalog.md`. Persona docs:
+`brand-pack/02-personas/`.
+
+**A creator saying a hard rule out loud is still a violation.** "Hand-etched"
+in a talking-head line is worse than in a brief, because it ships in the
+creator's own voice and can't be edited out in post.
+
+## Universal copy rules (apply to every script, every product)
+
+Same rulebook as `my-client` — these do not relax for UGC.
+
+- **No spec-sheet jargon, ever**: no alloy codes, HRC/Rockwell numbers,
+  "edge retention," "blade geometry," mm/gram specs. Say the plain material
+  + the consequence ("hand-forged high-carbon steel… holds that edge").
+  Full banned list and substitution table: process doc Section C.1.
+- **The mechanic transfers, the words never do.** If a reference ad or an
+  earlier script is the starting point, take its structure (hook type,
+  pacing, beat order) — every sentence gets rewritten fresh. No verbatim
+  source language, not even for an identical beat.
+- **The offer resolves the subject, never replaces it.** Whatever the hook
+  raises, the body must pay off *before* any offer appears. Offer lands
+  ~60–80% through, never first/last, followed by 2–4 more beats. Only real
+  offers exist: B2G2, B1G1, the % tiers — never invent one.
+- **Never reuse the identical offer paragraph** across the scripts in one
+  batch, or across product versions of the same concept.
+
+## UGC-specific rules (on top of the above)
+
+- **It has to be sayable.** Read every line out loud. If it needs a second
+  breath, a comma the speaker won't hear, or a word nobody says at a grill,
+  rewrite it. Contractions always.
+- **The creator is a person, not a voiceover.** No "introducing," no
+  "look no further," no stacked adjectives. One idea per sentence.
+- **Never script a claim the creator can't personally stand behind.** No
+  invented ownership duration, no fake gift recipient, no "I've had this for
+  three years" unless the brief says the creator actually has.
+- **Never script an on-screen caption that makes a claim the spoken line
+  doesn't.** Captions reinforce; they don't add claims.
+- **Every script must be shootable on an iPhone alone**, by one person, in
+  the locations named in the brief. No gimbals, no second operator, no
+  lighting kit. If a beat needs gear, cut the beat.
+
+## Where things live
+
+- `brand-pack/` — reference library (read-only source material).
+  - `01-brand/` — product catalog + brand voice.
+  - `02-personas/` — JOHN, MIKE, SARAH, VANCE.
+  - `03-creator-direction/` — iPhone shoot direction + the b-roll library.
+  - `04-approved-scripts/` — scripts that shipped and performed. Swipe the
+    *mechanic*, never the lines.
+  - `05-process/ugc-script-process.md` — **authoritative deliverable spec.**
+- `ugc-scripts/` — output. One file per batch, named
+  `YYYY-MM-DD-<product>-<persona>-<moment>.md`, from `_template.md`.
+- `ugc-scripts/processed-concept-log.md` — dedup ledger. Every concept
+  (persona × product × moment × angle) that ships gets logged. **Check this
+  before writing** so the same angle isn't produced twice in a row.
+
+## Delivery
+
+Scripts are committed to `ugc-scripts/` in this repo. If the user also wants
+them in Notion, mirror the `my-client` convention: one page per script in the
+agreed database, matching the existing page structure/properties exactly —
+and if the Notion connector isn't available in a given run, say so explicitly
+rather than silently skipping delivery.
+
+## Scaffold status
+
+The product hard rules and copy rules above are authoritative. The brand-voice,
+persona, and creator-direction docs are structured stubs — every field needing
+content from the source brand pack is marked `TODO(brand-pack)`. **Do not
+invent brand facts to fill them.** Fill from the source pack, or ask.
