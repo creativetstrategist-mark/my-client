@@ -1,5 +1,12 @@
 # UGC Script Process — authoritative spec
 
+> ⚠️ **Superseded in part.** This doc was written from the `chopper` skill
+> and the `my-client` copy rulebook, before the live Notion pages were read.
+> `observed-notion-structure.md` (2026-10-08) records what Notion actually
+> does and lists where this doc is wrong — including the Feather pattern rule,
+> where this doc scripts a line the live brief forbids. **Read that first and
+> let it win on any conflict.**
+
 This is the authoritative document for how a NorthernKnife UGC script is
 written, formatted, and checked. If `CLAUDE.md` and this doc disagree on a
 *brand fact*, CLAUDE.md wins. On *format and process*, this doc wins.

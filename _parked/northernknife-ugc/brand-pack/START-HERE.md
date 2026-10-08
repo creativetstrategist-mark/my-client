@@ -6,15 +6,18 @@ Read in this order. Don't write a line of script before step 3.
    rules, UGC-specific rules.
 2. **`01-brand/product-catalog.md`** — the 3 focus products and every claim
    you're allowed to make about them.
-3. **`05-process/ugc-script-process.md`** — **authoritative.** Intake,
+3. **`05-process/observed-notion-structure.md`** — field notes from the live
+   Notion workspace (2026-10-08). **Wins over the process doc on any
+   conflict**, and lists where the process doc is wrong.
+4. **`05-process/ugc-script-process.md`** — Intake,
    copy rulebook, the deliverable block by block, creative direction, b-roll,
    and the pre-flight gate.
-4. **`02-personas/`** — the persona for this batch. One of JOHN, MIKE,
+5. **`02-personas/`** — the persona for this batch. One of JOHN, MIKE,
    SARAH, VANCE.
-5. **`01-brand/brand-voice.md`** — tone, register, and the words the brand
+6. **`01-brand/brand-voice.md`** — tone, register, and the words the brand
    doesn't use.
-6. **`03-creator-direction/`** — iPhone shoot direction and the b-roll library.
-7. **`04-approved-scripts/`** — what shipped and worked. Swipe the
+7. **`03-creator-direction/`** — iPhone shoot direction and the b-roll library.
+8. **`04-approved-scripts/`** — what shipped and worked. Swipe the
    **mechanic**; never the lines.
 
 ## The two rules that survive everything else
