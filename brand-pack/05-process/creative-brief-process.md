@@ -582,11 +582,25 @@ Page icon: **📽️** — every page in the database uses it.
    | Is It Worth It (NK560-) | Feather (NK560) |
    | I Don't Work There (NK563-565) | **Santoku (NK564)** |
    | Wish You Had Two (NK579-) | **— see the load exception below** |
+   | Stop Sawing (NK582-584) | **— load exception** |
+   | Why It Sells Out (NK585-586) | **— load exception** |
+   | Too Nice To Use (NK602-) | **Blackout — reserved, cut not written yet** |
 
-   ⚠️ **Load exception, 2026-10-07.** The strategist: *"Hammad and Umar had
-   more task this week so you can assign to other editor."* **Rule 4 is suspended
-   while that holds** — a concept may ship with no brief to Hammad, and Umar is
-   off rotation too. This is a capacity call, not a change to the rule: when the
+   ✅ **Load exception lapsed, 2026-10-13. Rule 4 applies again.** The exception
+   below was scoped to one week (*"this week"*) and that week has passed. Both
+   names are also visibly back in other strategists' rotations — Umar on NK597
+   and NK599, Hammad on NK598 and NK601. Read together with the exception's own
+   wording (*"when the week clears, Hammad resumes taking one brief per concept"*),
+   that is enough: the exception expired on its own terms rather than needing to
+   be lifted. **This is not the Renniel situation** — that pause has no expiry and
+   third-party assignments do not touch it, which is exactly why this one reads
+   differently. Rotation picks up from his last cut in this routine, the Santoku
+   on NK564, so the next is the **Blackout**.
+
+   ⚠️ **Load exception, 2026-10-07 — expired, kept for the record.** The strategist:
+   *"Hammad and Umar had more task this week so you can assign to other editor."*
+   **Rule 4 was suspended while that held** — a concept could ship with no brief to
+   Hammad, and Umar was off rotation too. This is a capacity call, not a change to the rule: when the
    week clears, Hammad resumes taking one brief per concept and the product
    rotation above picks up where it left off (his last was the Santoku on NK564).
    **Do not read this as Hammad being paused the way Renniel is** — nobody said
