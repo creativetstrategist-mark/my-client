@@ -202,6 +202,93 @@ ORDER BY createdTime ASC
 Bind values as `?` parameters rather than inlining them. Sort **ascending** so
 the longest-waiting brief is announced first.
 
+## 🚦 Pre-send gate: the naming convention's editor must match the `Editor` property
+
+**Mark's standing instruction, 2026-10-13. Applies to every batch from now on.**
+
+Before posting a brief and before flipping its status, confirm the editor baked
+into the page's **naming-convention strings** is the same person as the `Editor`
+property. If they disagree, **stop on that brief** — see below.
+
+### Why this matters
+
+The editor's name is written into the `Batch name` row and into every
+`File naming` row (`H1`, `H2`, `H3`). Those strings are what the editor names
+their delivered files with. So a mismatch does real damage either way:
+
+- Route by the `Editor` property → the right person gets it and names every file
+  with **someone else's name**, which breaks the downstream file convention and
+  any reporting that parses it.
+- Route by the naming string → the **wrong person** gets the brief, and the
+  `Editor` property that everything else reads from is wrong.
+
+Neither is recoverable after the fact without a re-edit, which is why this is a
+blocking gate rather than a warning.
+
+### How to read the editor out of the string
+
+Example (NK601, verified live 2026-10-13):
+
+```
+NK601_VID_AI-VO_Worth The Money_H1_A_LOKI Blackout_MIKE_B2G2_Adapt_Andy_Hammad_6r-Blackout_10.08.26_…
+                                                                     ^^^^  ^^^^^^
+                                                                 Strategist  Editor
+```
+
+**Anchor on the `Strategist` property value, and take the next underscore
+segment.** That is far more robust than a fixed index: the editor happens to sit
+at position 12 in every page checked so far, but concept names vary in length and
+naming series have historically shifted segment positions (see the strategist
+parsing warning in `weekly-winner-check/winner-detection-process.md`).
+
+Then **validate the candidate against the 8 valid `Editor` option strings**
+(`Hasnain` · `Renniel` · `Umar` · `Hammad` · `Onyeka` · `Anas` · `Naveed` ·
+`Huzaifa`). Anything else means the parse went wrong, not that a new editor
+exists.
+
+Check **the `Batch name` row and all three `File naming` rows**. They can
+disagree with each other as well as with the property — a hook variant edited by
+hand is an easy place for a stale name to survive.
+
+### On any mismatch: stop on that brief
+
+- **Do not post it.** Do not flip its status.
+- **Do not pick a winner.** The `Editor` property is not automatically right, and
+  neither is the string. Only Mark can say which was intended.
+- **Report it to Mark** with the Creative ID, both names, and which rows
+  disagree.
+- Carry on with the rest of the batch — one bad brief does not hold up the
+  others.
+
+Treat an editor segment you cannot locate, or one that is not a valid option
+string, exactly the same way: stop and report. Never post a brief whose editor
+you could not verify.
+
+### ⚠️ Only the editor slot is checked
+
+The body strings use abbreviated forms and **already drift from the properties in
+other slots** — this is normal and must not be "fixed" or treated as a mismatch:
+
+| Slot | Batch name | Property |
+|---|---|---|
+| Category | `Adapt` | `Net New` |
+| Avatar | `MIKE` | `MIKE- BBQ KING` |
+| Product | `BJORN Santoku` | `LOKI Blackout` / `SANTOKU` |
+| Landing page | `6r-Blackout` | `6 Reasons - General` |
+
+Mark asked for the **editor** check specifically. Do not widen it.
+
+### Cost of this gate
+
+The naming strings live in the page **body**, not in a property, so this requires
+a **full page fetch per brief** — the detection query cannot see them. At 15
+briefs a batch that is 15 page reads, each returning the whole brief. That is the
+price of the check; do not skip it to save calls, and do not try to infer the
+editor from anything cheaper.
+
+Checked so far: **NK601** (`Andy_Hammad`, property `Hammad`) ✅ and **NK612**
+(`Mark_Hasnain`, property `Hasnain`) ✅ — both match.
+
 ## Editor → Slack mapping (verified live 2026-10-13)
 
 Channel IDs are used rather than `#names` because a renamed channel keeps its
@@ -465,6 +552,7 @@ posted.
 | **`Editor = Huzaifa`** (off roster) | Fallback channel for Mark. No flip. |
 | **Editor not in the mapping table** | Fallback channel for Mark, naming the editor and the missing mapping. No flip. Never post into a channel guessed from the editor's name. |
 | **Slack post fails** (channel gone, not a member, API error) | No flip. Report it. Do not retry into a different channel. |
+| **Naming-convention editor ≠ `Editor` property** | No post, no flip, no guessing which is right. Report the Creative ID, both names and which rows disagree. See the pre-send gate above. |
 
 In every "no flip" case the brief deliberately stays in `Ready to edit` and
 resurfaces next sweep. That repetition is intended — it is a standing reminder of
@@ -524,6 +612,7 @@ routine instead, delete its row from this table and set its `Status` back to
 | Dedup | **Flip `Status` to `Assigned to Editor`** after posting. No repo ledger. |
 | Pre-existing backlog | Initially **suppressed** to avoid a scheduled first run blasting seven editors. Superseded the same day: on the on-demand model Mark said "go, clear the 10", and all 11 non-Callum briefs were posted and flipped. **No suppression list going forward.** |
 | Callum's work | **Never touch it.** See the hard rule at the top. |
+| Editor verification | **Blocking pre-send gate**: the editor in the Batch name / File naming rows must match the `Editor` property, or the brief is skipped and reported. Neither side is assumed correct. |
 | Scheduling | **None.** No cron, no trigger. Mark gives a go signal and the sweep runs then. The trigger built on 2026-10-13 was deleted. |
 | Editor access to briefs | **Public share on the `Evergreen Video` database**, enabled by Mark 2026-10-13. None of the 7 editors was a Notion user. Inherits to all brief rows, so no per-brief work. Two things still unconfirmed: whether "Allow editing" is on (required for `Delivery Link`), and whether it works from a logged-out browser — neither is checkable by any API. Free Notion guests remain the recommended alternative. |
 

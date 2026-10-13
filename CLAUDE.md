@@ -101,6 +101,11 @@ Four rules worth knowing without opening the spec:
   goes to Mark's channel as needing an owner and keeps its status. The
   editor-assignment rules in `notion-schema-verified.md` govern brief *creation*
   only — reusing them here would paper over a real gap.
+- **Check the editor before posting.** The editor written into the page's Batch
+  name and File naming rows must match the `Editor` property. On a mismatch,
+  skip that brief and report it — never guess which side is right, because one
+  way the wrong person gets the brief and the other way the right person names
+  every file after someone else.
 - **Post first, then flip**, and never flip a page that was not successfully
   posted. A draft is not a post. The safe failure is a brief that stays in
   `Ready to edit`.
