@@ -93,28 +93,67 @@ only once Mark confirms the message actually went out. The safe failure is a
 brief that stays in `Ready to edit`.
 
 
-## 🚫 Prerequisite: the 7 editors must be Notion guests with edit access
+## 🚫 Prerequisite: editor access to the brief pages
 
-**Mark's decision, 2026-10-13 (final).** Superseded two earlier plans the same
-day — publishing the parent to the web, then publishing each brief page — both
-dropped in favour of named guest accounts.
+### Current state: `Evergreen Video` is shared publicly
 
-### Why it was needed at all
+**Mark enabled public access on the `Evergreen Video` database on 2026-10-13**
+(`2cf4ac627aac807bbd7ce549323ebde4`). Because Notion share settings inherit
+downward, that covers **every brief row in it, including every brief the daily
+routine creates in future** — so there is nothing to do per brief. This replaced
+an earlier per-page plan, which would have meant up to 15 manual toggles a day.
 
-`notion-get-users` showed that **not one of the 7 active editors was a Notion
-user** — no `umar@`, `hammad@`, `onyeka@`, `hasnain@`, `anas@`, `naveed2@` or
-`renniel@`. The workspace held only Bryan Valeza, Callum, Damien Reymond, Kel,
-Mark, Nigel, the Northern Knife account and bots (NK Automation, NK Bridge,
-Notion MCP, Zapier).
+### Why access was needed at all
 
-So brief links failed for the editors no matter how well formed, and they could
-not write `Delivery Link` back onto the page — which is the whole point of
-sending it.
+`notion-get-users` showed **not one of the 7 active editors was a Notion user** —
+no `umar@`, `hammad@`, `onyeka@`, `hasnain@`, `anas@`, `naveed2@` or `renniel@`.
+The workspace held only Bryan Valeza, Callum, Damien Reymond, Kel, Mark, Nigel,
+the Northern Knife account and bots (NK Automation, NK Bridge, Notion MCP,
+Zapier). So brief links failed for the editors however well formed, and they
+could not write `Delivery Link` back onto the page.
 
-### The setup
+### ⚠️ Two things nobody has confirmed yet
 
-Invite all 7 as **guests** on the **`Video Brief Database`** page
-(`2cf4ac627aac80bb9f71e0542c06ef30`) with **Can edit**.
+**1. Is editing enabled, or is the share read-only?** Notion's "Share to web" has
+a separate **"Allow editing"** toggle. Public *read* access is enough to open a
+brief, but **`Delivery Link` is a page property and filling it in is a write** —
+so if editing is off, editors can read their briefs and still cannot do the one
+thing they are meant to do with the page. Check the toggle.
+
+**2. Does it actually work from outside?** Verify in a **private/incognito
+window, logged out**: open a brief, confirm you can read it *and* change a
+property.
+
+### ⚠️ Nothing automated can verify this — it is a human check only
+
+Both facts above have to be checked by hand, because:
+
+- **The Notion connector exposes no sharing or permission tool**, and a page's
+  published state is not readable through it. There is no API for share-to-web at
+  all, so Zapier and Notion's own automations are equally blind to it.
+- **An authenticated session cannot tell the difference.** Every link opens for
+  Mark whether or not the page is published, so testing from a logged-in browser
+  proves nothing.
+- **This environment cannot test it either** — DNS to `notion.so` and
+  `app.notion.com` is blocked by the egress policy (verified 2026-10-13), so even
+  an anonymous fetch from here is impossible.
+
+So **an unpublished page, a read-only share and a malformed URL are
+indistinguishable from Slack.** When an editor reports a brief they cannot open
+or cannot edit, check in this order: the incognito test, then the "Allow editing"
+toggle, then the `/p/` URL form.
+
+### The lower-risk alternative, still recommended
+
+Public sharing means anyone with the link can read and — if editing is on —
+silently change a brief, with no account and no audit trail. A forwarded Slack
+message or a screenshot is enough.
+
+**Notion guests remove that without costing anything.** Guests are free (even the
+free plan allows 10; paid plans 100+) and are invited **by email, so not already
+being a Notion user is no barrier** — each gets a free account on accepting.
+Invite all 7 on the `Video Brief Database` page
+(`2cf4ac627aac80bb9f71e0542c06ef30`) with **`Can edit`**:
 
 | Editor (Notion `Editor` option) | Invite by email |
 |---|---|
@@ -122,58 +161,19 @@ Invite all 7 as **guests** on the **`Video Brief Database`** page
 | `Hammad` | `hammad@nebula-studio.co` |
 | `Onyeka` | `onyeka@nebula-studio.co` |
 | `Hasnain` | `hasnain@nebula-studio.co` |
-| `Anas` | `anas@nebula-studio.co` ⚠️ see the duplicate-accounts note |
+| `Anas` | `anas@nebula-studio.co` ⚠️ not the `zoomberry.work` account |
 | `Naveed` | `naveed2@nebula-studio.co` (the `2` is part of the real address) |
 | `Renniel` | `renniel@nebula-studio.co` |
 
-Emails taken from their Slack accounts, verified 2026-10-13. `Huzaifa` is off the
+Emails from their Slack accounts, verified 2026-10-13. `Huzaifa` is off the
 active roster and gets no invite.
 
-Why this target and this level:
+Guests also fix the verification gap: **`notion-get-users` can confirm all 7
+appear**, which is something no public share can offer. A guest shows up only
+once they *accept*, so a missing name may mean an unaccepted invite.
 
-- **`Video Brief Database` page, not the database row or `NK Creative Strategy
-  Lab`.** Access inherits downward, so this one page covers the `Evergreen Video`
-  database, every brief in it and every brief the daily routine creates in
-  future. `NK Creative Strategy Lab` would be far too broad — it would hand over
-  the whole brand pack.
-- **`Can edit`, not `Can comment`.** `Delivery Link` is a page property; filling
-  it in is a write.
-- **Guests, not members.** Guests are free (even the free plan allows 10; paid
-  plans 100+), and they are invited **by email, so not already being a Notion
-  user is no barrier** — each gets a free account on accepting. Members would
-  cost a paid seat each and grant workspace-wide access nobody needs.
-
-### Why this beat publishing to the web
-
-Both earlier plans worked on paper. This one removes the failure mode:
-
-| | Guests ✅ | Public per page ❌ |
-|---|---|---|
-| Ongoing work | none — inherits forever | ~15 toggles/day, every day |
-| Who changed a brief | named, with history | anonymous, no audit trail |
-| If a link is forwarded | useless to outsiders | full read **and write** access |
-| Can this play verify it? | **yes** — `notion-get-users` | no, not readable via any API |
-
-That last row decided it. Per-page publishing was the only part of the workflow
-that nothing could automate *or* check: one forgotten page meant a dead link for
-an editor and no system — not this play, not Notion, not Zapier — could notice.
-Guest access is granted once and cannot be forgotten.
-
-### Verifying it
-
-Run `notion-get-users` and confirm all 7 addresses appear. Do this after the
-invites go out, and again if an editor ever reports a link they cannot open.
-Guests show up once they **accept** the invite, so a missing name may just mean
-an unaccepted invite — check that before re-inviting.
-
-### Two things to know
-
-- **Notion has no per-row permissions.** All 7 guests can see and edit every
-  brief in the database, not only their own. That matches how the Slack channels
-  already work in practice, but it is worth knowing it is not scoped per editor
-  and cannot be.
-- **Guests see the pages, not the workspace.** They get the `Video Brief
-  Database` and its contents, and nothing else in `NK Creative Strategy Lab`.
+Note Notion has no per-row permissions either way — all editors can see and edit
+every brief in the database, not only their own.
 
 ## ⚠️ Exact option strings (do not paraphrase)
 
@@ -474,7 +474,7 @@ routine instead, delete its row from this table and set its `Status` back to
 | Pre-existing backlog | Initially **suppressed** to avoid a scheduled first run blasting seven editors. Superseded the same day: on the on-demand model Mark said "go, clear the 10", and all 11 non-Callum briefs were posted and flipped. **No suppression list going forward.** |
 | Callum's work | **Never touch it.** See the hard rule at the top. |
 | Scheduling | **None.** No cron, no trigger. Mark gives a go signal and the sweep runs then. The trigger built on 2026-10-13 was deleted. |
-| Editor access to briefs | **Invite the 7 editors as free Notion guests on the `Video Brief Database` page with `Can edit`.** None of them was a Notion user. Chosen over two earlier plans (publish the parent to the web, then publish each page) because guest access inherits once, is attributable, and is the only option this play can actually verify. Guests are invited by email, so not being a Notion user was never a barrier. |
+| Editor access to briefs | **Public share on the `Evergreen Video` database**, enabled by Mark 2026-10-13. None of the 7 editors was a Notion user. Inherits to all brief rows, so no per-brief work. Two things still unconfirmed: whether "Allow editing" is on (required for `Delivery Link`), and whether it works from a logged-out browser — neither is checkable by any API. Free Notion guests remain the recommended alternative. |
 
 ## Appendix: environment facts worth keeping
 
@@ -597,5 +597,6 @@ stop and report that rather than working from this prompt's summary.
 | Date | Posted | Fallback | Skipped (Callum) | Skipped (other) | Notes |
 |---|---|---|---|---|---|
 | 2026-10-13 | — | — | — | — | Spec written, mapping verified live, baseline of 15 recorded. A scheduled trigger was built and test-fired, which proved MCP-created triggers get no connectors on this org; it was then **deleted** when Mark said he has no scheduled Routines and will give a go signal instead. See the scheduling appendix. |
+| 2026-10-13 | 10 (corrections) | — | — | — | **Reposted all 10 links** as thread replies with channel broadcast, after the originals went out malformed (missing `/p/`). Mark had enabled public access on the `Evergreen Video` database. Statuses already `Assigned to Editor`, so none were re-flipped. |
 | 2026-10-13 | **10** | — | 3 (NK587/588/589) | 1 (malformed row) | **Backlog cleared on Mark's "go, clear the 10".** NK601→Umar… full list: NK601/604/609/613→Hammad, NK599→Umar, NK603→Anas, NK606/612→Hasnain, NK607→Naveed, NK610→Onyeka. Direct `slack_send_message` was permitted this time (the earlier refusal did not recur), so no drafts were needed. All 10 posted, then all 10 flipped to `Assigned to Editor`; re-query confirmed `Ready to edit` dropped 15→4. Baseline discharged. |
 | 2026-10-13 | 1 (NK584) | — | — | — | **First live end-to-end test**, run by hand from a session with both connectors. Detect → format → post to `#11-onyeka-editing` → flip to `Assigned to Editor`, all verified. Two findings: bold needs `**` not `*` (the first attempt rendered italic), and direct Slack sends are blocked by the Claude Code auto-mode classifier, so the message went out as a draft Mark sent. The italic first attempt is a duplicate in that channel and can be deleted. |

@@ -109,12 +109,13 @@ Four rules worth knowing without opening the spec:
   Slack message's raw source looks like. This broke the first live test.
 - **Links must be `https://app.notion.com/p/<id>`.** The query's `url` column
   omits the `/p/` and the resulting link does not work.
-- **The 7 editors are Notion guests** on the `Video Brief Database` page with
-  `Can edit` — none was a Notion user, and they write `Delivery Link` back onto
-  the page. Access inherits, so this covers every brief including future ones;
-  there is nothing to do per brief. Confirm with `notion-get-users` if an editor
-  reports a link they cannot open — a guest only appears once they accept the
-  invite.
+- **Editors reach briefs via a public share on the `Evergreen Video` database**
+  (enabled 2026-10-13) — none of the 7 is a Notion user, and they write
+  `Delivery Link` back onto the page. It inherits to every brief including future
+  ones, so there is nothing to do per brief. **No API can verify a public share**,
+  so if an editor cannot open or edit a brief, check it in a logged-out incognito
+  window and confirm Notion's separate "Allow editing" toggle is on — read-only
+  access is not enough to fill in `Delivery Link`.
 
 ## The daily routine
 
