@@ -286,8 +286,49 @@ briefs a batch that is 15 page reads, each returning the whole brief. That is th
 price of the check; do not skip it to save calls, and do not try to infer the
 editor from anything cheaper.
 
-Checked so far: **NK601** (`Andy_Hammad`, property `Hammad`) ✅ and **NK612**
-(`Mark_Hasnain`, property `Hasnain`) ✅ — both match.
+### Verified: all 11 of the 2026-10-13 batch match
+
+Swept on Mark's request after the gate was written. Every brief's Batch name and
+all three File naming rows agree with the `Editor` property:
+
+| Brief | String (`…_Strategist_Editor_…`) | `Editor` property |
+|---|---|---|
+| NK584 | `Mark_Onyeka` | Onyeka ✅ |
+| NK599 | `Andy_Umar` | Umar ✅ |
+| NK601 | `Andy_Hammad` | Hammad ✅ |
+| NK603 | `Mark_Anas` | Anas ✅ |
+| NK604 | `Mark_Hammad` | Hammad ✅ |
+| NK606 | `Mark_Hasnain` | Hasnain ✅ |
+| NK607 | `Mark_Naveed` | Naveed ✅ |
+| NK609 | `Mark_Hammad` | Hammad ✅ |
+| NK610 | `Mark_Onyeka` | Onyeka ✅ |
+| NK612 | `Mark_Hasnain` | Hasnain ✅ |
+| NK613 | `Mark_Hammad` | Hammad ✅ |
+
+So the gate found no editor mismatches in this batch — but see below for what it
+did find.
+
+### 💡 The gate reads the whole brief anyway, so look at the copy too
+
+The check needs a full page fetch, which means the script is in front of you for
+free. The 2026-10-13 sweep caught a product-accuracy error no editor check would
+have:
+
+- **NK599 says "copper bolster" twice.** The BJORN Santoku's bolster is
+  **brass** (`brand-pack/01-brand/product-catalog.md`, and CLAUDE.md's hard
+  rules). NK603, NK606 and NK609 all say brass correctly, so it is an isolated
+  slip, not a changed fact. Reported to Mark; it was already with Umar.
+- **NK599 also says "Rosewood handle"** for the Santoku. Rosewood is the
+  **Feather's** handle; the Santoku is "hand-carved wooden" and the other three
+  Santoku cuts name no wood. Likely a Feather attribute leaking across.
+
+Both are `Strategist = Andy` briefs, written outside the daily routine's own
+voice checks.
+
+**This is not a licence to rewrite copy.** Flag what you see to Mark and leave
+the page alone — the brief is the strategist's work. But a hard product rule
+broken in a brief that is about to be filmed is worth one line in the run
+summary, and the hard rules are in CLAUDE.md and the product catalog.
 
 ## Editor → Slack mapping (verified live 2026-10-13)
 
@@ -737,6 +778,7 @@ stop and report that rather than working from this prompt's summary.
 | Date | Posted | Fallback | Skipped (Callum) | Skipped (other) | Notes |
 |---|---|---|---|---|---|
 | 2026-10-13 | — | — | — | — | Spec written, mapping verified live, baseline of 15 recorded. A scheduled trigger was built and test-fired, which proved MCP-created triggers get no connectors on this org; it was then **deleted** when Mark said he has no scheduled Routines and will give a go signal instead. See the scheduling appendix. |
+| 2026-10-13 | 11 (resent clean) | — | — | — | **Editor-vs-naming sweep of the whole batch: all 11 match**, across the Batch name and all three File naming rows. Also resent all 11 messages with `/p/` links after Mark deleted the malformed originals. Separately flagged a product-accuracy error in NK599 ("copper bolster" — the Santoku's is brass; also "Rosewood handle", which is the Feather's), both on `Strategist = Andy` briefs. |
 | 2026-10-13 | 10 (corrections) | — | — | — | **Reposted all 10 links** as thread replies with channel broadcast, after the originals went out malformed (missing `/p/`). Mark had enabled public access on the `Evergreen Video` database. Statuses already `Assigned to Editor`, so none were re-flipped. |
 | 2026-10-13 | **10** | — | 3 (NK587/588/589) | 1 (malformed row) | **Backlog cleared on Mark's "go, clear the 10".** NK601→Umar… full list: NK601/604/609/613→Hammad, NK599→Umar, NK603→Anas, NK606/612→Hasnain, NK607→Naveed, NK610→Onyeka. Direct `slack_send_message` was permitted this time (the earlier refusal did not recur), so no drafts were needed. All 10 posted, then all 10 flipped to `Assigned to Editor`; re-query confirmed `Ready to edit` dropped 15→4. Baseline discharged. |
 | 2026-10-13 | 1 (NK584) | — | — | — | **First live end-to-end test**, run by hand from a session with both connectors. Detect → format → post to `#11-onyeka-editing` → flip to `Assigned to Editor`, all verified. Two findings: bold needs `**` not `*` (the first attempt rendered italic), and direct Slack sends are blocked by the Claude Code auto-mode classifier, so the message went out as a draft Mark sent. The italic first attempt is a duplicate in that channel and can be deleted. |
