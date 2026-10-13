@@ -584,7 +584,7 @@ Page icon: **📽️** — every page in the database uses it.
    | Wish You Had Two (NK579-) | **— see the load exception below** |
    | Stop Sawing (NK582-584) | **— load exception** |
    | Why It Sells Out (NK585-586) | **— load exception** |
-   | Too Nice To Use (NK602-) | **Blackout — reserved, cut not written yet** |
+   | Too Nice To Use (NK602-604) | **Blackout (NK604)** |
 
    ✅ **Load exception lapsed, 2026-10-13. Rule 4 applies again.** The exception
    below was scoped to one week (*"this week"*) and that week has passed. Both
@@ -595,7 +595,7 @@ Page icon: **📽️** — every page in the database uses it.
    be lifted. **This is not the Renniel situation** — that pause has no expiry and
    third-party assignments do not touch it, which is exactly why this one reads
    differently. Rotation picks up from his last cut in this routine, the Santoku
-   on NK564, so the next is the **Blackout**.
+   on NK564, so the next is the **Blackout** — taken on NK604.
 
    ⚠️ **Load exception, 2026-10-07 — expired, kept for the record.** The strategist:
    *"Hammad and Umar had more task this week so you can assign to other editor."*
