@@ -1,0 +1,253 @@
+# Editor assignment on "Ready to edit" → Slack
+
+*Verified directly against live systems on 2026-10-13: `notion-fetch` on the
+Evergreen Video data source, a real `Status = 'Ready to edit'` query returning 15
+rows, the live Slack channel list, and the real member IDs of all 7 active
+editors. Design decisions confirmed by Mark on 2026-10-13 — see "Decisions on
+record".*
+
+Notion database: **NK Creative Strategy Lab / Video Brief Database / Evergreen Video**
+Data source: `collection://2cf4ac62-7aac-81a8-86bf-000b96778943`
+
+## What this routine does
+
+When a brief page reaches **`Ready to edit`**, post it into that brief's
+editor's own Slack channel so the editor is told it is theirs, then move the page
+to **`Assigned to Editor`** so it leaves the queue.
+
+This job is **already being done by hand** — Mark and Callum post brief links
+into the `#11-<editor>-editing` channels manually (see the message-format section;
+the format below is copied from what they already send, not invented). The
+routine automates that handoff, it does not introduce a new convention.
+
+## 🚫 Hard rule: never touch Callum's work
+
+**Standing instruction from Mark, 2026-10-13: never touch work that has `Callum`
+as Strategist.**
+
+Any page with `Strategist = Callum` is out of scope for this routine
+completely:
+- do **not** post it to an editor,
+- do **not** post it to the fallback channel,
+- do **not** change its `Status`,
+- do **not** flag it for triage.
+
+Filter on `Strategist` in the detection query itself so a Callum page is never
+even a candidate. Count them in the run summary if useful, but take no action.
+This rule outranks every other rule in this doc, including the blank-editor
+handling below. Note that Callum is a member of every editor channel and does
+these handoffs himself — his briefs are his to route.
+
+## ⚠️ This is a poll, not a real-time trigger
+
+Notion does **not** push status changes to Claude — there is no Notion→Claude
+webhook in this setup. So "when the status flips" is really "the next time the
+routine looks." The routine runs on a cron schedule and sweeps for anything
+sitting in `Ready to edit`.
+
+The practical floor on Routine frequency is **hourly**, so an editor can wait up
+to an hour before being told. If assignments ever need to be instant, Notion's
+own database automation (Evergreen Video → Automations → "When Status is set to
+Ready to edit → send Slack notification") fires on the edit itself — but it
+cannot do the per-editor channel routing, the Callum exclusion, the roster
+validation, or the status flip that this routine does.
+
+## ⚠️ Exact option strings (do not paraphrase)
+
+| Thing | Exact live string | Common wrong guess |
+|---|---|---|
+| Trigger status | `Ready to edit` | ~~`Ready to Edit`~~ — lowercase `e` on "edit" |
+| Post-notify status | `Assigned to Editor` | ~~`Assigned to editor`~~ — capital `E` here |
+| `Status` property type | `status` (not `select`) | — |
+| `Editor` property type | `select` — bare first-name strings, **not** Notion person objects | — |
+
+Because `Editor` is a select of bare first names, it carries no email and no
+Notion user identity. The Slack destination has to come from the mapping table
+below; it cannot be derived from Notion.
+
+## Detection query
+
+```sql
+SELECT "Creative ID", "Concept Name", "Product", "Content", "Editor",
+       "Status", "Strategist", "Format", "Offer", url, createdTime
+FROM "collection://2cf4ac62-7aac-81a8-86bf-000b96778943"
+WHERE "Status" = 'Ready to edit'
+  AND ("Strategist" IS NULL OR "Strategist" != 'Callum')
+ORDER BY createdTime ASC
+```
+
+Bind values as `?` parameters rather than inlining them. Sort **ascending** so
+the longest-waiting brief is announced first.
+
+## Editor → Slack mapping (verified live 2026-10-13)
+
+Channel IDs are used rather than `#names` because a renamed channel keeps its
+ID. Member IDs are used for `@`-mentions because a plain `@firstname` string does
+not reliably notify.
+
+| Editor (Notion option) | Slack channel | Channel ID | Member ID for @-mention | Account used |
+|---|---|---|---|---|
+| `Umar` | `#11-umar-editing` | `C0B28C13XDW` | `U0B17QTTMRR` | umar@nebula-studio.co |
+| `Hammad` | `#11-hammad-editing` | `C0APFKCF6ET` | `U0ADU723N7M` | hammad@nebula-studio.co |
+| `Onyeka` | `#11-onyeka-editing` | `C0APX296L9Y` | `U0AQV2XKK5X` | onyeka@nebula-studio.co |
+| `Hasnain` | `#11-hasnain-editing` | `C0BMZ97T3D3` | `U0BMUAWCEG5` | hasnain@nebula-studio.co |
+| `Anas` | `#11-anas-editing` | `C0BQSRKS30U` | `U0BRQ3YNNB1` | anas@nebula-studio.co ⚠️ |
+| `Naveed` | `#11-naveed-editing` | `C0BRV68UN12` | `U0BS68YP8MU` | naveed2@nebula-studio.co |
+| `Renniel` | `#11-renniel-editing` | `C0BSC1C8WMN` | `U0BUKU9GDM5` | renniel@nebula-studio.co ⚠️ |
+| `Huzaifa` | — none — | — | — | **off roster, never assign** |
+| _fallback (exceptions)_ | `#11-mark` | `C09QUL7S3GA` | `U0A127WHE9M` (Mark) | — |
+
+### ⚠️ Two editors have duplicate Slack accounts
+
+Both were resolved by checking who actually talks in that editor's own channel,
+not by guessing from the name:
+
+- **Anas** — two accounts exist: `Anas` / `anas@zoomberry.work` / `U0BQHRXQKJP`,
+  and `Muhammad Anas` / `anas@nebula-studio.co` / `U0BRQ3YNNB1`. **Use
+  `U0BRQ3YNNB1`** — that is the account posting "you can assign me new tasks" in
+  `#11-anas-editing` (2026-09-28, 2026-10-02, 2026-10-12). The `zoomberry.work`
+  account is a different person or an old external account; never mention it.
+- **Renniel** — two accounts exist: `Renniel` / `renniel@nebula-studio.co` /
+  `U0BUKU9GDM5`, and `Renniel Anenias` / `aneniasrenniel40@gmail.com` /
+  `U0BRFMN7KKQ`. **Use `U0BUKU9GDM5`** — both Mark and Andy mention that ID in
+  `#11-renniel-editing`, and Renniel replies from the nebula-studio address. The
+  gmail account appears to predate onboarding.
+
+If either editor stops responding to mentions, re-check this before assuming
+they are ignoring the brief.
+
+### Editor channels are not private to the editor
+
+Each `#11-<editor>-editing` channel also contains Andy, Damien, Callum and Nigel
+alongside Mark and the editor. Posts are management-visible by design — that is
+the existing convention, not a leak. Do not post anything into them you would
+not want the whole team to read.
+
+There are also `#11-jason-editing`, `#11-khizra-editing`, `#11-shafaq-editing`,
+`#11-saad-editing` and `#11-andy-editing-trial` channels for people who are **not**
+options in the Notion `Editor` property. They are outside this routine. Never
+post to a channel just because its name resembles an editor's — only the eight
+rows in the table above are valid destinations.
+
+## Message format
+
+Match the existing house convention exactly. What Mark already sends is a single
+bold linked line; what Callum sends via Claude adds the `@`-mention. Combine
+both — mention, then the linked title:
+
+```
+<@MEMBER_ID> *<PAGE_URL|NK###_Concept Name_Content_Product>*
+```
+
+A real example, built from live row NK612:
+
+```
+<@U0BMUAWCEG5> *<https://app.notion.com/3f84ac627aac819683b3d3321994ea35|NK612_4 Ways To Get It Wrong - Santoku_AI VO_SANTOKU>*
+```
+
+Rules for the message:
+- **Link the page URL exactly as the query returns it.** Do not reconstruct a
+  Notion URL from the page ID, and do not bother reproducing the long
+  `?v=…&source=copy_link` form Mark's hand-posted links carry — the short form
+  resolves to the same page.
+- The title uses the `Content` property verbatim (`AI VO`, `UGC`, `Mashup`).
+  Mark often types `AI-VO` by hand in Slack; the corpus is inconsistent on this
+  and it does not matter. Do not "fix" it in either direction.
+- **Never invent a deadline, runtime, or priority.** The brief carries no
+  due-date field — the daily routine deliberately leaves `Date` blank — so any
+  urgency language would be fabricated.
+- One message per brief. Do not batch several briefs into one message; each
+  needs its own link for the editor to work from, which is how it is done today.
+- Nothing else. The editor opens the page for the script; the Slack message is a
+  pointer, not a copy of the brief.
+
+## After posting: flip the status
+
+Immediately after a successful post, set that page's `Status` to
+`Assigned to Editor` with `notion-update-page`.
+
+This **is** the dedup mechanism — there is no separate ledger. A brief leaves
+`Ready to edit` the moment it is announced, so the next sweep cannot pick it up
+again.
+
+Ordering matters: **post first, then flip.** If the flip fails, the brief gets
+announced twice — noisy but harmless. Reversed, a failed post would silently
+lose the assignment altogether. Never flip a page that was not successfully
+posted.
+
+## Edge cases (every one below was observed in the live data on 2026-10-13)
+
+| Case | What to do |
+|---|---|
+| **`Strategist = Callum`** | Out of scope entirely. No post, no flip, no triage. See the hard rule at the top — it wins over everything else in this table. |
+| **`Editor` is blank** (and strategist is not Callum) | Do **not** guess, and do **not** apply the daily routine's editor-assignment rules — those govern brief *creation*, and silently picking someone here would hide a real gap. Post to the fallback channel for Mark saying it needs an owner, and **leave `Status` as `Ready to edit`** so it stays queued until a human assigns it. |
+| **No `Creative ID`** / malformed row | Skip, leave the status alone, name it in the run summary. Never post it to an editor. Observed live: one row whose Concept Name is a raw `next.frame.io` URL, with no Creative ID, Product, Editor or Format. |
+| **`Editor = Huzaifa`** (off roster) | Fallback channel for Mark. No flip. |
+| **Editor not in the mapping table** | Fallback channel for Mark, naming the editor and the missing mapping. No flip. Never post into a channel guessed from the editor's name. |
+| **Slack post fails** (channel gone, not a member, API error) | No flip. Report it. Do not retry into a different channel. |
+
+In every "no flip" case the brief deliberately stays in `Ready to edit` and
+resurfaces next sweep. That repetition is intended — it is a standing reminder of
+an unresolved gap. Report these each run rather than suppressing them.
+
+## Go-live baseline — the 15 pre-existing briefs
+
+Mark's decision on 2026-10-13: **announce only new briefs from now on.** These 15
+pages were already in `Ready to edit` at go-live and must **never** be announced.
+Skip any page whose ID appears here.
+
+| Creative ID | Concept Name | Product | Editor | Page ID | Note |
+|---|---|---|---|---|---|
+| NK612 | 4 Ways To Get It Wrong - Santoku | SANTOKU | Hasnain | `3f84ac627aac819683b3d3321994ea35` | |
+| NK613 | 4 Ways To Get It Wrong - Blackout | LOKI Blackout | Hammad | `3f84ac627aac8143867df6b2ebddf550` | |
+| NK610 | Not For Everyone - Blackout | LOKI Blackout | Onyeka | `3f84ac627aac81019a8ee65490c885cd` | |
+| NK609 | Not For Everyone - Santoku | SANTOKU | Hammad | `3f84ac627aac81cb9fa8d2f20a54361e` | |
+| NK607 | Didn't Buy It Myself - Blackout | LOKI Blackout | Naveed | `3f84ac627aac814687cef0e2b375115f` | |
+| NK606 | Didn't Buy It Myself - Santoku | SANTOKU | Hasnain | `3f84ac627aac81cf8acfdfca6daff7eb` | |
+| NK603 | Too Nice To Use - Santoku | SANTOKU | Anas | `3f84ac627aac81999628eb6c75815e6d` | |
+| NK604 | Too Nice To Use - Blackout | LOKI Blackout | Hammad | `3f84ac627aac81c3bc04e80ef68f3721` | |
+| NK599 | Worth The Money - Santoku | SANTOKU | Umar | `3f34ac627aac814c8515e16be8ea2927` | |
+| NK601 | Worth The Money - Blackout | LOKI Blackout | Hammad | `3f34ac627aac81db86cde95e400d0828` | |
+| NK589 | 3 Checks - Blackout | LOKI Blackout | _(none)_ | `3f24ac627aac81388c02ec17be794ae5` | Callum — excluded by rule anyway |
+| NK587 | 3 Checks - Feather | Feather | _(none)_ | `3f24ac627aac8169b4bde41354fa97d4` | Callum — excluded by rule anyway |
+| NK588 | 3 Checks - Santoku | SANTOKU | _(none)_ | `3f24ac627aac817cb6efe135a9dc7e64` | Callum — excluded by rule anyway |
+| NK584 | Stop Sawing - Blackout | LOKI Blackout | Onyeka | `3f24ac627aac813ba030fb35ba42fc15` | |
+| _(none)_ | _(raw frame.io URL — malformed)_ | — | _(none)_ | `3e94ac627aac80d7be8df2fc97539316` | malformed row |
+
+**The 11 non-Callum assigned briefs above still need telling their editors by
+hand** — the baseline suppresses the automation, it does not do the work. The
+oldest (NK584) has been waiting since 2026-10-07. To hand any of them to the
+routine instead, delete its row from this table and set its `Status` back to
+`Ready to edit`.
+
+## Decisions on record (Mark, 2026-10-13)
+
+| Question | Decision |
+|---|---|
+| How to reach Slack | **Slack connector.** Not an incoming webhook — connector traffic is not subject to the environment's egress policy, resolves real user mentions, and stores no secret in the environment. |
+| Where assignments land | **One shared channel per editor** (`#11-<editor>-editing`) — not a single team channel, not DMs. |
+| Dedup | **Flip `Status` to `Assigned to Editor`** after posting. No repo ledger. |
+| Pre-existing backlog | **Suppress** — announce only new briefs. See the baseline table. |
+| Callum's work | **Never touch it.** See the hard rule at the top. |
+
+## Environment note for whoever maintains this
+
+Raw `curl` to Slack does **not** work from the cloud environment —
+`slack.com:443` returns 403 at the egress gateway (verified 2026-10-13). That is
+why the connector path was chosen. A webhook-based rewrite would additionally
+need `hooks.slack.com` added under the environment's Allowed domains.
+
+A Routine stores its connector grant at creation time and `update_trigger`
+cannot add one later, so this Routine must be created from a session that has
+**both** Notion and Slack connected. If the grant is ever lost, delete and
+recreate the Routine rather than trying to patch it.
+
+Because the Routine prompt points at this file rather than inlining the rules,
+**changing the message format or the mapping table here changes the routine's
+behaviour on its next run** — no trigger edit needed.
+
+## Run history
+
+| Date | Posted | Fallback | Skipped (Callum) | Skipped (other) | Notes |
+|---|---|---|---|---|---|
+| 2026-10-13 | — | — | — | — | Routine created. Baseline of 15 recorded, so the first sweeps are silent by design. |

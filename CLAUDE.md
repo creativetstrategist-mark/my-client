@@ -69,6 +69,36 @@ Full detail: `brand-pack/01-brand/product-catalog.md`. Persona docs:
   products it was adapted for). **Check this before picking new inspo ads**
   so the routine doesn't reuse the same source twice in a row.
 
+- `editor-assignment/editor-assignment-process.md` — spec for the
+  "Ready to edit" → Slack handoff routine (see below). Holds the verified
+  editor→Slack channel/member-ID mapping and the go-live baseline. **The routine
+  reads this file at run time**, so edit it to change the routine's behaviour.
+
+## The editor-assignment routine
+
+A second scheduled Routine sweeps the Notion "Evergreen Video" database hourly
+for briefs that have reached **`Ready to edit`** and hands each one to its
+editor in that editor's own Slack channel (`#11-<editor>-editing`), then flips
+the page to **`Assigned to Editor`** so it leaves the queue.
+
+Full spec, including the verified editor→Slack mapping, the message format and
+the edge-case table: `editor-assignment/editor-assignment-process.md`. Read it
+before changing anything about this routine.
+
+Two rules worth knowing without opening the spec:
+
+- **Never touch work with `Callum` as Strategist** — standing instruction from
+  Mark (2026-10-13). No post, no status change, no triage.
+- **Never guess an editor.** A brief sitting in `Ready to edit` with a blank
+  `Editor` goes to Mark's channel as needing an owner and keeps its status. The
+  editor-assignment rules in `notion-schema-verified.md` govern brief
+  *creation* only — reusing them here would paper over a real gap.
+
+Assignment is a **poll, not a real-time trigger**: Notion does not push status
+changes to Claude, so an editor can wait up to one sweep interval. If it ever
+needs to be instant, Notion's own database automation fires on the edit itself —
+at the cost of the channel routing, the Callum exclusion and the status flip.
+
 ## The daily routine
 
 A scheduled Routine fires daily (see the trigger created for this repo) and:
