@@ -393,6 +393,36 @@ Two consequences that have already bitten:
 When a correction is posted in-thread, use `reply_broadcast: true` so it also
 shows in the channel; a bare thread reply is easy for an editor to miss.
 
+### Correcting a bad message: ask Mark to edit it
+
+**The best fix is not a new message at all.** Mark can edit his own messages in
+the Slack app, and **an edit does not re-notify anyone** — so editing leaves one
+correct message per brief with no extra pings, which beats both deleting and
+reposting. This play cannot do it (no `chat.update`), so the correction is: tell
+Mark exactly what to change, as small an edit as possible.
+
+For the 2026-10-13 `/p/` mistake that was literally inserting `p/` after
+`app.notion.com/` in 10 messages.
+
+Order of preference when a bad message is already out:
+
+1. **Mark edits the message** — silent, one message per brief. Preferred.
+2. **Thread reply with `reply_broadcast: true`** — if it needs fixing now and
+   Mark is not around.
+3. **Fresh standalone message, then Mark deletes the bad parent** — last resort;
+   it is the noisiest, and the ordering matters because deleting a parent takes
+   its thread replies with it.
+
+Note a thread reply can be deleted safely on its own — removing a reply does not
+affect its parent. So a correction posted in-thread can be tidied up after Mark
+edits the original.
+
+One gotcha if Mark pastes a replacement rather than editing in place: **`**bold**`
+is converted on the API side, so typing it directly into Slack renders literal
+asterisks.** When composing in the Slack app, Slack's own single-asterisk
+`*bold*` is what works. The two syntaxes are not interchangeable between the tool
+and the app — see the bold section above.
+
 ### Everything else
 
 - **Never invent a deadline, runtime, or priority.** The brief carries no
