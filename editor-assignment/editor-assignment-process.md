@@ -323,34 +323,48 @@ In every "no flip" case the brief deliberately stays in `Ready to edit` and
 resurfaces next sweep. That repetition is intended — it is a standing reminder of
 an unresolved gap. Report these each run rather than suppressing them.
 
-## Go-live baseline — the 15 pre-existing briefs
+## Go-live baseline — discharged 2026-10-13 (historical record)
 
-Mark's decision on 2026-10-13: **announce only new briefs from now on.** These 15
-pages were already in `Ready to edit` at go-live and must **never** be announced.
-Skip any page whose ID appears here.
+**This list is spent. Runs from now on need no baseline at all — do not
+reintroduce one.**
+
+These 15 pages were already sitting in `Ready to edit` when the play was built.
+Mark first chose to suppress them so a scheduled first run could not blast a
+six-day backlog at seven editors; he then moved to the on-demand model and said
+"go, clear the 10", and all 11 non-Callum briefs were posted and flipped on
+2026-10-13.
+
+Everything still in `Ready to edit` from this list is now covered by a **standing
+rule** rather than by this table — the 3 Callum briefs by the hard rule at the
+top, the malformed row by the no-`Creative ID` rule. So a suppression list is no
+longer load-bearing, and keeping one would be a footgun: it would silently skip a
+brief that legitimately came back round to `Ready to edit` after a revision.
+
+Kept below purely as the record of what was waiting and what was done with it.
 
 | Creative ID | Concept Name | Product | Editor | Page ID | Note |
 |---|---|---|---|---|---|
-| NK612 | 4 Ways To Get It Wrong - Santoku | SANTOKU | Hasnain | `3f84ac627aac819683b3d3321994ea35` | |
-| NK613 | 4 Ways To Get It Wrong - Blackout | LOKI Blackout | Hammad | `3f84ac627aac8143867df6b2ebddf550` | |
-| NK610 | Not For Everyone - Blackout | LOKI Blackout | Onyeka | `3f84ac627aac81019a8ee65490c885cd` | |
-| NK609 | Not For Everyone - Santoku | SANTOKU | Hammad | `3f84ac627aac81cb9fa8d2f20a54361e` | |
-| NK607 | Didn't Buy It Myself - Blackout | LOKI Blackout | Naveed | `3f84ac627aac814687cef0e2b375115f` | |
-| NK606 | Didn't Buy It Myself - Santoku | SANTOKU | Hasnain | `3f84ac627aac81cf8acfdfca6daff7eb` | |
-| NK603 | Too Nice To Use - Santoku | SANTOKU | Anas | `3f84ac627aac81999628eb6c75815e6d` | |
-| NK604 | Too Nice To Use - Blackout | LOKI Blackout | Hammad | `3f84ac627aac81c3bc04e80ef68f3721` | |
-| NK599 | Worth The Money - Santoku | SANTOKU | Umar | `3f34ac627aac814c8515e16be8ea2927` | |
-| NK601 | Worth The Money - Blackout | LOKI Blackout | Hammad | `3f34ac627aac81db86cde95e400d0828` | |
+| NK612 | 4 Ways To Get It Wrong - Santoku | SANTOKU | Hasnain | `3f84ac627aac819683b3d3321994ea35` | ✅ **done 2026-10-13** |
+| NK613 | 4 Ways To Get It Wrong - Blackout | LOKI Blackout | Hammad | `3f84ac627aac8143867df6b2ebddf550` | ✅ **done 2026-10-13** |
+| NK610 | Not For Everyone - Blackout | LOKI Blackout | Onyeka | `3f84ac627aac81019a8ee65490c885cd` | ✅ **done 2026-10-13** |
+| NK609 | Not For Everyone - Santoku | SANTOKU | Hammad | `3f84ac627aac81cb9fa8d2f20a54361e` | ✅ **done 2026-10-13** |
+| NK607 | Didn't Buy It Myself - Blackout | LOKI Blackout | Naveed | `3f84ac627aac814687cef0e2b375115f` | ✅ **done 2026-10-13** |
+| NK606 | Didn't Buy It Myself - Santoku | SANTOKU | Hasnain | `3f84ac627aac81cf8acfdfca6daff7eb` | ✅ **done 2026-10-13** |
+| NK603 | Too Nice To Use - Santoku | SANTOKU | Anas | `3f84ac627aac81999628eb6c75815e6d` | ✅ **done 2026-10-13** |
+| NK604 | Too Nice To Use - Blackout | LOKI Blackout | Hammad | `3f84ac627aac81c3bc04e80ef68f3721` | ✅ **done 2026-10-13** |
+| NK599 | Worth The Money - Santoku | SANTOKU | Umar | `3f34ac627aac814c8515e16be8ea2927` | ✅ **done 2026-10-13** |
+| NK601 | Worth The Money - Blackout | LOKI Blackout | Hammad | `3f34ac627aac81db86cde95e400d0828` | ✅ **done 2026-10-13** |
 | NK589 | 3 Checks - Blackout | LOKI Blackout | _(none)_ | `3f24ac627aac81388c02ec17be794ae5` | Callum — excluded by rule anyway |
 | NK587 | 3 Checks - Feather | Feather | _(none)_ | `3f24ac627aac8169b4bde41354fa97d4` | Callum — excluded by rule anyway |
 | NK588 | 3 Checks - Santoku | SANTOKU | _(none)_ | `3f24ac627aac817cb6efe135a9dc7e64` | Callum — excluded by rule anyway |
 | NK584 | Stop Sawing - Blackout | LOKI Blackout | Onyeka | `3f24ac627aac813ba030fb35ba42fc15` | ✅ **done 2026-10-13** — posted to `#11-onyeka-editing` and flipped to `Assigned to Editor` during the first live test. No longer in `Ready to edit`, so it cannot resurface. |
 | _(none)_ | _(raw frame.io URL — malformed)_ | — | _(none)_ | `3e94ac627aac80d7be8df2fc97539316` | malformed row |
 
-**10 of the 11 non-Callum assigned briefs above still need telling their editors
-by hand** — the baseline suppresses the automation, it does not do the work.
-NK584 was cleared during the first live test; the rest are still waiting, the
-oldest from 2026-10-07. To hand any of them to the
+**All 11 non-Callum briefs above are done** — NK584 during the first live test,
+then the remaining 10 on Mark's "go, clear the 10". Each was posted to its
+editor's channel and flipped to `Assigned to Editor`, verified by re-query:
+`Ready to edit` went from 15 rows to 4 (the 3 Callum briefs plus the malformed
+row). To hand any of them to the
 routine instead, delete its row from this table and set its `Status` back to
 `Ready to edit`.
 
@@ -486,4 +500,5 @@ stop and report that rather than working from this prompt's summary.
 | Date | Posted | Fallback | Skipped (Callum) | Skipped (other) | Notes |
 |---|---|---|---|---|---|
 | 2026-10-13 | — | — | — | — | Spec written, mapping verified live, baseline of 15 recorded. A scheduled trigger was built and test-fired, which proved MCP-created triggers get no connectors on this org; it was then **deleted** when Mark said he has no scheduled Routines and will give a go signal instead. See the scheduling appendix. |
+| 2026-10-13 | **10** | — | 3 (NK587/588/589) | 1 (malformed row) | **Backlog cleared on Mark's "go, clear the 10".** NK601→Umar… full list: NK601/604/609/613→Hammad, NK599→Umar, NK603→Anas, NK606/612→Hasnain, NK607→Naveed, NK610→Onyeka. Direct `slack_send_message` was permitted this time (the earlier refusal did not recur), so no drafts were needed. All 10 posted, then all 10 flipped to `Assigned to Editor`; re-query confirmed `Ready to edit` dropped 15→4. Baseline discharged. |
 | 2026-10-13 | 1 (NK584) | — | — | — | **First live end-to-end test**, run by hand from a session with both connectors. Detect → format → post to `#11-onyeka-editing` → flip to `Assigned to Editor`, all verified. Two findings: bold needs `**` not `*` (the first attempt rendered italic), and direct Slack sends are blocked by the Claude Code auto-mode classifier, so the message went out as a draft Mark sent. The italic first attempt is a duplicate in that channel and can be deleted. |
