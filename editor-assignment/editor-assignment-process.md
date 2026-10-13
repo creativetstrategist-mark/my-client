@@ -82,8 +82,9 @@ the longest-waiting brief is announced first.
 ## Editor → Slack mapping (verified live 2026-10-13)
 
 Channel IDs are used rather than `#names` because a renamed channel keeps its
-ID. Member IDs are used for `@`-mentions because a plain `@firstname` string does
-not reliably notify.
+ID. Member IDs are recorded for the optional `@`-mention (see "Message format" —
+off by default, since Mark's own posts carry none); a plain `@firstname` string
+does not reliably notify, so the ID is the thing to keep.
 
 | Editor (Notion option) | Slack channel | Channel ID | Member ID for @-mention | Account used |
 |---|---|---|---|---|
@@ -131,35 +132,97 @@ rows in the table above are valid destinations.
 
 ## Message format
 
-Match the existing house convention exactly. What Mark already sends is a single
-bold linked line; what Callum sends via Claude adds the `@`-mention. Combine
-both — mention, then the linked title:
+**Standing instruction from Mark, 2026-10-13: copy the way he already messages.**
+Do not invent a format, and do not add fields he does not send.
+
+Mark's real messages are a single **bold linked line** — nothing else. The link
+text is the brief's identity; the link target is that brief's own Notion page:
 
 ```
-<@MEMBER_ID> *<PAGE_URL|NK###_Concept Name_Content_Product>*
+*<PAGE_URL|NK###_Concept Name_Content_Product>*
 ```
 
 A real example, built from live row NK612:
 
 ```
+*<https://app.notion.com/3f84ac627aac819683b3d3321994ea35|NK612_4 Ways To Get It Wrong - Santoku_AI VO_SANTOKU>*
+```
+
+…which renders in Slack as one bold clickable line:
+**NK612_4 Ways To Get It Wrong - Santoku_AI VO_SANTOKU**
+
+Verified against his own posts in the editor channels, e.g.
+`NK581_Wish You Had Two_AI-VO_LOKI Blackout` in `#11-hasnain-editing` and
+`NK583_Stop Sawing_UGC_BJORN Santoku` in `#11-anas-editing`.
+
+### Building the link text
+
+Four fields joined by underscores, each taken **verbatim from that page's own
+properties** — never retyped from memory, never translated into a friendlier
+name:
+
+| Slot | Source property | Example |
+|---|---|---|
+| `NK###` | `Creative ID` | `NK612` |
+| Concept Name | `Concept Name` (title) | `4 Ways To Get It Wrong - Santoku` |
+| Content | `Content` | `AI VO` · `UGC` · `Mashup` |
+| Product | `Product` | `SANTOKU` · `LOKI Blackout` · `Feather` |
+
+The real corpus is **inconsistent** in two places, and that is fine — do not try
+to normalise it, and do not treat the variation as a bug to fix:
+
+- `Content` appears as both `AI VO` and `AI-VO` in hand-typed messages.
+- `Product` appears as both the Notion option (`SANTOKU`) and the friendly name
+  (`BJORN Santoku`).
+
+Taking both verbatim from the properties keeps every message traceable back to
+its row, which is what matters. Pick the property value, not the prettier one.
+
+### The embedded link
+
+The whole point of the message is that the link goes to **that specific brief's
+page**:
+
+- Use the `url` the detection query returned for that row, exactly as returned.
+  Never reconstruct a Notion URL from a page ID, and never reuse the URL from a
+  neighbouring row — the three products of one concept are three separate pages
+  with near-identical titles, so a copy-paste slip sends an editor to the wrong
+  brief's script.
+- The short form (`https://app.notion.com/<id>`) and the long "Copy link" form
+  Mark's hand-posted links carry (`…/p/northernknife/<slug>-<id>?v=…&source=copy_link`)
+  resolve to the same page. The short form is fine; it is masked behind the link
+  text either way.
+- Always use Slack's `<url|label>` masked-link syntax so the line renders as the
+  brief's name. A bare pasted URL is not the house format.
+
+### Optional: @-mention the editor
+
+Mark's own messages carry **no** `@`-mention — the channel has one editor in it,
+so the post is already unambiguous. Callum's Claude-sent messages do add one
+(`<@U0BMUAWCEG5|Hasnain Sami> *<…>*`).
+
+**Default: no mention**, matching Mark. The tradeoff is that without one the
+editor relies on their channel notification settings rather than a direct ping.
+If briefs start getting missed, prefix the member ID from the mapping table:
+
+```
 <@U0BMUAWCEG5> *<https://app.notion.com/3f84ac627aac819683b3d3321994ea35|NK612_4 Ways To Get It Wrong - Santoku_AI VO_SANTOKU>*
 ```
 
-Rules for the message:
-- **Link the page URL exactly as the query returns it.** Do not reconstruct a
-  Notion URL from the page ID, and do not bother reproducing the long
-  `?v=…&source=copy_link` form Mark's hand-posted links carry — the short form
-  resolves to the same page.
-- The title uses the `Content` property verbatim (`AI VO`, `UGC`, `Mashup`).
-  Mark often types `AI-VO` by hand in Slack; the corpus is inconsistent on this
-  and it does not matter. Do not "fix" it in either direction.
+That is a one-line change here and takes effect on the routine's next run.
+
+### Everything else
+
 - **Never invent a deadline, runtime, or priority.** The brief carries no
   due-date field — the daily routine deliberately leaves `Date` blank — so any
   urgency language would be fabricated.
-- One message per brief. Do not batch several briefs into one message; each
+- **One message per brief.** Never batch several briefs into one message; each
   needs its own link for the editor to work from, which is how it is done today.
-- Nothing else. The editor opens the page for the script; the Slack message is a
-  pointer, not a copy of the brief.
+- **Nothing else in the message.** No greeting, no summary of the script, no
+  "let me know if you have questions". The editor opens the page for the script;
+  the Slack message is a pointer, not a copy of the brief. Adding anything extra
+  would make it read as a bot post rather than the handoff they already know.
+- Never append a "sent using" footer or any other automation signature.
 
 ## After posting: flip the status
 
@@ -298,9 +361,12 @@ the file.
 2. Drop any page whose ID appears in the spec's go-live baseline table, and any
    page with no Creative ID.
 3. For each remaining page, look up its Editor in the spec's mapping table and
-   post the spec's message format into that editor's channel, @-mentioning them
-   by member ID. One message per brief. Link the page URL exactly as the query
-   returned it.
+   post the spec's message format into that editor's channel. One message per
+   brief. Match Mark's existing format exactly — a single bold masked link,
+   label "NK###_Concept Name_Content_Product" built verbatim from that page's
+   own properties, targeting the url the query returned for that row. No
+   @-mention unless the spec says to add one, no greeting, no extra fields, no
+   automation footer.
 4. Only after a post succeeds, set that page's Status to "Assigned to Editor".
    Post first, then flip — never the other way round, and never flip a page
    that was not successfully posted.
