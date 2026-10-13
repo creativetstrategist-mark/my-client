@@ -372,6 +372,27 @@ If briefs start getting missed, prefix the member ID from the mapping table:
 
 That is a one-line change here and takes effect on the routine's next run.
 
+### ⚠️ A sent message cannot be edited or deleted from here
+
+The Slack connector exposes **no `chat.update` and no `chat.delete`** — only send,
+draft, schedule, react, canvas and list tools (checked 2026-10-13). So a mistake
+in a posted message can only ever be corrected by **adding** another message.
+Mark has to delete anything himself in the Slack app.
+
+Two consequences that have already bitten:
+
+- **Get the message right before sending.** There is no undo. The `**bold**` rule
+  and the `/p/` URL rule above are the two things that have gone wrong so far,
+  and each one cost a round of corrective messages.
+- **Deleting a parent message deletes its thread replies.** If a correction is
+  posted as a thread reply under a bad message, deleting the bad message destroys
+  the correction too. To end up with one clean message per brief: **post a fresh
+  standalone message first, then delete the bad parent** — never the other way
+  round.
+
+When a correction is posted in-thread, use `reply_broadcast: true` so it also
+shows in the channel; a bare thread reply is easy for an editor to miss.
+
 ### Everything else
 
 - **Never invent a deadline, runtime, or priority.** The brief carries no
