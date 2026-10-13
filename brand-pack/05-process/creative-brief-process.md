@@ -492,7 +492,7 @@ Set on creation. `Concept Name` is the title property.
 | `Status` | status | Start at `Not started`. |
 | `Strategist` | select | `Claude` when the routine authors it. |
 | `Specialty` | text | Free text. `Generalist` is the common value. |
-| `Content` | text | e.g. `AI VO`. |
+| `Content` | text | **Always `AI VO`.** See D.1.2 — this is the default for every brief this routine writes. |
 | `Landing Page` | select | `PDP` · `Offer Page` · `6 Reasons - General` · `6 Reasons - Outdoor` · `6 Reasons - Sharpener` · `6 Reasons - Santoku` |
 | `Date` | date | Brief date. |
 | `Editor` | select | Leave empty — assigned by a human. |
@@ -500,6 +500,53 @@ Set on creation. `Concept Name` is the title property.
 | `Test Results`, `Claude WR`, `Delivery Link` | — | Leave empty. Filled after the ad runs. |
 
 Page icon: **📽️** — every page in the database uses it.
+
+### D.1.2 Content is always `AI VO`
+
+> **Strategist, 2026-10-13:** *"all the script we work here must is always AI VO
+> so by default use AI VO on content property."*
+
+Every script written in this routine is read by an AI voice. `Content` is
+`AI VO` on creation and stays that way unless the strategist asks for something
+else on a specific brief. **Do not write a brief as UGC on your own judgement**,
+however well a creator read would suit the persona — SARAH's warmth and MIKE's
+bluntness are delivered by the VO, not by a person on camera.
+
+**The naming string has to follow, or the page contradicts itself.** Three
+fields move together with this one, and getting the property right while
+leaving these wrong is the easy mistake:
+
+| Field | Was, on a UGC brief | Is, on an AI VO brief |
+|---|---|---|
+| `type` | `UGC` | `AI-VO` |
+| `voice` | `Voice-Creator-M` / `Voice-Creator-F` | `Voice-AI-M` / `Voice-AI-F` |
+| `face` | `Face-Talking` | `Face-Broll`, `Face-Hands` or `Face-None` |
+
+`Face-Talking` means a person speaks to camera, which cannot be true of an AI
+read — so it is never valid here. Use `Face-Broll` when a person appears in the
+footage without addressing the lens, `Face-Hands` for hands only, `Face-None`
+for product alone. `Cre-None` is correct for the `creator` field: there is no
+creator.
+
+**The visual column has to follow too.** "Creator to camera" is not a shot that
+exists on these briefs. Write the person into the b-roll instead and say
+plainly that there is no eye line to camera, or the editor will shoot a read
+that the VO then talks over.
+
+**Retroactively: no.** NK602 and NK604 were corrected the day they were written
+because nothing had been cut yet. The earlier UGC briefs were left alone, under
+the Status rule in C.3.0:
+
+- `NK557`, `NK559`, `NK563`, `NK564`, `NK565` — **Uploaded on Drive** with
+  Frame.io links. Production records; a UGC ad that already exists is not
+  made AI VO by editing its brief.
+- `NK558` — **In progress**, and `NK582` — delivery link already attached.
+  Both are mid-production.
+- `NK583`, `NK584` — editable on status alone, and still left as UGC on
+  purpose: `NK582` of that trio is already delivered as UGC, so switching its
+  siblings would split one concept across two content types and make the
+  trio's results unreadable. **Raised with the strategist rather than decided
+  here.**
 
 ### D.1.1 Editor assignment
 
