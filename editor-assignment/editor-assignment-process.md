@@ -139,17 +139,42 @@ Mark's real messages are a single **bold linked line** — nothing else. The lin
 text is the brief's identity; the link target is that brief's own Notion page:
 
 ```
-*<PAGE_URL|NK###_Concept Name_Content_Product>*
+**<PAGE_URL|NK###_Concept Name_Content_Product>**
 ```
 
 A real example, built from live row NK612:
 
 ```
-*<https://app.notion.com/3f84ac627aac819683b3d3321994ea35|NK612_4 Ways To Get It Wrong - Santoku_AI VO_SANTOKU>*
+**<https://app.notion.com/3f84ac627aac819683b3d3321994ea35|NK612_4 Ways To Get It Wrong - Santoku_AI VO_SANTOKU>**
 ```
 
 …which renders in Slack as one bold clickable line:
 **NK612_4 Ways To Get It Wrong - Santoku_AI VO_SANTOKU**
+
+### ⚠️ Use `**double asterisks**` for bold, not Slack's single `*`
+
+**This is the one thing most likely to be got wrong, and it was got wrong on the
+first live test (2026-10-13).**
+
+The Slack MCP tools (`slack_send_message`, `slack_send_message_draft`) take
+**standard Markdown**, not Slack's native mrkdwn, and convert it on the way out.
+So the asterisk convention is the opposite of what a Slack message's raw source
+looks like:
+
+| You write | Slack receives | Renders as |
+|---|---|---|
+| `*text*` | `_text_` | *italic* ❌ |
+| `**text**` | `*text*` | **bold** ✅ |
+
+Reading an existing Slack message shows `*<url\|label>*` — single asterisks —
+because that is Slack's *stored* mrkdwn. Copying that into the tool produces
+italic. Both renders are visible in `#11-onyeka-editing` from the first test:
+the 05:32 message is italic (written `*…*`), the 05:34 one is correctly bold
+(written `**…**`).
+
+The `<url|label>` masked-link syntax **does** pass straight through and needs no
+conversion — only the bold markers differ. Do not "fix" the link syntax to
+Markdown's `[label](url)`; the `<url|label>` form is verified working.
 
 Verified against his own posts in the editor channels, e.g.
 `NK581_Wish You Had Two_AI-VO_LOKI Blackout` in `#11-hasnain-editing` and
@@ -206,7 +231,7 @@ editor relies on their channel notification settings rather than a direct ping.
 If briefs start getting missed, prefix the member ID from the mapping table:
 
 ```
-<@U0BMUAWCEG5> *<https://app.notion.com/3f84ac627aac819683b3d3321994ea35|NK612_4 Ways To Get It Wrong - Santoku_AI VO_SANTOKU>*
+<@U0BMUAWCEG5> **<https://app.notion.com/3f84ac627aac819683b3d3321994ea35|NK612_4 Ways To Get It Wrong - Santoku_AI VO_SANTOKU>**
 ```
 
 That is a one-line change here and takes effect on the routine's next run.
@@ -222,7 +247,12 @@ That is a one-line change here and takes effect on the routine's next run.
   "let me know if you have questions". The editor opens the page for the script;
   the Slack message is a pointer, not a copy of the brief. Adding anything extra
   would make it read as a bot post rather than the handoff they already know.
-- Never append a "sent using" footer or any other automation signature.
+- **The `*Sent using* @Claude` footer is added by Slack itself**, not by the
+  message. Every message sent through the Claude connector carries it — Callum's
+  Claude-sent handoffs have it too. Do not try to add it, and do not try to
+  suppress it; it cannot be removed from the message text. Messages Mark posts
+  by hand in the Slack app have no footer, so a footer is simply how the team
+  can tell an automated handoff from a manual one.
 
 ## After posting: flip the status
 
@@ -274,12 +304,13 @@ Skip any page whose ID appears here.
 | NK589 | 3 Checks - Blackout | LOKI Blackout | _(none)_ | `3f24ac627aac81388c02ec17be794ae5` | Callum — excluded by rule anyway |
 | NK587 | 3 Checks - Feather | Feather | _(none)_ | `3f24ac627aac8169b4bde41354fa97d4` | Callum — excluded by rule anyway |
 | NK588 | 3 Checks - Santoku | SANTOKU | _(none)_ | `3f24ac627aac817cb6efe135a9dc7e64` | Callum — excluded by rule anyway |
-| NK584 | Stop Sawing - Blackout | LOKI Blackout | Onyeka | `3f24ac627aac813ba030fb35ba42fc15` | |
+| NK584 | Stop Sawing - Blackout | LOKI Blackout | Onyeka | `3f24ac627aac813ba030fb35ba42fc15` | ✅ **done 2026-10-13** — posted to `#11-onyeka-editing` and flipped to `Assigned to Editor` during the first live test. No longer in `Ready to edit`, so it cannot resurface. |
 | _(none)_ | _(raw frame.io URL — malformed)_ | — | _(none)_ | `3e94ac627aac80d7be8df2fc97539316` | malformed row |
 
-**The 11 non-Callum assigned briefs above still need telling their editors by
-hand** — the baseline suppresses the automation, it does not do the work. The
-oldest (NK584) has been waiting since 2026-10-07. To hand any of them to the
+**10 of the 11 non-Callum assigned briefs above still need telling their editors
+by hand** — the baseline suppresses the automation, it does not do the work.
+NK584 was cleared during the first live test; the rest are still waiting, the
+oldest from 2026-10-07. To hand any of them to the
 routine instead, delete its row from this table and set its `Status` back to
 `Ready to edit`.
 
@@ -400,3 +431,4 @@ stop and report that rather than working from this prompt's summary.
 | Date | Posted | Fallback | Skipped (Callum) | Skipped (other) | Notes |
 |---|---|---|---|---|---|
 | 2026-10-13 | — | — | — | — | Spec written, mapping verified live, baseline of 15 recorded. Trigger `trig_01X5NCbaMaYWJpq8yb8XoxAD` created but **disabled**: a manual test fire proved MCP-created triggers get no connectors on this org. Blocked on recreating it in the claude.ai Routines UI. |
+| 2026-10-13 | 1 (NK584) | — | — | — | **First live end-to-end test**, run by hand from a session with both connectors. Detect → format → post to `#11-onyeka-editing` → flip to `Assigned to Editor`, all verified. Two findings: bold needs `**` not `*` (the first attempt rendered italic), and direct Slack sends are blocked by the Claude Code auto-mode classifier, so the message went out as a draft Mark sent. The italic first attempt is a duplicate in that channel and can be deleted. |
