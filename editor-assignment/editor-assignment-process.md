@@ -52,10 +52,11 @@ So there is no cron, no trigger, and nothing fires on its own. Nothing happens
 to a brief until Mark asks. That has real consequences worth stating plainly:
 
 - **No brief is ever announced without Mark knowing**, because he started the
-  run. The whole reason the go-live baseline exists — stopping a scheduled first
-  run from blasting a six-day backlog at seven editors — is moot under this
-  model. Keep the baseline table as the record of what was already waiting, but
-  the thing it was defending against cannot now happen by surprise.
+  run. That is why there is no suppression list: the go-live baseline existed
+  only to stop a *scheduled* first run blasting a six-day backlog at seven
+  editors, which cannot happen when Mark starts every run. It was discharged on
+  2026-10-13. Do not reintroduce one — a stale suppression list would silently
+  skip a brief that legitimately returned to `Ready to edit` after a revision.
 - **Nothing is picked up between go signals.** A brief that hits `Ready to edit`
   an hour after a run waits for the next one. That is the accepted trade for not
   having a scheduler; it is not a bug to work around with a self-scheduled
@@ -375,7 +376,7 @@ routine instead, delete its row from this table and set its `Status` back to
 | How to reach Slack | **Slack connector.** Not an incoming webhook — connector traffic is not subject to the environment's egress policy, resolves real user mentions, and stores no secret in the environment. |
 | Where assignments land | **One shared channel per editor** (`#11-<editor>-editing`) — not a single team channel, not DMs. |
 | Dedup | **Flip `Status` to `Assigned to Editor`** after posting. No repo ledger. |
-| Pre-existing backlog | **Suppress** — announce only new briefs. See the baseline table. Largely moot under the on-demand model, since Mark controls every run. |
+| Pre-existing backlog | Initially **suppressed** to avoid a scheduled first run blasting seven editors. Superseded the same day: on the on-demand model Mark said "go, clear the 10", and all 11 non-Callum briefs were posted and flipped. **No suppression list going forward.** |
 | Callum's work | **Never touch it.** See the hard rule at the top. |
 | Scheduling | **None.** No cron, no trigger. Mark gives a go signal and the sweep runs then. The trigger built on 2026-10-13 was deleted. |
 
@@ -437,18 +438,18 @@ branch `main` first; if the file is not there, read it from branch
 
 That file holds the exact option strings, the verified editor-to-Slack channel
 and member-ID mapping, the message format, the edge-case table, and the go-live
-baseline of pages that must never be announced. Follow it exactly — it is kept
-more current than this prompt, so where they disagree, the file wins. Do not
-proceed from this summary alone; the mapping table and baseline list are only in
-the file.
+edge-case table. Follow it exactly — it is kept more current than this prompt,
+so where they disagree, the file wins. Do not proceed from this summary alone;
+the mapping table is only in the file.
 
 ## The job
 
 1. Query data source collection://2cf4ac62-7aac-81a8-86bf-000b96778943 for
    Status = 'Ready to edit' (exact string — lowercase "edit"), excluding
    Strategist = 'Callum' in the query itself, oldest first.
-2. Drop any page whose ID appears in the spec's go-live baseline table, and any
-   page with no Creative ID.
+2. Drop any page with no Creative ID (a malformed row). There is no suppression
+   list to consult — the go-live baseline was discharged on 2026-10-13 and must
+   not be reintroduced.
 3. For each remaining page, look up its Editor in the spec's mapping table and
    post the spec's message format into that editor's channel. One message per
    brief. Match Mark's existing format exactly — a single bold masked link:
@@ -481,7 +482,7 @@ the file.
   in the query.
 - Never invent a deadline, runtime, or priority in a message. The brief carries
   no due-date field, so any urgency language would be fabricated.
-- Never announce a page listed in the baseline table.
+- Never post a malformed row (no Creative ID).
 
 ## Report
 

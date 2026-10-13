@@ -72,8 +72,8 @@ Full detail: `brand-pack/01-brand/product-catalog.md`. Persona docs:
 - `editor-assignment/editor-assignment-process.md` — spec for the
   "Ready to edit" → Slack handoff play (see below), which runs on demand rather
   than on a schedule. Holds the verified editor→Slack channel/member-ID mapping,
-  the message format and the go-live baseline. **Read it at the start of every
-  run**, and edit it to change the behaviour.
+  and the message format. **Read it at the start of every run**, and edit it to
+  change the behaviour.
 
 ## The editor-assignment play (on demand)
 
