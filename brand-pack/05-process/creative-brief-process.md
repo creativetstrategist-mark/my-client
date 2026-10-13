@@ -634,6 +634,7 @@ the Status rule in C.3.0:
    | Too Nice To Use (NK602-604) | **Blackout (NK604)** |
    | Didn't Buy It Myself (NK605-607) | **Feather (NK605)** |
    | Not For Everyone (NK608-610) | **Santoku (NK609)** |
+   | 4 Ways To Get It Wrong (NK611-613) | **Blackout (NK613)** |
 
    ✅ **Load exception lapsed, 2026-10-13. Rule 4 applies again.** The exception
    below was scoped to one week (*"this week"*) and that week has passed. Both
