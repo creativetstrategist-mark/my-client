@@ -93,94 +93,87 @@ only once Mark confirms the message actually went out. The safe failure is a
 brief that stays in `Ready to edit`.
 
 
-## 🚫 Prerequisite: each brief page must be published before it is posted
+## 🚫 Prerequisite: the 7 editors must be Notion guests with edit access
 
-**Mark's standing instruction, 2026-10-13: every brief link must be accessible by
-anyone and editable by anyone** — because several editors are not Notion users at
-all and are not going to be.
+**Mark's decision, 2026-10-13 (final).** Superseded two earlier plans the same
+day — publishing the parent to the web, then publishing each brief page — both
+dropped in favour of named guest accounts.
 
-### Why this is needed
+### Why it was needed at all
 
-`notion-get-users` lists every person in the workspace: Bryan Valeza, Callum,
-Damien Reymond, Kel, Mark, Nigel, the Northern Knife account, plus bots (NK
-Automation, NK Bridge, Notion MCP, Zapier). **Not one of the 7 active editors is
-a Notion user** — no `umar@`, `hammad@`, `onyeka@`, `hasnain@`, `anas@`,
-`naveed2@` or `renniel@`. So without public access a correctly-formed link still
-fails for them, and they cannot write the `Delivery Link` back onto the page,
-which is the whole point of sending it.
+`notion-get-users` showed that **not one of the 7 active editors was a Notion
+user** — no `umar@`, `hammad@`, `onyeka@`, `hasnain@`, `anas@`, `naveed2@` or
+`renniel@`. The workspace held only Bryan Valeza, Callum, Damien Reymond, Kel,
+Mark, Nigel, the Northern Knife account and bots (NK Automation, NK Bridge,
+Notion MCP, Zapier).
 
-### Per page — Mark's decision, 2026-10-13
+So brief links failed for the editors no matter how well formed, and they could
+not write `Delivery Link` back onto the page — which is the whole point of
+sending it.
 
-**Publish each brief page individually. Do not publish the parent.**
+### The setup
 
-Mark chose this over enabling it once on the `Video Brief Database` page, after
-being told that inheriting from the parent would cover every brief automatically.
-The trade he picked:
+Invite all 7 as **guests** on the **`Video Brief Database`** page
+(`2cf4ac627aac80bb9f71e0542c06ef30`) with **Can edit**.
 
-- **Upside, and it is a real one:** only the briefs actually assigned to an editor
-  are ever public. Unassigned briefs, drafts, cancelled concepts and every future
-  brief stay private. Publishing the parent would expose the whole database the
-  moment it was switched on, including work not ready to be seen.
-- **Cost:** it is manual, every time. The daily rewrite routine creates 15 briefs
-  a day, so this is up to 15 share toggles a day, forever.
+| Editor (Notion `Editor` option) | Invite by email |
+|---|---|
+| `Umar` | `umar@nebula-studio.co` |
+| `Hammad` | `hammad@nebula-studio.co` |
+| `Onyeka` | `onyeka@nebula-studio.co` |
+| `Hasnain` | `hasnain@nebula-studio.co` |
+| `Anas` | `anas@nebula-studio.co` ⚠️ see the duplicate-accounts note |
+| `Naveed` | `naveed2@nebula-studio.co` (the `2` is part of the real address) |
+| `Renniel` | `renniel@nebula-studio.co` |
 
-On each page: **Share → Share to web → "Allow editing" on.**
+Emails taken from their Slack accounts, verified 2026-10-13. `Huzaifa` is off the
+active roster and gets no invite.
 
-`Allow editing` (not view-only) is required: `Delivery Link` is a page property,
-and filling it in is a write.
+Why this target and this level:
 
-### ⚠️ Nothing can automate this, so it has to become a habit
+- **`Video Brief Database` page, not the database row or `NK Creative Strategy
+  Lab`.** Access inherits downward, so this one page covers the `Evergreen Video`
+  database, every brief in it and every brief the daily routine creates in
+  future. `NK Creative Strategy Lab` would be far too broad — it would hand over
+  the whole brand pack.
+- **`Can edit`, not `Can comment`.** `Delivery Link` is a page property; filling
+  it in is a write.
+- **Guests, not members.** Guests are free (even the free plan allows 10; paid
+  plans 100+), and they are invited **by email, so not already being a Notion
+  user is no barrier** — each gets a free account on accepting. Members would
+  cost a paid seat each and grant workspace-wide access nobody needs.
 
-The Notion connector exposes no sharing or permission tool, and **Notion has no
-API for share-to-web at all** — checked 2026-10-13. That is a platform
-limitation, not a gap in this setup: Zapier, Notion's own automations and this
-play are all equally unable to publish a page. A page's published state is also
-not readable, so **this play cannot check whether a brief is public before
-posting it** and cannot warn when one is not.
+### Why this beat publishing to the web
 
-That makes the sequencing the only safeguard, and it has to live with whoever
-moves the brief:
+Both earlier plans worked on paper. This one removes the failure mode:
 
-> **When you move a brief to `Ready to edit`, publish it in the same action.**
-> Share → Share to web → Allow editing, then change the status.
+| | Guests ✅ | Public per page ❌ |
+|---|---|---|
+| Ongoing work | none — inherits forever | ~15 toggles/day, every day |
+| Who changed a brief | named, with history | anonymous, no audit trail |
+| If a link is forwarded | useless to outsiders | full read **and write** access |
+| Can this play verify it? | **yes** — `notion-get-users` | no, not readable via any API |
 
-Doing it there rather than as a separate batch means it is one extra click inside
-a thing someone is already doing, and by the time this play sweeps, the brief is
-already openable. The alternative — publishing a batch just before a run — works
-but is a second pass over the same list, and the one page skipped is an editor
-with a dead link and no way for anyone to notice automatically.
+That last row decided it. Per-page publishing was the only part of the workflow
+that nothing could automate *or* check: one forgotten page meant a dead link for
+an editor and no system — not this play, not Notion, not Zapier — could notice.
+Guest access is granted once and cannot be forgotten.
 
-**If an editor reports a dead link, this is the first thing to check**, before
-the URL form or the mapping. An unpublished page and a malformed URL look
-identical from Slack.
+### Verifying it
 
-### Verify it from outside, not from inside
+Run `notion-get-users` and confirm all 7 addresses appear. Do this after the
+invites go out, and again if an editor ever reports a link they cannot open.
+Guests show up once they **accept** the invite, so a missing name may just mean
+an unaccepted invite — check that before re-inviting.
 
-An authenticated session cannot test this — every link works for Mark whether or
-not it is published. **Open one brief link in a private/incognito window, logged
-out, and confirm you can both read it and edit a property.** That is the only
-check that reflects what an editor sees. Do it once after enabling, and again if
-links ever stop working.
+### Two things to know
 
-### Risk accepted, on the record
-
-"Anyone with the link can edit" means exactly that: no account, no audit trail,
-no attribution on anonymous edits. If a link leaks — a forwarded Slack message, a
-screenshot, a shared device — anyone can read that brief and silently change it.
-
-Per-page publishing limits the blast radius to the briefs actually handed out,
-which is why Mark chose it: an unassigned concept or a future brief is never
-exposed. But each published brief is still a world-readable, world-writable page
-carrying a full script, the offer and the creative reasoning.
-
-Mark was told this and chose it anyway, for a good reason: the editors are not in
-Notion and the work has to flow. Recorded here so the trade is visible rather
-than forgotten.
-
-The lower-risk equivalent, if it is ever revisited: **Notion guests are free**
-and are invited **by email, so they do not need to already be Notion users**.
-Guests with `Can edit` on the `Video Brief Database` get exactly the same
-capability with named accounts and an edit history, and no public link at all.
+- **Notion has no per-row permissions.** All 7 guests can see and edit every
+  brief in the database, not only their own. That matches how the Slack channels
+  already work in practice, but it is worth knowing it is not scoped per editor
+  and cannot be.
+- **Guests see the pages, not the workspace.** They get the `Video Brief
+  Database` and its contents, and nothing else in `NK Creative Strategy Lab`.
 
 ## ⚠️ Exact option strings (do not paraphrase)
 
@@ -481,7 +474,7 @@ routine instead, delete its row from this table and set its `Status` back to
 | Pre-existing backlog | Initially **suppressed** to avoid a scheduled first run blasting seven editors. Superseded the same day: on the on-demand model Mark said "go, clear the 10", and all 11 non-Callum briefs were posted and flipped. **No suppression list going forward.** |
 | Callum's work | **Never touch it.** See the hard rule at the top. |
 | Scheduling | **None.** No cron, no trigger. Mark gives a go signal and the sweep runs then. The trigger built on 2026-10-13 was deleted. |
-| Editor access to briefs | **Publish each brief page to the web with editing allowed — per page, not via the parent.** Several editors are not Notion users. Chosen over inheriting from the `Video Brief Database` page so only assigned briefs are ever exposed, accepting that it is a manual toggle each time. |
+| Editor access to briefs | **Invite the 7 editors as free Notion guests on the `Video Brief Database` page with `Can edit`.** None of them was a Notion user. Chosen over two earlier plans (publish the parent to the web, then publish each page) because guest access inherits once, is attributable, and is the only option this play can actually verify. Guests are invited by email, so not being a Notion user was never a barrier. |
 
 ## Appendix: environment facts worth keeping
 

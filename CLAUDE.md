@@ -109,12 +109,12 @@ Four rules worth knowing without opening the spec:
   Slack message's raw source looks like. This broke the first live test.
 - **Links must be `https://app.notion.com/p/<id>`.** The query's `url` column
   omits the `/p/` and the resulting link does not work.
-- **Each brief must be published to the web, with editing allowed, before it is
-  posted** — several editors are not Notion users, and they write `Delivery Link`
-  back onto the page. Per page, by hand: Notion has no API for this, so nothing
-  can automate or even verify it. Publish it in the same action as moving the
-  brief to `Ready to edit`. An unpublished page and a bad link look identical
-  from Slack, so check this first when an editor reports a dead link.
+- **The 7 editors are Notion guests** on the `Video Brief Database` page with
+  `Can edit` — none was a Notion user, and they write `Delivery Link` back onto
+  the page. Access inherits, so this covers every brief including future ones;
+  there is nothing to do per brief. Confirm with `notion-get-users` if an editor
+  reports a link they cannot open — a guest only appears once they accept the
+  invite.
 
 ## The daily routine
 
