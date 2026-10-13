@@ -93,6 +93,70 @@ only once Mark confirms the message actually went out. The safe failure is a
 brief that stays in `Ready to edit`.
 
 
+## 🚫 Prerequisite: brief pages must be public and editable by anyone
+
+**Mark's standing instruction, 2026-10-13: every brief link must be accessible by
+anyone and editable by anyone** — because several editors are not Notion users at
+all and are not going to be.
+
+### Why this is needed
+
+`notion-get-users` lists every person in the workspace: Bryan Valeza, Callum,
+Damien Reymond, Kel, Mark, Nigel, the Northern Knife account, plus bots (NK
+Automation, NK Bridge, Notion MCP, Zapier). **Not one of the 7 active editors is
+a Notion user** — no `umar@`, `hammad@`, `onyeka@`, `hasnain@`, `anas@`,
+`naveed2@` or `renniel@`. So without public access a correctly-formed link still
+fails for them, and they cannot write the `Delivery Link` back onto the page,
+which is the whole point of sending it.
+
+### ⚠️ Set it on the PARENT, not per page
+
+**This is the part that matters.** Notion share settings **inherit**, so enable
+it once high up and every brief inside is covered — including every brief the
+daily rewrite routine creates from now on. Set it per page and someone has to
+redo it 15 times a day, forever, and the first one forgotten is an editor
+blocked.
+
+Enable **Share → Share to web**, with **"Allow editing"** on, at:
+
+| Target | ID | Scope |
+|---|---|---|
+| **`Video Brief Database` page** | `2cf4ac627aac80bb9f71e0542c06ef30` | **Recommended** — covers every brief, present and future, and nothing else |
+| the `Evergreen Video` database | `2cf4ac627aac807bbd7ce549323ebde4` | Also fine; the database itself rather than its containing page |
+| `NK Creative Strategy Lab` | `2e84ac627aac805abde8f04e1820d4ea` | **Too broad** — would publish the whole strategy lab, brand pack and all |
+
+`Allow editing` (not view-only) is required: `Delivery Link` is a page property,
+and filling it in is a write.
+
+**This cannot be done from here.** The Notion connector exposes no sharing or
+permission tool — checked 2026-10-13. There is no API for share-to-web or for
+inviting guests, so it is a manual switch in the Notion UI.
+
+### Verify it from outside, not from inside
+
+An authenticated session cannot test this — every link works for Mark whether or
+not it is published. **Open one brief link in a private/incognito window, logged
+out, and confirm you can both read it and edit a property.** That is the only
+check that reflects what an editor sees. Do it once after enabling, and again if
+links ever stop working.
+
+### Risk accepted, on the record
+
+"Anyone with the link can edit" means exactly that: no account, no audit trail,
+no attribution on anonymous edits. If a link leaks — a forwarded Slack message, a
+screenshot, a shared device — anyone can read the brief and silently change it.
+On a database holding the full creative strategy, unreleased concepts and offer
+mechanics, that is a real exposure.
+
+Mark was told this and chose it anyway, for a good reason: the editors are not in
+Notion and the work has to flow. Recorded here so the trade is visible rather
+than forgotten.
+
+The lower-risk equivalent, if it is ever revisited: **Notion guests are free**
+and are invited **by email, so they do not need to already be Notion users**.
+Guests with `Can edit` on the `Video Brief Database` get exactly the same
+capability with named accounts and an edit history, and no public link at all.
+
 ## ⚠️ Exact option strings (do not paraphrase)
 
 | Thing | Exact live string | Common wrong guess |
@@ -186,7 +250,7 @@ text is the brief's identity; the link target is that brief's own Notion page:
 A real example, built from live row NK612:
 
 ```
-**<https://app.notion.com/3f84ac627aac819683b3d3321994ea35|NK612_4 Ways To Get It Wrong - Santoku_AI VO_SANTOKU>**
+**<https://app.notion.com/p/3f84ac627aac819683b3d3321994ea35|NK612_4 Ways To Get It Wrong - Santoku_AI VO_SANTOKU>**
 ```
 
 …which renders in Slack as one bold clickable line:
@@ -249,15 +313,28 @@ its row, which is what matters. Pick the property value, not the prettier one.
 The whole point of the message is that the link goes to **that specific brief's
 page**:
 
-- Use the `url` the detection query returned for that row, exactly as returned.
-  Never reconstruct a Notion URL from a page ID, and never reuse the URL from a
-  neighbouring row — the three products of one concept are three separate pages
-  with near-identical titles, so a copy-paste slip sends an editor to the wrong
-  brief's script.
-- The short form (`https://app.notion.com/<id>`) and the long "Copy link" form
-  Mark's hand-posted links carry (`…/p/northernknife/<slug>-<id>?v=…&source=copy_link`)
-  resolve to the same page. The short form is fine; it is masked behind the link
-  text either way.
+### ⚠️ The SQL `url` column is NOT a usable link — add `/p/`
+
+**Got this wrong on the 2026-10-13 backlog run; all 10 links were malformed.**
+
+The detection query's `url` column returns a form with **no `/p/` segment**:
+
+| Source | Form |
+|---|---|
+| SQL `url` column | `https://app.notion.com/3f84ac62…` ❌ |
+| `notion-fetch` canonical `url` | `https://app.notion.com/p/3f84ac62…` ✅ |
+| Mark's hand-posted "Copy link" | `https://app.notion.com/p/northernknife/<slug>-<id>?v=…&source=copy_link` ✅ |
+
+Both Mark's and Callum's working links carry `/p/`. **Take the 32-hex page id
+from the query's `url` and emit `https://app.notion.com/p/<id>`.** That is
+deterministic and needs no extra fetch per page. The `?v=…&source=copy_link`
+tail is not needed — it is masked behind the link text anyway.
+
+- Use **that row's own** id. Never reuse the URL from a neighbouring row — the
+  three products of one concept are three separate pages with near-identical
+  titles, so a copy-paste slip sends an editor to the wrong brief's script with
+  nothing in the message looking wrong.
+- Never paste the SQL `url` value straight into a message.
 - Always use Slack's `<url|label>` masked-link syntax so the line renders as the
   brief's name. A bare pasted URL is not the house format.
 
@@ -272,7 +349,7 @@ editor relies on their channel notification settings rather than a direct ping.
 If briefs start getting missed, prefix the member ID from the mapping table:
 
 ```
-<@U0BMUAWCEG5> **<https://app.notion.com/3f84ac627aac819683b3d3321994ea35|NK612_4 Ways To Get It Wrong - Santoku_AI VO_SANTOKU>**
+<@U0BMUAWCEG5> **<https://app.notion.com/p/3f84ac627aac819683b3d3321994ea35|NK612_4 Ways To Get It Wrong - Santoku_AI VO_SANTOKU>**
 ```
 
 That is a one-line change here and takes effect on the routine's next run.
