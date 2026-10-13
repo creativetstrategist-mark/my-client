@@ -237,17 +237,100 @@ Raw `curl` to Slack does **not** work from the cloud environment —
 why the connector path was chosen. A webhook-based rewrite would additionally
 need `hooks.slack.com` added under the environment's Allowed domains.
 
-A Routine stores its connector grant at creation time and `update_trigger`
-cannot add one later, so this Routine must be created from a session that has
-**both** Notion and Slack connected. If the grant is ever lost, delete and
-recreate the Routine rather than trying to patch it.
+### ⚠️ The Routine must be created from the claude.ai Routines UI
+
+**Verified the hard way on 2026-10-13.** A Routine created with the
+`create_trigger` MCP tool on this organization **cannot carry connectors**:
+
+- Passing `connectors: ["Notion", "Slack"]` is rejected outright —
+  *"the connectors parameter is not available for this organization."*
+- Creating it without that parameter succeeds but returns a warning that the
+  trigger stores no MCP connectors.
+- Firing such a trigger manually confirmed it: the fired session's init
+  reported `mcp_servers: []`, and the run itself reported that
+  `mcp__Notion__*`, `mcp__Slack__*` **and** `mcp__github__*` were all
+  unavailable. It posted nothing and changed no statuses.
+
+So this Routine has to be created (or have its connectors attached) in the
+**claude.ai Routines UI**, with **Notion, Slack and GitHub** all enabled for the
+scheduled run — GitHub included, because the routine reads this spec file from
+the repo. `trig_01X5NCbaMaYWJpq8yb8XoxAD` exists and is **disabled**; either
+attach the three connectors to it there and re-enable, or delete it and recreate
+it from the UI using the prompt below.
+
+Do not re-enable it until the connectors are attached — without them every
+hourly run is a session that can only report its own failure.
 
 Because the Routine prompt points at this file rather than inlining the rules,
 **changing the message format or the mapping table here changes the routine's
 behaviour on its next run** — no trigger edit needed.
 
+## The Routine prompt (paste into the claude.ai Routines UI)
+
+Schedule: hourly. Attach **Notion + Slack + GitHub**. Fresh session per run.
+Narrow the hours to the editors' working window if hourly round-the-clock is
+more than needed — the editors span Pakistan, Nigeria and the Philippines, so
+"working hours" is most of the day.
+
+```
+Sweep the NorthernKnife "Evergreen Video" Notion database for briefs that have
+reached "Ready to edit" and hand each one to its editor in Slack.
+
+## Read the spec first — it is authoritative
+
+Read `editor-assignment/editor-assignment-process.md` from the GitHub repo
+`creativetstrategist-mark/my-client` using `mcp__github__get_file_contents`. Try
+branch `main` first; if the file is not there, read it from branch
+`claude/gallant-hypatia-ohcfam`.
+
+That file holds the exact option strings, the verified editor-to-Slack channel
+and member-ID mapping, the message format, the edge-case table, and the go-live
+baseline of pages that must never be announced. Follow it exactly — it is kept
+more current than this prompt, so where they disagree, the file wins. Do not
+proceed from this summary alone; the mapping table and baseline list are only in
+the file.
+
+## The job
+
+1. Query data source collection://2cf4ac62-7aac-81a8-86bf-000b96778943 for
+   Status = 'Ready to edit' (exact string — lowercase "edit"), excluding
+   Strategist = 'Callum' in the query itself, oldest first.
+2. Drop any page whose ID appears in the spec's go-live baseline table, and any
+   page with no Creative ID.
+3. For each remaining page, look up its Editor in the spec's mapping table and
+   post the spec's message format into that editor's channel, @-mentioning them
+   by member ID. One message per brief. Link the page URL exactly as the query
+   returned it.
+4. Only after a post succeeds, set that page's Status to "Assigned to Editor".
+   Post first, then flip — never the other way round, and never flip a page
+   that was not successfully posted.
+5. Handle exceptions per the spec's edge-case table: blank editor, off-roster
+   editor (Huzaifa), unmapped editor, or a failed post all go to the fallback
+   channel for Mark and LEAVE the status untouched. Never guess an editor, and
+   never post into a channel guessed from an editor's name.
+
+## Hard rules
+
+- Never touch work with Strategist = Callum — standing instruction from Mark
+  (2026-10-13). No post, no status change, no triage, not even a flag. Filter it
+  in the query.
+- Never invent a deadline, runtime, or priority in a message. The brief carries
+  no due-date field, so any urgency language would be fabricated.
+- Never announce a page listed in the baseline table.
+
+## Report
+
+Briefs posted (Creative ID -> editor -> channel), anything routed to the
+fallback channel and why, and malformed rows skipped. If there was nothing to
+do, say so in one line — do not pad the report.
+
+If the Notion or Slack connector is unavailable this run, say so explicitly
+rather than reporting zero assignments. If you could not read the spec file,
+stop and report that rather than working from this prompt's summary.
+```
+
 ## Run history
 
 | Date | Posted | Fallback | Skipped (Callum) | Skipped (other) | Notes |
 |---|---|---|---|---|---|
-| 2026-10-13 | — | — | — | — | Routine created. Baseline of 15 recorded, so the first sweeps are silent by design. |
+| 2026-10-13 | — | — | — | — | Spec written, mapping verified live, baseline of 15 recorded. Trigger `trig_01X5NCbaMaYWJpq8yb8XoxAD` created but **disabled**: a manual test fire proved MCP-created triggers get no connectors on this org. Blocked on recreating it in the claude.ai Routines UI. |

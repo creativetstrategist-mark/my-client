@@ -81,6 +81,14 @@ for briefs that have reached **`Ready to edit`** and hands each one to its
 editor in that editor's own Slack channel (`#11-<editor>-editing`), then flips
 the page to **`Assigned to Editor`** so it leaves the queue.
 
+> **⚠️ Not live yet (as of 2026-10-13).** The spec, the verified editor→Slack
+> mapping and the baseline are all done, but the trigger is **disabled**:
+> Routines created through the `create_trigger` MCP tool get no connectors on
+> this organization, so the scheduled session had no Notion, Slack or GitHub
+> tools and could do nothing. It has to be recreated in the claude.ai Routines
+> UI with Notion + Slack + GitHub attached. The spec's "Environment note"
+> section has the evidence and the paste-ready prompt.
+
 Full spec, including the verified editor→Slack mapping, the message format and
 the edge-case table: `editor-assignment/editor-assignment-process.md`. Read it
 before changing anything about this routine.
