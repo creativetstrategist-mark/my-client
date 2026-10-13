@@ -107,6 +107,14 @@ Four rules worth knowing without opening the spec:
 - **Bold is `**two asterisks**`.** The Slack tools take standard Markdown and
   convert it, so a single `*` sends italic — the opposite of what an existing
   Slack message's raw source looks like. This broke the first live test.
+- **Links must be `https://app.notion.com/p/<id>`.** The query's `url` column
+  omits the `/p/` and the resulting link does not work.
+- **Each brief must be published to the web, with editing allowed, before it is
+  posted** — several editors are not Notion users, and they write `Delivery Link`
+  back onto the page. Per page, by hand: Notion has no API for this, so nothing
+  can automate or even verify it. Publish it in the same action as moving the
+  brief to `Ready to edit`. An unpublished page and a bad link look identical
+  from Slack, so check this first when an editor reports a dead link.
 
 ## The daily routine
 

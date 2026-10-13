@@ -93,7 +93,7 @@ only once Mark confirms the message actually went out. The safe failure is a
 brief that stays in `Ready to edit`.
 
 
-## 🚫 Prerequisite: brief pages must be public and editable by anyone
+## 🚫 Prerequisite: each brief page must be published before it is posted
 
 **Mark's standing instruction, 2026-10-13: every brief link must be accessible by
 anyone and editable by anyone** — because several editors are not Notion users at
@@ -109,28 +109,50 @@ a Notion user** — no `umar@`, `hammad@`, `onyeka@`, `hasnain@`, `anas@`,
 fails for them, and they cannot write the `Delivery Link` back onto the page,
 which is the whole point of sending it.
 
-### ⚠️ Set it on the PARENT, not per page
+### Per page — Mark's decision, 2026-10-13
 
-**This is the part that matters.** Notion share settings **inherit**, so enable
-it once high up and every brief inside is covered — including every brief the
-daily rewrite routine creates from now on. Set it per page and someone has to
-redo it 15 times a day, forever, and the first one forgotten is an editor
-blocked.
+**Publish each brief page individually. Do not publish the parent.**
 
-Enable **Share → Share to web**, with **"Allow editing"** on, at:
+Mark chose this over enabling it once on the `Video Brief Database` page, after
+being told that inheriting from the parent would cover every brief automatically.
+The trade he picked:
 
-| Target | ID | Scope |
-|---|---|---|
-| **`Video Brief Database` page** | `2cf4ac627aac80bb9f71e0542c06ef30` | **Recommended** — covers every brief, present and future, and nothing else |
-| the `Evergreen Video` database | `2cf4ac627aac807bbd7ce549323ebde4` | Also fine; the database itself rather than its containing page |
-| `NK Creative Strategy Lab` | `2e84ac627aac805abde8f04e1820d4ea` | **Too broad** — would publish the whole strategy lab, brand pack and all |
+- **Upside, and it is a real one:** only the briefs actually assigned to an editor
+  are ever public. Unassigned briefs, drafts, cancelled concepts and every future
+  brief stay private. Publishing the parent would expose the whole database the
+  moment it was switched on, including work not ready to be seen.
+- **Cost:** it is manual, every time. The daily rewrite routine creates 15 briefs
+  a day, so this is up to 15 share toggles a day, forever.
+
+On each page: **Share → Share to web → "Allow editing" on.**
 
 `Allow editing` (not view-only) is required: `Delivery Link` is a page property,
 and filling it in is a write.
 
-**This cannot be done from here.** The Notion connector exposes no sharing or
-permission tool — checked 2026-10-13. There is no API for share-to-web or for
-inviting guests, so it is a manual switch in the Notion UI.
+### ⚠️ Nothing can automate this, so it has to become a habit
+
+The Notion connector exposes no sharing or permission tool, and **Notion has no
+API for share-to-web at all** — checked 2026-10-13. That is a platform
+limitation, not a gap in this setup: Zapier, Notion's own automations and this
+play are all equally unable to publish a page. A page's published state is also
+not readable, so **this play cannot check whether a brief is public before
+posting it** and cannot warn when one is not.
+
+That makes the sequencing the only safeguard, and it has to live with whoever
+moves the brief:
+
+> **When you move a brief to `Ready to edit`, publish it in the same action.**
+> Share → Share to web → Allow editing, then change the status.
+
+Doing it there rather than as a separate batch means it is one extra click inside
+a thing someone is already doing, and by the time this play sweeps, the brief is
+already openable. The alternative — publishing a batch just before a run — works
+but is a second pass over the same list, and the one page skipped is an editor
+with a dead link and no way for anyone to notice automatically.
+
+**If an editor reports a dead link, this is the first thing to check**, before
+the URL form or the mapping. An unpublished page and a malformed URL look
+identical from Slack.
 
 ### Verify it from outside, not from inside
 
@@ -144,9 +166,12 @@ links ever stop working.
 
 "Anyone with the link can edit" means exactly that: no account, no audit trail,
 no attribution on anonymous edits. If a link leaks — a forwarded Slack message, a
-screenshot, a shared device — anyone can read the brief and silently change it.
-On a database holding the full creative strategy, unreleased concepts and offer
-mechanics, that is a real exposure.
+screenshot, a shared device — anyone can read that brief and silently change it.
+
+Per-page publishing limits the blast radius to the briefs actually handed out,
+which is why Mark chose it: an unassigned concept or a future brief is never
+exposed. But each published brief is still a world-readable, world-writable page
+carrying a full script, the offer and the creative reasoning.
 
 Mark was told this and chose it anyway, for a good reason: the editors are not in
 Notion and the work has to flow. Recorded here so the trade is visible rather
@@ -456,6 +481,7 @@ routine instead, delete its row from this table and set its `Status` back to
 | Pre-existing backlog | Initially **suppressed** to avoid a scheduled first run blasting seven editors. Superseded the same day: on the on-demand model Mark said "go, clear the 10", and all 11 non-Callum briefs were posted and flipped. **No suppression list going forward.** |
 | Callum's work | **Never touch it.** See the hard rule at the top. |
 | Scheduling | **None.** No cron, no trigger. Mark gives a go signal and the sweep runs then. The trigger built on 2026-10-13 was deleted. |
+| Editor access to briefs | **Publish each brief page to the web with editing allowed — per page, not via the parent.** Several editors are not Notion users. Chosen over inheriting from the `Video Brief Database` page so only assigned briefs are ever exposed, accepting that it is a manual toggle each time. |
 
 ## Appendix: environment facts worth keeping
 
