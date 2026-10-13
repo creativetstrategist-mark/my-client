@@ -15,6 +15,9 @@ When a brief page reaches **`Ready to edit`**, post it into that brief's
 editor's own Slack channel so the editor is told it is theirs, then move the page
 to **`Assigned to Editor`** so it leaves the queue.
 
+It runs **on demand, when Mark gives a go signal** — not on a schedule. See "How
+this runs" below.
+
 This job is **already being done by hand** — Mark and Callum post brief links
 into the `#11-<editor>-editing` channels manually (see the message-format section;
 the format below is copied from what they already send, not invented). The
@@ -38,19 +41,56 @@ This rule outranks every other rule in this doc, including the blank-editor
 handling below. Note that Callum is a member of every editor channel and does
 these handoffs himself — his briefs are his to route.
 
-## ⚠️ This is a poll, not a real-time trigger
+## How this runs: on demand, on Mark's go signal
 
-Notion does **not** push status changes to Claude — there is no Notion→Claude
-webhook in this setup. So "when the status flips" is really "the next time the
-routine looks." The routine runs on a cron schedule and sweeps for anything
-sitting in `Ready to edit`.
+**Mark's decision, 2026-10-13: there is no scheduled Routine.** He does not have
+scheduled Routines set up and does not want one here — he gives a go signal and
+the sweep runs then, in a live session that already holds the Notion and Slack
+connectors.
 
-The practical floor on Routine frequency is **hourly**, so an editor can wait up
-to an hour before being told. If assignments ever need to be instant, Notion's
-own database automation (Evergreen Video → Automations → "When Status is set to
-Ready to edit → send Slack notification") fires on the edit itself — but it
-cannot do the per-editor channel routing, the Callum exclusion, the roster
-validation, or the status flip that this routine does.
+So there is no cron, no trigger, and nothing fires on its own. Nothing happens
+to a brief until Mark asks. That has real consequences worth stating plainly:
+
+- **No brief is ever announced without Mark knowing**, because he started the
+  run. The whole reason the go-live baseline exists — stopping a scheduled first
+  run from blasting a six-day backlog at seven editors — is moot under this
+  model. Keep the baseline table as the record of what was already waiting, but
+  the thing it was defending against cannot now happen by surprise.
+- **Nothing is picked up between go signals.** A brief that hits `Ready to edit`
+  an hour after a run waits for the next one. That is the accepted trade for not
+  having a scheduler; it is not a bug to work around with a self-scheduled
+  wakeup.
+- **A run is only as current as its query.** Always re-query at the start of a
+  run. Never work from a brief list captured earlier in the conversation — other
+  people move statuses and assign editors in Notion continuously.
+
+### What "go" means
+
+Unless Mark says otherwise, a go signal means: **every brief currently in
+`Ready to edit` that is not Callum's and not malformed.** Report what you are
+about to do and how many, then do it.
+
+If he scopes it ("just the new ones", "only Hasnain's", "just NK612"), honour
+the narrower scope and say which briefs you therefore skipped, so nothing is
+silently left waiting.
+
+### ⚠️ Slack sends need a permission decision each run
+
+Direct Slack writes are refused by the Claude Code auto-mode classifier
+(`[External System Writes]`, verified 2026-10-13). Two ways through, and Mark
+picks:
+
+1. **He allows the Slack write** — approve the prompt, or allowlist
+   `mcp__Slack__slack_send_message`. Then a go signal runs start to finish
+   unattended.
+2. **Drafts** — `slack_send_message_draft` is not blocked. Each brief becomes a
+   draft in the right channel that Mark sends with one click. Safe, but it is
+   one click per brief, which for a batch of ten is most of the work.
+
+Note a draft is **not** a post: do not flip a page's status for a draft. Flip it
+only once Mark confirms the message actually went out. The safe failure is a
+brief that stays in `Ready to edit`.
+
 
 ## ⚠️ Exact option strings (do not paraphrase)
 
@@ -321,50 +361,54 @@ routine instead, delete its row from this table and set its `Status` back to
 | How to reach Slack | **Slack connector.** Not an incoming webhook — connector traffic is not subject to the environment's egress policy, resolves real user mentions, and stores no secret in the environment. |
 | Where assignments land | **One shared channel per editor** (`#11-<editor>-editing`) — not a single team channel, not DMs. |
 | Dedup | **Flip `Status` to `Assigned to Editor`** after posting. No repo ledger. |
-| Pre-existing backlog | **Suppress** — announce only new briefs. See the baseline table. |
+| Pre-existing backlog | **Suppress** — announce only new briefs. See the baseline table. Largely moot under the on-demand model, since Mark controls every run. |
 | Callum's work | **Never touch it.** See the hard rule at the top. |
+| Scheduling | **None.** No cron, no trigger. Mark gives a go signal and the sweep runs then. The trigger built on 2026-10-13 was deleted. |
 
-## Environment note for whoever maintains this
+## Appendix: environment facts worth keeping
 
-Raw `curl` to Slack does **not** work from the cloud environment —
-`slack.com:443` returns 403 at the egress gateway (verified 2026-10-13). That is
-why the connector path was chosen. A webhook-based rewrite would additionally
-need `hooks.slack.com` added under the environment's Allowed domains.
+- **Raw `curl` to Slack does not work** from the cloud environment —
+  `slack.com:443` returns 403 at the egress gateway (verified 2026-10-13). The
+  connector is the only route. A webhook rewrite would need `hooks.slack.com`
+  added under the environment's Allowed domains.
+- **Direct Slack sends are refused by the auto-mode classifier.** See "Slack
+  sends need a permission decision each run" above — this is the live friction,
+  not a theoretical one.
 
-### ⚠️ The Routine must be created from the claude.ai Routines UI
+## Appendix: if this is ever put on a schedule
 
-**Verified the hard way on 2026-10-13.** A Routine created with the
-`create_trigger` MCP tool on this organization **cannot carry connectors**:
+Not currently wanted (Mark runs it on demand), but the groundwork is done, so
+here is what a future scheduler would need to know.
+
+**A Routine created with the `create_trigger` MCP tool cannot carry connectors
+on this organization — verified the hard way on 2026-10-13:**
 
 - Passing `connectors: ["Notion", "Slack"]` is rejected outright —
   *"the connectors parameter is not available for this organization."*
-- Creating it without that parameter succeeds but returns a warning that the
-  trigger stores no MCP connectors.
-- Firing such a trigger manually confirmed it: the fired session's init
-  reported `mcp_servers: []`, and the run itself reported that
-  `mcp__Notion__*`, `mcp__Slack__*` **and** `mcp__github__*` were all
-  unavailable. It posted nothing and changed no statuses.
+- Creating it without that parameter succeeds but warns that the trigger stores
+  no MCP connectors.
+- Firing such a trigger confirmed it: the fired session's init reported
+  `mcp_servers: []`, and the run itself reported `mcp__Notion__*`,
+  `mcp__Slack__*` **and** `mcp__github__*` all unavailable. It correctly posted
+  nothing and changed no statuses.
 
-So this Routine has to be created (or have its connectors attached) in the
-**claude.ai Routines UI**, with **Notion, Slack and GitHub** all enabled for the
-scheduled run — GitHub included, because the routine reads this spec file from
-the repo. `trig_01X5NCbaMaYWJpq8yb8XoxAD` exists and is **disabled**; either
-attach the three connectors to it there and re-enable, or delete it and recreate
-it from the UI using the prompt below.
+So a scheduled version has to be created in the **claude.ai Routines UI** with
+**Notion, Slack and GitHub** all attached — GitHub included, because the routine
+reads this spec from the repo at run time. The trigger built and tested on
+2026-10-13 (`trig_01X5NCbaMaYWJpq8yb8XoxAD`) was **deleted** once Mark said he
+runs this on demand.
 
-Do not re-enable it until the connectors are attached — without them every
-hourly run is a session that can only report its own failure.
+A scheduled version would also hit the Slack permission question differently: a
+Routine session runs under its own permissions, so whether it can send directly
+rather than only draft needs checking on the first live run.
 
-Because the Routine prompt points at this file rather than inlining the rules,
-**changing the message format or the mapping table here changes the routine's
-behaviour on its next run** — no trigger edit needed.
+Hourly would be the practical floor, so an editor could wait up to an hour.
+Notion's own database automation (Evergreen Video → Automations → "When Status
+is set to Ready to edit → send Slack notification") fires on the edit itself and
+is the better tool if instant matters — at the cost of the per-editor routing,
+the Callum exclusion, the roster validation and the status flip.
 
-## The Routine prompt (paste into the claude.ai Routines UI)
-
-Schedule: hourly. Attach **Notion + Slack + GitHub**. Fresh session per run.
-Narrow the hours to the editors' working window if hourly round-the-clock is
-more than needed — the editors span Pakistan, Nigeria and the Philippines, so
-"working hours" is most of the day.
+### The prompt, if it is ever scheduled
 
 ```
 Sweep the NorthernKnife "Evergreen Video" Notion database for briefs that have
@@ -436,9 +480,10 @@ rather than reporting zero assignments. If you could not read the spec file,
 stop and report that rather than working from this prompt's summary.
 ```
 
+
 ## Run history
 
 | Date | Posted | Fallback | Skipped (Callum) | Skipped (other) | Notes |
 |---|---|---|---|---|---|
-| 2026-10-13 | — | — | — | — | Spec written, mapping verified live, baseline of 15 recorded. Trigger `trig_01X5NCbaMaYWJpq8yb8XoxAD` created but **disabled**: a manual test fire proved MCP-created triggers get no connectors on this org. Blocked on recreating it in the claude.ai Routines UI. |
+| 2026-10-13 | — | — | — | — | Spec written, mapping verified live, baseline of 15 recorded. A scheduled trigger was built and test-fired, which proved MCP-created triggers get no connectors on this org; it was then **deleted** when Mark said he has no scheduled Routines and will give a go signal instead. See the scheduling appendix. |
 | 2026-10-13 | 1 (NK584) | — | — | — | **First live end-to-end test**, run by hand from a session with both connectors. Detect → format → post to `#11-onyeka-editing` → flip to `Assigned to Editor`, all verified. Two findings: bold needs `**` not `*` (the first attempt rendered italic), and direct Slack sends are blocked by the Claude Code auto-mode classifier, so the message went out as a draft Mark sent. The italic first attempt is a duplicate in that channel and can be deleted. |
