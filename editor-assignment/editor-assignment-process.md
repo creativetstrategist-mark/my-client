@@ -393,11 +393,21 @@ the file.
    page with no Creative ID.
 3. For each remaining page, look up its Editor in the spec's mapping table and
    post the spec's message format into that editor's channel. One message per
-   brief. Match Mark's existing format exactly — a single bold masked link,
-   label "NK###_Concept Name_Content_Product" built verbatim from that page's
-   own properties, targeting the url the query returned for that row. No
-   @-mention unless the spec says to add one, no greeting, no extra fields, no
-   automation footer.
+   brief. Match Mark's existing format exactly — a single bold masked link:
+
+       **<PAGE_URL|NK###_Concept Name_Content_Product>**
+
+   Bold is TWO asterisks. The Slack tools take standard Markdown and convert
+   it outbound, so `*x*` sends italic and `**x**` sends bold — the opposite of
+   what an existing Slack message's raw source looks like, so do not copy the
+   single-asterisk form you see when reading a channel. The `<url|label>` link
+   form does pass through untouched; leave it as is.
+
+   Build the four label fields verbatim from that page's own properties, and
+   target the url the query returned for that row. No @-mention unless the
+   spec says to add one, no greeting, no summary of the script, no extra
+   fields. (The "Sent using @Claude" footer is appended by Slack itself — you
+   neither add nor suppress it.)
 4. Only after a post succeeds, set that page's Status to "Assigned to Editor".
    Post first, then flip — never the other way round, and never flip a page
    that was not successfully posted.
