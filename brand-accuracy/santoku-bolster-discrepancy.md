@@ -15,15 +15,19 @@ search afterwards.*
 - The live corpus overwhelmingly says **copper**, consistently, from 2026-07-14
   through 2026-10-13.
 
-**This is not yet resolved.** Mark's instruction on 2026-10-13 was "let's stick to
-brass", and NK599 was corrected on that basis. But the physical product has not
-been verified: `northernknife.com` is blocked by the cloud environment's egress
-policy, so the product page could not be read from here. **If the bolster is
-actually copper, then the catalog and CLAUDE.md are wrong and brass is the error
-being propagated.** Settle that before any bulk change.
+## ✅ RESOLVED: it is brass
 
-To check from here in future, `northernknife.com` needs adding under Allowed
-domains in the environment's network settings.
+**Mark confirmed on 2026-10-13: the bolster is brass.** The catalog and CLAUDE.md
+are correct; the corpus's "copper" is a long-running error.
+
+Note the product page itself was never readable from here —
+`northernknife.com` is blocked by the environment's egress policy — so this rests
+on Mark's confirmation, not an independent check. To verify from here in future,
+`northernknife.com` needs adding under Allowed domains in the environment's
+network settings.
+
+**Decision: fix unproduced briefs only.** Produced work (`Uploaded on Drive`) is
+a record of what shipped and is left as-is.
 
 ## ⚠️ Why a find-and-replace would do damage
 
@@ -105,7 +109,45 @@ multi-product and describe the **Feather's** rosewood handle entirely correctly 
 `Swear To Me - Santoku` and `Everyone's Been Had - Santoku` both do. Check which
 product the sentence is about before changing anything.
 
-## Already fixed
+## ⚠️ The first sweep was incomplete — search the material word, not the phrase
+
+Searching `"copper bolster"` returned 25 pages and **missed six**, because they
+phrase it differently: *"solid copper dragon bolster"*, *"Copper detail"*,
+*"sculpted in solid copper"*, *"Copper was the one that did both"*, *"copper
+dragon"*. Searching the bare word **`copper`** found them.
+
+Real total: **~29 briefs**, not 24. It did not change the outcome — five of the
+six extra pages were already produced and the sixth is Callum's — but any future
+material-accuracy sweep should query the bare material word.
+
+The six missed: `Add the Distinctive Piece` (NK296), `Stole It From My Brother -
+Santoku` (NK571), `Legend - Santoku` (NK592), `We're sorry.` (NK303),
+`3 Checks - Santoku` (NK588), and `Negative (NK130 Iteration) - Tiger Cleaver`
+(NK163).
+
+## Fixed (unproduced only)
+
+| Creative ID | Concept | Status at fix | Change |
+|---|---|---|---|
+| **NK599** | Worth The Money - Santoku | `Assigned to Editor` (Umar) | 3 × copper → brass (VO line, 2nd VO mention, and the visual direction "Closeup on the copper bolster"), plus "Rosewood handle, carved by hand." → "A handle carved by hand." |
+| **NK471** | What cheap knives cost (SANTOKU) | `Not started` (Onyeka) | 1 × "copper bolster with the dragon cut into it" → brass |
+| **NK470** | What cheap knives cost (Feather) | `Not started` (Hammad) | 1 × same line → brass. A Feather brief whose lineup beat describes the Santoku. |
+
+## 🚫 Left unfixed on purpose
+
+- **NK588 "3 Checks - Santoku"** — `Ready to edit`, so it qualifies as unproduced,
+  but **`Strategist = Callum`**. Mark's standing rule is never to touch Callum's
+  work, so it was left alone and flagged instead. **It still needs the brass
+  fix.**
+- **NK163 "Negative (NK130 Iteration) - Tiger Cleaver"** — says "rosewood with
+  copper detailing", but that is the **Tiger Cleaver**, a different product where
+  copper may be correct. Out of scope for the Santoku rule, and produced anyway.
+- **Everything else** (~26 briefs) is `Uploaded on Drive`. Left as the record of
+  what shipped.
+- **No rosewood-on-Santoku brief was unproduced**, so none needed fixing. The
+  seven affected are all `Uploaded on Drive`.
+
+## Superseded notes
 
 **NK599 "Worth The Money - Santoku"** (`3f34ac62-7aac-814c-8515-e16be8ea2927`),
 on Mark's instruction, 2026-10-13:
@@ -116,15 +158,12 @@ on Mark's instruction, 2026-10-13:
 
 It was with Umar at `Assigned to Editor` at the time.
 
-## Recommended next steps
+## Still open
 
-1. **Verify the product.** Check the bolster on
-   <https://northernknife.com/products/bjorn-series-santoku-knife>. Everything
-   below depends on the answer.
-2. **Fix the source of truth first**, whichever way it goes — the catalog or the
-   corpus — so new briefs stop inheriting the wrong word.
-3. **Then fix forward only.** Briefs not yet produced (`Ready for visuals`,
-   `Ready to edit`, `Assigned to Editor`) are worth correcting. Shipped work is a
-   record; leave it.
-4. **Hand-edit the four beat-dependent briefs**, or leave them. They need
-   rewriting, not a word swap.
+1. **NK588 needs the brass fix** — blocked on the Callum rule. Mark or Callum.
+2. **Why do new briefs keep inheriting "copper"?** The catalog says brass, so
+   something else is feeding it — most likely older briefs being used as voice
+   reference, since the corpus is overwhelmingly copper. Worth finding, or the
+   error returns on the next Santoku batch written from precedent.
+3. **The four beat-dependent briefs** would need rewriting rather than a word
+   swap if they are ever revived (see above). All are produced, so no action now.
