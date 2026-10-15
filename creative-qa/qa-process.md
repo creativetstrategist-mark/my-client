@@ -26,6 +26,38 @@ The editor/review split is Zoro's core rule and it still holds here: an editor
 reads every comment as a required change, so a taste note posted as a fix
 costs a revision round. Review items are reported to Mark and nowhere else.
 
+## Never post a partial fix list
+
+The `[QA n/N]` numbering asserts that the list is complete. An editor who gets
+`[QA 1/1 · File naming]` reads it as "rename this and the cut is good to go".
+
+So if **any** check could not run — the media would not download, a transcription
+failed, OCR produced nothing usable — post nothing to Frame.io, reply nothing on
+Slack, add no 🔁, and write no ledger row. Report to Mark what did run, what
+could not, and why. A partial list is worse than no list: it costs a revision
+round and it tells the editor the unchecked parts passed.
+
+The checks that survive a media failure are naming (delivered names come from
+the Frame.io API, not the file) and aspect ratio, frame rate and duration (from
+the file's metadata). They are worth reporting to Mark. They are not worth
+posting on their own, because between them they cover none of what the QA is
+actually for.
+
+## Environment requirement: egress to Frame.io's media host
+
+Every download, proxy, thumbnail and scrub-sheet URL Frame.io hands back is on
+**`at.adobe.com`**. If the environment's network policy denies that host, the
+CONNECT fails with a gateway 403 and **no cut can be QA'd at all** — captions,
+VO, safe zones and audio all need the bytes.
+
+This bit on 2026-10-15, the first real run. It is a network-policy setting, not
+a code problem: the host has to be allowed for the environment the Routine
+fires in. A run that hits it must say so plainly rather than reporting a clean
+queue, and must not substitute guessed findings for checks it could not run.
+Also required: `ffmpeg`/`ffprobe` (present), `tesseract` (installable with
+`apt-get update && apt-get install -y tesseract-ocr`) and `faster-whisper`
+(`pip install faster-whisper --break-system-packages`).
+
 ## The dedup ledger — read this before touching the queue
 
 **Status is not the dedup key, and cannot be.** The run is forbidden from
@@ -210,3 +242,4 @@ detail belongs in `qa-log.md`.
 
 | Date | Cue | Cuts QA'd | Fixes posted | Skipped (done) | Out of scope | No files | Notes |
 |---|---|---|---|---|---|---|---|
+| 2026-10-15 | `QA NK604` | 0 | 0 | 0 | 0 | 0 | Blocked: `at.adobe.com` denied by egress policy, so no media downloaded. Naming check ran from API metadata — all 3 files truncated to 7 of 30 fields. Nothing posted, per the partial-list rule. |
