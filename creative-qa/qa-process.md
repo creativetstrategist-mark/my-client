@@ -66,9 +66,23 @@ This bit on 2026-10-15, the first real run. It is a network-policy setting, not
 a code problem: the host has to be allowed for the environment the Routine
 fires in. A run that hits it must say so plainly rather than reporting a clean
 queue, and must not substitute guessed findings for checks it could not run.
-Also required: `ffmpeg`/`ffprobe` (present), `tesseract` (installable with
-`apt-get update && apt-get install -y tesseract-ocr`) and `faster-whisper`
-(`pip install faster-whisper --break-system-packages`).
+**Step 0 of every run: `bash creative-qa/setup-qa-tools.sh`.** It is idempotent,
+installs only what is missing, and its exit code decides whether the run can go
+ahead at all:
+
+| Exit | Meaning | What the run does |
+|---|---|---|
+| `0` | tools ready, media host reachable | run the full Zoro pass |
+| `3` | tools ready, media host **blocked** | report the block. Post nothing on naming alone unless Mark has asked for a partial pass |
+| `1` | tooling would not install | report it, do not QA |
+
+It installs `tesseract` and `faster-whisper`, which no fresh session has, and
+checks `ffmpeg`/`ffprobe`, which ship with the image. Note `tesseract` needs
+`apt-get update` first — on this image a bare `apt-get install tesseract-ocr`
+reports "Unable to locate package".
+
+Running it first also means a blocked run costs seconds instead of a wasted
+pass: the preflight fails before any brief is read or any file is opened.
 
 ## The dedup ledger — read this before touching the queue
 
