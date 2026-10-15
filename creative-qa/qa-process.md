@@ -216,18 +216,6 @@ Nobody has run it end to end yet, so any larger cap is a guess. The first
 completed run must record its wall-clock time and peak disk in the Run history
 below; the cap is then raised from that measurement, not from an estimate.
 
-## Disk and cleanup
-
-Delete each cut's downloaded media and extracted frames **as soon as that cut is
-logged**, before starting the next one — not at the end of the run. One cut is
-~220 MB of video plus a few hundred extracted frames; a run that holds several
-at once climbs into the gigabytes for no reason, and on this container a full
-disk fails writes while deletes still succeed.
-
-Work in a per-cut directory under the session scratchpad, never in the repo, and
-`rm -rf` it once the ledger row is written. If the run dies mid-cut, the next run
-starts from the ledger, so nothing is lost by deleting early.
-
 ## Finding the delivered files
 
 Three paths, in this order. Do not stop at the first that returns *something* —
@@ -345,6 +333,18 @@ naming comments carrying the full expected name ready to copy.
 
 Keep the `n/N` numbering identical to the numbering in the run report so Mark
 and the editor are reading the same list.
+
+## Disk and cleanup
+
+Delete each cut's downloaded media and extracted frames **as soon as that cut is
+logged**, before starting the next one — not at the end of the run. One cut is
+~220 MB of video plus a few hundred extracted frames; a run that holds several
+at once climbs into the gigabytes for no reason, and on this container a full
+disk fails writes while deletes still succeed.
+
+Work in a per-cut directory under the session scratchpad, never in the repo, and
+`rm -rf` it once the ledger row is written. If the run dies mid-cut, the next run
+starts from the ledger, so nothing is lost by deleting early.
 
 ## Report back to Mark
 

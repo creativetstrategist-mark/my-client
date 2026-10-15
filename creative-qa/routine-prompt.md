@@ -57,9 +57,7 @@ Run `bash creative-qa/setup-qa-tools.sh` from the repo root. It is idempotent an
 
 4. **Find the files.** In order: the Notion `Delivery Link`; then the editor's own `@Mark Ready for review <frame.io link>` reply inside the creative's Slack thread, which carries the asset URL and is present even when `Delivery Link` is empty (it is empty on about half the queue); then Frame.io `search_assets` by creative ID. Account `b0bc19f9-4a80-4ae4-9768-4b151edb5a40`, deliveries so far in project `b37ff928-5b11-4860-8204-f102af43f3ec`. Then apply Zoro's version-stack rules: newest upload per hook by `created_at`, each stack holds only its own hook, and read the previous version's comments so notes Mark already left are enforced. `get_file` URLs are temporary — download immediately. No files on any path → post nothing, log nothing, move no Status, report it as "no files found"; that is a delivery problem, not a QA failure.
 
-5. **Delete each cut's media as soon as that cut is logged**, before starting the next — not at the end of the run. Work in a per-cut directory under the session scratchpad, never in the repo, and `rm -rf` it once the ledger row is written. One cut is ~220 MB of video plus a few hundred frames; holding several at once climbs into the gigabytes, and a full disk fails writes while deletes still succeed.
-
-5b. **Run the QA pass** per Zoro — specs/audio, transcription, caption OCR plus your own look at the contact sheets, safe-zone measurement, file naming, hook/label match. Never report a caption as missing or wrong from OCR alone; open the frame and see it. Note that some concepts give all three variants IDENTICAL hook copy (NK604 does), which makes a swapped-file check impossible from the copy — say so rather than reporting the labels as verified.
+5. **Run the QA pass** per Zoro — specs/audio, transcription, caption OCR plus your own look at the contact sheets, safe-zone measurement, file naming, hook/label match. Never report a caption as missing or wrong from OCR alone; open the frame and see it. Note that some concepts give all three variants IDENTICAL hook copy (NK604 does), which makes a swapped-file check impossible from the copy — say so rather than reporting the labels as verified.
 
 6. **Post the editor fix list to Frame.io.** Follow `references/frameio-posting.md` exactly: `[QA n/N · Category]` prefix, one comment per fix per file at that file's own timecode with variant offsets applied, whole-video items at `00:00:00:00`, red box over the caption or red line at the safe-zone limit, naming comments carrying the full expected name ready to copy. Keep the `n/N` numbering identical to your report. Read a file's existing comments before posting so you never double-post.
 
@@ -74,6 +72,8 @@ Run `bash creative-qa/setup-qa-tools.sh` from the repo root. It is idempotent an
    - Editor is `Huzaifa` (inactive, no channel) → post the comments, leave Status at `1st QA`, report the Slack gap.
 
 8. **A clean cut** — no fixes at all — gets no Frame.io comments, no Slack reply and no reaction, but **DOES move to `2nd QA`** and DOES get a ledger row. It passed a full QA, and that Status change is the only record it was ever looked at; without it the cut strands. Report it to Mark as clean.
+
+9. **Clean up before the next cut.** Once a cut's ledger row is written, `rm -rf` its media and extracted frames — not at the end of the run. Work in a per-cut directory under the session scratchpad, never in the repo. One cut is ~220 MB of video plus a few hundred frames; holding several at once climbs into the gigabytes, and on this container a full disk fails writes while deletes still succeed.
 
 ## Status — the only Notion write you may make
 
