@@ -52,7 +52,24 @@ nobody told it passed.
 A cut stays at `1st QA` whenever the hand-off did not actually complete. No
 thread means the editor was never told, so the work is not with them yet. A
 partial pass means the cut has not really been QA'd. Both are visible on the
-board as still needing attention, which is the point.
+board as still needing attention, which is the point. A cut left at `1st QA`
+after its comments posted still gets its ledger row, with `Pending` = `slack`.
+
+**The exact call.** `Status` is a Notion *status*-type property, not a select, so
+it takes the option name as a plain string:
+
+```
+mcp__Notion__notion-update-page
+  page_id:     <the brief page's id>
+  command:     "update_properties"
+  properties:  { "Status": "2nd QA" }
+  allow_async: false
+```
+
+Pass `allow_async: false` deliberately — page updates default to async, and the
+ledger row written straight afterwards must not record a move that has not
+actually landed. Verified against the tool schema on 2026-10-15; `2nd QA` was
+confirmed present in the live Status options before wiring it up.
 
 ## Never post a partial fix list
 
@@ -114,29 +131,51 @@ pass: the preflight fails before any brief is read or any file is opened.
 
 ## The dedup ledger — read this before touching the queue
 
-**Status drains the queue; the ledger is still what decides.** A completed QA
-moves the cut to `2nd QA`, so it leaves the `1st QA` queue and the next cue will
-not see it. That is the happy path, and it is not enough on its own.
+**A ledger row and a Status move are separate events. Never condition one on
+the other.** A row says the QA ran and what was posted. Status says the hand-off
+to the editor completed. Most of the time both happen; when only one does, the
+row is still written.
 
-Every outcome that does **not** move Status — a cut with no Slack thread, a
-partial pass, a blocked run — leaves the cut sitting at `1st QA`. Those come
-back round on the next cue, and without the ledger the run would re-QA them and
-post the fix list to the editor a second and third time. The ledger is also the
-only thing that distinguishes a re-delivery from a repeat, because Status cannot:
-a cut returned to `1st QA` with a new cut in Frame.io must be QA'd again, and the
-same version must not be.
+Conditioning the row on the Status move was a bug, and it is worth stating so it
+does not come back: a cut whose Slack thread could not be found got its comments
+but no row, so every later cue re-QA'd it, ran into its own comments, reported a
+clash, and did that forever — while the editor was never told. Write the row,
+mark what is outstanding, and retry only that.
 
-`creative-qa/qa-log.md` is the ledger. One row per cut actually QA'd, keyed on
-**creative ID + the Frame.io version id that was QA'd**:
+Status still drains the happy path: a completed QA moves the cut to `2nd QA` and
+it leaves the `1st QA` queue. But Status cannot tell a re-delivery from a repeat,
+and every stay-put outcome returns on the next cue, so the ledger decides.
 
-- Same creative ID, same version id already in the log → **skip**, silently.
-- Same creative ID, **newer** version id (the editor re-delivered) → **QA it
-  again**. That is the point of keying on version rather than creative.
+`creative-qa/qa-log.md` is the ledger. One row per cut that got a full QA,
+keyed on **creative ID + the Frame.io file id _and_ that file's `updated_at`**:
+
+- Same creative, same id **and** same `updated_at` → **skip the QA**.
+- Same creative, **newer `updated_at` or a new id** → the editor re-delivered
+  → **QA it again**.
 - Not in the log → QA it.
 
+The id alone is not enough: deliveries are often loose files rather than version
+stacks (NK604's are), so an editor who re-uploads in place keeps the same file id
+and only `updated_at` moves. For a true version stack, use the version's own id
+and its `updated_at`.
+
+**A row with `slack` in its `Pending` column is not a cut to re-QA.** It means
+the QA ran and the comments are posted, but the thread reply, the 🔁 and the
+Status move are outstanding — usually because no thread existed at the time.
+Retry only those outstanding steps, clear the column, move Status, and post
+nothing new to Frame.io.
+
 Belt and braces, because the ledger can lag a crashed run: before posting to a
-file, `read_comments` on it and skip posting if comments with a
-`[QA n/N · …]` prefix are already there. Report the clash instead.
+file, `read_comments` on it. Only a **completed** fix list blocks a post — one
+whose prefix carries the numbering, `[QA n/N · …]`. Skip that cut and report the
+clash.
+
+**A labelled partial pass never blocks a later full QA.** Those comments carry no
+numbering on purpose (`[QA · File naming — naming-only pass]`) precisely because
+the cut still owes a full pass: QA it and add to what is already there. Matching
+on a bare `[QA` prefix would lock such a cut out of the full pass it is waiting
+for. NK604 is in exactly that state now, and the rule — not a hard-coded
+exception for it — is what has to get it right.
 
 ## The queue
 
@@ -167,10 +206,27 @@ the ad or file name, which truncates and shifts segments between naming series.
 Report the strategist per cut, and name the out-of-scope cuts you skipped, so
 Mark can see the gate is doing what he expects.
 
-Unless Mark's cue names specific creatives or a count, QA **3 cuts** per run. A
-full pass is heavy — download three hook files, transcribe, OCR frames, measure
-caption boxes — and three is what fits one session comfortably. If the cue
-names creatives ("QA NK604 and NK609"), do exactly those and ignore the cap.
+**The cap is 1 cut per run until a full pass has actually been measured.** If
+the cue names creatives ("QA NK604 and NK609"), do exactly those and ignore the
+cap; if it names a count, honour it.
+
+A full pass per cut is three ~72 MB downloads, three CPU whisper transcriptions
+and roughly 115 OCR frames per file — about 350 tesseract calls for one creative.
+Nobody has run it end to end yet, so any larger cap is a guess. The first
+completed run must record its wall-clock time and peak disk in the Run history
+below; the cap is then raised from that measurement, not from an estimate.
+
+## Disk and cleanup
+
+Delete each cut's downloaded media and extracted frames **as soon as that cut is
+logged**, before starting the next one — not at the end of the run. One cut is
+~220 MB of video plus a few hundred extracted frames; a run that holds several
+at once climbs into the gigabytes for no reason, and on this container a full
+disk fails writes while deletes still succeed.
+
+Work in a per-cut directory under the session scratchpad, never in the repo, and
+`rm -rf` it once the ledger row is written. If the run dies mid-cut, the next run
+starts from the ledger, so nothing is lost by deleting early.
 
 ## Finding the delivered files
 
@@ -268,7 +324,10 @@ Rules:
   Frame.io comments, skip both the reply and the reaction, **leave Status at
   `1st QA`**, and report it. Do not open a new thread: the thread is Mark's to
   start. With no parent there is nothing to react to, and with no reply the
-  editor has not been told, so the cut has not been handed off.
+  editor has not been told, so the cut has not been handed off. **Still write
+  the ledger row, with `slack` in its `Pending` column** — the QA did run and the
+  comments are posted, so a later run must retry only the Slack steps and the
+  Status move, never the QA or the comments.
 - **More than one** matching thread → reply in the newest, react on that same
   parent, and say so in the report.
 - **No fixes found** (the cut is clean) → post nothing to Frame.io, nothing to

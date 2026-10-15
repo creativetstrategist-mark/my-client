@@ -105,7 +105,9 @@ Three rules it must never break:
   it passed. A cut whose hand-off did not complete (no Slack thread, a partial
   pass, a blocked run) stays at `1st QA`. Those stay-put cases are why
   `creative-qa/qa-log.md`, not the Status, is still what stops a cut being
-  re-QA'd and re-commented.
+  re-QA'd and re-commented — so a ledger row is written whenever a full QA ran,
+  **even when Status did not move**, with what is still outstanding in its
+  `Pending` column. Never condition the row on the Status move.
 - **Never touch a cut whose Strategist is Callum or Mauro.** Out of scope
   entirely: no QA, no comment, no Slack, no Notion write.
 - **Never post review items** (judgment calls, strategy, housekeeping) to
