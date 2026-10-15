@@ -93,9 +93,10 @@ poke-only Routine created for this repo). Spec:
 
 It takes the cuts sitting at Notion Status `1st QA` whose Strategist is Mark,
 Andy or Claude, runs the `zoro` skill's QA pass on the delivered Frame.io
-files, posts the editor fix list as Frame.io comments, and replies
+files, posts the editor fix list as Frame.io comments, replies
 `Check comment on frame` in that creative's thread in the editor's own Slack
-channel (`#11-<editor>-editing`).
+channel (`#11-<editor>-editing`), and adds a 🔁 reaction to that thread's
+parent message to mark the creative as QA'd.
 
 Three rules it must never break:
 

@@ -147,18 +147,37 @@ Add the Frame.io file link and the fix count on the same line so the editor
 knows what they are opening and how much is waiting. Keep it to one line — the
 fixes themselves live in the Frame.io comments, not in Slack.
 
+**The reaction.** Once the reply is in the thread, add a 🔁 reaction to the
+**parent message** — `slack_add_reaction` with the emoji name `repeat` (no
+colons), the channel id, and the *parent's* `message_ts`, not the reply's.
+
+The reaction goes on last, after the comments and the reply, so it means one
+thing only: this creative has been QA'd and the fixes are waiting on Frame.io.
+That makes it a visible cross-check on the ledger — a parent carrying 🔁 should
+have a matching row in `qa-log.md`. It is a cross-check, not the dedup key:
+`qa-log.md` stays authoritative, because a reaction cannot tell you *which
+version* was QA'd, and a re-delivered cut needs QA'ing again under a 🔁 that is
+already there. Adding a duplicate reaction succeeds silently, so a repeat run
+costs nothing. Editors and Mark already use other reactions on these parents
+(👀 appears on them), so never read another emoji as a QA signal and never
+remove one.
+
 Rules:
 - Always a **threaded reply** (`thread_ts` = the parent's ts). Never a new
   channel message, and never `reply_broadcast`.
-- Post to Slack **only after** the Frame.io comments are actually on the file.
-  A pointer to comments that are not there wastes the editor's trip.
+- Order is fixed: **Frame.io comments → thread reply → 🔁 on the parent.**
+  Post to Slack only after the comments are actually on the file — a pointer to
+  comments that are not there wastes the editor's trip — and react only after
+  the reply has landed, so 🔁 never marks a cut whose feedback never arrived.
 - **No thread found** for that creative in that editor's channel → post the
-  Frame.io comments, skip Slack, and report it. Do not open a new thread: the
-  thread is Mark's to start.
-- **More than one** matching thread → reply in the newest and say so in the
-  report.
-- **No fixes found** (the cut is clean) → post nothing to Frame.io and nothing
-  to Slack. A clean cut is reported to Mark, who moves the board.
+  Frame.io comments, skip both the reply and the reaction, and report it. Do not
+  open a new thread: the thread is Mark's to start. With no parent there is
+  nothing to react to.
+- **More than one** matching thread → reply in the newest, react on that same
+  parent, and say so in the report.
+- **No fixes found** (the cut is clean) → post nothing to Frame.io, nothing to
+  Slack, and **no reaction**. A clean cut is reported to Mark, who moves the
+  board.
 
 ## Posting to Frame.io
 
@@ -174,7 +193,8 @@ and the editor are reading the same list.
 ## Report back to Mark
 
 Per cut: the verdict (ready / not ready), the fix count and the serious ones,
-which files got comments, the Slack thread replied to, and the review items —
+which files got comments, the Slack thread replied to and whether the 🔁 landed
+on its parent, and the review items —
 review items go **here only**. Then the run totals: cuts QA'd, cuts skipped as
 already done, cuts skipped by the strategist gate (with whose they were), cuts
 with no files found, and what is left in the queue.
