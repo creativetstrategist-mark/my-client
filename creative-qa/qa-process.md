@@ -225,9 +225,15 @@ creative.
 1. **Notion `Delivery Link`** on the brief page. Populated on roughly half the
    queue, so it cannot be the only path.
 2. **The editor's own Slack reply.** In the creative's thread (see below) the
-   editor posts `@Mark Ready for review <frame.io link>`. That link carries the
-   asset id and is present even when Notion's `Delivery Link` is empty — often
-   the fastest correct answer.
+   editor posts a frame.io link when they deliver. That link carries the asset
+   id and is present even when Notion's `Delivery Link` is empty — often the
+   fastest correct answer.
+
+   **Match on the link, never on the wording.** Editors phrase it however they
+   like: Hammad wrote "@Mark Ready for review <link>" on NK609, Onyeka wrote
+   "Here @Mark <link>" on NK580. Take the most recent reply in that thread
+   containing a `next.frame.io/project/...` URL, from anyone other than Mark.
+   Keying on "Ready for review" would have missed NK580 entirely.
 3. **Frame.io `search_assets`** with the creative ID, as the `zoro` skill
    describes. Account `b0bc19f9-4a80-4ae4-9768-4b151edb5a40`; deliveries so far
    all sit in project `b37ff928-5b11-4860-8204-f102af43f3ec`.
@@ -333,6 +339,28 @@ naming comments carrying the full expected name ready to copy.
 
 Keep the `n/N` numbering identical to the numbering in the run report so Mark
 and the editor are reading the same list.
+
+## File naming has a length ceiling
+
+The convention has outgrown the filename. Measured on 2026-10-15:
+
+| | Length | Fields |
+|---|---|---|
+| NK604, the name Notion's table asks for (with `.mp4`) | **260 chars** | 30 |
+| NK604, as delivered | 54 chars | 7 |
+| NK580, as delivered — cut mid-field at `Prf-Guaran` | 217 chars | 25 |
+
+Frame.io's own `name` field is capped at 255 characters, so **NK604's expected
+name does not fit at all**, and NK580's export truncated it even earlier. This
+is not an editor being careless: the tail fields (`Off-`, `Rev-`, `Voice-`,
+`Face-`, `Len-`) are the first casualties every time, which is exactly the
+"_Len-T" / "_Face" class of miss in Zoro's notes.
+
+So when the naming check fires, **measure before demanding a rename**. Report
+the delivered-vs-expected diff as usual, but if the expected name is itself over
+the ceiling, say so in the comment and in the run report rather than asking the
+editor for a rename they cannot perform. A convention that cannot fit is Mark's
+to shorten, not the editor's to comply with.
 
 ## Disk and cleanup
 
