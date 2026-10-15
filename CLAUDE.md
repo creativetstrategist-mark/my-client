@@ -84,3 +84,25 @@ A scheduled Routine fires daily (see the trigger created for this repo) and:
 
 If the Notion connector isn't available in a given run, the routine should
 say so explicitly rather than silently skipping delivery.
+
+## The creative QA routine
+
+A second automation, fired **on Mark's cue** rather than on a schedule (see the
+poke-only Routine created for this repo). Spec:
+`creative-qa/qa-process.md`; dedup ledger: `creative-qa/qa-log.md`.
+
+It takes the cuts sitting at Notion Status `1st QA` whose Strategist is Mark,
+Andy or Claude, runs the `zoro` skill's QA pass on the delivered Frame.io
+files, posts the editor fix list as Frame.io comments, and replies
+`Check comment on frame` in that creative's thread in the editor's own Slack
+channel (`#11-<editor>-editing`).
+
+Three rules it must never break:
+
+- **Never change the Notion Status.** Mark moves the board by hand. Because of
+  that the queue does not drain, so `creative-qa/qa-log.md` — not the Status —
+  is what stops a cut being QA'd and re-commented twice.
+- **Never touch a cut whose Strategist is Callum or Mauro.** Out of scope
+  entirely: no QA, no comment, no Slack, no Notion write.
+- **Never post review items** (judgment calls, strategy, housekeeping) to
+  Frame.io or Slack. They go to Mark in the run report only.
