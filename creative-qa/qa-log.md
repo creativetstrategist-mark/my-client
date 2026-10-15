@@ -13,6 +13,11 @@ file that was checked, per hook):
 - same creative, newer version (editor re-delivered) → QA again
 - not listed → QA it
 
+A row is written only for a cut that got a **full** QA — the same condition that
+moves its Notion Status to `2nd QA`. A partial pass, a blocked run or a cut with
+no Slack thread gets no row and keeps its `1st QA` Status, so it comes back round
+on the next cue.
+
 Rows seeded as `manual` are cuts Zoro QA'd by hand before this routine existed.
 Their version ids were not recorded, so the version key cannot match them.
 For those, read the file's comments first: if `[QA n/N · …]` comments are

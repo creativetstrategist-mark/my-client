@@ -95,14 +95,17 @@ It takes the cuts sitting at Notion Status `1st QA` whose Strategist is Mark,
 Andy or Claude, runs the `zoro` skill's QA pass on the delivered Frame.io
 files, posts the editor fix list as Frame.io comments, replies
 `Check comment on frame` in that creative's thread in the editor's own Slack
-channel (`#11-<editor>-editing`), and adds a 🔁 reaction to that thread's
-parent message to mark the creative as QA'd.
+channel (`#11-<editor>-editing`), adds a 🔁 reaction to that thread's parent
+message, and then moves the Notion Status from `1st QA` to `2nd QA`.
 
 Three rules it must never break:
 
-- **Never change the Notion Status.** Mark moves the board by hand. Because of
-  that the queue does not drain, so `creative-qa/qa-log.md` — not the Status —
-  is what stops a cut being QA'd and re-commented twice.
+- **`1st QA` → `2nd QA` is the only Notion write it may make**, and it goes last,
+  after the comments, the reply and the 🔁 have landed. A clean cut moves too —
+  it passed. A cut whose hand-off did not complete (no Slack thread, a partial
+  pass, a blocked run) stays at `1st QA`. Those stay-put cases are why
+  `creative-qa/qa-log.md`, not the Status, is still what stops a cut being
+  re-QA'd and re-commented.
 - **Never touch a cut whose Strategist is Callum or Mauro.** Out of scope
   entirely: no QA, no comment, no Slack, no Notion write.
 - **Never post review items** (judgment calls, strategy, housekeeping) to

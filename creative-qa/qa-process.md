@@ -18,13 +18,41 @@ is, which cuts are already done, and how far the run may go unattended.
 |---|---|
 | Post the **editor fix list** as Frame.io comments | **Yes** — this is the deliverable |
 | Reply `Check comment on frame` in the editor's Slack thread | **Yes** |
-| Change the Notion **Status** | **Never.** Mark moves the board by hand |
+| Add 🔁 to that thread's parent message | **Yes** |
+| Move the Notion **Status** from `1st QA` to `2nd QA` | **Yes** — last step, and only on the outcomes below |
+| Any other Notion write (property, page body, a different Status) | **Never** |
 | Post **review items** (judgment calls) anywhere | **Never** — they go to Mark in the run report only |
 | Delete or resolve an existing comment | **Never** without Mark saying so |
 
 The editor/review split is Zoro's core rule and it still holds here: an editor
 reads every comment as a required change, so a taste note posted as a fix
 costs a revision round. Review items are reported to Mark and nowhere else.
+
+### When Status moves (set by Mark, 2026-10-15)
+
+`1st QA` → `2nd QA` is the **only** Status transition this run may make, and the
+**only** Notion write of any kind. It goes last, after the comments, the reply
+and the 🔁 have all actually landed.
+
+| Outcome | Frame.io | Slack reply | 🔁 | Status |
+|---|---|---|---|---|
+| Fixes found, posted, thread found | comments | yes | yes | → **`2nd QA`** |
+| **Clean — no fixes at all** | nothing | nothing | nothing | → **`2nd QA`** |
+| Fixes posted but **no Slack thread** found | comments | — | — | stays `1st QA` |
+| **Partial pass** (Mark asked for one) | labelled comments | yes | yes | stays `1st QA` |
+| Blocked, no files, or tooling failed | nothing | nothing | nothing | stays `1st QA` |
+| Out of scope (Callum / Mauro) | nothing | nothing | nothing | **untouched** |
+
+A clean cut moves because it had a full, successful QA — it simply had nothing
+to fix. It is the one outcome with no Frame.io or Slack trace at all, so the
+Status change is the only signal it was ever looked at. Without it a clean cut
+strands: nothing posted, a ledger row written so the next run skips it, and
+nobody told it passed.
+
+A cut stays at `1st QA` whenever the hand-off did not actually complete. No
+thread means the editor was never told, so the work is not with them yet. A
+partial pass means the cut has not really been QA'd. Both are visible on the
+board as still needing attention, which is the point.
 
 ## Never post a partial fix list
 
@@ -33,7 +61,7 @@ The `[QA n/N]` numbering asserts that the list is complete. An editor who gets
 
 So if **any** check could not run — the media would not download, a transcription
 failed, OCR produced nothing usable — post nothing to Frame.io, reply nothing on
-Slack, add no 🔁, and write no ledger row. Report to Mark what did run, what
+Slack, add no 🔁, leave Status at `1st QA`, and write no ledger row. Report to Mark what did run, what
 could not, and why. A partial list is worse than no list: it costs a revision
 round and it tells the editor the unchecked parts passed.
 
@@ -51,9 +79,9 @@ When he does:
   fix. Label the comment `[QA · <Category> — <what ran>-only pass]`.
 - **Name the checks that did not run, inside the comment**, so the editor cannot
   read it as the complete list, and say the same in the Slack reply.
-- **Still write no ledger row.** The creative has not had a full QA, so it must
-  come back round for one; the reaction and the posted comments are not a record
-  that it passed.
+- **Still write no ledger row, and leave Status at `1st QA`.** The creative has
+  not had a full QA, so it must come back round for one. The reaction, the
+  posted comments and the board position are not a record that it passed.
 
 ## Environment requirement: egress to Frame.io's media host
 
@@ -86,10 +114,17 @@ pass: the preflight fails before any brief is read or any file is opened.
 
 ## The dedup ledger — read this before touching the queue
 
-**Status is not the dedup key, and cannot be.** The run is forbidden from
-moving Status, so a cut stays at `1st QA` after it has been QA'd. A run that
-trusted Status alone would re-QA the same cuts on every cue and post the fix
-list to the editor a second and third time.
+**Status drains the queue; the ledger is still what decides.** A completed QA
+moves the cut to `2nd QA`, so it leaves the `1st QA` queue and the next cue will
+not see it. That is the happy path, and it is not enough on its own.
+
+Every outcome that does **not** move Status — a cut with no Slack thread, a
+partial pass, a blocked run — leaves the cut sitting at `1st QA`. Those come
+back round on the next cue, and without the ledger the run would re-QA them and
+post the fix list to the editor a second and third time. The ledger is also the
+only thing that distinguishes a re-delivery from a repeat, because Status cannot:
+a cut returned to `1st QA` with a new cut in Frame.io must be QA'd again, and the
+same version must not be.
 
 `creative-qa/qa-log.md` is the ledger. One row per cut actually QA'd, keyed on
 **creative ID + the Frame.io version id that was QA'd**:
@@ -223,19 +258,23 @@ remove one.
 Rules:
 - Always a **threaded reply** (`thread_ts` = the parent's ts). Never a new
   channel message, and never `reply_broadcast`.
-- Order is fixed: **Frame.io comments → thread reply → 🔁 on the parent.**
-  Post to Slack only after the comments are actually on the file — a pointer to
-  comments that are not there wastes the editor's trip — and react only after
-  the reply has landed, so 🔁 never marks a cut whose feedback never arrived.
+- Order is fixed: **Frame.io comments → thread reply → 🔁 on the parent →
+  Status to `2nd QA`.** Each step only after the previous one actually landed:
+  post to Slack only once the comments are on the file — a pointer to comments
+  that are not there wastes the editor's trip — react only once the reply has
+  landed, and move Status only once the 🔁 is on. Status last means the board
+  never shows a cut as moved on when its feedback never arrived.
 - **No thread found** for that creative in that editor's channel → post the
-  Frame.io comments, skip both the reply and the reaction, and report it. Do not
-  open a new thread: the thread is Mark's to start. With no parent there is
-  nothing to react to.
+  Frame.io comments, skip both the reply and the reaction, **leave Status at
+  `1st QA`**, and report it. Do not open a new thread: the thread is Mark's to
+  start. With no parent there is nothing to react to, and with no reply the
+  editor has not been told, so the cut has not been handed off.
 - **More than one** matching thread → reply in the newest, react on that same
   parent, and say so in the report.
 - **No fixes found** (the cut is clean) → post nothing to Frame.io, nothing to
-  Slack, and **no reaction**. A clean cut is reported to Mark, who moves the
-  board.
+  Slack, and no reaction — but **do move Status to `2nd QA`** and write the
+  ledger row. It passed a full QA, and that Status change is the only record of
+  it. Report it to Mark as clean.
 
 ## Posting to Frame.io
 
