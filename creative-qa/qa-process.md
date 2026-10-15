@@ -43,6 +43,18 @@ the file's metadata). They are worth reporting to Mark. They are not worth
 posting on their own, because between them they cover none of what the QA is
 actually for.
 
+**The one exception is Mark asking for a partial pass.** He can override this,
+and did on 2026-10-15 for NK604's naming fix while the media host was blocked.
+When he does:
+
+- **Drop the `n/N` numbering entirely.** It is the numbering that lies, not the
+  fix. Label the comment `[QA · <Category> — <what ran>-only pass]`.
+- **Name the checks that did not run, inside the comment**, so the editor cannot
+  read it as the complete list, and say the same in the Slack reply.
+- **Still write no ledger row.** The creative has not had a full QA, so it must
+  come back round for one; the reaction and the posted comments are not a record
+  that it passed.
+
 ## Environment requirement: egress to Frame.io's media host
 
 Every download, proxy, thumbnail and scrub-sheet URL Frame.io hands back is on
@@ -242,4 +254,4 @@ detail belongs in `qa-log.md`.
 
 | Date | Cue | Cuts QA'd | Fixes posted | Skipped (done) | Out of scope | No files | Notes |
 |---|---|---|---|---|---|---|---|
-| 2026-10-15 | `QA NK604` | 0 | 0 | 0 | 0 | 0 | Blocked: `at.adobe.com` denied by egress policy, so no media downloaded. Naming check ran from API metadata — all 3 files truncated to 7 of 30 fields. Nothing posted, per the partial-list rule. |
+| 2026-10-15 | `QA NK604` | 0 full (naming only) | 3 | 0 | 0 | 0 | `at.adobe.com` denied by egress policy, so no media — no caption, VO, safe-zone or audio checks. Naming ran from API metadata: all 3 files truncated to 7 of 30 fields. Mark overrode the partial-list rule, so the naming fix went to H1/H2/H3 labelled naming-only, plus thread reply and 🔁. No ledger row — NK604 still owes a full QA. |
