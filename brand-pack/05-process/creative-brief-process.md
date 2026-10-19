@@ -636,6 +636,7 @@ the Status rule in C.3.0:
    | Not For Everyone (NK608-610) | **Santoku (NK609)** |
    | 4 Ways To Get It Wrong (NK611-613) | **Blackout (NK613)** |
    | Against The Grain (NK620-622) | **Feather (NK620)** |
+   | They Claim (NK655-657) | **Santoku (NK656)** |
 
    ✅ **Load exception lapsed, 2026-10-13. Rule 4 applies again.** The exception
    below was scoped to one week (*"this week"*) and that week has passed. Both
