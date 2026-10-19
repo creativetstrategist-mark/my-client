@@ -188,6 +188,16 @@ Because `Editor` is a select of bare first names, it carries no email and no
 Notion user identity. The Slack destination has to come from the mapping table
 below; it cannot be derived from Notion.
 
+**The `Status` option list grew on 2026-10-19.** It now reads, in order:
+`Not started` · `In progress` · `Ready for visuals` · `Ready to edit` ·
+`Pending` · `Cancelled` · `Failed to import` · `Assigned to Editor` ·
+**`1st QA`** · **`2nd QA`** · `Revision needed` · `Ready to Upload` ·
+`Uploaded on Drive`. The two QA stages are new and `Assigned to Editor` moved
+earlier in the order. **Neither string this play depends on changed**, so the
+play is unaffected — but the post-editor workflow has gained two stages, which
+someone decided outside this spec. Re-read the live option list rather than
+trusting this one if a status write ever fails.
+
 ## Detection query
 
 ```sql
@@ -324,6 +334,21 @@ have:
 
 Both are `Strategist = Andy` briefs, written outside the daily routine's own
 voice checks.
+
+The 2026-10-19 sweep of 7 Santoku briefs found the brass fix holding — every
+brief that names the metal says brass — but two more copy issues:
+
+- **NK650 says "those \$300 Japanese knives."** CLAUDE.md's Santoku rule is
+  absolute: *never reference Japanese origins or use the word "Japanese."* This
+  is a competitor comparison rather than a claim about our own knife, which is
+  probably why it slipped through, but the rule has no such exception, and
+  NK656/NK662 both carry it as an explicit hard refusal. `Strategist = Andy`.
+- **NK647 and NK650 both say "rosewood handle"** for the Santoku — the same
+  Feather attribute that leaked into NK599 above. Two of seven, so this is
+  drifting rather than isolated. Both `Strategist = Andy`.
+
+Posted and flipped anyway: the gate is the editor slot only, and nothing here
+stops an editor cutting the video. Flagged to Mark instead.
 
 **This is not a licence to rewrite copy.** Flag what you see to Mark and leave
 the page alone — the brief is the strategist's work. But a hard product rule
@@ -555,7 +580,8 @@ and the app — see the bold section above.
 
 - **Never invent a deadline, runtime, or priority.** The brief carries no
   due-date field — the daily routine deliberately leaves `Date` blank — so any
-  urgency language would be fabricated.
+  urgency language would be fabricated. A deadline **Mark states for that
+  batch** is not invented and does go out — as a thread reply, see below.
 - **One message per brief.** Never batch several briefs into one message; each
   needs its own link for the editor to work from, which is how it is done today.
 - **Nothing else in the message.** No greeting, no summary of the script, no
@@ -568,6 +594,35 @@ and the app — see the bold section above.
   suppress it; it cannot be removed from the message text. Messages Mark posts
   by hand in the Slack app have no footer, so a footer is simply how the team
   can tell an automated handoff from a manual one.
+
+### A deadline Mark supplies goes in a thread reply, not the message
+
+Added 2026-10-19, when Mark followed the batch with *"Add thread on each slack
+message with 'Due on Wednesday'"*.
+
+The parent message stays exactly as specified above — one bold masked link,
+nothing else. The deadline goes **underneath it as a plain thread reply**:
+
+```
+Due on Wednesday
+```
+
+- **Thread reply, not broadcast.** No `reply_broadcast`. The channel already
+  shows the parent; broadcasting the due date would double every handoff in the
+  channel feed.
+- **No bold, no prefix, no emoji.** It is a note under a pointer, not a second
+  announcement.
+- **One reply per brief**, on that brief's own parent message — the same
+  one-message-per-brief rule as the parent.
+
+**⚠️ The weekday is per batch, not a standing value.** "Wednesday" was this
+batch's deadline. Do not carry the literal string into the next run. **Ask Mark
+for the date, or leave the thread off** — and never infer a deadline from the
+brief's `Date` property, which is the brief's creation date, not a due date.
+
+**⚠️ Whether this step is standing is unconfirmed.** Mark asked for it once,
+mid-run, after the posts had already gone out. It is recorded here as how to do
+it when asked, not as a step to run unprompted.
 
 ## After posting: flip the status
 
@@ -782,3 +837,4 @@ stop and report that rather than working from this prompt's summary.
 | 2026-10-13 | 10 (corrections) | — | — | — | **Reposted all 10 links** as thread replies with channel broadcast, after the originals went out malformed (missing `/p/`). Mark had enabled public access on the `Evergreen Video` database. Statuses already `Assigned to Editor`, so none were re-flipped. |
 | 2026-10-13 | **10** | — | 3 (NK587/588/589) | 1 (malformed row) | **Backlog cleared on Mark's "go, clear the 10".** NK601→Umar… full list: NK601/604/609/613→Hammad, NK599→Umar, NK603→Anas, NK606/612→Hasnain, NK607→Naveed, NK610→Onyeka. Direct `slack_send_message` was permitted this time (the earlier refusal did not recur), so no drafts were needed. All 10 posted, then all 10 flipped to `Assigned to Editor`; re-query confirmed `Ready to edit` dropped 15→4. Baseline discharged. |
 | 2026-10-13 | 1 (NK584) | — | — | — | **First live end-to-end test**, run by hand from a session with both connectors. Detect → format → post to `#11-onyeka-editing` → flip to `Assigned to Editor`, all verified. Two findings: bold needs `**` not `*` (the first attempt rendered italic), and direct Slack sends are blocked by the Claude Code auto-mode classifier, so the message went out as a draft Mark sent. The italic first attempt is a duplicate in that channel and can be deleted. |
+| 2026-10-19 | **7** | — | 3 (NK587/588/589) | — | **Run on Mark's "Assign task now".** All 7 Santoku briefs: NK621/650/662→Naveed, NK638/641→Onyeka, NK647/656→Hammad. Gate passed on all 7 (editor segment after the `Strategist` value matched the `Editor` property in the Batch name and all three File naming rows). Posted, then flipped; re-query confirmed `Ready to edit` dropped 10→3 (the Callum rows). Mark then asked for a **thread reply "Due on Wednesday"** on each of the 7 — added as plain thread replies, no channel broadcast. Also: the malformed frame.io row from the 2026-10-13 run is gone, someone cleared it. Two incidental findings below. |
