@@ -615,14 +615,15 @@ Due on Wednesday
 - **One reply per brief**, on that brief's own parent message — the same
   one-message-per-brief rule as the parent.
 
-**⚠️ The weekday is per batch, not a standing value.** "Wednesday" was this
-batch's deadline. Do not carry the literal string into the next run. **Ask Mark
-for the date, or leave the thread off** — and never infer a deadline from the
-brief's `Date` property, which is the brief's creation date, not a due date.
+**⚠️ The weekday is per batch, not a standing value.** It was Wednesday on
+2026-10-19 and Thursday on 2026-10-20. Never carry the previous run's string
+forward, and never infer a deadline from the brief's `Date` property — that is
+the brief's creation date, not a due date.
 
-**⚠️ Whether this step is standing is unconfirmed.** Mark asked for it once,
-mid-run, after the posts had already gone out. It is recorded here as how to do
-it when asked, not as a step to run unprompted.
+**The go signal now carries the day.** On 2026-10-20 Mark wrote *"assign now,
+then due is on thursday"* — one instruction. So: **if the go signal names a day,
+thread it. If it does not, ask**, since two runs in a row have carried one and
+its absence is more likely an omission than a decision. Do not invent one.
 
 ## After posting: flip the status
 
@@ -838,3 +839,4 @@ stop and report that rather than working from this prompt's summary.
 | 2026-10-13 | **10** | — | 3 (NK587/588/589) | 1 (malformed row) | **Backlog cleared on Mark's "go, clear the 10".** NK601→Umar… full list: NK601/604/609/613→Hammad, NK599→Umar, NK603→Anas, NK606/612→Hasnain, NK607→Naveed, NK610→Onyeka. Direct `slack_send_message` was permitted this time (the earlier refusal did not recur), so no drafts were needed. All 10 posted, then all 10 flipped to `Assigned to Editor`; re-query confirmed `Ready to edit` dropped 15→4. Baseline discharged. |
 | 2026-10-13 | 1 (NK584) | — | — | — | **First live end-to-end test**, run by hand from a session with both connectors. Detect → format → post to `#11-onyeka-editing` → flip to `Assigned to Editor`, all verified. Two findings: bold needs `**` not `*` (the first attempt rendered italic), and direct Slack sends are blocked by the Claude Code auto-mode classifier, so the message went out as a draft Mark sent. The italic first attempt is a duplicate in that channel and can be deleted. |
 | 2026-10-19 | **7** | — | 3 (NK587/588/589) | — | **Run on Mark's "Assign task now".** All 7 Santoku briefs: NK621/650/662→Naveed, NK638/641→Onyeka, NK647/656→Hammad. Gate passed on all 7 (editor segment after the `Strategist` value matched the `Editor` property in the Batch name and all three File naming rows). Posted, then flipped; re-query confirmed `Ready to edit` dropped 10→3 (the Callum rows). Mark then asked for a **thread reply "Due on Wednesday"** on each of the 7 — added as plain thread replies, no channel broadcast. Also: the malformed frame.io row from the 2026-10-13 run is gone, someone cleared it. Two incidental findings below. |
+| 2026-10-20 | **6** | — | 3 (NK587/588/589) | — | **Run on "assign now, then due is on thursday".** All 6 LOKI Blackout — the Blackout siblings of yesterday's Santoku cuts, which moved into `Ready to edit` overnight: NK640/663→Hammad, NK644/649/657→Anas, NK646→Umar. Gate passed on all 6. Posted, "Due on Thursday" threaded under each, then flipped; re-query confirmed 6→0 actionable (the 3 Callum rows remain). **Flagged NK644 to Mark as a brand-risk item, not a gate failure** — its premise and sign-off are gender-based ("a woman would never be able to design a knife like this", "you need a new wife"). Posted per the editor-slot-only gate, with the call put to Mark. Also flagged: NK646's invented "three times the control" multiplier, and NK657's own in-brief question about "black right through" across NK607/610/613/622. |
