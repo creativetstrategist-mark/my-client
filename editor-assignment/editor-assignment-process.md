@@ -362,6 +362,21 @@ the 30 days, the Feather's ~500-unit runs and ~3-month restock).
 A silent script change wastes whatever they have already voiced. One line naming
 the new wording, in the existing thread — not a new channel post.
 
+**A cross-reference list inside a brief is a claim to check, not a work order.**
+NK657 and NK663 both state that "black right through" appears in NK607, NK610,
+NK613 and NK622. On 2026-10-20 Mark asked for all four fixed. Three carried it
+— NK607 as "all the way through — blade, ebony handle, the whole knife", NK613
+and NK622 as the literal phrase. **NK610 did not**: it says "Same steel, same
+build, same everything. The finish is the only thing that changed", which is the
+careful version. Had the list been taken at face value, NK610 would have been
+edited for a line it does not contain. Read the page before acting on another
+page's claim about it.
+
+**Keyword search cannot prove the absence of a phrase.** Notion's search is
+keyword, not exact-phrase, and it matches stop words, so a sweep for a wording
+returns mostly noise and cannot confirm a clean corpus. Same limit as the copper
+sweep. Say what was checked, not that nothing remains.
+
 **This is not a licence to rewrite copy.** Flag what you see to Mark and leave
 the page alone — the brief is the strategist's work. But a hard product rule
 broken in a brief that is about to be filmed is worth one line in the run
@@ -852,3 +867,4 @@ stop and report that rather than working from this prompt's summary.
 | 2026-10-13 | 1 (NK584) | — | — | — | **First live end-to-end test**, run by hand from a session with both connectors. Detect → format → post to `#11-onyeka-editing` → flip to `Assigned to Editor`, all verified. Two findings: bold needs `**` not `*` (the first attempt rendered italic), and direct Slack sends are blocked by the Claude Code auto-mode classifier, so the message went out as a draft Mark sent. The italic first attempt is a duplicate in that channel and can be deleted. |
 | 2026-10-19 | **7** | — | 3 (NK587/588/589) | — | **Run on Mark's "Assign task now".** All 7 Santoku briefs: NK621/650/662→Naveed, NK638/641→Onyeka, NK647/656→Hammad. Gate passed on all 7 (editor segment after the `Strategist` value matched the `Editor` property in the Batch name and all three File naming rows). Posted, then flipped; re-query confirmed `Ready to edit` dropped 10→3 (the Callum rows). Mark then asked for a **thread reply "Due on Wednesday"** on each of the 7 — added as plain thread replies, no channel broadcast. Also: the malformed frame.io row from the 2026-10-13 run is gone, someone cleared it. Two incidental findings below. |
 | 2026-10-20 | **6** | — | 3 (NK587/588/589) | — | **Run on "assign now, then due is on thursday".** All 6 LOKI Blackout — the Blackout siblings of yesterday's Santoku cuts, which moved into `Ready to edit` overnight: NK640/663→Hammad, NK644/649/657→Anas, NK646→Umar. Gate passed on all 6. Posted, "Due on Thursday" threaded under each, then flipped; re-query confirmed 6→0 actionable (the 3 Callum rows remain). **Flagged NK644 to Mark as a brand-risk item, not a gate failure** — its premise and sign-off are gender-based ("a woman would never be able to design a knife like this", "you need a new wife"). Posted per the editor-slot-only gate, with the call put to Mark, who let it stand ("that's fine for now") — **this closes NK644 specifically, and is not a standing ruling on copy of that kind**; raise the next one the same way. Also flagged: NK646's invented "three times the control" multiplier (**Mark said to fix it; changed to "That's control you don't get from a normal handle." and noted in Umar's thread, since he already had the brief**), and NK657's own in-brief question about "black right through" across NK607/610/613/622. |
+| 2026-10-20 | — | — | — | — | **Copy fix, no assignment.** Mark asked for "black right through" fixed on NK607, NK610, NK613, NK622. Fixed on **NK607** ("all the way through — blade, ebony handle, the whole knife" → "Blade, ebony handle, the whole knife"), **NK613** and **NK622** (both "black right through" → "blacked out top to bottom", the phrasing NK640/644/646 already use). **NK610 needed no fix** — it does not carry the claim, so NK657's list was wrong about it. **NK607/610/613 are `Uploaded on Drive`**: the briefs are corrected, the delivered videos still say it. **NK622 is `Ready to edit` and was not in this morning's queue** — it moved in after the sweep, editor Umar, not yet announced. |
