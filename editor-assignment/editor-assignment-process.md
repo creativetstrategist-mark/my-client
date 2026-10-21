@@ -372,6 +372,19 @@ careful version. Had the list been taken at face value, NK610 would have been
 edited for a line it does not contain. Read the page before acting on another
 page's claim about it.
 
+**The play is not limited to the 3 focus products.** On 2026-10-21 three
+**Rolling Knife Sharpener** briefs came through (NK664/665/666, `DANA - KNIFE
+SHARPENER`, `6 Reasons - Sharpener`, offer `40% + Free Gifts`). CLAUDE.md scopes
+the *daily rewriting routine* to the Feather, Santoku and Blackout — that is
+about which briefs get **written**, not which get **handed to an editor**. Any
+brief in `Ready to edit` that is not Callum's and not malformed gets assigned,
+whatever the product. Assigned, and flagged to Mark as the first time.
+
+**⚠️ The copy check is weaker outside the 3 focus products.** `brand-pack/` is
+trimmed to those three, so there is no catalog here to check a sharpener claim
+against. On those briefs the read is internal consistency only — say so rather
+than implying the same level of check.
+
 **Check how widespread a line is before calling it a violation.** On
 2026-10-20 NK637's lineup beat was flagged for "Sixty-seven layers of Damascus
 steel and a hammer finish" as a banned material count. Mark had it fixed, and
@@ -882,3 +895,4 @@ stop and report that rather than working from this prompt's summary.
 | 2026-10-20 | — | — | — | — | **Copy fix, no assignment.** Mark asked for "black right through" fixed on NK607, NK610, NK613, NK622. Fixed on **NK607** ("all the way through — blade, ebony handle, the whole knife" → "Blade, ebony handle, the whole knife"), **NK613** and **NK622** (both "black right through" → "blacked out top to bottom", the phrasing NK640/644/646 already use). **NK610 needed no fix** — it does not carry the claim, so NK657's list was wrong about it. **NK607/610/613 are `Uploaded on Drive`**: the briefs are corrected, the delivered videos still say it. **NK622 is `Ready to edit` and was not in this morning's queue** — it moved in after the sweep, editor Umar, not yet announced. |
 | 2026-10-20 | **6** | — | 3 (NK587/588/589) | — | **Second run of the day, on "assign task now, due on thursday".** NK622/643→Umar, NK636/642→Hammad, NK637→Anas, NK661→Onyeka. Gate passed on all 6. Posted, "Due on Thursday" threaded, flipped; queue back to the 3 Callum rows. **NK642 and NK643 are the parent and an editor iteration of the same script as NK644**, which Mark cleared this morning — three editors now cutting it, not re-raised. Flagged: **NK637's lineup beat carries "Sixty-seven layers of Damascus steel and a hammer finish"** — a material/layer count of the kind C.1 bans and NK657/NK663 list as "no material counts". Andy's brief, unproduced. |
 | 2026-10-21 | — | — | — | — | **Copy fix, no assignment.** Mark asked for NK637's "Sixty-seven layers of Damascus steel and a hammer finish" fixed; now reads "Damascus steel and a hammer finish." Change noted in Anas's thread — he has had the brief since yesterday with a Thursday deadline. **The sweep that followed found the same figure in 9 produced briefs** (NK088, NK116, NK238, NK307/308/309, NK316/317/318, all `Uploaded on Drive`, Mark's and Claude's, since June), so it is the ODIN line's standard copy rather than a one-off. Raised back to Mark: either the layer count is banned brand-wide, which makes 9 shipped ads non-compliant, or it is approved ODIN copy and NK637 did not need the fix. |
+| 2026-10-21 | **7** | — | 3 (NK587/588/589) | — | **Run on "Assign task now due on friday".** NK639/648/664→Umar, NK645→Onyeka, NK655→**Hasnain** (his first in this play), NK665/666→Hammad. Gate passed on all 7; NK664 has 4 hooks and all 4 file-naming rows matched. Posted, "Due on Friday" threaded, flipped; queue back to the 3 Callum rows. **First non-focus product: NK664/665/666 are Rolling Knife Sharpener.** Flagged, not withheld — see the scope note above. Copy flags, all Andy's, all unproduced: **NK645** carries a weight and a balance claim ("the lightest knife in the range", "feels balanced the second you pick it up") against the NK579 ban; **NK639** says "stays sharp for life" where the approved line is *holds that edge*; **NK665** invents an overstock reason for the discount ("We made too many. The warehouse is full."); **NK666**'s three hooks are staged Instagram DMs from customers, which is fabricated social proof in a form the briefs elsewhere refuse. **NK648** completes the "\$300 Japanese knives" set across all three cuts of Same As Everybody. |
