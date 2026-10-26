@@ -212,6 +212,37 @@ ORDER BY createdTime ASC
 Bind values as `?` parameters rather than inlining them. Sort **ascending** so
 the longest-waiting brief is announced first.
 
+### ⚠️ Re-run this query at the END of the run too, not just the start
+
+The closing query is not only a confirmation that the queue drained. **A brief
+can enter `Ready to edit` while the run is in flight**, and the same go signal
+covers it. On 2026-10-26 (second run that day) the opening query returned 7
+actionable briefs; the closing query returned **NK708 "Ladies This Year -
+Blackout"** as well. NK708 was created 2026-10-25, *earlier* than briefs the
+opening query did return, so it was not a sort or pagination miss — its status
+was moved to `Ready to edit` during the ~25 minutes the run took.
+
+**Mark himself was the one moving it.** He said so in the same session: *"Renniel
+can handle now so I assigned some task to him."* So the mid-run arrival is not
+only an Andy-writes-live hazard — Mark loads the queue during a run too, as
+editor capacity frees up. Do not assume the opening query is the whole batch, and
+do not guess who changed a brief: the first read attributed NK708 to Andy and was
+wrong.
+
+So the closing query has two jobs: confirm the briefs just posted have left the
+queue, and pick up anything that arrived mid-run. Gate and assign the new
+arrivals in the same run rather than leaving them for the next go signal — they
+were in `Ready to edit` when Mark said go, by the time anyone looked.
+
+Expect the closing query to show the 3 Callum rows (NK587/588/589) and nothing
+else. Anything beyond those three is either a brief that failed to flip (check
+it) or a mid-run arrival (assign it).
+
+**Get the page ID from the query, never by construction.** NK708's ID was
+guessed on the first attempt at fetching it and the fetch 404'd. The `url`
+column in the detection query is the only source for it — add the `/p/` and use
+that.
+
 ## 🚦 Pre-send gate: the naming convention's editor must match the `Editor` property
 
 **Mark's standing instruction, 2026-10-13. Applies to every batch from now on.**
@@ -909,3 +940,4 @@ stop and report that rather than working from this prompt's summary.
 | 2026-10-21 | — | — | — | — | **Copy fix, no assignment.** Mark asked for NK637's "Sixty-seven layers of Damascus steel and a hammer finish" fixed; now reads "Damascus steel and a hammer finish." Change noted in Anas's thread — he has had the brief since yesterday with a Thursday deadline. **The sweep that followed found the same figure in 9 produced briefs** (NK088, NK116, NK238, NK307/308/309, NK316/317/318, all `Uploaded on Drive`, Mark's and Claude's, since June), so it is the ODIN line's standard copy rather than a one-off. Raised back to Mark: either the layer count is banned brand-wide, which makes 9 shipped ads non-compliant, or it is approved ODIN copy and NK637 did not need the fix. |
 | 2026-10-21 | **7** | — | 3 (NK587/588/589) | — | **Run on "Assign task now due on friday".** NK639/648/664→Umar, NK645→Onyeka, NK655→**Hasnain** (his first in this play), NK665/666→Hammad. Gate passed on all 7; NK664 has 4 hooks and all 4 file-naming rows matched. Posted, "Due on Friday" threaded, flipped; queue back to the 3 Callum rows. **First non-focus product: NK664/665/666 are Rolling Knife Sharpener.** Flagged, not withheld — see the scope note above. Copy flags, all Andy's, all unproduced: **NK645** carries a weight and a balance claim ("the lightest knife in the range", "feels balanced the second you pick it up") against the NK579 ban; **NK639** says "stays sharp for life" where the approved line is *holds that edge*; **NK665** invents an overstock reason for the discount ("We made too many. The warehouse is full."); **NK666**'s three hooks are staged Instagram DMs from customers, which is fabricated social proof in a form the briefs elsewhere refuse. **NK648** completes the "\$300 Japanese knives" set across all three cuts of Same As Everybody. |
 | 2026-10-26 | **7** | — | 3 (NK587/588/589) | — | **Run on "Assign task now due on wednesday".** NK652/654→Hammad, NK651→Umar, NK653/658→Onyeka, NK659→Anas, NK660→Hasnain. Gate passed on all 7 (NK651 has 5 hooks, NK653 4, and every file-naming row matched). Posted, "Due on Wednesday" threaded, flipped; queue back to the 3 Callum rows. Two format firsts, both fine and both now documented above: `Content` = `B-Roll` on NK658/659/660, and pipes inside the `Concept Name` on NK653/654. **Headline flag: NK653 and NK654 both say the feather is "etched"** — a CLAUDE.md hard rule by name (the pattern is laser-applied). NK654 compounds it with "no two are ever exactly the same. Because no two hands hammer the same way", which attributes the pattern to hand-work. Both are iterations of pre-rule concepts (NK133, NK184) that inherited the line; **NK569 "Four Times Already - Feather" flagged the exact NK184 line as non-compliant back in 2026-09-14** and the iterations still carry it. Also flagged: NK653's "perfectly balanced" (NK579 ban), and NK652's concept name says "Return Feather" on a `LOKI Blackout` brief, so every file name will read Feather on a Blackout asset. |
+| 2026-10-26 | **8** | — | 3 (NK587/588/589) | — | **Second run that day, on "Assign task now due on wednesday".** NK687/696/702→Naveed, NK697→Onyeka, NK699/707→Hammad, NK703→Hasnain, **NK708→Renniel (his first in this play)**. Gate passed on all 8. Posted, "Due on Wednesday" threaded, flipped; queue back to the 3 Callum rows. **8, not 7: NK708 was not in the opening query** — Mark moved it to `Ready to edit` mid-run ("Renniel can handle now so I assigned some task to him"), so the closing re-query is what caught it. See the re-query note under the detection query. Copy flags, all Andy's, all unproduced: **NK687** carries "The lightest knife you'll ever hold, and the sharpest" — the NK579 weight ban, and the third brief in three runs with that shape (after NK645 and NK653); it also claims "Over a hundred thousand people have brought one home", an unverified figure I did not get to sweep. **NK707 and NK708** both say the knife is "built tougher than any knife he's had before" and "basically indestructible" — one writing event across a concept pair, not established copy. **NK696/NK697** both describe the RAGNAR as "ten inches of tiger-striped steel", a dimension spec of the kind C.1 brackets with mm/gram; unswept, so a candidate rather than a finding. **Structural, and the one worth acting on: NK702 and NK703 both instruct "Ship all four hooks as H1, H2, H3 and H4" and both carry 4 hooks, but their File naming tables give only 3 rows (H1/H2/H3)** — both editors are a file name short for H4. NK664 on 2026-10-21 had 4 hooks and 4 matching rows, so the convention is that the rows track the hook count. |
