@@ -26,7 +26,11 @@ routine automates that handoff, it does not introduce a new convention.
 ## 🚫 Hard rule: never touch Callum's work
 
 **Standing instruction from Mark, 2026-10-13: never touch work that has `Callum`
-as Strategist.**
+as Strategist.** **Restated unprompted on 2026-10-27, mid-run, in stronger
+terms: *"Never ever touch any task with callum as strategist."*** He volunteered
+it while a run was in flight and nothing had gone wrong, so treat it as the
+rule he most wants held, not as a correction of something. It has now been
+stated twice, two weeks apart.
 
 Any page with `Strategist = Callum` is out of scope for this routine
 completely:
@@ -411,10 +415,22 @@ about which briefs get **written**, not which get **handed to an editor**. Any
 brief in `Ready to edit` that is not Callum's and not malformed gets assigned,
 whatever the product. Assigned, and flagged to Mark as the first time.
 
-**⚠️ The copy check is weaker outside the 3 focus products.** `brand-pack/` is
-trimmed to those three, so there is no catalog here to check a sharpener claim
-against. On those briefs the read is internal consistency only — say so rather
-than implying the same level of check.
+**⚠️ The copy check is weaker outside the 3 focus products.** On those briefs
+the read is internal consistency only — say so rather than implying the same
+level of check.
+
+**⚠️⚠️ And `brand-pack/` is not in this repo at all.** CLAUDE.md calls
+`brand-pack/START-HERE.md` the entry point and
+`brand-pack/05-process/creative-brief-process.md` "the single most important
+file", with Section C as the copy-voice rulebook and Section D/D0 as the
+authoritative Notion template. **Neither path exists in the working tree.** It
+was committed once (`1abce45`) and is gone from HEAD. So every copy check in
+this play actually runs against two things only: CLAUDE.md's own summary table
+of hard rules, and `brand-accuracy/santoku-bolster-discrepancy.md`. The banned
+spec-jargon list, the substitution table, the hook patterns and the originality
+gate are all cited by CLAUDE.md but not readable here. Report a copy read as
+based on CLAUDE.md, not on the brand pack, and raise the missing directory with
+Mark rather than quietly working around it.
 
 **A pipe in the `Concept Name` is safe in the link.** NK653 and NK654 are
 `3 Months to Make | Feather (NK133)` and `What if | CTA | Feather (NK184)`.
@@ -941,3 +957,4 @@ stop and report that rather than working from this prompt's summary.
 | 2026-10-21 | **7** | — | 3 (NK587/588/589) | — | **Run on "Assign task now due on friday".** NK639/648/664→Umar, NK645→Onyeka, NK655→**Hasnain** (his first in this play), NK665/666→Hammad. Gate passed on all 7; NK664 has 4 hooks and all 4 file-naming rows matched. Posted, "Due on Friday" threaded, flipped; queue back to the 3 Callum rows. **First non-focus product: NK664/665/666 are Rolling Knife Sharpener.** Flagged, not withheld — see the scope note above. Copy flags, all Andy's, all unproduced: **NK645** carries a weight and a balance claim ("the lightest knife in the range", "feels balanced the second you pick it up") against the NK579 ban; **NK639** says "stays sharp for life" where the approved line is *holds that edge*; **NK665** invents an overstock reason for the discount ("We made too many. The warehouse is full."); **NK666**'s three hooks are staged Instagram DMs from customers, which is fabricated social proof in a form the briefs elsewhere refuse. **NK648** completes the "\$300 Japanese knives" set across all three cuts of Same As Everybody. |
 | 2026-10-26 | **7** | — | 3 (NK587/588/589) | — | **Run on "Assign task now due on wednesday".** NK652/654→Hammad, NK651→Umar, NK653/658→Onyeka, NK659→Anas, NK660→Hasnain. Gate passed on all 7 (NK651 has 5 hooks, NK653 4, and every file-naming row matched). Posted, "Due on Wednesday" threaded, flipped; queue back to the 3 Callum rows. Two format firsts, both fine and both now documented above: `Content` = `B-Roll` on NK658/659/660, and pipes inside the `Concept Name` on NK653/654. **Headline flag: NK653 and NK654 both say the feather is "etched"** — a CLAUDE.md hard rule by name (the pattern is laser-applied). NK654 compounds it with "no two are ever exactly the same. Because no two hands hammer the same way", which attributes the pattern to hand-work. Both are iterations of pre-rule concepts (NK133, NK184) that inherited the line; **NK569 "Four Times Already - Feather" flagged the exact NK184 line as non-compliant back in 2026-09-14** and the iterations still carry it. Also flagged: NK653's "perfectly balanced" (NK579 ban), and NK652's concept name says "Return Feather" on a `LOKI Blackout` brief, so every file name will read Feather on a Blackout asset. |
 | 2026-10-26 | **8** | — | 3 (NK587/588/589) | — | **Second run that day, on "Assign task now due on wednesday".** NK687/696/702→Naveed, NK697→Onyeka, NK699/707→Hammad, NK703→Hasnain, **NK708→Renniel (his first in this play)**. Gate passed on all 8. Posted, "Due on Wednesday" threaded, flipped; queue back to the 3 Callum rows. **8, not 7: NK708 was not in the opening query** — Mark moved it to `Ready to edit` mid-run ("Renniel can handle now so I assigned some task to him"), so the closing re-query is what caught it. See the re-query note under the detection query. Copy flags, all Andy's, all unproduced: **NK687** carries "The lightest knife you'll ever hold, and the sharpest" — the NK579 weight ban, and the third brief in three runs with that shape (after NK645 and NK653); it also claims "Over a hundred thousand people have brought one home", an unverified figure I did not get to sweep. **NK707 and NK708** both say the knife is "built tougher than any knife he's had before" and "basically indestructible" — one writing event across a concept pair, not established copy. **NK696/NK697** both describe the RAGNAR as "ten inches of tiger-striped steel", a dimension spec of the kind C.1 brackets with mm/gram; unswept, so a candidate rather than a finding. **Structural, and the one worth acting on: NK702 and NK703 both instruct "Ship all four hooks as H1, H2, H3 and H4" and both carry 4 hooks, but their File naming tables give only 3 rows (H1/H2/H3)** — both editors are a file name short for H4. NK664 on 2026-10-21 had 4 hooks and 4 matching rows, so the convention is that the rows track the hook count. |
+| 2026-10-27 | **4** | — | **4** (NK587/588/589 + NK716) | — | **Run on "assign task then due on thursday".** NK698/701/706→Hasnain, NK709→Onyeka. Gate passed on all 4. Posted, "Due on Thursday" threaded, flipped; queue back to the Callum rows. **All four were BJORN Santoku** — the first all-Santoku batch, and the product with the most hard rules. **A fourth Callum row appeared: NK716 "Overqualified Bottle Opener - Blackout"**, created that morning; excluded and not opened. Mark restated the Callum rule mid-run (see the hard-rule section). Clean on the two rules that bite hardest here: **no brief said "Japanese"**, and **none said the bolster was copper** — NK698/701/706/709 all say "dragon sculpted into the bolster" with no material, which is the safe form. **Headline flag: NK698 and NK709 both give the Santoku a "hand-carved rosewood handle".** Rosewood is the *Feather's* handle; the catalog calls the Santoku's "hand-carved wooden" and names no wood, and the house pattern (NK603/606/609) is "carved by hand" with no wood. This is the documented rosewood-on-Santoku error in `brand-accuracy/santoku-bolster-discrepancy.md` — which recorded that **no affected brief had ever been unproduced**, so all 7 were left as shipped history. **NK698 and NK709 are the first unproduced ones**, i.e. the first that could actually be fixed. Flagged, not touched. Also: **"basically indestructible" + "built tougher than any knife he's had before" is now in 4 briefs** (NK707/708/709 plus NK707's Feather original) — one Ladies This Year/Christmas writing wave, not established copy. NK706's son is "twenty-one" but "at uni" on a `Mkt-US` brief. |
