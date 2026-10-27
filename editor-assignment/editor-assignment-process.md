@@ -247,6 +247,32 @@ guessed on the first attempt at fetching it and the fetch 404'd. The `url`
 column in the detection query is the only source for it — add the `/p/` and use
 that.
 
+## 🛑 A hold instruction in the brief body overrides its own `Ready to edit` status
+
+**Observed 2026-10-27 on NK680 "A Knife - Feather (Street Interview)".** Its
+`Status` was `Ready to edit` — the status this whole play keys on — while its
+Creative Brief Instruction said, in bold:
+
+> **Script still in progress. Do not shoot or cut until Status moves.**
+
+The page contradicts itself. Posting it would have told Renniel to start work the
+brief explicitly forbids, and flipping it to `Assigned to Editor` would have been
+worse than useless: the note's own condition is *"until Status moves"*, so the
+flip would have appeared to satisfy the hold without the script being finished.
+
+**Rule: do not post and do not flip. Leave it in `Ready to edit` and report it.**
+This is the same safe-failure principle as the editor mismatch — the harmless
+outcome is a brief that waits, and the harmful one is an editor cutting a script
+that is still being written. It does not need Mark's go signal to be re-run later;
+the next run picks it up once the body no longer says to hold, or once Mark says
+to send it anyway.
+
+**What counts as a hold:** an instruction in the brief telling the editor not to
+start, not to shoot, not to cut, or to wait for something. Read the Creative
+Brief Instruction block for one on every run — it sits above the HOOK table, in
+the same place as the other shoot directions, and is easy to skim past. It will
+not be in any property.
+
 ## 🚦 Pre-send gate: the naming convention's editor must match the `Editor` property
 
 **Mark's standing instruction, 2026-10-13. Applies to every batch from now on.**
@@ -499,6 +525,37 @@ On 2026-10-27 at 15:54 he posted to `#11-umar-editing` with `@channel`:
 day's briefs referenced Trybe, so there was no conflict, but a brief that
 specifies footage from a banned source is now worth flagging. Reading the channel
 back after posting is the only way this play sees such a notice.
+
+**⚠️ A factual claim about the real world is a different class of flag.**
+NK670 "Laughed Off Shark Tank" (2026-10-27) is a founder-story brief whose three
+hooks and body all turn on **"the sharks laughed him off Shark Tank"**. That is a
+specific, checkable claim about an appearance on a named television programme,
+not a voice or material question, and it carries advertising-claim and
+platform-policy risk that no amount of copy judgement settles.
+
+Two things pull in opposite directions, and both belong in the report:
+
+- The reference ad it follows beat for beat is **Hatori's own Shark Tank founder
+  story**. CLAUDE.md's rule is that *the mechanic transfers, the words never do* —
+  and a biography beat is not a mechanic. A Shark Tank appearance carried over
+  from the reference would be exactly the failure that rule exists to prevent.
+- But **the brief's `Strategist` is Andy and the founder in the story is Andy**.
+  The person who wrote it is the person it is about, which is the strongest
+  possible authority for a claim about his own history.
+
+So do not call it fabricated and do not call it verified. Report that it cannot
+be checked from here, name why it is worth checking anyway, and let Mark confirm.
+The same treatment applies to the brief's other unverifiable specifics: *"more
+than five thousand five-star reviews"*, and the accusations that competitors
+*"paid for reviews calling hand-forged a gimmick"* and *"leaned on shops to keep
+it off the shelf"* — the latter are claims about named-by-implication third
+parties in a paid ad.
+
+**The house already has a clean solution to the "etched" problem.** NK680 carries
+a production note: **"Never say how the pattern gets on the blade."** That is the
+compliant way to handle the Feather's laser-applied pattern — say nothing about
+how it is applied rather than reaching for a verb. Worth proposing as the standing
+answer the next time an "etched" flag comes up.
 
 **This is not a licence to rewrite copy.** Flag what you see to Mark and leave
 the page alone — the brief is the strategist's work. But a hard product rule
@@ -998,3 +1055,4 @@ stop and report that rather than working from this prompt's summary.
 | 2026-10-26 | **8** | — | 3 (NK587/588/589) | — | **Second run that day, on "Assign task now due on wednesday".** NK687/696/702→Naveed, NK697→Onyeka, NK699/707→Hammad, NK703→Hasnain, **NK708→Renniel (his first in this play)**. Gate passed on all 8. Posted, "Due on Wednesday" threaded, flipped; queue back to the 3 Callum rows. **8, not 7: NK708 was not in the opening query** — Mark moved it to `Ready to edit` mid-run ("Renniel can handle now so I assigned some task to him"), so the closing re-query is what caught it. See the re-query note under the detection query. Copy flags, all Andy's, all unproduced: **NK687** carries "The lightest knife you'll ever hold, and the sharpest" — the NK579 weight ban, and the third brief in three runs with that shape (after NK645 and NK653); it also claims "Over a hundred thousand people have brought one home", an unverified figure I did not get to sweep. **NK707 and NK708** both say the knife is "built tougher than any knife he's had before" and "basically indestructible" — one writing event across a concept pair, not established copy. **NK696/NK697** both describe the RAGNAR as "ten inches of tiger-striped steel", a dimension spec of the kind C.1 brackets with mm/gram; unswept, so a candidate rather than a finding. **Structural, and the one worth acting on: NK702 and NK703 both instruct "Ship all four hooks as H1, H2, H3 and H4" and both carry 4 hooks, but their File naming tables give only 3 rows (H1/H2/H3)** — both editors are a file name short for H4. NK664 on 2026-10-21 had 4 hooks and 4 matching rows, so the convention is that the rows track the hook count. |
 | 2026-10-27 | **4** | — | **4** (NK587/588/589 + NK716) | — | **Run on "assign task then due on thursday".** NK698/701/706→Hasnain, NK709→Onyeka. Gate passed on all 4. Posted, "Due on Thursday" threaded, flipped; queue back to the Callum rows. **All four were BJORN Santoku** — the first all-Santoku batch, and the product with the most hard rules. **A fourth Callum row appeared: NK716 "Overqualified Bottle Opener - Blackout"**, created that morning; excluded and not opened. Mark restated the Callum rule mid-run (see the hard-rule section). Clean on the two rules that bite hardest here: **no brief said "Japanese"**, and **none said the bolster was copper** — NK698/701/706/709 all say "dragon sculpted into the bolster" with no material, which is the safe form. **Headline flag: NK698 and NK709 both give the Santoku a "hand-carved rosewood handle".** Rosewood is the *Feather's* handle; the catalog calls the Santoku's "hand-carved wooden" and names no wood, and the house pattern (NK603/606/609) is "carved by hand" with no wood. This is the documented rosewood-on-Santoku error in `brand-accuracy/santoku-bolster-discrepancy.md` — which recorded that **no affected brief had ever been unproduced**, so all 7 were left as shipped history. **NK698 and NK709 are the first unproduced ones**, i.e. the first that could actually be fixed. Flagged, not touched. Also: **"basically indestructible" + "built tougher than any knife he's had before" is now in 4 briefs** (NK707/708/709 plus NK707's Feather original) — one Ladies This Year/Christmas writing wave, not established copy. NK706's son is "twenty-one" but "at uni" on a `Mkt-US` brief. |
 | 2026-10-27 | **6** | — | 4 (NK587/588/589 + NK716) | — | **Second run that day, on "assign task and due on thursday".** NK688/691/693/694/695→Umar, NK692→Hammad. Gate passed on all 6. Posted, "Due on Thursday" threaded, flipped; queue back to the 4 Callum rows. **All six are Rolling Knife Sharpener** — second non-focus batch after 2026-10-21, and the largest. All were created 22–24 Oct, i.e. they predate briefs assigned earlier the same day, so they sat in another status and were released in a block. Four carry pipes in the `Concept Name`; `#11-umar-editing` read back after sending and **all five of Umar's links rendered intact**. **Headline flag: the word "Japanese" appears 5× across NK691/692/694/695** — a named CLAUDE.md hard rule, but every use is about the customer's own knives, and NK688 shows the compliant form. Written up as its own section above; needs Mark's ruling rather than a fix. Also: **three different time-to-sharp claims in one batch** — "about a minute" (NK692), "a few minutes" (NK691, NK694, NK695), "under five minutes" (NK688); NK692 is the outlier. NK693's *"a literal samurai sword"* and NK695's *"samurai-sword sharp"* reach for Japanese imagery without the word. NK692's *"Regular sharpeners stop at #1000 grit"* is an unverifiable competitor claim. Grit and angle figures (#400/#1000/#6000/#10000, 15°/20°) are everywhere and are the product's actual stages, so not treated as C.1 spec-jargon. **Partly resolves an earlier flag:** NK694 says *"Over 100,000 customers"*, the same figure as NK687's "over a hundred thousand people" flagged on 2026-10-26 — recurring across two products makes it a real company stat rather than an invented number, so that flag is downgraded. The `\[customer voice\}` bracket typo (open square, close curly) appears 6× in NK691 and 3× in NK693. |
+| 2026-10-27 | **2** (of 3) | **1** (NK680) | 4 (NK587/588/589 + NK716) | — | **Third run that day, on "assign task and due on thursday".** NK670 and NK678 → Renniel, posted with "Due on Thursday" threaded and flipped. **NK680 held and not posted** — its body says *"Script still in progress. Do not shoot or cut until Status moves"* while its status was `Ready to edit`; see the hold-instruction rule above. It stays in the queue by design. Gate passed on all three. **`Content` = `Street Interview` is a third format value** after `AI VO` and `B-Roll`; note NK680's file naming says `UGC` in the content slot while the property says `Street Interview`, a non-editor-slot mismatch that is out of gate scope but will make the link text and the file names disagree. **Headline flag: NK670's hooks and body all claim the founder was "laughed off Shark Tank"** — written up above as its own class of flag, needs Mark's confirmation rather than a copy judgement. NK670 also carries *"The Japanese ones, all hype and overpriced"*, which is the competitor-disparagement form of the open "Japanese" question, and an editor payment term inside the brief body (*"we pay you double for this video"*) that goes to Renniel along with everything else. **Useful context for that open question: NK678's own red callout says "nothing related to Samurai and Japan style but around vikings"** — Andy actively steers away from Japanese imagery in brand storytelling, which argues the sharpener-line uses are functional rather than intentional. **NK670 and NK678 both have a completely empty `Visual` column** across every hook and body row, with direction given only in the red callout; that is the pattern for these two Hatori-reference AI documentary pieces, not a one-off omission, but it is a lot of unspecified footage for 20 beats. |
