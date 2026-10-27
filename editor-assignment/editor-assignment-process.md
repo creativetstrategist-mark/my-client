@@ -461,6 +461,45 @@ keyword, not exact-phrase, and it matches stop words, so a sweep for a wording
 returns mostly noise and cannot confirm a clean corpus. Same limit as the copper
 sweep. Say what was checked, not that nothing remains.
 
+**⚠️ "Japanese" is all over the sharpener line, and CLAUDE.md bans the word.**
+On 2026-10-27 six Rolling Knife Sharpener briefs came through and **four of them
+use it**: NK691, NK692 (twice), NK694 and NK695, always in the same beat —
+*"fifteen degrees for Japanese knives, twenty for Western"* — plus NK692's
+*"It works on every knife you own. Japanese, Western, …"*. Two more reach for
+the same register without the word: NK693's *"a literal samurai sword"* and
+NK695's *"samurai-sword sharp"*.
+
+Why this is a question and not a clean finding:
+
+- CLAUDE.md states the rule inside the **BJORN Santoku** row — *"Never reference
+  Japanese origins or use the word 'Japanese'"* — and gives the reason as
+  "santoku is a Japanese-origin knife shape but the brand never says so". So the
+  rule's *purpose* is plainly about not calling **our** knives Japanese.
+- Every sharpener use is about **the customer's own knives**, as a sharpening-angle
+  convention. None of them claims an NK product is Japanese.
+- But the second clause as written — "or use the word" — is unconditional, and
+  these are about to be filmed.
+- **Frequency says it is the line's established copy**, not a slip: 4 of 6 briefs,
+  one concept family, consistent phrasing.
+- **And yet the compliant alternative already exists in the same batch**: NK688
+  says *"holds the knife at 15 or 20 degrees"* and never names a nationality.
+  That asymmetry is the argument for fixing it — the house already has a neutral
+  form.
+
+**This needs Mark's ruling, not a unilateral fix.** Either the ban is
+product-scoped (then the sharpener copy is fine as written and this stops being
+raised every run), or it is literal (then 5 lines across 4 briefs need NK688's
+wording before filming, and the shipped sharpener corpus should be swept). Do
+not rewrite them in the meantime, and do not keep re-flagging it run after run
+once he has ruled — record the ruling here.
+
+**Watch: Andy's standing production rules land in the editor channels, not here.**
+On 2026-10-27 at 15:54 he posted to `#11-umar-editing` with `@channel`:
+*"do not use any footage from Trybe creators on your ads ever"*. Nothing in that
+day's briefs referenced Trybe, so there was no conflict, but a brief that
+specifies footage from a banned source is now worth flagging. Reading the channel
+back after posting is the only way this play sees such a notice.
+
 **This is not a licence to rewrite copy.** Flag what you see to Mark and leave
 the page alone — the brief is the strategist's work. But a hard product rule
 broken in a brief that is about to be filmed is worth one line in the run
@@ -958,3 +997,4 @@ stop and report that rather than working from this prompt's summary.
 | 2026-10-26 | **7** | — | 3 (NK587/588/589) | — | **Run on "Assign task now due on wednesday".** NK652/654→Hammad, NK651→Umar, NK653/658→Onyeka, NK659→Anas, NK660→Hasnain. Gate passed on all 7 (NK651 has 5 hooks, NK653 4, and every file-naming row matched). Posted, "Due on Wednesday" threaded, flipped; queue back to the 3 Callum rows. Two format firsts, both fine and both now documented above: `Content` = `B-Roll` on NK658/659/660, and pipes inside the `Concept Name` on NK653/654. **Headline flag: NK653 and NK654 both say the feather is "etched"** — a CLAUDE.md hard rule by name (the pattern is laser-applied). NK654 compounds it with "no two are ever exactly the same. Because no two hands hammer the same way", which attributes the pattern to hand-work. Both are iterations of pre-rule concepts (NK133, NK184) that inherited the line; **NK569 "Four Times Already - Feather" flagged the exact NK184 line as non-compliant back in 2026-09-14** and the iterations still carry it. Also flagged: NK653's "perfectly balanced" (NK579 ban), and NK652's concept name says "Return Feather" on a `LOKI Blackout` brief, so every file name will read Feather on a Blackout asset. |
 | 2026-10-26 | **8** | — | 3 (NK587/588/589) | — | **Second run that day, on "Assign task now due on wednesday".** NK687/696/702→Naveed, NK697→Onyeka, NK699/707→Hammad, NK703→Hasnain, **NK708→Renniel (his first in this play)**. Gate passed on all 8. Posted, "Due on Wednesday" threaded, flipped; queue back to the 3 Callum rows. **8, not 7: NK708 was not in the opening query** — Mark moved it to `Ready to edit` mid-run ("Renniel can handle now so I assigned some task to him"), so the closing re-query is what caught it. See the re-query note under the detection query. Copy flags, all Andy's, all unproduced: **NK687** carries "The lightest knife you'll ever hold, and the sharpest" — the NK579 weight ban, and the third brief in three runs with that shape (after NK645 and NK653); it also claims "Over a hundred thousand people have brought one home", an unverified figure I did not get to sweep. **NK707 and NK708** both say the knife is "built tougher than any knife he's had before" and "basically indestructible" — one writing event across a concept pair, not established copy. **NK696/NK697** both describe the RAGNAR as "ten inches of tiger-striped steel", a dimension spec of the kind C.1 brackets with mm/gram; unswept, so a candidate rather than a finding. **Structural, and the one worth acting on: NK702 and NK703 both instruct "Ship all four hooks as H1, H2, H3 and H4" and both carry 4 hooks, but their File naming tables give only 3 rows (H1/H2/H3)** — both editors are a file name short for H4. NK664 on 2026-10-21 had 4 hooks and 4 matching rows, so the convention is that the rows track the hook count. |
 | 2026-10-27 | **4** | — | **4** (NK587/588/589 + NK716) | — | **Run on "assign task then due on thursday".** NK698/701/706→Hasnain, NK709→Onyeka. Gate passed on all 4. Posted, "Due on Thursday" threaded, flipped; queue back to the Callum rows. **All four were BJORN Santoku** — the first all-Santoku batch, and the product with the most hard rules. **A fourth Callum row appeared: NK716 "Overqualified Bottle Opener - Blackout"**, created that morning; excluded and not opened. Mark restated the Callum rule mid-run (see the hard-rule section). Clean on the two rules that bite hardest here: **no brief said "Japanese"**, and **none said the bolster was copper** — NK698/701/706/709 all say "dragon sculpted into the bolster" with no material, which is the safe form. **Headline flag: NK698 and NK709 both give the Santoku a "hand-carved rosewood handle".** Rosewood is the *Feather's* handle; the catalog calls the Santoku's "hand-carved wooden" and names no wood, and the house pattern (NK603/606/609) is "carved by hand" with no wood. This is the documented rosewood-on-Santoku error in `brand-accuracy/santoku-bolster-discrepancy.md` — which recorded that **no affected brief had ever been unproduced**, so all 7 were left as shipped history. **NK698 and NK709 are the first unproduced ones**, i.e. the first that could actually be fixed. Flagged, not touched. Also: **"basically indestructible" + "built tougher than any knife he's had before" is now in 4 briefs** (NK707/708/709 plus NK707's Feather original) — one Ladies This Year/Christmas writing wave, not established copy. NK706's son is "twenty-one" but "at uni" on a `Mkt-US` brief. |
+| 2026-10-27 | **6** | — | 4 (NK587/588/589 + NK716) | — | **Second run that day, on "assign task and due on thursday".** NK688/691/693/694/695→Umar, NK692→Hammad. Gate passed on all 6. Posted, "Due on Thursday" threaded, flipped; queue back to the 4 Callum rows. **All six are Rolling Knife Sharpener** — second non-focus batch after 2026-10-21, and the largest. All were created 22–24 Oct, i.e. they predate briefs assigned earlier the same day, so they sat in another status and were released in a block. Four carry pipes in the `Concept Name`; `#11-umar-editing` read back after sending and **all five of Umar's links rendered intact**. **Headline flag: the word "Japanese" appears 5× across NK691/692/694/695** — a named CLAUDE.md hard rule, but every use is about the customer's own knives, and NK688 shows the compliant form. Written up as its own section above; needs Mark's ruling rather than a fix. Also: **three different time-to-sharp claims in one batch** — "about a minute" (NK692), "a few minutes" (NK691, NK694, NK695), "under five minutes" (NK688); NK692 is the outlier. NK693's *"a literal samurai sword"* and NK695's *"samurai-sword sharp"* reach for Japanese imagery without the word. NK692's *"Regular sharpeners stop at #1000 grit"* is an unverifiable competitor claim. Grit and angle figures (#400/#1000/#6000/#10000, 15°/20°) are everywhere and are the product's actual stages, so not treated as C.1 spec-jargon. **Partly resolves an earlier flag:** NK694 says *"Over 100,000 customers"*, the same figure as NK687's "over a hundred thousand people" flagged on 2026-10-26 — recurring across two products makes it a real company stat rather than an invented number, so that flag is downgraded. The `\[customer voice\}` bracket typo (open square, close curly) appears 6× in NK691 and 3× in NK693. |
