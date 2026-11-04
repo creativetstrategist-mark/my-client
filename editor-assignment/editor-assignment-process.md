@@ -273,6 +273,35 @@ Brief Instruction block for one on every run — it sits above the HOOK table, i
 the same place as the other shoot directions, and is easy to skim past. It will
 not be in any property.
 
+## 🧭 "X can do a task now" is a capacity signal — it is not a hold-lift and not a reassignment
+
+**Observed 2026-11-04.** Mark wrote, twice, mid-run: *"Renniel can do task now so you
+can send any task assignment to him."* At that moment the only brief with
+`Editor = Renniel` was **NK680, held since 2026-10-27** because its body says
+*"Script still in progress. Do not shoot or cut until Status moves."*
+
+Two different things were being confused, and both answers are no:
+
+1. **It does not lift the hold.** NK680 is blocked because Andy has not finished
+   the script, not because Renniel was busy. Freeing the editor does not finish
+   the script. The page was unchanged in the intervening week
+   (`page_last_edited_at` still 2026-10-27), which confirms it.
+2. **It does not authorise moving someone else's brief to him.** The other
+   briefs in that batch were Hammad's, Umar's and Onyeka's — and the editor name
+   is baked into the Batch name and every File naming row. Sending Hammad's brief
+   to Renniel would have Renniel naming every delivered file `_Hammad_`. That is
+   exactly the failure the pre-send gate exists to prevent, and it is the half of
+   the mismatch Mark called out on 2026-10-13 as the worse one.
+
+**So: say what the capacity signal can and cannot do, and ask.** Report which
+briefs are actually his, why a held one is still held, and that moving a brief to
+him needs the `Editor` property and the naming strings changed first — by Mark or
+Andy, in Notion, not by this play. Do not reroute on a verbal availability note,
+and do not treat it as new information about a script.
+
+This generalises to any editor: an availability message changes who *could* take
+work, never what the page says.
+
 ## 🚦 Pre-send gate: the naming convention's editor must match the `Editor` property
 
 **Mark's standing instruction, 2026-10-13. Applies to every batch from now on.**
@@ -561,6 +590,21 @@ answer the next time an "etched" flag comes up.
 the page alone — the brief is the strategist's work. But a hard product rule
 broken in a brief that is about to be filmed is worth one line in the run
 summary, and the hard rules are in CLAUDE.md and the product catalog.
+
+## ⚠️ Two editor options have no verified channel: `Waheed` and `Fahad`
+
+Spotted 2026-11-04: the `Editor` property's option list grew from 8 names to 10.
+It now reads `Hasnain, Renniel, Umar, Hammad, Onyeka, Anas, Naveed, Huzaifa,
+Waheed, Fahad`. **The mapping below has no entry for Waheed or Fahad**, and no
+`#11-waheed-editing` or `#11-fahad-editing` has been verified to exist.
+
+Neither appeared as a brief's `Editor` in that run, so nothing was blocked. But
+when one does: **do not guess a channel name and do not post to a guessed
+channel.** Guessing a channel is the same class of error as guessing an editor,
+which the blank-`Editor` rule already forbids. Send that brief to Mark's
+fallback channel as needing a channel confirmed, leave its status alone, and get
+the channel ID verified the way the eight below were — by reading the channel,
+not by inferring the name from the pattern.
 
 ## Editor → Slack mapping (verified live 2026-10-13)
 
@@ -1056,3 +1100,4 @@ stop and report that rather than working from this prompt's summary.
 | 2026-10-27 | **4** | — | **4** (NK587/588/589 + NK716) | — | **Run on "assign task then due on thursday".** NK698/701/706→Hasnain, NK709→Onyeka. Gate passed on all 4. Posted, "Due on Thursday" threaded, flipped; queue back to the Callum rows. **All four were BJORN Santoku** — the first all-Santoku batch, and the product with the most hard rules. **A fourth Callum row appeared: NK716 "Overqualified Bottle Opener - Blackout"**, created that morning; excluded and not opened. Mark restated the Callum rule mid-run (see the hard-rule section). Clean on the two rules that bite hardest here: **no brief said "Japanese"**, and **none said the bolster was copper** — NK698/701/706/709 all say "dragon sculpted into the bolster" with no material, which is the safe form. **Headline flag: NK698 and NK709 both give the Santoku a "hand-carved rosewood handle".** Rosewood is the *Feather's* handle; the catalog calls the Santoku's "hand-carved wooden" and names no wood, and the house pattern (NK603/606/609) is "carved by hand" with no wood. This is the documented rosewood-on-Santoku error in `brand-accuracy/santoku-bolster-discrepancy.md` — which recorded that **no affected brief had ever been unproduced**, so all 7 were left as shipped history. **NK698 and NK709 are the first unproduced ones**, i.e. the first that could actually be fixed. Flagged, not touched. Also: **"basically indestructible" + "built tougher than any knife he's had before" is now in 4 briefs** (NK707/708/709 plus NK707's Feather original) — one Ladies This Year/Christmas writing wave, not established copy. NK706's son is "twenty-one" but "at uni" on a `Mkt-US` brief. |
 | 2026-10-27 | **6** | — | 4 (NK587/588/589 + NK716) | — | **Second run that day, on "assign task and due on thursday".** NK688/691/693/694/695→Umar, NK692→Hammad. Gate passed on all 6. Posted, "Due on Thursday" threaded, flipped; queue back to the 4 Callum rows. **All six are Rolling Knife Sharpener** — second non-focus batch after 2026-10-21, and the largest. All were created 22–24 Oct, i.e. they predate briefs assigned earlier the same day, so they sat in another status and were released in a block. Four carry pipes in the `Concept Name`; `#11-umar-editing` read back after sending and **all five of Umar's links rendered intact**. **Headline flag: the word "Japanese" appears 5× across NK691/692/694/695** — a named CLAUDE.md hard rule, but every use is about the customer's own knives, and NK688 shows the compliant form. Written up as its own section above; needs Mark's ruling rather than a fix. Also: **three different time-to-sharp claims in one batch** — "about a minute" (NK692), "a few minutes" (NK691, NK694, NK695), "under five minutes" (NK688); NK692 is the outlier. NK693's *"a literal samurai sword"* and NK695's *"samurai-sword sharp"* reach for Japanese imagery without the word. NK692's *"Regular sharpeners stop at #1000 grit"* is an unverifiable competitor claim. Grit and angle figures (#400/#1000/#6000/#10000, 15°/20°) are everywhere and are the product's actual stages, so not treated as C.1 spec-jargon. **Partly resolves an earlier flag:** NK694 says *"Over 100,000 customers"*, the same figure as NK687's "over a hundred thousand people" flagged on 2026-10-26 — recurring across two products makes it a real company stat rather than an invented number, so that flag is downgraded. The `\[customer voice\}` bracket typo (open square, close curly) appears 6× in NK691 and 3× in NK693. |
 | 2026-10-27 | **2** (of 3) | **1** (NK680) | 4 (NK587/588/589 + NK716) | — | **Third run that day, on "assign task and due on thursday".** NK670 and NK678 → Renniel, posted with "Due on Thursday" threaded and flipped. **NK680 held and not posted** — its body says *"Script still in progress. Do not shoot or cut until Status moves"* while its status was `Ready to edit`; see the hold-instruction rule above. It stays in the queue by design. Gate passed on all three. **`Content` = `Street Interview` is a third format value** after `AI VO` and `B-Roll`; note NK680's file naming says `UGC` in the content slot while the property says `Street Interview`, a non-editor-slot mismatch that is out of gate scope but will make the link text and the file names disagree. **Headline flag: NK670's hooks and body all claim the founder was "laughed off Shark Tank"** — written up above as its own class of flag, needs Mark's confirmation rather than a copy judgement. NK670 also carries *"The Japanese ones, all hype and overpriced"*, which is the competitor-disparagement form of the open "Japanese" question, and an editor payment term inside the brief body (*"we pay you double for this video"*) that goes to Renniel along with everything else. **Useful context for that open question: NK678's own red callout says "nothing related to Samurai and Japan style but around vikings"** — Andy actively steers away from Japanese imagery in brand storytelling, which argues the sharpener-line uses are functional rather than intentional. **NK670 and NK678 both have a completely empty `Visual` column** across every hook and body row, with direction given only in the red callout; that is the pattern for these two Hatori-reference AI documentary pieces, not a one-off omission, but it is a lot of unspecified footage for 20 beats. |
+| 2026-11-04 | **5** | **1** (NK680) | **0** | — | **Run on "assigne task and due on friday"** — a week after the previous run. NK679/717/778→Hammad, NK718→Umar, NK719→Onyeka. Gate passed on all 5 (NK717/718/719 each have 5 hooks and 5 matching file-naming rows). Posted, "Due on Friday" threaded, flipped; queue down to NK680 alone. **NK680 held for the second consecutive run** — same unfinished-script note, and `page_last_edited_at` unchanged since 2026-10-27, so the script genuinely has not moved. **First run with zero Callum rows**: NK587/588/589 and NK716 all left `Ready to edit` without this play touching them, consistent with Callum routing his own work. **Mark's "Renniel can do task now" arrived mid-run** and is written up above as its own rule — it neither lifts NK680's hold nor authorises rerouting another editor's brief. `Content` = `AI VO ASMR` is a fourth format value after `AI VO`, `B-Roll` and `Street Interview`. Two new `Editor` options with no channel mapping (`Waheed`, `Fahad`) — see the warning above. **Headline flag, and it is a pattern now, not a slip: NK679 and NK778 both carry a red callout demanding real footage while their Visual columns instruct Higgsfield generation.** NK679's callout is *"REAL B-ROLL ONLY. NO AI-GENERATED VIDEO… No Higgsfield generation"* against five or six rows saying "Generate…" / "Use higgsfield", on a brief whose concept name is literally *"(Real B-roll)"*; NK778 says *"Real b-roll only from the Frame.io library"* against two Higgsfield rows, one of which generates a woman and children standing in for a named customer. Both are Hammad's, so he hits it twice. The editor cannot satisfy both instructions. **Also: NK719's H4 is a duplicate of its own H5**, while NK717 and NK718 carry a distinct H4 — so Onyeka produces four distinct assets where the other two produce five, which undercuts a three-way bake-off. Copy flags: **NK679 says "The lightest knife in the range"**, word for word the NK645 line, making this the fourth brief in three weeks with the NK579 weight claim (after NK645, NK653, NK687). NK717/718/719's closing line *"Four Feathers for the price of two"* states the offer differently from every other brief in the corpus, which says *"your choice on all four"* — and NK778, in the same batch, explains the real mechanic correctly (*"You've got to have two knives in your cart from the start"*), so the two readings sit side by side. Unverifiable specifics recur rather than being invented: *"5,000 five-star reviews"* appears again after NK670, which downgrades that flag the same way the 100,000-customer figure was downgraded. |
