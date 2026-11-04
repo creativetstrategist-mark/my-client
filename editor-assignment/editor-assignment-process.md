@@ -586,6 +586,52 @@ compliant way to handle the Feather's laser-applied pattern — say nothing abou
 how it is applied rather than reaching for a verb. Worth proposing as the standing
 answer the next time an "etched" flag comes up.
 
+**📌 The NK579 weight claim is systemic in the Feather corpus, not a recurring slip.**
+Running count of briefs carrying it, all Andy's, all caught by this play:
+NK645 (2026-10-21), NK653 (10-26), NK687 (10-26), NK679 (11-04, **fixed on
+Mark's instruction**), NK720 (11-04), NK724 (11-04). That is six in three weeks,
+and two of them surfaced in the same hour Mark ordered the NK679 fix. The wording
+drifts — *"the lightest knife in the range"*, *"the lightest knife you'll ever
+hold"*, *"the lightest knife we make"*, *"the lightest, sharpest knife he will
+ever hold"* — so a sweep must search **`lightest`**, not a phrase. Stop treating
+each one as a fresh discovery: report it as the known systemic line, name the
+count, and ask whether to fix the whole set in one pass rather than brief by
+brief.
+
+**The NK679 fix, for reuse:** *"Rosewood, not plastic. The lightest knife in the
+range, and it holds its edge for years instead of months."* → *"Rosewood, not
+plastic. And it holds its edge for years instead of months."* Drop the weight
+clause, keep the edge-retention clause, which already uses CLAUDE.md's approved
+*holds that edge* phrasing. Same shape as the NK599 and NK637 fixes: remove the
+banned claim, leave the sentence standing.
+
+**✅ Andy has adopted the "never say how the pattern is made" solution.** NK771's
+Creative Brief Instruction states it as a rule — *"Never say how the Feather's
+pattern is made"* — alongside *"No review counts on screen"* and *"Offer visuals
+show four knives, never a Buy 1 Get 1 screen"*. NK680 carried the same note as a
+per-row direction. **NK771 also names the bolster as brass** (*"a dragon sculpted
+into the brass bolster"*), the first brief in this play's history to get the
+material explicitly right. Cite NK771 as the model when reporting the others:
+the house knows the compliant form, it is just not applied evenly. **But the same
+batch also carried the opposite**: NK724 reproduces NK654's *"no two are ever
+exactly the same. Because no two hands hammer the same way"* word for word, which
+attributes the laser-applied pattern to hand-work. Both postures, one batch, one
+strategist.
+
+**The customer count has two live values.** NK720 says *"Over a hundred thousand
+people"*; NK775, in the same batch and both Black Friday, says *"over 147,000
+people cook with Northern Knife"*. Every earlier brief says a hundred thousand.
+Either 147,000 is the current figure and the rest are stale, or it is invented —
+this is a question for Mark, not a finding, but it cannot be both.
+
+**An offer percentage that is not a real tier is a hard flag.** NK731 says
+*"Buy 2 Get 2 Free, up to 67% off"*. The `Offer` property's own option list is
+`B2G1, B2G2, 64%OFF, 56%OFF, NA, B1G1, 40% + Free Gifts` — **there is no 67%
+tier**; the nearest real one is 64%. CLAUDE.md's rule is that only real offers
+exist and none may be invented, and here the schema itself enumerates what is
+real, so this is checkable rather than a judgement call. Check any percentage in
+copy against that option list.
+
 **This is not a licence to rewrite copy.** Flag what you see to Mark and leave
 the page alone — the brief is the strategist's work. But a hard product rule
 broken in a brief that is about to be filmed is worth one line in the run
@@ -1101,3 +1147,4 @@ stop and report that rather than working from this prompt's summary.
 | 2026-10-27 | **6** | — | 4 (NK587/588/589 + NK716) | — | **Second run that day, on "assign task and due on thursday".** NK688/691/693/694/695→Umar, NK692→Hammad. Gate passed on all 6. Posted, "Due on Thursday" threaded, flipped; queue back to the 4 Callum rows. **All six are Rolling Knife Sharpener** — second non-focus batch after 2026-10-21, and the largest. All were created 22–24 Oct, i.e. they predate briefs assigned earlier the same day, so they sat in another status and were released in a block. Four carry pipes in the `Concept Name`; `#11-umar-editing` read back after sending and **all five of Umar's links rendered intact**. **Headline flag: the word "Japanese" appears 5× across NK691/692/694/695** — a named CLAUDE.md hard rule, but every use is about the customer's own knives, and NK688 shows the compliant form. Written up as its own section above; needs Mark's ruling rather than a fix. Also: **three different time-to-sharp claims in one batch** — "about a minute" (NK692), "a few minutes" (NK691, NK694, NK695), "under five minutes" (NK688); NK692 is the outlier. NK693's *"a literal samurai sword"* and NK695's *"samurai-sword sharp"* reach for Japanese imagery without the word. NK692's *"Regular sharpeners stop at #1000 grit"* is an unverifiable competitor claim. Grit and angle figures (#400/#1000/#6000/#10000, 15°/20°) are everywhere and are the product's actual stages, so not treated as C.1 spec-jargon. **Partly resolves an earlier flag:** NK694 says *"Over 100,000 customers"*, the same figure as NK687's "over a hundred thousand people" flagged on 2026-10-26 — recurring across two products makes it a real company stat rather than an invented number, so that flag is downgraded. The `\[customer voice\}` bracket typo (open square, close curly) appears 6× in NK691 and 3× in NK693. |
 | 2026-10-27 | **2** (of 3) | **1** (NK680) | 4 (NK587/588/589 + NK716) | — | **Third run that day, on "assign task and due on thursday".** NK670 and NK678 → Renniel, posted with "Due on Thursday" threaded and flipped. **NK680 held and not posted** — its body says *"Script still in progress. Do not shoot or cut until Status moves"* while its status was `Ready to edit`; see the hold-instruction rule above. It stays in the queue by design. Gate passed on all three. **`Content` = `Street Interview` is a third format value** after `AI VO` and `B-Roll`; note NK680's file naming says `UGC` in the content slot while the property says `Street Interview`, a non-editor-slot mismatch that is out of gate scope but will make the link text and the file names disagree. **Headline flag: NK670's hooks and body all claim the founder was "laughed off Shark Tank"** — written up above as its own class of flag, needs Mark's confirmation rather than a copy judgement. NK670 also carries *"The Japanese ones, all hype and overpriced"*, which is the competitor-disparagement form of the open "Japanese" question, and an editor payment term inside the brief body (*"we pay you double for this video"*) that goes to Renniel along with everything else. **Useful context for that open question: NK678's own red callout says "nothing related to Samurai and Japan style but around vikings"** — Andy actively steers away from Japanese imagery in brand storytelling, which argues the sharpener-line uses are functional rather than intentional. **NK670 and NK678 both have a completely empty `Visual` column** across every hook and body row, with direction given only in the red callout; that is the pattern for these two Hatori-reference AI documentary pieces, not a one-off omission, but it is a lot of unspecified footage for 20 beats. |
 | 2026-11-04 | **5** | **1** (NK680) | **0** | — | **Run on "assigne task and due on friday"** — a week after the previous run. NK679/717/778→Hammad, NK718→Umar, NK719→Onyeka. Gate passed on all 5 (NK717/718/719 each have 5 hooks and 5 matching file-naming rows). Posted, "Due on Friday" threaded, flipped; queue down to NK680 alone. **NK680 held for the second consecutive run** — same unfinished-script note, and `page_last_edited_at` unchanged since 2026-10-27, so the script genuinely has not moved. **First run with zero Callum rows**: NK587/588/589 and NK716 all left `Ready to edit` without this play touching them, consistent with Callum routing his own work. **Mark's "Renniel can do task now" arrived mid-run** and is written up above as its own rule — it neither lifts NK680's hold nor authorises rerouting another editor's brief. `Content` = `AI VO ASMR` is a fourth format value after `AI VO`, `B-Roll` and `Street Interview`. Two new `Editor` options with no channel mapping (`Waheed`, `Fahad`) — see the warning above. **Headline flag, and it is a pattern now, not a slip: NK679 and NK778 both carry a red callout demanding real footage while their Visual columns instruct Higgsfield generation.** NK679's callout is *"REAL B-ROLL ONLY. NO AI-GENERATED VIDEO… No Higgsfield generation"* against five or six rows saying "Generate…" / "Use higgsfield", on a brief whose concept name is literally *"(Real B-roll)"*; NK778 says *"Real b-roll only from the Frame.io library"* against two Higgsfield rows, one of which generates a woman and children standing in for a named customer. Both are Hammad's, so he hits it twice. The editor cannot satisfy both instructions. **Also: NK719's H4 is a duplicate of its own H5**, while NK717 and NK718 carry a distinct H4 — so Onyeka produces four distinct assets where the other two produce five, which undercuts a three-way bake-off. Copy flags: **NK679 says "The lightest knife in the range"**, word for word the NK645 line, making this the fourth brief in three weeks with the NK579 weight claim (after NK645, NK653, NK687). NK717/718/719's closing line *"Four Feathers for the price of two"* states the offer differently from every other brief in the corpus, which says *"your choice on all four"* — and NK778, in the same batch, explains the real mechanic correctly (*"You've got to have two knives in your cart from the start"*), so the two readings sit side by side. Unverifiable specifics recur rather than being invented: *"5,000 five-star reviews"* appears again after NK670, which downgrades that flag the same way the 100,000-customer figure was downgraded. |
+| 2026-11-04 | **6** | **1** (NK680) | **0** | — | **Fourth run that day, on "Assign task due on friday"**, arriving minutes after the previous run drained the queue — Andy/Mark released a block of six created 28 Oct–4 Nov. NK720→Umar, NK724/771→Naveed, NK731→Hammad, NK768→Onyeka, NK775→Anas. Gate passed on all 6 (NK724 has one hook and one file-naming row, matching). Posted, "Due on Friday" threaded, flipped; queue back to NK680 alone. **NK680 held a third time**, unchanged. Also this turn: **Mark ordered the NK679 weight-claim fix**, applied and noted in Hammad's thread — see the systemic-weight-claim entry above, which now runs to six briefs and gained two (NK720, NK724) in the same hour. **Hard flag: NK731's "up to 67% off" is not one of the `Offer` property's real tiers** (64% and 56% are). **NK724 reproduces the NK654 hand-hammer line verbatim**, attributing the laser-applied pattern to hand-work. **The customer count forked**: NK720 "over a hundred thousand" vs NK775 "over 147,000", same batch. **NK771 is the compliance model** — it instructs "Never say how the Feather's pattern is made", bans review counts on screen, and is the first brief ever to call the bolster brass. NK768 clean. NK771's roast register ("sweet cheeks", "cries like a princess") sits at the edge of its own persona note, which says affectionate never insulting — tone call for Mark. |
