@@ -520,6 +520,11 @@ text takes `Content` straight from the property, so it reads `..._B-Roll_...`
 with no special handling. A B-Roll brief carries no script, so there is nothing
 to copy-check on one — say that rather than implying a clean read.
 
+**Five values seen so far**, all passed through verbatim into the link label and
+none needing special handling: `AI VO`, `B-Roll` (NK658/659/660), `Street
+Interview` (NK680), `AI VO ASMR` (2026-11-04) and `AI VO Whisper` (NK765,
+2026-11-05). Treat a new value as normal, not as a malformed row.
+
 **Check how widespread a line is before calling it a violation.** On
 2026-10-20 NK637's lineup beat was flagged for "Sixty-seven layers of Damascus
 steel and a hammer finish" as a banned material count. Mark had it fixed, and
@@ -569,6 +574,16 @@ wording before filming, and the shipped sharpener corpus should be swept). Do
 not rewrite them in the meantime, and do not keep re-flagging it run after run
 once he has ruled — record the ruling here.
 
+**Updated count, 2026-11-05: nine instances across eight briefs.** Five more
+sharpener briefs came through and **four of them carry the same beat** — NK762,
+NK763, NK764 and NK766 all say *"fifteen degrees for Japanese knives, twenty for
+Western"*. **NK765 is the exception and uses NK688's neutral form** (*"15 or 20
+degrees"*), which it inherited from NK688 directly. So the split is now 8 briefs
+using the word against 2 avoiding it, across two separate batches a week apart,
+and the neutral form keeps appearing in exactly the briefs derived from NK688.
+This strengthens both readings at once — it is unmistakably the line's house copy,
+and the house already has a compliant version of it. Still Mark's ruling.
+
 **Watch: Andy's standing production rules land in the editor channels, not here.**
 On 2026-10-27 at 15:54 he posted to `#11-umar-editing` with `@channel`:
 *"do not use any footage from Trybe creators on your ads ever"*. Nothing in that
@@ -606,6 +621,18 @@ a production note: **"Never say how the pattern gets on the blade."** That is th
 compliant way to handle the Feather's laser-applied pattern — say nothing about
 how it is applied rather than reaching for a verb. Worth proposing as the standing
 answer the next time an "etched" flag comes up.
+
+**⚠️ "Etched" is not confined to unproduced briefs — it is in shipped winners, and
+on 2026-11-05 it reached a new placement.** NK782 (a re-cut of **NK184**, a US+AU
+winner) and NK787 (a re-cut of **NK133**) both say the Feather's pattern is
+*"etched"*, because both source winners do. NK569 flagged the NK184 line as
+non-compliant on 2026-09-14; NK653 and NK654 inherited it on 2026-10-26; now the
+same line is being carried onto **AppLovin**. The pattern is **laser-applied** —
+a CLAUDE.md hard rule by name. This has the same shape as the weight claim and
+rosewood-on-Santoku: fixing the re-cuts one at a time does not help, because
+every future re-cut inherits the winner's VO. The decision Mark actually has to
+make is about the source winners. NK771's *"Never say how the Feather's pattern
+is made"* is the clean answer whenever one is wanted.
 
 **📌 The NK579 weight claim is systemic in the Feather corpus, not a recurring slip.**
 Running count of briefs carrying it, all Andy's, all caught by this play:
@@ -680,6 +707,34 @@ sibling pair appears, diff the product beats specifically.
 (NK725, NK770, NK773, NK776) and **one says copper** (NK721). NK771 said brass
 too. So the copper error is no longer the default — it is now the exception, and
 worth reporting as progress alongside the flag.
+
+**📺 AppLovin is a new placement and it carries a hard format spec.** On
+2026-11-05 five briefs came through for **AppLovin** (NK782, NK783, NK785, NK786,
+NK787) and the format is tighter than anything else in the corpus: **strictly
+under 60 seconds**, **9:16 at 1080x1920**, and every one is a **re-cut of an
+already-shipped winner** rather than a new script. The briefs state the runtime
+as a requirement, and one records a rejection — **NK146 was turned down at 61
+seconds**, one second over. So on an AppLovin brief the runtime is pass/fail, not
+guidance. Read the brief's own runtime note before posting rather than assuming
+the editor will catch it, and expect the copy flags on these to be inherited from
+the source winner rather than newly written (see the "etched" note above).
+
+**Three smaller findings from the 2026-11-05 batches, none of them gate failures:**
+
+- **"Batman" has become the Blackout's standard descriptor.** NK769 and NK777
+  both reach for it for the all-black LOKI. It is a trademarked character name
+  used as a comparison rather than a product claim, and its consistency across
+  two briefs makes it house copy rather than a slip — worth one line to Mark as
+  a legal and tone call, not a copy fix.
+- **The AppLovin briefs carry a generic three-persona template that contradicts
+  their own `Avatar` property.** Each names MIKE, SARAH and VANCE in the body
+  template while the page's `Avatar` property names a single persona. The editor
+  works from the page, so they see both; it reads like a template header that was
+  never trimmed per brief.
+- **NK769 contains unhandled profanity in the VO** — no bleep, mute or
+  on-screen-text instruction anywhere in the brief, where every other brief that
+  reaches for strong language says how to treat it. That leaves Hammad to decide,
+  which is the wrong person to be deciding it.
 
 **This is not a licence to rewrite copy.** Flag what you see to Mark and leave
 the page alone — the brief is the strategist's work. But a hard product rule
@@ -1199,3 +1254,6 @@ stop and report that rather than working from this prompt's summary.
 | 2026-11-04 | **6** | **1** (NK680) | **0** | — | **Fourth run that day, on "Assign task due on friday"**, arriving minutes after the previous run drained the queue — Andy/Mark released a block of six created 28 Oct–4 Nov. NK720→Umar, NK724/771→Naveed, NK731→Hammad, NK768→Onyeka, NK775→Anas. Gate passed on all 6 (NK724 has one hook and one file-naming row, matching). Posted, "Due on Friday" threaded, flipped; queue back to NK680 alone. **NK680 held a third time**, unchanged. Also this turn: **Mark ordered the NK679 weight-claim fix**, applied and noted in Hammad's thread — see the systemic-weight-claim entry above, which now runs to six briefs and gained two (NK720, NK724) in the same hour. **Hard flag: NK731's "up to 67% off" is not one of the `Offer` property's real tiers** (64% and 56% are). **NK724 reproduces the NK654 hand-hammer line verbatim**, attributing the laser-applied pattern to hand-work. **The customer count forked**: NK720 "over a hundred thousand" vs NK775 "over 147,000", same batch. **NK771 is the compliance model** — it instructs "Never say how the Feather's pattern is made", bans review counts on screen, and is the first brief ever to call the bolster brass. NK768 clean. NK771's roast register ("sweet cheeks", "cries like a princess") sits at the edge of its own persona note, which says affectionate never insulting — tone call for Mark. |
 | 2026-11-04 | **1** (NK680) | — | **0** | — | **NK680 released on Mark's explicit override**, after three runs held: *"Assign the NK680 to editor."* Re-read first — page unchanged since 2026-10-27, script note still present — so sent as a knowing override rather than a lifted hold. Posted to Renniel and flipped. **No bare due-date reply:** the thread carries a note that the "Do not shoot or cut" line is superseded, that Mark cleared it, and to check with him or Andy if the script reads unfinished. **The go signal named no day**, and per the deadline rule a day is never invented — asked Mark rather than carrying Friday over from the batch minutes earlier, which matters more than usual here because a Friday deadline on an unfinished shoot script is not obviously coherent. Queue now empty. |
 | 2026-11-04 | **5** | — | **0** | — | **Fifth run that day, on "assign task due on friday"** — five Santoku siblings of the Feather briefs assigned an hour earlier, released as another block. NK721/725→Hammad, NK770/776→Hasnain, NK773→Naveed. Gate passed on all 5 (NK725 has one hook and one row, matching). Posted, "Due on Friday" threaded, flipped. **Queue completely empty for the first time** — no Callum rows either. **Headline: rosewood-on-Santoku in 5 of 5**, written up above as systemic, and present in NK770/NK776's production direction and persona note as well as the VO, so an editor is told to shoot it. **NK721 is the only copper bolster**; the other four say brass, as did NK771 — the error is now the exception rather than the default. NK721 also carries a stray "then the Feather" in a Santoku Visual cell, which shows the find-and-replace derivation the write-up above describes. **The customer count splits by concept family, not at random**: the Apology pair (NK720/NK721) says "a hundred thousand", the Waiting For The Sale pair (NK775/NK776) says "147,000" — still Mark's to pick, but the pattern suggests 147,000 is the newer figure. Two separate yesterday-buyer counts in the Apology pair as well: 748 (Feather) and 512 (Santoku), which could legitimately be per-product. NK725's `Concept Name` ends in a stray " =" which lands in the Slack link label but not the file names. Good discipline worth noting: NK773 and NK776 both ban review counts on screen, and NK773's instruction keeps Norse god names out while carving out BJORN by name. |
+| 2026-11-05 | **5** | — | **0** | — | **Run on "Assign task due on saturday".** NK700→Onyeka, NK705→Naveed, NK769/777→Hammad, NK772→Hasnain. Gate passed on all 5. Posted, "Due on Saturday" threaded, flipped. **All five LOKI Blackout, and materially clean on the product's hard rules** — the bottle opener is in the **handle** throughout, brass wherever a bolster is named, no rosewood misattribution. That is the first batch in weeks with no product-accuracy flag, and it is worth saying so rather than reporting silence. Three softer notes, all written up above: **"Batman" as the Blackout's descriptor** in NK769 and NK777 (consistent, so house copy rather than a slip — a trademark and tone call for Mark), and **NK769's unhandled profanity**, with no bleep or mute instruction anywhere in the brief, which leaves Hammad deciding it. **NK772 is worth citing as a model** alongside NK771: it instructs *"Do not imitate any real presenter"* and *"Show the Tiger Cleaver, not the RAGNAR Butcher"* — Andy pre-empting both an impersonation risk and a wrong-product shot. |
+| 2026-11-05 | **5** | — | **0** | — | **Second batch that day, same "Assign task due on saturday" signal.** NK782/783→Hammad, NK785→Hasnain, NK786/787→Onyeka. Gate passed on all 5. Posted, "Due on Saturday" threaded, flipped. **A new placement: AppLovin**, written up above as its own section — strictly under 60 seconds, 9:16 at 1080x1920, and every brief a **re-cut of an already-shipped winner** rather than a new script. The runtime is pass/fail, not guidance: one of these records **NK146 being rejected at 61 seconds**, one second over. **Headline flag, and it is the systemic kind: NK782 (re-cut of NK184, a US+AU winner) and NK787 (re-cut of NK133) both say the Feather's pattern is "etched"** — because both source winners do. NK569 flagged the NK184 line in September, NK653/NK654 inherited it in October, and it is now being carried onto a new platform, so the decision is about the source winners rather than these two briefs. Also: **all five carry a generic MIKE/SARAH/VANCE persona template that contradicts their own `Avatar` property**, which names one persona — an untrimmed template header the editor can see both halves of. |
+| 2026-11-05 | **5** | — | **0** | — | **Third batch that day, caught by the closing re-query**, which is the second time that habit has paid for itself (after NK708 on 2026-10-26). All five Rolling Knife Sharpener, all Andy's: NK762/763/765/766→Hammad, NK764→Umar. Gate passed on all 5. Posted, "Due on Saturday" threaded, flipped; **closing query returned zero rows — queue completely empty, no Callum rows either**, as on the last run. `Content` = **`AI VO Whisper`** on NK765 is a fifth format value, logged above with the other four. **The "Japanese" question moved, without resolving: four of these five carry the same angle beat** (NK762/763/764/766), taking the count to nine instances across eight briefs, while **NK765 uses NK688's neutral "15 or 20 degrees"** — the neutral form keeps turning up in exactly the briefs derived from NK688. That strengthens both readings at once and still needs Mark's ruling, so it was reported as a count rather than as a fresh discovery. All five say *"Over 100,000 customers"*, consistent with the figure already downgraded from a flag. NK764 and NK766 both ban review counts on screen. |
