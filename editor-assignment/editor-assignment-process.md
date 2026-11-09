@@ -619,6 +619,13 @@ and (b) there is now a written in-brief form of the rule to point at when asking
 That makes the ask easier: show Mark NK790's line and ask whether it should extend
 to the sharpener briefs, where nine instances are still live.
 
+**Updated count, 2026-11-09: thirteen instances across twelve briefs.** The
+second sharpener run that day added four more — NK796, NK798, NK799 and NK806 all
+carry *"fifteen degrees for Japanese knives, twenty for Western"*. NK767, NK797
+and NK807 do not use the beat at all (NK807 uses the four-grit framing instead),
+which keeps showing that the line is skippable without losing the ad. The running
+total is now large enough that a ruling saves more work than it costs.
+
 **Updated count, 2026-11-05: nine instances across eight briefs.** Five more
 sharpener briefs came through and **four of them carry the same beat** — NK762,
 NK763, NK764 and NK766 all say *"fifteen degrees for Japanese knives, twenty for
@@ -888,6 +895,70 @@ editor at *"NK168 and NK779 folders"* for Blackout b-roll — but **NK779 was
 assigned in this same run** and has not been cut. NK792 is **Fahad's first brief**,
 so the one person least able to know that a named folder is empty is the one being
 sent to it. Worth a line whenever a brief cites a sibling still in production.
+
+**✅ Correction worth carrying forward: "new editor" meant new to this play, not
+new to the team.** On 2026-11-09 Waheed and Fahad were described in the first
+report as brand-new, and an onboarding gap was raised on that basis. **NK807's own
+red callout contradicts it**: *"rebuild the whole video as an AI mashup like all
+the other ads you've done for us"*, addressed to Waheed by name. So Andy treats
+him as an experienced hand with prior delivered work; what was new was his
+appearance in the `Editor` property and his Slack channel. Do not infer a person's
+tenure from their absence from the mapping table — the table tracks this play's
+coverage, not the roster.
+
+**⚠️ The sharpener's own stage architecture is described two different ways inside
+one batch.** In the 2026-11-09 sharpener run, NK796, NK798, NK799 and NK806 all
+describe **a two-sided diamond roller (#400 and #1000) plus ceramic and jade
+polishing discs**. **NK807 describes four discs and labels them #400, #1000,
+#6000 and #10000** — grit numbers in place of the ceramic/jade naming — and adds a
+Visual annotation mapping grit to physical disc position (*"#400 is the 2nd disc,
+#1000 is the 1st disc"*) that runs against its own VO line *"Start with the 400
+diamond disc"*. The two accounts may be reconcilable (ceramic ≈ #6000, jade ≈
+#10000), but **no brief reconciles them**, and one editor now holds both. Flag it
+as a question for Andy: which naming does the product actually ship with, and
+which should be on screen. A new-to-the-play editor has no basis to choose.
+
+**⚠️ Day-bound urgency on `Evergreen` inventory — three briefs, one batch.** The
+batch-name field reads `Evergreen` (not a dated campaign) on NK797, NK799 and
+NK806, yet each carries a deadline or stock claim that is only true on one day:
+
+- **NK797** supers **"ENDS TONIGHT 🚨"** on all three hooks and closes *"the sale
+  ends tonight, so don't sleep on it."*
+- **NK799** twice makes the free discs conditional on *"if you order today"*.
+- **NK806** has the narrator say *"I checked their site yesterday and it's almost
+  gone again"* — a stock level asserted as a fact he personally verified.
+
+An evergreen ad runs for weeks, so each of these is false on most days it serves.
+That is an advertising-claim exposure rather than a voice question, and it is
+visible from the brief's own metadata, which is what makes it worth raising:
+the `Evergreen` tag and the copy contradict each other on the same page. Worth
+asking Mark whether these should run dated, or whether the urgency lines should
+go.
+
+**⚠️ NK797's "Triple Discount" counts a warranty as a discount.** Its three
+"discounts" are 40% off (a real discount), the two free discs (a gift — the
+`Offer` property calls the whole thing `40% + Free Gifts`), and *"your third
+discount is the lifetime warranty"*. A warranty is not a price reduction, so the
+offer is described as three discounts when the property itself names two
+components. Same family as the NK731 "up to 67% off" flag: the copy overstates
+the offer structure relative to the `Offer` property.
+
+**⚠️ Category disparagement stated as fact (NK806).** *"Pull-through sharpeners
+don't work, they ruin your knife."* That is a flat factual claim about a
+competing product category, stronger than NK692's *"Regular sharpeners stop at
+#1000 grit"* and in the same class. NK799 shows the softer form in the same batch
+(*"the pull-through sharpener chewed them up"* as the customer's own experience),
+which is the version to point at if a fix is wanted.
+
+**🔁 The overstock premise is borrowed, not invented — which changes the flag.**
+NK665 was flagged on 2026-10-21 for inventing an overstock reason for a discount.
+NK796 reveals the lineage: it is an iteration of **NK383**, which is itself built
+from a **Hatori Knives** ad whose line was *"We over-ordered. Badly."* So the
+premise is a competitor's mechanic carried across, and CLAUDE.md's rule is that
+the mechanic transfers but a business-fact premise is not a mechanic — the same
+reasoning as the NK670 Shark Tank flag. The question for Mark is not "did someone
+make this up" but "is the warehouse actually overstocked", because the ad asserts
+it as fact three times.
 
 **This is not a licence to rewrite copy.** Flag what you see to Mark and leave
 the page alone — the brief is the strategist's work. But a hard product rule
@@ -1432,3 +1503,4 @@ stop and report that rather than working from this prompt's summary.
 | 2026-11-05 | **5** | — | **0** | — | **Second batch that day, same "Assign task due on saturday" signal.** NK782/783→Hammad, NK785→Hasnain, NK786/787→Onyeka. Gate passed on all 5. Posted, "Due on Saturday" threaded, flipped. **A new placement: AppLovin**, written up above as its own section — strictly under 60 seconds, 9:16 at 1080x1920, and every brief a **re-cut of an already-shipped winner** rather than a new script. The runtime is pass/fail, not guidance: one of these records **NK146 being rejected at 61 seconds**, one second over. **Headline flag, and it is the systemic kind: NK782 (re-cut of NK184, a US+AU winner) and NK787 (re-cut of NK133) both say the Feather's pattern is "etched"** — because both source winners do. NK569 flagged the NK184 line in September, NK653/NK654 inherited it in October, and it is now being carried onto a new platform, so the decision is about the source winners rather than these two briefs. Also: **all five carry a generic MIKE/SARAH/VANCE persona template that contradicts their own `Avatar` property**, which names one persona — an untrimmed template header the editor can see both halves of. |
 | 2026-11-05 | **5** | — | **0** | — | **Third batch that day, caught by the closing re-query**, which is the second time that habit has paid for itself (after NK708 on 2026-10-26). All five Rolling Knife Sharpener, all Andy's: NK762/763/765/766→Hammad, NK764→Umar. Gate passed on all 5. Posted, "Due on Saturday" threaded, flipped; **closing query returned zero rows — queue completely empty, no Callum rows either**, as on the last run. `Content` = **`AI VO Whisper`** on NK765 is a fifth format value, logged above with the other four. **The "Japanese" question moved, without resolving: four of these five carry the same angle beat** (NK762/763/764/766), taking the count to nine instances across eight briefs, while **NK765 uses NK688's neutral "15 or 20 degrees"** — the neutral form keeps turning up in exactly the briefs derived from NK688. That strengthens both readings at once and still needs Mark's ruling, so it was reported as a count rather than as a fresh discovery. All five say *"Over 100,000 customers"*, consistent with the figure already downgraded from a flag. NK764 and NK766 both ban review counts on screen. |
 | 2026-11-09 | **15** | — | **0** | — | **Run on "Assigned task, due on wednesday"** — the largest single batch this play has handled, four days after the last run. NK704/779/793/801/803/804→Hammad, NK789/791/795→Anas, NK800/802/805→Umar, **NK790/794→Waheed** and **NK792→Fahad**, both of them their first briefs ever. Posted, "Due on Wednesday" threaded, flipped; closing query empty, no Callum rows for the third run running. **Mark mentioned mid-run that "we have 2 new editors"**, which closed the 2026-11-04 mapping gap: `#11-waheed-editing` `C0CEJBP4MQC` and `#11-fahad-editing` `C0CENMTDF9C`, both verified by listing (not guessed — see the resolved-channels section, including why `slack_search_channels` is the wrong tool for this). **First real gate failure in ~100 briefs: NK795's H1 file-naming row read `Andy_EDITOR`**, an unreplaced placeholder, against `Andy_Anas` in the Batch name and the other two rows. Held, reported, and on Mark's **"fix and assign"** the one token was corrected, the page re-read to confirm all four strings matched, then posted and flipped — so 15 of 15 landed, one of them on a second pass. Written up above as its own gate section. **Headline finding, and the most actionable thing this play has produced: Andy's in-brief rule block now works, and the only errors left are the two it does not name.** Every rule he writes down held across all 15 — no "etched", no "Japanese" outside the sharpener line, dragon placement correct throughout — while **NK790 said "copper bolster" twice and NK794 said "a rosewood handle" twice**, the two Santoku facts absent from the block. Two added lines would close both systemic errors at source. **Resolved: the customer count is 147,000** — seven briefs say it, five as an explicit on-screen super, so the 100,000 fork is closed. **Progress worth recording:** NK790/NK791 are the first Feather/Santoku sibling pair with no rosewood leak, four briefs carry explicit "do not copy their lines" sibling warnings, and NK793 annotates every deviation from its source winner. **Other flags:** NK779 puts *"a fucking bollocks"* in a **hook** with no bleep instruction (NK769's gap, escalated to the first three seconds of the ad, and Hammad's again); NK779 is the third and fourth real-b-roll-vs-Higgsfield contradiction, all four Hammad's; NK793 turns the ~3-month *restock* into *"three months in the workshop"*; "lifetime warranty" appears in all seven Lucky Day briefs as an on-screen badge and needs one confirmation. **The UGC "Husband Obsession" set (NK800–805) is the weakest work seen here** and all of it is template-level: *"five times sharper than average knives"* in all six (the NK646 invented-multiplier class Mark already ordered fixed once), the Santoku's **dragon bolster and hand-carved handle left on the Feather cuts** NK800/NK804 — the leak running Santoku→Feather for the first time — the identical offer paragraph across four briefs in one batch (a CLAUDE.md ban by name), the offer as the final beat with nothing after it, and the address flipping from wife to husband mid-ad. Six briefs, one script, so one editing pass. Also: NK792 and NK795 send editors to NK779's folder for footage, and NK779 was assigned in this same run — Fahad, on his first brief, is the one least able to know it is empty. |
+| 2026-11-09 | **7** | — | **0** | — | **Second run that day, on "assign task, due on wedneday"**, minutes after the 15-brief batch drained the queue. All seven Rolling Knife Sharpener, all Andy's: NK767→Hammad, **NK796/797/798/799/806/807→Waheed**. Gate passed on all 7. Posted, "Due on Wednesday" threaded, flipped; closing query empty. **Six of seven to one editor who had received his first brief an hour earlier** — flagged as a load question, then partly answered by the briefs themselves: **NK807 addresses him by name and refers to "all the other ads you've done for us"**, so he is experienced and was only new to this play. That correction is written up above; the earlier onboarding concern was overstated. **NK767 had been sitting since 2026-11-03** — same creation block as NK762–766, which went out on 11-05 — so it was left behind in that batch rather than newly written. **Headline, and it is a metadata-vs-copy contradiction visible on the page: three briefs carry day-bound urgency on `Evergreen` inventory.** NK797 supers "ENDS TONIGHT 🚨" on all three hooks, NK799 makes the free discs conditional on "if you order today" twice, and NK806 has the narrator assert "I checked their site yesterday and it's almost gone again". An evergreen ad serves for weeks, so each is false on most of those days. **Second finding: the product's own stage architecture is described two ways in one batch** — four briefs say two-sided diamond roller (#400/#1000) plus ceramic and jade discs, while NK807 says four discs labelled #400/#1000/#6000/#10000, with an annotation that contradicts its own VO on which disc comes first. Waheed holds both versions. **Also: NK797 counts the lifetime warranty as one of its "three discounts"** (the `Offer` property names two components), **NK806 states "pull-through sharpeners don't work, they ruin your knife"** as flat fact about a competing category, and **NK796 opens H1 with "We fucked up, guys"** — the second profanity-in-a-hook of the day after NK779, and deliberate rather than a slip: H2 avoids it and H3 softens to "we messed up big time", so Andy wrote three escalating variants. **The "Japanese" count rose to thirteen across twelve briefs** (NK796/798/799/806), while NK767, NK797 and NK807 skip the beat entirely — more evidence it is droppable. **Useful lineage: NK796 shows the overstock premise flagged on NK665 is inherited** from NK383, itself built from a Hatori Knives ad ("We over-ordered. Badly."), so the question is whether the warehouse really is overstocked, not whether someone invented it. **Good practice to cite:** four briefs instruct *"Use a plain supermarket kitchen knife for the demo, never one of our knives"* (keeping the sharpener off NK's own edge-retention claim), NK799 adds *"Never show knives being thrown away — on this ad the dull knives get sharpened, not replaced"*, and NK796's instruction spells out CLAUDE.md's offer rule in Andy's own words: *"The offer lands as the fix for the overstock, keep the same subject through the transition."* NK767 is the cleanest brief in either of today's runs. |
