@@ -385,6 +385,37 @@ Treat an editor segment you cannot locate, or one that is not a valid option
 string, exactly the same way: stop and report. Never post a brief whose editor
 you could not verify.
 
+### 🚨 First real gate failure: an unreplaced `EDITOR` placeholder (NK795, 2026-11-09)
+
+The gate ran from 2026-10-13 and passed every brief — roughly a hundred of them —
+until **NK795 "Lucky Day Mastermind Black Friday (NK401 x NK222) - Blackout"**.
+Its `Editor` property said `Anas`, its Batch name said `Andy_Anas`, its H2 and H3
+file-naming rows said `Andy_Anas`, and its **H1 row said `Andy_EDITOR`** — the
+template placeholder, never substituted.
+
+**A placeholder is a gate failure, even though it names nobody.** It is tempting
+to wave through, because there is no competing name and therefore no doubt about
+who the editor is: three of four strings and the property all say Anas. But the
+gate exists to stop a bad string reaching the file names, and `EDITOR` is a bad
+string. Posted as-is, Anas delivers `NK795_..._Andy_EDITOR_6r-General_...` into
+Frame.io and the Drive, and somebody has to find it later. So it was held: not
+posted, not flipped, left in `Ready to edit`.
+
+**What to do with one.** Report it and say plainly that the correct value is not
+in doubt — that is what makes it different from a two-names-disagree mismatch,
+where guessing is genuinely unsafe. Do not fix it unilaterally (the standing rule
+is to leave the strategist's page alone), but do offer the fix, because it is a
+single token and the brief is otherwise ready. **Mark's answer on 2026-11-09 was
+"fix and assign"**, so: edit that one row, **re-read the page to confirm all four
+strings now match**, then post, thread and flip as normal. The re-read is worth
+the call on a brief that just failed the gate.
+
+**Watch for the sibling pattern.** NK795's three sister briefs (NK793, NK794 and
+NK792) all had their editor slots filled correctly, so this was one row in one
+brief rather than a batch-wide template problem. Still, when a placeholder turns
+up, check the rest of that batch before assuming it is isolated — these briefs
+are built from one template and the same slot can go unfilled more than once.
+
 ### ⚠️ Only the editor slot is checked
 
 The body strings use abbreviated forms and **already drift from the properties in
@@ -574,6 +605,20 @@ wording before filming, and the shipped sharpener corpus should be swept). Do
 not rewrite them in the meantime, and do not keep re-flagging it run after run
 once he has ruled — record the ruling here.
 
+**🔑 2026-11-09, the strongest evidence yet, and it points at "literal":
+Andy now writes the ban into his own briefs, word for word.** NK790 and NK794
+both carry the instruction *"Never say 'etched', 'Japanese' or 'Japan'"* in their
+Creative Brief Instruction block. He is not treating it as a paraphrase of a
+positioning preference — he is naming the two strings.
+
+Read it precisely, though: both are **Santoku** briefs, where nobody disputes the
+ban applies. So this does not by itself settle whether the *sharpener* line's
+angle convention is covered. What it does establish is that (a) the author of the
+sharpener copy treats the word itself, not just the claim, as the thing to avoid,
+and (b) there is now a written in-brief form of the rule to point at when asking.
+That makes the ask easier: show Mark NK790's line and ask whether it should extend
+to the sharpener briefs, where nine instances are still live.
+
 **Updated count, 2026-11-05: nine instances across eight briefs.** Five more
 sharpener briefs came through and **four of them carry the same beat** — NK762,
 NK763, NK764 and NK766 all say *"fifteen degrees for Japanese knives, twenty for
@@ -736,25 +781,152 @@ the source winner rather than newly written (see the "etched" note above).
   reaches for strong language says how to treat it. That leaves Hammad to decide,
   which is the wrong person to be deciding it.
 
+**🔑 The most useful finding so far: Andy now writes a rule block into his briefs,
+and what it covers is now clean while what it omits still slips.** As of
+2026-11-09 most briefs carry an explicit instruction list — *"Dragon on the
+Santoku only, never on the Tiger Cleaver"*, *"Never say 'etched', 'Japanese' or
+'Japan'"*, *"No review count or star rating on screen"*, *"No 'free returns'
+anywhere"*, *"Offer visuals show four knives, never a Buy 1 Get 1 screen"*. In the
+15-brief run that day, **every rule on that list held**. Not one brief said
+"etched"; not one said "Japanese" outside the sharpener line; dragon placement was
+correct everywhere.
+
+**The two errors that persist are exactly the two the block does not name:** the
+Santoku's **handle material** and its **bolster metal**. NK790 said *"copper
+bolster"* twice, and NK794 said *"a rosewood handle"* twice — both in briefs whose
+own rule block bans "etched" and "Japanese". So this is no longer a story about
+Andy not knowing the rules. It is a gap in a checklist that otherwise works.
+
+**The recommendation, and it is cheap:** ask Andy to add two lines to his standard
+block — *"The Santoku's bolster is brass, never copper"* and *"The Santoku's handle
+is hand-carved wood — never rosewood, which is the Feather's"*. On the evidence of
+this run those two lines would close both long-running systemic errors at the
+source, which is better than this play catching them brief by brief forever.
+
+**Good news in the same run: the find-and-replace mechanism is being addressed.**
+NK791, NK792, NK794 and NK795 each carry an explicit *"Sister briefs: ... Same
+idea, different words, do not copy their lines"* warning, and the sibling briefs
+genuinely do differ. **NK790 (Santoku) and NK791 (Feather) are the first
+Feather/Santoku sibling pair with no rosewood leak** — NK791 says "a rosewood
+handle fitted by hand" correctly and NK790 does not mention a handle at all. Also
+worth citing: **NK793 annotates every deviation from its source winner** in the
+Note column (*"Changed: opener is in the handle"*, *"Changed: no dragon, no bolster
+on this knife"*, *"Changed: Black Friday, customer count added, 'free returns'
+removed"*). That is the practice that would have prevented the AppLovin "etched"
+inheritance.
+
+**✅ The customer count is settled at 147,000.** The 2026-11-04 fork (100,000 vs
+147,000) resolves: **seven briefs on 2026-11-09 all say 147,000**, five of them
+with an explicit on-screen instruction *"Super: OVER 147,000 CUSTOMERS"*. A figure
+Andy directs onto the screen as a super is the approved one. Treat 100,000 as the
+superseded figure and stop raising the fork.
+
+**🔎 "Lifetime warranty" is a new recurring claim worth one question.** It appears
+in **all seven** Lucky Day / Return Box briefs on 2026-11-09, rendered as an
+on-screen badge beside the 30-day money-back and free-shipping badges, and phrased
+variously (*"Lifetime warranty on all four"*, *"Every one covered for the lifetime
+of the knife"*). The 30-day return is long-established; a lifetime warranty is not
+something this play had seen before. Its consistency says it is a real company
+term rather than an invented one, so this is a confirm-once question, not a flag —
+but it is a warranty promise going on screen, so it is worth confirming once.
+
+**🚨 Profanity in a hook, not just a body (NK779).** Its H2 reads *"This guy is a
+fucking bollocks"*, with no bleep, mute or on-screen-text instruction anywhere in
+the brief. This is the NK769 problem escalated: in a hook it is the first three
+seconds of a Meta ad, which is a platform-policy exposure rather than a taste
+question. H1 also calls the customer *"this dummy"*. Hammad gets it, and he hit
+the same gap on NK769 — so he is now twice the person left deciding how to handle
+strong language. Raise it as needing a standing rule, not a per-brief judgement.
+
+**🔁 The real-b-roll vs Higgsfield contradiction recurs (NK779).** Its instruction
+says *"Real b-roll only from the Frame.io library"* while its first body row says
+*"Generate image of box of blackout box with the note"* with the Note *"use
+higgsfield"*. That is the **third and fourth** instance after NK679 and NK778 on
+2026-11-04 — and all of them are Hammad's. The editor cannot satisfy both.
+
+**⚠️ A production-time claim that distorts a documented fact (NK793).** It says
+the Feather is *"Three months in the workshop, one blacksmith per blade"*.
+CLAUDE.md documents a **~3-month restock cycle** and ~500-unit drops — an interval
+between drops, not the time one knife spends being made. The brief turns a supply
+fact into a craft claim. Worth a line because it is the kind of detail that reads
+as a specific, checkable boast.
+
+**📌 The UGC "Husband Obsession" set (NK800–NK805) is the weakest work this play
+has seen, and the problems are template-level.** Six briefs, two creators (Briana,
+Tina) × three products, one shared script:
+
+- **An invented multiplier in all six**: *"they are five times sharper than average
+  knives"*. This is precisely the NK646 *"three times the control"* class that Mark
+  ordered fixed on 2026-10-20. Six briefs, one fix.
+- **Santoku attributes on the Feather (NK800, NK804)**: both say the Feather has
+  *"a dragon sculpted into the bolster, a hand-carved handle"*. That is the BJORN
+  Santoku's spec. **This is the leak running the other way** — every previous case
+  was Feather→Santoku (rosewood); here the Santoku version is the template and its
+  features were left on the Feather cuts. NK801/NK803 (Blackout) *did* get a correct
+  swap (*"full tang handle, unique finger loop technology"*), so the Feather pair is
+  the miss.
+- **The identical offer paragraph across product versions in one batch**, which
+  CLAUDE.md bans by name. NK800, NK802, NK804 and NK805 all close with the same
+  words, down to *"So you can get the Bjorn Santoku completely for free"* — which on
+  NK802 and NK805 offers the Santoku free on a brief whose hero product *is* the
+  Santoku.
+- **The offer is the last beat with nothing after it.** All six are `Off-Late` and
+  the offer is item #3 of a 3-item listicle. CLAUDE.md's rule is that the offer
+  lands ~60–80% through, never last, followed by 2–4 more beats.
+- **The address flips mid-ad.** The hooks speak to the wife (*"why your husband
+  will be obsessed"*); the body then speaks to the husband (*"Cutting through your
+  wife's watch?"*). `Avatar` is SARAH throughout.
+- Softer: *"This is the most versatile knife money can buy"* and *"He will never
+  need to buy another knife again"* are unfalsifiable superlatives, and all six
+  carry `Specialty` = **"Genralist"** (misspelled) and no `Date` value.
+
+Because these six share one script, **the whole set is one editing pass for Andy,
+not six.** That is the useful framing for the report.
+
+**⚠️ A footage source that does not exist yet (NK792, NK795).** Both point the
+editor at *"NK168 and NK779 folders"* for Blackout b-roll — but **NK779 was
+assigned in this same run** and has not been cut. NK792 is **Fahad's first brief**,
+so the one person least able to know that a named folder is empty is the one being
+sent to it. Worth a line whenever a brief cites a sibling still in production.
+
 **This is not a licence to rewrite copy.** Flag what you see to Mark and leave
 the page alone — the brief is the strategist's work. But a hard product rule
 broken in a brief that is about to be filmed is worth one line in the run
 summary, and the hard rules are in CLAUDE.md and the product catalog.
 
-## ⚠️ Two editor options have no verified channel: `Waheed` and `Fahad`
+## ✅ `Waheed` and `Fahad` — resolved 2026-11-09
 
-Spotted 2026-11-04: the `Editor` property's option list grew from 8 names to 10.
-It now reads `Hasnain, Renniel, Umar, Hammad, Onyeka, Anas, Naveed, Huzaifa,
-Waheed, Fahad`. **The mapping below has no entry for Waheed or Fahad**, and no
-`#11-waheed-editing` or `#11-fahad-editing` has been verified to exist.
+The gap opened on 2026-11-04, when the `Editor` option list grew from 8 names to
+10 and neither new name had a channel. It closed on 2026-11-09, the first run in
+which either appeared as a brief's `Editor`: Mark mentioned mid-run that "we have
+2 new editors", and both channels were found to exist with this session already a
+member of them. They are in the mapping table below.
 
-Neither appeared as a brief's `Editor` in that run, so nothing was blocked. But
-when one does: **do not guess a channel name and do not post to a guessed
-channel.** Guessing a channel is the same class of error as guessing an editor,
-which the blank-`Editor` rule already forbids. Send that brief to Mark's
-fallback channel as needing a channel confirmed, leave its status alone, and get
-the channel ID verified the way the eight below were — by reading the channel,
-not by inferring the name from the pattern.
+| Editor | Channel | Channel ID |
+|---|---|---|
+| `Waheed` | `#11-waheed-editing` | `C0CEJBP4MQC` |
+| `Fahad` | `#11-fahad-editing` | `C0CENMTDF9C` |
+
+**How they were verified, which is the method to reuse.** `slack_list_user_channels`
+with `name_prefix: "11-"` returns every `#11-*` channel this session can see, with
+IDs — 17 of them, including the two new ones. That is a direct read, not an
+inference from the naming pattern, so it satisfies the "never guess a channel"
+rule. Note that **`slack_search_channels` found nothing** for `editing` or `11`
+(semantic search is disabled on this account and these channels are private), so
+the search tool is not the way to do this — use the list tool.
+
+Both posts landed first time, which confirms write access as well as membership.
+
+**That listing also shows five `#11-*-editing` channels with no `Editor` option**
+(`jason`, `khizra`, `shafaq`, `saad`, plus `andy-editing-trial`) and two archived
+ones (`ahmad`, `sviatoslav`). So the channel list is not a roster — it runs ahead
+of and behind the Notion option list in both directions. Do not infer that a
+channel's existence means that person is an assignable editor, and keep driving
+assignment off the `Editor` property.
+
+**The rule that still stands:** if a *future* new name appears with no channel in
+that listing, do not guess one. Send the brief to Mark's fallback channel as
+needing a channel confirmed and leave its status alone.
 
 ## Editor → Slack mapping (verified live 2026-10-13)
 
@@ -772,6 +944,8 @@ does not reliably notify, so the ID is the thing to keep.
 | `Anas` | `#11-anas-editing` | `C0BQSRKS30U` | `U0BRQ3YNNB1` | anas@nebula-studio.co ⚠️ |
 | `Naveed` | `#11-naveed-editing` | `C0BRV68UN12` | `U0BS68YP8MU` | naveed2@nebula-studio.co |
 | `Renniel` | `#11-renniel-editing` | `C0BSC1C8WMN` | `U0BUKU9GDM5` | renniel@nebula-studio.co ⚠️ |
+| `Waheed` | `#11-waheed-editing` | `C0CEJBP4MQC` | — not looked up — | — (verified 2026-11-09) |
+| `Fahad` | `#11-fahad-editing` | `C0CENMTDF9C` | — not looked up — | — (verified 2026-11-09) |
 | `Huzaifa` | — none — | — | — | **off roster, never assign** |
 | _fallback (exceptions)_ | `#11-mark` | `C09QUL7S3GA` | `U0A127WHE9M` (Mark) | — |
 
@@ -1257,3 +1431,4 @@ stop and report that rather than working from this prompt's summary.
 | 2026-11-05 | **5** | — | **0** | — | **Run on "Assign task due on saturday".** NK700→Onyeka, NK705→Naveed, NK769/777→Hammad, NK772→Hasnain. Gate passed on all 5. Posted, "Due on Saturday" threaded, flipped. **All five LOKI Blackout, and materially clean on the product's hard rules** — the bottle opener is in the **handle** throughout, brass wherever a bolster is named, no rosewood misattribution. That is the first batch in weeks with no product-accuracy flag, and it is worth saying so rather than reporting silence. Three softer notes, all written up above: **"Batman" as the Blackout's descriptor** in NK769 and NK777 (consistent, so house copy rather than a slip — a trademark and tone call for Mark), and **NK769's unhandled profanity**, with no bleep or mute instruction anywhere in the brief, which leaves Hammad deciding it. **NK772 is worth citing as a model** alongside NK771: it instructs *"Do not imitate any real presenter"* and *"Show the Tiger Cleaver, not the RAGNAR Butcher"* — Andy pre-empting both an impersonation risk and a wrong-product shot. |
 | 2026-11-05 | **5** | — | **0** | — | **Second batch that day, same "Assign task due on saturday" signal.** NK782/783→Hammad, NK785→Hasnain, NK786/787→Onyeka. Gate passed on all 5. Posted, "Due on Saturday" threaded, flipped. **A new placement: AppLovin**, written up above as its own section — strictly under 60 seconds, 9:16 at 1080x1920, and every brief a **re-cut of an already-shipped winner** rather than a new script. The runtime is pass/fail, not guidance: one of these records **NK146 being rejected at 61 seconds**, one second over. **Headline flag, and it is the systemic kind: NK782 (re-cut of NK184, a US+AU winner) and NK787 (re-cut of NK133) both say the Feather's pattern is "etched"** — because both source winners do. NK569 flagged the NK184 line in September, NK653/NK654 inherited it in October, and it is now being carried onto a new platform, so the decision is about the source winners rather than these two briefs. Also: **all five carry a generic MIKE/SARAH/VANCE persona template that contradicts their own `Avatar` property**, which names one persona — an untrimmed template header the editor can see both halves of. |
 | 2026-11-05 | **5** | — | **0** | — | **Third batch that day, caught by the closing re-query**, which is the second time that habit has paid for itself (after NK708 on 2026-10-26). All five Rolling Knife Sharpener, all Andy's: NK762/763/765/766→Hammad, NK764→Umar. Gate passed on all 5. Posted, "Due on Saturday" threaded, flipped; **closing query returned zero rows — queue completely empty, no Callum rows either**, as on the last run. `Content` = **`AI VO Whisper`** on NK765 is a fifth format value, logged above with the other four. **The "Japanese" question moved, without resolving: four of these five carry the same angle beat** (NK762/763/764/766), taking the count to nine instances across eight briefs, while **NK765 uses NK688's neutral "15 or 20 degrees"** — the neutral form keeps turning up in exactly the briefs derived from NK688. That strengthens both readings at once and still needs Mark's ruling, so it was reported as a count rather than as a fresh discovery. All five say *"Over 100,000 customers"*, consistent with the figure already downgraded from a flag. NK764 and NK766 both ban review counts on screen. |
+| 2026-11-09 | **15** | — | **0** | — | **Run on "Assigned task, due on wednesday"** — the largest single batch this play has handled, four days after the last run. NK704/779/793/801/803/804→Hammad, NK789/791/795→Anas, NK800/802/805→Umar, **NK790/794→Waheed** and **NK792→Fahad**, both of them their first briefs ever. Posted, "Due on Wednesday" threaded, flipped; closing query empty, no Callum rows for the third run running. **Mark mentioned mid-run that "we have 2 new editors"**, which closed the 2026-11-04 mapping gap: `#11-waheed-editing` `C0CEJBP4MQC` and `#11-fahad-editing` `C0CENMTDF9C`, both verified by listing (not guessed — see the resolved-channels section, including why `slack_search_channels` is the wrong tool for this). **First real gate failure in ~100 briefs: NK795's H1 file-naming row read `Andy_EDITOR`**, an unreplaced placeholder, against `Andy_Anas` in the Batch name and the other two rows. Held, reported, and on Mark's **"fix and assign"** the one token was corrected, the page re-read to confirm all four strings matched, then posted and flipped — so 15 of 15 landed, one of them on a second pass. Written up above as its own gate section. **Headline finding, and the most actionable thing this play has produced: Andy's in-brief rule block now works, and the only errors left are the two it does not name.** Every rule he writes down held across all 15 — no "etched", no "Japanese" outside the sharpener line, dragon placement correct throughout — while **NK790 said "copper bolster" twice and NK794 said "a rosewood handle" twice**, the two Santoku facts absent from the block. Two added lines would close both systemic errors at source. **Resolved: the customer count is 147,000** — seven briefs say it, five as an explicit on-screen super, so the 100,000 fork is closed. **Progress worth recording:** NK790/NK791 are the first Feather/Santoku sibling pair with no rosewood leak, four briefs carry explicit "do not copy their lines" sibling warnings, and NK793 annotates every deviation from its source winner. **Other flags:** NK779 puts *"a fucking bollocks"* in a **hook** with no bleep instruction (NK769's gap, escalated to the first three seconds of the ad, and Hammad's again); NK779 is the third and fourth real-b-roll-vs-Higgsfield contradiction, all four Hammad's; NK793 turns the ~3-month *restock* into *"three months in the workshop"*; "lifetime warranty" appears in all seven Lucky Day briefs as an on-screen badge and needs one confirmation. **The UGC "Husband Obsession" set (NK800–805) is the weakest work seen here** and all of it is template-level: *"five times sharper than average knives"* in all six (the NK646 invented-multiplier class Mark already ordered fixed once), the Santoku's **dragon bolster and hand-carved handle left on the Feather cuts** NK800/NK804 — the leak running Santoku→Feather for the first time — the identical offer paragraph across four briefs in one batch (a CLAUDE.md ban by name), the offer as the final beat with nothing after it, and the address flipping from wife to husband mid-ad. Six briefs, one script, so one editing pass. Also: NK792 and NK795 send editors to NK779's folder for footage, and NK779 was assigned in this same run — Fahad, on his first brief, is the one least able to know it is empty. |
