@@ -1,4 +1,4 @@
-# Winner iterations: Iteration 1 (Rewrite) and Iteration 2 (Reskin)
+# Winner iterations: Iteration 1 and Iteration 2
 
 Authoritative spec for turning one of our own winning ads into new briefs in the
 Notion **Evergreen Video** database. Read it before running or changing this
@@ -14,7 +14,7 @@ writes **both iteration types for every ID**. Nothing is picked from
 
 ## 0. The two types
 
-| | **Iteration 1: Rewrite** | **Iteration 2: Reskin** |
+| | **Iteration 1** | **Iteration 2** |
 |---|---|---|
 | **Locked** | The footage: every clip, in its slot, in order | The script: every hook and body word, and the VO audio itself |
 | **New** | The script: every hook line and every body line | The visuals: every shot, and none of them similar to the source |
@@ -22,18 +22,24 @@ writes **both iteration types for every ID**. Nothing is picked from
 | **Music** | Reuse the source's track | Reuse the source's track |
 | **What the test isolates** | The words | The look |
 | Naming `iteration` field | `Ite-Script` (new value, see §6) | `Ite-Reskin` |
-| `Concept Name` | `<Short concept> Rewrite (<ID>) - <Product>` | `<Short concept> Reskin (<ID>) - <Product>` |
+| `Concept Name` | `<Short concept> Iteration 1 (<ID>) - <Product>` | `<Short concept> Iteration 2 (<ID>) - <Product>` |
 | Editor | **The source cut's editor** (§5) | **The source cut's editor** (§5) |
 
-**Every winner Mark names gets both types, every time: one Rewrite and one
-Reskin.** The pair is the unit; never write one without the other.
+**Every winner Mark names gets both types, every time: one Iteration 1 and
+one Iteration 2.** The pair is the unit; never write one without the other.
 
 Both types stay on the source's **product** and **persona**. Changing either is a
 different iteration (`Ite-Product`, `Ite-Persona`) and is not this play.
 
-Examples: NK284's Rewrite is `Big Brain Return Rewrite (NK284) - Santoku`; its
-Reskin is `Big Brain Return Reskin (NK284) - Santoku`. This matches the live
+Examples: NK284's pair is `Big Brain Return Iteration 1 (NK284) - Santoku` and
+`Big Brain Return Iteration 2 (NK284) - Santoku`. This matches the live
 convention Andy uses for iterations: `What if 10 Hooks (NK184) - Feather`.
+
+**Names and pages always say `Iteration 1` and `Iteration 2`**, never "Rewrite"
+or "Reskin" (Mark, 2026-11-11). **The strategist on every iteration is `Mark`**,
+in the `Strategist` property and in the name's strategist field (Mark,
+2026-11-11). This overrides the process doc's `Claude` for briefs this play
+writes.
 
 ---
 
@@ -41,9 +47,9 @@ convention Andy uses for iterations: `What if 10 Hooks (NK184) - Feather`.
 
 | Mark says | Run does |
 |---|---|
-| `Iterate NK284` | Rewrite + Reskin for NK284 (2 briefs) |
-| `Iterate NK284, NK222` | Rewrite + Reskin for each (4 briefs) |
-| `Iterate NK184 H3` | Both, and treat hook row 3 as the winning hook: the Reskin gives it the strongest new opening |
+| `Iterate NK284` | Iteration 1 + Iteration 2 for NK284 (2 briefs) |
+| `Iterate NK284, NK222` | Iteration 1 + Iteration 2 for each (4 briefs) |
+| `Iterate NK184 H3` | Both, and treat hook row 3 as the winning hook: Iteration 2 gives it the strongest new opening |
 | `… again` / `round 2` | Allowed to repeat a winner already in the ledger (§7) |
 
 - **No creative ID in the command → stop and ask.** Never choose a winner.
@@ -125,7 +131,7 @@ does:
 - **A partial script check.** Source cuts carry burned-in captions, so the frames
   can be read against the brief line by line, even when audio transcription is
   blocked (on 2026-11-11 the model hosts were).
-- **The source's real look**, which the Reskin gate (§4.2) and the Rewrite's
+- **The source's real look**, which the Iteration 2 gate (§4.2) and Iteration 1's
   "line fits the clip" rule (§3.3) both depend on. NK222's Visual column says
   "Montage clip of loki"; its scrub sheet shows a bearded creator in a kitchen,
   a blue sky and an onion. It also showed the Blackout clip already had the
@@ -133,7 +139,7 @@ does:
 
 ---
 
-## 3. Iteration 1: Rewrite (same footage, new script)
+## 3. Iteration 1 (same footage, new script)
 
 1. **The footage is locked.** Copy every Visual cell from the source, hook rows
    included, verbatim: same rows, same order, same Frame.io links. The editor
@@ -173,7 +179,7 @@ does:
 
 ---
 
-## 4. Iteration 2: Reskin (same script, new visuals)
+## 4. Iteration 2 (same script, new visuals)
 
 ### 4.1 The script is locked
 
@@ -190,9 +196,9 @@ does:
 
 ### 4.2 The visual difference gate
 
-The point of a Reskin is a cut that a viewer, and Meta, sees as a different ad.
+The point of Iteration 2 is a cut that a viewer, and Meta, sees as a different ad.
 Meta groups ads that look alike and lets them compete for the same delivery, so
-a reskin that resembles its source tests nothing. Every row and the whole cut
+an Iteration 2 that resembles its source tests nothing. Every row and the whole cut
 must pass this gate.
 
 **Per row.** Compare the new visual against the source row (its Visual cell, and
@@ -249,7 +255,7 @@ say real b-roll only.
 
 ### 4.3 The fix list: the only edits allowed to a locked line
 
-Winning scripts predate some current rules, and the Reskin must not re-ship a
+Winning scripts predate some current rules, and Iteration 2 must not re-ship a
 known factual error. **Change only these, and only the offending words.** Mark
 each in that row's Note as
 `Changed: "<old>" → "<new>". Re-record this line only, same voice.`
@@ -312,16 +318,17 @@ Every field it lists, in its order, from its vocabulary. For an iteration:
 | Field | Value |
 |---|---|
 | `category` | `Ite` |
+| `strategist` | `Mark`, always |
 | `source` | `Src-None` (iterations never carry the source ID in the name) |
-| `iteration` | `Ite-Script` for a Rewrite, `Ite-Reskin` for a Reskin |
-| `concept` | A short form of the Concept Name, at most 30 characters, **and short enough that every file name plus `.mp4` is at most 255 characters** (Frame.io's cap, which the QA play hit on NK604 and NK580). Andy shortens the same way (`Better Call` for "Better Call Black Friday (NKFD071)"). NK843 is `Lunatic Rewrite`. |
+| `iteration` | `Ite-Script` for Iteration 1, `Ite-Reskin` for Iteration 2. These are vocabulary values and stay as they are; the concept is where `Iteration 1` and `Iteration 2` appear |
+| `concept` | A short form of the Concept Name ending in `Iteration 1` or `Iteration 2`, at most 30 characters, **and short enough that every file name plus `.mp4` is at most 255 characters** (Frame.io's cap, which the QA play hit on NK604 and NK580). Andy shortens the same way (`Better Call` for "Better Call Black Friday (NKFD071)"). NK843 is `Lunatic Iteration 1`. |
 | `type`, `product`, `avatar`, `offer`, `lp` | The source's values, in vocabulary spelling |
 | `market` | The market it won (`US Winner` → `Mkt-US`); more than one, or none → `Mkt-All`. Mark can override |
 | `event` | `Evergreen` unless Mark names one |
 | `hook`, `body` | `H1` to `Hn`, one per hook row; body `A` |
 | `date` | Today, `MM.DD.YY` |
 | `length` | `Len-TBD` |
-| Judgement fields | **Rewrite:** judge them from the new script; they may change. **Reskin:** take them from the source's name (the script has not changed), except `face`, which follows the new visuals. A source older than NK557 has no judgement fields; judge those from its script. |
+| Judgement fields | **Iteration 1:** judge them from the new script; they may change. **Iteration 2:** take them from the source's name (the script has not changed), except `face`, which follows the new visuals. A source older than NK557 has no judgement fields; judge those from its script. |
 
 **`Ite-Script` is a new vocabulary value.** The convention had no value for "same
 footage, new script": `Ite-Hook` keeps the body, `Ite-Body` keeps the hook, and
@@ -358,11 +365,11 @@ Before writing, check both:
 | `Creative ID` | The next free `NK###`. Take the highest numeric `NK` code, ignoring `NKFD`, `NKMD` and `NKEOFY`, and **re-query right before each page**, because others add rows during the day |
 | `Format` | `VID` |
 | `Product`, `Avatar`, `Landing Page`, `Content` | The source's values |
-| `Offer` | The offer the new script states. Usually the source's value; a Rewrite uses `B2G2` |
+| `Offer` | The offer the new script states. Usually the source's value; Iteration 1 uses `B2G2` |
 | `Category` | `Iteration` |
 | `Iteration` | ✔ checked |
 | `Status` | `Ready for visuals` |
-| `Strategist` | `Claude` |
+| `Strategist` | **`Mark`, always** (Mark, 2026-11-11) |
 | `Specialty` | `Generalist` |
 | `Date` | Today |
 | `Editor` | Per §5 |
@@ -379,26 +386,26 @@ order in process doc §D0.
 2. `File naming`, then a one-column table with **one row per hook row**. Not
    fewer: NK702 and NK703 shipped four hooks with three file rows.
 3. **🚨 Red callout**, the iteration banner:
-   - Rewrite: `## ITERATION 1: NEW SCRIPT. THE FOOTAGE IS LOCKED.` Then: the
+   - Iteration 1: `## ITERATION 1: NEW SCRIPT. THE FOOTAGE IS LOCKED.` Then: the
      source is a winner and its cut is reused clip for clip; work from the source
      project, not the export; every line is new, so re-record the full VO with
      the same voice; any swapped clip is marked `Changed:` in its row; deliver H1
      to Hn on body A.
-   - Reskin: `## ITERATION 2: RESKIN. THE SCRIPT IS LOCKED.` Then: reuse the
+   - Iteration 2: `## ITERATION 2: SAME SCRIPT. NEW VISUALS.` Then: reuse the
      source VO track and music, re-recording only the `Changed:` lines; every
      visual is new; no clip from the source cut, flipped, re-graded or cropped
      included; `Source look: … This cut: …`; change the grade too.
 4. `### AD INSPO`, then a **🎬 blue callout**:
    `## REFERENCE AD: <ID> <source concept> (<winner tags, or "named by Mark">)`.
    The Frame.io folder link, one link per hook stack, and a mention of the source
-   Notion page. For a Rewrite: "Original lines are for reference only. Do not
-   reuse them." For a Reskin: "Watch it to know what NOT to repeat."
+   Notion page. For Iteration 1: "Original lines are for reference only. Do not
+   reuse them." For Iteration 2: "Watch it to know what NOT to repeat."
 5. **💡 Gray persona callout**: the one persona in play, 3–4 bullets.
 6. `### GENERAL INSTRUCTION`: the 3–4 second rule and no dead air.
 7. `### GLOSSARY:` TC, Super, Caption, plus the three footage-source labels.
 8. `---`
 9. `## Creative Brief Instruction`: short bullets only, with no reasoning on the
-   page (§D.3.2). Then the 💡 VO callout with the Loom link. A Reskin's VO
+   page (§D.3.2). Then the 💡 VO callout with the Loom link. Iteration 2's VO
    callout says to reuse the source track.
 10. **`HOOK`** table, green header: `Visual` | `Copy/ Text Overlay` | `Note`. The
     hook code (`H1`, `H2`…) goes in `Note`, as on the live pages.
@@ -406,8 +413,8 @@ order in process doc §D0.
     `Note`. **Nothing follows it.** No full-script section.
 
 Note-column markers: the first body row carries
-`Footage LOCKED from <ID>, clip for clip` (Rewrite) or
-`Script LOCKED from <ID>, word for word. Reuse the VO` (Reskin). Every deviation
+`Footage LOCKED from <ID>, clip for clip` (Iteration 1) or
+`Script LOCKED from <ID>, word for word. Reuse the VO` (Iteration 2). Every deviation
 carries `Changed: …`.
 
 ---
@@ -425,20 +432,20 @@ carries `Changed: …`.
 4. **Dedup** (§7).
 5. **Write** both types (§3, §4).
 6. **Gates.** All of them pass before a page is created. The mechanical ones
-   (Rewrite length and originality, Reskin lock) are scripted: put the three
+   (Iteration 1 length and originality, Iteration 2 lock) are scripted: put the three
    scripts in a JSON file and run
    `python3 -I winner-iterations/gate_check.py RUN.json` with the brand pack's
    winning briefs and approved-copy file as extra arguments. Exit 0 = pass. The
    rest are judgement and stay manual:
-   - Rewrite: originality (§3.5), length budget (§3.4), every line fits its clip
+   - Iteration 1: originality (§3.5), length budget (§3.4), every line fits its clip
      (§3.3).
-   - Reskin: no source clip (§4.2.1), the 3-of-4 axes on every row (§4.2.2), a
+   - Iteration 2: no source clip (§4.2.1), the 3-of-4 axes on every row (§4.2.2), a
      changed format device (§4.2.3), new hook first frames (§4.2.4), and no word
      changed outside the fix list (§4.3).
    - Both: product accuracy and the fix list (§4.3), the standing visual rules,
      and the naming self-check from `SKILL.md`.
 7. **Creative IDs and editor** (§8.1, §5). The pair takes two consecutive
-   numbers, Rewrite first.
+   numbers, Iteration 1 first.
 8. **Create the page** with `notion-create-pages`, parent
    `data_source_id: 2cf4ac62-7aac-81a8-86bf-000b96778943`. **Fetch it back** and
    confirm the properties landed and the HOOK and BODY tables have the right row
@@ -456,8 +463,9 @@ carries `Changed: …`.
 - Give either iteration to anyone but the source's editor.
 - Write to the source page.
 - Change the product or the persona.
-- Use a source clip in a Reskin, in any form.
-- Change a locked word in a Reskin outside the fix list.
+- Use a source clip in Iteration 2, in any form.
+- Change a locked word in Iteration 2 outside the fix list.
+- Name a type "Rewrite" or "Reskin", or put any strategist but `Mark` on an iteration.
 - Move `Status` past `Ready for visuals`, or message an editor on Slack.
 - Invent a script, a Frame.io link, or a page link that a tool did not return.
 
@@ -485,4 +493,4 @@ report an empty run as "nothing to do".
 
 | Date | Command | Briefs | Notes |
 |---|---|---|---|
-| 2026-11-11 | `Iterate NK222` | NK843 Rewrite, NK844 Reskin, both Hammad | First run. Cut found in Hammad's `NK 222` folder (158 s, Frame.io-tagged Winner). Script checked against the cut's burned-in captions on the scrub sheet; no audio transcript (speech-model hosts blocked). Rewrite: NK222's story retold by the customer in first person, angle Return → Regret; offer resolves at ~53%, same as NK222. Reskin: after-dark KF look; fix list changed B11 (dragon on the Tiger Cleaver), B12 (opener "in the blade") and cut "Free returns" from B13. Shortened the naming concept to fit Frame.io's 255-character cap. |
+| 2026-11-11 | `Iterate NK222` | NK843 Iteration 1, NK844 Iteration 2, both Hammad | First run. Cut found in Hammad's `NK 222` folder (158 s, Frame.io-tagged Winner). Script checked against the cut's burned-in captions on the scrub sheet; no audio transcript (speech-model hosts blocked). Iteration 1: NK222's story retold by the customer in first person, angle Return → Regret; offer resolves at ~53%, same as NK222. Iteration 2: after-dark KF look; fix list changed B11 (dragon on the Tiger Cleaver), B12 (opener "in the blade") and cut "Free returns" from B13. Shortened the naming concept to fit Frame.io's 255-character cap. Same day, on Mark's instruction: both pages renamed from Rewrite/Reskin to Iteration 1/2 and the strategist changed from Claude to Mark, in the properties and all names. |

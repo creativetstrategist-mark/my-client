@@ -4,22 +4,22 @@ Usage:
     python3 -I winner-iterations/gate_check.py RUN.json [REFERENCE_FILE ...]
 
 RUN.json holds the three scripts as lists of [row, copy] pairs, rows named
-H1..Hn and B1..Bn, plus the Reskin's fix list:
+H1..Hn and B1..Bn, plus Iteration 2's fix list:
 
     {"source":  [["H1", "..."], ["B1", "..."]],
-     "rewrite": [["H1", "..."], ["B1", "..."]],
-     "reskin":  [["H1", "..."], ["B1", "..."]],
+     "iteration1": [["H1", "..."], ["B1", "..."]],
+     "iteration2": [["H1", "..."], ["B1", "..."]],
      "fixes":   {"B12": ["notched into the blade", "built into the handle"]}}
 
-REFERENCE_FILE: anything else the Rewrite must not copy from, for example the
+REFERENCE_FILE: anything else Iteration 1 must not copy from, for example the
 winning briefs and approved-copy files in the brand pack.
 
 Checks:
-  - Rewrite length: each row within ±20% of the source row's word count, and
+  - Iteration 1 length: each row within ±20% of the source row's word count, and
     the whole script within ±10% of the source.
-  - Rewrite originality: no run of 6+ consecutive words shared with the source
+  - Iteration 1 originality: no run of 6+ consecutive words shared with the source
     or a reference file. House language is exempt.
-  - Reskin lock: after numerals and capitals are normalised, the only word
+  - Iteration 2 lock: after numerals and capitals are normalised, the only word
     differences from the source are in rows on the fix list.
 
 Exit code 0 means every check passed.
@@ -58,11 +58,11 @@ def main():
     if len(sys.argv) < 2:
         sys.exit(__doc__)
     run = json.loads(Path(sys.argv[1]).read_text())
-    src, rew, res = (dict(run[k]) for k in ("source", "rewrite", "reskin"))
+    src, rew, res = (dict(run[k]) for k in ("source", "iteration1", "iteration2"))
     fixes = run.get("fixes", {})
     bad = 0
 
-    print("== Rewrite: length (±20% per row, ±10% total) ==")
+    print("== Iteration 1: length (±20% per row, ±10% total) ==")
     for k, s in run["source"]:
         a, b = words(s), words(rew.get(k, ""))
         lo, hi = round(a * 0.8), round(a * 1.2)
@@ -78,16 +78,16 @@ def main():
         bad += not ok
         print(f"total with {h}: source {st}  new {nt}  ({pct:+.1f}%)  {'OK' if ok else 'FAIL'}")
 
-    print("\n== Rewrite: originality (6+ shared words) ==")
+    print("\n== Iteration 1: originality (6+ shared words) ==")
     refs = {"source": " ".join(s for _, s in run["source"])}
     refs.update({Path(p).name: Path(p).read_text() for p in sys.argv[2:]})
-    for k, line in run["rewrite"]:
+    for k, line in run["iteration1"]:
         for name, ref in refs.items():
             for r in shared_runs(line, ref):
                 bad += 1
                 print(f"FAIL {k} vs {name}: '{r}'")
 
-    print("\n== Reskin: lock (only fix-list rows may differ) ==")
+    print("\n== Iteration 2: lock (only fix-list rows may differ) ==")
     for k, s in run["source"]:
         a, b = toks(s), toks(res.get(k, ""))
         for op, i1, i2, j1, j2 in difflib.SequenceMatcher(a=a, b=b).get_opcodes():

@@ -94,14 +94,15 @@ NK222`). The play never picks a winner itself. If a command arrives with no ID,
 ask for one.
 
 **Every winner always gets both types**, and **both go to the editor who cut the
-source.**
+source.** **The strategist on every iteration is Mark**, and names say
+**Iteration 1 / Iteration 2**, never "Rewrite" or "Reskin".
 
 Full spec: `winner-iterations/iteration-process.md`. Read it before running or
 changing this play. A paste-in version for sessions not on this branch is
 `winner-iterations/run-instruction.md`, and the dedup ledger is
 `winner-iterations/iteration-log.md`.
 
-| | Iteration 1: Rewrite (`Ite-Script`) | Iteration 2: Reskin (`Ite-Reskin`) |
+| | Iteration 1 (`Ite-Script`) | Iteration 2 (`Ite-Reskin`) |
 |---|---|---|
 | Locked | The footage, clip for clip | The script, word for word, and its VO track |
 | New | Every hook and body line | Every visual, none similar to the source |
@@ -115,10 +116,10 @@ Five things that are easy to get wrong:
   (`NK485_VID_Why NK184…` is not NK184). No brief or no cut means stop that ID
   and ask.
 - **The source page is read-only.** Never write to it.
-- **"Not similar" is a gate, not a vibe.** A Reskin uses no source clip in any
+- **"Not similar" is a gate, not a vibe.** Iteration 2 uses no source clip in any
   form, differs on 3 of 4 axes (setting, subject, framing, action) in every row,
   and changes the whole cut's format device and grade.
-- **The locked Reskin script changes only through the fix list** in spec §4.3:
+- **The locked Iteration 2 script changes only through the fix list** in spec §4.3:
   product-fact errors, "Japanese", prices, "Free returns", and the 147,000
   customer count. Each change is marked `Changed:` so only that line is
   re-recorded.
