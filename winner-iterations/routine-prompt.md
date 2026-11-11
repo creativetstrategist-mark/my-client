@@ -1,10 +1,18 @@
 # Winner iterations: the run instruction
 
 This is the instruction the winner-iteration Routine runs on, kept here so it
-can be read, reviewed and diffed. The Routine has **no schedule**: it fires only
-when Mark cues it with creative IDs. **If you change the Routine's prompt, change
-this file too.** The Routine is what actually fires; this file is the readable
-copy.
+can be read, reviewed and diffed. It is stored in the poke-only Routine
+`trig_017GKJPzM7VMNwxMQJiesxUB` ("NorthernKnife winner iterations (Rewrite /
+Reskin, on command)"). The Routine has **no schedule**: it fires only when Mark
+cues it with creative IDs. **If you change the Routine's prompt, change this file
+too.** The Routine is what actually fires; this file is the readable copy.
+
+> ⚠️ **The Routine was created with no connectors attached** (2026-11-11). This
+> organization does not allow connector grants on Routines created from a
+> session, so a session the Routine fires has no Notion and no Frame.io, and per
+> the instruction it reports that and stops. To fix it, attach **Notion** and
+> **Frame.io** to the Routine in the claude.ai Routines UI. Until then, run the
+> command in a normal session, which has both connectors.
 
 You can also run it without the Routine: in any session on this repo, say
 `Iterate NK284` (or `Iteration 1 NK184`, `Iteration 2 NK222 H3`). The root
