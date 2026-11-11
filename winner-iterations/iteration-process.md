@@ -4,10 +4,11 @@ Authoritative spec for turning one of our own winning ads into new briefs in the
 Notion **Evergreen Video** database. Read it before running or changing this
 play.
 
-**This runs on Mark's command only. There is no schedule and no automatic winner
-selection.** Mark names the creative IDs; the run pulls each one's brief from
-Notion and its delivered cut from Frame.io, then writes the iterations he asked
-for. Nothing is picked from `Test Results`, Triple Whale or anywhere else.
+**This is on demand, not an automation.** There is no Routine, no schedule and
+no automatic winner selection. Mark names the creative IDs in a session; the run
+pulls each one's brief from Notion and its delivered cut from Frame.io, then
+writes **both iteration types for every ID**. Nothing is picked from
+`Test Results`, Triple Whale or anywhere else.
 
 ---
 
@@ -22,7 +23,10 @@ for. Nothing is picked from `Test Results`, Triple Whale or anywhere else.
 | **What the test isolates** | The words | The look |
 | Naming `iteration` field | `Ite-Script` (new value, see §6) | `Ite-Reskin` |
 | `Concept Name` | `<Short concept> Rewrite (<ID>) - <Product>` | `<Short concept> Reskin (<ID>) - <Product>` |
-| Editor | The source cut's editor, by default | Anyone **except** the source cut's editor |
+| Editor | **The source cut's editor** (§5) | **The source cut's editor** (§5) |
+
+**Every winner Mark names gets both types, every time: one Rewrite and one
+Reskin.** The pair is the unit; never write one without the other.
 
 Both types stay on the source's **product** and **persona**. Changing either is a
 different iteration (`Ite-Product`, `Ite-Persona`) and is not this play.
@@ -37,13 +41,10 @@ convention Andy uses for iterations: `What if 10 Hooks (NK184) - Feather`.
 
 | Mark says | Run does |
 |---|---|
-| `Iterate NK284` | Both types for NK284 (2 briefs) |
-| `Iterate NK284, NK222` | Both types for each (4 briefs) |
-| `Iteration 1 NK184` | Rewrite only |
-| `Iteration 2 NK184` | Reskin only |
-| `Iteration 2 NK184 H3` | Reskin, and treat hook row 3 as the winning hook (it gets the strongest new hook visual) |
-| `… editor Umar` | That editor, overriding §5 (never Huzaifa) |
-| `… again` / `round 2` | Allowed to repeat a type already in the ledger (§7) |
+| `Iterate NK284` | Rewrite + Reskin for NK284 (2 briefs) |
+| `Iterate NK284, NK222` | Rewrite + Reskin for each (4 briefs) |
+| `Iterate NK184 H3` | Both, and treat hook row 3 as the winning hook: the Reskin gives it the strongest new opening |
+| `… again` / `round 2` | Allowed to repeat a winner already in the ledger (§7) |
 
 - **No creative ID in the command → stop and ask.** Never choose a winner.
 - **A winner tag is not required.** Mark's command is the authority. A creative
@@ -249,26 +250,26 @@ copy.
 
 ---
 
-## 5. Editor
+## 5. Editor: the source's editor, for both
 
-Active roster as of 2026-11-11: **Umar, Hammad, Onyeka, Hasnain, Anas, Naveed,
-Renniel, Waheed, Fahad.** Renniel is taking work again (Mark, 2026-10-26 and
-2026-11-04); Waheed and Fahad joined 2026-11-09. **Never Huzaifa.** If Mark has
-paused someone since, his word wins.
+**Both iterations go to the editor who cut the source** (Mark, 2026-11-11). They
+hold the project, the raw clips and the VO stems, and they know the cut. This
+deliberately overrides the "one concept, one editor" spread in process doc
+§D.1.1, which is for net-new trios, not iterations.
 
-Runtime caps: **Hammad 90 seconds, Onyeka 72 seconds**, everyone else
-unrestricted. Estimate at about 175 words a minute (longest hook plus the whole
-body). Anything within a few seconds of a cap goes to an unrestricted editor.
+Where the editor comes from, in order:
 
-1. **Mark names one** → that editor.
-2. **Iteration 1 → the source cut's editor.** They hold the project and the raw
-   clips, and they know which clip sits in which slot. If that editor is blank,
-   Huzaifa, paused, or over their cap, pick from the roster.
-3. **Iteration 2 → never the source cut's editor.** A fresh eye is half of "not
-   similar". Also never the editor who has this run's Iteration 1 of the same
-   source.
-4. Otherwise pick from the eligible names, and read the last few ledger rows so
-   the same name does not land every time.
+1. The source page's `Editor` property (NK184 → Hammad, NK284 → Hasnain).
+2. If that is blank, the editor segment of the delivered file names on Frame.io:
+   the field right after the strategist
+   (`…_B2G2_Iteration_Andy_Hammad_PDP_072026` → Hammad).
+3. **No clear single name, the name is `Huzaifa`, or the editor is not on the
+   active roster → stop for that ID and ask Mark.** Never substitute someone.
+
+Active roster as of 2026-11-11: Umar, Hammad, Onyeka, Hasnain, Anas, Naveed,
+Renniel, Waheed, Fahad. Never Huzaifa. Runtime caps (Hammad 90 seconds, Onyeka
+72 seconds) do not come into it: both cuts track the source's length, which that
+editor already cut.
 
 Then `Status` = `Ready for visuals`. That status is the human gate: nothing
 reaches an editor until Mark or Andy moves the page to `Ready to edit` and the
@@ -309,17 +310,15 @@ file reports `Ite-Script` as unknown. That report is expected.
 
 `winner-iterations/iteration-log.md` holds one row per brief this play creates.
 
-Before writing a brief, check both:
+Before writing, check both:
 
-1. **The ledger.** Is there already a row for this source ID with this type?
-2. **Notion.** Query Concept Names containing `(<ID>)`, fetch each match, and
-   read the `iteration` field from its Batch name. Is there already an
-   `Ite-Script` or `Ite-Reskin` of this source, whoever made it?
-
-If either answers yes and the command did not say `again` or `round 2`, **skip
-that type for that ID and tell Mark what already exists**, with the link. Other
-strategists' iterations of other types (`Ite-Hook`, `Ite-Voice`, `Ite-Editor`)
-do not block anything.
+1. **The ledger.** Has this play already iterated this source ID? If so, and the
+   command did not say `again` or `round 2`, **skip the ID and tell Mark**, with
+   links to the existing pair.
+2. **Notion.** Query Concept Names containing `(<ID>)` and note any iterations
+   other people have made of it. These **do not block** the run, because Mark
+   chose the winner knowing his pipeline. List them in the report so he sees
+   them.
 
 ---
 
@@ -389,7 +388,8 @@ carries `Changed: …`.
 
 ## 9. The run
 
-1. **Parse the command** into (ID, types, overrides). No ID → ask.
+1. **Parse the command** into IDs, plus an optional winning hook and `again`. No
+   ID → ask.
 2. **Read:** this file; on `claude/vibrant-hopper-xg9l5l`,
    `brand-pack/05-process/creative-brief-process.md` (§C, §D, §E, §F),
    `brand-pack/01-brand/product-catalog.md`, the persona file for the source's
@@ -397,7 +397,7 @@ carries `Changed: …`.
 3. **Per ID:** pull the brief (§2.1) and the cut (§2.2). A failure stops that ID
    only. Report it and go to the next.
 4. **Dedup** (§7).
-5. **Write** each requested type (§3, §4).
+5. **Write** both types (§3, §4).
 6. **Gates.** All of them pass before a page is created:
    - Rewrite: originality (§3.5), length budget (§3.4), every line fits its clip
      (§3.3).
@@ -406,7 +406,8 @@ carries `Changed: …`.
      changed outside the fix list (§4.3).
    - Both: product accuracy and the fix list (§4.3), the standing visual rules,
      and the naming self-check from `SKILL.md`.
-7. **Creative ID and editor** (§8.1, §5).
+7. **Creative IDs and editor** (§8.1, §5). The pair takes two consecutive
+   numbers, Rewrite first.
 8. **Create the page** with `notion-create-pages`, parent
    `data_source_id: 2cf4ac62-7aac-81a8-86bf-000b96778943`. **Fetch it back** and
    confirm the properties landed and the HOOK and BODY tables have the right row
@@ -420,6 +421,8 @@ carries `Changed: …`.
 ### Never
 
 - Pick a winner yourself, or run without an ID from Mark.
+- Write only one of the two types for a winner.
+- Give either iteration to anyone but the source's editor.
 - Write to the source page.
 - Change the product or the persona.
 - Use a source clip in a Reskin, in any form.
@@ -438,7 +441,9 @@ Per ID:
 - **Briefs created:** Creative ID, Concept Name, type, editor, Notion link.
 - **Fix-list changes**, quoted old → new, and every **flag** for Mark (an offer
   other than B2G2, an unverifiable claim, a VO track that could not be found).
-- **Skipped**, and why: already iterated (with a link), no page, no cut.
+- **Skipped**, and why: already iterated (with a link), no page, no cut, no
+  usable editor.
+- **Other people's iterations** of the same source found in Notion (§7.2).
 
 If the Notion or Frame.io connector is unavailable, **say so explicitly**. Never
 report an empty run as "nothing to do".

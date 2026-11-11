@@ -85,22 +85,27 @@ A scheduled Routine fires daily (see the trigger created for this repo) and:
 If the Notion connector isn't available in a given run, the routine should
 say so explicitly rather than silently skipping delivery.
 
-## Winner iterations (on Mark's command)
+## Winner iterations (on demand, on Mark's command)
 
-A separate play turns one of **our own** winning ads into new briefs. It runs
-only when Mark names creative IDs: `Iterate NK284`, `Iteration 1 NK184`,
-`Iteration 2 NK222 H3`. There is no schedule, and the play never picks a winner
-itself. If a command arrives with no ID, ask for one.
+A separate play turns one of **our own** winning ads into new briefs. **It is on
+demand, not an automation**: no Routine, no schedule. Mark decides which winners
+get iterated and names the creative IDs (`Iterate NK284`, `Iterate NK284,
+NK222`). The play never picks a winner itself. If a command arrives with no ID,
+ask for one.
+
+**Every winner always gets both types**, and **both go to the editor who cut the
+source.**
 
 Full spec: `winner-iterations/iteration-process.md`. Read it before running or
-changing this play. The run instruction (also stored in the poke-only Routine)
-is `winner-iterations/routine-prompt.md`, and the dedup ledger is
+changing this play. A paste-in version for sessions not on this branch is
+`winner-iterations/run-instruction.md`, and the dedup ledger is
 `winner-iterations/iteration-log.md`.
 
 | | Iteration 1: Rewrite (`Ite-Script`) | Iteration 2: Reskin (`Ite-Reskin`) |
 |---|---|---|
 | Locked | The footage, clip for clip | The script, word for word, and its VO track |
 | New | Every hook and body line | Every visual, none similar to the source |
+| Editor | The source's editor | The source's editor |
 
 Five things that are easy to get wrong:
 
