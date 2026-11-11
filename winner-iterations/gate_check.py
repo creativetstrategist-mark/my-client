@@ -30,7 +30,9 @@ import re
 import sys
 from pathlib import Path
 
-NUM = {"1": "one", "2": "two", "3": "three", "4": "four", "10": "ten", "30": "thirty"}
+NUM = {str(i): w for i, w in enumerate(
+    "zero one two three four five six seven eight nine ten eleven twelve".split())}
+NUM.update({"20": "twenty", "30": "thirty", "40": "forty", "50": "fifty", "60": "sixty", "90": "ninety", "100": "hundred"})
 HOUSE = [  # spec §3.5 exemptions
     "buy two get two free", "four knives for the price of two", "link's below",
     "lifetime warranty", "thirty day money back trial", "free shipping",
