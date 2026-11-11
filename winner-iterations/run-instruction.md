@@ -13,7 +13,7 @@ The session needs the Notion and Frame.io connectors.
 
 ---
 
-Run the NorthernKnife winner-iteration play, on demand. The IDs after this instruction are the winners Mark chose; they are the whole scope. **Every ID gets both iteration types: one Iteration 1 and one Iteration 2.** Name them that way, never "Rewrite" or "Reskin". **The strategist is always Mark.** Optional: a winning hook (`H3`), and `again` or `round 2` to repeat a winner already in the ledger. **If no creative ID is given, stop and ask Mark. Never choose a winner yourself.**
+Run the NorthernKnife winner-iteration play, on demand. The IDs after this instruction are the winners Mark chose; they are the whole scope. **Every ID gets both iteration types: one Iteration 1 and one Iteration 2.** Name them that way, never "Rewrite" or "Reskin". **The strategist is always Mark.** Optional: an event (`Black Friday`, spec §8.3), a winning hook (`H3`), and `again` or `round 2` to repeat a winner already in the ledger. **If no creative ID is given, stop and ask Mark. Never choose a winner yourself.**
 
 ## Read first
 
@@ -36,7 +36,7 @@ Both stay on the source's product and persona.
 2. **Source cut:** the page's `Delivery Link`, else Frame.io `search_assets` (account `b0bc19f9-4a80-4ae4-9768-4b151edb5a40`, project `b37ff928-5b11-4860-8204-f102af43f3ec`). Keep only names whose FIRST `_` segment equals the ID as a whole segment: `NK485_VID_Why NK184_…` is NK485, not NK184. Prefer the folder named exactly the ID, and take the newest version in each hook stack. No cut → stop that ID and report it.
 3. **Dedup:** an ID already in the ledger is skipped unless the command says `again` or `round 2`; tell Mark, with links. Other people's iterations of the source in Notion do not block; list them in the report.
 4. **Look, write, gate, name:** view the source cut's Frame.io scrub sheet first (spec §2.3). Write per spec §3 and §4, name per §6. Run the mechanical gates with `winner-iterations/gate_check.py` (spec §9.6). Every gate passes before a page is created.
-5. **Create:** two consecutive `NK###` numbers, Iteration 1 first (re-query right before each page). Properties per spec §8.1 (`Category` `Iteration`, `Iteration` checked, `Status` `Ready for visuals`, `Strategist` `Mark`, always; Concept Name `<Short concept> Iteration 1 (<ID>) - <Product>` and `… Iteration 2 …`), body in the spec §8.2 block order, icon 📽️. Fetch each page back and confirm it landed.
+5. **Create:** two consecutive `NK###` numbers, Iteration 1 first (re-query right before each page). Properties per spec §8.1 (`Category` `Iteration`, `Iteration` checked, `Status` `Ready for visuals`, `Strategist` `Mark`, always; Concept Name `<Short concept> Iteration 1 (<ID>) - <Product>` and `… Iteration 2 …`), body **in the live brief template's structure** (spec §8.2: fetch template `2d64ac62-7aac-808e-8149-d1026291f47c` first; video block under AD INSPO, template persona and glossary, 3-column HOOK, BODY and CTA tables, no banner callouts), icon 📽️. Fetch each page back and confirm it landed.
 6. **Ledger:** one row per brief in `winner-iterations/iteration-log.md`, plus a Run history line in the spec. Commit and push to branch `claude/epic-knuth-yzvigf`. If local `git commit` is blocked, use `mcp__github__get_file_contents` for the sha and then `mcp__github__create_or_update_file`.
 
 ## Never

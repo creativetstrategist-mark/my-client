@@ -50,6 +50,7 @@ writes.
 | `Iterate NK284` | Iteration 1 + Iteration 2 for NK284 (2 briefs) |
 | `Iterate NK284, NK222` | Iteration 1 + Iteration 2 for each (4 briefs) |
 | `Iterate NK184 H3` | Both, and treat hook row 3 as the winning hook: Iteration 2 gives it the strongest new opening |
+| `Iterate NK222 Black Friday` | Both, written for that event (§8.3) |
 | `… again` / `round 2` | Allowed to repeat a winner already in the ledger (§7) |
 
 - **No creative ID in the command → stop and ask.** Never choose a winner.
@@ -268,6 +269,7 @@ each in that row's Note as
 | Santoku handle named as a wood species ("rosewood", "ebony") | "hand-carved wooden handle", no species | Catalog; editor-assignment log 2026-11-10 |
 | Blackout bottle opener "in the blade" or "spine" | "in the handle" | Product catalog §E. **NK284's lineup has this error.** |
 | Tiger Cleaver called full tang, or given a dragon | Cut the claim | Product catalog; Andy's rule block |
+| Tiger Cleaver described as "tiger-striped" or "stripes" | The blade carries a tiger image: "a tiger across the face" | NK827 accuracy guard ("No dragon, no stripes") |
 | A price figure in any currency | "for what it costs" form | Process doc §C.3.2 |
 | "Free returns" | Cut it from the proof stack | Andy's rule block, 2026-11-09 |
 | "100,000 customers" | "147,000 customers" | Settled 2026-11-09 (editor-assignment log) |
@@ -324,7 +326,7 @@ Every field it lists, in its order, from its vocabulary. For an iteration:
 | `concept` | A short form of the Concept Name ending in `Iteration 1` or `Iteration 2`, at most 30 characters, **and short enough that every file name plus `.mp4` is at most 255 characters** (Frame.io's cap, which the QA play hit on NK604 and NK580). Andy shortens the same way (`Better Call` for "Better Call Black Friday (NKFD071)"). NK843 is `Lunatic Iteration 1`. |
 | `type`, `product`, `avatar`, `offer`, `lp` | The source's values, in vocabulary spelling |
 | `market` | The market it won (`US Winner` → `Mkt-US`); more than one, or none → `Mkt-All`. Mark can override |
-| `event` | `Evergreen` unless Mark names one |
+| `event` | `Evergreen` unless Mark names one; then its vocabulary value (`Black Friday`) and §8.3 |
 | `hook`, `body` | `H1` to `Hn`, one per hook row; body `A` |
 | `date` | Today, `MM.DD.YY` |
 | `length` | `Len-TBD` |
@@ -377,45 +379,78 @@ Before writing, check both:
 
 Icon 📽️.
 
-### 8.2 Body, in this order
+### 8.2 Body: follow the live brief template
 
-This matches the live iteration pages Andy builds (NK808, NK840) and the block
-order in process doc §D0.
+**Mark, 2026-11-11: every iteration follows the database's default page template**
+(`2d64ac62-7aac-808e-8149-d1026291f47c`) block for block. Fetch it before each run,
+because it is edited in place. As of 2026-11-11 the order is:
 
-1. **Batch name / Folder name** table.
-2. `File naming`, then a one-column table with **one row per hook row**. Not
-   fewer: NK702 and NK703 shipped four hooks with three file rows.
-3. **🚨 Red callout**, the iteration banner:
-   - Iteration 1: `## ITERATION 1: NEW SCRIPT. THE FOOTAGE IS LOCKED.` Then: the
-     source is a winner and its cut is reused clip for clip; work from the source
-     project, not the export; every line is new, so re-record the full VO with
-     the same voice; any swapped clip is marked `Changed:` in its row; deliver H1
-     to Hn on body A.
-   - Iteration 2: `## ITERATION 2: SAME SCRIPT. NEW VISUALS.` Then: reuse the
-     source VO track and music, re-recording only the `Changed:` lines; every
-     visual is new; no clip from the source cut, flipped, re-graded or cropped
-     included; `Source look: … This cut: …`; change the grade too.
-4. `### AD INSPO`, then a **🎬 blue callout**:
-   `## REFERENCE AD: <ID> <source concept> (<winner tags, or "named by Mark">)`.
-   The Frame.io folder link, one link per hook stack, and a mention of the source
-   Notion page. For Iteration 1: "Original lines are for reference only. Do not
-   reuse them." For Iteration 2: "Watch it to know what NOT to repeat."
-5. **💡 Gray persona callout**: the one persona in play, 3–4 bullets.
-6. `### GENERAL INSTRUCTION`: the 3–4 second rule and no dead air.
-7. `### GLOSSARY:` TC, Super, Caption, plus the three footage-source labels.
-8. `---`
-9. `## Creative Brief Instruction`: short bullets only, with no reasoning on the
-   page (§D.3.2). Then the 💡 VO callout with the Loom link. Iteration 2's VO
-   callout says to reuse the source track.
-10. **`HOOK`** table, green header: `Visual` | `Copy/ Text Overlay` | `Note`. The
-    hook code (`H1`, `H2`…) goes in `Note`, as on the live pages.
-11. **`BODY`** table, orange header: `Block` | `Visual` | `Copy/ Text Overlay` |
-    `Note`. **Nothing follows it.** No full-script section.
+1. **Batch name / Folder name**: a plain two-column table (no header row, column
+   widths 121 and 588), then an empty line.
+2. `File naming`, then a plain one-column table (width 708) with **one row per
+   hook row**, then an empty line. Not fewer rows than hooks: NK702 and NK703
+   shipped four hooks with three file rows.
+3. `### AD INSPO`, then a **video block** whose source is the winning cut's H1
+   view URL on Frame.io, captioned `<ID> <source concept> (<winner tags>), H1 cut`.
+   No callout here.
+4. **💡 Gray persona callout**: `## IMPORTANT NOTICE ON PERSONA/AVATAR:`, then the
+   template's own block for the persona in play, word for word (for MIKE:
+   `### MIKE - GRILL MASTER` in blue and its bullet). Drop the template's other
+   personas.
+5. `### GENERAL INSTRUCTION`: the template's two bullets.
+6. `### GLOSSARY:` exactly as the template words it, including the "Code of
+   visual" lines and the Higgsfield folder link.
+7. `---`, then `## Creative Brief Instruction`: plain bullets, no callouts. The
+   first bullet is the iteration line in bold
+   (`ITERATION 1: NEW SCRIPT. THE FOOTAGE IS LOCKED.` or
+   `ITERATION 2: SAME SCRIPT. NEW VISUALS.`). Then the winning-cut links (one per
+   hook, the folder, a mention of the source page), what is locked and what is
+   new, the voice and music, the on-screen text rules, the event rules (§8.3),
+   the "Do not" list and the deliverables. Bans as flat lines, no reasoning
+   (process doc §D.3.2).
+8. The template's 💡 VO callout with the Loom link.
+9. **`HOOK`**: three columns, `Visual` | `Copy/ Text Overlay` | `Note`, green
+   header. The hook code (`H1`, `H2`…) goes in `Note`.
+10. **`BODY`**: **three columns**, `Visual` | `Copy/ Text Overlay` | `Note`, orange
+    header. **No `Block` column.** Every beat except the close.
+11. **`CTA`**: the same three columns, holding the closing row (CTA → proof stack
+    → jab → `Link's below`). Then an empty line. Nothing else follows.
+
+The red 🚨 banner and the 🎬 reference callout that Andy's own iteration pages
+use are **not** in the template, so this play does not add them. Their content
+lives in the Creative Brief Instruction bullets.
+
+**Supers** go in the `Copy/ Text Overlay` cell, written
+`SUPER: <text><br /><br />VO: <line>`, as Andy does on NK840. The gate checks the
+VO part only.
 
 Note-column markers: the first body row carries
 `Footage LOCKED from <ID>, clip for clip` (Iteration 1) or
-`Script LOCKED from <ID>, word for word. Reuse the VO` (Iteration 2). Every deviation
-carries `Changed: …`.
+`Script LOCKED from <ID>, word for word. Reuse the VO` (Iteration 2). Every
+deviation carries `Changed: …` with the reason in brackets.
+
+### 8.3 Event versions (Black Friday and the rest)
+
+When Mark's command names an event (`Iterate NK222 Black Friday`), both briefs
+are written for it:
+
+- **Naming:** the `event` field takes the vocabulary value (`Black Friday`), and
+  the Concept Name carries the event:
+  `<Short concept> Iteration 1 Black Friday (<ID>) - <Product>`. Andy and Callum
+  name theirs the same way (`Better Call Black Friday (NKFD071) - Feather`).
+- **Iteration 1** writes the event into the new script: the hooks, the beat
+  where the deal lands, and the close. It is new copy, so every gate applies.
+- **Iteration 2** keeps the script locked and adds the event **only where the
+  script names the deal**: the deal-launch line and the close. Each of those is
+  marked `Changed:` and re-recorded. The hooks keep their VO and get an event
+  Super (`SUPER: BLACK FRIDAY`) instead.
+- **The offer stays B2G2.** Black Friday Super on every offer line:
+  `BLACK FRIDAY · BUY 2 GET 2 FREE` (the house form on NK827). No end date, no
+  countdown, no extra % off and no "up to 67%" (the figure Andy's batch took from
+  a meme; see the editor-assignment log). Real scarcity, such as a few hundred
+  per run on the Feather, is fine.
+- **Originality:** also run Iteration 1 against any existing event version of
+  the same winner (NK827 is Callum's Black Friday NK222).
 
 ---
 
@@ -493,4 +528,4 @@ report an empty run as "nothing to do".
 
 | Date | Command | Briefs | Notes |
 |---|---|---|---|
-| 2026-11-11 | `Iterate NK222` | NK843 Iteration 1, NK844 Iteration 2, both Hammad | First run. Cut found in Hammad's `NK 222` folder (158 s, Frame.io-tagged Winner). Script checked against the cut's burned-in captions on the scrub sheet; no audio transcript (speech-model hosts blocked). Iteration 1: NK222's story retold by the customer in first person, angle Return → Regret; offer resolves at ~53%, same as NK222. Iteration 2: after-dark KF look; fix list changed B11 (dragon on the Tiger Cleaver), B12 (opener "in the blade") and cut "Free returns" from B13. Shortened the naming concept to fit Frame.io's 255-character cap. Same day, on Mark's instruction: both pages renamed from Rewrite/Reskin to Iteration 1/2 and the strategist changed from Claude to Mark, in the properties and all names. |
+| 2026-11-11 | `Iterate NK222` | NK843 Iteration 1, NK844 Iteration 2, both Hammad | First run. Cut found in Hammad's `NK 222` folder (158 s, Frame.io-tagged Winner). Script checked against the cut's burned-in captions on the scrub sheet; no audio transcript (speech-model hosts blocked). Iteration 1: NK222's story retold by the customer in first person, angle Return → Regret; offer resolves at ~53%, same as NK222. Iteration 2: after-dark KF look; fix list changed B11 (dragon on the Tiger Cleaver), B12 (opener "in the blade") and cut "Free returns" from B13. Shortened the naming concept to fit Frame.io's 255-character cap. Same day, on Mark's instruction: both pages renamed from Rewrite/Reskin to Iteration 1/2 and the strategist changed from Claude to Mark, in the properties and all names. Then, also on Mark's instruction: both rewritten as **Black Friday** versions (§8.3; Iteration 2 re-records B2, B11, B12 and the CTA) and rebuilt on the live brief template's structure (§8.2: video block, 3-column tables, CTA section, template persona and glossary). Callum's NK827 surfaced a second Tiger Cleaver error, "tiger-striped", now on the fix list. |

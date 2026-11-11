@@ -95,7 +95,10 @@ ask for one.
 
 **Every winner always gets both types**, and **both go to the editor who cut the
 source.** **The strategist on every iteration is Mark**, and names say
-**Iteration 1 / Iteration 2**, never "Rewrite" or "Reskin".
+**Iteration 1 / Iteration 2**, never "Rewrite" or "Reskin". Pages follow the **live brief template's
+structure** (video block, 3-column HOOK / BODY / CTA tables, no extra
+callouts). An event in the command (`Iterate NK222 Black Friday`) makes both
+briefs event versions: spec §8.3.
 
 Full spec: `winner-iterations/iteration-process.md`. Read it before running or
 changing this play. A paste-in version for sessions not on this branch is
