@@ -84,3 +84,38 @@ A scheduled Routine fires daily (see the trigger created for this repo) and:
 
 If the Notion connector isn't available in a given run, the routine should
 say so explicitly rather than silently skipping delivery.
+
+## Winner iterations (on Mark's command)
+
+A separate play turns one of **our own** winning ads into new briefs. It runs
+only when Mark names creative IDs: `Iterate NK284`, `Iteration 1 NK184`,
+`Iteration 2 NK222 H3`. There is no schedule, and the play never picks a winner
+itself. If a command arrives with no ID, ask for one.
+
+Full spec: `winner-iterations/iteration-process.md`. Read it before running or
+changing this play. The run instruction (also stored in the poke-only Routine)
+is `winner-iterations/routine-prompt.md`, and the dedup ledger is
+`winner-iterations/iteration-log.md`.
+
+| | Iteration 1: Rewrite (`Ite-Script`) | Iteration 2: Reskin (`Ite-Reskin`) |
+|---|---|---|
+| Locked | The footage, clip for clip | The script, word for word, and its VO track |
+| New | Every hook and body line | Every visual, none similar to the source |
+
+Five things that are easy to get wrong:
+
+- **Pull, don't guess.** The brief comes from Notion (`Creative ID` match, else
+  workspace search). The cut comes from the page's `Delivery Link`, else a
+  Frame.io search where the name's **first `_` segment equals the ID**
+  (`NK485_VID_Why NK184…` is not NK184). No brief or no cut means stop that ID
+  and ask.
+- **The source page is read-only.** Never write to it.
+- **"Not similar" is a gate, not a vibe.** A Reskin uses no source clip in any
+  form, differs on 3 of 4 axes (setting, subject, framing, action) in every row,
+  and changes the whole cut's format device and grade.
+- **The locked Reskin script changes only through the fix list** in spec §4.3:
+  product-fact errors, "Japanese", prices, "Free returns", and the 147,000
+  customer count. Each change is marked `Changed:` so only that line is
+  re-recorded.
+- **New pages stop at `Ready for visuals`.** This play never messages an editor.
+  The editor-assignment play does that after a human moves the page on.
