@@ -93,7 +93,10 @@ Account `b0bc19f9-4a80-4ae4-9768-4b151edb5a40`, project
    it: `NK485_VID_Why NK184_…` and `NK405_VID_What if  CTA  Feather NK184_…` are
    NK485 and NK405, not NK184. Prefer a **folder named exactly the ID** (NK184
    has one); inside it, one version stack per hook. Take each stack's newest
-   version.
+   version. **The stacks' own names are the key, not the folder's name:**
+   NK222's stacks sit in Hammad's folder `NK 222` (with a space), while a
+   separate folder named `NK222` is not readable from this account. Use the
+   folder that holds the matching stacks.
 3. **The clip links in the source brief's Visual column.** These are the footage
    library Iteration 1 is built from.
 
@@ -113,6 +116,20 @@ blocked), compare and use the delivered wording where it differs, because
 Iteration 2 reuses that exact audio. If it cannot, use the brief's copy and say
 in the report that the script was not checked against the cut. Either way, this
 does not block the run.
+
+**Always look at the scrub sheet.** `get_version_stack` returns a
+`scrub_sheet_url` for the head version: 100 frames on a 10×10 WebP from the media
+host. Download it, crop it into halves and look. It does two jobs no other source
+does:
+
+- **A partial script check.** Source cuts carry burned-in captions, so the frames
+  can be read against the brief line by line, even when audio transcription is
+  blocked (on 2026-11-11 the model hosts were).
+- **The source's real look**, which the Reskin gate (§4.2) and the Rewrite's
+  "line fits the clip" rule (§3.3) both depend on. NK222's Visual column says
+  "Montage clip of loki"; its scrub sheet shows a bearded creator in a kitchen,
+  a blue sky and an onion. It also showed the Blackout clip already had the
+  opener in the handle, so only the words were wrong.
 
 ---
 
@@ -149,8 +166,10 @@ does not block the run.
    the name (§6). Product and persona do not change.
 8. **All copy rules apply in full,** because this is new copy: process doc §C,
    §E and §F, plus the 2026-11 updates in §4.3. The offer line sits on the
-   source's offer clip, which places it where the winner had it; it must still
-   land 60–80% through with 2–4 beats after it, said as `Buy 2, get 2 free`.
+   source's offer clip, which places it where the winner had it, said as
+   `BUY 2 GET 2 FREE`. **If that is outside the 60–80% window, leave it there**
+   (the footage is locked, and the placement is part of what won) and say so in
+   the report. NK222 resolves its offer at about 53%; NK306 does at 58%.
 
 ---
 
@@ -210,6 +229,13 @@ the delivered cut):
 (§C.5.1); no bread; no named cut of meat; no price on a PDP in frame; product
 shown correctly (the Blackout opener is in the handle); an AI VO cut has nobody
 speaking to camera (`Face-Talking` is never valid).
+
+**A ready-made different look:** the creative bank's `KF - <product> - Slow 50`
+folders (Feather, Viking Knife, Blackout Edition, Reaper, Berserker, BJORN
+Utility) are locked-off 4K slow-motion product films in forest and dusk light,
+with no hands and no faces. Most winners are handheld daylight UGC, so these
+pass the gate easily. Still check them against the source's settings: one KF
+Feather set plants the knife in a tree stump, and NK222 already has a stump.
 
 **Where the new footage comes from**, using the glossary's three labels:
 `Broll Clip…` from the creative bank (the `0- UGC 2026` folder,
@@ -288,7 +314,7 @@ Every field it lists, in its order, from its vocabulary. For an iteration:
 | `category` | `Ite` |
 | `source` | `Src-None` (iterations never carry the source ID in the name) |
 | `iteration` | `Ite-Script` for a Rewrite, `Ite-Reskin` for a Reskin |
-| `concept` | The Concept Name without the `(ID) - Product` tail, at most 30 characters: `Big Brain Return Rewrite` |
+| `concept` | A short form of the Concept Name, at most 30 characters, **and short enough that every file name plus `.mp4` is at most 255 characters** (Frame.io's cap, which the QA play hit on NK604 and NK580). Andy shortens the same way (`Better Call` for "Better Call Black Friday (NKFD071)"). NK843 is `Lunatic Rewrite`. |
 | `type`, `product`, `avatar`, `offer`, `lp` | The source's values, in vocabulary spelling |
 | `market` | The market it won (`US Winner` → `Mkt-US`); more than one, or none → `Mkt-All`. Mark can override |
 | `event` | `Evergreen` unless Mark names one |
@@ -398,7 +424,12 @@ carries `Changed: …`.
    only. Report it and go to the next.
 4. **Dedup** (§7).
 5. **Write** both types (§3, §4).
-6. **Gates.** All of them pass before a page is created:
+6. **Gates.** All of them pass before a page is created. The mechanical ones
+   (Rewrite length and originality, Reskin lock) are scripted: put the three
+   scripts in a JSON file and run
+   `python3 -I winner-iterations/gate_check.py RUN.json` with the brand pack's
+   winning briefs and approved-copy file as extra arguments. Exit 0 = pass. The
+   rest are judgement and stay manual:
    - Rewrite: originality (§3.5), length budget (§3.4), every line fits its clip
      (§3.3).
    - Reskin: no source clip (§4.2.1), the 3-of-4 axes on every row (§4.2.2), a
@@ -454,4 +485,4 @@ report an empty run as "nothing to do".
 
 | Date | Command | Briefs | Notes |
 |---|---|---|---|
-| — | — | — | No runs yet. Spec written 2026-11-11. |
+| 2026-11-11 | `Iterate NK222` | NK843 Rewrite, NK844 Reskin, both Hammad | First run. Cut found in Hammad's `NK 222` folder (158 s, Frame.io-tagged Winner). Script checked against the cut's burned-in captions on the scrub sheet; no audio transcript (speech-model hosts blocked). Rewrite: NK222's story retold by the customer in first person, angle Return → Regret; offer resolves at ~53%, same as NK222. Reskin: after-dark KF look; fix list changed B11 (dragon on the Tiger Cleaver), B12 (opener "in the blade") and cut "Free returns" from B13. Shortened the naming concept to fit Frame.io's 255-character cap. |
