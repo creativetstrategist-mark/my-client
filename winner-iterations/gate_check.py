@@ -36,6 +36,8 @@ NUM.update({"20": "twenty", "30": "thirty", "40": "forty", "50": "fifty", "60": 
 HOUSE = [  # spec §3.5 exemptions
     "buy two get two free", "four knives for the price of two", "link's below",
     "lifetime warranty", "thirty day money back trial", "free shipping",
+    # the proof stack, as one run, so a copied sentence around it still fails
+    "full tang hand forged 147 000 customers lifetime warranty thirty day money back trial free shipping",
 ]
 
 

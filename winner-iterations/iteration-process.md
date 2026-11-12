@@ -147,6 +147,10 @@ does:
    rebuilds from the **source project and raw clips, not the exported cut**,
    because source exports carry the old script burned in as captions (NK284's
    own hook note says "cover the existing text from visual").
+   **If the source brief's Visual column is empty** (NK326's is), write each
+   row as its span in the winning export plus a one-line list of the clips in
+   it, read off the scrub sheet (100 frames, so one frame is the duration / 100),
+   and send the editor to their own project for the clips themselves.
 2. **Footage swaps are allowed only for these,** each named in that row's Note
    as `Changed: <what> → <replacement>`:
    - a clip with old copy, an old offer or a price burned into the picture that
@@ -243,6 +247,13 @@ Utility) are locked-off 4K slow-motion product films in forest and dusk light,
 with no hands and no faces. Most winners are handheld daylight UGC, so these
 pass the gate easily. Still check them against the source's settings: one KF
 Feather set plants the knife in a tree stump, and NK222 already has a stump.
+
+**Same script, another cut.** Some winners share a script with another winner:
+NK326 is Naveed's editor-trial cut of NK184's script, word for word. Their
+Iteration 2s then carry the same locked words, so the new look must also differ
+from the other winner's Iteration 2, not only from the source. NK848 (NK184) is
+night on a black tabletop, so NK861 (NK326) is a bright white studio. Name the
+other Iteration 2 in the instruction block so the editor avoids it too.
 
 **Where the new footage comes from**, using the glossary's three labels:
 `Broll Clip…` from the creative bank (the `0- UGC 2026` folder,
@@ -530,3 +541,4 @@ report an empty run as "nothing to do".
 |---|---|---|---|
 | 2026-11-11 | `Iterate NK222` | NK843 Iteration 1, NK844 Iteration 2, both Hammad | First run. Cut found in Hammad's `NK 222` folder (158 s, Frame.io-tagged Winner). Script checked against the cut's burned-in captions on the scrub sheet; no audio transcript (speech-model hosts blocked). Iteration 1: NK222's story retold by the customer in first person, angle Return → Regret; offer resolves at ~53%, same as NK222. Iteration 2: after-dark KF look; fix list changed B11 (dragon on the Tiger Cleaver), B12 (opener "in the blade") and cut "Free returns" from B13. Shortened the naming concept to fit Frame.io's 255-character cap. Same day, on Mark's instruction: both pages renamed from Rewrite/Reskin to Iteration 1/2 and the strategist changed from Claude to Mark, in the properties and all names. Then, also on Mark's instruction: both rewritten as **Black Friday** versions (§8.3; Iteration 2 re-records B2, B11, B12 and the CTA) and rebuilt on the live brief template's structure (§8.2: video block, 3-column tables, CTA section, template persona and glossary). Callum's NK827 surfaced a second Tiger Cleaver error, "tiger-striped", now on the fix list. |
 | 2026-11-11 | `Iterate NK184` + "tailored to Black Friday" | NK847 Iteration 1, NK848 Iteration 2, both Hammad | Cut in the `NK184` folder: three 107 s stacks, the 3D one tagged `Performance: Winner` on Frame.io, so H3 was treated as the winning hook. Brief has the VO MP3 attached; Iteration 2 points Hammad at it. Iteration 1 drops the "What if" device for flat statements; gate pass vs NK184, Callum's NK837 (its Black Friday version) and Andy's NK808 hooks. **KF sets were not usable for the Iteration 2 look**: NK184 already uses forest and stump product shots, so the reskin goes night and indoors with Higgsfield product shots checked against the real knife. NK184 closes on "Full tang", so the Iteration 2 lineup leaves out the RAGNAR Tiger Cleaver. Names hit Frame.io's 255 cap with the long tags (Craftsmanship, Str-Comparison, Black Friday), so the file-name concept is just `Iteration 1` / `Iteration 2`. Gate script bug fixed: its numeral map lacked 12. Flags left for Mark: "no two hands hammer the same way", "most viral knife of 2026", "biggest deal of the year", and the close not ending on "Link's below". |
+| 2026-11-12 | `Iterate NK326` + "tailored for Black Friday" | NK860 Iteration 1, NK861 Iteration 2, both Naveed | NK326 is Naveed's editor-trial cut of the NK184 script (Andy, no `Test Results` tag; its 2D file is tagged `Performance: Winner` on Frame.io, so H2 is the winning hook). Cut in the `NK326` folder: three 107 s files, 1D/2D/3D; `NK326-DE` is the German version and was left out. The brief's Visual column is empty, so Iteration 1 lists each row's span in the 2D export from the scrub sheet (spec §3.1 now says so). Captions match the brief except "And hardened to steel", "Same stamp steel" and no "Click the link" caption; the brief's wording was kept. Iteration 1 gated against NK326, my NK847, Callum's NK837, Andy's NK808 and NK809 hooks, the approved copy and winning briefs; the gate now exempts the whole proof stack as one run, which NK847 tripped. "Bold Claim" pushed the H1 file name to 257 characters, so H1 became a Warning hook. Iteration 2 has the same locked words and changes as NK848, so its look is a white studio, unlike both NK326 and NK848 (spec §4.2 now covers shared scripts). Same flags as NK184 for the locked lines. |
