@@ -1778,6 +1778,156 @@ stop and report that rather than working from this prompt's summary.
 ```
 
 
+## 🚨🚨 Both open-question lines became named concepts, went on camera, and were fast-tracked (2026-11-12)
+
+The two copy lines that have been sitting unruled the longest stopped being
+stray sentences inside other concepts. On 2026-11-12 each one **is** a concept,
+with its own Creative ID family, and Mark asked for all five briefs to be
+prioritised for a pre-weekend launch — i.e. they are the fastest-moving work in
+the queue, not the slowest.
+
+| | Concept | Briefs | Where the line sits |
+|---|---|---|---|
+| Profanity | **NK Suck My Balls (R14B2)** | NK857 | all 3 hooks |
+| Gender ultimatum | **New Wife Santa (R2B8)** | NK855, NK856, NK858, NK859 | 3 of 3 hooks (NK855/859), 3 of 6 (NK856/858) |
+
+All five are `Content` = `UGC`, `Face-Talking`, `Voice-Creator-M` — **a real
+named creator (Ryan Kirby) saying the lines to camera**, not an AI voice over
+b-roll. That is a different exposure profile from every earlier instance:
+a creator's face and name are attached to the delivery.
+
+**NK857's three hooks, verbatim and uncensored:**
+
+- *"Northern Knife, you can suck my balls"*
+- *"Northern Knife, fuck off"*
+- *"Northern Knife, you absolute bastards"*
+
+There is **no censor instruction anywhere in the brief** — no bleep, no mute, no
+on-screen cover. This is the exact line flagged in NK810's H7 on 2026-11-10 as
+the strongest unhandled language in the corpus; it has now been promoted from
+one hook among ten to the concept's title and ID. The contrast with house
+practice is sharp: **NK722 H1 and NK727 H3 carry an explicit template** —
+*"Bleep the word, censor it on screen"* — for materially milder words. So the
+capability exists and was not applied here.
+
+**NK855/856/858/859's line:** *"If your wife didn't get you this gift, you need
+a new wife."* Mark cleared the NK644 version on 2026-10-20 **explicitly as a
+one-off and not a standing ruling**. Since then it has moved body → close → hook
+(trajectory table above) and is now the concept's premise and name.
+
+### 🔑 Root cause found: the ultimatum line lives in the persona boilerplate
+
+This is the finding that changes what the fix looks like. All five briefs carry
+the same pasted persona block, and under **MIKE** it reads, verbatim:
+
+> *"For him we can do more hard marketing 'Ïf you're wife didn't get you this
+> gift, you need a new wife'"*
+
+The line is **not** being re-invented by a writer each time — it is template
+text, quoted as an example of the register MIKE accepts, and it is pasted into
+every brief that uses that persona. That explains the three-week spread, why it
+tracks the male narrator perfectly, and why it keeps escalating: each writer
+reads it as approved house copy because it arrives inside the brand's own
+guidance block.
+
+**It is therefore a one-place fix.** Editing that sentence out of the persona
+template stops the line at source, for every future brief, without touching any
+individual script. Nothing else found in this play has had that property.
+
+### Same five briefs, other flags
+
+- **"It's three times sharper than those other bullshit knives I was using"** —
+  in all five. Two problems in one sentence: an invented multiplier of the
+  NK646 class Mark ordered fixed on 2026-10-20, and more uncensored profanity.
+- **A garbled persona block** naming SARAH, "MIKE - GRILL MASTER",
+  "DON - OPPORTUNIST" *and* "DON | The Hunter" (two contradictory DONs), plus
+  COLE — while the `Avatar` property is `VANCE- The Opportunist`, whom the block
+  never mentions. The editor is given five personas and not told which applies.
+- **NK856/858 say "100,000 customers"**; 147,000 is the current figure and the
+  same day's briefs use it.
+- **NK858 names an "ODIN Chef Knife"**, which is not a `Product` option — but it
+  correctly says the Feather is made *"about five hundred at a time"*.
+- **NK857 says "up to 64% off"** — a real tier, correctly used.
+
+## 🎯 Mark's own briefs are the compliance model, and they fix by instruction rather than by correction (NK862–864)
+
+NK862/863/864 are the **first briefs with `Strategist` = `Mark` to come through
+this play**. They are the best-constructed briefs the play has seen, and they
+matter beyond their own quality because they demonstrate a mechanism.
+
+**Every rule this play has been flagging for weeks appears in them as an explicit
+`Do not:` line in the brief itself:**
+
+| Brief | The `Do not:` line |
+|---|---|
+| NK862 (Feather) | *Never "etched", "engraved" or "hand-finished" for the feather pattern. No price on screen.* |
+| NK863 (Blackout) | *The bottle opener is in the handle, never the blade or the spine.* |
+| NK864 (Santoku) | *Never "Japanese" or "Japan". The bolster is brass. **No wood species for the handle.*** |
+| all three | *Black Friday: the offer is BUY 2 GET 2 FREE, nothing else. No end date, no countdown, no extra % off, **no "up to" figures**.* |
+
+Three open items are answered in practice by that table:
+
+1. **The Santoku handle rule.** The open question was how to word it. Mark's own
+   wording is **"No wood species for the handle"** — the *name no wood at all*
+   form this spec argued for, not "never rosewood". Use his words.
+2. **The "up to 67% off" question.** Mark's briefs ban "up to" figures outright,
+   in the same batch in which three of Andy's use "up to 67% off". That is as
+   close to a ruling as the data can get without him saying so.
+3. **The Apple Watch clip.** NK862/863/864 all swap the source's *"your favorite
+   lipstick"* → *"your Apple Watch"*, each annotated **"Mark:"**. The destruction
+   gag is his own call, authored deliberately, not a flag — this closes that item.
+
+**The portable finding: the `Do not:` line is the fix.** Andy's briefs in the
+same queue break rules that Mark's briefs pre-empt with one sentence of brief
+text. The rules already exist in CLAUDE.md; what Mark adds is restating them
+where the writer and editor actually read. Recommend it for every brief.
+
+**Also worth copying: NK862–864 annotate every changed line as a diff** — the
+`Note` column gives the source line, the new line, and the reason
+(*"(no finger loop on the Feather; rosewood handle)"*). No other brief in the
+corpus is traceable that way, and it is what makes the product swaps verifiable
+instead of trusted.
+
+**One flag against them:** all three say the blade *"is five times sharper than
+average knives"*, carried over unchanged from the NKEOFY005 winner and not
+marked Changed. Combined with NK855–859's *"three times sharper"*, **the same
+day's queue carries two different invented multipliers**, and the 5× is in
+Mark's own briefs — so the NK646-class fix he ordered has not reached the
+source winners the iterations are built from.
+
+## 📺 "up to 67% off" reaches nine briefs, and is now contradicted inside its own batch
+
+NK840, NK841 and NK842 each carry *"Buy two, get two free deal, plus lifetime
+warranty and up to 67% off your order"*, taking the count to **nine** (NK731,
+the NK728 family, NK840, NK841, NK842). Against real tiers of 64% and 56%.
+
+What is new is that the contradiction is now internal: **the same queue contains
+Andy's three briefs using "up to 67% off" and Mark's three briefs banning
+"up to" figures by name.** Nothing further needs establishing — it needs a
+decision.
+
+The three `Better Call` briefs share two more claims worth a ruling:
+
+- **"the number one Christmas gift in 2025"** — a specific, checkable superlative
+  about a past year, in all three.
+- **"still guaranteed to last forever"** alongside the explicit *"lifetime
+  warranty"* — the warranty item remains unconfirmed.
+
+**Good discipline in the same three, worth saying:** the source NKFD071 was a
+tariff-crisis ad, and all three briefs instruct **"Nothing about tariffs
+anywhere, on screen or in the VO"**, twice each. That is Andy stripping a premise
+that no longer applies rather than letting it ride — the same care NK772 and
+NK771 showed.
+
+**Product accuracy across the three:** NK840 correct (rosewood handle, 147,000
+customers) but says *"that feather etched from the tip to the handle"* — "etched"
+again, newly written, in the same batch as Mark's brief banning the word.
+**NK842 is clean** — blacked out tip-to-handle, the finger loop (the correct
+Blackout attribute per NK801/NK803), no bolster-material claim.
+**NK841 gives the Santoku a "carved ebony handle"** — the handle-wood error for
+the third time in ebony (after NK813, NK816) and a third wood overall after
+rosewood. Exactly what NK864's *"No wood species for the handle"* prevents.
+
 ## Run history
 
 | Date | Posted | Fallback | Skipped (Callum) | Skipped (other) | Notes |
@@ -1809,3 +1959,4 @@ stop and report that rather than working from this prompt's summary.
 | 2026-11-09 | **7** | — | **0** | — | **Second run that day, on "assign task, due on wedneday"**, minutes after the 15-brief batch drained the queue. All seven Rolling Knife Sharpener, all Andy's: NK767→Hammad, **NK796/797/798/799/806/807→Waheed**. Gate passed on all 7. Posted, "Due on Wednesday" threaded, flipped; closing query empty. **Six of seven to one editor who had received his first brief an hour earlier** — flagged as a load question, then partly answered by the briefs themselves: **NK807 addresses him by name and refers to "all the other ads you've done for us"**, so he is experienced and was only new to this play. That correction is written up above; the earlier onboarding concern was overstated. **NK767 had been sitting since 2026-11-03** — same creation block as NK762–766, which went out on 11-05 — so it was left behind in that batch rather than newly written. **Headline, and it is a metadata-vs-copy contradiction visible on the page: three briefs carry day-bound urgency on `Evergreen` inventory.** NK797 supers "ENDS TONIGHT 🚨" on all three hooks, NK799 makes the free discs conditional on "if you order today" twice, and NK806 has the narrator assert "I checked their site yesterday and it's almost gone again". An evergreen ad serves for weeks, so each is false on most of those days. **Second finding: the product's own stage architecture is described two ways in one batch** — four briefs say two-sided diamond roller (#400/#1000) plus ceramic and jade discs, while NK807 says four discs labelled #400/#1000/#6000/#10000, with an annotation that contradicts its own VO on which disc comes first. Waheed holds both versions. **Also: NK797 counts the lifetime warranty as one of its "three discounts"** (the `Offer` property names two components), **NK806 states "pull-through sharpeners don't work, they ruin your knife"** as flat fact about a competing category, and **NK796 opens H1 with "We fucked up, guys"** — the second profanity-in-a-hook of the day after NK779, and deliberate rather than a slip: H2 avoids it and H3 softens to "we messed up big time", so Andy wrote three escalating variants. **The "Japanese" count rose to thirteen across twelve briefs** (NK796/798/799/806), while NK767, NK797 and NK807 skip the beat entirely — more evidence it is droppable. **Useful lineage: NK796 shows the overstock premise flagged on NK665 is inherited** from NK383, itself built from a Hatori Knives ad ("We over-ordered. Badly."), so the question is whether the warehouse really is overstocked, not whether someone invented it. **Good practice to cite:** four briefs instruct *"Use a plain supermarket kitchen knife for the demo, never one of our knives"* (keeping the sharpener off NK's own edge-retention claim), NK799 adds *"Never show knives being thrown away — on this ad the dull knives get sharpened, not replaced"*, and NK796's instruction spells out CLAUDE.md's offer rule in Andy's own words: *"The offer lands as the fix for the overstock, keep the same subject through the transition."* NK767 is the cleanest brief in either of today's runs. |
 | 2026-11-10 | **14** | — | **12** (NK818–829) | — | **Run on "Assign task, due on friday".** Opening query returned 11, closing query found **3 more** — 14 in total. Posted, "Due on Friday" threaded, flipped. NK722/809→Naveed, NK723/728→Hasnain, NK726/730→Onyeka, NK727→Umar, NK729/808/810→Hammad, NK811→Renniel (his first since NK680), then the mid-run arrivals NK780→Naveed, NK813→Anas, NK816→Onyeka. Gate passed on all 14. **The closing re-query paid for itself a third time** (after NK708 and the 2026-11-05 sharpeners) — and this time the three arrivals were the batch's two best briefs and its worst-flagged one, so skipping it would have been expensive. **Connectors dropped twice mid-run**, once between posting and flipping; state was recovered from the posted-message record and the flips completed. **🔑 Headline: the new "10 Hooks" format multiplies every copy flag by ten.** NK808–811 each pair 10 hook lines with one LOCKED body (*"do not change a word"*, *"Deliver 10 files, H1 to H10"*) — **40 deliverables from 4 briefs**, all with exact H1–H10 file rows, which is a real mechanical improvement. But the NK184 body says **"A full feather etched from tip to handle"** plus the hand-hammer line, and the NK168 body says **"Free returns"** (banned by name in yesterday's briefs) and **"100,000 customers"** (superseded by 147,000). So the locked winners now stamp their defects ten times per brief, on `Evergreen`. Useful: the NK168 body is clean on "etched" — it says *"our sculpted, hand-forged blade"* — so one winner already demonstrates the fix for the other. **📌 Second: where "up to 67% off" comes from.** NK728's own AD INSPO says it is *"built around the 'six seven' meme (67% off)"* and a hook jokes that *"our brain-rotted intern"* suggested it — so the figure was picked for the meme, not calculated, and it is now in **six briefs** with three instructing a **"67%" on-screen super** against real tiers of 64% and 56%. **🚨 Third: NK810's H7 is the worst unhandled line in the corpus** (*"NorthernKnife, you can suck my balls"*) — in a hook, `Mkt-All`, `Evergreen`, with detailed direction for that hook and no censor note — while **NK722 and NK727 in the same batch show the handled form** (*"Bleep the word, censor it on screen"*). It is 1 of 10 hooks, so the fix is surgical. **Corrected a standing recommendation:** NK813 and NK816 call the Santoku's handle **ebony** (the Blackout's), not rosewood, so the rule line must be *name no wood at all* — written up above. **NK813 also contains the model answer to the Evergreen false-urgency flag**, refusing to fake a deadline and pivoting to stock scarcity; quote it rather than proposing wording. Also: the **Apple Watch** destruction clip in NK813/NK816 (trademark, and it is *her* watch on a SARAH brief); **NK816 carries both the cleared "new wife" line and the escalated "you're leaving"**, on a SARAH brief; the **Damascus 67-layer count in all seven Multi briefs**, still unruled since NK637; **the Multi set disagrees about whether Black Friday has started** (NK722/726 say live, NK727/728/730 say not yet) with four editors cutting simultaneously; and **stale briefs carry stale facts** — NK722–730 sat 11–13 days and NK730 still says 100,000 while NK722 is the batch's lone "copper bolster". **Callum's rows went 4→12 during the run**, all blank `Editor`, all untouched per the standing rule. Queue ends as Callum rows only. |
 | 2026-11-11 | **6** | — | **0** | — | **Run on "assign task due on friday".** NK689→Umar, NK690/812/817→Hammad, NK814→Onyeka, NK815→Anas. Gate passed on all 6. Posted, "Due on Friday" threaded, flipped; closing query empty. **The SQL/rows query allowance ran out** before the opening query (`usage_limit_reached`, resets within the hour), so the queue was read through the `Ready to Edit` saved view and cross-checked against the `In Progress` table view — both written up above, including the board view's **blank-`Editor` blind spot**, which hid 12 rows that run. **Connectors dropped four times** during the run, twice between posting and flipping; recovered from the posted-message record each time, nothing double-sent. **✅ Callum's self-routing confirmed first-hand:** the twelve rows left alone yesterday (NK818–829, blank `Editor`) were all `Assigned to Editor` with editors filled in by this morning. **🚨 Headline: the gender ultimatum reached the hooks.** NK817's H3 is *"If you don't get me this, I'm leaving"* and its H2 is *"you're not a real man"* — so it is now the ad's opening line, `Mkt-All`, on a **SARAH-avatar** brief. Full trajectory table added above (body → close → hook, Oct 20 to Nov 11). **And it tracks the male narrator perfectly**: every ultimatum brief is `Voice-AI-M`, while **NK812, NK814 and NK815 — the female-VO versions of the same two concepts — are clean and lose nothing**. NK815 is NK817's direct counterpart. One ruling on the male-VO variants covers it. **Second: "etched" is no longer only inherited** — NK815 is newly written with no locked body and still says *"a full feather etched from tip to handle"*, so fixing the source winners is necessary but not sufficient; NK689 shows the same NK184 script adapted cleanly by dropping the feather content. **Third: the Apple Watch gag hardened from joke to proof beat** — NK690 (24 Oct) declines to cut it, NK816/NK817 (10 Nov) do it — four briefs and a dedicated clip now exist; NK817 also names two different clip IDs for that one beat. **Corrected my own prediction:** the Santoku "ebony" error has no sibling source — NK814 and NK817, both Blackout, never say ebony — so it is misremembering, not find-and-replace, which strengthens the *name no wood* rule. **Also: NK690 invents a pricing mistake** as its premise (an "intern ticked the wrong box") for what is simply the standing `40% + Free Gifts` offer, and promises the discs "go back to being paid"; **NK689 puts the industry-conspiracy allegation in its hook**; **NK815 adds a competitor food-safety claim** (coatings flaking into food); and the sharpener's time-to-sharp now has **four** different values across the corpus, with NK689 ("sixty seconds") and NK690 ("under five minutes") written the same day. **Clean and worth citing: NK812 and NK814 both carry the honest-urgency language** (*"We're not going to fake a deadline to make you hurry"*), so all three Sorry To The Wives briefs have it. |
+| 2026-11-12 | **11** | — | **0** | — | **Run on "Assign task due on Saturday"** plus **"For NK855-NK859 tell them to prioritize this as we want to launch it before weekend"**. NK840/857/859/862→Hammad, NK841/855/856/858→Onyeka, NK842→Anas, NK863→Naveed, NK864→Hasnain. Gate passed on all 11. Posted in `createdTime` order, threaded, flipped; closing query **completely empty, no Callum rows**. Mark's extra instruction was carried in the **thread reply** on the five named briefs, alongside the due day, per the rule that a deadline he supplies goes in the reply and not the message: *"Due on Saturday. Please prioritize this one — we want to launch it before the weekend."* The other six got the plain `Due on Saturday`. **Largest single run of the play, and the first with `Strategist` = `Mark`** (NK862/863/864 are his own briefs). **🚨 Headline, and it is the reason this run needed a report rather than a count: the five briefs Mark asked to fast-track are built on the two lines he has not ruled on.** Both stopped being stray sentences and became **named concepts with their own IDs**, delivered **on camera by a real named creator** (`Voice-Creator-M`, Ryan Kirby): **NK857 "NK Suck My Balls (R14B2)"** has three uncensored-profanity hooks and no censor instruction, where NK722/NK727 bleep much milder words; **NK855/856/858/859 "New Wife Santa (R2B8)"** is the gender ultimatum Mark cleared on NK644 *explicitly as a one-off*. **🔑 Root cause found, and it is a one-place fix: the ultimatum line is pasted into the MIKE persona boilerplate** in every brief (*"For him we can do more hard marketing 'Ïf you're wife didn't get you this gift, you need a new wife'"*), so writers read it as approved house copy — editing that one sentence stops it at source for all future briefs. **🎯 Counterweight in the same queue: Mark's NK862–864 are the compliance model and fix by instruction.** Each carries an explicit `Do not:` line encoding exactly what this play keeps flagging — *never "etched"/"engraved"/"hand-finished"*, *the opener is in the handle, never the blade or spine*, *never "Japanese" or "Japan"*, *the bolster is brass*, **"No wood species for the handle"** (his own wording for the open Santoku rule — use it), and **"no 'up to' figures"**. They also annotate every changed line as a before→after diff with a reason, the only traceable briefs in the corpus. **The Apple Watch item closes**: all three swap *"your favorite lipstick"* → *"your Apple Watch"* annotated "Mark:", so the destruction gag is his own deliberate call, not a slip. **Two multipliers in one day**: NK855–859 say *"three times sharper"*, NK862–864 say *"five times sharper"* (carried unchanged from the NKEOFY005 winner, not marked Changed) — so the NK646-class fix has not reached the source winners. **"up to 67% off" reaches nine briefs** (NK840/841/842 add three) and is now contradicted inside its own batch by Mark's ban — nothing left to establish, it needs a decision. Also in those three: *"the number one Christmas gift in 2025"*, and NK840's *"feather etched from the tip to the handle"* sitting in the same queue as Mark's ban on the word. **NK841 gives the Santoku a "carved ebony handle"** — handle-wood error, third time in ebony, third wood overall. **NK842 clean** (finger loop is correct for the Blackout per NK801/NK803). **Good discipline worth naming:** all three `Better Call` briefs instruct *"Nothing about tariffs anywhere, on screen or in the VO"*, stripping the source NKFD071's tariff premise rather than letting it ride. Other flags on the fast-tracked five: *"those other bullshit knives"* (more uncensored profanity), a **garbled persona block** listing SARAH, two contradictory DONs, MIKE and COLE while `Avatar` is `VANCE`, NK856/858's stale *"100,000 customers"*, and NK858's non-catalog *"ODIN Chef Knife"*. |
