@@ -254,20 +254,22 @@ Feather set plants the knife in a tree stump, and NK222 already has a stump.
 
 **Same script, another cut.** Some winners share a script with another winner:
 NK326 is Naveed's editor-trial cut of NK184's script, word for word. Their
-Iteration 2s then carry the same locked words, so the new look must also differ
-from the other winner's Iteration 2, not only from the source. NK848 (NK184) is
-night on a black tabletop, so NK861 (NK326) is a bright white studio. Name the
-other Iteration 2 in the instruction block so the editor avoids it too.
+Iteration 2s then carry the same locked words, so each instruction block names the
+other (NK848 ↔ NK861) and tells the editor to use different clips from that cut too.
 
-**Where the new footage comes from**, using the glossary's three labels:
-`Broll Clip…` from the creative bank (the `0- UGC 2026` folder,
-`https://next.frame.io/project/b37ff928-5b11-4860-8204-f102af43f3ec/f3bad957-341b-42a0-bb18-1c2423325fce`),
-`Clip of…` from Envato or YouTube, `Generate on Higgsfield` (check the Frame.io
-folder first). **Say which one on every row, and never contradict it in the
-instruction block.** "Real b-roll only" above rows that say "Generate on
-Higgsfield" is a recurring defect in the live database (NK679, NK778, NK779): the
-editor cannot satisfy both. If any row generates, the instruction block must not
-say real b-roll only.
+**Where the new footage comes from: real footage only. Never instruct generating on
+Higgsfield** (Mark, 2026-11-12: far too expensive). `Broll Clip…` from the creative
+bank (the `0- UGC 2026` folder,
+`https://next.frame.io/project/b37ff928-5b11-4860-8204-f102af43f3ec/f3bad957-341b-42a0-bb18-1c2423325fce`)
+or `Clip of…` from Envato or YouTube.
+
+**Iteration 2 pages carry no shot list.** The Visual column stays empty. The
+instruction block tells the editor to cut the same script over different footage,
+with no clip from the source in any form; names the source look so they can pick
+something unlike it; and says `Never generate on Higgsfield` in the Do-not line.
+The per-row gate above is the editor's yardstick, not a table this play fills in.
+NK848 and NK861 were rewritten this way on 2026-11-12, and NK844's three
+Higgsfield rows became `Clip of` / `Broll Clip`.
 
 ### 4.3 The fix list: the only edits allowed to a locked line
 
@@ -521,8 +523,8 @@ write **one brief per product and nothing else**: no Iteration 1/2 pair.
    rest are judgement and stay manual:
    - Iteration 1: originality (§3.5), length budget (§3.4), every line fits its clip
      (§3.3).
-   - Iteration 2: no source clip (§4.2.1), the 3-of-4 axes on every row (§4.2.2), a
-     changed format device (§4.2.3), new hook first frames (§4.2.4), and no word
+   - Iteration 2: an empty Visual column; an instruction block that bans every
+     source clip and Higgsfield and names the source look (§4.2); and no word
      changed outside the fix list (§4.3).
    - Both: product accuracy and the fix list (§4.3), the standing visual rules,
      and the naming self-check from `SKILL.md`.
@@ -580,3 +582,4 @@ report an empty run as "nothing to do".
 | 2026-11-12 | `Iterate NK326` + "tailored for Black Friday" | NK860 Iteration 1, NK861 Iteration 2, both Naveed | NK326 is Naveed's editor-trial cut of the NK184 script (Andy, no `Test Results` tag; its 2D file is tagged `Performance: Winner` on Frame.io, so H2 is the winning hook). Cut in the `NK326` folder: three 107 s files, 1D/2D/3D; `NK326-DE` is the German version and was left out. The brief's Visual column is empty, so Iteration 1 lists each row's span in the 2D export from the scrub sheet (spec §3.1 now says so). Captions match the brief except "And hardened to steel", "Same stamp steel" and no "Click the link" caption; the brief's wording was kept. Iteration 1 gated against NK326, my NK847, Callum's NK837, Andy's NK808 and NK809 hooks, the approved copy and winning briefs; the gate now exempts the whole proof stack as one run, which NK847 tripped. "Bold Claim" pushed the H1 file name to 257 characters, so H1 became a Warning hook. Iteration 2 has the same locked words and changes as NK848, so its look is a white studio, unlike both NK326 and NK848 (spec §4.2 now covers shared scripts). Same flags as NK184 for the locked lines. |
 | 2026-11-12 | `Iterate NKEOFY005` + "tailor it to Black Friday Sale" | NK862 Iteration 1, NK863 Iteration 2, both Hammad | Not in Evergreen Video: the brief is `Worth it ? (NKFD046)` in the Holiday Brief Database (EOFY), found by workspace search; the spec said it had no page, now corrected. Cut in the `NKEOFY005` folder: three files of about 40 s, the 3D one tagged `Performance: Winner`, so H3 is the winning hook; won in AU, so `Mkt-AU`. Persona: the page says SARAH and the old file names say VANCE; the script is a wife buying for him, so SARAH. Captions show the delivered hooks differ from the brief ("knife" not "blade" in H2, no "that" in H3); Iteration 2 locks the delivered wording. Voice is female (median pitch about 240 Hz, measured from the cut). The script's offer is Buy 2, Get 1 Free: Iteration 2 re-records it as Buy 2, Get 2 Free for Black Friday (spec §8.3 now says so, after Mark's NKFD104 and NK121), and Iteration 1's burned-in offer text on the last clip is rebuilt. The EOFY end cards all say End of Financial Year, so neither brief uses one. Offer lands at about 87%, outside 60-80%, as in the winner. Flags: "five times sharper than average knives", "pro chefs and pitmasters use these knives", and "stays that way, thanks to a full tang" (the tang does not keep an edge) stay in the locked script. |
 | 2026-11-12 | NKEOFY005 again: "make it for Feather, Blackout and Santoku, no more LOKI", editors Hammad, Naveed, Hasnain; "only 1 iteration": the same script tweaked for the product, tailored for Black Friday, no visuals | NK862 Feather (Hammad), NK863 Blackout (Naveed), NK864 Santoku (Hasnain) | Replaces the LOKI pair: NK862 and NK863 were rewritten in place, not deleted, and NK864 is new. Spec §8.4 written from this. Changed lines per product: B1 (names it), B2 (blade), B3 (handle or loop), the Blackout's B5 (magnetic lid), plus H1 and B6 for Black Friday and H2's "last" → "lasts". Santoku moves to `6 Reasons - Santoku`. Notion's query allowance ran out mid-run; NK864 was checked free by workspace search. Then, on Mark's word, B3's "your favorite lipstick" became "your Apple Watch" on all three, with a note to swap the inspo's lipstick shot. |
+| 2026-11-12 | "On NK848 and NK861 never ever instruct to generate visual on Higgsfield" | NK848, NK861, NK844 edited | Higgsfield costs too much. NK848 and NK861: every Visual cell emptied; the instruction block now says to cut the same script over different real footage (creative bank or Envato), no inspo clip in any form, names the source look for reference and the other same-script Iteration 2 to avoid, and the Do-not line says "Never generate on Higgsfield". NK844 (not named, same rule): its three Higgsfield rows became `Clip of` / `Broll Clip` and its Do-not line gained the same ban. Spec §4.2 and §9 updated. The template glossary's Higgsfield line stays: it is the template's own text. |

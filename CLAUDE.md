@@ -123,6 +123,9 @@ Five things that are easy to get wrong:
   (`NK485_VID_Why NK184…` is not NK184). No brief or no cut means stop that ID
   and ask.
 - **The source page is read-only.** Never write to it.
+- **Never instruct generating on Higgsfield** (too expensive). Iteration 2 pages
+  leave the Visual column empty and tell the editor to cut the same script over
+  different real footage, no source clip in any form: spec §4.2.
 - **"Not similar" is a gate, not a vibe.** Iteration 2 uses no source clip in any
   form, differs on 3 of 4 axes (setting, subject, framing, action) in every row,
   and changes the whole cut's format device and grade.
