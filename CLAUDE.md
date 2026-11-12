@@ -99,6 +99,10 @@ source.** **The strategist on every iteration is Mark**, and names say
 structure** (video block, 3-column HOOK / BODY / CTA tables, no extra
 callouts). An event in the command (`Iterate NK222 Black Friday`) makes both
 briefs event versions: spec §8.3.
+Products and editors in the command (`Iterate NKEOFY005 for Feather, Blackout,
+Santoku; Hammad, Naveed, Hasnain`) mean one **product version** per product instead:
+the winner's script with only its product-fact lines changed, no visuals, the
+cut as the guide: spec §8.4.
 
 Full spec: `winner-iterations/iteration-process.md`. Read it before running or
 changing this play. A paste-in version for sessions not on this branch is
