@@ -55,8 +55,8 @@ writes.
 
 - **No creative ID in the command → stop and ask.** Never choose a winner.
 - **A winner tag is not required.** Mark's command is the authority. A creative
-  with no `Test Results` tag, or one with no Notion page at all (NKEOFY005 has
-  none), is still in scope if he names it.
+  with no `Test Results` tag, or one whose page is outside Evergreen Video (NKEOFY005's is in the Holiday
+  Brief Database), is still in scope if he names it.
 - **Any product is in scope here**, not only the 3 focus products, because naming
   the ID is the explicit request the root `CLAUDE.md` asks for. The product facts
   in §4.3 still apply to whatever the product is.
@@ -74,7 +74,8 @@ writes.
    duplicate in the report.
 3. **No page in Evergreen Video:** run `notion-search` for the ID across the
    workspace. Seasonal series live elsewhere; NKFD071's script is the page
-   `R12B6 Adaptation`, not an Evergreen row.
+   `R12B6 Adaptation`, not an Evergreen row. NKEOFY005 is `Worth it ? (NKFD046)` in the Holiday Brief
+   Database's `EOFY` data source; search by the ID, which is in its batch name.
 4. **Still nothing:** stop for that ID and ask Mark for the brief or the script.
    **Never rebuild a script from memory or from the ad name.**
 
@@ -286,7 +287,8 @@ each in that row's Note as
 | "100,000 customers" | "147,000 customers" | Settled 2026-11-09 (editor-assignment log) |
 | Profanity with no bleep instruction | Keep the word, add `Bleep it, censor it on screen` in the Note | Editor-assignment log, NK779 and NK810 |
 
-**Flag, do not change:** an offer other than B2G2 in the locked copy, any claim you
+**Flag, do not change:** an offer other than B2G2 in the locked copy (in an
+event version the deal line is re-recorded anyway, so §8.3 applies), any claim you
 cannot verify, and anything else that reads wrong. These go in the report for
 Mark to decide.
 
@@ -462,6 +464,14 @@ are written for it:
   per run on the Feather, is fine.
 - **Originality:** also run Iteration 1 against any existing event version of
   the same winner (NK827 is Callum's Black Friday NK222).
+- **An old offer on the deal line becomes B2G2.** Iteration 2 re-records that
+  line for the event anyway, so a locked `Buy 2, Get 1 Free` (NKEOFY005) is said
+  as `Buy 2, Get 2 Free` and marked `Changed:`. Mark made the same change to this
+  script on NKFD104 and NK121. Burned-in offer text in a locked Iteration 1 clip
+  is rebuilt the same way (§3.2).
+- **No old event end cards.** A seasonal CTA card says its season (every card
+  in the `EOFY CTA` folder reads End of Financial Year). End on the event Super
+  instead.
 
 ---
 
@@ -542,3 +552,4 @@ report an empty run as "nothing to do".
 | 2026-11-11 | `Iterate NK222` | NK843 Iteration 1, NK844 Iteration 2, both Hammad | First run. Cut found in Hammad's `NK 222` folder (158 s, Frame.io-tagged Winner). Script checked against the cut's burned-in captions on the scrub sheet; no audio transcript (speech-model hosts blocked). Iteration 1: NK222's story retold by the customer in first person, angle Return → Regret; offer resolves at ~53%, same as NK222. Iteration 2: after-dark KF look; fix list changed B11 (dragon on the Tiger Cleaver), B12 (opener "in the blade") and cut "Free returns" from B13. Shortened the naming concept to fit Frame.io's 255-character cap. Same day, on Mark's instruction: both pages renamed from Rewrite/Reskin to Iteration 1/2 and the strategist changed from Claude to Mark, in the properties and all names. Then, also on Mark's instruction: both rewritten as **Black Friday** versions (§8.3; Iteration 2 re-records B2, B11, B12 and the CTA) and rebuilt on the live brief template's structure (§8.2: video block, 3-column tables, CTA section, template persona and glossary). Callum's NK827 surfaced a second Tiger Cleaver error, "tiger-striped", now on the fix list. |
 | 2026-11-11 | `Iterate NK184` + "tailored to Black Friday" | NK847 Iteration 1, NK848 Iteration 2, both Hammad | Cut in the `NK184` folder: three 107 s stacks, the 3D one tagged `Performance: Winner` on Frame.io, so H3 was treated as the winning hook. Brief has the VO MP3 attached; Iteration 2 points Hammad at it. Iteration 1 drops the "What if" device for flat statements; gate pass vs NK184, Callum's NK837 (its Black Friday version) and Andy's NK808 hooks. **KF sets were not usable for the Iteration 2 look**: NK184 already uses forest and stump product shots, so the reskin goes night and indoors with Higgsfield product shots checked against the real knife. NK184 closes on "Full tang", so the Iteration 2 lineup leaves out the RAGNAR Tiger Cleaver. Names hit Frame.io's 255 cap with the long tags (Craftsmanship, Str-Comparison, Black Friday), so the file-name concept is just `Iteration 1` / `Iteration 2`. Gate script bug fixed: its numeral map lacked 12. Flags left for Mark: "no two hands hammer the same way", "most viral knife of 2026", "biggest deal of the year", and the close not ending on "Link's below". |
 | 2026-11-12 | `Iterate NK326` + "tailored for Black Friday" | NK860 Iteration 1, NK861 Iteration 2, both Naveed | NK326 is Naveed's editor-trial cut of the NK184 script (Andy, no `Test Results` tag; its 2D file is tagged `Performance: Winner` on Frame.io, so H2 is the winning hook). Cut in the `NK326` folder: three 107 s files, 1D/2D/3D; `NK326-DE` is the German version and was left out. The brief's Visual column is empty, so Iteration 1 lists each row's span in the 2D export from the scrub sheet (spec §3.1 now says so). Captions match the brief except "And hardened to steel", "Same stamp steel" and no "Click the link" caption; the brief's wording was kept. Iteration 1 gated against NK326, my NK847, Callum's NK837, Andy's NK808 and NK809 hooks, the approved copy and winning briefs; the gate now exempts the whole proof stack as one run, which NK847 tripped. "Bold Claim" pushed the H1 file name to 257 characters, so H1 became a Warning hook. Iteration 2 has the same locked words and changes as NK848, so its look is a white studio, unlike both NK326 and NK848 (spec §4.2 now covers shared scripts). Same flags as NK184 for the locked lines. |
+| 2026-11-12 | `Iterate NKEOFY005` + "tailor it to Black Friday Sale" | NK862 Iteration 1, NK863 Iteration 2, both Hammad | Not in Evergreen Video: the brief is `Worth it ? (NKFD046)` in the Holiday Brief Database (EOFY), found by workspace search; the spec said it had no page, now corrected. Cut in the `NKEOFY005` folder: three files of about 40 s, the 3D one tagged `Performance: Winner`, so H3 is the winning hook; won in AU, so `Mkt-AU`. Persona: the page says SARAH and the old file names say VANCE; the script is a wife buying for him, so SARAH. Captions show the delivered hooks differ from the brief ("knife" not "blade" in H2, no "that" in H3); Iteration 2 locks the delivered wording. Voice is female (median pitch about 240 Hz, measured from the cut). The script's offer is Buy 2, Get 1 Free: Iteration 2 re-records it as Buy 2, Get 2 Free for Black Friday (spec §8.3 now says so, after Mark's NKFD104 and NK121), and Iteration 1's burned-in offer text on the last clip is rebuilt. The EOFY end cards all say End of Financial Year, so neither brief uses one. Offer lands at about 87%, outside 60-80%, as in the winner. Flags: "five times sharper than average knives", "pro chefs and pitmasters use these knives", and "stays that way, thanks to a full tang" (the tang does not keep an edge) stay in the locked script. |
