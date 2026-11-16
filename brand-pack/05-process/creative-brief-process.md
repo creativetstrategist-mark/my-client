@@ -640,7 +640,9 @@ Umar · Onyeka · Anas · Hasnain · Naveed · **Waheed** · **Fahad**
 > exception, not like the Renniel pause: no expiry was given, so it holds until
 > the strategist lifts it, and third-party assignments to him do not touch it.
 > It was scoped as *"next batch"* and forward-looking, so briefs already on him
-> were left alone.
+> were left alone. **Confirmed on the one live case**: NK910 was put to the
+> strategist and he chose to leave it on Hammad, so the pause genuinely applies
+> only to new assignments, not to a cleanup of what he already holds.
 >
 > 🆕 **Two new editors are now in the rotation: Waheed and Fahad.** Both came in
 > on explicit trial briefs — Waheed on NK774 "Your Lucky Day - Editor Trial",
@@ -652,11 +654,16 @@ Umar · Onyeka · Anas · Hasnain · Naveed · **Waheed** · **Fahad**
 > | **Waheed** | 11 | Mostly the **Rolling Sharpener** line (8 of 11), plus Santoku and Blackout cuts | The sharpener's regular editor |
 > | **Fahad** | 4 | **Knives only** — Santoku and Blackout | Lightest-loaded name on the board |
 >
-> ⚠️ **Neither has a stated runtime cap, and rule 2 is the hard rule.** Until the
-> strategist gives one, treat them as unrestricted **but keep their first few
-> cuts under ~75 seconds** — assuming "unrestricted" for a name with no stated
-> cap is the one guess rule 2 does not forgive. Ask before handing either a
-> long-form cut (the 105s+ offer-led ones).
+> ✅ **Both are unrestricted — confirmed by the strategist 2026-11-16.** Any
+> duration, the 105-110 second long-form offer-led cuts included. They go in the
+> same runtime bracket as Umar, Anas, Hasnain and Naveed, which means **rule 2
+> never rules either of them out** and the only constraints on them are rules 1
+> and 3. The earlier under-75s margin on this page was a provisional guess and
+> is withdrawn.
+>
+> That leaves **Onyeka (72s) and Hammad (90s) as the only capped editors**, and
+> it widens the long-form bench from four names to six — the thin-bench problem
+> noted below is much less likely to bite now.
 
 > ⏸️ **Renniel is paused as of 2026-09-14** — do not assign him anything until
 > the strategist says he is ready again. This is **temporary and reversible**,
@@ -685,7 +692,7 @@ Umar · Onyeka · Anas · Hasnain · Naveed · **Waheed** · **Fahad**
    |---|---|
    | **Hammad** | **90 seconds** (1:30) — raised from 72 on 2026-09-22 |
    | **Onyeka** | **72 seconds** — confirmed 2026-09-22 |
-   | Umar · Anas · Hasnain · Naveed | any duration |
+   | Umar · Anas · Hasnain · Naveed · **Waheed** · **Fahad** | any duration |
    | Renniel | any duration — **but paused, see above** |
 
    Estimate before assigning — word count ÷ ~175 words per minute at AI-VO
