@@ -603,7 +603,38 @@ persona callout, because the editor will otherwise generate one read.
 **Assign an editor when the brief is created, then set `Status` to
 "Ready for visuals".** A new brief does not get left unassigned.
 
-**Active roster — six names.** Hammad · Umar · Onyeka · Anas · Hasnain · Naveed
+**Active roster — seven names, and Hammad is off it for now.**
+Umar · Onyeka · Anas · Hasnain · Naveed · **Waheed** · **Fahad**
+
+> ⏸️ **Hammad is paused on load as of 2026-11-16.** The strategist: *"Hammad is
+> fully loaded now moving forward next batch you can assigned it to different
+> editor you can assign it to either on the new editor."* The database backs it
+> up — he is on **192 briefs**, within one of Umar's 193 and the joint heaviest
+> in the whole corpus.
+>
+> **Rule 4 is suspended while this holds.** A concept can and should now ship
+> with no brief to Hammad, and the product-rotation table below stops advancing.
+> **This is a load call, not a capability call** — it reads like the 2026-10-07
+> exception, not like the Renniel pause: no expiry was given, so it holds until
+> the strategist lifts it, and third-party assignments to him do not touch it.
+> It was scoped as *"next batch"* and forward-looking, so briefs already on him
+> were left alone.
+>
+> 🆕 **Two new editors are now in the rotation: Waheed and Fahad.** Both came in
+> on explicit trial briefs — Waheed on NK774 "Your Lucky Day - Editor Trial",
+> Fahad on NK781 "Asked For A Sale - Editor Trial" — and the strategist named
+> them as the place the next batch should go.
+>
+> | | Briefs | What they have edited | Note |
+> |---|---|---|---|
+> | **Waheed** | 11 | Mostly the **Rolling Sharpener** line (8 of 11), plus Santoku and Blackout cuts | The sharpener's regular editor |
+> | **Fahad** | 4 | **Knives only** — Santoku and Blackout | Lightest-loaded name on the board |
+>
+> ⚠️ **Neither has a stated runtime cap, and rule 2 is the hard rule.** Until the
+> strategist gives one, treat them as unrestricted **but keep their first few
+> cuts under ~75 seconds** — assuming "unrestricted" for a name with no stated
+> cap is the one guess rule 2 does not forgive. Ask before handing either a
+> long-form cut (the 105s+ offer-led ones).
 
 > ⏸️ **Renniel is paused as of 2026-09-14** — do not assign him anything until
 > the strategist says he is ready again. This is **temporary and reversible**,
@@ -654,7 +685,8 @@ persona callout, because the editor will otherwise generate one read.
 3. **One concept, one editor.** A concept ships as a trio — Feather, Santoku,
    Blackout. **No editor takes more than one brief from the same concept,
    regardless of product.** Three briefs, three different editors, every time.
-4. **Every concept gives one brief to Hammad.** His output consistently
+4. **Every concept gives one brief to Hammad.** ⏸️ **Suspended 2026-11-16 — see
+   the load pause above. Do not apply this rule until it is lifted.** His output consistently
    performs, so he gets one cut of every concept — not the leftover, the one
    that matters. Combined with rule 3 this means one Hammad brief per concept,
    never two.
@@ -690,6 +722,7 @@ persona callout, because the editor will otherwise generate one read.
    | Take The 30 Days (NK661-663) | **Blackout (NK663)** |
    | What if Dummy Black Friday (NK907-909) | **Blackout (NK909)** — 2nd in a row, runtime-forced |
    | The Lazy Way Black Friday (NK910-912) | **Feather (NK910)** — rotation debt cleared |
+   | — | ⏸️ **Rotation stops here, 2026-11-16. Hammad paused on load.** |
 
    ⚠️ **NK907-909 is the first time rule 2 drove the whole concept's assignment.**
    Rotation said Feather (his last in this routine was the Blackout on NK663), but
