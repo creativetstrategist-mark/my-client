@@ -1928,6 +1928,171 @@ Blackout attribute per NK801/NK803), no bolster-material claim.
 the third time in ebony (after NK813, NK816) and a third wood overall after
 rosewood. Exactly what NK864's *"No wood species for the handle"* prevents.
 
+## 🚨🚨 The two strategists are now writing opposite rules into the same queue, on the same day (2026-11-16)
+
+This is the most important structural finding this play has produced, and it
+replaces the way earlier runs framed copy flags. Up to now a flag was "a brief
+says something the brand pack forbids". On 2026-11-16 the queue held **17
+briefs**, and the same rule was *written down as a hard instruction* by one
+strategist and *broken* by the other, repeatedly, in sibling briefs of the same
+concept, created within hours of each other.
+
+The rules are no longer the issue. **The issue is that Mark's briefs carry them
+and Andy's do not.**
+
+| Rule | Mark writes it | Andy's briefs in the same queue |
+|---|---|---|
+| Never "etched" on the Feather | NK847 `Do not: Never "etched"`; NK848 + NK861 **re-record it out of the locked NK184/NK326 VO**; NK907 *"No etched, no engraved, no hand-finished, no 'burned in'"* | **10 instances across 5 briefs** — NK865 ×4, NK871 ×2, NK880 ×2, NK849 ×1, NK840 ×1 |
+| The bottle opener is in the **handle** | NK909 red callout: *"Not the blade, not the spine... do not let a visual show the bottle meeting the steel"*; NK844 re-records *"notched into the blade"* → *"built into the handle"* | **6 instances of "on the back"** — NK867 ×3, NK873, NK894, NK851 |
+| No "up to" figures | NK843, NK844, NK847, NK848, NK861, NK862–864 all state it | **"up to 67% off" in 18 briefs** — this run added NK840/841/842, NK852, NK865, NK871, NK873, NK880, NK894, NK849, NK851 |
+| No price, in any market | NK907, NK909: *"No price, in any market. US, UK and AU run this"* | NK871 + NK873: *"for less than 200 bucks"* on `Mkt-All` |
+| Never manufactured urgency | NK907, NK909: *"Never invent an end date, a clock, a countdown graphic or a 'hurry'"*; NK909 adds *"no scarcity on this page"* | NK849 (7 hooks) + NK851 (7 hooks) are **built entirely on unverifiable stock scarcity**; NK852 plays a fake sell-out then re-asserts it |
+| "Most viral knife of 2026" is cut | NK907: *"It is in the NK184 script; it is not in the product facts, and it dates badly in November. Do not put it back"* | Survives in NK848 and NK861 — **Mark's own two briefs**, same day |
+| Free returns | NK844: *Changed: "Free returns." → cut* | NK907 and NK909 both say *"free returns"* — **also Mark's own**, same day |
+
+**What to do with this.** The fix is not another round of copy notes. It is to
+move Mark's `Do not:` block into the brief template so every brief carries it
+regardless of author. He has already written every line that is needed; they
+just do not travel to Andy's briefs. Two of the rows above show the rules do not
+even travel reliably between Mark's *own* briefs, which is the same argument.
+
+### 🔑 Root cause found for the bottle-opener error
+
+NK909's red callout explains six runs of this error in one sentence:
+
+> *"The **LOKI Reaper** is the one with the opener in the blade — do not mix them
+> up."*
+
+There are two products, one with the opener in the blade and one in the handle.
+"On the back" is not carelessness, it is the wrong product's fact. That is the
+same shape as the ultimatum line living in the persona boilerplate: a one-place
+cause, not a writing habit.
+
+### 🔑 And for the pattern-uniqueness compound
+
+NK907 settles the sentence this spec has flagged since NK654 (*"no two are ever
+exactly the same. Because no two hands hammer the same way"*):
+
+> *"The variation answer is **the handle, not the blade**. Rosewood grain and
+> hammer marks vary. The feather does not. Do not let a visual imply 2 blades
+> have different feathers."*
+
+NK907's B5 executes it correctly. **NK848 and NK861 still carry the old
+sentence** (not marked Changed), and **NK865 asks the editor to shoot the
+forbidden proof**: *"two Feathers side by side showing the different etching"*.
+NK871 and NK880 carry the compound too. So: rule written, three briefs fixed,
+five still wrong.
+
+## ✅ Three open items are now answered by Mark's own briefs
+
+- **The Santoku handle rule.** NK864's wording is **"No wood species for the
+  handle"** — the *name no wood* form. Adopt his words. (NK895 still says
+  *"carved ebony handle"* on the Santoku: 4th ebony instance after NK813,
+  NK816, NK841.)
+- **Who the bestseller is.** NK909: *"The **LOKI Viking** is the bestseller, not
+  the Blackout. Do not promote the Blackout itself to '#1'."* This confirms the
+  NK895 flag — it calls the **Feather** *"Our best seller"*.
+- **"Black right through".** NK909: *"not a verified fact — do not use it. It
+  appears in several shipped briefs and is still with the strategist."* That is
+  NK657's own in-brief question (logged 2026-10-20), now formally open with a
+  verified-facts list beside it: *all-black, high-carbon steel, ebony handle,
+  opener in the handle, black box with magnetic closure*.
+- **The Apple Watch clip closes** (recorded 2026-11-12): Mark authored the swap.
+
+## 🚨 The customer count forked inside one strategist, one day
+
+Four of Mark's briefs, all 2026-11-16: **NK843 and NK847 say 147,000**; **NK907
+and NK909 say 100,000**. Andy's NK849, NK851, NK880 and NK894 all say 147,000.
+147,000 is the figure 8 of 12 briefs use and the one NK909 pairs with
+"lifetime warranty", so it is almost certainly current — but this is no longer
+an old-vs-new drift, it is two numbers written the same morning by the same
+person, and one line in the brief template would end it.
+
+## 🚨 Two concepts assert the brand lied to its customers, and two deny it
+
+- **NK880 (Umar) and NK894 (Anas)** are a "public apology" concept whose hook
+  SUPER reads **"NorthernKnife just admitted they lied to over 147,000
+  customers"**, with a full-screen *"A PUBLIC APOLOGY FROM NORTHERNKNIFE"* card.
+  The "lie" resolves to *"We said we couldn't drop the price any further."*
+  NK881 (Santoku, Hammad) is named as a third sibling upstream, so the set is
+  3 cuts × 3 hooks = **9 assets** carrying that line. On Meta a hook is viewable
+  on its own, out of context.
+- **NK849 and NK851**, in the same queue, promise the opposite: *"There will be
+  no extension, no second round, and no secret discount after Black Friday"* and
+  *"No restock, no secret code, no next round."*
+
+So the queue simultaneously claims the brand secretly dropped the price and
+promises it never will. Both are Andy's. This is a positioning call for Mark,
+not a copy nit.
+
+## ⚠️ "Real b-roll only. No AI clips." against AI clips in the Visual column — 7 instances in one day
+
+The contradiction first logged on 2026-11-04 (NK679, NK778) is now the dominant
+production flag:
+
+| Brief | The brief says | The Visual column says |
+|---|---|---|
+| NK852 | *"Real b-roll only... No AI clips."* | *"B-roll clip of AI employees at the warehouse"* |
+| NK849 | same | *"Generate a clip of shelves at the warehouse"*, *"AI employees working at the warehouse"* |
+| NK851 | same | *"Generate a clip of an empty shell shelf"*, *"AI employees at the warehouse"* |
+| NK880 | same | *"Video clip of an AI brand owner of NK at the warehouse"* |
+| NK894 | same | *"AI brand owner talking at the warehouse"*, *"AI knife factory"* |
+
+**NK880 and NK894 are the serious ones**: a synthetic brand owner delivering a
+public apology on the company's behalf. Everything else here is a warehouse
+establishing shot.
+
+## 📌 Smaller findings from this run
+
+- **A `Mark` option was added to the `Editor` property** (the schema now ends
+  `..."Waheed", "Fahad", "Mark"`). No brief used it this run. If one ever does,
+  the mapping has no editor channel for Mark — the `#11-mark` fallback
+  (`C09QUL7S3GA`) is the sane target, but it is a fallback, not a roster entry,
+  so raise it rather than assuming.
+- **NK873 → Fahad is the first brief either new editor has received** through
+  this play. `C0CENMTDF9C` accepted the post and the thread reply, so the
+  2026-11-09 channel verification holds in practice as well as on paper.
+- **NK848 and NK861 ship three identical hooks.** Both say *"What if a knife
+  could be more than a knife."* for H1, H2 and H3, with empty Visual columns and
+  identical file-naming rows. Two editors therefore produce 6 deliverables with
+  nothing to compare at the hook level. The briefs intend a *visual* test
+  (*"the Visual column is left open on purpose"*), which is legitimate — but
+  NK861's *"H2 is the winning hook"* and NK848's *"H3 is the winning hook"* are
+  then meaningless. Say it is a visual test, or differentiate the hooks.
+- **NK851 misattributes two Feather facts to the Blackout**: *"Every batch takes
+  three months to make"* (NK909: *"No 500-unit batch and no 3-month restock —
+  those are Feather facts"*) and *"that finger loop grip no other knife has"*
+  (the LOKI Viking has it; the Blackout is its remake).
+- **NK894 says the Santoku has a "copper dragon"** — brass. The NK721 error,
+  recurring, and the subject of `brand-accuracy/santoku-bolster-discrepancy.md`.
+- **"Japanese" is back on Feather and Blackout briefs**: NK871 and NK873 both
+  say *"Forget spending $1000 on an overpriced Japanese blade"*, and NK873's
+  Visual asks for *"a $1,000 overpriced Japanese blade (grayed out)"*.
+- **`Src-HexClad` on NK865 and NK867** instructs *"the caption appears exactly
+  like theirs, with 'lifetime warranty' and the red text"* — copying a named
+  competitor's branded caption treatment, on the same claim they market. Closer
+  to the line than any previous inspo use; a call for Mark.
+- **The lifetime warranty is now load-bearing.** NK865/NK867's three hooks are
+  *"Spoiler alert, their knives come with a lifetime warranty, so I won't need
+  to"* — the concept collapses if it is not real or not lifetime. NK865, NK880,
+  NK894 and NK895 all add *"even the free ones"*. NK895/NK880/NK894 reference a
+  **lifetime warranty badge** asset, which is some evidence it is real. This
+  needs confirming, not noting.
+- **Mark's briefs annotate the offer position** (*"OFFER — lands here, ~62% in"*)
+  and the originality threshold (*"the originality gate fails on 6 shared
+  words"*). Both are new and both are worth copying into the template.
+- **NK843's premise is a customer-service exception**: an employee says *"look,
+  I'm not supposed to do this"* and grants a special arrangement. It resolves
+  warmly, but it promises an outcome support may be asked to honour.
+- **"3 months in the workshop, one blacksmith per blade"** recurs in NK844
+  (after NK793). NK847 has the correct form: *"runs of a few hundred, and when a
+  run is gone, the next one is months out. The forge sets the pace, not us."*
+- **"Northern Knife" as two words** in NK907 B2 and NK909 B1, both on-VO.
+- **"Batman"** as the Blackout's descriptor returns in NK873 (after NK769,
+  NK777) — three briefs, so house copy rather than a slip.
+- Typos in Visual cells that name no real thing: NK895 *"Beetlecliff"*, NK880
+  *"Bevel clip"*, NK873 *"Barrel clip"*, NK849 *"Broll clip uphand fold"*.
+
 ## Run history
 
 | Date | Posted | Fallback | Skipped (Callum) | Skipped (other) | Notes |
@@ -1960,3 +2125,4 @@ rosewood. Exactly what NK864's *"No wood species for the handle"* prevents.
 | 2026-11-10 | **14** | — | **12** (NK818–829) | — | **Run on "Assign task, due on friday".** Opening query returned 11, closing query found **3 more** — 14 in total. Posted, "Due on Friday" threaded, flipped. NK722/809→Naveed, NK723/728→Hasnain, NK726/730→Onyeka, NK727→Umar, NK729/808/810→Hammad, NK811→Renniel (his first since NK680), then the mid-run arrivals NK780→Naveed, NK813→Anas, NK816→Onyeka. Gate passed on all 14. **The closing re-query paid for itself a third time** (after NK708 and the 2026-11-05 sharpeners) — and this time the three arrivals were the batch's two best briefs and its worst-flagged one, so skipping it would have been expensive. **Connectors dropped twice mid-run**, once between posting and flipping; state was recovered from the posted-message record and the flips completed. **🔑 Headline: the new "10 Hooks" format multiplies every copy flag by ten.** NK808–811 each pair 10 hook lines with one LOCKED body (*"do not change a word"*, *"Deliver 10 files, H1 to H10"*) — **40 deliverables from 4 briefs**, all with exact H1–H10 file rows, which is a real mechanical improvement. But the NK184 body says **"A full feather etched from tip to handle"** plus the hand-hammer line, and the NK168 body says **"Free returns"** (banned by name in yesterday's briefs) and **"100,000 customers"** (superseded by 147,000). So the locked winners now stamp their defects ten times per brief, on `Evergreen`. Useful: the NK168 body is clean on "etched" — it says *"our sculpted, hand-forged blade"* — so one winner already demonstrates the fix for the other. **📌 Second: where "up to 67% off" comes from.** NK728's own AD INSPO says it is *"built around the 'six seven' meme (67% off)"* and a hook jokes that *"our brain-rotted intern"* suggested it — so the figure was picked for the meme, not calculated, and it is now in **six briefs** with three instructing a **"67%" on-screen super** against real tiers of 64% and 56%. **🚨 Third: NK810's H7 is the worst unhandled line in the corpus** (*"NorthernKnife, you can suck my balls"*) — in a hook, `Mkt-All`, `Evergreen`, with detailed direction for that hook and no censor note — while **NK722 and NK727 in the same batch show the handled form** (*"Bleep the word, censor it on screen"*). It is 1 of 10 hooks, so the fix is surgical. **Corrected a standing recommendation:** NK813 and NK816 call the Santoku's handle **ebony** (the Blackout's), not rosewood, so the rule line must be *name no wood at all* — written up above. **NK813 also contains the model answer to the Evergreen false-urgency flag**, refusing to fake a deadline and pivoting to stock scarcity; quote it rather than proposing wording. Also: the **Apple Watch** destruction clip in NK813/NK816 (trademark, and it is *her* watch on a SARAH brief); **NK816 carries both the cleared "new wife" line and the escalated "you're leaving"**, on a SARAH brief; the **Damascus 67-layer count in all seven Multi briefs**, still unruled since NK637; **the Multi set disagrees about whether Black Friday has started** (NK722/726 say live, NK727/728/730 say not yet) with four editors cutting simultaneously; and **stale briefs carry stale facts** — NK722–730 sat 11–13 days and NK730 still says 100,000 while NK722 is the batch's lone "copper bolster". **Callum's rows went 4→12 during the run**, all blank `Editor`, all untouched per the standing rule. Queue ends as Callum rows only. |
 | 2026-11-11 | **6** | — | **0** | — | **Run on "assign task due on friday".** NK689→Umar, NK690/812/817→Hammad, NK814→Onyeka, NK815→Anas. Gate passed on all 6. Posted, "Due on Friday" threaded, flipped; closing query empty. **The SQL/rows query allowance ran out** before the opening query (`usage_limit_reached`, resets within the hour), so the queue was read through the `Ready to Edit` saved view and cross-checked against the `In Progress` table view — both written up above, including the board view's **blank-`Editor` blind spot**, which hid 12 rows that run. **Connectors dropped four times** during the run, twice between posting and flipping; recovered from the posted-message record each time, nothing double-sent. **✅ Callum's self-routing confirmed first-hand:** the twelve rows left alone yesterday (NK818–829, blank `Editor`) were all `Assigned to Editor` with editors filled in by this morning. **🚨 Headline: the gender ultimatum reached the hooks.** NK817's H3 is *"If you don't get me this, I'm leaving"* and its H2 is *"you're not a real man"* — so it is now the ad's opening line, `Mkt-All`, on a **SARAH-avatar** brief. Full trajectory table added above (body → close → hook, Oct 20 to Nov 11). **And it tracks the male narrator perfectly**: every ultimatum brief is `Voice-AI-M`, while **NK812, NK814 and NK815 — the female-VO versions of the same two concepts — are clean and lose nothing**. NK815 is NK817's direct counterpart. One ruling on the male-VO variants covers it. **Second: "etched" is no longer only inherited** — NK815 is newly written with no locked body and still says *"a full feather etched from tip to handle"*, so fixing the source winners is necessary but not sufficient; NK689 shows the same NK184 script adapted cleanly by dropping the feather content. **Third: the Apple Watch gag hardened from joke to proof beat** — NK690 (24 Oct) declines to cut it, NK816/NK817 (10 Nov) do it — four briefs and a dedicated clip now exist; NK817 also names two different clip IDs for that one beat. **Corrected my own prediction:** the Santoku "ebony" error has no sibling source — NK814 and NK817, both Blackout, never say ebony — so it is misremembering, not find-and-replace, which strengthens the *name no wood* rule. **Also: NK690 invents a pricing mistake** as its premise (an "intern ticked the wrong box") for what is simply the standing `40% + Free Gifts` offer, and promises the discs "go back to being paid"; **NK689 puts the industry-conspiracy allegation in its hook**; **NK815 adds a competitor food-safety claim** (coatings flaking into food); and the sharpener's time-to-sharp now has **four** different values across the corpus, with NK689 ("sixty seconds") and NK690 ("under five minutes") written the same day. **Clean and worth citing: NK812 and NK814 both carry the honest-urgency language** (*"We're not going to fake a deadline to make you hurry"*), so all three Sorry To The Wives briefs have it. |
 | 2026-11-12 | **11** | — | **0** | — | **Run on "Assign task due on Saturday"** plus **"For NK855-NK859 tell them to prioritize this as we want to launch it before weekend"**. NK840/857/859/862→Hammad, NK841/855/856/858→Onyeka, NK842→Anas, NK863→Naveed, NK864→Hasnain. Gate passed on all 11. Posted in `createdTime` order, threaded, flipped; closing query **completely empty, no Callum rows**. Mark's extra instruction was carried in the **thread reply** on the five named briefs, alongside the due day, per the rule that a deadline he supplies goes in the reply and not the message: *"Due on Saturday. Please prioritize this one — we want to launch it before the weekend."* The other six got the plain `Due on Saturday`. **Largest single run of the play, and the first with `Strategist` = `Mark`** (NK862/863/864 are his own briefs). **🚨 Headline, and it is the reason this run needed a report rather than a count: the five briefs Mark asked to fast-track are built on the two lines he has not ruled on.** Both stopped being stray sentences and became **named concepts with their own IDs**, delivered **on camera by a real named creator** (`Voice-Creator-M`, Ryan Kirby): **NK857 "NK Suck My Balls (R14B2)"** has three uncensored-profanity hooks and no censor instruction, where NK722/NK727 bleep much milder words; **NK855/856/858/859 "New Wife Santa (R2B8)"** is the gender ultimatum Mark cleared on NK644 *explicitly as a one-off*. **🔑 Root cause found, and it is a one-place fix: the ultimatum line is pasted into the MIKE persona boilerplate** in every brief (*"For him we can do more hard marketing 'Ïf you're wife didn't get you this gift, you need a new wife'"*), so writers read it as approved house copy — editing that one sentence stops it at source for all future briefs. **🎯 Counterweight in the same queue: Mark's NK862–864 are the compliance model and fix by instruction.** Each carries an explicit `Do not:` line encoding exactly what this play keeps flagging — *never "etched"/"engraved"/"hand-finished"*, *the opener is in the handle, never the blade or spine*, *never "Japanese" or "Japan"*, *the bolster is brass*, **"No wood species for the handle"** (his own wording for the open Santoku rule — use it), and **"no 'up to' figures"**. They also annotate every changed line as a before→after diff with a reason, the only traceable briefs in the corpus. **The Apple Watch item closes**: all three swap *"your favorite lipstick"* → *"your Apple Watch"* annotated "Mark:", so the destruction gag is his own deliberate call, not a slip. **Two multipliers in one day**: NK855–859 say *"three times sharper"*, NK862–864 say *"five times sharper"* (carried unchanged from the NKEOFY005 winner, not marked Changed) — so the NK646-class fix has not reached the source winners. **"up to 67% off" reaches nine briefs** (NK840/841/842 add three) and is now contradicted inside its own batch by Mark's ban — nothing left to establish, it needs a decision. Also in those three: *"the number one Christmas gift in 2025"*, and NK840's *"feather etched from the tip to the handle"* sitting in the same queue as Mark's ban on the word. **NK841 gives the Santoku a "carved ebony handle"** — handle-wood error, third time in ebony, third wood overall. **NK842 clean** (finger loop is correct for the Blackout per NK801/NK803). **Good discipline worth naming:** all three `Better Call` briefs instruct *"Nothing about tariffs anywhere, on screen or in the VO"*, stripping the source NKFD071's tariff premise rather than letting it ride. Other flags on the fast-tracked five: *"those other bullshit knives"* (more uncensored profanity), a **garbled persona block** listing SARAH, two contradictory DONs, MIKE and COLE while `Avatar` is `VANCE`, NK856/858's stale *"100,000 customers"*, and NK858's non-catalog *"ODIN Chef Knife"*. |
+| 2026-11-16 | **17** | — | **0** | — | **Run on "Assign task due on Thursday"**, repeated four times by Mark as worker restarts made the session look stalled — each repeat was the same signal, not a new one, and the queue was re-read before each wave rather than reusing a list. **Largest run of the play by a wide margin, and it arrived in three waves** as Andy and Mark released briefs while the run was in progress: **(1)** NK843/844/847/848/895→Hammad; **(2)** NK852→Hasnain, NK861→Naveed, NK865→Anas, NK871→Hammad, NK880→Umar, NK907→Anas; **(3)** NK849→Anas, NK851→Renniel, NK867→Hammad, **NK873→Fahad**, NK894→Anas, NK909→Hammad. Gate passed on all 17 (NK849 and NK851 have 7 hooks and 7 matching File naming rows). Posted in `createdTime` order per wave, "Due on Thursday" threaded under each, flipped; closing query **empty**, no Callum rows. **✅ NK873 is the first brief either new editor has received** — `#11-fahad-editing` (`C0CENMTDF9C`) took the post and the thread reply, so the 2026-11-09 verification holds live. **🆕 A `Mark` option now exists on the `Editor` property**; unused this run, and there is no editor channel for it (see the note above). **🚨🚨 Headline, and it reframes every copy flag this play has filed: Mark and Andy are now writing opposite rules into the same queue on the same day.** The full table is above. Mark's briefs encode, as explicit `Do not:` lines, the rules this spec has been reporting for two months — *never "etched"*, *the opener is in the handle not the blade or spine*, *no "up to" figures*, *no price in any market*, *never manufactured urgency*, *no wood species for the handle*, *the LOKI Viking is the bestseller not the Blackout* — while Andy's briefs in the same queue break them: **"etched" 10× across 5 briefs**, **"on the back" 6× across 4**, **"up to 67% off" now 18 briefs**, a price on `Mkt-All`, and two 7-hook concepts (NK849, NK851) built entirely on unverifiable stock scarcity on Evergreen. **The fix is to move Mark's `Do not:` block into the brief template** — he has written every line already; they just do not travel. **🔑 Two root causes found, both one-place fixes.** NK909 explains six runs of the opener error in a sentence: *"The LOKI Reaper is the one with the opener in the blade — do not mix them up"* — it is the wrong product's fact, not carelessness. And NK907 settles the NK654 uniqueness compound: *"The variation answer is the handle, not the blade. Rosewood grain and hammer marks vary. The feather does not. Do not let a visual imply 2 blades have different feathers."* **🎯 Mark went back into shipped winners and corrected them line by line.** NK844's Note column re-records four lines out of the NK222 winner — *"a tiger-striped face"* → *"a tiger across the face"*, *"dragon sculpted into the brass bolster"* → *"a textured brass bolster"*, *"notched into the blade"* → *"built into the handle"*, and *"Free returns."* cut — which closes the NK696/NK697 tiger-stripe flag and the NK168 free-returns flag at source. **And the single most-flagged line in the engagement is fixed: NK848 and NK861 both re-record *"A full feather etched from tip to handle"* → *"A full feather from tip to handle"*** out of the locked NK184/NK326 body, the line first flagged on NK569 on 2026-09-14. NK847 removes it by rewriting instead. **✅ Three open items answered by Mark's own wording** (Santoku handle rule, who the bestseller is, "black right through" now formally unverified with a verified-facts list). **🚨 But his rules do not reach all of his own briefs either**: *"most viral knife of 2026"*, which NK907 explicitly cuts, survives in NK848 and NK861; *"free returns"*, which NK844 cuts, appears in NK907 and NK909; and **the customer count forked the same morning** — NK843/NK847 say 147,000, NK907/NK909 say 100,000. **🚨 The queue also claims both sides of the brand's pricing integrity**: NK880 and NK894 are a public-apology concept whose hook SUPER reads *"NorthernKnife just admitted they lied to over 147,000 customers"* (3 cuts × 3 hooks = 9 assets, NK881 upstream), while NK849 and NK851 promise *"no secret discount"* and *"no secret code"*. Positioning call, not a copy nit. **⚠️ "No AI clips" against AI clips in the Visual column hit 7 instances in one day** (NK849, NK851, NK852, NK880, NK894) — and on NK880/NK894 the AI clip is a **synthetic brand owner delivering the apology**. Also: NK851 gives the Blackout two Feather facts (3-month batch, *"finger loop grip no other knife has"* — the Viking has it); NK894 says the Santoku dragon is **copper**; NK895 says *"carved ebony handle"* on the Santoku (4th ebony) and calls the Feather *"Our best seller"*; **"Japanese" returns** on NK871 and NK873; `Src-HexClad` on NK865/NK867 copies a named competitor's caption treatment on the same claim they market; **the lifetime warranty is now load-bearing** (NK865/NK867's three hooks collapse without it, four briefs add *"even the free ones"*, and a warranty badge asset is referenced); NK848/NK861 ship **three identical hooks** so their "winning hook" notes are meaningless; and *"3 months in the workshop"* recurs in NK844 while NK847 carries the correct form. |
