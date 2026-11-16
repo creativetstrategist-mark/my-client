@@ -62,7 +62,7 @@ The conversion window is short. When the offer is right, the close is fast.
 
 **Words that convert:** dropped a bomb · buy 2 get 2 free · instead of hiking
 prices · we made a better call · this offer won't stick around · grab it while
-you still can · over 100,000 customers · **legendary** · you'll pay less · back
+you still can · over 147,000 customers · **legendary** · you'll pay less · back
 in stock · craftsmanship over cheap knives · your husband or dad or you · links
 below
 

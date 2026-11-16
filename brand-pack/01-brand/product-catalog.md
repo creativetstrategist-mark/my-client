@@ -86,7 +86,7 @@ factual error. Do not build briefs around these.
 | LOKI Reaper | Opener notched **in the blade**. **No curved tip.** |
 | Rolling Sharpener | Separate line. **Never** reference knives, knife names, grilling or BBQ. |
 
-Brand-level claims ("100,000+ customers") work on any product.
+Brand-level claims ("147,000+ customers") work on any product.
 **Never borrow another SKU's review count.**
 
 ---

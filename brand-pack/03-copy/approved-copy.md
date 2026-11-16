@@ -12,19 +12,28 @@ exception.** Everything around them gets written fresh, every time.
 ## The proof stack — fixed
 
 ```
-100,000 customers. Lifetime warranty. 30-day money-back trial. Free returns.
+147,000 customers. Lifetime warranty. 30-day money-back trial. Free returns.
 Free shipping.
 ```
 
 Lands after the CTA, before the parting jab. Drop or reorder elements to fit
 pacing; do not embellish them. Shipped variants:
 
-> "100,000 customers. Lifetime warranty. 30-day money-back trial. Free returns."
-> "Add two, two more free, your pick. 100,000 customers. Lifetime warranty.
+> "147,000 customers. Lifetime warranty. 30-day money-back trial. Free returns."
+> "Add two, two more free, your pick. 147,000 customers. Lifetime warranty.
 > 30-day money-back. Free returns."
 
 **Never borrow another SKU's review count.** Brand-level claims are portable;
 per-product ones are not.
+
+> 📌 **The count moved to 147,000 on 2026-11-16** (strategist: *"for updated
+> reference we have now 147,000 customers instead of 100,000"*). It was 100,000
+> before that. **Three places were deliberately left at the old number** — the
+> archived winning briefs in `04-winning-briefs/` (NK306, NK420) and the
+> historical rows in `daily-ad-rewrites/`, because those record what actually
+> shipped, and rewriting them would falsify the corpus. **Anything new takes
+> 147,000.** The number is **customers, never reviews or stars**, and it is
+> never inflated past the current figure.
 
 ---
 

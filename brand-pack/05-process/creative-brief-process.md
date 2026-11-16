@@ -228,7 +228,7 @@ Fixed shape: **CTA → proof stack → parting jab that loops back to the hook.*
 
 The proof stack is house language, used close to verbatim:
 
-> "100,000 customers. Lifetime warranty. 30-day money-back trial. Free returns.
+> "147,000 customers. Lifetime warranty. 30-day money-back trial. Free returns.
 > Free shipping."
 
 **"Link's below" is always the last line of the close.** The proof stack runs
@@ -245,7 +245,7 @@ table cells:
 |---|---|
 | `30 days` / `30-day money back` | "thirty days" |
 | `500 in a run` | "five hundred in a run" |
-| `100,000 customers` | "a hundred thousand customers" |
+| `147,000 customers` | "a hundred and forty-seven thousand customers" |
 | `$99.90` / `$79.90` | "ninety-nine ninety" |
 
 Spelled-out numbers read as soft in a direct-response close and force the VO to
@@ -270,7 +270,7 @@ it", not an unnamed "professional kitchen". Source ads lean on this constantly
 pack to swap in. **When a mechanism needs a claim to interrogate, use the
 brand's own** — "the last knife you'll ever need" is house language and is a big
 enough claim to carry a doubt. Volume proof is the only authority we have, and
-it is **100,000 customers, never inflated.**
+it is **147,000 customers, never inflated.**
 
 **Never name a cut of meat — "meat" is the word.** No brisket, no roast, no
 joint, no steak, in copy or in a visual direction. Cut names are market-coded
@@ -961,7 +961,7 @@ routine:
 - **BJORN Santoku** — never the word "Japanese", in any usage.
 - **LOKI Blackout** — opener in the **handle**.
 
-Brand-level claims ("100,000+ customers") are portable across products.
+Brand-level claims ("147,000+ customers") are portable across products.
 Per-SKU review counts are not.
 
 ---
