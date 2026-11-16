@@ -533,6 +533,22 @@ exists on these briefs. Write the person into the b-roll instead and say
 plainly that there is no eye line to camera, or the editor will shoot a read
 that the VO then talks over.
 
+#### A dialogue cut needs 2 voices, said as an instruction
+
+Ruled by the strategist 2026-11-16, across NK907-909: *"on each of them add
+instructions tell it there that to use different VO of customer and founder."*
+
+On any `Str-Dialogue` brief, the page carries its own **🎙️ callout** — not a
+line buried in the persona block — stating that the 2 parts are **2 separate
+ElevenLabs voices**, generated as **separate takes** and cut together. Describe
+each voice distinctly, and say that one read switching tone will come back in
+revision. A single VO doing both halves is the default failure mode and it has
+to be closed off explicitly on every cut.
+
+The `voice` field in the name holds **one** value, so it carries the dominant
+speaker (the founder) — `Voice-AI-M` on all 3 of NK907-909. **The second voice
+exists only in the callout**, which is exactly why the callout is mandatory.
+
 **Retroactively: no.** NK602 and NK604 were corrected the day they were written
 because nothing had been cut yet. The earlier UGC briefs were left alone, under
 the Status rule in C.3.0:
@@ -672,16 +688,23 @@ persona callout, because the editor will otherwise generate one read.
    | Against The Grain (NK620-622) | **Feather (NK620)** |
    | They Claim (NK655-657) | **Santoku (NK656)** |
    | Take The 30 Days (NK661-663) | **Blackout (NK663)** |
-   | What if Dummy (NK907-) | **— runtime, see note below** |
+   | What if Dummy (NK907-909) | **Blackout (NK909)** — 2nd in a row, runtime-forced |
 
-   ⚠️ **NK907 is the first time rule 2 took the Feather off Hammad.** Rotation
-   said Feather (his last in this routine was the Blackout on NK663) and the
-   Feather was the only cut written that day — but the script is a 13-exchange
-   dialogue at **~133 seconds**, well past his 90-second cap, so it went to Anas.
-   **Runtime wins, as the rule says**; this is the collision the rule anticipates,
-   not an exception to it. Rule 4 is satisfied on the **next** cut of this concept
-   — give Hammad the Santoku or the Blackout when they are written, and record
-   which, because the Feather slot is spent.
+   ⚠️ **NK907-909 is the first time rule 2 drove the whole concept's assignment.**
+   Rotation said Feather (his last in this routine was the Blackout on NK663), but
+   the Feather is a 13-exchange dialogue at **~133s** and the Santoku landed at
+   **~94s** — both past his 90-second cap. The Blackout was written short on
+   purpose (**~65s**, MIKE's register), so it was the only cut he could take, and
+   he took it. **That is a second Blackout in a row for him**, which rotation
+   exists to prevent; runtime outranks rotation, so it stands, but it is flagged
+   here so the next concept does not make it 3. **Next for Hammad: Feather or
+   Santoku, and write one of them inside 90 seconds.**
+
+   📌 **Length is a legitimate trio axis, and it drives assignment.** When a
+   concept's cuts differ in length, decide which cut is short *before* assigning,
+   because that is the one Hammad and Onyeka can take. On this concept the short
+   cut fell to the Blackout for register reasons (MIKE gets answered fast) and
+   that happened to collide with rotation. Checking both at design time avoids it.
 
    ✅ **Load exception lapsed, 2026-10-13. Rule 4 applies again.** The exception
    below was scoped to one week (*"this week"*) and that week has passed. Both
