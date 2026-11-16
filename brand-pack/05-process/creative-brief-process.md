@@ -600,8 +600,30 @@ persona callout, because the editor will otherwise generate one read.
 
 ### D.1.1 Editor assignment
 
+> 🗣️ **The editor is the strategist's call. Ask him, every batch.** Ruled
+> 2026-11-16: *"Perhaps you can ask me who's editors to choose each task."* This
+> came straight after the load-heuristic breach logged below, and it replaces
+> picking a name autonomously.
+>
+> **The criteria below did not go away — they changed job.** They are no longer
+> a decision procedure; they are how you build the shortlist you bring to him:
+>
+> 1. Use rules 1-3 to rule names **out** — never Huzaifa, not Renniel or Hammad
+>    while paused, nobody over the runtime cap, nobody already holding a cut of
+>    this concept.
+> 2. Put the remaining valid names to him **with the runtime** next to them, so
+>    the cap question is already answered when he picks.
+> 3. Rule 5 (Hasnain and Umar) is a **recommendation to lead with**, not a
+>    decision to make silently.
+>
+> **If he is not reachable when the brief is written**, do not guess and do not
+> fall back on load: leave the `Editor` property blank, write the literal
+> `EDITOR` into the naming strings (§D.3), say so, and fill both in when he
+> answers. That path already existed for exactly this.
+
 **Assign an editor when the brief is created, then set `Status` to
-"Ready for visuals".** A new brief does not get left unassigned.
+"Ready for visuals".** The editor comes from the strategist (see above); a new
+brief does not get left silently unassigned.
 
 **Active roster — seven names, and Hammad is off it for now.**
 Umar · Onyeka · Anas · Hasnain · Naveed · **Waheed** · **Fahad**
