@@ -689,6 +689,7 @@ persona callout, because the editor will otherwise generate one read.
    | They Claim (NK655-657) | **Santoku (NK656)** |
    | Take The 30 Days (NK661-663) | **Blackout (NK663)** |
    | What if Dummy Black Friday (NK907-909) | **Blackout (NK909)** — 2nd in a row, runtime-forced |
+   | The Lazy Way Black Friday (NK910-) | **Feather (NK910)** — rotation debt cleared |
 
    ⚠️ **NK907-909 is the first time rule 2 drove the whole concept's assignment.**
    Rotation said Feather (his last in this routine was the Blackout on NK663), but
@@ -699,6 +700,11 @@ persona callout, because the editor will otherwise generate one read.
    exists to prevent; runtime outranks rotation, so it stands, but it is flagged
    here so the next concept does not make it 3. **Next for Hammad: Feather or
    Santoku, and write one of them inside 90 seconds.**
+
+   ✅ **The NK907 debt is settled on NK910.** Rotation had been owed a Feather
+   since runtime took it off him on NK907, and the next concept's Feather cut was
+   written at **~72s** partly for that reason — a VANCE monologue is naturally
+   short, so the rotation and the cap agreed for once. Next for Hammad: Santoku.
 
    📌 **Length is a legitimate trio axis, and it drives assignment.** When a
    concept's cuts differ in length, decide which cut is short *before* assigning,
