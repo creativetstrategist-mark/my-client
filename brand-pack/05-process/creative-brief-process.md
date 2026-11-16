@@ -548,6 +548,40 @@ the Status rule in C.3.0:
   trio's results unreadable. **Raised with the strategist rather than decided
   here.**
 
+### D.1.3 When the strategist hands you one of our own scripts
+
+Ruled in practice 2026-11-16, on NK907. The strategist pasted a script with a
+concept name and "add this on the brief". It was not an outside inspo ad — it
+was the body of **NK184 "What if | CTA | Feather"**, a live US + AU winner,
+recast from a one-voice "what if" monologue into a two-hander dialogue.
+
+**Check the pasted script against the database before writing.** A script that
+names our own products, our own offer and our own restock window is probably
+ours. Search the `Concept Name` column for its hook device before assuming it
+is new material — the "What if" family alone is 40+ pages off **NK184**,
+**NK326** and **NK146**.
+
+Two things change when the source turns out to be ours:
+
+| | Outside inspo ad | Our own live script |
+|---|---|---|
+| `Category` | `Net New` | **`Iteration`**, and tick the `Iteration` checkbox |
+| `Concept Name` | `<Concept> - <Product>` | `<Concept> (<parent ID>) - <Product>` |
+| `source` in the name | `Src-<Brand>` | `Src-None` |
+| `iteration` in the name | `Ite-None` | the field that actually changed — `Ite-Reskin` on NK907, since the delivery format changed and the beats did not |
+
+**This overrides the standing `Net New` default**, which was set for adaptations
+of outside ads and does not fit here: tagging a brief derived from NK184's own
+copy as "Net New" is wrong in the database and misleads whoever reads it next.
+The house convention is unambiguous — NK184 is itself `Iteration`, and every
+sibling carries its parent in parentheses (`What if Iteration 1 Black Friday
+(NK184)`, `Return Feather Dummy (NK222) - Iteration`). Flag the override to the
+strategist when you use it; it is one property to revert if they disagree.
+
+**`Str-Dialogue` is the value for a two-hander**, and the second speaker needs a
+second AI voice. The `voice` field holds one value — name the other voice in the
+persona callout, because the editor will otherwise generate one read.
+
 ### D.1.1 Editor assignment
 
 **Assign an editor when the brief is created, then set `Status` to
@@ -638,6 +672,16 @@ the Status rule in C.3.0:
    | Against The Grain (NK620-622) | **Feather (NK620)** |
    | They Claim (NK655-657) | **Santoku (NK656)** |
    | Take The 30 Days (NK661-663) | **Blackout (NK663)** |
+   | What if Dummy (NK907-) | **— runtime, see note below** |
+
+   ⚠️ **NK907 is the first time rule 2 took the Feather off Hammad.** Rotation
+   said Feather (his last in this routine was the Blackout on NK663) and the
+   Feather was the only cut written that day — but the script is a 13-exchange
+   dialogue at **~133 seconds**, well past his 90-second cap, so it went to Anas.
+   **Runtime wins, as the rule says**; this is the collision the rule anticipates,
+   not an exception to it. Rule 4 is satisfied on the **next** cut of this concept
+   — give Hammad the Santoku or the Blackout when they are written, and record
+   which, because the Feather slot is spent.
 
    ✅ **Load exception lapsed, 2026-10-13. Rule 4 applies again.** The exception
    below was scoped to one week (*"this week"*) and that week has passed. Both
@@ -897,6 +941,32 @@ failure of the two.
 Check the offer paragraph specifically — writing three product versions off one
 inspo in one sitting is exactly the condition that produces three identical
 offer paragraphs. That is banned outright (C.3).
+
+### F.1 The gate bites hardest on our own winners
+
+Worked case, 2026-11-16, NK907. A script supplied by the strategist was run
+against its parent **NK184** before any of it was written into a brief: **116
+overlapping runs of 6+ consecutive words** — effectively every line of the
+founder's side, including whole sentences ("a full feather etched from tip to
+handle", "no two hands hammer the same way", "you'll keep for life and hand down
+when the time comes").
+
+**NK184 is live and winning in the same ad account.** Shipping its sentences
+again under a new Creative ID is duplicate creative, and it cannibalises the
+winner rather than iterating on it. So the gate is not a formality here — it is
+the thing that makes the iteration worth running.
+
+**The split that worked:** in a dialogue recast, the *new* character's lines are
+new writing and clear the gate on their own; the lines that fail are the ones
+lifted from the parent's voice. On NK907 the sceptic's 13 lines came through
+almost untouched (1 needed a tweak — "never had to buy another knife" was a
+6-word hit) and all 13 of the founder's answers were rewritten. **Keep what the
+strategist actually wrote; rewrite what the parent wrote.**
+
+Run the check both ways — against the parent *and* against any sibling using the
+same device. NK907 also had to clear **NK651**, which supplies the house phrasing
+for the Feather's pattern ("the feather runs the whole length of the blade") and
+is equally live.
 
 ---
 
