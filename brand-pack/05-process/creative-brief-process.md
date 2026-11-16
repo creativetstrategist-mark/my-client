@@ -780,6 +780,17 @@ Umar · Onyeka · Anas · Hasnain · Naveed · **Waheed** · **Fahad**
    > **plan one cut under 90 seconds**; when that genuinely cannot be done, say
    > so rather than assigning him a script he cannot edit.
 
+5. **Prefer Hasnain and Umar.** Ruled by the strategist 2026-11-16: *"Hasnain
+   and umar is doing great you can assign it to them."* A **performance**
+   signal, not a load one — when rules 1-3 leave a free choice, these two are
+   the default, and the two new editors (Waheed, Fahad) are the other place the
+   strategist named for new batches. Anas, Naveed and Onyeka stay fully active;
+   nobody was taken off.
+
+   Note what this instruction implies: **Umar is the heaviest-loaded name in the
+   corpus at 193 briefs, and he is who the strategist is asking for.** Quality
+   decides, capacity does not.
+
 With Renniel paused, rule 2 and rule 3 together leave a thin bench: a trio that
 runs long uses three of the four unrestricted editors (Umar, Anas, Hasnain,
 Naveed) and there is no slack left. If a fourth long brief appears in the same
@@ -787,7 +798,21 @@ concept, say so rather than reaching for Hammad, Onyeka or Renniel.
 
 **Load is not a criterion.** Do not balance by open-brief count and do not skip
 an editor because they look busy — they carry what they are given. Pick on the
-three rules above and nothing else.
+rules above and nothing else.
+
+> 🚩 **This rule was broken four times on 2026-11-16 and the strategist caught
+> it.** Editors were picked by counting recent briefs and reaching for whoever
+> looked lightest: **NK907 → Anas** ("lightest-loaded unrestricted editor across
+> NK886-906"), **NK908 → Naveed** over Umar and Hasnain, and **NK911 → Anas** /
+> **NK912 → Onyeka** explicitly to "spread load off the four heavy names."
+> Rule 5 above is the correction, and it points the other way: the strategist
+> asked for **Umar**, who is the single heaviest-loaded editor on the board.
+>
+> **The failure mode to watch for:** open-brief counts are easy to query, and
+> quality is not, so load quietly becomes the tie-breaker whenever the rules
+> leave a free choice. It is not one. When rules 1-3 leave two valid names,
+> use rule 5 — and if rule 5 does not separate them, pick either and say which,
+> rather than inventing a metric.
 
 Under this rule a brief should almost never ship unassigned. If one genuinely
 must, leave the property blank and write the literal `EDITOR` into the naming
