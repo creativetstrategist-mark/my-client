@@ -688,13 +688,13 @@ persona callout, because the editor will otherwise generate one read.
    | Against The Grain (NK620-622) | **Feather (NK620)** |
    | They Claim (NK655-657) | **Santoku (NK656)** |
    | Take The 30 Days (NK661-663) | **Blackout (NK663)** |
-   | What if Dummy (NK907-909) | **Blackout (NK909)** — 2nd in a row, runtime-forced |
+   | What if Dummy Black Friday (NK907-909) | **Blackout (NK909)** — 2nd in a row, runtime-forced |
 
    ⚠️ **NK907-909 is the first time rule 2 drove the whole concept's assignment.**
    Rotation said Feather (his last in this routine was the Blackout on NK663), but
-   the Feather is a 13-exchange dialogue at **~133s** and the Santoku landed at
-   **~94s** — both past his 90-second cap. The Blackout was written short on
-   purpose (**~65s**, MIKE's register), so it was the only cut he could take, and
+   the Feather is a 13-exchange dialogue at **~138s** and the Santoku landed at
+   **~97s** — both past his 90-second cap. The Blackout was written short on
+   purpose (**~69s**, MIKE's register), so it was the only cut he could take, and
    he took it. **That is a second Blackout in a row for him**, which rotation
    exists to prevent; runtime outranks rotation, so it stands, but it is flagged
    here so the next concept does not make it 3. **Next for Hammad: Feather or
@@ -753,6 +753,27 @@ three rules above and nothing else.
 Under this rule a brief should almost never ship unassigned. If one genuinely
 must, leave the property blank and write the literal `EDITOR` into the naming
 strings (§D.3).
+
+### D.1.4 Never use `replace_all_matches` on a brief page
+
+Learned the hard way on NK907, 2026-11-16, while retrofitting the Black Friday
+event into the naming strings. A `notion-update-page` / `update_content` call
+carrying several `replace_all_matches: true` operations **emptied every cell of
+the Note column** in both the HOOK and BODY tables — 16 cells — and renamed the
+BODY header cell from `Note` to `NOTE`. The call returned success with a single
+unrelated `no_match` warning, so **nothing in the result said the notes were
+gone.** It was only caught by re-fetching the page.
+
+- **Do not pass `replace_all_matches` on these pages.** A brief is one big pair
+  of tables; a broad replace can take the table structure with it.
+- To change a value that genuinely repeats — the `event` or `Len-` field across
+  a batch name and 3 file names — **rebuild the page with `replace_content`**,
+  which is atomic and under your control, or target each occurrence with a
+  unique surrounding anchor.
+- **Re-fetch after any structural edit before reporting it done.** A clean
+  result is not evidence the page is intact.
+- Recovery is cheap if the page was authored in-session: `replace_content` with
+  the full, known-good markdown. All 3 of NK907-909 were rebuilt that way.
 
 ### D.2 Creative ID series
 
@@ -936,6 +957,47 @@ routine:
 
 Brand-level claims ("100,000+ customers") are portable across products.
 Per-SKU review counts are not.
+
+---
+
+### C.8 Black Friday — the seasonal refusal has lapsed
+
+**The standing "no seasonal CTAs, no Black Friday" refusal is dead.** It was
+recorded earlier in this routine's life and the strategist overrode it directly
+on 2026-11-16: *"tailor it to Black Friday Sale same offer of Buy 2 Get 2 FREE."*
+The database had already moved — NK887-906 are almost entirely Black Friday
+concepts. Do not re-raise it, and do not refuse a seasonal frame again unless
+the strategist says the season is over.
+
+**What tailoring to Black Friday actually changes:**
+
+| | |
+|---|---|
+| `Concept Name` | `<Concept> Black Friday (<parent>) - <Product>` — the house pattern, as on NK847 and NK752 |
+| `event` in the name | `Black Friday` (not `BFCM`, not `Evergreen`) |
+| `Offer` | **unchanged.** B2G2 stays B2G2 — Black Friday is the occasion, not a different offer |
+| The copy | the **offer beat** names the event, and nothing else moves |
+
+**Three things that do not change, and they are the whole discipline:**
+
+1. **"Sale" and "discount" stay banned in the read.** §C.3 and `approved-copy.md`
+   are not suspended by the season. The strategist's phrase was *"Black Friday
+   Sale"* — that names the campaign, not the line. Say "Black Friday"; frame the
+   offer as a decision the brand made. Raise it once if a brief genuinely needs
+   the word, rather than quietly shipping it.
+2. **Never invent a deadline.** No end date, no clock, no countdown graphic, no
+   "hurry". We know the event; we do not know its cut-off, and a fabricated one
+   is the manufactured urgency §C.3 bans.
+3. **Black Friday is not a second scarcity claim.** On the Feather it
+   *accelerates* the real 500-unit batch ("the next one is 3 months out, and
+   Black Friday is the week it goes") rather than stacking a third deadline on
+   top. **On the Santoku and the Blackout it is the only timing claim available**,
+   because the batch cap and the restock window are Feather-only facts.
+
+**The offer beat is still per-product.** Adding the same "it's Black Friday"
+sentence to three cuts recreates the identical-offer-paragraph failure (§C.3,
+§F) — NK907-909 each name the event differently, and the gate was re-run after
+the change.
 
 ---
 
