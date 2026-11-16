@@ -689,7 +689,7 @@ persona callout, because the editor will otherwise generate one read.
    | They Claim (NK655-657) | **Santoku (NK656)** |
    | Take The 30 Days (NK661-663) | **Blackout (NK663)** |
    | What if Dummy Black Friday (NK907-909) | **Blackout (NK909)** — 2nd in a row, runtime-forced |
-   | The Lazy Way Black Friday (NK910-) | **Feather (NK910)** — rotation debt cleared |
+   | The Lazy Way Black Friday (NK910-912) | **Feather (NK910)** — rotation debt cleared |
 
    ⚠️ **NK907-909 is the first time rule 2 drove the whole concept's assignment.**
    Rotation said Feather (his last in this routine was the Blackout on NK663), but
