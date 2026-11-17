@@ -2512,6 +2512,64 @@ assume one is a mistake.
   NK913 *"Biro clip"* and *"Montage clip of header"*, NK896 *"On touchpad"* and
   *"Buy to get to click"*.
 
+## ✅ Notion edits made on Mark's instruction, 2026-11-17: NK914 + the opener-tip phrase
+
+Mark's instruction, verbatim: *"Fix NK914 and the bottle opener tip template"*.
+Five pages edited. **These are the third, fourth, fifth, sixth and seventh page
+edits this play has made** — after NK679 (weight claim) and NK795
+(`Andy_EDITOR` → `Andy_Anas`), both also on his explicit instruction.
+
+### NK914 — the Reaper's facts were under the Blackout's name
+
+Block 8, two cells:
+
+| | Before | After |
+|---|---|---|
+| Copy | *"**The LOKI blackout.** The opener is notched right into the blade, and the tip runs straight."* | *"**The LOKI Reaper.** The opener is notched right into the blade, and the tip runs straight."* |
+| Visual | *"Montage clip of **blackout** showing the blade and handle and **bottle opener tip**"* | *"Montage clip of **the LOKI Reaper** showing the blade and handle, the opener notched into the blade, the tip running straight"* |
+
+The VO's two facts were already the Reaper's and were left untouched — only the
+product name was wrong. The replacement wording for the Visual cell is taken
+from the brief's own red callout (*"LOKI Reaper: only 2 facts. The opener is
+notched into the blade, and the tip runs straight"*) rather than invented, and
+it matches the roster note (*"the LOKI Reaper takes its slot"*).
+
+**Verified by re-reading the page after the edit**, per the NK795 rule. A
+second pass tidied a stray space before a comma that the first edit left in the
+Visual cell.
+
+### The opener-tip phrase — four more pages
+
+`and bottle opener tip` → `and the bottle opener in the handle` in the Visual
+column of **NK912, NK913, NK915** (Mark's) and **NK919** (Andy's). All four are
+genuinely the Blackout, where the opener is in the handle.
+
+**NK913 spot-checked by re-read:** its block 8 Visual cell and its VO now agree
+(*"...and the bottle opener in the handle"* / *"the bottle opener lives in the
+handle, not the blade"*), where before they contradicted each other inside one
+table row. NK912, NK915 and NK919 returned clean with no warnings; a
+`content_updates` operation that matches nothing is reported in `warnings`, so a
+clean return means the replacement applied.
+
+### Editors were told, because they already had the briefs
+
+All five briefs were already `Assigned to Editor` and posted, so each fix was
+noted as a plain thread reply under the brief's own message — the NK646 and
+NK679 precedent (*"changed it and noted it in Umar's thread, since he already
+had the brief"*). Fahad got the NK914 correction naming the Reaper; Onyeka
+(×2, for NK912 and NK919), Umar and Waheed got the one-line opener note.
+
+### What was deliberately left alone
+
+- **The `bottle opener on the back` wording in the VO of NK851, NK867, NK873 and
+  NK894** — a different string, in the spoken copy rather than the Visual
+  column, and all four are Andy's. Mark's instruction named the *tip* phrase, so
+  these were not touched. **They are still wrong** and are the remaining half of
+  this error class.
+- **NK919 is part of the "Chinese Spy" concept** that this log recommends
+  pulling. Fixing its Visual cell does not change that recommendation; it was
+  edited because it carried the phrase Mark asked to be fixed.
+
 ## Run history
 
 | Date | Posted | Fallback | Skipped (Callum) | Skipped (other) | Notes |
