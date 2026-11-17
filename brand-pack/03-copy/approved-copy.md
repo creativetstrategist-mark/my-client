@@ -57,6 +57,12 @@ copy.
 
 **Never say "discount" or "sale".** Frame it as a decision the brand made:
 
+> 📌 **Seasonal exception, 2026-11-17 (strategist):** on **Black Friday briefs
+> only**, the read says **"Black Friday Sale"**. "Discount" stays banned there
+> too, and so does any superlative about the sale ("biggest sale ever"). Outside
+> Black Friday, the ban on "sale" stands exactly as written. See process doc §C.8.
+
+
 > "Instead of hiking prices like everyone else — we made a better call."
 > "You'll pay less. The knife hasn't changed."
 > "So no, we didn't drop the price. Here's where it actually goes."

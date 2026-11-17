@@ -1078,23 +1078,44 @@ the strategist says the season is over.
 | `Concept Name` | `<Concept> Black Friday (<parent>) - <Product>` — the house pattern, as on NK847 and NK752 |
 | `event` in the name | `Black Friday` (not `BFCM`, not `Evergreen`) |
 | `Offer` | **unchanged.** B2G2 stays B2G2 — Black Friday is the occasion, not a different offer |
-| The copy | the **offer beat** names the event, and nothing else moves |
+| The copy | **Black Friday Sale is the theme of the whole script** — it opens the hooks, frames the body, carries the offer and closes the ad. See "The theme runs the whole script" below |
 
 **Three things that do not change, and they are the whole discipline:**
 
-1. **"Sale" and "discount" stay banned in the read.** §C.3 and `approved-copy.md`
-   are not suspended by the season. The strategist's phrase was *"Black Friday
-   Sale"* — that names the campaign, not the line. Say "Black Friday"; frame the
-   offer as a decision the brand made. Raise it once if a brief genuinely needs
-   the word, rather than quietly shipping it.
+1. **"Black Friday Sale" is allowed in the read. "Discount" is not.** Ruled by
+   the strategist 2026-11-17, when asked directly: *say "Black Friday Sale"*. This
+   is a **seasonal exception**, scoped to Black Friday briefs, so it must not
+   leak into evergreen copy, where `approved-copy.md`'s ban on "sale" still holds.
+   Inside it: "discount" stays banned; **no superlative about the sale itself**
+   ("biggest sale ever", "best deal of the year"), because those are claims we
+   cannot back; and B2G2 is still a mechanic, never converted into a percentage.
 2. **Never invent a deadline.** No end date, no clock, no countdown graphic, no
    "hurry". We know the event; we do not know its cut-off, and a fabricated one
    is the manufactured urgency §C.3 bans.
-3. **Black Friday is not a second scarcity claim.** On the Feather it
-   *accelerates* the real 500-unit batch ("the next one is 3 months out, and
-   Black Friday is the week it goes") rather than stacking a third deadline on
-   top. **On the Santoku and the Blackout it is the only timing claim available**,
-   because the batch cap and the restock window are Feather-only facts.
+3. **Black Friday is not a second scarcity claim.** On the Feather, state the
+   sale and the real 500-unit run **side by side** — *"if the Feather's the one
+   you're after, the Black Friday Sale is the time"* (NK916) — and stop there.
+   **Do not claim the sale makes the run go faster.** NK907 says *"Black Friday
+   is the week it goes"*, which asserts a sell-through nobody has given us; it was
+   left as written by the strategist's call on 2026-11-17, but do not repeat it.
+   **On the Santoku and the Blackout the sale is the only timing claim
+   available**, because the batch cap and the restock window are Feather-only
+   facts.
+
+**The theme runs the whole script.** Ruled by the strategist 2026-11-17, on
+NK916: *"the script theme is black friday sale."* The first version of this
+section said the offer beat names the event *"and nothing else moves"* — which
+produced ten briefs (NK907-916) where Black Friday appeared once, at the offer,
+on an otherwise evergreen ad. That was the rule being wrong, not the briefs
+drifting. From NK916 on:
+
+- **Every hook opens on the sale** — in the VO, and as a "BLACK FRIDAY SALE"
+  super on the opening frame.
+- **The body is framed by it** — the concept's mechanic still does the work, but
+  it is set up as what to know before you spend the sale.
+- **The offer names it, and the close returns to it** before "Link's below".
+- **NK907-915 were left as they are**, by the strategist's call — several were
+  already with editors. Do not retrofit them unless he asks.
 
 **The offer beat is still per-product.** Adding the same "it's Black Friday"
 sentence to three cuts recreates the identical-offer-paragraph failure (§C.3,
