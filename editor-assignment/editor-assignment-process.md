@@ -1943,7 +1943,7 @@ and Andy's do not.**
 | Rule | Mark writes it | Andy's briefs in the same queue |
 |---|---|---|
 | Never "etched" on the Feather | NK847 `Do not: Never "etched"`; NK848 + NK861 **re-record it out of the locked NK184/NK326 VO**; NK907 *"No etched, no engraved, no hand-finished, no 'burned in'"* | **10 instances across 5 briefs** — NK865 ×4, NK871 ×2, NK880 ×2, NK849 ×1, NK840 ×1 |
-| The bottle opener is in the **handle** | NK909 red callout: *"Not the blade, not the spine... do not let a visual show the bottle meeting the steel"*; NK844 re-records *"notched into the blade"* → *"built into the handle"* | **6 instances of "on the back"** — NK867 ×3, NK873, NK894, NK851 |
+| The bottle opener is in the **handle** | NK909 red callout: *"Not the blade, not the spine... do not let a visual show the bottle meeting the steel"*; NK844 re-records *"notched into the blade"* → *"built into the handle"* | ~~**6 instances of "on the back"** — NK867 ×3, NK873, NK894, NK851~~ — **✅ all 6 fixed in Notion 2026-11-17 on Mark's instruction** (see the second edit round below). The *rule-travel* finding stands; only these instances are gone. |
 | No "up to" figures | NK843, NK844, NK847, NK848, NK861, NK862–864 all state it | **"up to 67% off" in 18 briefs** — this run added NK840/841/842, NK852, NK865, NK871, NK873, NK880, NK894, NK849, NK851 |
 | No price, in any market | NK907, NK909: *"No price, in any market. US, UK and AU run this"* | NK871 + NK873: *"for less than 200 bucks"* on `Mkt-All` |
 | Never manufactured urgency | NK907, NK909: *"Never invent an end date, a clock, a countdown graphic or a 'hurry'"*; NK909 adds *"no scarcity on this page"* | NK849 (7 hooks) + NK851 (7 hooks) are **built entirely on unverifiable stock scarcity**; NK852 plays a fake sell-out then re-asserts it |
@@ -2564,11 +2564,71 @@ had the brief"*). Fahad got the NK914 correction naming the Reaper; Onyeka
 - **The `bottle opener on the back` wording in the VO of NK851, NK867, NK873 and
   NK894** — a different string, in the spoken copy rather than the Visual
   column, and all four are Andy's. Mark's instruction named the *tip* phrase, so
-  these were not touched. **They are still wrong** and are the remaining half of
-  this error class.
+  these were not touched. **✅ Closed the same day**: Mark followed up with *"Fix
+  the bottle opener on the back ones too"* and all four were fixed — see the
+  next section.
 - **NK919 is part of the "Chinese Spy" concept** that this log recommends
   pulling. Fixing its Visual cell does not change that recommendation; it was
   edited because it carried the phrase Mark asked to be fixed.
+
+## ✅ Notion edits made on Mark's instruction, 2026-11-17 (second round): "on the back" in the VO
+
+Mark's instruction, verbatim: *"Fix the bottle opener on the back ones too"* —
+the four briefs the previous round deliberately left alone. Four pages edited,
+bringing this play's total page edits to **eleven**. With these, **the whole
+`bottle opener` error class is clear**: five Visual cells in the first round,
+six VO instances across four pages in this one.
+
+| Brief | Editor | Before | After |
+|---|---|---|---|
+| **NK867** | Hammad | 3 occurrences — one Visual cell, two VO lines | `bottle opener on the back` → `bottle opener in the handle` (`replace_all_matches: true`) |
+| **NK873** | Fahad | *"a bottle opener **on the back**"* | *"a bottle opener **in the handle**"* |
+| **NK894** | Anas | *"the bottle opener **on the back** is real"* | *"the bottle opener **in the handle** is real"* |
+| **NK851** | Renniel | *"Black blade, black handle, bottle opener on the back."* | *"Black blade, black handle **with the bottle opener in it**."* |
+
+### NK851 was reworded, not swapped
+
+The mechanical substitution would have produced *"Black blade, black handle,
+bottle opener in the handle"* — correct on the fact and bad as spoken copy, with
+"handle" twice in six words in a line built on a three-beat rhythm. It was
+rewritten to keep the rhythm and the fact: *"Black blade, black handle with the
+bottle opener in it."* **This is the first page edit in this play that changed
+wording rather than substituting a string**, so it is recorded as a judgement
+call and was disclosed as one in Renniel's thread note.
+
+### NK867 carried the error three times, in both columns
+
+It is the only brief where the error appears in both the Visual column and the
+VO — the Visual cell, *"with a finger loop grip and a bottle opener on the
+back"*, and *"A knife with a bottle opener on the back"*. `replace_all_matches`
+handled all three in one operation. **Verified by re-reading the page**, per the
+NK795 rule: all three now read *"in the handle"*.
+
+**NK851 was also verified by re-read**, because its change was a rewording
+rather than a substitution. NK873 and NK894 returned clean with no warnings.
+
+### Editors were told, in each brief's own thread
+
+All four were already `Assigned to Editor` and posted, so the NK646/NK679
+precedent applies again: a plain thread reply under the brief's own message.
+The note names the *spoken* copy this time rather than the Visual cell — *"a VO
+line said the bottle opener is 'on the back'. It's built into the handle, not
+the back of the blade."* Hammad's names all three places; Renniel's also gives
+the reworded line verbatim, since his was not a straight swap.
+
+### What this closes, and what it does not
+
+**Closed:** every known instance of the opener being placed on the blade, the
+spine or the back, in both columns, across both strategists. The open-items
+table row above is struck through.
+
+**Not closed:** the finding that produced them. All six VO instances were
+Andy's, and the rule was written down in Mark's NK909 and NK844 before any of
+them were authored. Fixing the instances removes the symptom from six pages; it
+does not make the rule travel to the next brief. **This error class will come
+back unless the rule reaches Andy's brief template**, which is the one-place fix
+this log has recommended twice — once for the MIKE gender-ultimatum
+boilerplate, once for the `bottle opener tip` Visual-cell snippet.
 
 ## Run history
 
