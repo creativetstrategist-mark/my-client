@@ -297,6 +297,15 @@ unless the strategist cuts it — NK461 ships without one, deliberately, because
 the script's whole argument is that the viewer already owns too many knives and
 a catalogue works against that.
 
+**NK916 is the second deliberate cut, ruled by the strategist 2026-11-17.** The
+concept is the anatomy of one knife, read layer by layer, and four knives after
+the offer would dilute exactly that. Cutting it also settles the tension NK913
+exposed: with no 35-second lineup to fit behind the offer, the offer can sit
+inside §C.3's 60-80% range again (58% on NK916) instead of being forced early to
+~45%. **Rule of thumb from the two cuts:** when the argument is about depth in
+one knife, or about owning fewer knives, ask whether to cut the lineup rather
+than including it by default.
+
 **When it is cut, the rest of the brief has to follow.** A removed lineup leaves
 direction pointing at knives that are no longer there. Check all four:
 
