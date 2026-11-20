@@ -411,10 +411,11 @@ because it is edited in place. As of 2026-11-11 the order is:
 3. `### AD INSPO`, then a **video block** whose source is the winning cut's H1
    view URL on Frame.io, captioned `<ID> <source concept> (<winner tags>), H1 cut`.
    No callout here.
-4. **💡 Gray persona callout**: `## IMPORTANT NOTICE ON PERSONA/AVATAR:`, then the
-   template's own block for the persona in play, word for word (for MIKE:
-   `### MIKE - GRILL MASTER` in blue and its bullet). Drop the template's other
-   personas.
+4. **💡 Gray persona callout: the template's whole callout, word for word**, every
+   persona in it (SARAH, MIKE, DON - OPPORTUNIST, DON | The Hunter, COLE), as
+   Andy's own template pages keep it (NK855). Never trim it to one persona. If the
+   persona in play is not in it (JOHN), add its block at the end of the callout
+   in the same style (`### JOHN - KNIFE COLLECTOR` in blue and its bullet).
 5. `### GENERAL INSTRUCTION`: the template's two bullets.
 6. `### GLOSSARY:` exactly as the template words it, including the "Code of
    visual" lines and the Higgsfield folder link.
@@ -430,9 +431,13 @@ because it is edited in place. As of 2026-11-11 the order is:
 9. **`HOOK`**: three columns, `Visual` | `Copy/ Text Overlay` | `Note`, green
    header. The hook code (`H1`, `H2`…) goes in `Note`.
 10. **`BODY`**: **three columns**, `Visual` | `Copy/ Text Overlay` | `Note`, orange
-    header. **No `Block` column.** Every beat except the close.
-11. **`CTA`**: the same three columns, holding the closing row (CTA → proof stack
-    → jab → `Link's below`). Then an empty line. Nothing else follows.
+    header. **No `Block` column.** Every beat, the close included: the closing
+    row (CTA → proof stack → jab → `Link's below`) is the last BODY row.
+11. **`CTA`**: the template's bold label after BODY, **not a table**, filled with
+    the end-card offer (`CTA: BLACK FRIDAY · BUY 2 GET 2 FREE`). Then an empty line.
+    Nothing else follows. (Mark, 2026-11-12: "always follow how the brief template
+    looks". NK843, NK844, NK847, NK848, NK860, NK861 and NK862 to NK864 were
+    brought in line that day.)
 
 The red 🚨 banner and the 🎬 reference callout that Andy's own iteration pages
 use are **not** in the template, so this play does not add them. Their content

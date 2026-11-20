@@ -96,7 +96,8 @@ ask for one.
 **Every winner always gets both types**, and **both go to the editor who cut the
 source.** **The strategist on every iteration is Mark**, and names say
 **Iteration 1 / Iteration 2**, never "Rewrite" or "Reskin". Pages follow the **live brief template's
-structure** (video block, 3-column HOOK / BODY / CTA tables, no extra
+structure** (video block, the template's full persona callout, 3-column HOOK and
+BODY tables with the close as the last BODY row, the bold CTA label, no extra
 callouts). An event in the command (`Iterate NK222 Black Friday`) makes both
 briefs event versions: spec §8.3.
 Products and editors in the command (`Iterate NKEOFY005 for Feather, Blackout,
