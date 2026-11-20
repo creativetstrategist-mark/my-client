@@ -2733,6 +2733,34 @@ blade: his finger goes through it, **so the knife never slips**, even with
 greasy hands"* — an absolute safety guarantee on a knife, which is a new claim
 type and the kind that does not survive a complaint.
 
+### ✅ Mark's decision on both: leave them
+
+Offered to fix NK881's `copper`/`REAL EBONY` and NK854's *"bottle opener on the
+back"*. Mark: **"No need for that"**. Both pages stand as written and went to
+Hammad and Waheed unchanged.
+
+**Read this narrowly, the way the NK644 ruling is read.** It declines *these two
+edits*; it is **not** a ruling that the bolster is copper, that the Santoku
+handle is ebony, or that *"on the back"* is now acceptable copy. The catalog
+facts are unchanged, Mark's own NK862–864 `Do not:` lines still say *brass*,
+*no wood species for the handle* and *the opener is in the handle*, and
+**the next instance gets raised the same way** rather than waved through on
+this answer.
+
+Two things follow from it for how this play reports:
+
+- **Do not re-raise NK881 or NK854.** They are closed as decided. Re-flagging a
+  brief Mark has ruled on wastes his attention and makes the live flags look
+  cheaper than they are.
+- **The pattern across three answers is consistent**: NK644 (gender ultimatum,
+  *"that's fine for now"*), the "Chinese Spy" set (no answer), and now these
+  two. Mark acts on **invented numbers and wrong names** when told
+  (NK646’s multiplier, NK795’s placeholder, NK914’s product name, the eleven
+  opener strings) and **declines material-fact and tone corrections on briefs
+  already out the door**. That is a usable rule for what to put in front of him:
+  **lead with the fixable, and keep the rest to one line.** This log has been
+  doing the opposite.
+
 ### Counts after this run
 
 | Item | Before | After | Added by |
