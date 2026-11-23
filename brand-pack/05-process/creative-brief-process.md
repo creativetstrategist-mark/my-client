@@ -934,8 +934,9 @@ Christmas) and a **`Frame.io link`**.
    name the Feather's pattern technique ("feather-etched blade", "etched
    pattern", "showing its engraving"), which the catalog bans outright. There is
    nearly always an equivalent: "smoked beef", "meat", "beef".
-8. **If a product's library is empty**, describe the shot as before and say in
-   the cell that its library has nothing yet.
+8. **If a product's library is empty**, describe the shots as before and say
+   so once in the blue instruction callout (NK966-967, the first case), not in
+   every cell.
 
 **NK965 was the first brief matched this way**, re-matched the same day it was
 written.
