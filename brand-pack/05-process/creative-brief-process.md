@@ -914,7 +914,12 @@ Christmas) and a **`Frame.io link`**.
    and **no link.** The editor finds it in the library.
 2. **The names are a guide, not a lock.** Say so once in the blue instruction
    callout: the editor is free to swap in any shot that fits the line better.
-3. **Supers stay in the cell as before**, e.g. `"HOLIDAY SALE" super. Shot: …`
+3. **Supers never go in the Visual cell — they go in the Copy/ Text Overlay
+   cell**, on their own line above the VO: `<b>Super:</b> HOLIDAY SALE<br />`
+   then the read. Ruled by the strategist 2026-11-23: *"all the supers will be on
+   'copy/text overlay' column not in the visual, editor knows about."* The Visual
+   cell is shots only. (Notion table cells are inline-only, so `<br />` is the
+   line break.)
 4. **Season:** in the Holiday Sale period, lean on `Christmas` shots where one
    fits the beat (the tree, stockings, gift boxes, the B2G2 box shots for the
    offer beat).
