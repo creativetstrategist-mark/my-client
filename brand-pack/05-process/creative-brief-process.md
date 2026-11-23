@@ -302,7 +302,9 @@ concept is the anatomy of one knife, read layer by layer, and four knives after
 the offer would dilute exactly that. Cutting it also settles the tension NK913
 exposed: with no 35-second lineup to fit behind the offer, the offer can sit
 inside §C.3's 60-80% range again (58% on NK916) instead of being forced early to
-~45%. **Rule of thumb from the two cuts:** when the argument is about depth in
+~45%. **NK965 is the third, ruled by the strategist 2026-11-23**: a one-knife
+story at one holiday table, where keeping the lineup would have dropped the offer
+to about 50%; cut, it lands at 71%. **Rule of thumb from the cuts:** when the argument is about depth in
 one knife, or about owning fewer knives, ask whether to cut the lineup rather
 than including it by default.
 
