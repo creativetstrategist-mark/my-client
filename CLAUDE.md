@@ -75,6 +75,10 @@ Full detail: `brand-pack/01-brand/product-catalog.md`. Persona docs:
   and every value comes from the vocabulary — never invent one. This supersedes
   the naming spec in §D.3 of the process doc, which is kept only for reading
   pages older than NK557.
+- **Notion "Mark Broll Selection"**: the B-roll library, one database per
+  product (only Feather is filled in so far). **Every Visual cell names a shot from it by
+  its `Proper Name` — no link** — and the editor is free to swap. New footage
+  only when the beat is super specific. Rules: process doc §D.1.5.
 - `daily-ad-rewrites/processed-inspo-log.md` — dedup ledger. Every TrendTrack
   ad used by the daily routine gets logged here (ad id/URL, date used, which
   products it was adapted for). **Check this before picking new inspo ads**

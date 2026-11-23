@@ -879,6 +879,62 @@ gone.** It was only caught by re-fetching the page.
 - Recovery is cheap if the page was authored in-session: `replace_content` with
   the full, known-good markdown. All 3 of NK907-909 were rebuilt that way.
 
+### D.1.5 The Visual column comes from "Mark Broll Selection"
+
+Ruled by the strategist 2026-11-23: *"use that broll collection for your guide
+when matching visual to script, instead of requiring to make a new one because
+it takes time to produce unless the broll is super specific"* — then, the same
+day: *"I want to give editors the freedom to choose brolls so when giving visual
+instruction just give the broll shot name no need to provide link for now."*
+
+**Where it lives.** The Notion page **Mark Broll Selection**
+(`41b4ac62-7aac-8000-9438-cdfebfccf002`) has one database per product:
+
+| Product | Database | Saved view to query |
+|---|---|---|
+| Feather | 🪶 Feather B-roll — `collection://41b4ac62-7aac-8157-84ed-000b6c3702b2` | `view://41b4ac62-7aac-8165-b78f-000ccc436fc9` |
+| LOKI Blackout | 🐈‍⬛ Loki Blackout B-roll — `collection://41b4ac62-7aac-81fd-93fd-000bfcecf716` | fetch the database for its view |
+| BJORN Santoku | Bjorn Santoku B-roll — `collection://41b4ac62-7aac-8158-a3b5-000b741fdfc4` | fetch the database for its view |
+
+(Tiger Cleaver and the Sharpener have databases too; both are out of scope here.)
+**Only the Feather is filled in so far** — about 450 shots on 2026-11-23. The
+others will be filled in over time, so check each one when a brief needs it; don't
+assume it is still empty. Query with `mode: "view"`. It sits outside the SQL
+allowance (§D.2), and the results come back in pages of 100, so page through
+`next_cursor`.
+
+Each shot has a **`Proper Name`** (a short description, e.g. *"Hand turning
+unsheathed Feather by the tree, close-up"*), **`Person`** (Solo · Couple ·
+Family · Group · Hands only · No person), **`Seasonality`** (Evergreen ·
+Christmas) and a **`Frame.io link`**.
+
+**How to write the Visual cell:**
+
+1. **Name the shot by its `Proper Name`, exactly — `Shot: <Proper Name>.`** —
+   and **no link.** The editor finds it in the library.
+2. **The names are a guide, not a lock.** Say so once in the blue instruction
+   callout: the editor is free to swap in any shot that fits the line better.
+3. **Supers stay in the cell as before**, e.g. `"HOLIDAY SALE" super. Shot: …`
+4. **Season:** in the Holiday Sale period, lean on `Christmas` shots where one
+   fits the beat (the tree, stockings, gift boxes, the B2G2 box shots for the
+   offer beat).
+5. **One shot per beat, and don't reuse a shot inside one brief.**
+6. **New footage only when the beat is super specific**, which is rare. When
+   nothing in the library fits, write `Stock: <what>. Not in the library.` On
+   NK965 that was the electric knife and the family table. Never ask for a shoot
+   when stock or a library shot will do.
+7. **Skip a shot whose name carries a banned word**, and pick its neighbour
+   instead. Several names name a cut of meat ("steak", "roast", "brisket",
+   "tenderloin", "rib"), and §C.5 keeps those out of visual direction too. 3
+   name the Feather's pattern technique ("feather-etched blade", "etched
+   pattern", "showing its engraving"), which the catalog bans outright. There is
+   nearly always an equivalent: "smoked beef", "meat", "beef".
+8. **If a product's library is empty**, describe the shot as before and say in
+   the cell that its library has nothing yet.
+
+**NK965 was the first brief matched this way**, re-matched the same day it was
+written.
+
 ### D.2 Creative ID series
 
 Video is `NK###`. Seasonal prefixes exist and are **not** for this routine:
