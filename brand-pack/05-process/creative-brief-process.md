@@ -500,7 +500,7 @@ Set on creation. `Concept Name` is the title property.
 | `Category` | select | `Net New` · `Iteration` · `Adaptation`. A TrendTrack rewrite is `Adaptation`. |
 | `Status` | status | Start at `Not started`. |
 | `Strategist` | select | `Claude` when the routine authors it. |
-| `Specialty` | text | Free text. `Generalist` is the common value. |
+| `Specialty` | text | Free text. `Generalist` is the common value. **Holiday Sale briefs take `Holiday Sale`** — the strategist's call, 2026-11-23, on NK963-964 (§C.8.1). |
 | `Content` | text | **Always `AI VO`.** See D.1.2 — this is the default for every brief this routine writes. |
 | `Landing Page` | select | `PDP` · `Offer Page` · `6 Reasons - General` · `6 Reasons - Outdoor` · `6 Reasons - Sharpener` · `6 Reasons - Santoku` |
 | `Date` | date | Brief date. |
@@ -892,6 +892,9 @@ the six days before that date), and Notion hands out no lock. In one sitting:
    taken minutes earlier** ("Santa Caught Him"). Moved to NK958/NK959.
 2. **The check after creating showed Andy had created his own NK958 and NK959
    in the same window**, plus NK960. Moved again, to NK961/NK962.
+3. **Andy then took NK961 and NK962 as well** — after the search fallback had
+   shown nothing newer than NK960. The strategist spotted it (*"update the
+   creative ID, adjust it"*), and the pair moved a third time, to NK963/NK964.
 
 **When it collides, the routine moves its own pages** — they are the cheapest to
 change, and the other strategist's pages may already be assigned or linked.
@@ -907,6 +910,13 @@ each on the text just before it ("Batch name … <td>", the file table's
 fallback, but it is fuzzy: it matches "NK9xx" anywhere in page text, so it can
 show that nothing newer exists, not prove an ID is free. Say so when relying
 on it.
+
+**The better fallback is a saved view, which the SQL allowance does not cover.**
+The database's **"All Concept"** view is sorted by `Creative ID`, descending:
+query it with `mode: "view"` and
+`view_url: "view://2cf4ac62-7aac-8153-a087-000cebf17200"`, `page_size` about 10.
+It returns the real top of the series, duplicates included, so it is what
+caught item 3. Use it for both checks whenever SQL is out.
 
 ### D.3 Naming strings
 
@@ -1146,6 +1156,33 @@ drifting. From NK916 on:
 sentence to three cuts recreates the identical-offer-paragraph failure (§C.3,
 §F) — NK907-909 each name the event differently, and the gate was re-run after
 the change.
+
+### C.8.1 Holiday Sale — the season moved on 2026-11-23
+
+Ruled by the strategist on 2026-11-23, about the Santoku and Blackout cuts of
+"Under The Feather": *"instead of 'Black Friday Sale' we transition to 'Holiday
+Sale'."* **Everything in §C.8 holds, with "Holiday Sale" in place of "Black
+Friday Sale"**: it is allowed in the read, it runs the whole script, every hook
+opens on it, the supers say "HOLIDAY SALE", "discount" stays banned, there are
+no sale superlatives, no invented deadline, and it is not a scarcity claim.
+
+| | |
+|---|---|
+| `Concept Name` | `<Concept> Holiday Sale - <Product>` — e.g. *Under The Feather Holiday Sale - Santoku* |
+| `Specialty` | **`Holiday Sale`** (strategist, same day), not `Generalist` |
+| `event` in the name | **`Christmas`.** The vocabulary has no "Holiday Sale" value, and Andy's Santa / Holiday Sale briefs (NK955-962) use `Christmas`. Never invent the value |
+| `Offer` | unchanged — B2G2 |
+
+**One guard Black Friday did not need: no delivery promise.** Never "in time
+for Christmas", "before the 25th" or "under the tree by Christmas". We know no
+shipping cut-off, and one that is wrong is worse than a missing one. It sits in
+the red callout beside "no invented deadline".
+
+**Scope.** NK963-964 are the first Holiday Sale cuts. **NK907-916 stay Black
+Friday** — the strategist named only these two, so NK916, the Feather cut of the
+same trio, keeps its Black Friday read. Working reading, flagged to the
+strategist: **new seasonal briefs from 2026-11-23 use Holiday Sale** unless he
+says Black Friday.
 
 ---
 

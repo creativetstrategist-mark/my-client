@@ -61,6 +61,11 @@ copy.
 > only**, the read says **"Black Friday Sale"**. "Discount" stays banned there
 > too, and so does any superlative about the sale ("biggest sale ever"). Outside
 > Black Friday, the ban on "sale" stands exactly as written. See process doc §C.8.
+>
+> 📌 **Extended 2026-11-23 (strategist): "Holiday Sale".** The season moved on —
+> *"instead of 'Black Friday Sale' we transition to 'Holiday Sale'"* — so Holiday
+> Sale briefs say **"Holiday Sale"** under exactly the same limits, plus one more:
+> **no delivery promise** ("in time for Christmas"). See process doc §C.8.1.
 
 
 > "Instead of hiking prices like everyone else — we made a better call."
