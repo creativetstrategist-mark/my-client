@@ -23,21 +23,52 @@ into the `#11-<editor>-editing` channels manually (see the message-format sectio
 the format below is copied from what they already send, not invented). The
 routine automates that handoff, it does not introduce a new convention.
 
-## 🚫 Hard rule: never touch Callum's work
+## 🚫 Hard rule: this play touches Mark's work and nothing else
 
-**Standing instruction from Mark, 2026-10-13: never touch work that has `Callum`
-as Strategist.** **Restated unprompted on 2026-10-27, mid-run, in stronger
+**Standing instruction from Mark, 2026-11-23, verbatim: *"Never touch callum or
+Andy's output only from Mark"*.**
+
+This **replaces** the Callum-only exclusion that governed the play from
+2026-10-13 to 2026-11-23, and it inverts how the gate is written: the scope rule
+is no longer a blocklist of strategists to skip but an **allowlist of one**.
+
+**Only `Strategist = Mark` is in scope.** Every other value — `Andy`, `Callum`,
+`Mauro`, `Claude`, and blank — is out of scope completely:
+
+- do **not** post it to an editor,
+- do **not** post it to the fallback channel,
+- do **not** change its `Status`,
+- do **not** edit the page,
+- do **not** flag it for triage.
+
+An allowlist is also the safer shape: a new `Strategist` option added to the
+property later is out of scope by default, where the old blocklist would have
+silently let it through.
+
+### ⚠️ What this costs, stated once
+
+Of the **231 briefs created in November 2026**, Mark wrote **25 — about 11%**
+(Andy 121, Callum 84, Claude 1). And **all 26 briefs sitting in
+`Ready for visuals`, the entire next wave into the queue, are Andy's.**
+
+So the next several sweeps will find a full queue and assign almost none of it.
+**That is the instruction working as written, not a fault**, and it is recorded
+here rather than re-raised every run. The thing worth knowing is the gap it
+leaves: **Andy's briefs now have no handoff route through this play at all**, and
+roughly 120 a month need one. Callum does his own handoffs (he is in every editor
+channel); whether Andy does is not established.
+
+### Why Callum's work was already excluded — history, still valid
+
+The original instruction, 2026-10-13: never touch work that has `Callum` as
+Strategist. **Restated unprompted on 2026-10-27, mid-run, in stronger
 terms: *"Never ever touch any task with callum as strategist."*** He volunteered
 it while a run was in flight and nothing had gone wrong, so treat it as the
 rule he most wants held, not as a correction of something. It has now been
 stated twice, two weeks apart.
 
 Any page with `Strategist = Callum` is out of scope for this routine
-completely:
-- do **not** post it to an editor,
-- do **not** post it to the fallback channel,
-- do **not** change its `Status`,
-- do **not** flag it for triage.
+completely — as is any page that is not Mark's, under the 2026-11-23 rule above.
 
 **Volume note, 2026-11-10: Callum's rows went from 4 to 12 in one day, 6 of them
 arriving during a single run.** The closing query that day returned twelve Callum
@@ -49,8 +80,8 @@ the case this rule overrides. Take no action on any of them, including no fallba
 post. A queue that is entirely Callum rows is a drained queue for this play's
 purposes; say so in one line rather than listing them.
 
-Filter on `Strategist` in the detection query itself so a Callum page is never
-even a candidate. Count them in the run summary if useful, but take no action.
+Filter on `Strategist` in the detection query itself so a page that is not
+Mark's is never even a candidate. Count them in the run summary if useful, but take no action.
 This rule outranks every other rule in this doc, including the blank-editor
 handling below. Note that Callum is a member of every editor channel and does
 these handoffs himself — his briefs are his to route.
@@ -89,7 +120,7 @@ to a brief until Mark asks. That has real consequences worth stating plainly:
 ### What "go" means
 
 Unless Mark says otherwise, a go signal means: **every brief currently in
-`Ready to edit` that is not Callum's and not malformed.** Report what you are
+`Ready to edit` that is **Mark's** and not malformed.** Report what you are
 about to do and how many, then do it.
 
 If he scopes it ("just the new ones", "only Hasnain's", "just NK612"), honour
@@ -226,7 +257,7 @@ SELECT "Creative ID", "Concept Name", "Product", "Content", "Editor",
        "Status", "Strategist", "Format", "Offer", url, createdTime
 FROM "collection://2cf4ac62-7aac-81a8-86bf-000b96778943"
 WHERE "Status" = 'Ready to edit'
-  AND ("Strategist" IS NULL OR "Strategist" != 'Callum')
+  AND "Strategist" = 'Mark'
 ORDER BY createdTime ASC
 ```
 
@@ -570,7 +601,7 @@ page's claim about it.
 SHARPENER`, `6 Reasons - Sharpener`, offer `40% + Free Gifts`). CLAUDE.md scopes
 the *daily rewriting routine* to the Feather, Santoku and Blackout — that is
 about which briefs get **written**, not which get **handed to an editor**. Any
-brief in `Ready to edit` that is not Callum's and not malformed gets assigned,
+brief in `Ready to edit` that is Mark's and not malformed gets assigned,
 whatever the product. Assigned, and flagged to Mark as the first time.
 
 **⚠️ The copy check is weaker outside the 3 focus products.** On those briefs
@@ -1691,8 +1722,8 @@ posted.
 
 | Case | What to do |
 |---|---|
-| **`Strategist = Callum`** | Out of scope entirely. No post, no flip, no triage. See the hard rule at the top — it wins over everything else in this table. |
-| **`Editor` is blank** (and strategist is not Callum) | Do **not** guess, and do **not** apply the daily routine's editor-assignment rules — those govern brief *creation*, and silently picking someone here would hide a real gap. Post to the fallback channel for Mark saying it needs an owner, and **leave `Status` as `Ready to edit`** so it stays queued until a human assigns it. |
+| **`Strategist` is anything but `Mark`** | Out of scope entirely. No post, no flip, no page edit, no triage. See the hard rule at the top — it wins over everything else in this table. Covers `Andy`, `Callum`, `Mauro`, `Claude` and blank. |
+| **`Editor` is blank** (on one of Mark’s briefs — otherwise it is out of scope and gets nothing) | Do **not** guess, and do **not** apply the daily routine's editor-assignment rules — those govern brief *creation*, and silently picking someone here would hide a real gap. Post to the fallback channel for Mark saying it needs an owner, and **leave `Status` as `Ready to edit`** so it stays queued until a human assigns it. |
 | **No `Creative ID`** / malformed row | Skip, leave the status alone, name it in the run summary. Never post it to an editor. Observed live: one row whose Concept Name is a raw `next.frame.io` URL, with no Creative ID, Product, Editor or Format. |
 | **`Editor = Huzaifa`** (off roster) | Fallback channel for Mark. No flip. |
 | **Editor not in the mapping table** | Fallback channel for Mark, naming the editor and the missing mapping. No flip. Never post into a channel guessed from the editor's name. |
@@ -1827,7 +1858,7 @@ the mapping table is only in the file.
 
 1. Query data source collection://2cf4ac62-7aac-81a8-86bf-000b96778943 for
    Status = 'Ready to edit' (exact string — lowercase "edit"), excluding
-   Strategist = 'Callum' in the query itself, oldest first.
+   Strategist to 'Mark' in the query itself, oldest first.
 2. Drop any page with no Creative ID (a malformed row). There is no suppression
    list to consult — the go-live baseline was discharged on 2026-10-13 and must
    not be reintroduced.
@@ -1858,7 +1889,8 @@ the mapping table is only in the file.
 
 ## Hard rules
 
-- Never touch work with Strategist = Callum — standing instruction from Mark
+- Only touch work with Strategist = Mark — standing instruction from Mark,
+  2026-11-23; Andy's and Callum's are both out of scope
   (2026-10-13). No post, no status change, no triage, not even a flag. Filter it
   in the query.
 - Never invent a deadline, runtime, or priority in a message. The brief carries
@@ -3338,9 +3370,83 @@ the sentence comes back on the next brief, and this play will be fixing instance
 again. **That edit needs the Notion UI and Mark or Andy** — it is the one part of
 this fix that cannot be done from here, and it is the part that matters.
 
+## 🛑 2026-11-23: scope narrowed to Mark's work only
+
+Mark, verbatim: *"Never touch callum or Andy's output only from Mark"*.
+
+The hard rule at the top of this doc is rewritten accordingly, the detection
+query now reads `AND "Strategist" = 'Mark'`, the edge-case table row is widened
+from Callum to "anything but Mark", and `CLAUDE.md` is updated to match. **The
+rule is now an allowlist of one.**
+
+### What changed, precisely
+
+| | Before (2026-10-13 → 2026-11-23) | After |
+|---|---|---|
+| Shape | Blocklist — skip `Callum`, take everything else | **Allowlist — take `Mark`, skip everything else** |
+| In scope | `Mark`, `Andy`, `Mauro`, `Claude`, blank | **`Mark` only** |
+| Out of scope | `Callum` | `Andy`, `Callum`, `Mauro`, `Claude`, blank |
+| Query clause | `("Strategist" IS NULL OR "Strategist" != 'Callum')` | `"Strategist" = 'Mark'` |
+
+The allowlist is the safer shape for a second reason worth recording: **a new
+`Strategist` option added to the property later is out of scope by default.**
+Under the blocklist it would have been swept up silently. The `Editor` property
+has gained four names in three weeks, so the `Strategist` property gaining one is
+not hypothetical.
+
+### The volume consequence, measured
+
+| Strategist | Briefs created in Nov 2026 | Share |
+|---|---|---|
+| Andy | 121 | 52% |
+| Callum | 84 | 36% |
+| **Mark** | **25** | **11%** |
+| Claude | 1 | <1% |
+
+And the pipeline immediately ahead: **all 26 briefs in `Ready for visuals` are
+Andy's**, and none are Mark's. So the next several sweeps will find a queue and
+assign almost nothing from it.
+
+**This is the instruction working as written.** It is recorded here so the play
+does not re-raise it every run, and so a future reader does not mistake a nearly
+empty run for a broken query. **Say "N in the queue, M of them Mark's, M
+assigned" in the run summary** rather than listing the rest.
+
+### The open gap, raised once
+
+**Andy's briefs — roughly 120 a month — now have no handoff route through this
+play.** Callum's never needed one: he is a member of every editor channel and
+does his own handoffs, which is why that exclusion never left a gap. Whether the
+same is true of Andy is **not established anywhere in this spec**, and his briefs
+have been routed by this play since 2026-10-13. If he does not route them
+himself, 26 briefs are about to reach `Ready to edit` with nobody assigning them.
+
+Not re-raised after this entry. If Mark says Andy routes his own, this becomes a
+closed question and should be recorded as one.
+
+### ⚠️ In flight when the instruction arrived
+
+**Four of Andy's briefs were posted, threaded and flipped earlier the same day**
+(NK974, NK975, NK976, NK977), and their MIKE persona block was edited on Mark's
+own instruction minutes before this one. All of that was correct under the rule
+in force at the time.
+
+**Nothing was reversed.** Un-flipping them or deleting the Slack posts would take
+briefs away from three editors who already have them and are cutting them for
+Wednesday, which is a worse outcome than the scope breach it would tidy up, and
+the instruction reads forward rather than retroactively. **Flagged to Mark as a
+question rather than acted on** — if he wants them pulled back, that is a
+deliberate reversal to do on his word, not a cleanup to assume.
+
+The rule applies from this point: **the next sweep takes Mark's briefs and
+nothing else.**
+
 ## Run history
 
-| Date | Posted | Fallback | Skipped (Callum) | Skipped (other) | Notes |
+¹ Column was "Skipped (Callum)" for runs up to 2026-11-23, when the
+scope narrowed to Mark’s work only; earlier rows count Callum pages alone.
+
+| Date | Posted | Fallback | Skipped (not Mark’s)¹ | Skipped (other) | Notes |
 |---|---|---|---|---|---|
 | 2026-10-13 | — | — | — | — | Spec written, mapping verified live, baseline of 15 recorded. A scheduled trigger was built and test-fired, which proved MCP-created triggers get no connectors on this org; it was then **deleted** when Mark said he has no scheduled Routines and will give a go signal instead. See the scheduling appendix. |
 | 2026-10-13 | 11 (resent clean) | — | — | — | **Editor-vs-naming sweep of the whole batch: all 11 match**, across the Batch name and all three File naming rows. Also resent all 11 messages with `/p/` links after Mark deleted the malformed originals. Separately flagged a product-accuracy error in NK599 ("copper bolster" — the Santoku's is brass; also "Rosewood handle", which is the Feather's), both on `Strategist = Andy` briefs. |
