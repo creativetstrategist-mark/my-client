@@ -1180,9 +1180,21 @@ the red callout beside "no invented deadline".
 
 **Scope.** NK963-964 are the first Holiday Sale cuts. **NK907-916 stay Black
 Friday** — the strategist named only these two, so NK916, the Feather cut of the
-same trio, keeps its Black Friday read. Working reading, flagged to the
-strategist: **new seasonal briefs from 2026-11-23 use Holiday Sale** unless he
-says Black Friday.
+same trio, keeps its Black Friday read.
+
+**Standing rule, confirmed by the strategist 2026-11-23:** *"moving forward we
+are transitioning to Holiday Sale, I'll let you know once we go back to
+evergreen."* So:
+
+- **Every new brief is a Holiday Sale brief**, not just ones handed over as
+  seasonal. The theme runs the whole script as above, whatever the inspo or the
+  product, and that includes the daily routine.
+- **No new Black Friday briefs.** That season is over; the briefs already
+  written (NK907-916) stay as they are.
+- **It lasts until the strategist says evergreen.** Do not decide the season has
+  ended. When he says so, everything reverts: approved-copy's ban on "sale"
+  returns in full, `Specialty` goes back to `Generalist`, `event` back to
+  `Evergreen`, and the concept name drops "Holiday Sale".
 
 ---
 

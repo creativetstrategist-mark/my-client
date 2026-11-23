@@ -66,6 +66,8 @@ copy.
 > *"instead of 'Black Friday Sale' we transition to 'Holiday Sale'"* — so Holiday
 > Sale briefs say **"Holiday Sale"** under exactly the same limits, plus one more:
 > **no delivery promise** ("in time for Christmas"). See process doc §C.8.1.
+> **Every new brief is a Holiday Sale brief until the strategist says we are back
+> to evergreen**, and only then does the ban on "sale" return in full.
 
 
 > "Instead of hiking prices like everyone else — we made a better call."

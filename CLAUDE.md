@@ -41,6 +41,11 @@ Full detail: `brand-pack/01-brand/product-catalog.md`. Persona docs:
 
 ## Universal copy rules (apply to every rewrite, every product)
 
+- **Current season: Holiday Sale** (since 2026-11-23, until the strategist says
+  we are back to evergreen). Every new brief is themed "Holiday Sale" from the
+  first hook to the close: Specialty `Holiday Sale`, naming event `Christmas`,
+  same B2G2 offer, no delivery promise. Full rules: process doc §C.8.1.
+
 - **No spec-sheet jargon, ever**: no alloy codes, HRC/Rockwell numbers,
   "edge retention," "blade geometry," mm/gram specs. Say the plain material
   + the consequence ("hand-forged high-carbon steel… holds that edge").
