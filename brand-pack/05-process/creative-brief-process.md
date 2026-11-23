@@ -883,6 +883,31 @@ Video is `NK###`. Seasonal prefixes exist and are **not** for this routine:
 `NKFD` Father's Day · `NKMD` Memorial Day · `NKEOFY` Australian EOFY. Statics
 use a separate 3-digit series.
 
+**IDs are not reserved, so check twice: right before creating, and right
+after.** Learned on 2026-11-23. Other strategists add briefs constantly (39 in
+the six days before that date), and Notion hands out no lock. In one sitting:
+
+1. The check before writing said the latest was NK955, so the pair was named
+   NK956/NK957. **A recheck just before creating showed NK956 and NK957 had been
+   taken minutes earlier** ("Santa Caught Him"). Moved to NK958/NK959.
+2. **The check after creating showed Andy had created his own NK958 and NK959
+   in the same window**, plus NK960. Moved again, to NK961/NK962.
+
+**When it collides, the routine moves its own pages** — they are the cheapest to
+change, and the other strategist's pages may already be assigned or linked.
+Renumbering touches the `Creative ID` property, all 4 naming strings, the
+folder name, and any sibling cross-references in the page text. **Do it with
+targeted `update_content` anchors, never `replace_all_matches` (§D.1.4)** — and
+note that the batch name and the H1 file name are identical strings, so anchor
+each on the text just before it ("Batch name … <td>", the file table's
+`<colgroup>`). Then re-fetch both pages.
+
+**The SQL check has a hard allowance.** It ran out mid-collision on both
+2026-11-16 and 2026-11-23, and resets within the hour. Notion search is the
+fallback, but it is fuzzy: it matches "NK9xx" anywhere in page text, so it can
+show that nothing newer exists, not prove an ID is free. Say so when relying
+on it.
+
 ### D.3 Naming strings
 
 > ⚠️ **Superseded from NK557 onward (2026-09-28).** The strategist supplied a new
