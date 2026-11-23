@@ -1237,6 +1237,43 @@ no sale superlatives, no invented deadline, and it is not a scarcity claim.
 | `event` in the name | **`Christmas`.** The vocabulary has no "Holiday Sale" value, and Andy's Santa / Holiday Sale briefs (NK955-962) use `Christmas`. Never invent the value |
 | `Offer` | unchanged — B2G2 |
 
+**Every Holiday Sale brief carries the 🎄 CHRISTMAS SUBTITLES callout.**
+Ruled by the strategist 2026-11-23, pointing at Andy's NK958: *"I need you to add
+that on creative instruction for all the 'Holiday Sale' focused brief."* Copy it
+verbatim from NK958 as the **last callout in Creative Brief Instruction, right
+before the HOOK table**. It keeps the usual black-and-white supers as the default
+and offers 3 Christmas pills for some hooks or lines: Red (hook line)
+`#D7263D` / `#FFFFFF`, Green (offer line) `#1B6B3A` / `#FFFFFF`, White (neutral
+line) `#FFFFFF` / `#1B6B3A`, plus the pill reference image. The image is an
+uploaded file. Keep its `notion-file-block://` source exactly as NK958 has it,
+and Notion copies it into the new page:
+
+```
+<callout icon="🎄" color="green_bg">
+## CHRISTMAS SUBTITLES
+
+<ul>
+<li>
+By default keep the usual supers and captions (black and white).
+</li>
+<li>
+On some hooks, or some parts of the video, you can switch to the Christmas pills below to feel more in season. 
+</li>
+</ul>
+
+| Pill | Background | Text |
+| --- | --- | --- |
+| Red (hook line) | #D7263D | #FFFFFF |
+| Green (offer line) | #1B6B3A | #FFFFFF |
+| White (neutral line) | #FFFFFF | #1B6B3A |
+
+<image source="notion-file-block://4214ac62-7aac-81a9-900a-c168faa7b6cd/c4ebe928-d695-46a6-8114-9e84faa6a007?space_id=d1db02ed-469b-48e9-a99b-ace51ac26c66&name=christmas-subtitle-pills.png" />
+</callout>
+```
+
+Added retroactively to NK963-967 the same day (Andy's own Santa briefs are his
+to manage). If NK958's callout changes, re-fetch it and copy the new version.
+
 **One guard Black Friday did not need: no delivery promise.** Never "in time
 for Christmas", "before the 25th" or "under the tree by Christmas". We know no
 shipping cut-off, and one that is wrong is worse than a missing one. It sits in
