@@ -3237,6 +3237,107 @@ fresh.
 - **Gate handled 6-hook briefs correctly**: NK975 and NK976 each have 6 hooks
   and 6 matching File naming rows, all reading `Andy_Hammad` / `Andy_Umar`.
 
+## ✅ The MIKE persona block, fixed on Mark's instruction — 2026-11-23
+
+Mark, verbatim: *"Fix the MIKE persona block"*. This is the one-place fix this
+log had recommended since 2026-11-12.
+
+### 🔍 First finding: there is no source page. The block is pasted per brief.
+
+Searching for the exact sentence returns **25+ pages across four databases** —
+`Evergreen Video`, and the Holiday Brief Database's `Father’s Day Sale`, `EOFY`
+and `Memorial Day Sale` — going back to **May 2026**. There is no master page,
+no shared block, no linked database holding it. Every brief carries its own copy.
+
+**So "the block" is not one object that can be edited once.** Whatever Andy
+copies from is upstream of anything this play can reach through the API — almost
+certainly a Notion *database template*, which the connector does not expose.
+**That part has to be edited in the Notion UI by Mark or Andy**; this play cannot
+do it, and a brief created from that template tomorrow will carry the old
+sentence again.
+
+### 🚨 Second finding, and the better argument: the block contradicts the real persona doc
+
+There **is** a canonical persona document — `MIKE | The BBQ Guy/Grill Master`,
+in `NK Creative Strategy Lab / Buying persona's`. **It does not contain the
+ultimatum line.** It says the opposite, in three places:
+
+| The canonical MIKE doc | The pasted block |
+|---|---|
+| **He recoils FROM:** *"'He'll love it' / **wife-buyer framing**"* | *"For him we can do more hard marketing “If you’re wife didn’t get you this gift, you need a new wife”"* |
+| **He recoils FROM:** *"**Soft, gifting-focused language**"*, *"Generic 'perfect gift' language"* | The whole R2B8 concept frames him as the gift recipient |
+| **What to avoid:** *"**Gift-framing language** ('perfect for him', 'he'll love it', 'surprise him')"* | — |
+| *"Buyer type: **Self-buyer — always.** He is the buyer and the user simultaneously"* | — |
+| *"'He'll love it' lands in the wrong universe — ***he*** is the he"* | — |
+
+So the pasted block is **not a degraded copy of the persona doc. It is a
+different document that contradicts it.** The ultimatum line makes MIKE the
+*recipient* of a wife's gift, which his own persona doc names as the single
+thing he recoils from hardest. That is a stronger reason to cut the line than
+any tone argument this log has made, and it is Mark's own source material.
+
+### What was changed
+
+The sentence, before and after:
+
+| | |
+|---|---|
+| **Before** | *"For him we can do more hard marketing “Ïf you’re wife didn’t get you this gift, you need a new wife” We can use harder marketing, a deeper darker voice on Eleven Labs, some rock music too, even hard rock."* |
+| **After** | *"For him we can use harder marketing: a deeper darker voice on Eleven Labs, some rock music too, even hard rock. **Never frame him as the gift recipient of a wife-buyer, and never use the “you need a new wife” line** — the MIKE persona doc lists “wife-buyer framing” and “soft, gifting-focused language” under what he recoils from."* |
+
+The legitimate direction is kept (harder marketing, deeper voice, rock). The
+ultimatum is replaced by the prohibition **plus its reason**, cited to Mark's own
+persona doc — because a bare deletion gets re-added by the next writer, and a
+rule without a reason gets argued with.
+
+**Applied to the four live briefs**, all `Assigned to Editor`, all assigned
+earlier the same day: **NK974, NK975, NK976, NK977**. **Verified by re-reading
+NK976**, per the NK795 rule; the block now carries the rule and the ultimatum is
+gone from it.
+
+### 🛑 What was deliberately NOT touched
+
+- **The hooks.** NK974 (3 of 3), NK975 (3 of 6) and NK976 (3 of 6) still open on
+  the ultimatum as **hook copy**. Mark asked for the *block* fixed. The block is
+  the cause; the hooks are a strategist's creative decision, and deleting seven
+  hooks from assigned briefs is not what was asked. **They are still live and
+  still need his call** — raised separately.
+- **NK845 — `Strategist = Callum`.** *New Wife Black Friday (R2B8) - BJORN
+  Utility*, `Assigned to Editor`, and it is **the one remaining live brief
+  carrying the block**. Not read beyond the query row, not edited, not triaged.
+  The standing instruction of 2026-10-13 has no exception for a fix Mark ordered
+  on other briefs.
+- **The four shipped R2B8 briefs** — NK855, NK856, NK858, NK859, all
+  `Uploaded on Drive`. Changing a brief after the asset has shipped changes
+  nothing about the asset.
+- **Everything in the Holiday Brief Database** (Father’s Day, EOFY, Memorial Day)
+  and the older Evergreen instances. All long shipped; a backfill is Mark's call
+  and would be a sweep of 20+ pages for no live effect.
+
+### 🔧 A cheap technique worth reusing
+
+The 14 upstream Santa briefs in `Ready for visuals` (NK955–NK973) were probed by
+sending the `update_content` call straight at them **without fetching first**.
+A non-matching `old_str` makes the call **fail with `No matches found` and change
+nothing** — so it is a safe existence test. All 14 failed, which proves they do
+**not** carry the block, at the cost of one call each instead of a ~12k-token
+fetch each.
+
+Use this whenever a known string has to be found or fixed across many pages:
+**fire the edit, read the failures.** It cannot damage a page that does not match,
+and it is the only way to check a large set affordably. The one caution is that
+it writes to the pages that *do* match, so it is for cases where the edit is
+wanted everywhere the string appears — not for reconnaissance alone.
+
+### What is actually closed, and what is not
+
+**Closed:** the block in every live brief this play may touch.
+
+**Not closed:** the template. Until the page Andy creates briefs from is edited,
+the sentence comes back on the next brief, and this play will be fixing instances
+again. **That edit needs the Notion UI and Mark or Andy** — it is the one part of
+this fix that cannot be done from here, and it is the part that matters.
+
 ## Run history
 
 | Date | Posted | Fallback | Skipped (Callum) | Skipped (other) | Notes |
