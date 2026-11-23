@@ -1237,11 +1237,16 @@ no sale superlatives, no invented deadline, and it is not a scarcity claim.
 | `event` in the name | **`Christmas`.** The vocabulary has no "Holiday Sale" value, and Andy's Santa / Holiday Sale briefs (NK955-962) use `Christmas`. Never invent the value |
 | `Offer` | unchanged — B2G2 |
 
-**Every Holiday Sale brief carries the 🎄 CHRISTMAS SUBTITLES callout.**
-Ruled by the strategist 2026-11-23, pointing at Andy's NK958: *"I need you to add
-that on creative instruction for all the 'Holiday Sale' focused brief."* Copy it
-verbatim from NK958 as the **last callout in Creative Brief Instruction, right
-before the HOOK table**. It keeps the usual black-and-white supers as the default
+**The 🎄 CHRISTMAS SUBTITLES callout is optional. Use it once in a while, not
+on every brief.** First ruled 2026-11-23 as mandatory (*"add that on creative
+instruction for all the 'Holiday Sale' focused brief"*, pointing at Andy's
+NK958), then softened by the strategist the same day: *"the christmas subtitle
+is not mandatory perhaps we can only apply it once in a while."* Working
+reading: **the default is to leave it out.** Add it to **at most one brief per
+batch**, the most Christmas-led cut (gift boxes, the tree, Santa), and skip it
+when nothing in the brief is Christmas-led. When it is used, copy it verbatim from
+NK958 as the **last callout in Creative Brief Instruction, right before the
+HOOK table**. It keeps the usual black-and-white supers as the default
 and offers 3 Christmas pills for some hooks or lines: Red (hook line)
 `#D7263D` / `#FFFFFF`, Green (offer line) `#1B6B3A` / `#FFFFFF`, White (neutral
 line) `#FFFFFF` / `#1B6B3A`, plus the pill reference image. The image is an
@@ -1271,8 +1276,10 @@ On some hooks, or some parts of the video, you can switch to the Christmas pills
 </callout>
 ```
 
-Added retroactively to NK963-967 the same day (Andy's own Santa briefs are his
-to manage). If NK958's callout changes, re-fetch it and copy the new version.
+It was added to NK963-967 while the rule was mandatory and left there; it reads
+as optional on the page anyway ("on some hooks… you can switch"). Andy's own
+Santa briefs are his to manage. If NK958's callout changes, re-fetch it and copy
+the new version.
 
 **One guard Black Friday did not need: no delivery promise.** Never "in time
 for Christmas", "before the 25th" or "under the tree by Christmas". We know no
