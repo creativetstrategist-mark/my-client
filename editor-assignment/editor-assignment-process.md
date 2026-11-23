@@ -2859,6 +2859,131 @@ from Mark rather than a flag per brief.
   Like the lifetime warranty, it is load-bearing in the close and has never been
   confirmed against a product fact.
 
+## ✅ 2026-11-23: the compliance high-water mark, and the Black Friday finding answered
+
+Go signal: *"Assign task now due on wednesday"*. Two briefs, **both Mark's own**,
+both Umar's, both created that morning. Gate passed on both. Posted, "Due on
+Wednesday" threaded, flipped; closing query empty.
+
+NK964 *Under The Feather Holiday Sale - Blackout* → Umar.
+NK965 *Unplugged Holiday Sale - Feather* → Umar.
+
+### ✅ The 11-17 scheduling finding was acted on
+
+That run flagged that the queue was holding Black Friday creative past the point
+where the date was comfortable, in a database called *Evergreen Video*. **NK964
+answers it in writing, with a date and an owner:**
+
+> *"The Feather cut, NK916, stays on Black Friday; this cut **moved to the
+> Holiday Sale on 2026-11-23**, by the strategist's call."*
+
+A new `Specialty` value, **`Holiday Sale`**, carries it on both briefs, and the
+theme runs end to end — a `"HOLIDAY SALE"` super on every hook's opening frame,
+the offer and the close. So the event was migrated rather than left to expire.
+**Nothing further is owed on that finding.**
+
+### ✅ And the "sale" fork resolves, correctly
+
+The 11-17 run flagged that NK916's dated lift (*"the house ban on the word
+'sale'"*) had reached one brief in eight, leaving editors holding seven that
+forbade the word and one that required it. The rule is now stated properly:
+
+> *"**'Holiday Sale' is allowed, and wanted.** 'Discount' is still banned, and
+> so is any superlative about the sale."*
+
+The ban was never really on *sale* — it is on **discount** and on superlatives.
+That is a usable rule rather than a word-list, and it closes the fork.
+
+### 🎯 These two briefs are the most compliant work in the corpus
+
+Every rule this log has reported over two months appears on these pages as a
+pre-emptive red callout, **with its reason attached**. Not a sample — the list:
+
+| Rule this log has chased | How the brief states it |
+|---|---|
+| The opener is in the handle | *"built into the **HANDLE**. Not the blade, not the spine. **The LOKI Reaper is the blade one.** Never let a visual show the bottle meeting the steel."* |
+| The Viking is the bestseller | *"The LOKI Viking is the bestseller, not the Blackout. The Blackout is its all-black remake."* |
+| "Black right through" | *"'Every surface you can see' is as far as the black goes. 'Black right through' is not a verified fact — never say it or imply it."* |
+| Full-Tang is Feather-only | *"No Full-Tang on this page. That claim is Feather-only."* |
+| Batch cap / restock are Feather facts | *"No scarcity. The batch cap and restock window are Feather facts."* |
+| Feather pattern technique | *"Never describe how the feather got onto the blade. Name the pattern. Never etched, engraved or hand-finished."* |
+| Scarcity form | *"runs of 500, about 3 months to the next. Never 'selling out', never how fast a run went, **and never that the sale makes it go faster**."* |
+| No price, no percentage | *"B2G2 is a mechanic."* |
+| Customer count | *"147,000 customers."* |
+| No manufactured urgency | *"No invented deadline — no end date, clock, countdown or 'hurry'."* |
+| Named cuts of meat | *"'Meat' — never a named cut. Holiday carving invites one. Not in the VO, not in a super, not in a visual direction."* |
+
+The offer lands at ~72% and ~71% through, with beats after it, exactly as the
+process doc requires — and both briefs state the percentage in the Note column.
+
+### 🆕 Four rules that are new, and three of them are pre-emptive
+
+- **“No delivery promise — never ‘in time for Christmas’.”** On both briefs. This
+  is the claim a Christmas-framed ad invites hardest, in the week it is least
+  safe to make, and it was banned before anyone wrote it.
+- **“No weather claim in either direction.”** NK964, because a grill setting
+  invites one.
+- **“No brand on the electric knife. It’s the enemy, not a named one.”** NK965.
+  **Worth putting directly against NK872’s *"Forget spending \$1000 on an
+  overpriced Japanese blade"*** — same job (position against the thing the buyer
+  already owns), one done without naming or disparaging anyone. That is the
+  answer to the open competitor-disparagement item, written by Mark, in the form
+  the next brief can copy.
+- **“Never call the Feather a carving knife**, and never describe its blade shape
+  as a spec. It carves. That’s all we say.” NK965 — a product-category
+  guardrail, new.
+
+### 🎯 A new technique: naming the confusion the brief itself creates
+
+NK964 is called **"Under The Feather Holiday Sale - Blackout"** and there is no
+feather on a Blackout. The brief pre-empts it in its own callout:
+
+> *"The concept name comes from the Feather cut. **There is no feather on this
+> knife** — the name groups the trio."*
+
+That is the strategist anticipating a cross-product visual error of exactly the
+kind NK919 made when its Feather block told Onyeka to shoot the Tiger Cleaver.
+It is cheap to write and it removes the error class. **Copy it anywhere a
+concept name travels across products.**
+
+### 🆕 Mapping gap: `Ali` and `Abdul` are now on the `Editor` property
+
+The schema's `Editor` options now read: Hasnain, Renniel, Umar, Hammad, Onyeka,
+Anas, Naveed, Huzaifa, Waheed, Fahad, Mark, **Ali**, **Abdul**.
+
+Neither was used this run, and **neither has a verified Slack channel in the
+mapping above**. This is the same gap shape as Waheed and Fahad on 2026-11-04,
+which sat open for five days until Mark mentioned the new editors mid-run.
+**Flagging it now rather than discovering it mid-sweep**: the first brief
+assigned to Ali or Abdul will fall to Mark's fallback channel under the
+never-guess rule. Two channel IDs would close it — and per the resolved-channels
+section, they must be read from a listing, never from `slack_search_channels`.
+
+### Smaller notes
+
+- **`Category` says `Net New`, both Batch names say `Adapt`** — and both briefs
+  genuinely are adaptations of HexClad sources, each with a "What transferred,
+  and what could not" block. So here the **property** looks wrong, not the name.
+  That inverts the earlier seven-brief mismatch, where the Batch name was the
+  odd one out.
+- **NK964's Batch name says `6r-Blackout`**, but `Landing Page` is
+  `6 Reasons - General` and **no Blackout option exists** in the schema
+  (PDP, Offer Page, 6r-General, 6r-Outdoor, 6r-Sharpener, 6r-Santoku). The
+  Batch name names a landing page that does not exist.
+- **"Free returns." is in both closes.** That makes 12+ of Mark's briefs against
+  NK844's single deliberate cut. It is settled house copy; **this log should
+  stop tracking it.**
+- **"Northern Knife" is two words in both**, in block 1 of each (*"from Northern
+  Knife"*). The item has been open on eight of Andy's VOs; it is now in Mark's
+  own briefs too, which moves it from a slip to a house inconsistency. One
+  decision on the spelling settles all ten.
+- **The trio is split across statuses.** NK964 names NK916 (Feather) and NK963
+  (Santoku) as its siblings. NK916 was assigned on 11-17; NK963 was not in this
+  queue. So one concept reached its editor in three separate sweeps — worth
+  knowing when Umar asks why he has one third of a set.
+- **No thread notes were sent for anything beyond the due day**, per Mark's
+  2026-11-23 standing instruction. Nothing needed one.
+
 ## Run history
 
 | Date | Posted | Fallback | Skipped (Callum) | Skipped (other) | Notes |
@@ -2895,3 +3020,4 @@ from Mark rather than a flag per brief.
 | 2026-11-17 | **3** | — | **0** | — | **Run on "Assign task due on Due on thursday"** (typo for Thursday; read as the due day). NK917→Hammad, NK918→Anas, NK919→Onyeka. Gate passed on all 3 (3 hooks, 3 matching File naming rows each). Posted, "Due on Thursday" threaded, flipped; closing query empty. **All three are one concept — "Chinese Spy" — across the three focus products, all Andy, all `Mkt-All`, and it is the most serious thing this play has routed.** Written up in full above. It passed the editor gate, so it was posted per the editor-slot-only rule, **with the recommendation to Mark that he pull it before anyone cuts it** — and the note that nothing has been produced yet, so pulling costs nothing. Why it is different in kind from the earlier brand-risk flags (ultimatum, profanity, "we lied"), which were tone and positioning calls: **(1)** it attaches fabricated conduct to real identifiable people — it hooks on the real Nvidia espionage story and invents, in the narrator's voice and prefaced *"True story"*, that **the same woman also targeted NorthernKnife** (*"Nvidia's CEO got a Chinese spy. So did ours"*, *"Same girl... Nvidia during the week. Us on the weekends"*, NK918's *"two years seducing the Nvidia CEO"*), and although each brief carries the rule *"Never name the Nvidia CEO or the real woman... no photo of the CEO"*, **each one then breaks its own rule in the Visual column** — NK918 four times, instructing the editor to generate the real CEO at dinner and on a red carpet with her; **(2)** NK917 and NK919 both carry, verbatim, the production instruction *"Generate image of a gorgeous Chinese lady. But censored her face. Just show a hot sexy body"* — AI-generated sexualised imagery specified by ethnicity, standing in for a real woman accused of a crime, handed to two editors; **(3)** NK919's offer beat says *"If you want one, and not the Chinese one"* — a country-of-origin disparagement in the CTA, past the briefs' own *"no China jokes beyond the spy line"* limit. **And the payoff rests on a false product claim**: the resolution is *"there's no file, no formula, it's a guy... the feather design runs the whole length of the steel because he puts it there, one at a time"*, but the pattern is laser-applied — the NK654 hand-hammer error promoted to the load-bearing beat, so it cannot be word-swapped out without removing the punchline. NK918 does the same for the Santoku engravings and the dragon's scales. **🚨 Separately, NK919 breaks three of Mark's own NK909 rules one day after he wrote them**: it calls the Blackout *"Our best seller"* (NK909: the Viking is), puts the *"bottle opener tip"* in a Visual cell (NK909: *"Not the blade, not the spine... do not let a visual show the bottle meeting the steel"*), and says *"Finger hole in the blade"*. That is the sharpest evidence yet for yesterday's finding that the rules exist but do not travel. **The Santoku ebony count reaches 8** across these three. Also: **NK919's Feather block tells Onyeka to show the Tiger Cleaver** (same Visual cell as the next block) — a straight production error that will cost a re-cut; **the synthetic CEO is now a standing asset** (*"the guy in a black jacket... in the AI Animated Clips folder"*), with a biography and a *"MARRIED. AND LOYAL."* SUPER, after the AI brand owner delivered the apology in NK880/NK894; **"No AI clips" vs AI clips reaches 9 instances**, with NK919 adding the VO line *"No AI, no machine, comes close to this"* in an ad built from AI voice and AI imagery; and a new craft claim, *"only a handful of blacksmiths in the world can do it"*. **Good practice worth copying:** all three carry a pronunciation note for the AI voice (*"Say 'BJORN' as one syllable: type it 'Byorn' in ElevenLabs"*) and disambiguate two similar products (*"the ODIN 6\" Chef Knife, not the Hybrid Cleaver"*); **NK918 and NK919 are the first briefs to ban "Black Friday" outright**, which makes them Evergreen-safe on the event, though *"for the next few days"* and *"before the deal ends"* survive the fix. |
 | 2026-11-17 | **10** | — | **0** | — | **Second run of the day, on "Assign task due on Due on Friday"** (typo; read as Friday). NK908→Naveed, NK910→Hammad, NK911→Anas, NK912→Onyeka, NK913→Umar, NK914→Fahad, **NK915 and NK916→Waheed**; then NK866→Fahad and NK896→Umar arrived mid-run and were caught by the closing re-query. Gate passed on all 10. Posted, "Due on Friday" threaded, flipped; closing query empty. **The first eight are all Mark's, and they are the best-constructed briefs this play has seen.** ✅✅ **The longest-running flag in the engagement is closed, with its reason.** NK916 states the Feather pattern rule in full — *"NEVER describe how the feather gets onto the blade. No laser, etched, engraved, printed, applied, laid, burned, stamped, coated, finished, inlaid"* — and explains both why the word recurs (*"the source is built on 'laser etch' — this is the page where that word is most likely to creep in, from an editor reading the inspo"*) and what the catalog actually requires (*"never describe the technique at all"*). Its companion line makes the rule usable: **"Describe how the STEEL is made. Never how the FEATHER is made"**, with *"hammered into shape by a blacksmith"* approved as house language. That retroactively settles earlier entries — NK910's *"hammered by hand"* is correct, NK917's *"because he puts it there, one at a time"* is not. The same rule now exists for the Santoku engravings in NK908, NK911 and NK914. ✅ **Three more open items closed.** **The customer count**: NK911 and NK912 carry *"147,000 customers — updated 2026-11-16 from 100,000. Customers, never reviews or stars"*, which explains yesterday's fork (NK907/NK909 predate the update inside the same day) and settles the figure. **The "Japanese" rule's mechanism**: NK914 — *"'It's called a santoku because...' can only be finished with its Japanese origin, and the brand never says that"*, so the rule is about never explaining the shape, not avoiding a word; NK908 adds the failure mode. The competitor-disparagement use is untouched and still open. **The invented multiplier**: NK911/NK912 refuse the source's "10 times faster" with the generalised principle **"a feeling, not a measurement. Never say it makes you faster."** And **"up to 67% off" gets its reasoning**: *"B2G2 is never converted into a percentage — it is a mechanic, not a discount"* (six briefs) — while NK866, in this same run, is the 19th brief to say it. 🆕 **Three product facts disclosed for the first time**, each as a scoping rule: **the Tiger Cleaver is not full tang** (NK913, with a beat-level rule so a 4-knife lineup cannot spread the claim), **the Santoku is not full tang** (NK914), and **the LOKI Reaper's two facts** — *"the opener is notched into the blade, and the tip runs straight"* (NK914), which is the product behind the recurring Blackout opener error. Fact budgets also appear: the Tiger Cleaver gets 2 facts in NK913 and 1 in NK914 with *"never its size... do not explain the 'Tiger' name"* — retiring the "over ten inches" and "tiger engraved" flags by forbidding both, which **NK896 then does anyway**. 🔑 **Second one-place fix found: "bottle opener tip" is boilerplate in the Visual-cell template.** The phrase appears in the Visual column of **five briefs across both strategists** (NK912, NK913, NK914, NK915, NK919) while the VO in each is correct — NK913 has the rule, the correct VO and the wrong Visual cell **in the same table row**. Nobody believes it; it is an unedited pasted snippet reaching editors as a shot instruction. Fix the string once. 🚨 **One real product error in Mark's eight: NK914 block 8 says "The LOKI blackout. The opener is notched right into the blade, and the tip runs straight"** — the Reaper's facts under the Blackout's name, which is exactly what NK909 was written to prevent, one day earlier. Its own roster note and red callout are correct, so it is a one-word VO fix plus the Visual cell; it matters because it went to Fahad, who has no history to catch it. ⚠️ **A dated rule change reached one brief in eight**: NK916 says *"'Black Friday Sale' is allowed, and wanted. The strategist lifted the house ban on the word 'sale' for Black Friday briefs on 2026-11-17"*, while NK908–915 all still ban it — so the editors hold seven briefs forbidding a word and one requiring it. 🚨 **NK866 arrived with a populated `Delivery Link`**, which no brief this play has had before; it most likely means the brief was already cut and returned to the queue (where `Revision needed` would fit), so it should be checked before Fahad starts. New edge case, outside the gate. ✅ **Both new editors are live**: NK915/NK916 are Waheed's first two and his channel took both posts and replies; Fahad is on his second and third. 🎯 **Two brief techniques worth naming**: the **collision guard** (Mark's briefs now cross-reference concepts by ID — NK135, NK214/NK762, NK421-423, NK388-389, NK175, NK461 and six named gift concepts — to stop a new brief duplicating an existing one) and the **inspo-hygiene block** (NK913 refuses the source's dishwasher, speed, health and testing claims one by one, quoting each; NK910 catches *"Ours is 30 days. The source says 60 — never inflate it"*). Also: NK911 justifies its avatar choice citing §C.3.1; NK908 refuses a durability claim on purpose (*"I'm not going to tell you it's indestructible"*, called *"the most important line on the page"*); NK916 states the correct scarcity form (*"runs of 500, 3 months to the next. Never 'sold out', never 'selling fast'"*). **Santoku ebony reaches 10** (NK866, NK896) while NK908/NK911/NK914 use the correct *"carved by hand"* form in the same queue; **NK866 asks for the forbidden two-units-side-by-side shot** and contradicts itself on whether the dragon is on the bolster or the handle; **NK896 invents the blacksmith's family and finances**. ✅ **Andy picked up two of Mark's production notes** (the BJORN pronunciation and the ODIN 6" disambiguation), so things do travel between them. **"Free returns" is in all ten of Mark's briefs this week** against NK844's single deliberate cut — downgraded from a contradiction to a one-line confirmation. Minor: seven briefs have `Category` = `Net New` with `Adapt` in the Batch name; "Northern Knife" is two words in eight VOs; five concepts now come from HexClad's library. |
 | 2026-11-17 | **8** | — | **0** | — | **Third run of the day, on "Assign task. Due on thursday".** NK850→Onyeka, NK853→Naveed, NK854→Waheed, NK872→Hasnain, NK881→Hammad, NK920→Onyeka, NK921→Hammad, NK922→Hasnain. All eight Andy's. Gate passed on all 8. Posted, "Due on Thursday" threaded, flipped; closing query empty. 🚨 **The headline is that this run disproved, within the hour, the claim that the bottle-opener class was closed** — NK854 carries *"Black blade, black handle, finger loop, bottle opener on the back."*, near-verbatim the NK851 string fixed minutes earlier, and NK881 carries *"even one with a bottle opener on the back"*; both had been sitting in `Ready to edit` the whole time. Three more briefs carry the `bottle opener tip` Visual phrase (NK854, NK920, NK922), two authored today. The lesson is written up above: **the instance count was only ever the number visible from the briefs this play had read — stop counting and fix the template.** 🚨 **NK881 is the most serious product error logged so far**, not for novelty (it is the NK599 copper-bolster error, which has its own file in this repo) but for position: NK881 is a "we lied" public-apology ad whose entire device is certifying each claim **True** with a green check SUPER, and one of them is *"the dragon sculpted bolster is **copper**, not plastic. True"* with the SUPER **COPPER DRAGON**. It is brass. The same list certifies **REAL EBONY**. An ad built on the brand's own honesty, opening *"NorthernKnife just admitted they lied to over 147,000 customers"*, formally certifying a false material fact is an advertising-standards exposure rather than a taste call — a one-word fix before Hammad builds the supers. 🚨 **NK922's opener error is load-bearing**: *"A bottle opener built into the blade: he opens his beer and slices his steak with the same hand"* derives the benefit from the wrong placement, so unlike every earlier instance there is no word to swap — the beat needs rewriting; the same block claims *"so the knife never slips"*, an absolute safety guarantee, which is a new claim type. ⏰ **A scheduling finding worth as much as any copy note: NK850, NK853 and NK854 have sat in `Ready to edit` since 2026-11-12** and all three are saturated with Black Friday (NK850 says it ~15 times and its whole mechanic is *"the stock will not survive until Black Friday"*). Black Friday is 27 November, so the editors have ~10 days to cut, QA and launch creative whose premise expires on a fixed date — dated work held past the point where the date is comfortable, in a database called *Evergreen Video*. 🎵 **New risk class**: NK920/921/922 each instruct *"the same track as the TikTok (**Elf main theme**)"* plus the named creator's font style, on paid Meta ads — a copyrighted film score, cheap to fix now and expensive after three editors have cut to it. **Counts**: Santoku ebony 10→15, "up to 67% off" 19→25, NK price on `Mkt-All` 2→3 (NK872 *"for less than 200 bucks"*), Tiger Cleaver size-and-name 3 new instances after NK913/914 retired it by rule; NK872 also carries the still-open competitor use, *"\$1000 on an overpriced **Japanese** blade"*. **NK853 and NK854 repeat the NK852 fake sell-out** (*"there isn't any Santoku left. We're sold out." / "You're joking." / "I am."*) — one decision from Mark, not a flag per brief. ✅ **Two earlier flags got their counter-examples**: NK853 and NK854 both carry the Note **"bip the fuck off"**, so the NK769 unhandled-profanity flag is answered; and NK872/NK881 both state the originality gate in the brief (*"nothing from the source is quoted beyond the structure"*) — NK881 being the irony, since the gate held on the source and failed on the product facts. Also ✅ `Category` and the Batch name agree on all eight, and Andy has picked up Mark's collision-guard habit (*"Santoku twin of NK871 (Feather, Hammad)"*). Minor: NK854 *"The Blackout is our fastest seller"* against NK909's Viking rule; NK872 *"And it's still in stock"* (for *"if"*, inverting it into a stock assertion); NK881 instructs *"no vegetable montage"* then asks for a vegetable clip; "free shipping" in NK853/854/920 is as unconfirmed as the lifetime warranty. |
+| 2026-11-23 | **2** | — | **0** | — | **Run on "Assign task now due on wednesday".** NK964→Umar, NK965→Umar, **both Mark's own**. Gate passed on both (Batch name and all 3 File naming rows read `Mark_Umar`). Posted, "Due on Wednesday" threaded, flipped; closing query empty. ✅ **The 11-17 scheduling finding was acted on.** That run flagged the queue holding Black Friday creative past the point where the date was comfortable; NK964 answers it in writing, with a date and an owner — *"The Feather cut, NK916, stays on Black Friday; this cut **moved to the Holiday Sale on 2026-11-23**, by the strategist's call"* — carried by a new `Specialty` value, `Holiday Sale`, on both briefs. The event was migrated rather than left to expire; nothing further is owed. ✅ **The "sale" fork resolves correctly**: *"'Holiday Sale' is allowed, and wanted. 'Discount' is still banned, and so is any superlative about the sale."* The ban was never on the word *sale* — it is on **discount** and superlatives, which is a usable rule rather than a word-list, and it closes the seven-vs-one inconsistency NK916 left. 🎯 **These two are the most compliant briefs in the corpus**: every rule this log has chased for two months appears as a pre-emptive red callout **with its reason** — the opener in the handle *plus* why (*"The LOKI Reaper is the blade one"*), the Viking as bestseller, "black right through" marked unverified, Full-Tang as Feather-only, the batch cap as a Feather fact so no scarcity on the Blackout, the feather-technique ban, scarcity stated exactly (*"runs of 500... and never that the sale makes it go faster"*), no price/percentage, 147,000, no invented deadline, and *"'Meat' — never a named cut"*. Offers land at ~72% and ~71% with beats after, and both briefs state the figure themselves. 🆕 **Four new rules, three of them pre-emptive**: **"No delivery promise — never 'in time for Christmas'"** (both briefs — the hardest claim a Christmas ad invites, banned in the week it is least safe); *"No weather claim in either direction"* (NK964, which a grill setting invites); *"Never call the Feather a carving knife"*; and **"No brand on the electric knife. It's the enemy, not a named one"** — which is **the answer to the open competitor-disparagement item**, doing NK872's job (*"\$1000 on an overpriced **Japanese** blade"*) without naming or disparaging anyone, in a form the next brief can copy. 🎯 **New technique worth copying**: NK964 is titled *"Under The Feather... - Blackout"* and pre-empts its own confusion — *"There is no feather on this knife — the name groups the trio"* — anticipating exactly the cross-product visual error NK919 made when its Feather block named the Tiger Cleaver. 🆕 **Mapping gap flagged before it bites: `Ali` and `Abdul` are now `Editor` options** and neither has a verified channel. Same shape as the Waheed/Fahad gap that sat open five days; the first brief assigned to either falls to Mark's fallback under the never-guess rule. Minor: `Category` reads `Net New` while both Batch names read `Adapt` and both briefs really are HexClad adaptations, so here the **property** is the wrong one — the inverse of the earlier seven-brief mismatch; NK964's Batch name says `6r-Blackout`, a landing page that does not exist in the schema; **"Free returns." is in both closes (12+ of Mark's briefs now — settled house copy, stop tracking it)**; **"Northern Knife" is two words in both**, which moves that item from an Andy slip to a house inconsistency; and the trio is split across sweeps (NK916 went 11-17, NK963 was not in this queue), so Umar holds one third of a set. |
