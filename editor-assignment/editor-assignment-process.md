@@ -1302,6 +1302,71 @@ assignment off the `Editor` property.
 that listing, do not guess one. Send the brief to Mark's fallback channel as
 needing a channel confirmed and leave its status alone.
 
+## ✅ `Ali` and `Abdul` — resolved 2026-11-23, and the reason verification is not a formality
+
+The gap opened on 2026-11-23, when the `Editor` option list grew from 11 names to
+13. Flagged the same day, before either name reached a brief.
+
+| Editor | Channel | Channel ID |
+|---|---|---|
+| `Ali` | `#11-ali-editing` | `C0CJ8LNCDLP` |
+| `Abdul` | `#11-abdul-editing` | `C0CJTPM5E4U` |
+
+Both verified by `slack_list_user_channels` with `name_prefix: "11-"`, the method
+the Waheed/Fahad section sets out. This session is already a member of both.
+
+### 🚨 Mark supplied two IDs and neither was right
+
+Asked for the mapping, Mark gave **`C0D4MN8PQR1` for Ali and `C0D5RT2WXY3` for
+Abdul**. The listing shows the channels exist, with exactly the expected names —
+**but at different IDs**. Neither of the supplied strings appears anywhere in the
+workspace listing, active or archived.
+
+Two things made it worth checking rather than writing straight into the table:
+
+- **Every real channel ID in this workspace begins `C09`, `C0A`, `C0B` or `C0C`.**
+  Both supplied IDs begin `C0D`, outside the range the workspace has issued.
+- **Their shape reads as placeholder text** — `MN8PQR1` and `RT2WXY3` are
+  keyboard-adjacent runs, not the random mix real IDs have (`C0CJ8LNCDLP`,
+  `C0CJTPM5E4U`).
+
+So the supplied values were not used. **The channels in the table above are the
+listed ones.**
+
+### Why this matters more than it looks
+
+A wrong channel ID is the one error in this play that **fails silently in the
+worst direction**. The post succeeds — Slack accepts any channel this session can
+write to — the brief flips to `Assigned to Editor`, and it leaves the queue. The
+editor never sees it, nobody is waiting on a missing message, and the brief looks
+done. Compare the documented failure modes: a blank editor, a name/property
+mismatch and a malformed row all **stop** the brief, which is recoverable. A
+wrong ID *completes* it, wrongly.
+
+**That is the whole reason the never-guess rule exists, and this is the first time
+it caught something.** It also extends the rule, because the rule as written only
+covered guessing:
+
+> **A channel ID is verified against a live listing before use, whatever its
+> source — including Mark.** Not because the source is unreliable, but because an
+> ID is 11 characters with no redundancy: a typo, a stale copy or a value from
+> another workspace all look exactly like a valid one, and the failure is
+> invisible. Verification costs one tool call.
+
+If a supplied ID and the listing disagree, **the listing wins and the difference
+is reported** — the supplied value may be a channel in another workspace, or the
+person may be reading from somewhere this play cannot see, and that is worth
+knowing either way.
+
+### Current state of the channel list
+
+The 2026-11-23 listing shows **17 active `#11-*` channels and 2 archived**. Six
+active ones still have no `Editor` option (`jason`, `khizra`, `shafaq`, `saad`,
+`andy-editing-trial`, and `mark` itself as the fallback), and `Huzaifa` remains an
+`Editor` option with no channel and off the roster. The two lists still run ahead
+of and behind each other in both directions, so **assignment keeps driving off the
+`Editor` property**, never off the channel list.
+
 ## Editor → Slack mapping (verified live 2026-10-13)
 
 Channel IDs are used rather than `#names` because a renamed channel keeps its
@@ -1320,6 +1385,8 @@ does not reliably notify, so the ID is the thing to keep.
 | `Renniel` | `#11-renniel-editing` | `C0BSC1C8WMN` | `U0BUKU9GDM5` | renniel@nebula-studio.co ⚠️ |
 | `Waheed` | `#11-waheed-editing` | `C0CEJBP4MQC` | — not looked up — | — (verified 2026-11-09) |
 | `Fahad` | `#11-fahad-editing` | `C0CENMTDF9C` | — not looked up — | — (verified 2026-11-09) |
+| `Ali` | `#11-ali-editing` | `C0CJ8LNCDLP` | — not looked up — | — (verified 2026-11-23) |
+| `Abdul` | `#11-abdul-editing` | `C0CJTPM5E4U` | — not looked up — | — (verified 2026-11-23) |
 | `Huzaifa` | — none — | — | — | **off roster, never assign** |
 | _fallback (exceptions)_ | `#11-mark` | `C09QUL7S3GA` | `U0A127WHE9M` (Mark) | — |
 
