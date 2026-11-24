@@ -116,6 +116,7 @@ text exactly as shown, as a plain line (no link):
 | features the Santoku (not the brief's `Product`) | `Montage clip of Santoku showing the norse blade design and dragon bolster` |
 | features the Tiger Cleaver (not the brief's `Product`) | `Montage clip tiger cleaver` |
 | features the RAGNAR Butcher | `Montage clip ragnar butcher` |
+| features the RAGNAROK Rising Butcher | `Montage clip of ragnarok butcher` |
 | features the LOKI Viking (the original LOKI) | `Montage clip of Loki showing the blade, the handle, and the finger hole` |
 
 - **"Features"** means the knife is the line's subject (named and described:
@@ -132,7 +133,8 @@ text exactly as shown, as a plain line (no link):
 - **The brief's own product** never gets a montage. Its lines use library
   shots, plus `Hand forging clip` and the collage where the rules above fire.
 - **Featured knife not in the table** (ODIN, VALHALLA, Gunnar, Dragon, LOKI
-  Reaper or Berserker, BJORN Utility…): write a gap note,
+  Reaper or Berserker, BJORN Utility…): write a gap note and ask the user for
+  the montage line,
   `⚠️ No fixed visual: <knife> montage`.
 - **`Product` = Multi:** no knife is the brief's own product, so every
   featured knife gets its montage. Beats that aren't about one knife get a gap
