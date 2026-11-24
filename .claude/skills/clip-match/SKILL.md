@@ -217,6 +217,11 @@ one `content_updates` entry per row:
   unique.
 - `new_str` = the same row with only the Visual cell changed from `<td></td>`
   to the filled cell.
+- Some briefs use **pipe tables** instead (`| Block | Visual | Copy | Note |`).
+  There an empty cell is two spaces between pipes. Match the start of the row
+  through the first words of the copy, e.g. `|  |  | This is the BJORN Santoku,`
+  for a body row or `|  | Some gifts feel expensive` for a hook row, and
+  write the entries on one line joined by `<br /><br />`.
 
 Never change other cells, the copy, the Notes, page properties, or `Status`.
 
