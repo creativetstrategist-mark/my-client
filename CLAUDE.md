@@ -96,12 +96,18 @@ reusing a brief list from earlier in a conversation.
 Four rules worth knowing without opening the spec:
 
 - **Never touch work with `Callum` as Strategist** — standing instruction from
-  Mark (2026-10-13), restated 2026-10-27. No post, no status change, no page
-  edit, no triage. Filtered in the query. **Callum is the only exclusion**, and
-  the reason is ownership, not quality: he is in every editor channel and routes
-  his own briefs. Andy's are in scope — Mark manages Andy's output too, so this
-  play is how they move (confirmed 2026-11-24, after a one-day narrowing to
-  Mark-only was corrected).
+  Mark (2026-10-13), restated 2026-10-27 and 2026-11-24. No post, no status
+  change, no page edit, no triage — **and no reading his pages, and no naming
+  his briefs as findings** in a report or open-items list, not even to flag one
+  as untouched (settled 2026-11-24: *"This is our hard rule never touch Callum's
+  work"*). Filtered in the query. The only things allowed are reading the
+  `Strategist` value itself, which is how the filter works, and counting his
+  rows in run bookkeeping ("8 Callum's, untouched") — count only, no IDs.
+  **Do not look for the edge of this rule.** **Callum is the only exclusion**,
+  and the reason is ownership, not quality: he is in every editor channel and
+  routes his own briefs. Andy's are in scope — Mark manages Andy's output too,
+  so this play is how they move (confirmed 2026-11-24, after a one-day narrowing
+  to Mark-only was corrected).
 - **Never guess an editor.** A brief in `Ready to edit` with a blank `Editor`
   goes to Mark's channel as needing an owner and keeps its status. The
   editor-assignment rules in `notion-schema-verified.md` govern brief *creation*

@@ -55,6 +55,19 @@ Two things worth keeping from the episode:
   lost, but it is the reason this section now states the *reason* for the
   exclusion rather than just the name.
 
+### ✅ Settled 2026-11-24: it covers reading and reporting, not just writing
+
+Asked whether reading one of his pages and naming it in a report counted as
+touching it, Mark answered: *"This is our hard rule never touch Callum's work"*.
+**No reads, and no naming his briefs as findings** — not even to flag one as
+untouched. The only things that remain are reading the `Strategist` value itself
+(the filter needs it) and counting his rows in this play's own bookkeeping.
+Full detail, including the duplicate-ID case: *What "never touch" covers* below.
+
+**Do not look for the edge of this rule.** It has been restated three times, and
+the one time it was treated as having a readable boundary, the boundary was
+wrong.
+
 Any page with `Strategist = Callum` is out of scope for this routine
 completely:
 
@@ -1732,7 +1745,7 @@ posted.
 
 | Case | What to do |
 |---|---|
-| **`Strategist = Callum`** | Out of scope entirely. No post, no flip, no page edit, no triage. See the hard rule at the top — it wins over everything else in this table. Callum is the **only** excluded strategist. |
+| **`Strategist = Callum`** | Out of scope entirely. No post, no flip, no page edit, no triage — and no opening the page, and no naming it as a finding anywhere, not even as untouched (settled 2026-11-24). Drop it at the query and move on; a count is the most that goes in a report. See the hard rule at the top — it wins over everything else in this table. Callum is the **only** excluded strategist. |
 | **`Editor` is blank** (and strategist is not Callum) | Do **not** guess, and do **not** apply the daily routine's editor-assignment rules — those govern brief *creation*, and silently picking someone here would hide a real gap. Post to the fallback channel for Mark saying it needs an owner, and **leave `Status` as `Ready to edit`** so it stays queued until a human assigns it. |
 | **Mark re-assigns a brief that is already posted and flipped** | Four steps, in order: change the `Editor` property; fix the editor segment in the Batch name **and every** File naming row; post the link and the due day in the **new** editor's channel; and **tell the previous editor in their own thread not to start it**. Leave `Status` at `Assigned to Editor` — it is still assigned, just to someone else. See the section below for why the previous-editor note is required. |
 | **No `Creative ID`** / malformed row | Skip, leave the status alone, name it in the run summary. Never post it to an editor. Observed live: one row whose Concept Name is a raw `next.frame.io` URL, with no Creative ID, Product, Editor or Format. |
@@ -3345,11 +3358,12 @@ gone from it.
   the cause; the hooks are a strategist's creative decision, and deleting seven
   hooks from assigned briefs is not what was asked. **They are still live and
   still need his call** — raised separately.
-- **NK845 — `Strategist = Callum`.** *New Wife Black Friday (R2B8) - BJORN
-  Utility*, `Assigned to Editor`, and it is **the one remaining live brief
-  carrying the block**. Not read beyond the query row, not edited, not triaged.
-  The standing instruction of 2026-10-13 has no exception for a fix Mark ordered
-  on other briefs.
+- **One brief with `Strategist = Callum` also carried the block.** Not read
+  beyond the query row, not edited, not triaged. The standing instruction of
+  2026-10-13 has no exception for a fix Mark ordered on other briefs.
+  **Closed, not tracked** — per the 2026-11-24 settlement below, a Callum brief
+  does not belong on an open-items list at all, so its ID has been removed from
+  this entry. It is his to review.
 - **The four shipped R2B8 briefs** — NK855, NK856, NK858, NK859, all
   `Uploaded on Drive`. Changing a brief after the asset has shipped changes
   nothing about the asset.
@@ -3874,18 +3888,48 @@ Open with Mark: the duplicates themselves are his or Andy's to resolve in Notion
 — NK880 and NK881 each need one of the two renumbered, and the blank-`NK` pair
 needs IDs at all.
 
-### What "never touch" covers, and the one thing left to confirm
+### What "never touch" covers — settled 2026-11-24: reading and reporting too
 
 Verified this run: no post, no status change, no page edit on any Callum brief.
-Two of his pages were **read and named in a report** to Mark — NK845 (MIKE block)
-and NK881 (bottle opener) — with no action taken on either.
+But two of his pages had been **read and named in a report** to Mark — NK845
+(MIKE block) and NK881 (bottle opener). Mark was asked whether that counted.
 
-Reading is not in the rule's list ("no post, no status change, no page edit, no
-triage"), but naming his brief in a report is arguably triage. Mark was asked
-directly whether to stop doing even that; **until he says otherwise, reporting a
-problem found on one of Callum's pages without acting on it is treated as
-allowed**, because the alternative is silently knowing about a brand error. If he
-narrows it, record that here and stop naming them.
+**His answer: *"This is our hard rule never touch Callum's work"*.** No
+distinction between reads and writes, and no carve-out for reporting. The widest
+reading is the rule.
+
+An earlier draft of this very section reasoned that reading was not in the rule's
+list, and recorded reporting-without-acting as "treated as allowed" pending his
+answer. **That was wrong and is deleted.** The lesson is not subtle: a hard rule
+restated three times (2026-10-13, 2026-10-27, 2026-11-24) is not an invitation to
+find the edge of it. When a boundary looks ambiguous, the safe reading *is* the
+rule, and the question gets asked before acting, not after.
+
+### Operationally, what is and is not allowed
+
+**Not allowed, on any brief with `Strategist = Callum`:**
+
+- No post, no status change, no page edit, no triage — as before.
+- **No opening the page.** Do not fetch it, do not read its content, do not run
+  an existence probe against it.
+- **No naming it as a finding.** It does not go in a report, a findings list, an
+  open-items list, or a "worth knowing" aside — not even flagged as untouched,
+  and not even when the problem found on it is a real brand error that Mark has
+  ordered fixed elsewhere. His briefs are his to review.
+
+**Still required, because it is how the exclusion works:**
+
+- **Reading the `Strategist` value** on rows the detection query returns. The
+  filter cannot exclude what it cannot see, so his rows do appear in query
+  output; they are then dropped and not opened.
+- **Counting them in run bookkeeping** — "20 rows, 8 Callum's, untouched, 7 of
+  Andy's in scope" is a statement about this play's own coverage, not a report on
+  his work. Keep it to the count. No IDs, no concept names, no content.
+
+**On a duplicate Creative ID where one copy is Callum's** (see NK880/NK881
+above): stop and ask which brief is meant. Do **not** open his copy to work out
+which is which — that is the read this rule forbids. The ambiguity is Mark's to
+resolve.
 
 ### Second occurrence, minutes later, and what it added
 
