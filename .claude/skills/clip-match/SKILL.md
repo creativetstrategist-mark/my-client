@@ -177,14 +177,20 @@ Cell content: everything in play order, with a blank line between entries
 long paragraph. **No links.** Each library clip is written as
 `Broll clip of <Proper Name>`: the clip's scene name from the library, with
 its first letter lowercased unless it starts with a proper noun (Feather,
-Santa, POV…). Fixed visuals use their exact text, and gap notes start with
+Santa, POV…), and with the shot tags removed. Drop framing, angle and camera
+moves (medium, medium-wide, wide, close-up, extreme close-up, full-body,
+overhead, top-down, high-angle, low, eye-level, macro, push-in, pull-back,
+tilt-up/down, pan…, orbit, drift, slow-motion, static, rack focus); keep what
+is in the shot (selfie, POV, the action). For example, "Feather box among
+gifts under the tree, push-in" becomes
+`Broll clip of Feather box among gifts under the tree`. Fixed visuals use their exact text, and gap notes start with
 `⚠️ …`. Library clips never repeat within a brief; fixed visuals may (the
 editor picks different footage each time). Keep the padding the existing
 cells use:
 
 ```
 <td>
-Hand forging clip<br /><br />Broll clip of hand opens Blackout box, knife in foam tray, close-up<br /><br />Montage clip of Loki showing the blade, the handle, and the finger hole
+Hand forging clip<br /><br />Broll clip of hand opens Blackout box, knife in foam tray<br /><br />Montage clip of Loki showing the blade, the handle, and the finger hole
 </td>
 ```
 
