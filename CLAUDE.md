@@ -34,7 +34,7 @@ explicitly asks:
 |---|---|
 | **Feather Knife** | $99.90. Rosewood handle. Blade pattern is **laser-applied** — never say hand-etched, hand-finished, or engraved. ~500-unit limited drops, ~3-month restock. Persona fit: **JOHN** (collector). |
 | **BJORN Series Santoku** | Norse engravings on blade, dragon-sculpted **brass** bolster, hand-carved wooden handle. **Never reference Japanese origins or use the word "Japanese"** — santoku is a Japanese-origin knife shape but the brand never says so. Persona fit: **JOHN**. |
-| **LOKI Blackout Edition** | $79.90. High-carbon steel, ebony handle, bottle opener built into the **handle** (not the blade/spine). Ships in a black branded box with magnetic closure. All-black remake of the #1-selling LOKI Viking Knife. Persona fit: **MIKE** (BBQ/grill self-buyer), **SARAH** (gift framing), general/deal-led for **VANCE**. |
+| **LOKI Blackout Edition** | $79.90. High-carbon steel, ebony handle, bottle opener built into the **tip of the handle** (the butt end, never the blade or spine). Ships in a black branded box with magnetic closure. All-black remake of the #1-selling LOKI Viking Knife. Persona fit: **MIKE** (BBQ/grill self-buyer), **SARAH** (gift framing), general/deal-led for **VANCE**. |
 
 Full detail: `brand-pack/01-brand/product-catalog.md`. Persona docs:
 `brand-pack/02-personas/`.

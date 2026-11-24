@@ -952,9 +952,10 @@ strategist 2026-11-24, applied from the next batch on:
   product still takes library shots (or the two templates above).
 - A knife with no template takes a library shot, or a described one if its
   library is empty. (The LOKI Viking was added the same day, by the strategist.)
-- The Blackout template's "bottle opener tip" is the strategist's wording. The
-  §E guard still applies: the opener is in the **handle**, and the bottle never
-  meets the blade.
+- The Blackout template's "bottle opener tip" means **the tip of the handle**.
+  That is where the opener is (strategist, 2026-11-24): the butt end of the
+  handle, never the blade or the spine. In red callouts and shots, say "the
+  opener at the tip of the handle". A bottle never meets the blade.
 
 **How to write the Visual cell:**
 

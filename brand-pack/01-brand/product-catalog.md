@@ -63,7 +63,7 @@ core play of this whole routine, proven on this exact product.
 | **Price** | $79.90 |
 | **Steel** | High-carbon |
 | **Handle** | Ebony |
-| **Bottle opener** | Built into the **handle** — not the blade, not the spine. (The LOKI *Reaper* is the one with the opener notched into the blade. Do not mix them up.) |
+| **Bottle opener** | Built into the **tip of the handle** (the butt end; confirmed by the strategist 2026-11-24) — not the blade, not the spine. (The LOKI *Reaper* is the one with the opener notched into the blade. Do not mix them up.) |
 | **Packaging** | Black branded box, magnetic closure |
 | **What it is** | All-black remake of the #1-selling LOKI Viking Knife |
 | **Notion `Product` value** | `LOKI Blackout` |
