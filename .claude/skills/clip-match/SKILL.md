@@ -172,10 +172,15 @@ everything in the order it plays.
 7. **No repeats** anywhere in the brief (hooks + body + clips already in
    filled cells). Don't stack near-identical shots back to back (three "planted
    in a mossy log" in a row); vary detail → action → lifestyle.
-8. **Don't force it.** If neither a fixed visual nor the library fits the beat
-   (phone screen, order page, warehouse, Santa on camera), write a gap note
-   instead of a weak clip: `⚠️ No library clip: <the shot needed>`. A row can
-   mix clips, fixed visuals and gap notes.
+8. **Never ask for footage that doesn't exist.** No gap notes for screen
+   recordings, carts, promo codes, phone calls, inboxes, warehouses or similar
+   abstract beats ("screen recording of the cart and a promo code failing" is
+   banned). When no clip matches a beat literally, use a cutting clip of the
+   brief's own knife from the library (`Broll clip of Feather chopping…`) or a
+   montage line instead. Gap notes (`⚠️ No library clip: <the shot needed>`)
+   are only for a specific shot the brief itself demands that the library
+   can't supply, like "four knives laid out" or "a fast lineup of the
+   collection".
 
 ### 6. Write the cells
 
