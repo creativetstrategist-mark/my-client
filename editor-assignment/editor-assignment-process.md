@@ -3963,6 +3963,139 @@ costs one clause and removes the ambiguity entirely.
 Resulting load after the swap: **Umar 4** (NK976, NK989, NK991, NK973),
 **Onyeka 4** (NK942, NK945, NK969, NK971) — which is what the swap was for.
 
+## ⚠️ A write that errored and applied anyway — verify naming rows by fetch, not by probe (2026-11-24)
+
+Fixing NK992's `Andy\_EDITOR` placeholder, then re-assigning the same brief
+minutes later, exposed two tooling hazards in the technique this file recommends.
+
+### 1. `update_content` returned "No matches found" after applying the change
+
+The re-assignment call was `Andy_Umar` → `Andy_Hammad` with
+`replace_all_matches: true`. It came back as a hard `validation_error`:
+
+> No matches found for Andy_Umar. Fetch the page again and base old_str on the
+> current page text.
+
+A fetch showed the change **had been applied**: Batch name and all 3 File naming
+rows read `Andy\_Hammad`. The likely mechanism is that `replace_all_matches`
+consumes every match and a final validation pass then reports none left, but the
+mechanism does not matter operationally. What matters:
+
+**A `validation_error` from `update_content` does not prove nothing changed.**
+Never respond to one by reporting failure, and never retry with a different
+`old_str` on the assumption the page is untouched — that is how a second,
+unintended replacement gets made. **Fetch first and look at the page.**
+
+### 2. The existence probe proves the old string is gone, nothing more
+
+This file recommends a non-matching `old_str` as a cheap existence probe. That is
+still sound for *absence*, and it was used correctly here: after the placeholder
+fix, probing for `Andy_EDITOR` failed, confirming none remained.
+
+But **absence of the placeholder is not presence of the right name.** The probe
+cannot see what replaced it. For the editor token specifically, the whole point of
+the gate is that the right person is named in every row, so:
+
+**Verify a naming-row edit with a fetch, reading the Batch name and every File
+naming row.** Use the probe for "is this class of error gone from the page",
+never for "did my fix write what I meant". A probe-verified placeholder fix that
+silently wrote the wrong token would put the wrong editor's name on every file —
+the exact failure the never-guess rule exists to prevent, arriving through the
+verification step instead of the edit.
+
+## ⚠️ A brief can be flipped without being posted — NK995 (2026-11-24)
+
+NK995 moved three times during one run:
+
+| When | `Editor` | `Status` |
+|---|---|---|
+| Opening query | *(blank)* | `Ready to edit` |
+| Mid-run fetch | Umar | `Assigned to Editor` |
+| Closing re-query | Umar | `Ready to edit` |
+
+Somebody filled in the editor, flipped the page out of the queue, and then put it
+back — and **it was never posted to Umar's channel**, which a read of that channel
+confirmed before anything was sent. Had it stayed at `Assigned to Editor`, the
+brief would have left the queue with no editor ever told: the silent failure this
+play's post-then-flip order exists to prevent, arriving from outside the play.
+
+Two things follow:
+
+- **The closing re-query is not only for new arrivals.** It also catches a brief
+  that left and came back. A brief seen at `Assigned to Editor` mid-run is not
+  therefore handled; only the closing pass decides.
+- **Before posting a brief whose status has moved under you, read the editor's
+  channel.** One call, and it is the difference between a needed post and a
+  duplicate. (Same shape as the NK958 channel-ID check: one cheap read before an
+  irreversible send.)
+
+NK995 was posted and flipped on the closing pass, gate-clean.
+
+## 🔍 The Santoku's own facts are right only in a locked port (2026-11-24)
+
+Six briefs in this run describe the BJORN Santoku. **Five get its handle or its
+bolster wrong, and the one that is right is the only one that was not freshly
+written.**
+
+| Brief | Category | Bolster | Handle |
+|---|---|---|---|
+| NK962 | `Iteration` — *"NK599 word for word, locked"* | ✅ **brass** (twice) | ✅ **carved by hand** |
+| NK940 | Net New | "the bolster" | 🚨 **ebony** |
+| NK943 | Net New | "the bolster" | 🚨 **ebony** |
+| NK946 | Adaptation | "the bolster" | 🚨 **ebony** |
+| NK957 | Iteration (new script) | "the bolster" | 🚨 **rosewood** |
+| NK994 | Net New | 🚨 **copper** | 🚨 **rosewood** |
+
+The Santoku's handle is now described three different ways across one batch:
+**ebony** (the Blackout's, ×3), **rosewood** (the Feather's, ×2), and correctly as
+hand-carved wood (×1). NK992 adds a sixth **copper** instance in its gift-list
+beat, three days after Mark's NK963 ruled *"It's **brass**, with a dragon sculpted
+into it"*.
+
+**This sharpens the standing finding.** It is not that Andy is careless, and not
+simply that unnamed facts go wrong: **NK962 is correct because it is a word-for-word
+port of NK599, a script written before the error entered circulation.** Every
+Santoku description written fresh in this batch is wrong. So the bad facts are in
+whatever reference the fresh writing draws on, and the fix is upstream of the
+briefs — the same conclusion the `Andy_EDITOR` placeholder reached from the other
+direction.
+
+Corollary worth keeping: **a locked port is the most reliable brief in the batch.**
+NK962 is also the only one here with no stale customer count and no invented
+review count.
+
+## 🚨 "No two hands hammer the same way" — third flagging of one inherited line (2026-11-24)
+
+NK995 carries:
+
+> *"A finish so distinctive that no two are ever exactly the same. Because no two
+> hands hammer the same way."*
+
+This attributes the Feather's pattern to hand-work. `CLAUDE.md` names the rule:
+the Feather's blade pattern is **laser-applied** — never hand-etched, hand-finished
+or engraved. It is a hard rule by name, and this is the strongest-authority copy
+flag of the run.
+
+**It is also the third time this same inherited line has been flagged:**
+
+| Date | Where | Outcome |
+|---|---|---|
+| 2026-09-14 | NK569 flagged the exact NK184 line as non-compliant | not fixed upstream |
+| 2026-10-26 | NK653 and NK654 carried it (*"etched"* plus the hand-work attribution) | flagged, not fixed |
+| 2026-11-24 | NK995, a locked port of NK724, whose parent is NK184 | flagged here |
+
+**The mechanism is now clear and it is the opposite of the finding above.** A
+locked port is the most reliable brief for facts that were right when the parent
+was written — and the most reliable *carrier* of an error baked into that parent.
+NK184 is a US and AU winner, so it keeps being ported, and the line rides along
+every time. **Fixing NK995 fixes one brief; fixing NK184 and NK724 stops the line.**
+
+Raised to Mark rather than edited: a hard-rule violation in copy is still a copy
+decision, and he has declined comparable fixes before (*"No need for that"* on
+NK881). Proposed replacement, keeping the beat and the differentiation:
+
+> *"A pattern so distinctive that nothing else on a counter looks like it."*
+
 ## Run history
 
 ¹ Out-of-scope rows are **not counted here**, per the hard rule — the column
@@ -4009,3 +4142,4 @@ a malformed row). See *What "never touch" covers*.
 | 2026-11-24 | **4** | — | — | **3 (gate)** | **Second run of the day, after Mark restored Andy to scope** (*"Andy is fine since I also manage that only callum's work will never be touch"*). The Thursday go signal was still live, so the sweep was re-run rather than waiting for a new one; the spec, query and CLAUDE.md were reverted to the Callum-only rule first. **7 of Andy's in scope.** NK941→Renniel, NK944→Hammad, NK956→Naveed, NK961→Onyeka posted, "Due on Thursday" threaded, flipped. 🚨 **Three held on the gate, all the same cause: `Andy_EDITOR` left unreplaced** — NK968 (Hasnain), NK970 (Hammad), NK972 (Naveed), in the Batch name **and every** File naming row (3, 5 and 3 rows). This is the NK795 case of 2026-11-09 grown from one row to three whole briefs. All three carry a checklist line saying *"your name in place of EDITOR"*, so the placeholder may be addressed to the editor — but **NK956 and NK961 from the same batch have the real name filled in and carry that same checklist line anyway**, so it is boilerplate and the filled ones show the intended end state. Held per *never guess which side is right*; recommended fix is one token per row from the `Editor` property, as Mark ordered on NK795 (*"fix and assign"*). ✅ **Andy now writes the opener rule himself** — all five Santa briefs state *"the bottle opener is in the handle, never show it in the blade"* in the instruction **and** the upload checklist, and every VO says *"built into the handle"* correctly — **while the Visual cell in NK956, NK968, NK970 and NK972 still reads *"bottle opener tip"***. Four more instances on pages that forbid it twice each. The error now survives only in the pasted Visual snippet, nowhere a writer typed it fresh and nowhere a rule is missing: **the snippet is the whole remaining problem.** ✅ **Mark's Christmas subtitle pills reached Andy's briefs** (same hex table in NK961/968/970/972, three days on) — so conventions travel; it is the product facts that do not. 🚨 Stale **100,000** count in NK956/NK961/NK970 against Mark's 147,000; a new unverified *"Over five thousand five-star reviews"* in NK956/NK970 **while NK961 and NK968 instruct "No review counts on screen"**; **rosewood on the wrong knives** (NK956 gives the Santoku a rosewood handle and the Tiger Cleaver *"rosewood and copper"*, NK970 repeats it — NK968 gets it right with *"hand-carved wooden handle"*); **NK941 and NK944 put the opener "into the steel"** and both claim a finger hole *"so it never slips"*, the absolute safety claim from NK922 — these two are the only briefs in the batch with no rule callouts at all; NK944 *"five times sharper"*; NK941 invents an *"ODIN chef knife in Damascus steel"* (non-catalog name and a steel type in no product fact); Tiger Cleaver *"ten inches of tiger-striped steel"* in three briefs; Blackout batch-scarcity in NK961/968/970 against Mark's *"the batch cap is a Feather fact"*; *"the biggest deal we've ever put out"* in three. ✅ **Worth copying: every Santa brief names its winning hook with the spend behind it** (NK222 H1 took US \$84k at 1.80, NK651 H5 US \$48k, NK401 H2 AU \$35k) and says which hook it replaces and why — the clearest creative reasoning in the corpus. NK941 again has an entirely empty Visual column. |
 | 2026-11-24 | **6** | **3** (blank editor) | — | 3 (gate, still held) | **Third run of the day, on a repeated "Assign task due on thursday".** SQL allowance spent again — ran on the saved-view fallback. **12 of Andy's in scope.** NK942→Onyeka, NK945→Onyeka, NK955→Hammad, **NK958→Ali**, NK959→Waheed, NK960→Waheed posted, threaded, flipped; closing query clean, no mid-run arrivals. 🔑 **NK958 is Ali's first brief ever, and it validates yesterday's channel check**: it went to `C0CJ8LNCDLP` from the live listing, **not** the `C0D4MN8PQR1` Mark supplied, and the channel accepted the post and the thread reply. Had the supplied ID gone into the mapping unchecked, the send would have failed a day later on a brief nobody was watching for, the flip would have followed it, and the brief would have left the queue unseen — the exact silent failure the never-guess rule exists for. One tool call, one brief saved. **NK989/990/991** (*Triple Discount Holiday*, all three products, all created today) have **no `Editor`** → one fallback post to `#11-mark` naming all three, status left at `Ready to edit`, nothing guessed. **NK968/970/972 stay held** on the `Andy_EDITOR` placeholder: a repeated go signal does not change that, since the spec defines a go signal as every brief *not Callum's **and not malformed***. ⚠️ **The saved-view blind spot did not reproduce** — the board returned blank-`Editor` rows this time (the out-of-scope rows plus NK989–991) and the table cross-check agreed exactly, 20 rows both. So `hideEmptyGroups` is unreliable in **both** directions (hid 12 on 11-11, hid none on 11-24): the fallback section now says run both reads every time regardless. ✅ **NK958 is the cleanest brief in the Santa set and the reason is instructive**: it is the only one with no stale count and no review count, and it is the one whose own instruction says *"No review counts on screen"* — it obeys itself, where NK955 and NK959 carry the same instruction family then assert *"five thousand five-star reviews, a hundred thousand customers"*. It also gets the Tiger Cleaver handle right where the other three say *"rosewood and copper"*. Same author, same day, same family — **the difference is whether the body was checked against the rules, not whether the rules exist.** 🎯 **NK945 has the best inspo documentation in the corpus**: source named with run dates, then *why it works* / *shape we keep* / *shape we change*, the last reading *"their discount is the last line. Ours lands at ~65% with three beats after it"* — the CLAUDE.md offer rule stated as a deliberate deviation **with the figure**, the first time the originality gate is reasoned rather than asserted. Copy that block structure. Repeats: *"five times sharper"* in NK942/NK945; stale 100,000 in NK945/NK955/NK959; *"ten inches"* on the Tiger Cleaver in four briefs; `bottle opener tip` in the Visual column of NK955/NK958/NK960 while **NK959 gets it right**, so one snippet, four pages, three wrong; Feather *"gone in two weeks"* in three, against Mark's NK965 rule; *"three months in the workshop"* in two; a new unverified *"more than twenty knife styles"* in NK945. NK959 introduces an *"As NK651"* Visual shorthand instead of shot descriptions. |
 | 2026-11-24 | **15 total** | 3 (then assigned) | — | 0 | **Fourth run, the second "Assign task due on thursday", in three waves as Mark decided editors and the queue filled underneath it.** Opening read 20 rows → NK942/945→Onyeka, NK955→Hammad, NK958→Ali, NK959/960→Waheed. Then on Mark's decisions → NK968→Hasnain, NK970→Hammad, NK972→Naveed, NK989→Umar, NK990→Ali, NK991→Umar. Then three mid-run arrivals → NK969→Onyeka, NK971→Umar, NK973→Onyeka. All gate-clean after **9 placeholder fixes**; closing query clean. 🚨 **The `Andy_EDITOR` placeholder is template-level, not a slip: it was on nine briefs** — NK968/969/970/971/972/973/989/990/991, i.e. **every brief Andy created on 11-23 and 11-24** in the Santa and Triple Discount families. The escalation is NK795 (one row, 11-09) → three briefs (11-24 am) → nine (11-24 pm). All nine also ship the checklist line *"your name in place of EDITOR"*, and NK955/958/959/960 from the same family have real names filled in and carry that line too — **so the fix belongs where the Batch name is generated**, not in nine pages a day. 🚨 **"Copper bolster" is back four times** (NK969, NK971, NK973, NK991), three days after Mark's NK963 ruled *"It's **brass**, with a dragon sculpted into it"* and made "sculpted" the only word — and a week after he declined to fix NK881's copper with *"No need for that"*. The forward fix reached his template and not Andy's. Three of the four also give the Santoku a **rosewood handle** (the Feather's; it is hand-carved wood). All four carry their own correct rules in the same callout and obey them, **so the rules Andy writes hold and the two facts he does not name are the two that are wrong** — the 11-09 finding, unchanged two weeks on. 🔄 **Three mid-run arrivals needed three closing re-queries**: NK969/971/973 were all in `Ready for visuals` at the open and `Ready to edit` by the end, editors set, moved while the run was live. The NK708 pattern times three — **keep re-querying until a pass returns nothing new**; a single closing read would have left three briefs behind. 📝 **Process note**: Mark's *"Assign it to umar, hammad and ali"* did not match the editors on the held set, so it was ambiguous which three briefs he meant. Asked; he said *"You can decide then fix the baming afterwards"*; on deciding and starting the edits he stopped the run with *"ask me each concept so I can decide"*. **So "you can decide" did not survive contact with the actual decisions** — on anything that assigns work to named people, prefer the per-item question even when told to use judgement. Nothing had been posted when he stopped it, so the reversal cost one property change. His calls: NK989→Umar (I had proposed Hammad), NK990→Ali and NK991→Umar as proposed, and **keep Andy's editors** on the held three. ⚠️ Load: Umar now holds four of today's briefs and Onyeka four. Copy flags on the Triple Discount trio: **"ALMOST SOLD OUT" in all nine hooks** plus *"gone until next year"* and *"when it sells out, it stays sold out"*, against **Andy's own NK961/NK968 "No sold-out claims on the Blackout"**; the **delivery promise** *"in time for Christmas"* / *"before Christmas"* in all three, conditioned on a shipping cut-off **Mark's NK967 says does not exist**; NK990 *"every batch so far has sold out in days"*. ✅ All three carry a real holiday subtitle spec and the NK135 winner's numbers (A\$12.6k at 3.01 ROAS, 148 purchases). |
+| 2026-11-24 | **10** | — | — | 0 | **Fifth run, a third "Assign task due on thursday".** NK938→Renniel, NK940→Onyeka, NK943/946→Waheed, NK957/962/993/995→Umar, NK994→Anas, NK992→Umar then **re-assigned to Hammad** on Mark's *"re-assign 992 to hamad"*. All gate-clean; **1 `Andy\_EDITOR` placeholder fix** (NK992, 4 rows, filled from the `Editor` property per the NK795 *"fix and assign"* precedent). SQL allowance spent on the closing query — ran the saved-view fallback, **both reads, which agreed exactly**. 🔄 **NK995 flapped `Ready to edit` → `Assigned to Editor` → `Ready to edit` during the run and had never been posted** — caught by the closing pass, channel checked for a duplicate first, then posted and flipped. See its section above. ⚠️ **A `update_content` call errored with "No matches found" after applying its change** — new tooling hazard, and the reason naming rows are now verified by fetch rather than by probe. 🔍 **Headline finding: five of six Santoku descriptions get the handle or bolster wrong, and the one that is right (NK962) is the only one not freshly written** — a word-for-word port of NK599. The Santoku handle appears as ebony (×3), rosewood (×2) and correctly hand-carved wood (×1) in one batch; NK992/NK994 add two more **copper** bolsters. 🚨 **NK995 carries the hand-work attribution for the Feather pattern** (*"no two hands hammer the same way"*) against the `CLAUDE.md` laser-applied hard rule — third flagging of the same line inherited from NK184, with a proposed replacement. Also NK995 *"the lightest, sharpest knife he will ever hold"* (NK579 weight ban) and *"the most viral knife of 2026"*. Repeats: stale **100,000** in NK946/NK957 **while NK940 uses the correct 147,000 in the same batch**; *"five times sharper"* in NK943/NK946/NK944-family; Feather batch-scarcity on the wrong product in NK940 (Santoku), NK994 (Santoku), NK992 (Blackout), **correctly on the Feather in NK993 and NK995**; *"the biggest deal"* superlative in NK957/NK995; `bottle opener tip` in the Visual cells of NK957/NK994 — **but NK992's Visual cell gets it right** (*"the opener in the handle"*), the first time that cell is correct, and its brief states the rule explicitly. ✅ **NK992/993/994 name Artlist for music**, the licensing-safe route, against the unresolved Elf-theme question on NK920/921/922. ✅ NK993 is clean throughout. ⚠️ Load: Umar took 4 of this run (9 across the day), Waheed 2. NK938 is Rolling Knife Sharpener, a non-focus product — flagged, not withheld. |
