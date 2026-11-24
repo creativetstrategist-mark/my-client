@@ -908,6 +908,28 @@ unsheathed Feather by the tree, close-up"*), **`Person`** (Solo · Couple ·
 Family · Group · Hands only · No person), **`Seasonality`** (Evergreen ·
 Christmas) and a **`Frame.io link`**.
 
+**Two fixed visuals override the library.** Ruled by the strategist 2026-11-24:
+*"Here are some templatize that no need to pull from broll selection"*, applied
+**from the next batch on**. Briefs already written (NK963-967) were explicitly
+left as they are.
+
+| When the line says… | The Visual cell says, exactly |
+|---|---|
+| **"Hand-Forged"** (any form: hand-forged, hand forged, hand forge) | `Hand forging clip` |
+| **Social proof**: the customer count ("147,000 customers…"), the proof stack, reviews | `12 tiles collage of men holding their knives from NK` |
+
+- They are **not library shots**, so no `Shot:` prefix. Write the phrase as
+  given.
+- **When a line carries other beats too**, the template covers its own words
+  and the rest of the line keeps its library shots, in VO order. For example:
+  `Shot: Feather handle close-up… Then Hand forging clip on "Hand-Forged". Then
+  Shot: …`.
+- **The close almost always triggers the collage**, because the proof stack
+  lives there (§C.4). "Hold the last frame" stays in the cell when the close
+  needs it.
+- Plain "forged steel" without "hand" does not trigger the forging template.
+  Use judgement there and pick from the library.
+
 **How to write the Visual cell:**
 
 1. **Name the shot by its `Proper Name`, exactly — `Shot: <Proper Name>.`** —
