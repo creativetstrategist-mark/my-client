@@ -86,6 +86,11 @@ Fetch the page and note:
 - A Visual cell is empty when the fetched markdown shows it as `<td></td>`
   (or only whitespace). Anything else, even rough text like "Unboxing clip of
   blackout", counts as filled. Don't touch it.
+- **Hard rule, HOOK and BODY alike:** a filled Visual cell is never edited,
+  added to, reformatted or "improved", whoever wrote it, including cells
+  filled by an earlier run of this skill. A brief whose hooks are all filled
+  gets body-only work, and the reverse. The only exception is when the user
+  explicitly asks to redo a specific brief's visuals.
 - Skip rows whose copy cell is empty too.
 - No empty Visual cells → tell the user and stop.
 
