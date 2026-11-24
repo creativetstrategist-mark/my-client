@@ -3814,6 +3814,29 @@ So: **content changes are silent, ownership changes are announced.** Naming the
 brief the previous editor *still* has (here, NK969) is worth the extra clause —
 it stops the note reading as "all your work is cancelled".
 
+### Second occurrence, minutes later, and what it added
+
+*"NK971 give to onyeka"* — the reverse of the first, making the pair a **swap**:
+NK971 Umar→Onyeka and NK973 Onyeka→Umar. Same four steps, verified by re-read
+(`Editor`, Batch name and all 5 File naming rows on Onyeka).
+
+A swap carries a risk a single move does not, and it is worth handling
+deliberately: **NK971 and NK973 are both Santoku, both Santa-family, adjacent
+IDs, and were posted to the same channel about forty seconds apart.** An editor
+told only *"NK971 has moved"* could easily drop the wrong one. So the note to
+Umar named the keeper explicitly:
+
+> *"To be clear which Santoku is which, since they landed close together:
+> **NK973 Lucky Day Santa is yours** (posted just after this one), along with
+> NK976, NK989 and NK991. Only NK971 has moved."*
+
+**Rule: when a re-assignment leaves the previous editor holding a near-identical
+brief, name the keeper and say what moved.** Listing their whole current set
+costs one clause and removes the ambiguity entirely.
+
+Resulting load after the swap: **Umar 4** (NK976, NK989, NK991, NK973),
+**Onyeka 4** (NK942, NK945, NK969, NK971) — which is what the swap was for.
+
 ## Run history
 
 ¹ Column was "Skipped (Callum)" for runs up to 2026-11-23, when the
