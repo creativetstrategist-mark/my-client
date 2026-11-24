@@ -84,3 +84,13 @@ A scheduled Routine fires daily (see the trigger created for this repo) and:
 
 If the Notion connector isn't available in a given run, the routine should
 say so explicitly rather than silently skipping delivery.
+
+## Clip matching (on demand)
+
+Separate from the daily routine. When the user gives a Creative ID (e.g.
+`NK955`), follow `.claude/skills/clip-match/SKILL.md`: find that brief in the
+Video Brief Database, fill only its **empty** HOOK/BODY Visual cells with
+clips from the Notion "Mark Broll Selection" libraries (Feather, LOKI Blackout,
+Bjorn Santoku, Tiger Cleaver, Knife Sharpener), linked to Frame.io, and leave
+every filled cell, property and Status untouched. Don't run it on a brief the
+user hasn't named.
