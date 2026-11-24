@@ -121,9 +121,9 @@ text exactly as shown, as a plain line (no link):
   `broll clip of cutting using <knife>` (for example `broll clip of cutting
   using LOKI Viking`) where the cutting words fall.
 - **One beat each:** a fixed visual covers only its own words. The rest of
-  the line keeps library shots of the brief's own product, in VO order. Every
-  mention gets its own entry: "Hand-forged by a real blacksmith… Because it's
-  hand-forged…" gets `Hand forging clip` at both spots.
+  the line keeps library shots of the brief's own product, in VO order. Each
+  fixed visual appears once per cell, at its first mention, even if the line
+  says "hand-forged" twice.
 - **The brief's own product** never gets a montage. Its lines use library
   shots, plus `Hand forging clip` and the collage where the rules above fire.
 - **Featured knife not in the table** (ODIN, VALHALLA, Gunnar, Dragon, LOKI
@@ -133,11 +133,10 @@ text exactly as shown, as a plain line (no link):
   featured knife gets its montage. Beats that aren't about one knife get a gap
   note. Confirm this reading with the user on the first Multi brief.
 
-**How many visuals:** the 3–4 second rule (the visual changes every 3–4 s).
-AI VO runs at about 2.5 words a second, so visuals = `ceil(words ÷ 9)`,
-minimum 1. Rough guide: up to 9 words → 1; 10–18 → 2; 19–27 → 3; 28–36 → 4;
-and so on. Each fixed visual counts as one slot covering its own words; the
-remaining words get `ceil(remaining words ÷ 9)` library clips. List
+**How many clips:** 1–2 library clips per Visual cell, by line length:
+1 clip for a line of up to about 20 words, 2 clips for anything longer. Never
+more than 2; the editor fills out the 3–4 s cuts from there. Fixed visuals
+come on top of that where their rule fires, once per kind per cell. List
 everything in the order it plays.
 
 **Picking clips:**
