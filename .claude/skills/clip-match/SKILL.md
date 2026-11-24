@@ -109,7 +109,7 @@ text exactly as shown, as a plain line (no link):
 
 | When the line… | Write |
 |---|---|
-| says "hand-forged" (any case, with or without the hyphen) | `Hand forging clip` |
+| says "hand forge" in any form: hand-forged, hand forged, hand-forging (any case) | `Hand forging clip` |
 | has social proof: customer counts, review counts, star ratings ("147,000 customers…", "over five thousand five-star reviews") | `12 tiles collage of men holding their knives from NK` |
 | features the Feather (and Feather isn't the brief's `Product`) | `Montage clip of feather showing the blade and handle` |
 | features the LOKI Blackout (not the brief's `Product`) | `Montage clip of blackout showing the blade and handle and bottle opener tip` |
