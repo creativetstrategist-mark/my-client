@@ -3814,6 +3814,79 @@ So: **content changes are silent, ownership changes are announced.** Naming the
 brief the previous editor *still* has (here, NK969) is worth the extra clause —
 it stops the note reading as "all your work is cancelled".
 
+## ⚠️ Duplicate Creative IDs — two of them cross the Callum line (2026-11-24)
+
+Mark asked whether any of Callum's work had been touched. It had not — his eight
+`Ready to edit` briefs (NK978–NK985) were still untouched, everything posted was
+Andy's or Mark's, and the three of his that moved today were posted by **his own
+account**. But the check turned up a structural hazard.
+
+**Five Creative IDs in the database are duplicated, and two straddle Callum and Andy:**
+
+| ID | Copy 1 | Copy 2 |
+|---|---|---|
+| **NK881** | Callum — "Let Them Laugh Black Friday - Blackout" | Andy — "We Lied - Santoku" |
+| **NK880** | Callum — "Let Them Laugh Black Friday - Santoku" | Andy — (`Assigned to Editor`) |
+| NK896 | Andy | Andy (`Ready for visuals`) |
+| NK284 | Andy | Andy |
+| `NK` (blank) | Mark | Mark (`Not started`) |
+
+### Why this matters to this play
+
+The message label, the dedup log, and every report in this file key off
+**Creative ID**. The hard scope rule keys off **Strategist**. When one ID has two
+rows and they differ in Strategist, those two keys disagree — so an instruction
+like *"fix NK881"* or *"assign NK881"* is ambiguous, and resolving it by ID alone
+can land on Callum's page.
+
+This nearly bit: the bottle-opener brief reported as "NK881" was **Callum's**
+Blackout one. The Andy NK881 is a Santoku, which has no bottle opener at all, so
+the ID in that report pointed across the line. Nothing was written, for two
+reasons that are worth separating:
+
+- **By design:** every write in this play goes through a **page ID**, never a
+  Creative ID. That is what actually held.
+- **By luck:** Mark happened to decline the fix.
+
+Only the first is a safeguard. Do not rely on the second.
+
+### Rule
+
+- **An NK number is a label, never an address.** Resolve every brief to its page
+  ID before any read, post, status change or edit, and check `Strategist` on the
+  **page**, not on whatever row an ID lookup returned first.
+- **When an ID matches more than one row, stop and ask which.** Never pick the
+  newer, the one with the matching product, or the one that "obviously" fits the
+  request — one of the pairs above differs by Strategist, so guessing wrong is
+  exactly the violation the scope rule exists to prevent.
+- **Re-run the duplicate check when reporting on briefs by ID**, since new
+  duplicates keep appearing (NK880/NK881 were created two days apart):
+
+```sql
+SELECT "Creative ID", COUNT(*) AS n,
+       GROUP_CONCAT("Strategist", ' | ') AS strategists
+FROM "collection://2cf4ac62-7aac-81a8-86bf-000b96778943"
+WHERE "Creative ID" IS NOT NULL AND "Creative ID" != ''
+GROUP BY "Creative ID" HAVING COUNT(*) > 1
+```
+
+Open with Mark: the duplicates themselves are his or Andy's to resolve in Notion
+— NK880 and NK881 each need one of the two renumbered, and the blank-`NK` pair
+needs IDs at all.
+
+### What "never touch" covers, and the one thing left to confirm
+
+Verified this run: no post, no status change, no page edit on any Callum brief.
+Two of his pages were **read and named in a report** to Mark — NK845 (MIKE block)
+and NK881 (bottle opener) — with no action taken on either.
+
+Reading is not in the rule's list ("no post, no status change, no page edit, no
+triage"), but naming his brief in a report is arguably triage. Mark was asked
+directly whether to stop doing even that; **until he says otherwise, reporting a
+problem found on one of Callum's pages without acting on it is treated as
+allowed**, because the alternative is silently knowing about a brand error. If he
+narrows it, record that here and stop naming them.
+
 ### Second occurrence, minutes later, and what it added
 
 *"NK971 give to onyeka"* — the reverse of the first, making the pair a **swap**:
