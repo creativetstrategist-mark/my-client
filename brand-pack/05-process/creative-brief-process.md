@@ -942,6 +942,7 @@ strategist 2026-11-24, applied from the next batch on:
 | BJORN Santoku | `Montage clip of Santoku showing the norse blade design and dragon bolster` |
 | RAGNAR Tiger Cleaver | `Montage clip tiger cleaver` |
 | RAGNAR Butcher | `Montage clip ragnar butcher` |
+| LOKI Viking | `Montage clip of Loki showing the blade, the handle, and the finger hole` |
 
 - **If that knife's line talks about cutting**, add
   `broll clip of cutting using [knife]` after the montage, e.g. `Montage clip
@@ -949,8 +950,8 @@ strategist 2026-11-24, applied from the next batch on:
   optional: add it only when the line actually cuts something.
 - **This covers only the supporting knives, never the hero.** The brief's own
   product still takes library shots (or the two templates above).
-- A knife with no template (the LOKI Viking, for one) takes a library shot, or
-  a described one if its library is empty.
+- A knife with no template takes a library shot, or a described one if its
+  library is empty. (The LOKI Viking was added the same day, by the strategist.)
 - The Blackout template's "bottle opener tip" is the strategist's wording. The
   §E guard still applies: the opener is in the **handle**, and the bottle never
   meets the blade.
