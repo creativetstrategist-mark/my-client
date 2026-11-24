@@ -910,7 +910,9 @@ Christmas) and a **`Frame.io link`**.
 
 **Two fixed visuals override the library.** Ruled by the strategist 2026-11-24:
 *"Here are some templatize that no need to pull from broll selection"*, applied
-**from the next batch on**. Briefs already written (NK963-967) were explicitly
+**from the next batch on, to new scripts and iterations alike** (§D.1.3: an
+iteration gets fresh Visual cells under these rules even when the parent
+brief predates them). Briefs already written (NK963-967) were explicitly
 left as they are.
 
 | When the line says… | The Visual cell says, exactly |
