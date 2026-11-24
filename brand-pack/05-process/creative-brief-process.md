@@ -921,6 +921,16 @@ left as they are.
 - They are **not library shots**, so no `Shot:` prefix. Write the phrase as
   given.
 
+- **When a line carries other beats too**, the template covers its own words
+  and the rest of the line keeps its library shots, in VO order. For example:
+  `Shot: Feather handle close-up… Then Hand forging clip on "Hand-Forged". Then
+  Shot: …`.
+- **The close almost always triggers the collage**, because the proof stack
+  lives there (§C.4). "Hold the last frame" stays in the cell when the close
+  needs it.
+- Plain "forged steel" without "hand" does not trigger the forging template.
+  Use judgement there and pick from the library.
+
 **When the script highlights a knife other than the brief's product** (usually
 the lineup beat, §C.5.1), that knife's visual is fixed as well. Ruled by the
 strategist 2026-11-24, applied from the next batch on:
@@ -944,15 +954,6 @@ strategist 2026-11-24, applied from the next batch on:
 - The Blackout template's "bottle opener tip" is the strategist's wording. The
   §E guard still applies: the opener is in the **handle**, and the bottle never
   meets the blade.
-- **When a line carries other beats too**, the template covers its own words
-  and the rest of the line keeps its library shots, in VO order. For example:
-  `Shot: Feather handle close-up… Then Hand forging clip on "Hand-Forged". Then
-  Shot: …`.
-- **The close almost always triggers the collage**, because the proof stack
-  lives there (§C.4). "Hold the last frame" stays in the cell when the close
-  needs it.
-- Plain "forged steel" without "hand" does not trigger the forging template.
-  Use judgement there and pick from the library.
 
 **How to write the Visual cell:**
 
