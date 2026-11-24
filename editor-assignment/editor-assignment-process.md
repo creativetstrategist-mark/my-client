@@ -1734,6 +1734,7 @@ posted.
 |---|---|
 | **`Strategist = Callum`** | Out of scope entirely. No post, no flip, no page edit, no triage. See the hard rule at the top — it wins over everything else in this table. Callum is the **only** excluded strategist. |
 | **`Editor` is blank** (and strategist is not Callum) | Do **not** guess, and do **not** apply the daily routine's editor-assignment rules — those govern brief *creation*, and silently picking someone here would hide a real gap. Post to the fallback channel for Mark saying it needs an owner, and **leave `Status` as `Ready to edit`** so it stays queued until a human assigns it. |
+| **Mark re-assigns a brief that is already posted and flipped** | Four steps, in order: change the `Editor` property; fix the editor segment in the Batch name **and every** File naming row; post the link and the due day in the **new** editor's channel; and **tell the previous editor in their own thread not to start it**. Leave `Status` at `Assigned to Editor` — it is still assigned, just to someone else. See the section below for why the previous-editor note is required. |
 | **No `Creative ID`** / malformed row | Skip, leave the status alone, name it in the run summary. Never post it to an editor. Observed live: one row whose Concept Name is a raw `next.frame.io` URL, with no Creative ID, Product, Editor or Format. |
 | **`Editor = Huzaifa`** (off roster) | Fallback channel for Mark. No flip. |
 | **Editor not in the mapping table** | Fallback channel for Mark, naming the editor and the missing mapping. No flip. Never post into a channel guessed from the editor's name. |
@@ -3773,6 +3774,45 @@ seeing before the next sweep.
   reference image) and the NK135 winner's performance behind the reference
   (A\$12.6k at 3.01 ROAS, 148 purchases). NK991 carries the BJORN pronunciation
   note.
+
+## 🔄 Re-assigning a brief that has already gone out — 2026-11-24
+
+First occurrence: Mark, *"NK973 give to umar"*, about an hour after NK973 had
+been posted to Onyeka, threaded and flipped.
+
+Done in four steps:
+
+1. `Editor` property Onyeka → Umar.
+2. `Andy_Onyeka` → `Andy_Umar` in the Batch name and all 3 File naming rows.
+3. Posted the link in `#11-umar-editing` with `Due on Thursday` threaded under it,
+   exactly as a first assignment.
+4. **A note in Onyeka's existing thread**: *"NK973 has been reassigned to Umar —
+   please don't start this one. The file naming on the brief has been updated to
+   his name. NK969 is still yours."*
+
+Verified by re-read: `Editor`, the Batch name and all three rows agree on Umar,
+and `Status` is still `Assigned to Editor`.
+
+### Why step 4 is required, and why the no-thread-note rule does not cover it
+
+Mark's standing instruction of 2026-11-23 is *"Whenever there's update on script
+or visual no need to message on the thread since they will just see it inside
+notion."* **That rule does not extend to a re-assignment**, for one reason:
+
+- A script or Visual fix is **content on a page the editor is about to open
+  anyway**, so the page is the notification.
+- A re-assignment is **ownership**. The previous editor has no reason to reopen a
+  page he believes is his, so he will not see it in Notion — he will see it when
+  he delivers a cut nobody asked him for.
+
+The failure mode is also worse in kind: not a stale line in a finished edit, but
+**two editors cutting the same brief**, which is the exact outcome the
+editor-matching gate exists to prevent. One of them would also be naming every
+file after the other.
+
+So: **content changes are silent, ownership changes are announced.** Naming the
+brief the previous editor *still* has (here, NK969) is worth the extra clause —
+it stops the note reading as "all your work is cancelled".
 
 ## Run history
 
