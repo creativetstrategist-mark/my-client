@@ -97,7 +97,8 @@ Fetch the page and note:
 ### 4. Load the libraries you need
 
 Load only the brief's own `Product` library (other knives get fixed visuals,
-step 5). Query the view with `mode: "view"`,
+step 5). If that library comes back empty (the Knife Sharpener B-roll was
+empty as of 24 Nov 2026), write nothing to the brief: tell the user and wait. Query the view with `mode: "view"`,
 `page_size: 100`, and follow `next_cursor` until `has_more` is false. Every
 library currently has more than 100 clips, so expect at least 2 pages. Always
 load live (the team adds clips every few days); don't cache.
