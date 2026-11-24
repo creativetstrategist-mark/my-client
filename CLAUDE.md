@@ -100,10 +100,17 @@ Four rules worth knowing without opening the spec:
   change, no page edit, no triage — **and no reading his pages, and no naming
   his briefs as findings** in a report or open-items list, not even to flag one
   as untouched (settled 2026-11-24: *"This is our hard rule never touch Callum's
-  work"*). Filtered in the query. The only things allowed are reading the
-  `Strategist` value itself, which is how the filter works, and counting his
-  rows in run bookkeeping ("8 Callum's, untouched") — count only, no IDs.
-  **Do not look for the edge of this rule.** **Callum is the only exclusion**,
+  work"*). **His volume is not reported either** — *"Remove the count too."*
+  Not a number, not a share, not an ID, not "the rest"; and no raw queue total
+  beside an in-scope figure, since the difference is the count by subtraction.
+  Run reports state what was **in scope** and what was done with it; "nothing in
+  scope" is the whole report for a queue with nothing in it. Filtered in the
+  query, and the one thing still read is the `Strategist` value itself, which is
+  how the filter works. **Do not look for the edge of this rule.** If Mark asks
+  directly whether it held, answer him — that is his question, not a report.
+  **Mark's and Andy's work is unaffected**: *"anything from me and andy is
+  fine"* — their counts, IDs and findings stay in full.
+  **Callum is the only exclusion**,
   and the reason is ownership, not quality: he is in every editor channel and
   routes his own briefs. Andy's are in scope — Mark manages Andy's output too,
   so this play is how they move (confirmed 2026-11-24, after a one-day narrowing
