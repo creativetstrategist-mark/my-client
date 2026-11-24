@@ -39,6 +39,14 @@ explicitly asks:
 Full detail: `brand-pack/01-brand/product-catalog.md`. Persona docs:
 `brand-pack/02-personas/`.
 
+## Hard rule: never touch Callum's Notion tasks
+
+Never create, edit, rename or delete any Notion page or task that belongs
+to Callum (Strategist = Callum in the Video Brief Database, or anything
+else marked as his). This covers naming fixes, property updates and the
+daily routine's writes alike. Before any Notion write, check the page's
+Strategist; if it is Callum, skip it and tell the user instead.
+
 ## Universal copy rules (apply to every rewrite, every product)
 
 - **No spec-sheet jargon, ever**: no alloy codes, HRC/Rockwell numbers,
