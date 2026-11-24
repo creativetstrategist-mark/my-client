@@ -26,7 +26,10 @@ data source `collection://2cf4ac62-7aac-81a8-86bf-000b96778943`.
 **B-roll libraries** (all under the "Mark Broll Selection" page,
 `41b4ac627aac80009438cdfebfccf002`):
 
-| Brief `Product` / product named in the row | Library | View URL |
+Library clips are only ever used for the **brief's own `Product`**. Other
+knives a line features get a fixed visual instead (step 5).
+
+| Brief `Product` | Library | View URL |
 |---|---|---|
 | Feather | 🪶 Feather B-roll | `view://41b4ac62-7aac-8165-b78f-000ccc436fc9` |
 | LOKI Blackout | 🐈‍⬛ Loki Blackout B-roll | `view://41b4ac62-7aac-81a3-9b2d-000cf4d6eb0c` |
@@ -34,7 +37,7 @@ data source `collection://2cf4ac62-7aac-81a8-86bf-000b96778943`.
 | Tiger Cleaver (RAGNAR Tiger Cleaver) | 🐅 Tiger Cleaver B-roll | `view://41b4ac62-7aac-8151-b732-000c597624de` |
 | Rolling Knife Sharpener | Knife Sharpener B-roll | `view://41b4ac62-7aac-818b-984d-000cfd29a696` |
 | BJORN Utility | only the Santoku-library clips whose name says "Bjorn utility" | (same as Santoku) |
-| anything else (LOKI original, ODIN, RAGNAR Butcher, VALHALLA, Gunnar, Dragon…) | **no library** → gap note, see step 5 | |
+| anything else (LOKI Viking, ODIN, RAGNAR Butcher, VALHALLA, Gunnar, Dragon…) | **no library**: fixed visuals still apply, other beats get gap notes (step 5) | |
 
 Each clip row has: `Proper Name` (title, the only description; clip pages are
 blank), `Frame.io link`, `Person` (Solo / Couple / Family / Group / Hands only /
@@ -73,7 +76,7 @@ Fetch the page and note:
   must be `Hands only` or `No person`; "Higgsfield Santa for the hook" → the
   hook is AI footage, not library; a named shoot or a specific Frame.io link
   → that footage wins for the beat it names.
-- **Clips already used** in filled Visual cells (Frame.io view IDs): don't reuse
+- **Clips already used** in filled Visual cells (by scene name): don't reuse
   them.
 
 ### 3. List the empty Visual cells
@@ -88,34 +91,62 @@ Fetch the page and note:
 
 ### 4. Load the libraries you need
 
-Use the brief's `Product` library, plus the library of any other product a
-row is about (see step 5). Query each view with `mode: "view"`,
+Load only the brief's own `Product` library (other knives get fixed visuals,
+step 5). Query the view with `mode: "view"`,
 `page_size: 100`, and follow `next_cursor` until `has_more` is false. Every
 library currently has more than 100 clips, so expect at least 2 pages. Always
 load live (the team adds clips every few days); don't cache.
 
 ### 5. Match each empty row
 
-**Which library:** default to the brief's `Product`. If the row's copy is
-about a different knife, using it as the subject ("The RAGNAR Tiger
-Cleaver. Ten inches…", "And the LOKI Blackout…"), use that knife's library.
-If that knife has no library → gap note. Never show a different knife than
-the one the line talks about.
+**Fixed visuals come first.** These are the user's house rules. Write the
+text exactly as shown, as a plain line (no link):
 
-**How many clips:** the 3–4 second rule (the visual changes every 3–4 s). AI
-VO runs at about 2.5 words a second, so clips = `ceil(words in the copy ÷ 9)`,
-minimum 1. Rough guide: up to 9 words → 1 clip; 10–18 → 2; 19–27 → 3;
-28–36 → 4; and so on. List them in the order they play, following the line's
-beats.
+| When the line… | Write |
+|---|---|
+| says "hand-forged" (any case, with or without the hyphen) | `Hand forging clip` |
+| has social proof: customer counts, review counts, star ratings ("147,000 customers…", "over five thousand five-star reviews") | `12 tiles collage of men holding their knives from NK` |
+| features the Feather (and Feather isn't the brief's `Product`) | `Montage clip of feather showing the blade and handle` |
+| features the LOKI Blackout (not the brief's `Product`) | `Montage clip of blackout showing the blade and handle and bottle opener tip` |
+| features the Santoku (not the brief's `Product`) | `Montage clip of Santoku showing the norse blade design and dragon bolster` |
+| features the Tiger Cleaver (not the brief's `Product`) | `Montage clip tiger cleaver` |
+| features the RAGNAR Butcher | `Montage clip ragnar butcher` |
+| features the LOKI Viking (the original LOKI) | `Montage clip of Loki showing the blade, the handle, and the finger hole` |
+
+- **"Features"** means the knife is the line's subject (named and described:
+  "The RAGNAR Tiger Cleaver. Ten inches of tiger-striped blade…"). A passing
+  mention doesn't count ("…when the Feather feels like too much for an
+  onion" in a LOKI line gets no Feather montage).
+- **Cutting:** if a featured knife's line has it cutting something, also add
+  `broll clip of cutting using <knife>` (for example `broll clip of cutting
+  using LOKI Viking`) where the cutting words fall.
+- **One beat each:** a fixed visual covers only its own words. The rest of
+  the line keeps library shots of the brief's own product, in VO order. Every
+  mention gets its own entry: "Hand-forged by a real blacksmith… Because it's
+  hand-forged…" gets `Hand forging clip` at both spots.
+- **The brief's own product** never gets a montage. Its lines use library
+  shots, plus `Hand forging clip` and the collage where the rules above fire.
+- **Featured knife not in the table** (ODIN, VALHALLA, Gunnar, Dragon, LOKI
+  Reaper or Berserker, BJORN Utility…): write a gap note,
+  `⚠️ No fixed visual: <knife> montage`.
+- **`Product` = Multi:** no knife is the brief's own product, so every
+  featured knife gets its montage. Beats that aren't about one knife get a gap
+  note. Confirm this reading with the user on the first Multi brief.
+
+**How many visuals:** the 3–4 second rule (the visual changes every 3–4 s).
+AI VO runs at about 2.5 words a second, so visuals = `ceil(words ÷ 9)`,
+minimum 1. Rough guide: up to 9 words → 1; 10–18 → 2; 19–27 → 3; 28–36 → 4;
+and so on. Each fixed visual counts as one slot covering its own words; the
+remaining words get `ceil(remaining words ÷ 9)` library clips. List
+everything in the order it plays.
 
 **Picking clips:**
 1. **Match the beat literally first.** Unboxing or "this is the…" → box-open or
    unboxing clip. Bottle opener → the beer-cap clips (Blackout's opener is in
    the handle). Gift, wife, Christmas morning → gifting, stocking, wrapping,
    under-the-tree clips. Steak, BBQ, sharpness → cutting and slicing clips.
-   Craft, detail, engraving, handle, "hand-forged" → macro or detail clips
-   (there's no forging footage in the libraries, so if the line needs the
-   forge itself, add a gap note for it).
+   Craft, detail, design, handle → macro or detail clips. ("Hand-forged" is a
+   fixed visual, see above.)
 2. **First body row:** the first clip is a clear hero shot of the product
    (most briefs cut to the knife on the first word of the body).
 3. **Hook rows:** the most arresting clip for the hook's subject. The first
@@ -135,22 +166,31 @@ beats.
 7. **No repeats** anywhere in the brief (hooks + body + clips already in
    filled cells). Don't stack near-identical shots back to back (three "planted
    in a mossy log" in a row); vary detail → action → lifestyle.
-8. **Don't force it.** If nothing in the library fits the beat (phone screen,
-   order page, warehouse, Santa on camera, a multi-knife montage), write a gap
-   note instead of a weak clip: `⚠️ No library clip: <the shot needed>`. A row
-   can mix clips and a gap note.
+8. **Don't force it.** If neither a fixed visual nor the library fits the beat
+   (phone screen, order page, warehouse, Santa on camera), write a gap note
+   instead of a weak clip: `⚠️ No library clip: <the shot needed>`. A row can
+   mix clips, fixed visuals and gap notes.
 
 ### 6. Write the cells
 
-Cell content: clips in play order, each as `[Proper Name](Frame.io link)`,
-separated by `<br />` (table cells are inline-only), with the gap note, if
-any, as the last line. Keep the padding the existing cells use:
+Cell content: everything in play order, separated by `<br />` (table cells
+are inline-only). **No links.** Each library clip is written as
+`Broll clip of <Proper Name>`: the clip's scene name from the library, with
+its first letter lowercased unless it starts with a proper noun (Feather,
+Santa, POV…). Fixed visuals use their exact text, and gap notes start with
+`⚠️ …`. Library clips never repeat within a brief; fixed visuals may (the
+editor picks different footage each time). Keep the padding the existing
+cells use:
 
 ```
 <td>
-[Hand opens Blackout box, knife in foam tray, close-up](https://app.frame.io/…)<br />[Macro of Blackout etching, finger hole and brass pins](https://app.frame.io/…)
+Hand forging clip<br />Broll clip of hand opens Blackout box, knife in foam tray, close-up<br />Montage clip of Loki showing the blade, the handle, and the finger hole
 </td>
 ```
+
+Because the scene name lands in the brief as text, skip any Feather clip
+whose name says "etched" or "engraved" when another clip covers the beat
+(the Feather pattern is laser-applied; the brief must never call it etched).
 
 Apply every cell in **one** `notion-update-page` call, `command: "update_content"`,
 one `content_updates` entry per row:

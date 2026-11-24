@@ -91,6 +91,8 @@ Separate from the daily routine. When the user gives a Creative ID (e.g.
 `NK955`), follow `.claude/skills/clip-match/SKILL.md`: find that brief in the
 Video Brief Database, fill only its **empty** HOOK/BODY Visual cells with
 clips from the Notion "Mark Broll Selection" libraries (Feather, LOKI Blackout,
-Bjorn Santoku, Tiger Cleaver, Knife Sharpener), linked to Frame.io, and leave
+Bjorn Santoku, Tiger Cleaver, Knife Sharpener), written as "Broll clip of <scene name>"
+(no links), plus the house fixed visuals (hand forging clip, social-proof collage,
+other-knife montages), and leave
 every filled cell, property and Status untouched. Don't run it on a brief the
 user hasn't named.
