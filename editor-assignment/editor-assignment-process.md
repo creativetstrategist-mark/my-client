@@ -23,52 +23,51 @@ into the `#11-<editor>-editing` channels manually (see the message-format sectio
 the format below is copied from what they already send, not invented). The
 routine automates that handoff, it does not introduce a new convention.
 
-## 🚫 Hard rule: this play touches Mark's work and nothing else
+## 🚫 Hard rule: never touch Callum's work
 
-**Standing instruction from Mark, 2026-11-23, verbatim: *"Never touch callum or
-Andy's output only from Mark"*.**
+**Standing instruction from Mark, 2026-10-13: never touch work that has `Callum`
+as Strategist.** **Restated unprompted on 2026-10-27**, mid-run, in stronger
+terms: *"Never ever touch any task with callum as strategist."*
 
-This **replaces** the Callum-only exclusion that governed the play from
-2026-10-13 to 2026-11-23, and it inverts how the gate is written: the scope rule
-is no longer a blocklist of strategists to skip but an **allowlist of one**.
+**Callum is the only exclusion. Everything else — `Andy`, `Mark`, `Mauro`,
+`Claude` — is in scope.**
 
-**Only `Strategist = Mark` is in scope.** Every other value — `Andy`, `Callum`,
-`Mauro`, `Claude`, and blank — is out of scope completely:
+### 📝 The 24-hour narrowing, and why the rule reads this way again
+
+On **2026-11-23** Mark said: *"Never touch callum or Andy's output only from
+Mark"*. The scope was narrowed to an allowlist of one, the query was changed to
+`"Strategist" = 'Mark'`, and the first run under it (2026-11-24) assigned
+**nothing** — 15 briefs in the queue, none of Mark's.
+
+**On 2026-11-24 he corrected it**: *"Andy is fine since I also manage that only
+callum's work will never be touch"* — Mark manages Andy's output too, so Andy's
+briefs are his to route. Reverted to the Callum-only rule the same day.
+
+Two things worth keeping from the episode:
+
+- **The reason Callum is excluded is ownership, not quality.** He is a member of
+  every editor channel and does his own handoffs, so his briefs are already
+  routed. Andy's are not — Mark manages them, and this play is how they move.
+  That is the distinction, and it is now explicit rather than inferred.
+- **One zero-assignment run was the cost of the ambiguity.** The go signal of
+  2026-11-24 found 7 of Andy's briefs in the queue and assigned none of them;
+  they went out later the same day once the scope was corrected. Nothing was
+  lost, but it is the reason this section now states the *reason* for the
+  exclusion rather than just the name.
+
+Any page with `Strategist = Callum` is out of scope for this routine
+completely:
 
 - do **not** post it to an editor,
 - do **not** post it to the fallback channel,
 - do **not** change its `Status`,
 - do **not** edit the page,
-- do **not** flag it for triage.
-
-An allowlist is also the safer shape: a new `Strategist` option added to the
-property later is out of scope by default, where the old blocklist would have
-silently let it through.
-
-### ⚠️ What this costs, stated once
-
-Of the **231 briefs created in November 2026**, Mark wrote **25 — about 11%**
-(Andy 121, Callum 84, Claude 1). And **all 26 briefs sitting in
-`Ready for visuals`, the entire next wave into the queue, are Andy's.**
-
-So the next several sweeps will find a full queue and assign almost none of it.
-**That is the instruction working as written, not a fault**, and it is recorded
-here rather than re-raised every run. The thing worth knowing is the gap it
-leaves: **Andy's briefs now have no handoff route through this play at all**, and
-roughly 120 a month need one. Callum does his own handoffs (he is in every editor
-channel); whether Andy does is not established.
-
-### Why Callum's work was already excluded — history, still valid
-
-The original instruction, 2026-10-13: never touch work that has `Callum` as
-Strategist. **Restated unprompted on 2026-10-27, mid-run, in stronger
+- do **not** flag it for triage. **Restated unprompted on 2026-10-27, mid-run, in stronger
 terms: *"Never ever touch any task with callum as strategist."*** He volunteered
 it while a run was in flight and nothing had gone wrong, so treat it as the
 rule he most wants held, not as a correction of something. It has now been
 stated twice, two weeks apart.
 
-Any page with `Strategist = Callum` is out of scope for this routine
-completely — as is any page that is not Mark's, under the 2026-11-23 rule above.
 
 **Volume note, 2026-11-10: Callum's rows went from 4 to 12 in one day, 6 of them
 arriving during a single run.** The closing query that day returned twelve Callum
@@ -80,8 +79,8 @@ the case this rule overrides. Take no action on any of them, including no fallba
 post. A queue that is entirely Callum rows is a drained queue for this play's
 purposes; say so in one line rather than listing them.
 
-Filter on `Strategist` in the detection query itself so a page that is not
-Mark's is never even a candidate. Count them in the run summary if useful, but take no action.
+Filter on `Strategist` in the detection query itself so a Callum page is never
+even a candidate. Count them in the run summary if useful, but take no action.
 This rule outranks every other rule in this doc, including the blank-editor
 handling below. Note that Callum is a member of every editor channel and does
 these handoffs himself — his briefs are his to route.
@@ -120,7 +119,7 @@ to a brief until Mark asks. That has real consequences worth stating plainly:
 ### What "go" means
 
 Unless Mark says otherwise, a go signal means: **every brief currently in
-`Ready to edit` that is **Mark's** and not malformed.** Report what you are
+`Ready to edit` that is not Callum's and not malformed.** Report what you are
 about to do and how many, then do it.
 
 If he scopes it ("just the new ones", "only Hasnain's", "just NK612"), honour
@@ -257,7 +256,7 @@ SELECT "Creative ID", "Concept Name", "Product", "Content", "Editor",
        "Status", "Strategist", "Format", "Offer", url, createdTime
 FROM "collection://2cf4ac62-7aac-81a8-86bf-000b96778943"
 WHERE "Status" = 'Ready to edit'
-  AND "Strategist" = 'Mark'
+  AND ("Strategist" IS NULL OR "Strategist" != 'Callum')
 ORDER BY createdTime ASC
 ```
 
@@ -601,7 +600,7 @@ page's claim about it.
 SHARPENER`, `6 Reasons - Sharpener`, offer `40% + Free Gifts`). CLAUDE.md scopes
 the *daily rewriting routine* to the Feather, Santoku and Blackout — that is
 about which briefs get **written**, not which get **handed to an editor**. Any
-brief in `Ready to edit` that is Mark's and not malformed gets assigned,
+brief in `Ready to edit` that is not Callum's and not malformed gets assigned,
 whatever the product. Assigned, and flagged to Mark as the first time.
 
 **⚠️ The copy check is weaker outside the 3 focus products.** On those briefs
@@ -1722,8 +1721,8 @@ posted.
 
 | Case | What to do |
 |---|---|
-| **`Strategist` is anything but `Mark`** | Out of scope entirely. No post, no flip, no page edit, no triage. See the hard rule at the top — it wins over everything else in this table. Covers `Andy`, `Callum`, `Mauro`, `Claude` and blank. |
-| **`Editor` is blank** (on one of Mark’s briefs — otherwise it is out of scope and gets nothing) | Do **not** guess, and do **not** apply the daily routine's editor-assignment rules — those govern brief *creation*, and silently picking someone here would hide a real gap. Post to the fallback channel for Mark saying it needs an owner, and **leave `Status` as `Ready to edit`** so it stays queued until a human assigns it. |
+| **`Strategist = Callum`** | Out of scope entirely. No post, no flip, no page edit, no triage. See the hard rule at the top — it wins over everything else in this table. Callum is the **only** excluded strategist. |
+| **`Editor` is blank** (and strategist is not Callum) | Do **not** guess, and do **not** apply the daily routine's editor-assignment rules — those govern brief *creation*, and silently picking someone here would hide a real gap. Post to the fallback channel for Mark saying it needs an owner, and **leave `Status` as `Ready to edit`** so it stays queued until a human assigns it. |
 | **No `Creative ID`** / malformed row | Skip, leave the status alone, name it in the run summary. Never post it to an editor. Observed live: one row whose Concept Name is a raw `next.frame.io` URL, with no Creative ID, Product, Editor or Format. |
 | **`Editor = Huzaifa`** (off roster) | Fallback channel for Mark. No flip. |
 | **Editor not in the mapping table** | Fallback channel for Mark, naming the editor and the missing mapping. No flip. Never post into a channel guessed from the editor's name. |
@@ -1858,7 +1857,7 @@ the mapping table is only in the file.
 
 1. Query data source collection://2cf4ac62-7aac-81a8-86bf-000b96778943 for
    Status = 'Ready to edit' (exact string — lowercase "edit"), excluding
-   Strategist to 'Mark' in the query itself, oldest first.
+   Strategist = 'Callum' in the query itself, oldest first.
 2. Drop any page with no Creative ID (a malformed row). There is no suppression
    list to consult — the go-live baseline was discharged on 2026-10-13 and must
    not be reintroduced.
@@ -1889,8 +1888,8 @@ the mapping table is only in the file.
 
 ## Hard rules
 
-- Only touch work with Strategist = Mark — standing instruction from Mark,
-  2026-11-23; Andy's and Callum's are both out of scope
+- Never touch work with Strategist = Callum — standing instruction from Mark;
+  Callum is the only exclusion, because he routes his own briefs
   (2026-10-13). No post, no status change, no triage, not even a flag. Filter it
   in the query.
 - Never invent a deadline, runtime, or priority in a message. The brief carries
@@ -3441,6 +3440,115 @@ deliberate reversal to do on his word, not a cleanup to assume.
 The rule applies from this point: **the next sweep takes Mark's briefs and
 nothing else.**
 
+## 🚨 2026-11-24, second run: scope restored, and the NK795 placeholder is now a batch-wide pattern
+
+Mark: *"Andy is fine since I also manage that only callum's work will never be
+touch"* — reverting the 24-hour narrowing. The Thursday go signal was still
+live, so the sweep was re-run rather than waiting for a new one.
+
+Queue: 15 briefs, 8 Callum's (untouched), **7 of Andy's in scope**. Gate passed
+on 4, **failed on 3**. Posted 4, "Due on Thursday" threaded, flipped.
+
+NK941→Renniel, NK944→Hammad, NK956→Naveed, NK961→Onyeka.
+
+### 🚨 Three gate failures, same cause: `Andy_EDITOR` left unreplaced
+
+**NK968** (`Editor` = Hasnain), **NK970** (Hammad) and **NK972** (Naveed) all
+carry the literal placeholder **`Andy_EDITOR`** in the Batch name *and* in every
+File naming row — 3, 5 and 3 rows respectively. Held, not posted, status left at
+`Ready to edit`.
+
+**This is the NK795 case from 2026-11-09, and it has gone from one row to three
+whole briefs.** On NK795 a single H1 row read `Andy_EDITOR` against `Andy_Anas`
+in the Batch name and the other two rows; here nothing is filled in anywhere, so
+there is no second value to compare against.
+
+**Why it is still a hold and not a safe auto-fix.** All three briefs carry an
+upload-checklist line reading *"File names match the table, **your name in place
+of EDITOR**"* — so the placeholder is arguably addressed to the editor rather
+than a slip. Two things argue the other way:
+
+- **NK956 and NK961, same batch, same day, same author, have the real name
+  filled in** (`Andy_Naveed`, `Andy_Onyeka`) — and NK961 carries the same
+  "your name in place of EDITOR" checklist line anyway. So that line is
+  boilerplate present on filled and unfilled briefs alike, and the filled ones
+  show the intended end state.
+- The gate rule is *never guess which side is right*, and the NK795 precedent is
+  that Mark was asked and answered **"fix and assign"**. One token per row, taken
+  from the `Editor` property, is all it needs.
+
+**Recommended:** substitute the `Editor` value into the Batch name and every File
+naming row on all three (Hasnain / Hammad / Naveed), then post. Awaiting the word
+rather than editing three pages unasked.
+
+### ✅ Andy is now writing the rules this log has chased — and the Visual template still is not
+
+**All five Santa briefs state the opener rule themselves**, in the Creative Brief
+Instruction *and* again in an upload checklist:
+
+> *"Blackout: the bottle opener is in the handle, never show it in the blade."*
+> *"No opener in the Blackout's blade."*
+
+and the VO in each says *"a bottle opener built into the handle"* — **correct**.
+NK961 adds *"No sold-out claims on the Blackout"*, *"No countdown timer"*, *"No
+review counts on screen"*, and NK956/NK968 add *"no dragon on the Tiger
+Cleaver"*.
+
+**And the Visual cell in NK956, NK968, NK970 and NK972 still reads *"showing the
+blade and handle and bottle opener tip"*.** Four more instances, on pages that
+forbid exactly that, twice each. The error now survives *only* in the pasted
+Visual snippet — nowhere a writer typed it fresh, and nowhere a rule is missing.
+**There is nothing left to establish: the snippet is the whole remaining
+problem.**
+
+✅ **Mark's Christmas subtitle pills reached Andy's briefs** — the same hex table
+(`#D7263D` / `#1B6B3A`) and image appear in NK961, NK968, NK970 and NK972, three
+days after first appearing in Mark's NK963/966/967. Things do travel; it is the
+*product facts* that do not.
+
+### Other findings
+
+- 🚨 **The customer count is stale in four of the seven**: NK956 and NK970
+  say *"a hundred thousand customers"*, NK961 *"Over 100,000"*. Mark's briefs say
+  147,000.
+- 🚨 **A new unverified proof claim**: *"Over five thousand five-star
+  reviews"* (NK956, NK970) — while NK961 and NK968 both instruct *"No review
+  counts on screen"*. Three briefs assert it, two ban it, same batch.
+- 🚨 **Rosewood on the wrong knives again**: NK956 gives the **Santoku** a
+  *"rosewood handle"* (it is hand-carved wood) and the **Tiger Cleaver**
+  *"rosewood and copper handle"*; NK970 repeats the Tiger Cleaver version.
+  NK968 gets it right — *"a hand-carved wooden handle"*.
+- 🚨 **NK941 puts the opener in the steel**: *"a bottle opener built into
+  the steel"*, and NK944 *"built right into the steel"* — the two non-Santa
+  briefs, which carry none of the Santa briefs' rule callouts. Both also say
+  *"a finger hole in the blade **so it never slips** in his hand"*, the absolute
+  safety claim first seen in NK922.
+- 🚨 **NK944: *"it's five times sharper"***; **NK941: the non-catalog
+  *"ODIN chef knife in Damascus steel"***, which also introduces a steel type
+  that appears in no product fact.
+- **Tiger Cleaver size and stripes**: *"Ten inches of tiger-striped steel"*
+  (NK956, NK968, NK970) — the size claim NK913/NK914 retired by rule, plus the
+  *"tiger-striped"* form NK844 corrected to *"a tiger across the face"*.
+- **Scarcity on the Blackout**: NK961's *"we only make it in limited numbers"*,
+  *"For as long as this batch lasts"*; NK968 *"The last drop was gone inside two
+  weeks"*; NK970 *"the last batch went in two weeks"*. Mark's NK964/NK967 say the
+  batch cap is a **Feather** fact. NK968 also revives *"Three months in the
+  workshop"*.
+- **"the biggest deal we've ever put out"** (NK956, NK968, NK970) — a superlative
+  about the sale, which Mark's Holiday Sale briefs ban outright.
+- ✅ **Worth copying**: every Santa brief names its winning hook *with the spend
+  behind it* (NK222 H1 took US \$84k at 1.80; NK651 H5 took US \$48k; NK401 H2 took
+  AU \$35k) and says which hook it replaces and why (*"it replaces the old H1,
+  which never converted"*). That is the clearest creative reasoning in the
+  corpus. NK970's stacked-opening direction (silent cut, then VO, then music) is
+  a real craft note, not a shot list.
+- **NK941 has no Visual direction at all** — every BODY cell empty, as NK974 had.
+  It does carry a tier-board reference image and a described mechanic, so it is
+  less exposed than NK974 was.
+- Garbled Visual cells: NK970 *"Montage clip of multiple games from NK"*,
+  *"1-3 cutting clip with knockout"*, *"One Touch Tiger Cleaver"*; NK968
+  *"Montage Tiger Clipper"*.
+
 ## Run history
 
 ¹ Column was "Skipped (Callum)" for runs up to 2026-11-23, when the
@@ -3483,3 +3591,4 @@ scope narrowed to Mark’s work only; earlier rows count Callum pages alone.
 | 2026-11-23 | **2** | — | **0** | — | **Run on "Assign task now due on wednesday".** NK964→Umar, NK965→Umar, **both Mark's own**. Gate passed on both (Batch name and all 3 File naming rows read `Mark_Umar`). Posted, "Due on Wednesday" threaded, flipped; closing query empty. ✅ **The 11-17 scheduling finding was acted on.** That run flagged the queue holding Black Friday creative past the point where the date was comfortable; NK964 answers it in writing, with a date and an owner — *"The Feather cut, NK916, stays on Black Friday; this cut **moved to the Holiday Sale on 2026-11-23**, by the strategist's call"* — carried by a new `Specialty` value, `Holiday Sale`, on both briefs. The event was migrated rather than left to expire; nothing further is owed. ✅ **The "sale" fork resolves correctly**: *"'Holiday Sale' is allowed, and wanted. 'Discount' is still banned, and so is any superlative about the sale."* The ban was never on the word *sale* — it is on **discount** and superlatives, which is a usable rule rather than a word-list, and it closes the seven-vs-one inconsistency NK916 left. 🎯 **These two are the most compliant briefs in the corpus**: every rule this log has chased for two months appears as a pre-emptive red callout **with its reason** — the opener in the handle *plus* why (*"The LOKI Reaper is the blade one"*), the Viking as bestseller, "black right through" marked unverified, Full-Tang as Feather-only, the batch cap as a Feather fact so no scarcity on the Blackout, the feather-technique ban, scarcity stated exactly (*"runs of 500... and never that the sale makes it go faster"*), no price/percentage, 147,000, no invented deadline, and *"'Meat' — never a named cut"*. Offers land at ~72% and ~71% with beats after, and both briefs state the figure themselves. 🆕 **Four new rules, three of them pre-emptive**: **"No delivery promise — never 'in time for Christmas'"** (both briefs — the hardest claim a Christmas ad invites, banned in the week it is least safe); *"No weather claim in either direction"* (NK964, which a grill setting invites); *"Never call the Feather a carving knife"*; and **"No brand on the electric knife. It's the enemy, not a named one"** — which is **the answer to the open competitor-disparagement item**, doing NK872's job (*"\$1000 on an overpriced **Japanese** blade"*) without naming or disparaging anyone, in a form the next brief can copy. 🎯 **New technique worth copying**: NK964 is titled *"Under The Feather... - Blackout"* and pre-empts its own confusion — *"There is no feather on this knife — the name groups the trio"* — anticipating exactly the cross-product visual error NK919 made when its Feather block named the Tiger Cleaver. 🆕 **Mapping gap flagged before it bites: `Ali` and `Abdul` are now `Editor` options** and neither has a verified channel. Same shape as the Waheed/Fahad gap that sat open five days; the first brief assigned to either falls to Mark's fallback under the never-guess rule. Minor: `Category` reads `Net New` while both Batch names read `Adapt` and both briefs really are HexClad adaptations, so here the **property** is the wrong one — the inverse of the earlier seven-brief mismatch; NK964's Batch name says `6r-Blackout`, a landing page that does not exist in the schema; **"Free returns." is in both closes (12+ of Mark's briefs now — settled house copy, stop tracking it)**; **"Northern Knife" is two words in both**, which moves that item from an Andy slip to a house inconsistency; and the trio is split across sweeps (NK916 went 11-17, NK963 was not in this queue), so Umar holds one third of a set. |
 | 2026-11-23 | **7** | — | **0** | — | **Second run of the day, on "Assign task due on Due on wednesday"** (typo; read as Wednesday). Three of Mark's Holiday Sale cuts and four of Andy's R2B8 Santa UGC cuts: NK963→Hasnain, NK966→Hasnain, NK967→Fahad, NK974→Hasnain, NK975→Hammad, NK976→Umar, NK977→Hammad. Gate passed on all 7 (NK975/NK976 have 6 hooks and 6 matching rows). Posted, "Due on Wednesday" threaded, flipped; closing query empty. 🚨🚨 **This run is the clearest evidence the rule-travel finding will ever get, because it has none of the earlier outs — same date, same products, both strategists, same editors.** Mark's NK964/NK967 say *"**No scarcity.** The batch cap and restock window are **Feather facts**"* while Andy's NK974/NK975 sell *"their **limited edition** Loki Blackouts"*; Mark's NK965 says *"**Never 'selling out', never how fast a run went**"* while NK975/NK976/NK977 all say *"**it always sold out in days**"*; Mark's three say *"No price, no percentage"* while NK977 says *"**up to 67% off**"*; Mark's three ban an invented deadline while NK975/NK976 say *"**might not be available when you watch this video**"*. **And one editor holds both sides** — Hasnain got NK963/NK966 (carrying the rules) and NK974 (breaking them) in the same sweep, minutes apart. Nothing is left to establish; the only open question is whether Mark's `Do not:` block reaches the template. 🚨 **The customer count forked again, backwards**: Mark's three say **147,000**, Andy's three say **100,000**, on the same day, after this was "resolved" on 11-09 and re-confirmed with a dated note on 11-17. Not a style question and not arguable — one number, in the proof stack of nearly every ad, 47,000 apart. 🚨 **NK976's fifth hook is an innuendo and it is in the hook**: *"So my wife finally got me a knife **as big as my.. You know what I mean**, for Christmas."* Different in kind from the earlier tone flags — a phallic innuendo with the punchline left to the viewer, in the **first three seconds** where it cannot be skipped, delivered on camera by a real named creator. Needs Mark's call before Umar cuts it. NK976 also adds three Tiger Cleaver size claims that NK913/NK914 retired by rule six days ago. 🔑 **The MIKE boilerplate is now 11 days old as a known one-place fix and produced 7 ultimatum hooks in one sweep** (NK974 3-of-3, NK975 3-of-6, NK976 3-of-6) from one unedited sentence in a pasted block; the same block still lists five personas, **two of them called DON**, while `Avatar` on all four is `VANCE`, who is not in it. ✅ **Mark answered the NK881 copper error forward, in the template**: NK963 states *"It's **brass**, with a dragon sculpted into it"* plus *"**'Sculpted'... is the only one.** Never 'solid', never 'cast'"*, and gives the handle as *"Wood, carved by hand"*. So his *"No need for that"* on 11-17 was not indifference to the fact but a refusal to re-touch a shipped page while fixing the cause next — **when he declines a page edit, check the next brief before calling the item unresolved.** ✅ **Two roster edge cases closed at source**: `Huzaifa` (off roster since 10-13) and `Mark` (added 11-16, never used, no channel) are both **gone from the `Editor` property**, which is now 11 names; the `#11-mark` fallback is unaffected. 🆕 **First colour spec in a brief**: Christmas subtitle pills with hex values (`#D7263D` red hook, `#1B6B3A` green offer, white neutral) and an image asset, on all three of Mark's, optional per hook. ✅ **Andy's VO got the opener right where his template did not** — all three extensions say *"a bottle opener **forged into the handle**"* while the Visual cell still reads *"bottle opener tip"*, so that error now lives **only** in boilerplate, nowhere a writer typed it fresh. **Counts**: `bottle opener tip` 3→6, "up to 67% off" 25→26, "three times sharper" 4 new (the NK646 class Mark ordered fixed on 10-20), uncensored profanity 2 new (*"those other bullshit knives"*, no bleep). Minor: **NK974 has no Visual direction at all** — every cell in both tables empty and an empty `<video />` inspo block, so Hasnain has copy and nothing else; NK975 names the non-catalog *"ODIN Chef Knife"*; NK975 keeps the "batman" descriptor; **NK967's "ebony handle" is correct** and worth saying plainly, since 15 Santoku-ebony instances could be misread as a ban on the word — the rule is ebony on the Blackout, hand-carved wood on the Santoku; "Northern Knife" is two words in all seven, both strategists, so it is the house spelling in practice and this log should stop counting it; `Iteration` is `__NO__` on all four of Andy's while `Category` reads `Iteration`. |
 | 2026-11-24 | **0** | — | **15** | — | **Run on "Assign task due on thursday" — the first run under the Mark-only rule, and it assigned nothing.** Queue held **15 briefs: 8 Callum's, 7 Andy's, 0 of Mark's.** No posts, no flips, no page reads beyond the two count queries, no fallback posts. **This is the predicted consequence arriving on the first run**, one day after the scope narrowed — recorded so a future reader does not read a zero-post run as a broken query or a missed go signal. The detection query (`AND "Strategist" = 'Mark'`) returned empty and a separate count-only aggregate supplied the queue breakdown, which is the pattern the hard rule calls for: filter so a non-Mark page is never a candidate, count for the summary, act on nothing. **Andy's 7 arrived since the previous evening's sweep left the queue empty**, on top of the 26 then sitting in `Ready for visuals` — so his briefs are flowing in and accumulating with no route out, exactly as the scope entry said they would. Nothing further was raised to Mark beyond one line, per that entry. |
+| 2026-11-24 | **4** | — | 8 (Callum) | **3 (gate)** | **Second run of the day, after Mark restored Andy to scope** (*"Andy is fine since I also manage that only callum's work will never be touch"*). The Thursday go signal was still live, so the sweep was re-run rather than waiting for a new one; the spec, query and CLAUDE.md were reverted to the Callum-only rule first. Queue 15: 8 Callum's untouched, 7 of Andy's in scope. NK941→Renniel, NK944→Hammad, NK956→Naveed, NK961→Onyeka posted, "Due on Thursday" threaded, flipped. 🚨 **Three held on the gate, all the same cause: `Andy_EDITOR` left unreplaced** — NK968 (Hasnain), NK970 (Hammad), NK972 (Naveed), in the Batch name **and every** File naming row (3, 5 and 3 rows). This is the NK795 case of 2026-11-09 grown from one row to three whole briefs. All three carry a checklist line saying *"your name in place of EDITOR"*, so the placeholder may be addressed to the editor — but **NK956 and NK961 from the same batch have the real name filled in and carry that same checklist line anyway**, so it is boilerplate and the filled ones show the intended end state. Held per *never guess which side is right*; recommended fix is one token per row from the `Editor` property, as Mark ordered on NK795 (*"fix and assign"*). ✅ **Andy now writes the opener rule himself** — all five Santa briefs state *"the bottle opener is in the handle, never show it in the blade"* in the instruction **and** the upload checklist, and every VO says *"built into the handle"* correctly — **while the Visual cell in NK956, NK968, NK970 and NK972 still reads *"bottle opener tip"***. Four more instances on pages that forbid it twice each. The error now survives only in the pasted Visual snippet, nowhere a writer typed it fresh and nowhere a rule is missing: **the snippet is the whole remaining problem.** ✅ **Mark's Christmas subtitle pills reached Andy's briefs** (same hex table in NK961/968/970/972, three days on) — so conventions travel; it is the product facts that do not. 🚨 Stale **100,000** count in NK956/NK961/NK970 against Mark's 147,000; a new unverified *"Over five thousand five-star reviews"* in NK956/NK970 **while NK961 and NK968 instruct "No review counts on screen"**; **rosewood on the wrong knives** (NK956 gives the Santoku a rosewood handle and the Tiger Cleaver *"rosewood and copper"*, NK970 repeats it — NK968 gets it right with *"hand-carved wooden handle"*); **NK941 and NK944 put the opener "into the steel"** and both claim a finger hole *"so it never slips"*, the absolute safety claim from NK922 — these two are the only briefs in the batch with no rule callouts at all; NK944 *"five times sharper"*; NK941 invents an *"ODIN chef knife in Damascus steel"* (non-catalog name and a steel type in no product fact); Tiger Cleaver *"ten inches of tiger-striped steel"* in three briefs; Blackout batch-scarcity in NK961/968/970 against Mark's *"the batch cap is a Feather fact"*; *"the biggest deal we've ever put out"* in three. ✅ **Worth copying: every Santa brief names its winning hook with the spend behind it** (NK222 H1 took US \$84k at 1.80, NK651 H5 US \$48k, NK401 H2 AU \$35k) and says which hook it replaces and why — the clearest creative reasoning in the corpus. NK941 again has an entirely empty Visual column. |

@@ -85,7 +85,7 @@ it leaves the queue.
 **This runs on demand, not on a schedule.** Mark gives a go signal and the sweep
 runs then, in a live session holding the Notion and Slack connectors. There is no
 cron and no trigger — nothing happens to a brief unless Mark asks. A go signal
-means every brief currently in `Ready to edit` that is **Mark's** and not
+means every brief currently in `Ready to edit` that is not Callum's and not
 malformed, unless he scopes it narrower.
 
 Full spec — the verified editor→Slack mapping, the message format, the edge-case
@@ -95,14 +95,13 @@ reusing a brief list from earlier in a conversation.
 
 Four rules worth knowing without opening the spec:
 
-- **Only touch work with `Mark` as Strategist.** Standing instruction from Mark
-  (2026-11-23): *"Never touch callum or Andy's output only from Mark"*. This
-  replaced the earlier Callum-only exclusion (2026-10-13) and made the gate an
-  **allowlist of one** — `Andy`, `Callum`, `Mauro`, `Claude` and blank are all
-  out of scope: no post, no status change, no page edit, no triage. Filtered in
-  the query. Note the volume: Mark wrote ~11% of November's briefs, and the whole
-  current `Ready for visuals` wave is Andy's, so most of the queue is now
-  untouchable by this play and Andy's briefs have no handoff route through it.
+- **Never touch work with `Callum` as Strategist** — standing instruction from
+  Mark (2026-10-13), restated 2026-10-27. No post, no status change, no page
+  edit, no triage. Filtered in the query. **Callum is the only exclusion**, and
+  the reason is ownership, not quality: he is in every editor channel and routes
+  his own briefs. Andy's are in scope — Mark manages Andy's output too, so this
+  play is how they move (confirmed 2026-11-24, after a one-day narrowing to
+  Mark-only was corrected).
 - **Never guess an editor.** A brief in `Ready to edit` with a blank `Editor`
   goes to Mark's channel as needing an owner and keeps its status. The
   editor-assignment rules in `notion-schema-verified.md` govern brief *creation*
