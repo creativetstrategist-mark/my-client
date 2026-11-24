@@ -920,6 +920,30 @@ left as they are.
 
 - They are **not library shots**, so no `Shot:` prefix. Write the phrase as
   given.
+
+**When the script highlights a knife other than the brief's product** (usually
+the lineup beat, §C.5.1), that knife's visual is fixed as well. Ruled by the
+strategist 2026-11-24, applied from the next batch on:
+
+| Highlighted knife | The Visual cell says, exactly |
+|---|---|
+| Feather | `Montage clip of feather showing the blade and handle` |
+| LOKI Blackout | `Montage clip of blackout showing the blade and handle and bottle opener tip` |
+| BJORN Santoku | `Montage clip of Santoku showing the norse blade design and dragon bolster` |
+| RAGNAR Tiger Cleaver | `Montage clip tiger cleaver` |
+| RAGNAR Butcher | `Montage clip ragnar butcher` |
+
+- **If that knife's line talks about cutting**, add
+  `broll clip of cutting using [knife]` after the montage, e.g. `Montage clip
+  tiger cleaver. Then broll clip of cutting using Tiger Cleaver.` It is
+  optional: add it only when the line actually cuts something.
+- **This covers only the supporting knives, never the hero.** The brief's own
+  product still takes library shots (or the two templates above).
+- A knife with no template (the LOKI Viking, for one) takes a library shot, or
+  a described one if its library is empty.
+- The Blackout template's "bottle opener tip" is the strategist's wording. The
+  §E guard still applies: the opener is in the **handle**, and the bottle never
+  meets the blade.
 - **When a line carries other beats too**, the template covers its own words
   and the rest of the line keeps its library shots, in VO order. For example:
   `Shot: Feather handle close-up… Then Hand forging clip on "Hand-Forged". Then

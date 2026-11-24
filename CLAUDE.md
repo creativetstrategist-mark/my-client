@@ -83,7 +83,9 @@ Full detail: `brand-pack/01-brand/product-catalog.md`. Persona docs:
   only when the beat is super specific. **Two fixed visuals skip the library:**
   a "Hand-Forged" line is always `Hand forging clip`, and a social-proof line
   ("147,000 customers…") is always `12 tiles collage of men holding their
-  knives from NK`. Rules: process doc §D.1.5.
+  knives from NK`. A supporting knife (not the hero) gets its fixed
+  montage line, e.g. `Montage clip tiger cleaver`, plus `broll clip of cutting
+  using [knife]` when its line cuts. Rules: process doc §D.1.5.
 - `daily-ad-rewrites/processed-inspo-log.md` — dedup ledger. Every TrendTrack
   ad used by the daily routine gets logged here (ad id/URL, date used, which
   products it was adapted for). **Check this before picking new inspo ads**
