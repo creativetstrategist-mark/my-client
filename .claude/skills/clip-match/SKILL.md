@@ -172,8 +172,9 @@ everything in the order it plays.
 
 ### 6. Write the cells
 
-Cell content: everything in play order, separated by `<br />` (table cells
-are inline-only). **No links.** Each library clip is written as
+Cell content: everything in play order, with a blank line between entries
+(`<br /><br />`; table cells are inline-only) so the editor doesn't get one
+long paragraph. **No links.** Each library clip is written as
 `Broll clip of <Proper Name>`: the clip's scene name from the library, with
 its first letter lowercased unless it starts with a proper noun (Feather,
 Santa, POV…). Fixed visuals use their exact text, and gap notes start with
@@ -183,7 +184,7 @@ cells use:
 
 ```
 <td>
-Hand forging clip<br />Broll clip of hand opens Blackout box, knife in foam tray, close-up<br />Montage clip of Loki showing the blade, the handle, and the finger hole
+Hand forging clip<br /><br />Broll clip of hand opens Blackout box, knife in foam tray, close-up<br /><br />Montage clip of Loki showing the blade, the handle, and the finger hole
 </td>
 ```
 
