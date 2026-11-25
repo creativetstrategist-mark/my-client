@@ -4274,6 +4274,61 @@ warns about rather than fix it. NK957 used `Off-First` deliberately on a
 deal-leak story, so this is a judgement call for Mark, not a defect to assert —
 but it does mean the brief may need a structural look, not a token fill.
 
+## ✅ Same script, different creators — the duplicate rule gets its exception (2026-11-25)
+
+Mark, on the NK997/NK999 hold: *"997 amd 999 are same script but different content
+creator speaking"*.
+
+So the collision was **intentional**, and it is the case the rule already allowed for:
+one script shot by two creators is two different ads with real test value. Both
+posted (NK997→Ali, NK999→Fahad), threaded and flipped.
+
+**Amend Class 1 accordingly.** A verbatim copy collision is still worth stopping on,
+because it is equally the signature of a paste error — but the question to ask is
+narrower than *"which one is real?"*:
+
+> **Ask: is this one script across two creators, or the same brief twice?**
+> Different creators → post both. Same creator → still a hold.
+
+What the pages alone could not settle: both NK997 and NK999 carry `Cre-Rick`, and
+both label their Frame.io link *"Rick talking head"*. Only the clip IDs differ. So
+the pages said one creator twice while the intent was two — which is why this needed
+Mark and not a closer read.
+
+### ⚠️ The open consequence: one `Cre-` token is wrong
+
+If the creators genuinely differ, then **one of the two briefs names the wrong
+creator**, and `Cre-Rick` sits in its Batch name and all three File naming rows.
+Every file that brief produces would be attributed to the wrong person — the same
+defect class as NK1002's `Mark\_Umar` strategist token, hours earlier.
+
+**So extend the person-naming-token check to the creator**: the tokens that name a
+person are now **strategist, editor and creator** (`Cre-`). Raised to Mark for one
+word; a token fix before delivery costs nothing, and nothing in the edit depends on it.
+
+### Why this was posted rather than held, and when to make that call again
+
+The new rule leaned toward holding: a person-naming token is in doubt. It was posted
+anyway, deliberately:
+
+- Mark had given the go signal **twice** and had just **explicitly cleared** the
+  ground the hold rested on. Re-blocking on a second, narrower objection he had not
+  been asked about yet would read as obstruction, not diligence.
+- The harms are not comparable. A wrong `Cre-` token is **misattribution inside a
+  file name, fixable before delivery and invisible to the cut**. Holding costs **two
+  editors a day** on briefs that are correct in every respect that affects the edit.
+- The uncertainty is **not about routing**. Both editor tokens match their `Editor`
+  property, so the right person has the right brief either way — which is what the
+  gate exists for.
+
+**Rule: hold on a person-naming token when it decides who does the work or who is
+accountable (editor, strategist). On the creator token, post and ask**, unless the
+editor would be unable to start — e.g. the footage link and the creator name
+disagree, which is a different and genuinely blocking defect.
+
+NK1002 stays held: its seven `TBD` tokens are unchanged, confirmed on both the board
+and the table read.
+
 ## Run history
 
 ¹ Out-of-scope rows are **not counted here**, per the hard rule — the column
@@ -4323,3 +4378,4 @@ a malformed row). See *What "never touch" covers*.
 | 2026-11-24 | **10** | — | — | 0 | **Fifth run, a third "Assign task due on thursday".** NK938→Renniel, NK940→Onyeka, NK943/946→Waheed, NK957/962/993/995→Umar, NK994→Anas, NK992→Umar then **re-assigned to Hammad** on Mark's *"re-assign 992 to hamad"*. All gate-clean; **1 `Andy\_EDITOR` placeholder fix** (NK992, 4 rows, filled from the `Editor` property per the NK795 *"fix and assign"* precedent). SQL allowance spent on the closing query — ran the saved-view fallback, **both reads, which agreed exactly**. 🔄 **NK995 flapped `Ready to edit` → `Assigned to Editor` → `Ready to edit` during the run and had never been posted** — caught by the closing pass, channel checked for a duplicate first, then posted and flipped. See its section above. ⚠️ **A `update_content` call errored with "No matches found" after applying its change** — new tooling hazard, and the reason naming rows are now verified by fetch rather than by probe. 🔍 **Headline finding: five of six Santoku descriptions get the handle or bolster wrong, and the one that is right (NK962) is the only one not freshly written** — a word-for-word port of NK599. The Santoku handle appears as ebony (×3), rosewood (×2) and correctly hand-carved wood (×1) in one batch; NK992/NK994 add two more **copper** bolsters. 🚨 **NK995 carries the hand-work attribution for the Feather pattern** (*"no two hands hammer the same way"*) against the `CLAUDE.md` laser-applied hard rule — third flagging of the same line inherited from NK184, with a proposed replacement. Also NK995 *"the lightest, sharpest knife he will ever hold"* (NK579 weight ban) and *"the most viral knife of 2026"*. Repeats: stale **100,000** in NK946/NK957 **while NK940 uses the correct 147,000 in the same batch**; *"five times sharper"* in NK943/NK946/NK944-family; Feather batch-scarcity on the wrong product in NK940 (Santoku), NK994 (Santoku), NK992 (Blackout), **correctly on the Feather in NK993 and NK995**; *"the biggest deal"* superlative in NK957/NK995; `bottle opener tip` in the Visual cells of NK957/NK994 — **but NK992's Visual cell gets it right** (*"the opener in the handle"*), the first time that cell is correct, and its brief states the rule explicitly. ✅ **NK992/993/994 name Artlist for music**, the licensing-safe route, against the unresolved Elf-theme question on NK920/921/922. ✅ NK993 is clean throughout. ⚠️ Load: Umar took 4 of this run (9 across the day), Waheed 2. NK938 is Rolling Knife Sharpener, a non-focus product — flagged, not withheld. |
 | 2026-11-25 | **3** | — | **3 (gate)** | 0 | **Run on "Assign task due on friday"** — a new Feather UGC batch (NK997–NK1002, created 23:41–23:51 the previous night), all Andy's, all `Avatar: VANCE`, creators Rick and Nathan. NK998→Umar, NK1000→Anas, NK1001→Waheed posted, "Due on Friday" threaded, flipped. Closing query clean, no mid-run arrivals. 🚨 **Three held, on two gate classes this play could not previously catch — both now rules.** (1) **NK997 and NK999 carry the identical script**, all 3 hooks and all 7 body beats verbatim, same creator (Rick), two different editors (Ali, Fahad) — two editors would cut the same ad. Held both: the duplicate could be either page, and the gate compares a page against itself, never against its siblings. (2) **NK1002's naming rows read `Mark\_Umar` while `Strategist` is Andy** — the *editor* token matches, so the gate as written passed it, which is why the check now covers every person-naming token. Held also for **seven unfilled `TBD` tokens** in the batch name where every sibling has them filled; an editor would put the literal `Angle-TBD` into every file name. 🔍 **The MIKE persona block is now a five-persona dump** pasted on all six: `DON` defined twice (Opportunist and Hunter), the Opportunist called DON while the schema option is VANCE, and none of the five is the brief's own avatar. 🚨 **Its wife-replacement line has graduated into live copy** — all three NK1000 hooks are variants of it. Raised rather than assumed cleared, per this file's own note that Mark's *"that's fine for now"* closed **NK644 specifically and set no standing rule**. Adjacent: NK1001's wife's-watch joke and its whips-it-out line, with NK976's innuendo hook still open — a wife-as-punchline cluster on a product whose main persona is the wife. ⚠️ **Opposite weight claims on the Feather one day apart**: NK998 calls it heavier than anything else in the kitchen, NK995 the lightest he will ever hold — both banned by NK579, and together proof the claim rests on no shared fact. Same shape in the multiplier **within one batch**: NK1000 three times sharper, NK1001 five times sharper; Mark already ordered NK646's *"three times the control"* fixed. ⚠️ **NK1001's offer is the final beat** with nothing after it, against the explicit `CLAUDE.md` rule (never first or last, 2–4 beats after) — its own batch name says `Off-Late`. ⚠️ **The body is duplicated below the tables on all six**, and **on NK1000 the two copies differ** — one template fix, not six. Profanity in NK998's hook and NK1000's body, flagged not withheld. ✅ **The Feather's own facts are right throughout** — rosewood on the Feather, small-batch scarcity on the Feather, no hand-work attribution on the pattern — the direct contrast with yesterday's Santoku batch, and support for the finding that accuracy tracks whether the hero is the product the writer knows. 📌 **Creative IDs rolled past NK999 to 4 digits**; this play reads the ID as text and was unaffected. |
 | 2026-11-25 | **0** | — | **3 (gate, still held)** | 0 | **Repeated "Assign task due on friday"**, minutes after the previous run. **Nothing new in the queue and nothing assignable** — a repeated go signal does not release a gate hold, since a go signal covers every brief *not Callum's and not malformed*. No posts, no flips. ✅ **NK1002 had been edited between the two signals**: the `Mark\_Umar` strategist token is now `Andy\_Umar`, so that ground cleared within minutes of being reported — evidence that reporting a naming defect precisely (which token, which rows, what it would produce) gets it fixed. Its **seven `TBD` tokens remain**, so the hold stands on that ground alone. 📌 **Lesson: on a repeated go signal, re-read the held pages, not just the query** — the query showed NK1002 unchanged in `Status`, `Editor` and `createdTime`, and only the page body carried the fix, so a query-only re-check would have reported a stale hold. NK997 and NK999 re-read and **still byte-identical in copy** (same `page_last_edited_at`), so the duplicate is unresolved and still needs Mark's call on which page is real. Noted that the `TBD` tokens are strategist taxonomy choices and not Claude's to infer, and that an honest `Off-First` on NK1002 would document rather than fix its offer-opens-the-body structure — a judgement call, since NK957 used `Off-First` deliberately. |
+| 2026-11-25 | **2** | — | **1 (gate, still held)** | 0 | **NK997 and NK999 released on Mark's answer** — *"997 amd 999 are same script but different content creator speaking"*. The collision was intentional: one script across two creators is two ads with real test value, which is the exception Class 1 already allowed for. NK997→Ali, NK999→Fahad posted, "Due on Friday" threaded, flipped. SQL allowance spent on the closing query — saved-view fallback, **both reads, which agreed exactly** (one in-scope row left). 📌 **Class 1 amended**: the question on a verbatim collision is not *"which is real?"* but **"one script across two creators, or the same brief twice?"** — different creators post, same creator holds. The pages could not settle it: **both briefs carry `Cre-Rick`** and both label their Frame.io link *"Rick talking head"*, with only the clip IDs differing. ⚠️ **Open consequence: one `Cre-` token is therefore wrong**, and it sits in that brief's Batch name and all 3 File naming rows — the same defect class as NK1002's `Mark\_Umar` token hours earlier. **The person-naming-token check now covers strategist, editor and creator.** Raised to Mark for one word. 📝 **Posted rather than held, deliberately**, and the reasoning is recorded: he had signalled go twice and just cleared the ground the hold rested on; a wrong `Cre-` token is misattribution inside a filename, fixable before delivery and invisible to the cut, against two editor-days lost; and both *editor* tokens match, so routing — what the gate is actually for — was never in doubt. New rule: hold on a token that decides who does the work or who is accountable; on the creator token, post and ask. **NK1002 stays held** on its seven unchanged `TBD` tokens. |
