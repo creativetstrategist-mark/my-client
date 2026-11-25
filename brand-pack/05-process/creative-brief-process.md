@@ -636,8 +636,8 @@ persona callout, because the editor will otherwise generate one read.
 "Ready for visuals".** The editor comes from the strategist (see above); a new
 brief does not get left silently unassigned.
 
-**Active roster — eight names, and Hammad is off it for now.** Abdul was added 2026-11-25, when the strategist picked Abdul for NK1019. Abdul first appeared on trial briefs (NK935-936) and is now in `vocab-video.json`. No cap has been given, so treat Abdul as uncapped, and ask if a long cut comes up.
-Umar · Onyeka · Anas · Hasnain · Naveed · **Waheed** · **Fahad** · **Abdul**
+**Active roster — nine names, and Hammad is off it for now.** Abdul was added 2026-11-25, when the strategist picked Abdul for NK1019. Abdul first appeared on trial briefs (NK935-936) and is now in `vocab-video.json`. **Ali was added the same day**, when the strategist picked Ali for NK1030. Ali was already an Editor option in Notion, and is now in `vocab-video.json` too. No cap has been given for either, so treat both as uncapped, and ask if a long cut comes up.
+Umar · Onyeka · Anas · Hasnain · Naveed · **Waheed** · **Fahad** · **Abdul** · **Ali**
 
 > ⏸️ **Hammad is paused on load as of 2026-11-16.** The strategist: *"Hammad is
 > fully loaded now moving forward next batch you can assigned it to different

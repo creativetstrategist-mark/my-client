@@ -177,7 +177,7 @@
         "Huzaifa",
         "Waheed",
         "Fahad",
-        "Abdul"
+        "Abdul", "Ali"
       ],
       "rule": "The person who cuts the video. If unknown at brief time write EDITOR and let the editor replace it."
     },
