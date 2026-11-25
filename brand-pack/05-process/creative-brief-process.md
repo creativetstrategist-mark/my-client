@@ -893,13 +893,16 @@ instruction just give the broll shot name no need to provide link for now."*
 | Product | Database | Saved view to query |
 |---|---|---|
 | Feather | 🪶 Feather B-roll — `collection://41b4ac62-7aac-8157-84ed-000b6c3702b2` | `view://41b4ac62-7aac-8165-b78f-000ccc436fc9` |
-| LOKI Blackout | 🐈‍⬛ Loki Blackout B-roll — `collection://41b4ac62-7aac-81fd-93fd-000bfcecf716` | fetch the database for its view |
-| BJORN Santoku | Bjorn Santoku B-roll — `collection://41b4ac62-7aac-8158-a3b5-000b741fdfc4` | fetch the database for its view |
+| LOKI Blackout | 🐈‍⬛ Loki Blackout B-roll — `collection://41b4ac62-7aac-81fd-93fd-000bfcecf716` | `view://41b4ac62-7aac-81a3-9b2d-000cf4d6eb0c` |
+| BJORN Santoku | Bjorn Santoku B-roll — `collection://41b4ac62-7aac-8158-a3b5-000b741fdfc4` | `view://41b4ac62-7aac-8162-a57e-000c6b0b059f` |
 
 (Tiger Cleaver and the Sharpener have databases too; both are out of scope here.)
-**Only the Feather is filled in so far** — about 450 shots on 2026-11-23. The
-others will be filled in over time, so check each one when a brief needs it; don't
-assume it is still empty. Query with `mode: "view"`. It sits outside the SQL
+**All three are filled in now.** The Feather had about 450 shots on 2026-11-23.
+The Santoku and the Blackout were empty that day and filled by 2026-11-25, each
+with 200+ shots, Christmas shots included (stockings, the tree, Santa wrap, the
+B2G2 box). Libraries keep growing, so page through the whole view when a brief
+needs it. **The Santoku library also holds BJORN *Utility* shots** ("Bjorn
+utility…"): that is a different knife, so skip them on a Santoku brief. Query with `mode: "view"`. It sits outside the SQL
 allowance (§D.2), and the results come back in pages of 100, so page through
 `next_cursor`.
 
@@ -961,8 +964,28 @@ strategist 2026-11-24, applied from the next batch on:
 
 **How to write the Visual cell:**
 
-1. **Name the shot by its `Proper Name`, exactly — `Shot: <Proper Name>.`** —
-   and **no link.** The editor finds it in the library.
+1. **Write each shot as `Broll clip of <shot name>`** — and **no link.** The
+   editor finds it in the library. This replaced `Shot: <Proper Name>.` on
+   2026-11-25: the team rewrote every Visual cell of NK1019 into this form
+   within the hour of its creation, and it matches the live glossary code
+   (*"'Broll Clip…' it means we have this on our creative bank; 'Clip of…' it
+   means you can source it via envato or yt or any platform"*). In practice:
+   lower-case the name's first word (product names keep their capital), drop
+   shot-size and take tags ("close-up", "medium", "push-in", "take 6"), and turn
+   a present-tense verb into "-ing" so it reads ("Hand holds boxed Santoku…" →
+   `Broll clip of hand holding boxed Santoku…`).
+   - **Two or more shots in one cell go on separate lines** with a blank line
+     between them (`<br /><br />`), not chained with "Then".
+   - **The fixed visuals keep their exact wording, with no prefix**
+     (`Hand forging clip`, `12 tiles collage of men holding their knives from
+     NK`, the supporting-knife `Montage clip…` lines).
+   - **The same edit left the Block numbers and every Note cell empty**, and
+     NK1026-1027 follow it. Anything a note would say goes in the callouts.
+   - **Put the visual code in the GLOSSARY** of every new brief, after the
+     Caption line: `- Code of visual when is says:` then `"Broll Clip…." it
+     means we have this on our creative bank` and `"Clip of…" it means you can
+     source it via envato or yt or any platform` (as on Mark's 2026-11-25
+     iteration pages, e.g. NK1020).
 2. **The names are a guide, not a lock.** Say so once in the blue instruction
    callout: the editor is free to swap in any shot that fits the line better.
 3. **Supers never go in the Visual cell — they go in the Copy/ Text Overlay
@@ -976,8 +999,9 @@ strategist 2026-11-24, applied from the next batch on:
    offer beat).
 5. **One shot per beat, and don't reuse a shot inside one brief.**
 6. **New footage only when the beat is super specific**, which is rare. When
-   nothing in the library fits, write `Stock: <what>. Not in the library.` On
-   NK965 that was the electric knife and the family table. Never ask for a shoot
+   nothing in the library fits, write `Clip of <what>` (the glossary's code for
+   footage sourced from Envato, YouTube or similar). On NK965 that was the
+   electric knife and the family table (written then as `Stock: …`). Never ask for a shoot
    when stock or a library shot will do.
 7. **Skip a shot whose name carries a banned word**, and pick its neighbour
    instead. Several names name a cut of meat ("steak", "roast", "brisket",
@@ -987,10 +1011,14 @@ strategist 2026-11-24, applied from the next batch on:
    nearly always an equivalent: "smoked beef", "meat", "beef".
 8. **If a product's library is empty**, describe the shots as before and say
    so once in the blue instruction callout (NK966-967, the first case), not in
-   every cell.
+   every cell. None of the three focus products is empty any more.
+9. **Watch what a shot name puts on screen**, not only its words. A shot of a
+   box's back panel ("feature icons") can show spec text the brief bans, so pick
+   a plain hand-held or in-use shot instead.
 
 **NK965 was the first brief matched this way**, re-matched the same day it was
-written.
+written. **NK1026-1027 were the first Santoku and Blackout briefs matched from
+their own libraries**, in the `Broll clip of…` form.
 
 ### D.2 Creative ID series
 

@@ -78,8 +78,9 @@ Full detail: `brand-pack/01-brand/product-catalog.md`. Persona docs:
   the naming spec in §D.3 of the process doc, which is kept only for reading
   pages older than NK557.
 - **Notion "Mark Broll Selection"**: the B-roll library, one database per
-  product (only Feather is filled in so far). **Every Visual cell names a shot from it by
-  its `Proper Name` — no link** — and the editor is free to swap. New footage
+  product (Feather, Santoku and Blackout are all filled in now). **Every Visual cell
+  names a shot from it as `Broll clip of <shot name>` — no link** — and the editor
+  is free to swap; footage from outside the library is `Clip of <what>`. New footage
   only when the beat is super specific. **Two fixed visuals skip the library:**
   a "Hand-Forged" line is always `Hand forging clip`, and a social-proof line
   ("147,000 customers…") is always `12 tiles collage of men holding their
