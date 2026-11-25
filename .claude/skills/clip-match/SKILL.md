@@ -27,7 +27,8 @@ data source `collection://2cf4ac62-7aac-81a8-86bf-000b96778943`.
 `41b4ac627aac80009438cdfebfccf002`):
 
 Library clips are only ever used for the **brief's own `Product`**. Other
-knives a line features get a fixed visual instead (step 5).
+knives a line features get a fixed visual instead (step 5). Exception:
+`Product` = Multi uses each named knife's own library (step 5).
 
 | Brief `Product` | Library | View URL |
 |---|---|---|
@@ -97,8 +98,10 @@ Fetch the page and note:
 ### 4. Load the libraries you need
 
 Load only the brief's own `Product` library (other knives get fixed visuals,
-step 5). If that library comes back empty (the Knife Sharpener B-roll was
-empty as of 24 Nov 2026), write nothing to the brief: tell the user and wait. Query the view with `mode: "view"`,
+step 5). For `Product` = Multi, load the library of every knife the brief
+names that has one. If a library you need comes back empty, write nothing to
+the brief: tell the user and wait. (The Knife Sharpener B-roll was empty on
+24 Nov 2026 and had about 170 clips on 25 Nov.) Query the view with `mode: "view"`,
 `page_size: 100`, and follow `next_cursor` until `has_more` is false. Every
 library currently has more than 100 clips, so expect at least 2 pages. Always
 load live (the team adds clips every few days); don't cache.
@@ -140,9 +143,18 @@ text exactly as shown, as a plain line (no link):
   Reaper or Berserker, BJORN Utility…): write a gap note and ask the user for
   the montage line,
   `⚠️ No fixed visual: <knife> montage`.
-- **`Product` = Multi:** no knife is the brief's own product, so every
-  featured knife gets its montage. Beats that aren't about one knife get a gap
-  note. Confirm this reading with the user on the first Multi brief.
+- **`Product` = Multi** (confirmed by the user on NK1004/NK996/NK947): each
+  knife's own line gets 1–2 clips from **that knife's library** plus its
+  montage line, with the fixed visuals on top (forging, collage, cutting).
+  A knife with no library (ODIN, LOKI Viking…) gets its montage or the
+  `⚠️ No fixed visual` note. Beats that aren't about one knife (the story,
+  the offer, the close) mix clips from the libraries of the knives the brief
+  names.
+- **Creator-footage beats stay empty:** when the brief says a beat must use
+  creator footage that isn't in the Mark Broll Selection (e.g. "the clips
+  from Tina, Carinna, Brianna, Matt Smith… where they get a tie or a mug"),
+  leave those Visual cells empty for the editor (user's call on NK1004/NK996).
+  A line that is only partly that beat gets library clips for the rest.
 
 **How many clips:** 1–2 library clips per Visual cell, by line length:
 1 clip for a line of up to about 20 words, 2 clips for anything longer. Never
