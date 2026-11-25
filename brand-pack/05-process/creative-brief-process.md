@@ -636,8 +636,8 @@ persona callout, because the editor will otherwise generate one read.
 "Ready for visuals".** The editor comes from the strategist (see above); a new
 brief does not get left silently unassigned.
 
-**Active roster — seven names, and Hammad is off it for now.**
-Umar · Onyeka · Anas · Hasnain · Naveed · **Waheed** · **Fahad**
+**Active roster — eight names, and Hammad is off it for now.** Abdul was added 2026-11-25, when the strategist picked Abdul for NK1019. Abdul first appeared on trial briefs (NK935-936) and is now in `vocab-video.json`. No cap has been given, so treat Abdul as uncapped, and ask if a long cut comes up.
+Umar · Onyeka · Anas · Hasnain · Naveed · **Waheed** · **Fahad** · **Abdul**
 
 > ⏸️ **Hammad is paused on load as of 2026-11-16.** The strategist: *"Hammad is
 > fully loaded now moving forward next batch you can assigned it to different
@@ -1032,6 +1032,17 @@ query it with `mode: "view"` and
 `view_url: "view://2cf4ac62-7aac-8153-a087-000cebf17200"`, `page_size` about 10.
 It returns the real top of the series, duplicates included, so it is what
 caught item 3. Use it for both checks whenever SQL is out.
+
+**⚠️ Past NK1000 the view's sort breaks.** `Creative ID` is a **text**
+property, so it sorts as text: `NK1019` sorts *below* `NK965` ("1" < "9"), and
+the top of the "All Concept" view no longer shows the newest IDs. First seen
+2026-11-25, when the series was at NK1018. **Use SQL with a pattern and a length
+sort:** `WHERE "Creative ID" LIKE 'NK1___' ORDER BY "Creative ID" DESC` (or
+`ORDER BY length("Creative ID") DESC, "Creative ID" DESC` across both widths).
+If SQL is out, search for `NK10` and read the IDs, and say the check is weaker.
+**If a recent title implies siblings are coming** (e.g. "Iteration 1"), skip
+past the IDs they will need instead of taking the next free one. On NK1019 that
+choice avoided a collision with NK1017 by 35 seconds.
 
 ### D.3 Naming strings
 
