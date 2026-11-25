@@ -4474,6 +4474,60 @@ restart the queue alone cannot distinguish *"posted, flip lost"* from *"never
 posted"*. The Slack channel read settles it when in doubt — the same check that
 caught NK995.
 
+## ✅ NK997 fixed and assigned — verified against the footage (2026-11-25)
+
+Mark: *"Great catch on 997, I already fix it please check."*
+
+Checked the page **and the clip**, per the rule the NK997 episode produced. The
+mismatch is genuinely resolved: the body now reads *"I just paid full price for the
+Feather knife… they're running up to 67% off and they're even doing a buy two get two
+free deal… I definitely would have waited"*, which is what
+`R14B51-Feather_RickBorba.mp4` performs — Frame.io's own description of that clip
+names the 67% discount and the full-price regret. The figure matches, not just the
+premise. Gate clean (`Andy\_Ali`, 3 rows, `Cre-Rick` correct against the footage).
+Posted to Ali, threaded, flipped.
+
+**The round trip worked**: flagged with the evidence → fixed by the author →
+re-verified against the asset rather than the page alone. Checking the clip is what
+found the defect and what confirmed the repair; neither was visible from the brief
+text.
+
+### 🚨 But all three new hooks are profane, and that is a policy risk, not a taste note
+
+The replacement hooks are three variants of swearing at the brand — one crude
+sexual, one direct expletive, one abusive epithet — as the **opening line** of a paid
+Meta ad.
+
+**Posted, not held**, per the editor-slot-only gate and the NK644 precedent (flag the
+copy, put the call to Mark, do not withhold the brief). But flagged harder than a
+tone note, for reasons that are about money rather than taste:
+
+- **Meta's advertising policies restrict profanity.** Three profane hooks means
+  **every export is exposed**, not one line in a body — there is no clean variant to
+  fall back on if the set is rejected.
+- Rejections accumulate against the ad account, so the downside is not only this ad.
+- The device itself is already proven without profanity: **NK1002** opens *"Northern
+  Knife messed up, and I don't think they've noticed yet"* — same self-deprecating
+  brand-at-fault angle, same batch, no policy exposure.
+
+The persona block does license insult for the opportunist (*"we can use insult if use
+correctly"*), which is presumably where this came from. Insult aimed at the brand is
+within that; **crude sexual profanity in the first three seconds is a different
+category**, and the block is not a policy document.
+
+**Raised before the edit happens**, which is the point: the cost of being wrong here
+is a wasted export cycle on three variants, and it is cheap to swap a hook now and
+expensive to re-cut later.
+
+### Standing note on copy risk versus the gate
+
+This is the second time in one day that the right answer was **post and flag loudly**
+rather than hold. The gate stays narrow — wrong person gets the work, wrong person's
+name on the files, the brief cannot be cut as written. Everything else, including
+likely ad-policy rejection, is a report with the call put to Mark, delivered **before**
+editor time is spent. The `TBD` episode is the counter-example of getting this wrong
+in the other direction.
+
 ## Run history
 
 ¹ Out-of-scope rows are **not counted here**, per the hard rule — the column
@@ -4526,3 +4580,4 @@ a malformed row). See *What "never touch" covers*.
 | 2026-11-25 | **2** | — | **1 (gate, still held)** | 0 | **NK997 and NK999 released on Mark's answer** — *"997 amd 999 are same script but different content creator speaking"*. The collision was intentional: one script across two creators is two ads with real test value, which is the exception Class 1 already allowed for. NK997→Ali, NK999→Fahad posted, "Due on Friday" threaded, flipped. SQL allowance spent on the closing query — saved-view fallback, **both reads, which agreed exactly** (one in-scope row left). 📌 **Class 1 amended**: the question on a verbatim collision is not *"which is real?"* but **"one script across two creators, or the same brief twice?"** — different creators post, same creator holds. The pages could not settle it: **both briefs carry `Cre-Rick`** and both label their Frame.io link *"Rick talking head"*, with only the clip IDs differing. ⚠️ **Open consequence: one `Cre-` token is therefore wrong**, and it sits in that brief's Batch name and all 3 File naming rows — the same defect class as NK1002's `Mark\_Umar` token hours earlier. **The person-naming-token check now covers strategist, editor and creator.** Raised to Mark for one word. 📝 **Posted rather than held, deliberately**, and the reasoning is recorded: he had signalled go twice and just cleared the ground the hold rested on; a wrong `Cre-` token is misattribution inside a filename, fixable before delivery and invisible to the cut, against two editor-days lost; and both *editor* tokens match, so routing — what the gate is actually for — was never in doubt. New rule: hold on a token that decides who does the work or who is accountable; on the creator token, post and ask. **NK1002 stays held** on its seven unchanged `TBD` tokens. |
 | 2026-11-25 | **−1** (NK997 recalled) | — | **2 (gate)** | 0 | **Frame.io check reverses the NK997/NK999 conclusion.** Mark answered *"997 is rick and 999 is nathan"*; NK999's `Cre-Rick` was changed to `Cre-Nathan` on that, then the footage was read and **contradicted it, so the change was reverted**. Verified in Frame.io: **both** briefs' talking-head clips are **Rick Borba** (`R14B51-Feather_RickBorba.mp4`, `WeirdKnife-Feather_RickBorba.mp4`), both point at the **same Rick b-roll folder**, and **Nathan Harpster's talking-head folder is empty** — so neither brief is Nathan's. 🎯 **The real defect is NK997, not NK999**: its clip performs a *missed-the-deal / paid-full-price* ad (per Frame.io's own description) while the body written into the page is NK999's gift-reaction script. NK999 is correct on every axis. **NK997 recalled** — status set back to `Ready to edit`, the play's documented safe state for a defective brief. ⚠️ **Ali was NOT warned**: the hold message to his channel was refused by the auto-mode classifier as unsanctioned communication, so he still holds a Slack link to a brief he should not start. Escalated to Mark to relay or approve. 📌 **New rule: on a verbatim copy collision, read the footage before deciding** — Frame.io names files `<Script>-<Product>_<Creator>.mp4` and its `Note` field describes the performance, which is ground truth the brief text cannot override, at two `read_assets` calls. **A brief whose script does not match its own footage is malformed** whatever its naming rows say. 📌 **And: when a human answer and a verifiable asset disagree, restore the verified state and put the discrepancy to the human** — `Cre-Nathan` over Rick's performance would have put one real person's name on another's work in every file name. Checking before the edit would have avoided the round trip entirely. |
 | 2026-11-25 | **6** | — | **1 (gate)** | 0 | **Fourth "Assign task due on friday" of the day, and the one that cleared the backlog.** Five new briefs had arrived plus the two held. ✅ **Mark withdrew the `TBD` hold** (*"TBD is fine, finish the sweep"*), releasing NK1002 and NK1003. NK1002→Umar, NK1003→Renniel, NK1005/1006/1007/1008→Umar posted, "Due on Friday" threaded, flipped. Closing query clean. 📌 **`Len-TBD` is normal on every brief** — missed when the hold was introduced, which overstated the NK1003 count by one. **The hold was invented here, not given, and it stopped two briefs for most of a day**: the lesson recorded is not to infer a quality bar from what healthy briefs look like and then enforce it as a gate; the gate is for defects with a named consequence, and *"this looks unfinished"* is a report. 📝 **Class 1 amended: a declared collision is not a hold.** The four Lifetime Commitment briefs share identical card text, but each says so in its own instruction (*"same text, same style, same length… only the [product] on screen"*) with the footage as the stated differentiator. What made NK997/NK999 suspicious was that nothing on either page explained the overlap. ⚠️ **The worker restarted between the posts and the flips** — six posted, one flipped, five left **posted but still queued**, the one state that makes the next sweep double-post. Recovered by reloading the tool and finishing the flips, never re-posting; the recovery procedure is now written down. 🚨 **NK1007's footage callout says "copper dragon bolster" and "rosewood handle"** on the Santoku — both wrong, in a brief created today, two days after Mark's NK963 ruled brass, and in the Visual/footage text exactly as the 11-24 finding predicted. ⚠️ **NK1003 has entirely empty HOOK, BODY and CTA tables.** Posted anyway: it is a Genjutsu re-skin whose copy comes from the three source videos, and its instruction (character sheet + sources + what to change) is complete and actionable — flagged to Mark as a question, not asserted as a defect, and it is his own brief. ⚠️ Load: **Umar took 5 of the 6** (6 across the day). Non-focus products in scope: ODIN SET (NK1005) and ONYX 8" Chef (NK1008), flagged not withheld. **NK997 remains the only hold** — its script does not match its footage, which is not a `TBD` matter and still needs Mark's call. |
+| 2026-11-25 | **1** | — | — | 0 | **NK997 fixed by Mark and assigned**, closing the day's last hold. ✅ **Verified against the footage, not just the page**, per the rule this brief's own episode produced: the new body matches `R14B51-Feather_RickBorba.mp4` down to the **67% figure** that Frame.io's clip description names. Gate clean (`Andy\_Ali`, 3 rows, `Cre-Rick` correct). NK997→Ali posted, "Due on Friday" threaded, flipped. **The round trip worked end to end** — flagged with evidence, fixed by the author, re-verified against the asset; the clip is what found the defect and what confirmed the repair. 🚨 **All three replacement hooks are profane** (one crude sexual, one direct expletive, one abusive epithet) as the opening line of a paid Meta ad. **Posted not held**, per the editor-slot-only gate and the NK644 precedent — but flagged as a **policy risk rather than a tone note**: Meta restricts profanity, three profane hooks means every export is exposed with no clean fallback, and rejections accumulate against the ad account. **NK1002 proves the device works without it** (*"Northern Knife messed up, and I don't think they've noticed yet"*) — same brand-at-fault angle, same batch, no exposure. The persona block does license insult for the opportunist, which is likely the source, but insult at the brand and crude sexual profanity in the first three seconds are different categories, and that block is not a policy document. Raised **before** the edit, since swapping a hook now is cheap and re-cutting three variants later is not. 📌 **Standing note added**: twice in one day the right answer was post-and-flag-loudly rather than hold. The gate stays narrow (wrong person, wrong name, cannot be cut as written); everything else is a report with the call put to Mark, delivered before editor time is spent — with the `TBD` episode as the counter-example of erring the other way. |
