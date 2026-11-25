@@ -4528,6 +4528,75 @@ likely ad-policy rejection, is a report with the call put to Mark, delivered **b
 editor time is spent. The `TBD` episode is the counter-example of getting this wrong
 in the other direction.
 
+## 🎯 The rules exist, are specific, and are correct — in Mark's briefs (2026-11-25)
+
+Five of Mark's own Holiday Sale briefs went out in one sweep (NK1016, NK1019,
+NK1020, NK1022, NK1024). They are the cleanest in the corpus, and they settle a
+question this file has circled for weeks.
+
+**Every recurring error in Andy's batches has an explicit, correctly-worded rule
+written into Mark's briefs.** Not implied — stated, as an instruction to the editor:
+
+| Recurring error | Mark's rule, verbatim | Where Andy's briefs broke it |
+|---|---|---|
+| Feather pattern attributed to hand-work | *"Never describe how the feather got onto the blade. Name the pattern. **Never etched, engraved or hand-finished**."* (NK1019) | NK995 *"no two hands hammer the same way"*; NK653/654 |
+| Feather scarcity on the wrong product | *"**Scarcity exactly as stated:** 500 at a time, about 3 months between runs. Never 'selling out'."* (NK1019) | NK940, NK994 (Santoku), NK992 (Blackout) |
+| Stale customer count | *"**147,000 customers**."* (NK1019); NK1020 goes further and strips the old caption: *"no 'a hundred thousand customers'"* | NK946, NK957 (100,000) |
+| Invented deadline / delivery promise | *"**No invented deadline** — no end date, clock, countdown or 'hurry'. **No delivery promise** — never 'in time for Christmas'."* (NK1019) | NK989/990/991 |
+| Dragon on the Tiger Cleaver | *"the Tiger Cleaver with the tiger across the face, **never a dragon or stripes**"* (all five) | the NK844-corrected form, repeatedly re-broken |
+| Opener on the blade | *"the Blackout opener at the end of the handle, **never the blade**"* (all five) | `bottle opener tip` in NK955/957/958/960/968/970/972/994 Visual cells |
+| Spec-sheet jargon | *"**No spec stack.** No layer counts, hardness numbers or steel names. 'Holds that edge' is as far as it goes."* (NK1019) | NK637's Damascus layer count, NK941's steel type |
+| Copy collisions across cuts | *"**Do not pull lines from** NK560, NK965, NK907, NK913 or NK916."* (NK1019) | NK997/NK999, the duplicate that took three rounds to resolve |
+
+**So the standing finding is now evidenced rather than inferred.** It was framed on
+11-24 as *"the rules Andy writes down hold; the facts he doesn't name are the ones
+that are wrong"*, and on 11-25 sharpened to *"accuracy tracks whether the hero is
+the product the writer knows."* Both were close. The precise statement is:
+
+> **The brand's facts are written down correctly, in Mark's briefs, in the exact
+> words an editor needs. They are not reaching Andy's template.** The gap is not
+> knowledge and not care — it is propagation.
+
+That reframes every fix proposed in this file. Asking Andy to stop saying "copper
+bolster" treats it as an authoring problem. **The leverage is getting Mark's
+callout blocks into whatever Andy writes from** — one of these red callouts,
+pasted into the Santa and Triple Discount templates, would have pre-empted most of
+the 11-24 and 11-25 flags at once.
+
+### Other things worth copying from this batch
+
+- **NK1019 is the model brief.** A *"what transferred, and what could not"* block
+  that reasons the originality gate explicitly (*"the celebrity endorsement… we
+  have no endorser"*), a red callout of hard bans, a persona note tying each claim
+  to a visible thing, and cross-batch awareness (*"That beat belongs to Andy's
+  Lifetime Commitment batch (NK1005-1010)"*). It is also the **only brief seen with
+  `Len-` filled** (`Len-65s`).
+- **NK1022 adds the missing `VANCE - THE OPPORTUNIST` block** — the persona the
+  schema has and the pasted callout omitted, flagged on 11-25. Partially fixed: the
+  duplicate `DON` (Opportunist *and* Hunter) is still in the paste.
+- **"Where it and your project disagree, your project wins."** All four iteration
+  briefs give locked footage clip-for-clip with approximate timecodes, then defer to
+  the editor's own project file. That is how to give precise direction without
+  making it brittle.
+- Same author, two phrasings of one claim: NK1016 has *"a finger loop so it never
+  slips"* (the absolute safety claim flagged on NK941/944/993/922), while **NK1024
+  words it safely** as *"a finger loop for grip"*. The safe form exists; it just is
+  not the one that always gets used.
+
+### ⚠️ A contradiction between two of Mark's own briefs
+
+All five say: *"Holiday Sale: the offer is BUY 2 GET 2 FREE, nothing else. **No end
+date, no countdown, no extra % off, no 'up to' figures.**"* NK1019 adds *"No price,
+no percentage."*
+
+**NK997 is also a Holiday Sale brief, and its body says *"they're running up to 67%
+off"*** — and that 67% is what its footage performs, per Frame.io's own clip
+description. Mark fixed NK997 personally today, so the line is deliberate there.
+
+Both cannot be right. Either the Holiday Sale rule has an exception for footage
+shot under an earlier offer, or NK997's performance is now off-offer. Raised rather
+than acted on: it is a live offer question, and the asset constrains it.
+
 ## Run history
 
 ¹ Out-of-scope rows are **not counted here**, per the hard rule — the column
@@ -4581,3 +4650,4 @@ a malformed row). See *What "never touch" covers*.
 | 2026-11-25 | **−1** (NK997 recalled) | — | **2 (gate)** | 0 | **Frame.io check reverses the NK997/NK999 conclusion.** Mark answered *"997 is rick and 999 is nathan"*; NK999's `Cre-Rick` was changed to `Cre-Nathan` on that, then the footage was read and **contradicted it, so the change was reverted**. Verified in Frame.io: **both** briefs' talking-head clips are **Rick Borba** (`R14B51-Feather_RickBorba.mp4`, `WeirdKnife-Feather_RickBorba.mp4`), both point at the **same Rick b-roll folder**, and **Nathan Harpster's talking-head folder is empty** — so neither brief is Nathan's. 🎯 **The real defect is NK997, not NK999**: its clip performs a *missed-the-deal / paid-full-price* ad (per Frame.io's own description) while the body written into the page is NK999's gift-reaction script. NK999 is correct on every axis. **NK997 recalled** — status set back to `Ready to edit`, the play's documented safe state for a defective brief. ⚠️ **Ali was NOT warned**: the hold message to his channel was refused by the auto-mode classifier as unsanctioned communication, so he still holds a Slack link to a brief he should not start. Escalated to Mark to relay or approve. 📌 **New rule: on a verbatim copy collision, read the footage before deciding** — Frame.io names files `<Script>-<Product>_<Creator>.mp4` and its `Note` field describes the performance, which is ground truth the brief text cannot override, at two `read_assets` calls. **A brief whose script does not match its own footage is malformed** whatever its naming rows say. 📌 **And: when a human answer and a verifiable asset disagree, restore the verified state and put the discrepancy to the human** — `Cre-Nathan` over Rick's performance would have put one real person's name on another's work in every file name. Checking before the edit would have avoided the round trip entirely. |
 | 2026-11-25 | **6** | — | **1 (gate)** | 0 | **Fourth "Assign task due on friday" of the day, and the one that cleared the backlog.** Five new briefs had arrived plus the two held. ✅ **Mark withdrew the `TBD` hold** (*"TBD is fine, finish the sweep"*), releasing NK1002 and NK1003. NK1002→Umar, NK1003→Renniel, NK1005/1006/1007/1008→Umar posted, "Due on Friday" threaded, flipped. Closing query clean. 📌 **`Len-TBD` is normal on every brief** — missed when the hold was introduced, which overstated the NK1003 count by one. **The hold was invented here, not given, and it stopped two briefs for most of a day**: the lesson recorded is not to infer a quality bar from what healthy briefs look like and then enforce it as a gate; the gate is for defects with a named consequence, and *"this looks unfinished"* is a report. 📝 **Class 1 amended: a declared collision is not a hold.** The four Lifetime Commitment briefs share identical card text, but each says so in its own instruction (*"same text, same style, same length… only the [product] on screen"*) with the footage as the stated differentiator. What made NK997/NK999 suspicious was that nothing on either page explained the overlap. ⚠️ **The worker restarted between the posts and the flips** — six posted, one flipped, five left **posted but still queued**, the one state that makes the next sweep double-post. Recovered by reloading the tool and finishing the flips, never re-posting; the recovery procedure is now written down. 🚨 **NK1007's footage callout says "copper dragon bolster" and "rosewood handle"** on the Santoku — both wrong, in a brief created today, two days after Mark's NK963 ruled brass, and in the Visual/footage text exactly as the 11-24 finding predicted. ⚠️ **NK1003 has entirely empty HOOK, BODY and CTA tables.** Posted anyway: it is a Genjutsu re-skin whose copy comes from the three source videos, and its instruction (character sheet + sources + what to change) is complete and actionable — flagged to Mark as a question, not asserted as a defect, and it is his own brief. ⚠️ Load: **Umar took 5 of the 6** (6 across the day). Non-focus products in scope: ODIN SET (NK1005) and ONYX 8" Chef (NK1008), flagged not withheld. **NK997 remains the only hold** — its script does not match its footage, which is not a `TBD` matter and still needs Mark's call. |
 | 2026-11-25 | **1** | — | — | 0 | **NK997 fixed by Mark and assigned**, closing the day's last hold. ✅ **Verified against the footage, not just the page**, per the rule this brief's own episode produced: the new body matches `R14B51-Feather_RickBorba.mp4` down to the **67% figure** that Frame.io's clip description names. Gate clean (`Andy\_Ali`, 3 rows, `Cre-Rick` correct). NK997→Ali posted, "Due on Friday" threaded, flipped. **The round trip worked end to end** — flagged with evidence, fixed by the author, re-verified against the asset; the clip is what found the defect and what confirmed the repair. 🚨 **All three replacement hooks are profane** (one crude sexual, one direct expletive, one abusive epithet) as the opening line of a paid Meta ad. **Posted not held**, per the editor-slot-only gate and the NK644 precedent — but flagged as a **policy risk rather than a tone note**: Meta restricts profanity, three profane hooks means every export is exposed with no clean fallback, and rejections accumulate against the ad account. **NK1002 proves the device works without it** (*"Northern Knife messed up, and I don't think they've noticed yet"*) — same brand-at-fault angle, same batch, no exposure. The persona block does license insult for the opportunist, which is likely the source, but insult at the brand and crude sexual profanity in the first three seconds are different categories, and that block is not a policy document. Raised **before** the edit, since swapping a hook now is cheap and re-cutting three variants later is not. 📌 **Standing note added**: twice in one day the right answer was post-and-flag-loudly rather than hold. The gate stays narrow (wrong person, wrong name, cannot be cut as written); everything else is a report with the call put to Mark, delivered before editor time is spent — with the `TBD` episode as the counter-example of erring the other way. |
+| 2026-11-25 | **5** | — | — | 0 | **Fifth "assign task due on friday", and the first sweep that was entirely Mark's own work.** SQL allowance spent — saved-view fallback, **both reads, agreeing exactly** (5 in scope, then 0 at the close). NK1016→Umar, NK1019→**Abdul (his first in this play)**, NK1020→Umar, NK1022→Anas, NK1024→Naveed. All gate-clean on all three person-naming tokens (`Mark\_<Editor>`); NK1020 carries 5 file rows for its 5 hooks, per the NK664 convention. 🎯 **Headline, and it reframes the whole file: every recurring error in Andy's batches has an explicit, correctly-worded rule written into Mark's briefs** — *"Never etched, engraved or hand-finished"* (the rule NK995 broke), *"Scarcity exactly as stated: 500 at a time, about 3 months between runs"*, *"147,000 customers"*, *"No invented deadline… No delivery promise — never 'in time for Christmas'"*, *"tiger across the face, never a dragon or stripes"*, *"opener at the end of the handle, never the blade"*, *"No spec stack"*, and even Class 1 prevention (*"Do not pull lines from NK560, NK965, NK907, NK913 or NK916"*). **The facts are written down correctly and are not reaching Andy's template: the gap is propagation, not knowledge or care.** The leverage is pasting Mark's callout blocks into Andy's templates, not asking him to stop making the errors one at a time. ✅ **NK1019 is the model brief** — a *"what transferred, and what could not"* originality-gate block, a red callout of hard bans, cross-batch awareness, and the only `Len-` seen filled (`Len-65s`). ✅ **NK1020 strips the stale "a hundred thousand customers" caption** from the reused NK651 footage. ✅ **NK1022 adds the missing `VANCE` persona block** I flagged on 11-25, though the duplicate `DON` remains. ✅ *"Where it and your project disagree, your project wins"* — precise direction that is not brittle. ⚠️ **A contradiction between two of Mark's briefs**: all five Holiday Sale briefs ban *"extra % off"* and *"'up to' figures"*, while **NK997** — Holiday Sale, fixed by Mark himself today — says *"up to 67% off"*, which is what its footage performs. Raised, not acted on. ⚠️ NK1016 has *"a finger loop so it never slips"* while **NK1024 words the same claim safely** as *"for grip"*. ⚠️ **The worker restarted mid-flip again** (second time today), leaving 4 posted-but-unflipped; the recorded recovery procedure was followed — finish the flips, never re-post. |
