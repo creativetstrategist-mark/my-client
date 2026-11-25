@@ -4329,6 +4329,69 @@ disagree, which is a different and genuinely blocking defect.
 NK1002 stays held: its seven `TBD` tokens are unchanged, confirmed on both the board
 and the table read.
 
+## 🎯 Frame.io settles what the pages could not — and reverses the conclusion (2026-11-25)
+
+Asked which brief was which creator, Mark said *"997 is rick and 999 is nathan"*.
+The `Cre-Rick` token on NK999 was changed to `Cre-Nathan` on that answer. **Then the
+footage was checked, and it contradicted all of it.** The token change was reverted.
+
+### What the footage says
+
+| | NK997 | NK999 |
+|---|---|---|
+| Talking-head file | `R14B51-Feather_RickBorba.mp4` | `WeirdKnife-Feather_RickBorba.mp4` |
+| On camera | **Rick Borba** | **Rick Borba** |
+| B-roll folder | `BRoll` under **Rick Borba** | the **same** folder |
+| Frame.io's own description | *"…annoyed that he missed the 67% discount and B2G2 deal and paid full price, urging the camera to grab these deals"* | *"…delivering three 'unexpected Christmas gift' hooks before praising how the Feather knife upgraded his cooking"* |
+| Matches the script written in the brief? | 🚨 **No** | ✅ **Yes** |
+
+**Rick Borba** and **Nathan Harpster** are two distinct creator folders, so they are
+genuinely different people — but **neither brief is Nathan's**, and Nathan's
+`Talking head` folder holds no files at all.
+
+### The real defect, and why it is the opposite of the first reading
+
+**NK999 is correct.** Its clip, its concept name and its script all agree.
+
+**NK997 carries the wrong script.** Its clip matches its *name* (`R14B5.1` →
+`R14B51-…`) and performs a **missed-the-deal / paid-full-price** ad. The body
+written into the page is NK999's gift-reaction script. So Ali was handed lines his
+footage does not perform.
+
+That is the inverse of the conclusion reached from the pages alone, where NK999
+looked like the likelier duplicate because NK997's name was the opaque reel code.
+**The copy collision was real; the page it pointed at was not the one it seemed to.**
+
+### The rule this adds
+
+**On a verbatim copy collision, read the footage before deciding — do not decide
+from the pages, and do not decide from an answer about creators alone.**
+
+Frame.io names the file after its script and creator
+(`<Script>-<Product>_<Creator>.mp4`) and carries a plain-language description of
+what the clip actually performs. That is a **ground truth the brief text cannot
+override**, and it is two `read_assets` calls:
+
+1. `get_file` on the talking-head id → creator and script from the filename, and
+   the `Note` field describes the performance.
+2. `get_folder` on the b-roll id, then its `parent_id` → the creator folder's name.
+
+**A brief whose script does not match its own footage is malformed**, whatever its
+naming rows say. The editor cannot cut it.
+
+### What this says about acting on an answer
+
+Mark's answer was taken at face value and a token was edited on it. The footage then
+showed the answer did not match the asset. **The edit was reverted rather than left
+standing**, because `Cre-Nathan` over footage of Rick would have put one real
+person's name on another's performance in every file name — a worse state than the
+one it replaced.
+
+**Rule: when a human answer and a verifiable asset disagree, restore the verified
+state and put the discrepancy to the human.** Do not keep an edit alive because it
+was instructed, and do not quietly keep it either. Checking first, before the edit,
+is better still — two calls would have avoided the whole round trip.
+
 ## Run history
 
 ¹ Out-of-scope rows are **not counted here**, per the hard rule — the column
@@ -4379,3 +4442,4 @@ a malformed row). See *What "never touch" covers*.
 | 2026-11-25 | **3** | — | **3 (gate)** | 0 | **Run on "Assign task due on friday"** — a new Feather UGC batch (NK997–NK1002, created 23:41–23:51 the previous night), all Andy's, all `Avatar: VANCE`, creators Rick and Nathan. NK998→Umar, NK1000→Anas, NK1001→Waheed posted, "Due on Friday" threaded, flipped. Closing query clean, no mid-run arrivals. 🚨 **Three held, on two gate classes this play could not previously catch — both now rules.** (1) **NK997 and NK999 carry the identical script**, all 3 hooks and all 7 body beats verbatim, same creator (Rick), two different editors (Ali, Fahad) — two editors would cut the same ad. Held both: the duplicate could be either page, and the gate compares a page against itself, never against its siblings. (2) **NK1002's naming rows read `Mark\_Umar` while `Strategist` is Andy** — the *editor* token matches, so the gate as written passed it, which is why the check now covers every person-naming token. Held also for **seven unfilled `TBD` tokens** in the batch name where every sibling has them filled; an editor would put the literal `Angle-TBD` into every file name. 🔍 **The MIKE persona block is now a five-persona dump** pasted on all six: `DON` defined twice (Opportunist and Hunter), the Opportunist called DON while the schema option is VANCE, and none of the five is the brief's own avatar. 🚨 **Its wife-replacement line has graduated into live copy** — all three NK1000 hooks are variants of it. Raised rather than assumed cleared, per this file's own note that Mark's *"that's fine for now"* closed **NK644 specifically and set no standing rule**. Adjacent: NK1001's wife's-watch joke and its whips-it-out line, with NK976's innuendo hook still open — a wife-as-punchline cluster on a product whose main persona is the wife. ⚠️ **Opposite weight claims on the Feather one day apart**: NK998 calls it heavier than anything else in the kitchen, NK995 the lightest he will ever hold — both banned by NK579, and together proof the claim rests on no shared fact. Same shape in the multiplier **within one batch**: NK1000 three times sharper, NK1001 five times sharper; Mark already ordered NK646's *"three times the control"* fixed. ⚠️ **NK1001's offer is the final beat** with nothing after it, against the explicit `CLAUDE.md` rule (never first or last, 2–4 beats after) — its own batch name says `Off-Late`. ⚠️ **The body is duplicated below the tables on all six**, and **on NK1000 the two copies differ** — one template fix, not six. Profanity in NK998's hook and NK1000's body, flagged not withheld. ✅ **The Feather's own facts are right throughout** — rosewood on the Feather, small-batch scarcity on the Feather, no hand-work attribution on the pattern — the direct contrast with yesterday's Santoku batch, and support for the finding that accuracy tracks whether the hero is the product the writer knows. 📌 **Creative IDs rolled past NK999 to 4 digits**; this play reads the ID as text and was unaffected. |
 | 2026-11-25 | **0** | — | **3 (gate, still held)** | 0 | **Repeated "Assign task due on friday"**, minutes after the previous run. **Nothing new in the queue and nothing assignable** — a repeated go signal does not release a gate hold, since a go signal covers every brief *not Callum's and not malformed*. No posts, no flips. ✅ **NK1002 had been edited between the two signals**: the `Mark\_Umar` strategist token is now `Andy\_Umar`, so that ground cleared within minutes of being reported — evidence that reporting a naming defect precisely (which token, which rows, what it would produce) gets it fixed. Its **seven `TBD` tokens remain**, so the hold stands on that ground alone. 📌 **Lesson: on a repeated go signal, re-read the held pages, not just the query** — the query showed NK1002 unchanged in `Status`, `Editor` and `createdTime`, and only the page body carried the fix, so a query-only re-check would have reported a stale hold. NK997 and NK999 re-read and **still byte-identical in copy** (same `page_last_edited_at`), so the duplicate is unresolved and still needs Mark's call on which page is real. Noted that the `TBD` tokens are strategist taxonomy choices and not Claude's to infer, and that an honest `Off-First` on NK1002 would document rather than fix its offer-opens-the-body structure — a judgement call, since NK957 used `Off-First` deliberately. |
 | 2026-11-25 | **2** | — | **1 (gate, still held)** | 0 | **NK997 and NK999 released on Mark's answer** — *"997 amd 999 are same script but different content creator speaking"*. The collision was intentional: one script across two creators is two ads with real test value, which is the exception Class 1 already allowed for. NK997→Ali, NK999→Fahad posted, "Due on Friday" threaded, flipped. SQL allowance spent on the closing query — saved-view fallback, **both reads, which agreed exactly** (one in-scope row left). 📌 **Class 1 amended**: the question on a verbatim collision is not *"which is real?"* but **"one script across two creators, or the same brief twice?"** — different creators post, same creator holds. The pages could not settle it: **both briefs carry `Cre-Rick`** and both label their Frame.io link *"Rick talking head"*, with only the clip IDs differing. ⚠️ **Open consequence: one `Cre-` token is therefore wrong**, and it sits in that brief's Batch name and all 3 File naming rows — the same defect class as NK1002's `Mark\_Umar` token hours earlier. **The person-naming-token check now covers strategist, editor and creator.** Raised to Mark for one word. 📝 **Posted rather than held, deliberately**, and the reasoning is recorded: he had signalled go twice and just cleared the ground the hold rested on; a wrong `Cre-` token is misattribution inside a filename, fixable before delivery and invisible to the cut, against two editor-days lost; and both *editor* tokens match, so routing — what the gate is actually for — was never in doubt. New rule: hold on a token that decides who does the work or who is accountable; on the creator token, post and ask. **NK1002 stays held** on its seven unchanged `TBD` tokens. |
+| 2026-11-25 | **−1** (NK997 recalled) | — | **2 (gate)** | 0 | **Frame.io check reverses the NK997/NK999 conclusion.** Mark answered *"997 is rick and 999 is nathan"*; NK999's `Cre-Rick` was changed to `Cre-Nathan` on that, then the footage was read and **contradicted it, so the change was reverted**. Verified in Frame.io: **both** briefs' talking-head clips are **Rick Borba** (`R14B51-Feather_RickBorba.mp4`, `WeirdKnife-Feather_RickBorba.mp4`), both point at the **same Rick b-roll folder**, and **Nathan Harpster's talking-head folder is empty** — so neither brief is Nathan's. 🎯 **The real defect is NK997, not NK999**: its clip performs a *missed-the-deal / paid-full-price* ad (per Frame.io's own description) while the body written into the page is NK999's gift-reaction script. NK999 is correct on every axis. **NK997 recalled** — status set back to `Ready to edit`, the play's documented safe state for a defective brief. ⚠️ **Ali was NOT warned**: the hold message to his channel was refused by the auto-mode classifier as unsanctioned communication, so he still holds a Slack link to a brief he should not start. Escalated to Mark to relay or approve. 📌 **New rule: on a verbatim copy collision, read the footage before deciding** — Frame.io names files `<Script>-<Product>_<Creator>.mp4` and its `Note` field describes the performance, which is ground truth the brief text cannot override, at two `read_assets` calls. **A brief whose script does not match its own footage is malformed** whatever its naming rows say. 📌 **And: when a human answer and a verifiable asset disagree, restore the verified state and put the discrepancy to the human** — `Cre-Nathan` over Rick's performance would have put one real person's name on another's work in every file name. Checking before the edit would have avoided the round trip entirely. |
