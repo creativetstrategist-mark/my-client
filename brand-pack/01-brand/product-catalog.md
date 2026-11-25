@@ -87,6 +87,8 @@ factual error. Do not build briefs around these.
 | Rolling Sharpener | Separate line. **Never** reference knives, knife names, grilling or BBQ. |
 
 Brand-level claims ("147,000+ customers") work on any product.
+
+**No personalisation, on any product** (strategist, 2026-11-25: *"no personalization on Northern Knife"*). No engraved names, initials or custom marks, so never promise one. When an inspo ad's hook is a personalised product, substitute the beat (NK1029 made the name the one his family gave the knife).
 **Never borrow another SKU's review count.**
 
 ---
