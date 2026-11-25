@@ -4392,6 +4392,88 @@ state and put the discrepancy to the human.** Do not keep an edit alive because 
 was instructed, and do not quietly keep it either. Checking first, before the edit,
 is better still — two calls would have avoided the whole round trip.
 
+## ✅ `TBD` is not a defect — Mark's ruling, and what it leaves (2026-11-25)
+
+Asked what `TBD` was for, then told: *"TBD is fine, finish the sweep."* So the
+hold introduced on 2026-11-25 for unfilled `TBD` tokens is **withdrawn**. NK1002
+and NK1003 went out on that ruling.
+
+### What `TBD` actually is, for the record
+
+The naming rows are an underscore-separated string where each slot carries one
+fact. `TBD` is the placeholder left in a slot. A finished string reads
+`…Gifting\_Bold Claim\_Str-Listicle\_Tone-Warm\_Prf-Guarantee\_Off-Late\_Rev-Early\_Voice-None\_Face-Hands\_Len-TBD`.
+
+**`Len-TBD` is normal and appears on essentially every brief** — length is not known
+until the cut exists. That was missed when the hold was introduced, and it matters:
+it means `TBD` alone never indicated a problem, only `TBD` in the *other* slots did.
+The NK1003 count was overstated by one as a result (ten abnormal, not eleven).
+
+**Rule: do not hold on `TBD` in any slot.** Note it in the run report if a brief is
+conspicuously unfilled, and move on.
+
+### The lesson underneath
+
+This hold was invented here, not given by Mark, and it stopped two briefs for most
+of a day. The pattern to avoid: **inferring a quality bar from what healthy briefs
+happen to look like, then enforcing it as a gate.** The gate exists for defects with
+a named consequence — the wrong person gets the work, or the files carry the wrong
+person's name. *"This brief looks unfinished"* is a report, not a gate.
+
+Ask before turning an observation into a hold. One question would have cost a
+message; the hold cost a day.
+
+## 📝 A declared copy collision is not a hold — the Lifetime Commitment set (2026-11-25)
+
+NK1005 (ODIN Collection), NK1006 (Feather), NK1007 (Santoku) and NK1008 (ONYX 8"
+Chef) carry **identical card text**: the same three hook cards, the same two craft
+cards, the same `Buy 2 Get 2 Free` closing card.
+
+Under Class 1 that is a verbatim collision across four briefs. It is **not** a hold,
+because each brief **declares it in its own instruction**: *"Single-knife version of
+Lifetime Commitment - ODIN Collection: same text, same style, same length… only the
+[product] on screen."* The differentiator is the footage, which each brief locks to
+one product with an explicit shot list.
+
+**Amendment to Class 1: a collision the brief itself declares, with a stated
+differentiator, is intentional. Post it.** What makes a collision suspicious is that
+nothing on the page explains it — as with NK997/NK999, where two briefs shared a
+script and neither mentioned the other.
+
+Worth one note to Mark rather than a hold: `CLAUDE.md` says never reuse the identical
+offer paragraph across product versions in a batch, and four briefs here end on the
+same offer card. For a no-VO text-card format there is no other way to state B2G2,
+and the ads differ entirely in footage, so this reads as the rule's edge rather than
+a breach.
+
+## ⚠️ Posts and flips are not atomic — recovering a half-finished sweep (2026-11-25)
+
+The worker process restarted **between the Slack posts and the Notion flips**: all six
+briefs were posted and threaded, one was flipped, five were left **posted but still
+`Ready to edit`**.
+
+That is the one genuinely dangerous intermediate state this play has, and it is the
+mirror image of the failure the post-then-flip order prevents:
+
+| State | Consequence |
+|---|---|
+| Flipped but not posted | The editor is never told. The brief leaves the queue silently. |
+| **Posted but not flipped** | **The next sweep sees it queued and posts it again.** The editor gets the same brief twice. |
+
+**Recovery is to finish the flips, never to re-post.** The posts already succeeded;
+re-running the sweep from the top would double-post every brief in it. After any
+interruption mid-run:
+
+1. Re-read the queue.
+2. For each brief still `Ready to edit` that **this session already posted**, flip it
+   — do not post again.
+3. Only then treat what remains as new work.
+
+Keep the posted-brief list in the run until the flips are confirmed, because after a
+restart the queue alone cannot distinguish *"posted, flip lost"* from *"never
+posted"*. The Slack channel read settles it when in doubt — the same check that
+caught NK995.
+
 ## Run history
 
 ¹ Out-of-scope rows are **not counted here**, per the hard rule — the column
@@ -4443,3 +4525,4 @@ a malformed row). See *What "never touch" covers*.
 | 2026-11-25 | **0** | — | **3 (gate, still held)** | 0 | **Repeated "Assign task due on friday"**, minutes after the previous run. **Nothing new in the queue and nothing assignable** — a repeated go signal does not release a gate hold, since a go signal covers every brief *not Callum's and not malformed*. No posts, no flips. ✅ **NK1002 had been edited between the two signals**: the `Mark\_Umar` strategist token is now `Andy\_Umar`, so that ground cleared within minutes of being reported — evidence that reporting a naming defect precisely (which token, which rows, what it would produce) gets it fixed. Its **seven `TBD` tokens remain**, so the hold stands on that ground alone. 📌 **Lesson: on a repeated go signal, re-read the held pages, not just the query** — the query showed NK1002 unchanged in `Status`, `Editor` and `createdTime`, and only the page body carried the fix, so a query-only re-check would have reported a stale hold. NK997 and NK999 re-read and **still byte-identical in copy** (same `page_last_edited_at`), so the duplicate is unresolved and still needs Mark's call on which page is real. Noted that the `TBD` tokens are strategist taxonomy choices and not Claude's to infer, and that an honest `Off-First` on NK1002 would document rather than fix its offer-opens-the-body structure — a judgement call, since NK957 used `Off-First` deliberately. |
 | 2026-11-25 | **2** | — | **1 (gate, still held)** | 0 | **NK997 and NK999 released on Mark's answer** — *"997 amd 999 are same script but different content creator speaking"*. The collision was intentional: one script across two creators is two ads with real test value, which is the exception Class 1 already allowed for. NK997→Ali, NK999→Fahad posted, "Due on Friday" threaded, flipped. SQL allowance spent on the closing query — saved-view fallback, **both reads, which agreed exactly** (one in-scope row left). 📌 **Class 1 amended**: the question on a verbatim collision is not *"which is real?"* but **"one script across two creators, or the same brief twice?"** — different creators post, same creator holds. The pages could not settle it: **both briefs carry `Cre-Rick`** and both label their Frame.io link *"Rick talking head"*, with only the clip IDs differing. ⚠️ **Open consequence: one `Cre-` token is therefore wrong**, and it sits in that brief's Batch name and all 3 File naming rows — the same defect class as NK1002's `Mark\_Umar` token hours earlier. **The person-naming-token check now covers strategist, editor and creator.** Raised to Mark for one word. 📝 **Posted rather than held, deliberately**, and the reasoning is recorded: he had signalled go twice and just cleared the ground the hold rested on; a wrong `Cre-` token is misattribution inside a filename, fixable before delivery and invisible to the cut, against two editor-days lost; and both *editor* tokens match, so routing — what the gate is actually for — was never in doubt. New rule: hold on a token that decides who does the work or who is accountable; on the creator token, post and ask. **NK1002 stays held** on its seven unchanged `TBD` tokens. |
 | 2026-11-25 | **−1** (NK997 recalled) | — | **2 (gate)** | 0 | **Frame.io check reverses the NK997/NK999 conclusion.** Mark answered *"997 is rick and 999 is nathan"*; NK999's `Cre-Rick` was changed to `Cre-Nathan` on that, then the footage was read and **contradicted it, so the change was reverted**. Verified in Frame.io: **both** briefs' talking-head clips are **Rick Borba** (`R14B51-Feather_RickBorba.mp4`, `WeirdKnife-Feather_RickBorba.mp4`), both point at the **same Rick b-roll folder**, and **Nathan Harpster's talking-head folder is empty** — so neither brief is Nathan's. 🎯 **The real defect is NK997, not NK999**: its clip performs a *missed-the-deal / paid-full-price* ad (per Frame.io's own description) while the body written into the page is NK999's gift-reaction script. NK999 is correct on every axis. **NK997 recalled** — status set back to `Ready to edit`, the play's documented safe state for a defective brief. ⚠️ **Ali was NOT warned**: the hold message to his channel was refused by the auto-mode classifier as unsanctioned communication, so he still holds a Slack link to a brief he should not start. Escalated to Mark to relay or approve. 📌 **New rule: on a verbatim copy collision, read the footage before deciding** — Frame.io names files `<Script>-<Product>_<Creator>.mp4` and its `Note` field describes the performance, which is ground truth the brief text cannot override, at two `read_assets` calls. **A brief whose script does not match its own footage is malformed** whatever its naming rows say. 📌 **And: when a human answer and a verifiable asset disagree, restore the verified state and put the discrepancy to the human** — `Cre-Nathan` over Rick's performance would have put one real person's name on another's work in every file name. Checking before the edit would have avoided the round trip entirely. |
+| 2026-11-25 | **6** | — | **1 (gate)** | 0 | **Fourth "Assign task due on friday" of the day, and the one that cleared the backlog.** Five new briefs had arrived plus the two held. ✅ **Mark withdrew the `TBD` hold** (*"TBD is fine, finish the sweep"*), releasing NK1002 and NK1003. NK1002→Umar, NK1003→Renniel, NK1005/1006/1007/1008→Umar posted, "Due on Friday" threaded, flipped. Closing query clean. 📌 **`Len-TBD` is normal on every brief** — missed when the hold was introduced, which overstated the NK1003 count by one. **The hold was invented here, not given, and it stopped two briefs for most of a day**: the lesson recorded is not to infer a quality bar from what healthy briefs look like and then enforce it as a gate; the gate is for defects with a named consequence, and *"this looks unfinished"* is a report. 📝 **Class 1 amended: a declared collision is not a hold.** The four Lifetime Commitment briefs share identical card text, but each says so in its own instruction (*"same text, same style, same length… only the [product] on screen"*) with the footage as the stated differentiator. What made NK997/NK999 suspicious was that nothing on either page explained the overlap. ⚠️ **The worker restarted between the posts and the flips** — six posted, one flipped, five left **posted but still queued**, the one state that makes the next sweep double-post. Recovered by reloading the tool and finishing the flips, never re-posting; the recovery procedure is now written down. 🚨 **NK1007's footage callout says "copper dragon bolster" and "rosewood handle"** on the Santoku — both wrong, in a brief created today, two days after Mark's NK963 ruled brass, and in the Visual/footage text exactly as the 11-24 finding predicted. ⚠️ **NK1003 has entirely empty HOOK, BODY and CTA tables.** Posted anyway: it is a Genjutsu re-skin whose copy comes from the three source videos, and its instruction (character sheet + sources + what to change) is complete and actionable — flagged to Mark as a question, not asserted as a defect, and it is his own brief. ⚠️ Load: **Umar took 5 of the 6** (6 across the day). Non-focus products in scope: ODIN SET (NK1005) and ONYX 8" Chef (NK1008), flagged not withheld. **NK997 remains the only hold** — its script does not match its footage, which is not a `TBD` matter and still needs Mark's call. |
