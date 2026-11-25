@@ -150,6 +150,17 @@ text exactly as shown, as a plain line (no link):
   `⚠️ No fixed visual` note. Beats that aren't about one knife (the story,
   the offer, the close) mix clips from the libraries of the knives the brief
   names.
+- **PSH-only briefs** (the brief says to use ONLY Mauro's Nov 2026 product
+  shoot, `PSH-` files; confirmed by the user on NK1009): don't use the Mark
+  Broll Selection libraries, the forging clip or other house fixed visuals
+  that aren't PSH footage. Pick shots from the shot list page "Mauro - Product
+  shoot Nov 2026 - B-roll shot list" (`41a4ac627aac812292e7ee557d035fef`).
+  Write them the way the brief's body does: `PSH-<ID> <short shot
+  description>, <knife>` (e.g. `PSH-ACT01 thumb on the edge, no reaction,
+  ODIN 8" Chef`), with no "Broll clip of" prefix. Respect the shot list's "Not
+  for" column and the brief's knife focus, and don't reuse a shot + knife
+  pair that's already in the brief. Never write "copper" or "rosewood" for
+  the Santoku, even though the shot list does.
 - **Creator-footage beats stay empty:** when the brief says a beat must use
   creator footage that isn't in the Mark Broll Selection (e.g. "the clips
   from Tina, Carinna, Brianna, Matt Smith… where they get a tie or a mug"),
