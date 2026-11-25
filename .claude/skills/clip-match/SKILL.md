@@ -131,6 +131,9 @@ text exactly as shown, as a plain line (no link):
   the line keeps library shots of the brief's own product, in VO order. Each
   fixed visual appears once per cell, at its first mention, even if the line
   says "hand-forged" twice.
+- **The collage always wins:** social proof gets the 12-tile collage even
+  when the brief says only one knife is on screen (confirmed by the user on
+  NK1019).
 - **The brief's own product** never gets a montage. Its lines use library
   shots, plus `Hand forging clip` and the collage where the rules above fire.
 - **Featured knife not in the table** (ODIN, VALHALLA, Gunnar, Dragon, LOKI
