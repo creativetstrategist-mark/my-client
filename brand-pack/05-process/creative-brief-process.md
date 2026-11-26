@@ -619,8 +619,8 @@ persona callout, because the editor will otherwise generate one read.
 > **The criteria below did not go away — they changed job.** They are no longer
 > a decision procedure; they are how you build the shortlist you bring to him:
 >
-> 1. Use rules 1-3 to rule names **out** — never Huzaifa, not Renniel or Hammad
->    while paused, nobody over the runtime cap, nobody already holding a cut of
+> 1. Use rules 1-3 to rule names **out** — never Huzaifa, not Renniel
+>    while paused (Hammad's pause was lifted 2026-11-26), nobody over the runtime cap, nobody already holding a cut of
 >    this concept.
 > 2. Put the remaining valid names to him **with the runtime** next to them, so
 >    the cap question is already answered when he picks.
@@ -636,10 +636,12 @@ persona callout, because the editor will otherwise generate one read.
 "Ready for visuals".** The editor comes from the strategist (see above); a new
 brief does not get left silently unassigned.
 
-**Active roster — nine names, and Hammad is off it for now.** Abdul was added 2026-11-25, when the strategist picked Abdul for NK1019. Abdul first appeared on trial briefs (NK935-936) and is now in `vocab-video.json`. **Ali was added the same day**, when the strategist picked Ali for NK1030. Ali was already an Editor option in Notion, and is now in `vocab-video.json` too. No cap has been given for either, so treat both as uncapped, and ask if a long cut comes up.
-Umar · Onyeka · Anas · Hasnain · Naveed · **Waheed** · **Fahad** · **Abdul** · **Ali**
+**Active roster — ten names. Hammad is back as of 2026-11-26** (strategist: *"Hammad is back"*, picking him for NK1032). Abdul was added 2026-11-25, when the strategist picked Abdul for NK1019. Abdul first appeared on trial briefs (NK935-936) and is now in `vocab-video.json`. **Ali was added the same day**, when the strategist picked Ali for NK1030. Ali was already an Editor option in Notion, and is now in `vocab-video.json` too. No cap has been given for either, so treat both as uncapped, and ask if a long cut comes up.
+Umar · Onyeka · Anas · Hasnain · Naveed · **Waheed** · **Fahad** · **Abdul** · **Ali** · **Hammad**
 
-> ⏸️ **Hammad is paused on load as of 2026-11-16.** The strategist: *"Hammad is
+> ▶️ **Lifted 2026-11-26** — *"Hammad is back."* The note below is kept as history; his 90-second cap still applies.
+>
+> ⏸️ **Hammad was paused on load from 2026-11-16 to 2026-11-26.** The strategist: *"Hammad is
 > fully loaded now moving forward next batch you can assigned it to different
 > editor you can assign it to either on the new editor."* The database backs it
 > up — he is on **192 briefs**, within one of Umar's 193 and the joint heaviest
@@ -725,8 +727,9 @@ Umar · Onyeka · Anas · Hasnain · Naveed · **Waheed** · **Fahad** · **Abdu
 3. **One concept, one editor.** A concept ships as a trio — Feather, Santoku,
    Blackout. **No editor takes more than one brief from the same concept,
    regardless of product.** Three briefs, three different editors, every time.
-4. **Every concept gives one brief to Hammad.** ⏸️ **Suspended 2026-11-16 — see
-   the load pause above. Do not apply this rule until it is lifted.** His output consistently
+4. **Every concept gives one brief to Hammad.** ▶️ **Back in force 2026-11-26**, after the
+   load pause (2026-11-16 to 2026-11-26). The strategist still picks the editor each batch,
+   so this is the recommendation to bring him, not a silent assignment. His output consistently
    performs, so he gets one cut of every concept — not the leftover, the one
    that matters. Combined with rule 3 this means one Hammad brief per concept,
    never two.
@@ -762,7 +765,8 @@ Umar · Onyeka · Anas · Hasnain · Naveed · **Waheed** · **Fahad** · **Abdu
    | Take The 30 Days (NK661-663) | **Blackout (NK663)** |
    | What if Dummy Black Friday (NK907-909) | **Blackout (NK909)** — 2nd in a row, runtime-forced |
    | The Lazy Way Black Friday (NK910-912) | **Feather (NK910)** — rotation debt cleared |
-   | — | ⏸️ **Rotation stops here, 2026-11-16. Hammad paused on load.** |
+   | — | ⏸️ **Rotation stopped here, 2026-11-16. Hammad paused on load.** |
+   | Ultimate Bundle Holiday Sale (NK1032-) | **Feather (NK1032)** — ▶️ rotation resumes 2026-11-26; next for Hammad: Santoku or Blackout |
 
    ⚠️ **NK907-909 is the first time rule 2 drove the whole concept's assignment.**
    Rotation said Feather (his last in this routine was the Blackout on NK663), but
