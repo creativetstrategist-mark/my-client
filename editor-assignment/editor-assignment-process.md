@@ -4850,6 +4850,135 @@ family, which makes them cheaper per brief than four unrelated ones — but it i
 seven briefs in a day for one editor, and the standing load note is now a
 recurring one rather than an observation.
 
+## 🔁 The queue refilled twice in one sweep — twelve assigned (2026-11-25/26)
+
+The seventh friday signal turned into the largest run in this file: **four, then
+four, then four more**, because the queue refilled twice after the opening query.
+All twelve gate-clean. Closing query empty.
+
+| Wave | Briefs | Strategist |
+|---|---|---|
+| Opening query | NK1028→Renniel, NK1029→Abdul, NK1030→Ali, NK1031→Umar | Mark |
+| First re-query | NK1010, NK1011, NK1012, NK1013 → Umar | Andy |
+| Second re-query | NK1009→Umar, NK947→Hammad, NK937→Waheed, NK896→Waheed | Andy |
+
+**The re-query is now load-bearing, not a safety net.** Eight of twelve briefs
+in this run were invisible to the opening query. Two of the second wave had been
+sitting since 11-16 and 11-18. Any run that assigns only what the first query
+returns will now routinely miss most of the work.
+
+### ✅ The source-data finding holds up under a wider sample — and sharpens
+
+The previous entry traced the Santoku error to `PSH-PROD22` in Mauro's shot list.
+Three more briefs citing that same clip now give a cleaner picture:
+
+| Brief | How it renders `PSH-PROD22` |
+|---|---|
+| NK1012 (Andy) | *"**copper dragon bolster** rotating, **rosewood handle**"* — the cell copied whole |
+| NK1010 (Andy) | *"Santoku engraving pass, **copper dragon**"* ×2 — the metal kept, the handle dropped |
+| **NK1009 (Andy)** | *"engraving pass, **dragon bolster** rotating"* — **the metal dropped entirely** |
+| NK947 (Andy) | *"Santoku blade and **dragon bolster**"* — **no metal** |
+
+So the same author, citing the same clip, writes it correctly in two briefs and
+incorrectly in two others. **That is what inheriting from a bad source looks
+like** — not a belief about the product, but a copy-paste that sometimes carries
+the bad words and sometimes trims them. It also means the safe form (*"dragon
+bolster"*, no metal, the NK698/701/706/709 pattern) is already the majority
+rendering in Andy's own briefs. **The one-cell fix stays the recommendation**,
+and it now has four data points instead of two.
+
+### ⚠️ "copper" is in a sharpener clip description too
+
+NK896's Visual column: *"Broll clip of hands swap discs on a **copper** rolling
+sharpener"*, in a brief whose own copy says the body is *"solid **Sapele
+hardwood**"*. **Stated as a question, not a finding**: the sharpener line is out
+of scope for this repo and trimmed from `brand-pack/`, so its materials cannot be
+verified here. But "copper" now appears in clip descriptions on two different
+products, which is the pattern worth checking at the source rather than in briefs.
+
+### 🚨 The stale customer count is back, twice, and the 10-27 downgrade should be reversed
+
+- **NK947**: *"Over a hundred thousand men who said they wanted nothing..."*
+- **NK937**: *"Over 100,000 customers have one."*
+
+On 2026-10-27 this file **downgraded** that flag, reasoning that a figure
+recurring across two products was probably a real company stat. **That reasoning
+is now superseded**: Mark's NK1019 states *"**147,000 customers**"*, and NK1020
+goes further and strips the old caption, *"no 'a hundred thousand customers'"*.
+The number is settled, and both of these are stale. The downgrade is withdrawn.
+
+### ⚠️ NK947: "high carbon stainless steel"
+
+*"Hand-forged from **high carbon stainless steel**, so his knife is razor sharp,
+and it stays that way."* The brand's material is **high-carbon steel**. High-carbon
+and stainless are different things, and this is in VO, so it gets spoken. Also in
+that line: *"and it stays that way"*, the edge-retention claim the rule caps at
+*"holds that edge"*.
+
+### ⚠️ NK896: four beats with no footage, flagged by the brief itself
+
+Four Visual cells read **`⚠️ No library clip: guy on the phone (brief: phone-call
+beats)`** — and the phone call is the concept's spine (*"So I called him"*, *"And
+he just went quiet"*). Two of the four have no other clip beside them.
+
+**Posted, not held.** The gate is "cannot be cut as written", and this can be:
+the glossary provides for sourcing (*"Clip of… means you can source it via envato
+or yt"*), and the ⚠️ is written on the page where Waheed will see it himself.
+But it is the first brief in this play whose **own author marked a footage gap**,
+and the annotation format reads machine-generated, so the page may have been
+produced and not yet finished. It has been sitting since 11-16. Worth Mark's eye.
+
+### ⚠️ NK937: "before the sale ends"
+
+*"Click the link below **before the sale ends**."* That is the invented deadline
+Mark's briefs ban by name (*"no end date, clock, countdown or 'hurry'"*). The
+sharpener's 40%+Gifts offer may have a real end date — but if it does, no brief
+states it, and the rule exists because that was the problem.
+
+### 📌 The guarantee stack is now five wordings in one day
+
+Adding to the previous entry's four: NK937 and NK896 both close on *"Lifetime
+warranty. Thirty days to try it risk free."* So the day's set is: *"30-day
+money-back"*, *"free returns"*, *"a lifetime warranty on every knife"*,
+*"LIFETIME WARRANTY · 30-DAY RETURNS · FREE SHIPPING"*, and *"Thirty days to try
+it risk free"*. **Two of those phrasings were struck once already.** One
+canonical stack, written once, would end a recurring class of flag.
+
+### ✅ Two things worth copying from Andy's briefs
+
+Recording these because this file has lately been one-sided, and both are good:
+
+- **NK947's pronunciation note**: *"**BJORN is pronounced \"Byorn\"**. Type it as
+  Byorn in ElevenLabs so the VO does not say \"B-John\"."* That is a production
+  detail no rule covers and no reviewer would catch until the VO came back.
+- **NK896's tone guard**: *"**Never insult the viewer, only the guy in the
+  story**."* Written into the persona block, for a concept built on calling
+  someone a muppet. Directly relevant to the NK997 profanity flag still open.
+
+### `Ite-Product` predates today
+
+Correction to the previous entry, which recorded `Ite-Product` as new: **NK896
+carries it and was created 11-16.** The token is not new — it was new to this
+file. Its meaning is confirmed by NK896, an iteration of NK284 that moves the
+same script from the Santoku to the Sharpener.
+
+### Umar's load, stated plainly
+
+**Seven of these twelve went to Umar** (NK1031, NK1009–1013), on top of NK1017
+and NK1021 earlier the same day: **nine briefs in one day.** Four are one concept
+family and three another, so the per-brief cost is lower than nine unrelated
+ones. It is still the largest single-editor day in this file, and Waheed took two
+nine-day-old sharpener briefs at the same time. Raised as a scheduling question,
+not a gate.
+
+### Worker restart, fourth time today
+
+The restart landed between the Slack posts and the Notion flips again, leaving
+three posted-but-queued. Recovery followed as recorded: re-read, finish the
+flips, never re-post. **Four occurrences in one day makes this the most frequent
+failure mode in the play**, and the recovery procedure is the only reason it has
+never caused a double-post.
+
 ## Run history
 
 ¹ Out-of-scope rows are **not counted here**, per the hard rule — the column
@@ -4906,3 +5035,4 @@ a malformed row). See *What "never touch" covers*.
 | 2026-11-25 | **5** | — | — | 0 | **Fifth "assign task due on friday", and the first sweep that was entirely Mark's own work.** SQL allowance spent — saved-view fallback, **both reads, agreeing exactly** (5 in scope, then 0 at the close). NK1016→Umar, NK1019→**Abdul (his first in this play)**, NK1020→Umar, NK1022→Anas, NK1024→Naveed. All gate-clean on all three person-naming tokens (`Mark\_<Editor>`); NK1020 carries 5 file rows for its 5 hooks, per the NK664 convention. 🎯 **Headline, and it reframes the whole file: every recurring error in Andy's batches has an explicit, correctly-worded rule written into Mark's briefs** — *"Never etched, engraved or hand-finished"* (the rule NK995 broke), *"Scarcity exactly as stated: 500 at a time, about 3 months between runs"*, *"147,000 customers"*, *"No invented deadline… No delivery promise — never 'in time for Christmas'"*, *"tiger across the face, never a dragon or stripes"*, *"opener at the end of the handle, never the blade"*, *"No spec stack"*, and even Class 1 prevention (*"Do not pull lines from NK560, NK965, NK907, NK913 or NK916"*). **The facts are written down correctly and are not reaching Andy's template: the gap is propagation, not knowledge or care.** The leverage is pasting Mark's callout blocks into Andy's templates, not asking him to stop making the errors one at a time. ✅ **NK1019 is the model brief** — a *"what transferred, and what could not"* originality-gate block, a red callout of hard bans, cross-batch awareness, and the only `Len-` seen filled (`Len-65s`). ✅ **NK1020 strips the stale "a hundred thousand customers" caption** from the reused NK651 footage. ✅ **NK1022 adds the missing `VANCE` persona block** I flagged on 11-25, though the duplicate `DON` remains. ✅ *"Where it and your project disagree, your project wins"* — precise direction that is not brittle. ⚠️ **A contradiction between two of Mark's briefs**: all five Holiday Sale briefs ban *"extra % off"* and *"'up to' figures"*, while **NK997** — Holiday Sale, fixed by Mark himself today — says *"up to 67% off"*, which is what its footage performs. Raised, not acted on. ⚠️ NK1016 has *"a finger loop so it never slips"* while **NK1024 words the same claim safely** as *"for grip"*. ⚠️ **The worker restarted mid-flip again** (second time today), leaving 4 posted-but-unflipped; the recorded recovery procedure was followed — finish the flips, never re-post. |
 | 2026-11-25 | **6** | — | — | 0 | **Sixth "assign task due on friday", plus *"fix the 67% on 997"*.** ✅ **The 67% removed from NK997**, in **both** copies (BODY cell and the duplicated `## Script` block) via `replace_all_matches`, verified by probe (*"No matches found"* — proves absence, changes nothing). **This settles the contradiction raised in the previous entry in the rule's favour**: the Holiday Sale offer wins, the footage does not get to set the offer. 📌 **The boundary on the NK999 rule**: a verifiable asset outranks a human answer on *who is speaking*, never on *what is being sold*. NK1017→Umar, NK1021→Umar, NK1023→Anas, NK1025→Naveed, NK1026→Waheed, NK1027→Anas; all six gate-clean on all three person-naming tokens (`Mark\_<Editor>`), posted, threaded, flipped. Closing checks through the saved-view fallback, **both reads agreeing exactly** (8 in `Ready to edit`, 0 in scope). 🎯 **NK1026 confirms the propagation finding on the hardest product**: Mark's Santoku brief says *"a **brass** bolster, with a **sculpted** dragon"* and *"a **wood handle, carved by hand**"*, bans *"Japanese"*, and names the trap outright — *"The BJORN has **no run limit** either, so there is no scarcity beat"* — where Andy's Santoku briefs say copper, rosewood or ebony and **import the Feather's scarcity**, the most-repeated error in this file. Same product, same day, right words, not reaching the other template. ✅ **NK1021 carries an explicit fix list** against inherited VO (*"tiger-striped blade"*→*"a tiger across the face"*, *"a hundred thousand customers"*→*"147,000"*, *"Free returns"* cut) — the propagation mechanism working at the smallest scale, and proof the fix is cheap; **four flagged claims are still missing from it** (Tiger Cleaver rosewood/copper, Feather *"gone in two weeks"*, *"three months in the workshop"*, *"five thousand five-star reviews"*). ✅ **Iteration 1 and Iteration 2 are orthogonal axes**, not stages: `Ite-Script` = new script with locked footage, `Ite-Reskin` = locked script with new visuals — so a shared script across the two is the design, and **Class 1 is closed for this batch**. 📌 **`bottle opener tip` appears in Mark's own Visual cells too**: the bad clip-description snippets are **shared infrastructure both authors inherit**, and the only difference is that Mark's briefs add the countervailing rule in prose. ⚠️ **Worker restarted mid-flip a third time** — recorded recovery followed (re-read, finish the flips, never re-post). |
 | 2026-11-25 | **8** | — | — | 0 | **Seventh "assign task due on friday", and the day's largest sweep.** Four of Mark's (NK1028→Renniel, NK1029→Abdul, NK1030→Ali, NK1031→Umar) and **four of Andy's that arrived mid-run** (NK1010/1011/1012/1013→Umar) — created 05:48–07:33 but released into the queue after the opening query, the **NK708 pattern for the third time**; the closing re-query caught them. All eight gate-clean on all three person-naming tokens; the COLD 7 briefs carry 6 naming rows each for 5 hooks. 🎯 **Headline: the propagation finding is traced to a single table cell.** `PSH-PROD22` in Mauro's **Nov 2026 B-roll shot list** reads *"Engraving pass, then the **dragon copper bolster** rotating, **rosewood handle**"* — **both wrong facts in one cell**, inherited verbatim by NK1010 (×2) and NK1012 (×3). **And the same table's Blackout row is right** (*"the opener on the handle end"*), which is why **NK1013 is right too** (*"The bottle opener is in the handle, never the blade"*, ebony handle). So the two briefs are two faithful transcriptions of one source that is right in one row and wrong in another — not a careful author and a careless one. ⚠️ **This corrects the previous two entries**: the leverage is **not** pasting Mark's callouts into Andy's templates (aimed one level too high) but **fixing one cell** — to *"the sculpted dragon brass bolster rotating, hand-carved wood handle"*. **Not done**: the shot list is outside this play's remit and changing brand facts in shared source material is Mark's call; put to him with the replacement ready. **The standing finding is now narrower and more useful: the recurring product errors are a source-data problem, not an authoring or knowledge one.** ✅ **`Ite-Product` is a third iteration axis** (script and card timing locked, the knife changes), joining `Ite-Script` and `Ite-Reskin`. ✅ **Class 1: a declared verbatim lift** — NK1011/1012/1013 share COLD 7's cards word for word and each says so, so post; but *"nothing needed rewriting"* **bypasses every copy rule written since COLD 7 shipped**, carrying **`WELL BALANCED`** (the NK579 balance ban, flagged on NK645 and NK653) and the on-screen typo **`EVERY OCCASIONS`** into 15 exports. **Mark's NK1021 handled inherited copy the opposite way, with a fix list — that is the approach that works.** ⚠️ **Four different guarantee stacks in one day**, including *"free returns"* and *"FREE SHIPPING"* — both struck once already (NK1021's fix list cut *"Free returns"*; NK1029's callout refused *"free shipping"*). One canonical stack would end it. ⚠️ **Five of the eight went to Umar**, on top of NK1017 and NK1021 earlier today: seven in a day. |
+| 2026-11-25/26 | **12** | — | — | 0 | **The largest run in this file.** The seventh friday signal became three waves, because **the queue refilled twice after the opening query**: 4 of Mark's (NK1028→Renniel, NK1029→Abdul, NK1030→Ali, NK1031→Umar), then 4 of Andy's (NK1010/1011/1012/1013→Umar), then 4 more of Andy's (NK1009→Umar, NK947→Hammad, NK937→Waheed, NK896→Waheed). All twelve gate-clean on all three person-naming tokens; closing query empty. 📌 **The re-query is now load-bearing, not a safety net**: 8 of 12 were invisible to the opening query, two of them sitting since 11-16 and 11-18. ✅ **The source-data finding holds up on a wider sample and sharpens**: four briefs cite `PSH-PROD22` and render it four different ways — NK1012 copies the bad cell whole (*"copper dragon bolster… rosewood handle"*), NK1010 keeps the metal, and **NK1009 and NK947 drop it entirely** (*"dragon bolster"*, the safe NK698 form). Same author, same clip, right twice and wrong twice — **which is what inheriting from a bad source looks like, rather than a belief about the product**. The one-cell fix stands, now on four data points. ⚠️ **"copper" appears in a sharpener clip description too** (NK896, against its own *"solid Sapele hardwood"*) — raised as a question, since the sharpener line is out of scope here and unverifiable from this repo. 🚨 **The stale customer count is back twice** (NK947 *"Over a hundred thousand men"*, NK937 *"Over 100,000 customers"*) and **the 2026-10-27 downgrade of that flag is withdrawn**: Mark's NK1019 states *"147,000 customers"* and NK1020 strips the old caption outright, so the number is settled and both are stale. ⚠️ **NK947 says *"high carbon **stainless** steel"*** — a different material from the brand's high-carbon steel, and it is in spoken VO; same line also carries *"and it stays that way"*. ⚠️ **NK896 has four Visual cells its own author marked `⚠️ No library clip: guy on the phone`**, and the phone call is the concept's spine. **Posted, not held** — it can be cut (the glossary provides for sourcing, and the ⚠️ is visible to Waheed on the page) — but it is the first brief here whose author flagged a footage gap, the annotation reads machine-generated, and it has sat since 11-16. ⚠️ **NK937: *"before the sale ends"*** — the invented deadline banned by name. 📌 **The guarantee stack is now five wordings in one day**, two of them struck once already. ✅ **Two things worth copying from Andy's briefs**: NK947's *"BJORN is pronounced \"Byorn\"… so the VO does not say \"B-John\""*, and NK896's *"Never insult the viewer, only the guy in the story"* — the second directly relevant to the open NK997 profanity flag. ✅ **Correction: `Ite-Product` is not new** — NK896 carries it and dates from 11-16; it was new to this file, not to the naming scheme. ⚠️ **Seven of the twelve went to Umar**, making nine briefs in one day for him. ⚠️ **Worker restarted mid-flip for the fourth time today** — recovery followed; four occurrences in a day makes this the play's most frequent failure mode, and the recorded procedure is the only reason it has never double-posted. |
